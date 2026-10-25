@@ -22,24 +22,21 @@ import xml.etree.ElementTree as ET
 from datetime import datetime, timezone
 
 # (display name, category, feed url)
+# 原則：中文優先、跟阿夜手上的東西直接相關。英文工程師 changelog 一律不收。
 FEEDS = [
-    ("Hermes",        "hermes",   "https://github.com/NousResearch/hermes-agent/releases.atom"),
-    ("ComfyUI",       "pipeline", "https://github.com/comfyanonymous/ComfyUI/releases.atom"),
-    ("mlllm",         "image",    "https://mlllm.io/rss.xml"),
-    ("local-ai.net",  "local",    "https://local-ai.net/rss.xml"),
-    ("HF Blog",       "model",    "https://huggingface.co/blog/feed.xml"),
-    ("r/LocalLLaMA",  "local",    "https://www.reddit.com/r/LocalLLaMA/.rss"),
-    ("Simon Willison","agent",    "https://simonwillison.net/atom/everything/"),
-    ("HN 150+",       "agent",    "https://hnrss.org/newest?points=150"),
+    ("iThome",       "tech",     "https://www.ithome.com.tw/rss"),
+    ("巴哈 GNN",     "game",     "https://gnn.gamer.com.tw/rss.xml"),
+    ("Hermes",       "hermes",   "https://github.com/NousResearch/hermes-agent/releases.atom"),
+    ("ComfyUI",      "pipeline", "https://github.com/comfyanonymous/ComfyUI/releases.atom"),
+    ("mlllm",        "image",    "https://mlllm.io/rss.xml"),
 ]
 
 CATS = [
     ("all",      "全部"),
+    ("tech",     "科技"),
+    ("game",     "遊戲／動漫"),
     ("image",    "生圖"),
-    ("local",    "本地 LLM"),
-    ("agent",    "Agent／工具"),
     ("pipeline", "Pipeline"),
-    ("model",    "模型／研究"),
     ("hermes",   "Hermes"),
 ]
 
@@ -70,6 +67,45 @@ def parse_date(s: str):
         return None
 
 
+BAD_IMG = ("gravatar", "feedburner", "doubleclick", "facebook.com/tr", "stats.wordpress",
+           "avatars.githubusercontent", "github.githubassets", "/pixel", "1x1.",
+           "badge", "shields.io", "spacer", "blank.gif")
+
+
+def _ok_img(u: str) -> bool:
+    if not u or u.startswith("data:"):
+        return False
+    low = u.lower()
+    return not any(b in low for b in BAD_IMG)
+
+
+def pick_image(node, ns_map):
+    """找這則新聞的縮圖：enclosure / media:content / media:thumbnail / 內文第一個 <img>。
+    排除頭像、追蹤像素、badge 這類假圖。"""
+    for enc in node.findall("enclosure"):
+        u = enc.get("url")
+        if (enc.get("type") or "").startswith("image") and _ok_img(u):
+            return u
+    for tag in ("{http://search.yahoo.com/mrss/}content", "{http://search.yahoo.com/mrss/}thumbnail"):
+        for el in node.iter(tag):
+            u = el.get("url")
+            if _ok_img(u) and (el.get("type", "image").startswith("image") or el.get("medium") == "image"):
+                return u
+    for ln in node.findall("{http://www.w3.org/2005/Atom}link"):
+        u = ln.get("href")
+        if (ln.get("rel") or "") in ("enclosure", "image") and (ln.get("type") or "").startswith("image") and _ok_img(u):
+            return u
+    # 內文 HTML 裡的第一張圖
+    for field in ("description", "{http://www.w3.org/2005/Atom}content",
+                  "{http://www.w3.org/2005/Atom}summary"):
+        raw = node.findtext(field) or ""
+        for m in re.finditer(r'<img[^>]+src=["\']([^"\']+)["\']', raw):
+            u = html.unescape(m.group(1))
+            if _ok_img(u):
+                return u
+    return ""
+
+
 def fetch(url: str, limit: int):
     req = urllib.request.Request(url, headers={"User-Agent": UA})
     with urllib.request.urlopen(req, timeout=20) as r:
@@ -80,7 +116,8 @@ def fetch(url: str, limit: int):
         rows.append((clean(it.findtext("title") or ""),
                      (it.findtext("link") or "").strip(),
                      clean(it.findtext("description") or "")[:280],
-                     parse_date(it.findtext("pubDate") or "")))
+                     parse_date(it.findtext("pubDate") or ""),
+                     pick_image(it, None)))
     if not rows:
         A = "{http://www.w3.org/2005/Atom}"
         for it in root.iter(A + "entry"):
@@ -91,7 +128,8 @@ def fetch(url: str, limit: int):
                     break
             rows.append((clean(it.findtext(A + "title") or ""), link,
                          clean(it.findtext(A + "summary") or it.findtext(A + "content") or "")[:280],
-                         parse_date(it.findtext(A + "updated") or it.findtext(A + "published") or "")))
+                         parse_date(it.findtext(A + "updated") or it.findtext(A + "published") or ""),
+                         pick_image(it, None)))
     return rows[:limit]
 
 
@@ -108,14 +146,14 @@ def main() -> int:
         except Exception:
             failed.append(name)
             continue
-        for title, link, summary, d in rows:
+        for title, link, summary, d, img in rows:
             if not title or not link:
                 continue
             if "/ru/" in link or "/zh/" in link:   # translated duplicates
                 continue
             items.append({
                 "source": name, "cat": cat, "title": title, "link": link,
-                "summary": summary,
+                "summary": summary, "img": img,
                 "ts": int(d.timestamp()) if d else 0,
                 "date": d.astimezone().strftime("%m-%d %H:%M") if d else "",
             })
