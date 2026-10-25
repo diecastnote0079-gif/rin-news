@@ -1,4 +1,5 @@
-index-v1-embedded.html
+*.bak-*
+index-v*.html
 __pycache__/
 *.pyc
 items.json.tmp

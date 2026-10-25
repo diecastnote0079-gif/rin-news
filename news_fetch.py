@@ -21,11 +21,23 @@ import urllib.request
 import xml.etree.ElementTree as ET
 from datetime import datetime, timezone
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+try:
+    import rank as rank_mod
+except ImportError:
+    rank_mod = None
+
 # (display name, category, feed url)
 # 原則：中文優先、跟阿夜手上的東西直接相關。英文工程師 changelog 一律不收。
+# 2026-10-26 實測：以下 10 個來源可讀（星洲／中國報／玩具人／原價屋的 RSS 全部失效或被擋）
 FEEDS = [
-    ("iThome",       "tech",     "https://www.ithome.com.tw/rss"),
+    ("4Gamers",      "game",     "https://www.4gamers.com.tw/rss"),
     ("巴哈 GNN",     "game",     "https://gnn.gamer.com.tw/rss.xml"),
+    ("INSIDE",       "tech",     "https://www.inside.com.tw/feed/rss"),
+    ("iThome",       "tech",     "https://www.ithome.com.tw/rss"),
+    ("Unwire HK",    "tech",     "https://unwire.hk/feed/"),
+    ("SoyaCincau",   "local",    "https://soyacincau.com/feed/"),
+    ("Lowyat",       "local",    "https://www.lowyat.net/feed/"),
     ("Hermes",       "hermes",   "https://github.com/NousResearch/hermes-agent/releases.atom"),
     ("ComfyUI",      "pipeline", "https://github.com/comfyanonymous/ComfyUI/releases.atom"),
     ("mlllm",        "image",    "https://mlllm.io/rss.xml"),
@@ -33,8 +45,9 @@ FEEDS = [
 
 CATS = [
     ("all",      "全部"),
+    ("game",     "遊戲"),
     ("tech",     "科技"),
-    ("game",     "遊戲／動漫"),
+    ("local",    "本地"),
     ("image",    "生圖"),
     ("pipeline", "Pipeline"),
     ("hermes",   "Hermes"),
@@ -191,12 +204,23 @@ def main() -> int:
         seen.add(k)
         uniq.append(it)
 
+    # 評分與每日精選（純規則，零 token）。每輪都重算——評分規則會改，即使新聞沒變。
+    picks, stats = uniq[:15], {}
+    if rank_mod is not None:
+        try:
+            ranked = rank_mod.rank(uniq, limit=15)
+            picks, stats = ranked["picks"], ranked["stats"]
+        except Exception as e:
+            print(f"[rank] failed: {type(e).__name__}: {e}", file=sys.stderr)
+
     # 內容沒變就不重寫（否則 generated_at 每次都變，git 每輪都留下一個空 commit）
+    # picks 也算進「有沒有變」，因為評分規則改了就要更新。
     if os.path.exists(p):
         try:
             with open(p, encoding="utf-8") as f:
                 old = json.load(f)
-            if old.get("items") == uniq and old.get("cats") == [list(c) for c in CATS]:
+            if (old.get("items") == uniq and old.get("picks") == picks
+                    and old.get("cats") == [list(c) for c in CATS]):
                 print(f"{len(uniq)} items, no change -> keep {p}")
                 return 0
         except Exception:
@@ -206,6 +230,8 @@ def main() -> int:
         "generated_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "cats": CATS,
         "items": uniq,
+        "picks": picks,
+        "stats": stats,
     }
     tmp = p + ".tmp"
     with open(tmp, "w", encoding="utf-8") as f:
