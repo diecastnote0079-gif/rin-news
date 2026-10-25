@@ -133,12 +133,24 @@ def main() -> int:
         uniq.append(it)
 
     os.makedirs(a.out, exist_ok=True)
+    p = os.path.join(a.out, "items.json")
+
+    # 內容沒變就不重寫（否則 generated_at 每次都變，git 每輪都留下一個空 commit）
+    if os.path.exists(p):
+        try:
+            with open(p, encoding="utf-8") as f:
+                old = json.load(f)
+            if old.get("items") == uniq and old.get("cats") == [list(c) for c in CATS]:
+                print(f"{len(uniq)} items, no change -> keep {p}")
+                return 0
+        except Exception:
+            pass
+
     payload = {
         "generated_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "cats": CATS,
         "items": uniq,
     }
-    p = os.path.join(a.out, "items.json")
     tmp = p + ".tmp"
     with open(tmp, "w", encoding="utf-8") as f:
         json.dump(payload, f, ensure_ascii=False, separators=(",", ":"))
