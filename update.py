@@ -69,7 +69,7 @@ def main() -> int:
         return 1
     os.environ["_PUSH_SECRET"] = tok
     url = f"https://x-access-token:{tok}@github.com/{REPO_SLUG}.git"
-    code, out = sh(["git", "push", url, "HEAD:main"])
+    code, out = sh(["git", "-c", "credential.helper=", "push", url, "HEAD:main"])
     os.environ.pop("_PUSH_SECRET", None)
     print("push:", out.splitlines()[-1] if out else code)
     return 0 if code == 0 else 1

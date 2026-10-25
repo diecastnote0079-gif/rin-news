@@ -101,12 +101,12 @@ def main() -> int:
     ap.add_argument("--out", default=DEFAULT_OUT)
     a = ap.parse_args()
 
-    items, bad = [], 0
+    items, failed = [], []
     for name, cat, url in FEEDS:
         try:
             rows = fetch(url, a.limit)
         except Exception:
-            bad += 1
+            failed.append(name)
             continue
         for title, link, summary, d in rows:
             if not title or not link:
@@ -124,6 +124,27 @@ def main() -> int:
         print("nothing fetched; keeping existing items.json", file=sys.stderr)
         return 1
 
+    os.makedirs(a.out, exist_ok=True)
+    p = os.path.join(a.out, "items.json")
+
+    old = None
+    if os.path.exists(p):
+        try:
+            with open(p, encoding="utf-8") as f:
+                old = json.load(f)
+        except Exception:
+            old = None
+
+    # 某個來源這次抓不到（限流／逾時）→ 沿用它上次的條目。
+    # 否則資料會在「85 條 / 73 條」之間來回跳，每輪都留一個假 commit。
+    if failed and old:
+        have = {i["title"].lower()[:80] for i in items}
+        carried = [i for i in old.get("items", [])
+                   if i.get("source") in failed and i["title"].lower()[:80] not in have]
+        if carried:
+            items.extend(carried)
+        print(f"[carry-over] {', '.join(failed)} → +{len(carried)} 條", file=sys.stderr)
+
     seen, uniq = set(), []
     for it in sorted(items, key=lambda x: -x["ts"]):
         k = it["title"].lower()[:80]
@@ -131,9 +152,6 @@ def main() -> int:
             continue
         seen.add(k)
         uniq.append(it)
-
-    os.makedirs(a.out, exist_ok=True)
-    p = os.path.join(a.out, "items.json")
 
     # 內容沒變就不重寫（否則 generated_at 每次都變，git 每輪都留下一個空 commit）
     if os.path.exists(p):
@@ -156,7 +174,7 @@ def main() -> int:
         json.dump(payload, f, ensure_ascii=False, separators=(",", ":"))
     os.replace(tmp, p)          # atomic: page never reads a half-written file
 
-    print(f"{len(uniq)} items, {bad} feed(s) failed -> {p}")
+    print(f"{len(uniq)} items, {len(failed)} feed(s) failed -> {p}")
     return 0
 
 
