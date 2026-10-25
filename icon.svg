@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#181b22"/>
+      <stop offset="1" stop-color="#0f1115"/>
+    </linearGradient>
+    <linearGradient id="hair" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#eef1f7"/>
+      <stop offset="1" stop-color="#b9c2d4"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#bg)"/>
+  <rect x="1.5" y="1.5" width="509" height="509" rx="110.5" fill="none" stroke="#262b36" stroke-width="3"/>
+  <!-- 銀白長髮 + 淡藍眼 -->
+  <path d="M256 96c-72 0-124 52-124 128 0 54 18 92 18 132 0 36-22 60-22 60h256s-22-24-22-60c0-40 18-78 18-132 0-76-52-128-124-128z" fill="url(#hair)"/>
+  <ellipse cx="256" cy="238" rx="76" ry="88" fill="#f6f0ea"/>
+  <ellipse cx="222" cy="238" rx="13" ry="17" fill="#7aa2ff"/>
+  <ellipse cx="290" cy="238" rx="13" ry="17" fill="#7aa2ff"/>
+  <circle cx="226" cy="232" r="4.5" fill="#fff" opacity=".85"/>
+  <circle cx="294" cy="232" r="4.5" fill="#fff" opacity=".85"/>
+  <path d="M242 288q14 10 28 0" stroke="#c98a8a" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <path d="M180 128c26-24 126-24 152 0" stroke="#dfe5f0" stroke-width="0" fill="none"/>
+</svg>
