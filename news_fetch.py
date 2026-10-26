@@ -146,6 +146,50 @@ def fetch(url: str, limit: int):
     return rows[:limit]
 
 
+_NOISE = ("分享", "讚好", "個讚", "複製連結", "WhatsApp", "Facebook", "Threads",
+          "Advertisement", "Photo Credit", "-->", "閱讀時間", "字體大小", "訂閱",
+          "追蹤我們", "版權所有", "相關文章", "延伸閱讀", "留言", "熱門")
+
+
+def _plain(s: str) -> str:
+    s = re.sub(r"<(script|style)[^>]*>.*?</\1>", " ", s, flags=re.S | re.I)
+    s = re.sub(r"<[^>]+>", "", s)
+    return re.sub(r"\s+", " ", html.unescape(s)).strip()
+
+
+def article_text(url: str, limit: int = 1600) -> str:
+    """抓一頁的正文段落，給頁內閱讀模式用。失敗回空字串（前端退回摘要）。"""
+    try:
+        req = urllib.request.Request(url, headers={"User-Agent": UA,
+                                                  "Accept-Language": "zh-TW,zh;q=0.9"})
+        raw = urllib.request.urlopen(req, timeout=12).read()
+        enc = "utf-8"
+        m = re.search(rb'charset=["\']?([a-zA-Z0-9_-]+)', raw[:3000])
+        if m:
+            enc = m.group(1).decode("ascii", "ignore")
+        try:
+            t = raw.decode(enc, "ignore")
+        except LookupError:
+            t = raw.decode("utf-8", "ignore")
+        # 有內文容器就縮進去，避免抓到整頁導航
+        for pat in (r"<article[^>]*>(.*?)</article>",
+                    r'<div[^>]*(?:id|class)="[^"]*(?:article-content|entry-content'
+                    r'|post-content|articleContent|content-body|story)[^"]*"[^>]*>(.*?)</div>\s*</div>'):
+            mm = re.search(pat, t, re.S | re.I)
+            if mm and len(mm.group(1)) > 800:
+                t = mm.group(1)
+                break
+        # 正文幾乎都在 <p>：短行（導航、標籤列）與噪音行濾掉
+        ps = [_plain(x) for x in re.findall(r"<p[^>]*>(.*?)</p>", t, re.S | re.I)]
+        ps = [x for x in ps if len(x) >= 25 and not any(k in x for k in _NOISE)]
+        if sum(len(x) for x in ps) < 200:          # <p> 太少 → 退回全文剝標籤
+            ps = [x for x in re.split(r"\n{2,}", _plain(t))
+                  if len(x) >= 40 and not any(k in x for k in _NOISE)]
+        return "\n\n".join(ps)[:limit]
+    except Exception:
+        return ""
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--limit", type=int, default=12)
@@ -213,13 +257,46 @@ def main() -> int:
         except Exception as e:
             print(f"[rank] failed: {type(e).__name__}: {e}", file=sys.stderr)
 
+    # 頁內閱讀模式：只給精選抓正文（11 條約 3 秒）。link 沒變就吃快取，
+    # 否則 cron 每 2 小時會把同樣那 11 頁重抓一次。
+    cache_p = os.path.join(a.out, "article_cache.json")
+    cache = {}
+    if os.path.exists(cache_p):
+        try:
+            with open(cache_p, encoding="utf-8") as f:
+                cache = json.load(f)
+        except Exception:
+            cache = {}
+    fresh = 0
+    for it in picks:
+        lk = it.get("link", "")
+        if lk in cache:
+            it["full"] = cache[lk]
+        else:
+            it["full"] = article_text(lk)
+            cache[lk] = it["full"]
+            fresh += 1
+    if fresh:
+        if len(cache) > 400:                      # 快取別無限長
+            keep = {x.get("link", "") for x in picks}
+            cache = {k: v for k, v in cache.items() if k in keep}
+        try:
+            with open(cache_p, "w", encoding="utf-8") as f:
+                json.dump(cache, f, ensure_ascii=False)
+        except Exception:
+            pass
+        print(f"[reader] 新抓 {fresh} 篇正文", file=sys.stderr)
+
     # 內容沒變就不重寫（否則 generated_at 每次都變，git 每輪都留下一個空 commit）
     # picks 也算進「有沒有變」，因為評分規則改了就要更新。
     if os.path.exists(p):
         try:
             with open(p, encoding="utf-8") as f:
                 old = json.load(f)
-            if (old.get("items") == uniq and old.get("picks") == picks
+            if (old.get("items") == uniq
+                    and [x.get("link") for x in old.get("picks", [])]
+                        == [x.get("link") for x in picks]
+                    and all("full" in x for x in old.get("picks", []))
                     and old.get("cats") == [list(c) for c in CATS]):
                 print(f"{len(uniq)} items, no change -> keep {p}")
                 return 0

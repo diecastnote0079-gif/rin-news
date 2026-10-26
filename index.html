@@ -51,44 +51,45 @@ main{padding:4px 14px 20px;max-width:720px;margin:0 auto}
   text-transform:uppercase;color:var(--dim)}
 .sect span{font-size:11px;color:var(--dim2)}
 
-.hero{display:block;text-decoration:none;color:inherit;margin-bottom:12px;
-  background:var(--card);border:1px solid var(--line);border-radius:22px;
+/* ── 第一條：大卡，圖有硬上限（他說的「有些明顯太大」）── */
+.hero{display:block;text-decoration:none;color:inherit;margin-bottom:11px;
+  background:var(--card);border:1px solid var(--line);border-radius:19px;
   overflow:hidden;transition:transform .12s}
 .hero:active{transform:scale(.985)}
-.hero .thumb{position:relative;aspect-ratio:16/10;overflow:hidden;background:var(--card2)}
+.hero .thumb{position:relative;height:190px;max-height:190px;overflow:hidden;background:var(--card2)}
 .hero .thumb img{width:100%;height:100%;object-fit:cover;display:block}
 .hero .thumb::after{content:"";position:absolute;inset:0;pointer-events:none;
-  background:linear-gradient(180deg,rgba(16,18,22,0) 38%,rgba(16,18,22,.98) 100%)}
-.hero .body{padding:0 17px 17px;margin-top:-44px;position:relative;z-index:2}
-.hero .t{font-size:19.5px;font-weight:750;line-height:1.34;letter-spacing:-.02em;margin:0 0 6px}
-.hero .s{font-size:13px;color:var(--dim);line-height:1.55;
-  display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
-.hero.nopic{border-left:3px solid var(--accent,var(--hot))}
-.hero.nopic .body{margin-top:0;padding-top:16px}
-
-.card{display:block;text-decoration:none;color:inherit;margin-bottom:9px;
-  background:var(--card);border:1px solid var(--line);border-radius:16px;
-  overflow:hidden;transition:transform .12s,border-color .15s}
-.card:active{transform:scale(.988);border-color:rgba(255,255,255,.15)}
-.card .row{display:flex;align-items:center;gap:7px;font-size:11px;color:var(--dim);
-  margin-bottom:6px;flex-wrap:wrap}
-.card .t{font-size:15.5px;font-weight:650;line-height:1.4;letter-spacing:-.01em;margin:0 0 4px}
-.card .s{font-size:12.5px;color:var(--dim);line-height:1.5;
+  background:linear-gradient(180deg,rgba(16,18,22,0) 42%,rgba(16,18,22,.96) 100%)}
+.hero .body{padding:0 16px 15px;margin-top:-38px;position:relative;z-index:2}
+.hero .t{font-size:18.5px;font-weight:750;line-height:1.36;letter-spacing:-.02em;margin:0 0 5px}
+.hero .s{font-size:12.5px;color:var(--dim);line-height:1.5;
   display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
-.card .body{padding:12px 14px 13px}
-.card.pic .thumb{position:relative;aspect-ratio:16/9;overflow:hidden;background:var(--card2)}
-.card.pic .thumb img{width:100%;height:100%;object-fit:cover;display:block}
-.card.pic .thumb::after{content:"";position:absolute;inset:0;pointer-events:none;
-  background:linear-gradient(180deg,rgba(16,18,22,0) 45%,rgba(16,18,22,.97) 100%)}
-.card.pic .body{padding-top:0;margin-top:-24px;position:relative;z-index:2}
+.hero.nopic{border-left:3px solid var(--accent,var(--hot))}
+.hero.nopic .body{margin-top:0;padding-top:15px}
+
+/* ── 其餘：左圖右文，圖只有 84px，不搶版面 ── */
+.card{display:flex;align-items:stretch;text-decoration:none;color:inherit;
+  margin-bottom:8px;background:var(--card);border:1px solid var(--line);
+  border-radius:15px;overflow:hidden;transition:transform .12s,border-color .15s}
+.card:active{transform:scale(.988);border-color:rgba(255,255,255,.16)}
+.card .thumb{flex:0 0 84px;width:84px;overflow:hidden;background:var(--card2);
+  position:relative}
+.card .thumb img{width:100%;height:100%;object-fit:cover;display:block;
+  position:absolute;inset:0}
+.card .body{flex:1;min-width:0;padding:10px 12px 11px}
+.card .row{display:flex;align-items:center;gap:6px;font-size:10.5px;color:var(--dim);
+  margin-bottom:5px;flex-wrap:wrap}
+.card .t{font-size:14.5px;font-weight:650;line-height:1.38;letter-spacing:-.01em;margin:0}
+.card .s{font-size:12px;color:var(--dim);line-height:1.45;margin-top:4px;
+  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 .card.nopic{border-left:3px solid var(--accent,var(--hot))}
 
 .src{font-weight:700;color:var(--fg);opacity:.9}
-.chip{border-radius:6px;padding:1.5px 6px;font-size:10.5px;font-weight:650;
+.chip{border-radius:5px;padding:1px 5px;font-size:10px;font-weight:650;
   border:1px solid currentColor}
 .dot{width:3px;height:3px;border-radius:50%;background:var(--dim2)}
 
-details{margin-top:22px;border-top:1px solid var(--line);padding-top:4px}
+details{margin-top:20px;border-top:1px solid var(--line);padding-top:4px}
 summary{cursor:pointer;list-style:none;padding:12px 2px;font-size:13px;
   color:var(--dim);font-weight:600;display:flex;align-items:center;gap:8px}
 summary::-webkit-details-marker{display:none}
@@ -101,6 +102,35 @@ details[open] summary::after{transform:rotate(180deg)}
   border:1px solid var(--line);border-radius:99px;padding:7px 16px;font-size:12px;
   color:var(--dim);opacity:0;pointer-events:none;transition:.18s;z-index:30}
 #pull.on{opacity:1;transform:translateX(-50%) translateY(0)}
+
+/* ── 閱讀模式：同一頁展開，不跳出去 ── */
+#reader{position:fixed;inset:0;z-index:60;background:var(--bg);
+  transform:translateY(100%);transition:transform .26s cubic-bezier(.32,.72,0,1);
+  overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;
+  will-change:transform;visibility:hidden}
+#reader.on{transform:none;visibility:visible}
+.rbar{position:sticky;top:0;z-index:2;display:flex;align-items:center;gap:10px;
+  padding:calc(10px + env(safe-area-inset-top)) 14px 10px;
+  background:linear-gradient(180deg,rgba(7,8,10,.99) 60%,rgba(7,8,10,.86));
+  backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.rbar button{border:0;background:rgba(255,255,255,.07);color:var(--fg);
+  width:34px;height:34px;border-radius:50%;font-size:16px;line-height:1;
+  cursor:pointer;flex:0 0 auto;font-family:inherit}
+.rbar .rsrc{font-size:12px;color:var(--dim);font-weight:600}
+.rwrap{max-width:680px;margin:0 auto;padding:16px 18px calc(48px + env(safe-area-inset-bottom))}
+.rwrap h2{font-size:22px;line-height:1.38;letter-spacing:-.02em;margin:0 0 8px;font-weight:760}
+.rmeta{font-size:11.5px;color:var(--dim2);margin-bottom:14px}
+.rimg{width:100%;max-height:32vh;object-fit:cover;border-radius:13px;
+  margin:0 0 16px;display:block;background:var(--card2)}
+.rtext{font-size:16px;line-height:1.78;color:#dfe3ea;letter-spacing:.01em}
+.rtext p{margin:0 0 15px}
+.rtext p:first-child::first-letter{font-size:1em}
+.rnone{color:var(--dim2);font-size:13.5px;line-height:1.7;
+  padding:14px;border:1px dashed var(--line);border-radius:12px;margin-bottom:16px}
+.rorig{display:block;text-align:center;margin-top:22px;padding:13px;
+  border-radius:13px;border:1px solid var(--line);background:rgba(255,255,255,.04);
+  color:var(--hot);text-decoration:none;font-size:13.5px;font-weight:600}
+.rorig:active{background:rgba(255,255,255,.08)}
 </style>
 </head>
 <body>
@@ -113,15 +143,24 @@ details[open] summary::after{transform:rotate(180deg)}
 <div id="pull">放開以更新</div>
 <main id="list"><div class="msg">載入中…</div></main>
 
+<div id="reader">
+  <div class="rbar">
+    <button id="rclose" aria-label="關閉">✕</button>
+    <span class="rsrc" id="rsrc"></span>
+  </div>
+  <div class="rwrap" id="rbody"></div>
+</div>
+
 <script>
 const $ = s => document.querySelector(s);
-let PICKS = [], ALL = [], CATS = [], cat = "all", q = "";
+let PICKS = [], ALL = [], CATS = [], cat = "all", q = "", BYLINK = {};
 
 const COLOR = {game:"var(--game)",tech:"var(--tech)",local:"var(--local)",
                image:"var(--image)",pipeline:"var(--pipeline)",hermes:"var(--hermes)"};
 
 function esc(s){
-  return (s || "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+  return String(s == null ? "" : s).replace(/[&<>"]/g,
+    c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 }
 function ago(ts){
   if(!ts) return "";
@@ -138,11 +177,11 @@ function cardHTML(d, hero){
   const cls = hero ? "hero" : "card";
   const thumb = d.img
     ? `<div class="thumb"><img src="${esc(d.img)}" loading="lazy" referrerpolicy="no-referrer"
-           onerror="this.parentNode.remove()"></div>` : "";
+           onerror="this.parentNode.style.display='none'"></div>` : "";
   const noPic = d.img ? "" : " nopic";
   return `
-  <a class="${cls}${noPic}" href="${esc(d.link)}" target="_blank" rel="noopener"
-     style="--accent:${color}">
+  <a class="${cls}${noPic}" href="${esc(d.link)}" data-link="${esc(d.link)}"
+     rel="noopener" style="--accent:${color}">
     ${thumb}
     <div class="body">
       <div class="row">
@@ -151,7 +190,8 @@ function cardHTML(d, hero){
         <span class="dot"></span><span>${ago(d.ts) || esc(d.date)}</span>
       </div>
       <div class="t">${esc(d.title)}</div>
-      ${d.summary ? `<div class="s">${esc(d.summary)}</div>` : ""}
+      ${(!hero && d.summary) ? `<div class="s">${esc(d.summary)}</div>` : ""}
+      ${hero && d.summary ? `<div class="s">${esc(d.summary)}</div>` : ""}
     </div>
   </a>`;
 }
@@ -197,6 +237,51 @@ function buildTabs(){
   });
 }
 
+/* ── 閱讀模式 ── */
+function openReader(d){
+  if (!d) return;
+  $("#rsrc").textContent = d.source + " · " + (ago(d.ts) || d.date || "");
+  const body = d.full
+    ? `<div class="rtext">${d.full.split(/\n\n+/).map(p => `<p>${esc(p)}</p>`).join("")}</div>`
+    : `<div class="rnone">這條沒抓到正文（${esc(d.source)} 可能有反爬），只有摘要。
+         想看全文請點最底下的按鈕。</div>
+       <div class="rtext"><p>${esc(d.summary || d.title)}</p></div>`;
+  $("#rbody").innerHTML = `
+    <h2>${esc(d.title)}</h2>
+    <div class="rmeta">${labelOf(d.cat)} · ${esc(d.date || "")}</div>
+    ${d.img ? `<img class="rimg" src="${esc(d.img)}" referrerpolicy="no-referrer"
+         onerror="this.style.display='none'">` : ""}
+    ${body}
+    <a class="rorig" href="${esc(d.link)}" target="_blank" rel="noopener">讀原文 →</a>`;
+  const el = $("#reader");
+  el.classList.add("on");
+  el.scrollTop = 0;
+  document.body.style.overflow = "hidden";
+  if (!history.state || !history.state.reader) history.pushState({reader:1}, "");
+}
+function closeReader(){
+  const el = $("#reader");
+  if (!el.classList.contains("on")) return;
+  el.classList.remove("on");
+  document.body.style.overflow = "";
+  if (history.state && history.state.reader) history.back();
+}
+$("#rclose").onclick = closeReader;
+addEventListener("popstate", () => {
+  if ($("#reader").classList.contains("on")) closeReader();
+});
+
+/* 點卡片 → 頁內閱讀，不跳走。長按仍可複製連結（href 保留）。 */
+document.addEventListener("click", e => {
+  if (e.target.closest(".rorig") || e.target.closest(".rbar")) return;
+  const a = e.target.closest("a[data-link]");
+  if (!a) return;
+  const d = BYLINK[a.dataset.link];
+  if (!d) return;                       // 找不到就照常跳轉
+  e.preventDefault();
+  openReader(d);
+});
+
 async function load(bust){
   try {
     const r = await fetch("items.json" + (bust ? "?t=" + Date.now() : ""), {cache: "no-store"});
@@ -205,11 +290,14 @@ async function load(bust){
     ALL = j.items || [];
     PICKS = (j.picks && j.picks.length) ? j.picks : ALL.slice(0, 15);
     CATS = j.cats || [];
+    BYLINK = {};
+    ALL.forEach(d => { BYLINK[d.link] = d; });
+    PICKS.forEach(d => { BYLINK[d.link] = d; });   // picks 帶 full，優先
     const d = new Date();
     const wd = ["日","一","二","三","四","五","六"][d.getDay()];
     $("#today").textContent = `${d.getMonth()+1} 月 ${d.getDate()} 日 · 星期${wd}`;
     $("#meta").textContent = `${PICKS.length} 條` +
-      (j.generated_at ? " · " + ago(Date.parse(j.generated_at)/1000) + "更新" : "");
+      (j.generated_at ? " · " + (ago(Date.parse(j.generated_at)/1000) || "剛剛") + "更新" : "");
     buildTabs(); render();
   } catch (e) {
     if (!ALL.length) $("#list").innerHTML =
@@ -222,6 +310,7 @@ $("#q").oninput = e => { q = e.target.value.toLowerCase().trim(); render(); };
 
 let y0 = null, pulled = false;
 addEventListener("touchstart", e => {
+  if ($("#reader").classList.contains("on")) return;
   y0 = scrollY <= 2 ? e.touches[0].clientY : null; pulled = false;
 }, {passive:true});
 addEventListener("touchmove", e => {
@@ -232,6 +321,7 @@ addEventListener("touchend", () => {
   if (pulled){ $("#pull").classList.remove("on"); load(true); }
   y0 = null;
 });
+addEventListener("keydown", e => { if (e.key === "Escape") closeReader(); });
 
 load(false);
 if ("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js").catch(()=>{});
