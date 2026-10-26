@@ -268,6 +268,15 @@ def main() -> int:
         except Exception as e:
             print(f"[rank] failed: {type(e).__name__}: {e}", file=sys.stderr)
 
+    # 日文標題翻中文：只翻含假名的（20 條左右），整批一次呼叫，快取命中就 0 成本。
+    try:
+        import translate as translate_mod
+        n_tr = translate_mod.translate_items(uniq, os.path.join(a.out, "translate_cache.json"))
+        if n_tr:
+            print(f"[translate] {n_tr} 條日文標題已翻", file=sys.stderr)
+    except Exception as e:
+        print(f"[translate] failed: {type(e).__name__}: {e}", file=sys.stderr)
+
     # 頁內閱讀模式：只給精選抓正文（11 條約 3 秒）。link 沒變就吃快取，
     # 否則 cron 每 2 小時會把同樣那 11 頁重抓一次。
     cache_p = os.path.join(a.out, "article_cache.json")

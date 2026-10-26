@@ -85,6 +85,8 @@ main{padding:4px 14px 20px;max-width:720px;margin:0 auto}
 .card.nopic{border-left:3px solid var(--accent,var(--hot))}
 
 .src{font-weight:700;color:var(--fg);opacity:.9}
+.orig{font-size:11px;color:var(--dim2);line-height:1.4;margin-top:4px;
+  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 .chip{border-radius:5px;padding:1px 5px;font-size:10px;font-weight:650;
   border:1px solid currentColor}
 .dot{width:3px;height:3px;border-radius:50%;background:var(--dim2)}
@@ -190,7 +192,8 @@ function cardHTML(d, hero){
         <span class="chip" style="color:${color}">${labelOf(d.cat)}</span>
         <span class="dot"></span><span>${ago(d.ts) || esc(d.date)}</span>
       </div>
-      <div class="t">${esc(d.title)}</div>
+      <div class="t">${esc(d.zh || d.title)}</div>
+      ${d.zh ? `<div class="orig">${esc(d.title)}</div>` : ""}
       ${(!hero && d.summary) ? `<div class="s">${esc(d.summary)}</div>` : ""}
       ${hero && d.summary ? `<div class="s">${esc(d.summary)}</div>` : ""}
     </div>
@@ -248,7 +251,10 @@ function openReader(d){
          想看全文請點最底下的按鈕。</div>
        <div class="rtext"><p>${esc(d.summary || d.title)}</p></div>`;
   $("#rbody").innerHTML = `
-    <h2>${esc(d.title)}</h2>
+    <h2>${esc(d.zh || d.title)}</h2>
+    ${d.zh ? `<div class="rorig" style="border:0;background:none;color:var(--dim2);
+         font-size:12.5px;line-height:1.5;text-align:left;padding:0;margin:-2px 0 10px;
+         font-weight:400">${esc(d.title)}</div>` : ""}
     <div class="rmeta">${labelOf(d.cat)} · ${esc(d.date || "")}</div>
     ${d.img ? `<img class="rimg" src="${esc(d.img)}" referrerpolicy="no-referrer"
          onerror="this.style.display='none'">` : ""}
