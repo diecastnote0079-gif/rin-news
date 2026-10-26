@@ -74,9 +74,13 @@ NOISE_WORDS = [
 
 TAU_HOURS = 24.0       # 新鮮度半衰（普通欄目）
 TAU_HOURS_HOT = 6.0    # 重要欄目（Hermes / ComfyUI 這種會直接影響他的）
+TAU_HOURS_SLOW = 72.0  # 慢新聞（玩具／炒賣）：來源少、一週才 5–38 條，用 24h 會全滅
 HOT_CATS = {"hermes", "pipeline"}
+SLOW_CATS = {"toy", "hype"}
 MAX_AGE_HOURS = 48     # 超過就不進「精選」
+SLOW_MAX_AGE_HOURS = 168   # 玩具／炒賣放寬到 7 天（Google News 抓的就是 7d 窗口）
 SOURCE_QUOTA = 3       # 單一來源每日精選上限
+SOURCE_QUOTA_OVERRIDE = {"Hypebeast": 1}   # 8 成是球鞋時裝，不是他的收藏範圍
 CAT_CAP = 4            # 同分類精選上限
 
 
@@ -92,7 +96,12 @@ def _hours_old(ts: int, now: float) -> float:
 
 
 def freshness(ts: int, cat: str, now: float) -> float:
-    tau = TAU_HOURS_HOT if cat in HOT_CATS else TAU_HOURS
+    if cat in HOT_CATS:
+        tau = TAU_HOURS_HOT
+    elif cat in SLOW_CATS:
+        tau = TAU_HOURS_SLOW
+    else:
+        tau = TAU_HOURS
     return 2 ** (-_hours_old(ts, now) / tau)
 
 
@@ -184,7 +193,11 @@ def select(items: list[dict], now: float, limit: int = 15) -> tuple[list[dict], 
         scored.append({**it, "score": round(s * 100)})
     scored.sort(key=lambda x: -x["score"])
 
-    alive = [it for it in scored if _hours_old(it.get("ts") or 0, now) <= MAX_AGE_HOURS * 2]
+    def _max_age(cat: str) -> float:
+        return SLOW_MAX_AGE_HOURS if cat in SLOW_CATS else MAX_AGE_HOURS * 2
+
+    alive = [it for it in scored
+             if _hours_old(it.get("ts") or 0, now) <= _max_age(it.get("cat") or "")]
     alive = dedupe(alive)
 
     picks, cat_count, src_count = [], {}, {}
@@ -195,7 +208,7 @@ def select(items: list[dict], now: float, limit: int = 15) -> tuple[list[dict], 
         src = it.get("source") or ""
         if it["score"] < 20:      # 只濾掉真正的噪音（站聚、版本號）
             continue
-        if src_count.get(src, 0) >= SOURCE_QUOTA:
+        if src_count.get(src, 0) >= SOURCE_QUOTA_OVERRIDE.get(src, SOURCE_QUOTA):
             continue
         if cat_count.get(cat, 0) >= CAT_CAP:
             continue

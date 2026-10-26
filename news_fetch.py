@@ -20,12 +20,25 @@ import sys
 import urllib.request
 import xml.etree.ElementTree as ET
 from datetime import datetime, timezone
+from urllib.parse import quote
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 try:
     import rank as rank_mod
 except ImportError:
     rank_mod = None
+
+def _gn(q: str, when: str = "7d", gl: str = "TW", ceid: str = "TW:zh-Hant") -> str:
+    """Google News RSS 關鍵詞聚合。
+
+    2026-10-26 找到的補給線：中文玩具／卡牌／炒賣的單站 RSS 幾乎全死，
+    但 Google News 用關鍵詞聚合全網中文新聞，實測 7 天窗口每組 5–38 條
+    （黃牛炒價崩跌、寶可夢卡 6800 萬成交、RTX 5060 Ti 下殺）。
+    ⚠ `when:2d` 會幾乎歸零（中文新聞量少），一定要 7d 才夠。
+    """
+    return (f"https://news.google.com/rss/search?q={quote(q + ' when:' + when)}"
+            f"&hl=zh-TW&gl={gl}&ceid={ceid}")
+
 
 # (display name, category, feed url)
 # 原則：中文優先、跟阿夜手上的東西直接相關。英文工程師 changelog 一律不收。
@@ -50,6 +63,13 @@ FEEDS = [
     ("電撃Hobby",     "toy",      "https://hobby.dengeki.com/feed/"),
     ("Hypebeast",     "hype",     "https://hypebeast.com/zh/feed"),
     ("ToyArk",        "toy",      "https://news.toyark.com/feed"),
+    # Google News 關鍵詞聚合（2026-10-26）：單站中文 RSS 幾乎全死，這條補得回來。
+    # 標題尾端會帶「 - 來源名」，fetch 時會清掉；source 用 <source> 裡的真站名。
+    ("GN·玩具",       "toy",      _gn("玩具 模型 公仔 限量")),
+    ("GN·遊戲",       "game",     _gn("遊戲 發售 預購 限定版")),
+    ("GN·炒賣",       "hype",     _gn("炒賣 轉賣 黃牛 限量")),
+    ("GN·卡牌",       "hype",     _gn("卡牌 集換式 收藏 抽卡")),
+    ("GN·降價",       "tech",     _gn("顯卡 降價 特價 折扣")),
 ]
 
 CATS = [
@@ -170,6 +190,8 @@ def _plain(s: str) -> str:
 
 def article_text(url: str, limit: int = 1600) -> str:
     """抓一頁的正文段落，給頁內閱讀模式用。失敗回空字串（前端退回摘要）。"""
+    if "news.google.com" in url:
+        return ""          # Google News 的連結是跳轉頁，抓不到正文，別浪費 12 秒
     try:
         req = urllib.request.Request(url, headers={"User-Agent": UA,
                                                   "Accept-Language": "zh-TW,zh;q=0.9"})
@@ -201,6 +223,30 @@ def article_text(url: str, limit: int = 1600) -> str:
         return ""
 
 
+def fetch_gnews(url: str, limit: int):
+    """Google News RSS：標題尾端帶「 - 來源名」，真來源在 <source> 裡。
+
+    回傳 6-tuple（多一個 real_source），其他格式跟 fetch() 一樣。
+    """
+    req = urllib.request.Request(url, headers={"User-Agent": UA})
+    with urllib.request.urlopen(req, timeout=25) as r:
+        root = ET.fromstring(r.read())
+    rows = []
+    for it in root.iter("item"):
+        raw_title = clean(it.findtext("title") or "")
+        # 「巴哈商城 10 月 18 日當週預購排行榜 ... - GNN 新聞網」→ 去掉尾端來源
+        title = re.sub(r"\s+-\s+[^-]{2,34}$", "", raw_title).strip() or raw_title
+        se = it.find("source")
+        real = clean(se.text or "") if se is not None else ""
+        rows.append((title,
+                     (it.findtext("link") or "").strip(),
+                     clean(it.findtext("description") or "")[:280],
+                     parse_date(it.findtext("pubDate") or ""),
+                     pick_image(it, None),
+                     real))
+    return rows[:limit]
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--limit", type=int, default=12)
@@ -209,18 +255,24 @@ def main() -> int:
 
     items, failed = [], []
     for name, cat, url in FEEDS:
+        is_gn = "news.google.com" in url
         try:
-            rows = fetch(url, a.limit)
+            rows = fetch_gnews(url, a.limit) if is_gn else fetch(url, a.limit)
         except Exception:
             failed.append(name)
             continue
-        for title, link, summary, d, img in rows:
+        for row in rows:
+            if is_gn:
+                title, link, summary, d, img, real_src = row
+            else:
+                title, link, summary, d, img = row
+                real_src = ""
             if not title or not link:
                 continue
             if name in ("Hermes", "ComfyUI") and ("/ru/" in link or "/zh/" in link):
                 continue                        # GitHub release 的翻譯頁
             items.append({
-                "source": name, "cat": cat, "title": title, "link": link,
+                "source": real_src or name, "cat": cat, "title": title, "link": link,
                 "summary": summary, "img": img,
                 "ts": int(d.timestamp()) if d else 0,
                 "date": d.astimezone().strftime("%m-%d %H:%M") if d else "",
