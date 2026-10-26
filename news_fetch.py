@@ -259,6 +259,16 @@ def main() -> int:
         seen.add(k)
         uniq.append(it)
 
+    # 日文標題翻中文：只翻含假名的（20 條左右），整批一次呼叫，快取命中就 0 成本。
+    # ⚠ 必須排在 rank() 之前：rank 回傳的是複製品，先翻再排才不會只翻到 items。
+    try:
+        import translate as translate_mod
+        n_tr = translate_mod.translate_items(uniq, os.path.join(a.out, "translate_cache.json"))
+        if n_tr:
+            print(f"[translate] {n_tr} 條日文標題已翻", file=sys.stderr)
+    except Exception as e:
+        print(f"[translate] failed: {type(e).__name__}: {e}", file=sys.stderr)
+
     # 評分與每日精選（純規則，零 token）。每輪都重算——評分規則會改，即使新聞沒變。
     picks, stats = uniq[:15], {}
     if rank_mod is not None:
@@ -267,15 +277,6 @@ def main() -> int:
             picks, stats = ranked["picks"], ranked["stats"]
         except Exception as e:
             print(f"[rank] failed: {type(e).__name__}: {e}", file=sys.stderr)
-
-    # 日文標題翻中文：只翻含假名的（20 條左右），整批一次呼叫，快取命中就 0 成本。
-    try:
-        import translate as translate_mod
-        n_tr = translate_mod.translate_items(uniq, os.path.join(a.out, "translate_cache.json"))
-        if n_tr:
-            print(f"[translate] {n_tr} 條日文標題已翻", file=sys.stderr)
-    except Exception as e:
-        print(f"[translate] failed: {type(e).__name__}: {e}", file=sys.stderr)
 
     # 頁內閱讀模式：只給精選抓正文（11 條約 3 秒）。link 沒變就吃快取，
     # 否則 cron 每 2 小時會把同樣那 11 頁重抓一次。
@@ -313,9 +314,9 @@ def main() -> int:
         try:
             with open(p, encoding="utf-8") as f:
                 old = json.load(f)
+            sig = lambda ps: [(x.get("link"), x.get("zh")) for x in ps]
             if (old.get("items") == uniq
-                    and [x.get("link") for x in old.get("picks", [])]
-                        == [x.get("link") for x in picks]
+                    and sig(old.get("picks", [])) == sig(picks)
                     and all("full" in x for x in old.get("picks", []))
                     and old.get("cats") == [list(c) for c in CATS]):
                 print(f"{len(uniq)} items, no change -> keep {p}")
