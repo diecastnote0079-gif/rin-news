@@ -41,12 +41,23 @@ FEEDS = [
     ("Hermes",       "hermes",   "https://github.com/NousResearch/hermes-agent/releases.atom"),
     ("ComfyUI",      "pipeline", "https://github.com/comfyanonymous/ComfyUI/releases.atom"),
     ("mlllm",        "image",    "https://mlllm.io/rss.xml"),
+    # 2026-10-26 第二輪擴充：實測 53 個候選，這 8 個可讀（中文優先）
+    ("電腦玩物",      "tech",     "https://www.playpcesor.com/feeds/posts/default"),
+    ("電腦王阿達",    "tech",     "https://www.kocpc.com.tw/feed/"),
+    ("愛范兒",        "tech",     "https://www.ifanr.com/feed"),
+    ("科技新報",      "tech",     "https://technews.tw/feed/"),
+    ("Hobby Japan",   "toy",      "https://hjweb.jp/feed/"),
+    ("電撃Hobby",     "toy",      "https://hobby.dengeki.com/feed/"),
+    ("Hypebeast",     "hype",     "https://hypebeast.com/zh/feed"),
+    ("ToyArk",        "toy",      "https://news.toyark.com/feed"),
 ]
 
 CATS = [
     ("all",      "全部"),
     ("game",     "遊戲"),
     ("tech",     "科技"),
+    ("toy",      "玩具模型"),
+    ("hype",     "炒賣"),
     ("local",    "本地"),
     ("image",    "生圖"),
     ("pipeline", "Pipeline"),
@@ -206,8 +217,8 @@ def main() -> int:
         for title, link, summary, d, img in rows:
             if not title or not link:
                 continue
-            if "/ru/" in link or "/zh/" in link:   # translated duplicates
-                continue
+            if name in ("Hermes", "ComfyUI") and ("/ru/" in link or "/zh/" in link):
+                continue                        # GitHub release 的翻譯頁
             items.append({
                 "source": name, "cat": cat, "title": title, "link": link,
                 "summary": summary, "img": img,

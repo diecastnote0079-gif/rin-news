@@ -14,7 +14,7 @@
   --bg:#07080a; --card:#101216; --card2:#15181e; --line:rgba(255,255,255,.07);
   --fg:#f0f2f6; --dim:#8b93a3; --dim2:#5c6373; --hot:#7aa2ff;
   --game:#fb923c; --tech:#60a5fa; --local:#34d399; --image:#a78bfa;
-  --pipeline:#f472b6; --hermes:#22d3ee;
+  --pipeline:#f472b6; --hermes:#22d3ee; --toy:#e879f9; --hype:#facc15;
 }
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 html{-webkit-text-size-adjust:100%}
@@ -156,7 +156,8 @@ const $ = s => document.querySelector(s);
 let PICKS = [], ALL = [], CATS = [], cat = "all", q = "", BYLINK = {};
 
 const COLOR = {game:"var(--game)",tech:"var(--tech)",local:"var(--local)",
-               image:"var(--image)",pipeline:"var(--pipeline)",hermes:"var(--hermes)"};
+               image:"var(--image)",pipeline:"var(--pipeline)",hermes:"var(--hermes)",
+               toy:"var(--toy)",hype:"var(--hype)"};
 
 function esc(s){
   return String(s == null ? "" : s).replace(/[&<>"]/g,
