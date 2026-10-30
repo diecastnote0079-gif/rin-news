@@ -91,6 +91,8 @@ main{padding:4px 14px 20px;max-width:720px;margin:0 auto}
 .chip{border-radius:5px;padding:1px 5px;font-size:10px;font-weight:650;
   border:1px solid currentColor}
 .dot{width:3px;height:3px;border-radius:50%;background:var(--dim2)}
+.mine{font-size:9.5px;font-weight:800;letter-spacing:.4px;padding:1px 5px;border-radius:5px;
+      color:var(--hot);border:1px solid var(--hot);opacity:.85}
 
 details{margin-top:20px;border-top:1px solid var(--line);padding-top:4px}
 summary{cursor:pointer;list-style:none;padding:12px 2px;font-size:13px;
@@ -158,7 +160,7 @@ details[open] summary::after{transform:rotate(180deg)}
 const $ = s => document.querySelector(s);
 let PICKS = [], ALL = [], CATS = [], cat = "all", q = "", BYLINK = {};
 
-const COLOR = {game:"var(--game)",tech:"var(--tech)",local:"var(--local)",
+const COLOR = {game:"var(--game)",tech:"var(--tech)",ai:"var(--tech)",local:"var(--local)",
                image:"var(--image)",pipeline:"var(--pipeline)",hermes:"var(--hermes)",
                toy:"var(--toy)",hype:"var(--hype)"};
 
@@ -190,6 +192,7 @@ function cardHTML(d, hero){
     <div class="body">
       <div class="row">
         <span class="src">${esc(d.source)}</span>
+        ${d.curated ? '<span class="mine">手挑</span>' : ""}
         <span class="chip" style="color:${color}">${labelOf(d.cat)}</span>
         <span class="dot"></span><span>${ago(d.ts) || esc(d.date)}</span>
       </div>

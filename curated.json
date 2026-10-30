@@ -1,0 +1,32 @@
+[
+ {
+  "title": "開源 gpu-unlock 解鎖 RTX 30 系 BF16 算力，3090 Ti 實測近翻倍、二手價跟著飆",
+  "link": "https://www.blocktempo.com/nvidia-rtx-30-gpu-unlock-bf16-ai/",
+  "source": "動區動趨",
+  "cat": "tech",
+  "summary": "Linux 核心模組，不刷 vBIOS 不改硬體，解除 Ampere 消費卡 FP16/BF16 限制。3090 Ti BF16 自 87.5 升到 157.4 TFLOPS；3090 24GB 二手從約 1000 美元漲破 2000。",
+  "img": "",
+  "ts": 1793345811,
+  "date": "10-30 15:36"
+ },
+ {
+  "title": "英國退休裝修工閣樓 42 套寶可夢卡拍出 156 萬英鎊",
+  "link": "https://wealth.hket.com/article/4215941/",
+  "source": "香港經濟日報",
+  "cat": "hype",
+  "summary": "1990 年代末 eBay 買入、收藏冊保存 15 年。Ewbank's 拍賣，其中一套當年約 300 英鎊，成交 7.5 萬（250 倍）。拍賣行稱可能是歐洲歷來最高卡牌拍賣。",
+  "img": "",
+  "ts": 1793345811,
+  "date": "10-30 15:36"
+ },
+ {
+  "title": "MSI 推 128GB 統一記憶體迷你工作站，本地可跑 120B 級模型",
+  "link": "https://ascii.jp/en/elem/000/004/446/4446798/",
+  "source": "ASCII.jp",
+  "cat": "ai",
+  "summary": "PRO MAX EDGE AI+ 11M-008JP：Ryzen AI Max+ 395、96GB 可撥給 GPU、4 公升機箱。日本 11/5 開賣，約 ¥818,000（約 5,200 美元）。",
+  "img": "",
+  "ts": 1793345811,
+  "date": "10-30 15:36"
+ }
+]
