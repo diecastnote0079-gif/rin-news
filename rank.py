@@ -72,6 +72,14 @@ NOISE_WORDS = [
     "市集", "板攤", "週年", "生日", "見面會", "得獎", "心得分享", "同人展",
 ]
 
+# 企業 IT 維運噪音（2026-10-30）：阿夜明確說 NAS／CVE／Windows 更新這類「看了和沒看也沒分別」。
+# 這組只壓分，不禁用——留在「全部」裡，不進精選。命中 ≥2 條才砍（單一個 NAS 字不算）。
+IT_OPS_WORDS = [
+    "nas", "qnap", "synology", "cve", "kb5", "windows 11", "windows 10",
+    "韌體", "修補", "補丁", "熱修補", "勒索", "端點", "ad 域", "群組原則",
+    "備份還原", "災難復原", "vpn 閘道",
+]
+
 TAU_HOURS = 24.0       # 新鮮度半衰（普通欄目）
 TAU_HOURS_HOT = 6.0    # 重要欄目（Hermes / ComfyUI 這種會直接影響他的）
 TAU_HOURS_SLOW = 72.0  # 慢新聞（玩具／炒賣）：來源少、一週才 5–38 條，用 24h 會全滅
@@ -148,6 +156,13 @@ def score(item: dict, now: float) -> float:
         s *= 0.25
     elif noise_n >= 1:
         s *= 0.6
+
+    # 企業 IT 維運：命中 2 條以上壓到精選外，1 條只輕壓（避免誤殺資安/AI 相關）
+    it_ops = hits(title, IT_OPS_WORDS) + hits(summary, IT_OPS_WORDS) * 0.5
+    if it_ops >= 2:
+        s *= 0.3
+    elif it_ops >= 1:
+        s *= 0.75
     return s
 
 
