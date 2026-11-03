@@ -28,5 +28,55 @@
   "img": "",
   "ts": 1793345811,
   "date": "10-30 15:36"
+ },
+ {
+  "title": "GPU Prices Jump 11% in a Month as RTX 5090 Hits About ¥1.48 Million, and Memory Costs Don't Explain It",
+  "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTFA5enhHUm5",
+  "source": "XenoSpectrum",
+  "cat": "tech",
+  "summary": "顯卡一個月漲 11%，5090 約 ¥148 萬；分析認為記憶體成本解釋不了漲幅。",
+  "img": "",
+  "ts": 1793691958,
+  "date": "11-03 15:45"
+ },
+ {
+  "title": "At the NVIDIA store, RTX 5070 Ti prices have surged to $1,500 amid the disappearance of the RTX 5080",
+  "link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQU1lLWVN",
+  "source": "GameGPU",
+  "cat": "tech",
+  "summary": "NVIDIA 官網 5070 Ti 漲到 $1,500，5080 缺貨消失。整條 50 系在上漲。",
+  "img": "",
+  "ts": 1793691959,
+  "date": "11-03 15:45"
+ },
+ {
+  "title": "Raspberry Pi 5 16 GB Hits $385 Following Latest Price Hikes",
+  "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOZlk2WmF",
+  "source": "TechPowerUp",
+  "cat": "tech",
+  "summary": "Raspberry Pi 5 16GB 漲到 $385，漲價潮蔓延到單板電腦。",
+  "img": "",
+  "ts": 1793691959,
+  "date": "11-03 15:45"
+ },
+ {
+  "title": "Alien: Isolation gets free tools for entirely new levels, and modders can build them from scratch",
+  "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOYjF0RmN",
+  "source": "MIXED News",
+  "cat": "game",
+  "summary": "《Alien: Isolation》免費釋出關卡編輯工具，modder 可以從零自建新關卡。",
+  "img": "",
+  "ts": 1793691959,
+  "date": "11-03 15:45"
+ },
+ {
+  "title": "'Existing saves won't be compatible': Selaco's free 19-map expansion arrives November 13",
+  "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPOHpMVmJ",
+  "source": "MIXED News",
+  "cat": "game",
+  "summary": "《Selaco》免費 19 張地圖擴充 11/13 上線，舊存檔不相容。",
+  "img": "",
+  "ts": 1793691959,
+  "date": "11-03 15:45"
  }
 ]

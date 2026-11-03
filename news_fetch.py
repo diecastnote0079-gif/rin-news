@@ -287,7 +287,7 @@ def main() -> int:
         return 1
 
     # 手挑條目：curated.json（凜或他手動加的，不是 RSS）。
-    # 14 天內有效，過期自動淘汰，避免手挑永遠佔著版面。
+    # 3 天內有效，過期自動淘汰，避免手挑永遠佔著版面。
     cur_path = os.path.join(a.out, "curated.json")
     curated_kept = 0
     if os.path.exists(cur_path):
@@ -301,7 +301,7 @@ def main() -> int:
             if not (c.get("title") and c.get("link")):
                 continue
             ts = int(c.get("ts") or 0)
-            if not ts or now_ts - ts > 14 * 86400:
+            if not ts or now_ts - ts > 3 * 86400:
                 continue
             items.append({
                 "source": c.get("source") or "手挑",
@@ -366,7 +366,14 @@ def main() -> int:
 
     # 手挑條目優先進精選：最多佔 5 條，其餘名額留給評分演算法。
     # 不靠 score 加成，因為 cat/source 上限會把同源的手挑擠掉。
-    cur_picks = [x for x in uniq if x.get("curated")][:5]
+    # ⚠ 只有 24 小時內的手挑才可以霸位；按時間新到舊排。
+    #   2026-11-03 實測：三條 96.6 小時前的手挑卡在精選最前面四天，
+    #   資料明明每兩小時更新，他打開看到的永遠是同一批舊新聞。
+    _now_ts = int(datetime.now(timezone.utc).timestamp())
+    cur_picks = [x for x in uniq
+                 if x.get("curated") and _now_ts - int(x.get("ts") or 0) <= 24 * 3600]
+    cur_picks.sort(key=lambda x: int(x.get("ts") or 0), reverse=True)
+    cur_picks = cur_picks[:5]
     if cur_picks:
         from difflib import SequenceMatcher
         cl = {x["link"] for x in cur_picks}
