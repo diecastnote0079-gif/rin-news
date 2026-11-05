@@ -54,6 +54,10 @@ h1{font-size:25px;font-weight:700;letter-spacing:-.025em}
 .digest li::before{content:"";position:absolute;left:3px;top:10px;width:4px;height:4px;
   border-radius:50%;background:var(--dim2)}
 .digest li:last-child{margin-bottom:0}
+.digest .dli{display:block;color:inherit;text-decoration:none}
+.digest .dli:active{opacity:.6}
+.digest .dls{display:block;font-size:11px;color:var(--dim2);margin-top:3px;
+  font-variant-numeric:tabular-nums}
 
 /* ── 首頁底部：今天收到（摺疊）── */
 .nf{margin:18px 18px calc(20px + env(safe-area-inset-bottom));border-top:1px solid var(--line);padding-top:2px}
@@ -217,7 +221,7 @@ const $ = s => document.querySelector(s);
 const esc = s => String(s ?? "").replace(/[&<>"']/g, c =>
   ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 
-let ALL = [], PICKS = [], BYLINK = {}, NOTES = {}, NOTICES = [];
+let ALL = [], PICKS = [], BYLINK = {}, NOTES = {}, NOTICES = [], DIGEST = null;
 
 const LABEL = {game:"遊戲",tech:"科技",ai:"AI",local:"本地",toy:"玩具模型",
   image:"圖像",pipeline:"工具",hermes:"Hermes",hype:"潮物",news:"新聞"};
@@ -270,8 +274,57 @@ function rowHTML(d, showPic){
 }
 
 /* ── 首頁 ── */
+// 摘要那行文字 → 對回 items.json 裡的新聞（模型改寫過，用字元重疊率對）
+function matchItem(text){
+  const norm = x => String(x||"").replace(/[^\u4e00-\u9fa5A-Za-z0-9]/g,"").toLowerCase();
+  const T = norm(text);
+  if (T.length < 4) return null;
+  const bg = T.length > 2
+    ? Array.from({length: T.length - 1}, (_, i) => T.slice(i, i + 2))
+    : [T];
+
+  const scored = [];
+  for (const d of ALL){
+    const S = norm(d.title);
+    if (!S) continue;
+    let hit = 0;
+    for (const g of bg) if (S.includes(g)) hit++;
+    let score = hit / bg.length;
+    // 原文標題比摘要長很多 → 打折，避免「什麼都沾一點」的長標題勝出
+    const ratio = Math.min(S.length, T.length) / Math.max(S.length, T.length);
+    score *= (0.55 + 0.45 * ratio);
+    scored.push({ d, score });
+  }
+  scored.sort((a,b) => b.score - a.score);
+  const best = scored[0], second = scored[1];
+  if (!best || best.score < 0.45) return null;
+  // 跟第二名太接近 → 表示只是模糊命中，寧可不可點也不要連錯文章
+  if (second && best.score < second.score * 1.3) return null;
+  return best.d;
+}
+
 function renderFeed(){
   // 首頁主體 = 今天的新聞摘要（news-digest-evening 的產出），不是新聞列表
+  const el0 = $("#feed");
+
+  // 首選：digest.json（結構化，每條有真 link，可直接點開）
+  if (DIGEST && Array.isArray(DIGEST.items) && DIGEST.items.length){
+    let h = '<div class="digest">';
+    h += '<div class="dh">📰 今天值得看的</div><ul>';
+    for (const it of DIGEST.items){
+      const d = it.link ? BYLINK[it.link] : null;
+      const meta = [it.source || (d && d.source) || "", it.ts ? ago(it.ts) : ""].filter(Boolean).join(" · ");
+      h += it.link
+        ? `<li><a class="dli" data-link="${esc(it.link)}" href="#">${esc(it.text)}<span class="dls">${esc(meta)}</span></a></li>`
+        : `<li>${esc(it.text)}</li>`;
+    }
+    h += '</ul>';
+    if (DIGEST.discussion) h += `<div class="dh">🔥 今天在討論</div><div class="dp">${esc(DIGEST.discussion)}</div>`;
+    h += '</div>';
+    el0.innerHTML = h;
+    return;
+  }
+
   const digest = NOTICES.find(n => n.job === "今日新聞");
   const el = $("#feed");
   if (!digest){
@@ -285,7 +338,11 @@ function renderFeed(){
   for (const ln of lines){
     if (/^[・·-]\s*/.test(ln)){
       if (!inList){ html += '<ul>'; inList = true; }
-      html += `<li>${esc(ln.replace(/^[・·-]\s*/, ""))}</li>`;
+      const body = ln.replace(/^[・·-]\s*/, "");
+      const hit = matchItem(body);
+      html += hit
+        ? `<li><a class="dli" data-link="${esc(hit.link)}" href="#">${esc(body)}<span class="dls">${esc(hit.source||"")}${hit.ts ? " · " + ago(hit.ts) : ""}</span></a></li>`
+        : `<li>${esc(body)}</li>`;
     } else {
       if (inList){ html += '</ul>'; inList = false; }
       const cls = /^[📰🔥⭐]/.test(ln) ? "dh" : "dp";
@@ -357,6 +414,15 @@ document.addEventListener("click", e => {
     card.classList.toggle("open");
     return;
   }
+  const dl = e.target.closest(".dli");
+  if (dl){
+    e.preventDefault();
+    const link = dl.dataset.link;
+    const d = BYLINK[link];
+    if (d) openReader(d);
+    else if (/^https?:/.test(link)) window.open(link, "_blank", "noopener");
+    return;
+  }
   const a = e.target.closest("a.lead, a.row");
   if (a){
     const d = BYLINK[a.dataset.link];
@@ -408,6 +474,10 @@ async function load(){
     try {
       const tr = await fetch("notices.json?t=" + Date.now(), {cache:"no-store"});
       if (tr.ok){ const a = await tr.json(); if (Array.isArray(a)) NOTICES = a; }
+    } catch(e){}
+    try {
+      const dr = await fetch("digest.json?t=" + Date.now(), {cache:"no-store"});
+      if (dr.ok){ DIGEST = await dr.json(); }
     } catch(e){}
     try {
       const sr = await fetch("status.json?t=" + Date.now(), {cache:"no-store"});
