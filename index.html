@@ -333,6 +333,10 @@ function renderSearch(){
 }
 
 /* ── 狀態小卡 ── */
+const fmtReset = t => String(t||"")
+  .replace(/(\d+)d/g,"$1 天 ").replace(/(\d+)h/g,"$1 小時 ").replace(/(\d+)m/g,"$1 分")
+  .replace(/\s+/g," ").trim();
+
 function renderStatus(st){
   const el = $("#status");
   if (!st){ el.innerHTML = ""; return; }
@@ -342,9 +346,9 @@ function renderStatus(st){
 
   const cards = [
     // 額度：主數字是「剩餘」，標題寫清楚
-    { l:"模型剩餘", v:(q.rolling ?? "—"), u:"%",
-      s:`月 ${q.monthly ?? "—"}% · ${(q.reset||"").replace("h"," 小時").replace("m"," 分")}後重置`,
-      g:"⚡", cls: (q.rolling ?? 100) < 10 ? "bad" : ((q.rolling ?? 100) < 25 ? "warn" : "") },
+    { l:"模型額度（月）", v:(q.monthly ?? "—"), u:"%",
+      s:`週 ${q.weekly ?? "—"}% · 5 小時 ${q.rolling ?? "—"}% · ${fmtReset(q.reset_monthly)}後重置`,
+      g:"⚡", cls: (q.monthly ?? 100) < 10 ? "bad" : ((q.monthly ?? 100) < 25 ? "warn" : "") },
     // 記憶體：主數字 = 已用 %，副標給負載
     { l:"記憶體", v:(h.mem_pct ?? "—"), u:"%",
       s:`負載 ${h.load ?? "—"} · 開機 ${h.uptime_h ?? "—"} 小時`,

@@ -1,14 +1,16 @@
 {
- "updated": 1793864825,
+ "updated": 1793865159,
  "quota": {
   "rolling": 93,
   "weekly": 87,
   "monthly": 56,
-  "reset": "11m"
+  "reset_rolling": "5m",
+  "reset_weekly": "3d 16h",
+  "reset_monthly": "12d 9h"
  },
  "host": {
-  "load": 0.06,
-  "mem_pct": 10,
+  "load": 0.05,
+  "mem_pct": 11,
   "disk_pct": 3,
   "disk_free_gb": 417,
   "uptime_h": 13
@@ -26,7 +28,7 @@
   }
  },
  "cron": {
-  "enabled": 22,
+  "enabled": 23,
   "failed": 0,
   "failed_names": []
  }
