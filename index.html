@@ -323,6 +323,10 @@ async function load(bust){
     ALL = (j.items || []).filter(d => !feed || feed.has(d.link));
     ALL.sort((a, b) => (b.ts || 0) - (a.ts || 0));          // 全部一律按時間新→舊
     PICKS = (j.picks && j.picks.length) ? j.picks.slice() : ALL.slice(0, 15);
+    if (feed) {
+      PICKS = PICKS.filter(d => feed.has(d.link));   // 重點只在模型也認可的裡面挑
+      if (PICKS.length < 3) PICKS = ALL.slice(0, 6); // 交集太少就退回最新的 6 條
+    }
     PICKS.sort((a, b) => (b.ts || 0) - (a.ts || 0));        // 重點也按時間，不按分數
     CATS = j.cats || [];
     BYLINK = {};
