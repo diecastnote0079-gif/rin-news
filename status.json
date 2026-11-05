@@ -1,15 +1,15 @@
 {
- "updated": 1793865651,
+ "updated": 1793865767,
  "quota": {
   "rolling": 100,
   "weekly": 87,
   "monthly": 56,
-  "reset_rolling": "4h 58m",
+  "reset_rolling": "4h 56m",
   "reset_weekly": "3d 15h",
   "reset_monthly": "12d 9h"
  },
  "host": {
-  "load": 0.36,
+  "load": 0.42,
   "mem_pct": 11,
   "disk_pct": 3,
   "disk_free_gb": 417,
@@ -28,11 +28,16 @@
   }
  },
  "cron": {
-  "enabled": 23,
+  "enabled": 24,
   "failed": 0,
   "failed_names": []
  },
  "reminders": [
+  {
+   "name": "remind tissue",
+   "date": "11/05",
+   "days": 0
+  },
   {
    "name": "記憶插件觀察",
    "date": "11/09",
