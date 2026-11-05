@@ -304,53 +304,17 @@ function matchItem(text){
 }
 
 function renderFeed(){
-  // 首頁主體 = 今天的新聞摘要（news-digest-evening 的產出），不是新聞列表
-  const el0 = $("#feed");
-
-  // 首選：digest.json（結構化，每條有真 link，可直接點開）
-  if (DIGEST && Array.isArray(DIGEST.items) && DIGEST.items.length){
-    let h = '<div class="digest">';
-    h += '<div class="dh">📰 今天值得看的</div><ul>';
-    for (const it of DIGEST.items){
-      const d = it.link ? BYLINK[it.link] : null;
-      const meta = [it.source || (d && d.source) || "", it.ts ? ago(it.ts) : ""].filter(Boolean).join(" · ");
-      h += it.link
-        ? `<li><a class="dli" data-link="${esc(it.link)}" href="#">${esc(it.text)}<span class="dls">${esc(meta)}</span></a></li>`
-        : `<li>${esc(it.text)}</li>`;
-    }
-    h += '</ul>';
-    if (DIGEST.discussion) h += `<div class="dh">🔥 今天在討論</div><div class="dp">${esc(DIGEST.discussion)}</div>`;
-    h += '</div>';
-    el0.innerHTML = h;
-    return;
-  }
-
-  const digest = NOTICES.find(n => n.job === "今日新聞");
+  // 回到新聞列表：前兩則大卡，其餘小卡（不分類、不分「重點/更多」）
   const el = $("#feed");
-  if (!digest){
-    el.innerHTML = '<div class="msg">今天的摘要還沒出來<br><span style="opacity:.6">20:00 之後會在這</span></div>';
+  if (!ALL.length){
+    el.innerHTML = '<div class="msg">今天沒有東西</div>';
     return;
   }
-  // 把 `・` 開頭的行做成列表，其餘段落照排
-  const lines = digest.text.split("\n").map(l => l.trim()).filter(Boolean);
-  let html = '<div class="digest">';
-  let inList = false;
-  for (const ln of lines){
-    if (/^[・·-]\s*/.test(ln)){
-      if (!inList){ html += '<ul>'; inList = true; }
-      const body = ln.replace(/^[・·-]\s*/, "");
-      const hit = matchItem(body);
-      html += hit
-        ? `<li><a class="dli" data-link="${esc(hit.link)}" href="#">${esc(body)}<span class="dls">${esc(hit.source||"")}${hit.ts ? " · " + ago(hit.ts) : ""}</span></a></li>`
-        : `<li>${esc(body)}</li>`;
-    } else {
-      if (inList){ html += '</ul>'; inList = false; }
-      const cls = /^[📰🔥⭐]/.test(ln) ? "dh" : "dp";
-      html += `<div class="${cls}">${esc(ln)}</div>`;
-    }
-  }
-  if (inList) html += '</ul>';
-  html += '</div>';
+  const heads = ALL.slice(0, 2);
+  const rest = ALL.slice(2);
+  let html = "";
+  heads.forEach(d => { html += leadHTML(d); });
+  rest.forEach((d, i) => { html += rowHTML(d, i % 4 === 0); });
   el.innerHTML = html;
 }
 
