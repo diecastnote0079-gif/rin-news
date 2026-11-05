@@ -208,8 +208,15 @@ function render(){
   const match = d => (cat === "all" || d.cat === cat) &&
     (!q || (d.title + " " + d.source).toLowerCase().includes(q));
 
+  const TOP_N = 6;                       // 非看不可：只有前 6 條上「重點新聞」
   const picks = PICKS.filter(match);
-  const restOnly = ALL.filter(match).filter(r => !PICKS.some(p => p.link === r.link));
+  const hero = picks.slice(0, TOP_N);
+  const spilled = picks.slice(TOP_N);    // 其餘重點退回「全部」，不重複顯示
+  const seen = new Set([...hero, ...spilled].map(d => d.link));
+  const restOnly = ALL.filter(match)
+    .filter(r => !seen.has(r.link))
+    .concat(spilled)
+    .sort((a, b) => (b.ts || 0) - (a.ts || 0));
 
   const list = $("#list");
   if (!picks.length && !restOnly.length){
@@ -217,10 +224,10 @@ function render(){
   }
 
   let html = "";
-  if (picks.length){
-    html += `<div class="sect"><h2>${(q || cat !== "all") ? "符合" : "今天值得看"}</h2>
-             <span>${picks.length} 條</span></div>`;
-    picks.forEach((d, i) => { html += cardHTML(d, i === 0 && !q && cat === "all"); });
+  if (hero.length){
+    html += `<div class="sect"><h2>${(q || cat !== "all") ? "符合" : "重點新聞"}</h2>
+             <span>${hero.length} 條</span></div>`;
+    hero.forEach((d, i) => { html += cardHTML(d, i === 0 && !q && cat === "all"); });
   }
   if (restOnly.length){
     html += `<details ${(q || cat !== "all") ? "open" : ""}>
@@ -299,7 +306,9 @@ async function load(bust){
     if (!r.ok) throw new Error(r.status);
     const j = await r.json();
     ALL = j.items || [];
-    PICKS = (j.picks && j.picks.length) ? j.picks : ALL.slice(0, 15);
+    ALL.sort((a, b) => (b.ts || 0) - (a.ts || 0));          // 全部一律按時間新→舊
+    PICKS = (j.picks && j.picks.length) ? j.picks.slice() : ALL.slice(0, 15);
+    PICKS.sort((a, b) => (b.ts || 0) - (a.ts || 0));        // 重點也按時間，不按分數
     CATS = j.cats || [];
     BYLINK = {};
     ALL.forEach(d => { BYLINK[d.link] = d; });
