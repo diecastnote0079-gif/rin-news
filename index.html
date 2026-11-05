@@ -301,6 +301,45 @@ function renderFeed(){
   $("#feed").innerHTML = html;
 }
 
+/* ── 狀態行 ── */
+const fmtReset = t => String(t||"")
+  .replace(/(\d+)d/g,"$1 天 ").replace(/(\d+)h/g,"$1 小時 ").replace(/(\d+)m/g,"$1 分")
+  .replace(/\s+/g," ").trim();
+
+function renderStatus(st){
+  const el = $("#status");
+  if (!st){ el.innerHTML = ""; return; }
+  const q = st.quota || {}, h = st.host || {}, m = st.memory || {};
+  const mem = Math.max(m.memory?.pct ?? 0, m.user?.pct ?? 0);
+
+  const items = [
+    { k:"quota", v:(q.monthly ?? "—") + "%", cls:(q.monthly ?? 100) < 10 ? "bad" : ((q.monthly ?? 100) < 25 ? "warn" : "") },
+    { k:"ram",   v:(h.mem_pct ?? "—") + "%", cls:(h.mem_pct ?? 0) > 90 ? "warn" : "" },
+    { k:"disk",  v:(h.disk_free_gb ?? "—") + "G", cls:(h.disk_pct ?? 0) > 85 ? "bad" : "" },
+    { k:"mem",   v:mem + "%", cls:mem >= 97 ? "bad" : (mem >= 90 ? "warn" : "") },
+    { k:"up",    v:(h.uptime_h ?? "—") + "h", cls:"" },
+  ];
+
+  el.innerHTML = items.map(i =>
+    `<span class="si ${i.cls}"><span class="k">${i.k}</span><span class="v">${esc(String(i.v))}</span></span>`
+  ).join("");
+}
+
+/* ── 提醒跑馬燈 ── */
+function renderReminders(list){
+  const el = $("#reminder");
+  if (!list || !list.length){ el.innerHTML = ""; return; }
+  const one = list.map(r => {
+    const soon = r.days <= 3 ? " soon" : "";
+    const when = r.days <= 0 ? "今天" : (r.days === 1 ? "明天" : `${r.days} 天`);
+    return `<span class="ri"><span class="d ${soon}">${esc(r.date)}</span>${esc(r.name)}<span class="d${soon}"> · ${when}</span></span>`;
+  }).join("");
+  const many = list.length > 1;
+  el.className = "reminder" + (many ? "" : " slow");
+  el.innerHTML = `<div class="track">${one}${many ? one : ""}</div>`;
+  if (!many) el.querySelector(".track").style.animation = "none";
+}
+
 /* ── 今天收到（首頁底部）── */
 function renderNotices(){
   const box = $("#nf"), sum = box.querySelector("summary"), list = $("#nfl");
