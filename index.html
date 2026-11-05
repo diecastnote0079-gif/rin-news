@@ -45,6 +45,19 @@ h1{font-size:25px;font-weight:700;letter-spacing:-.025em}
 
 /* chips */
 
+/* ── 今日新聞摘要 ── */
+.digest{padding:6px 0 4px}
+.digest .dh{font-size:13px;font-weight:700;letter-spacing:.02em;color:var(--fg);
+  margin:16px 0 9px}
+.digest .dh:first-child{margin-top:4px}
+.digest .dp{font-size:14px;line-height:1.7;color:var(--dim);margin:4px 0}
+.digest ul{list-style:none;padding:0;margin:0 0 6px}
+.digest li{position:relative;padding-left:15px;font-size:14.5px;line-height:1.66;
+  color:var(--fg);margin-bottom:7px}
+.digest li::before{content:"";position:absolute;left:3px;top:10px;width:4px;height:4px;
+  border-radius:50%;background:var(--dim2)}
+.digest li:last-child{margin-bottom:0}
+
 /* ── 首頁底部：今天收到（摺疊）── */
 .nf{margin:18px 18px calc(20px + env(safe-area-inset-bottom));border-top:1px solid var(--line);padding-top:2px}
 .nf>summary{list-style:none;cursor:pointer;padding:13px 0;font-size:12.5px;color:var(--dim2);
@@ -189,9 +202,7 @@ a.row .cat{display:inline-block;font-size:10.5px;padding:1px 6px;border-radius:4
       <h1>今天</h1>
       <span class="hdate" id="h-date"></span>
       <span class="hmeta" id="h-meta"></span>
-      <button id="sbtn" aria-label="搜尋">⌕</button>
     </div>
-    <div class="qwrap" id="qwrap" hidden><input id="q" placeholder="搜尋標題、來源" autocomplete="off"></div>
     <div class="statusline" id="status"></div>
     <div class="reminder" id="reminder"></div>
   </header>
@@ -265,22 +276,30 @@ function rowHTML(d, showPic){
 
 /* ── 首頁 ── */
 function renderFeed(){
-  const k = q.trim().toLowerCase();
-  const pool = ALL.filter(d =>
-    !k || ((NOTES[d.link]||"") + " " + (d.title||"") + " " + (d.source||"")).toLowerCase().includes(k));
-
-  if (!pool.length){
-    $("#feed").innerHTML = `<div class="msg">${k ? "找不到「"+esc(q)+"」" : "今天沒有東西"}</div>`;
+  // 首頁主體 = 今天的新聞摘要（news-digest-evening 的產出），不是新聞列表
+  const digest = NOTICES.find(n => n.job === "今日新聞");
+  const el = $("#feed");
+  if (!digest){
+    el.innerHTML = '<div class="msg">今天的摘要還沒出來<br><span style="opacity:.6">20:00 之後會在這</span></div>';
     return;
   }
-
-  // 前兩則用大卡（有圖更好看），其餘同一條流，不再分「重點/更多」
-  let html = "";
-  const heads = pool.slice(0, 2);
-  const rest = pool.slice(2);
-  heads.forEach(d => html += leadHTML(d));
-  rest.forEach((d,i) => html += rowHTML(d, i % 4 === 0));
-  $("#feed").innerHTML = html;
+  // 把 `・` 開頭的行做成列表，其餘段落照排
+  const lines = digest.text.split("\n").map(l => l.trim()).filter(Boolean);
+  let html = '<div class="digest">';
+  let inList = false;
+  for (const ln of lines){
+    if (/^[・·-]\s*/.test(ln)){
+      if (!inList){ html += '<ul>'; inList = true; }
+      html += `<li>${esc(ln.replace(/^[・·-]\s*/, ""))}</li>`;
+    } else {
+      if (inList){ html += '</ul>'; inList = false; }
+      const cls = /^[📰🔥⭐]/.test(ln) ? "dh" : "dp";
+      html += `<div class="${cls}">${esc(ln)}</div>`;
+    }
+  }
+  if (inList) html += '</ul>';
+  html += '</div>';
+  el.innerHTML = html;
 }
 
 /* ── 狀態行 ── */
@@ -325,10 +344,11 @@ function renderReminders(list){
 /* ── 今天收到（首頁底部）── */
 function renderNotices(){
   const box = $("#nf"), sum = box.querySelector("summary"), list = $("#nfl");
-  if (!NOTICES.length){ box.style.display = "none"; return; }
+  const rest = NOTICES.filter(n => n.job !== "今日新聞");
+  if (!rest.length){ box.style.display = "none"; return; }
   box.style.display = "";
-  sum.innerHTML = `<span class="badge"></span>今天收到 ${NOTICES.length} 則`;
-  list.innerHTML = NOTICES.map((n,i) => `
+  sum.innerHTML = `<span class="badge"></span>還有 ${rest.length} 則簡報`;
+  list.innerHTML = rest.map((n,i) => `
     <div class="ni" data-i="${i}">
       <div class="nh">${esc(JOBNAME[n.job] || n.job)} · ${ago(n.ts)}</div>
       <div class="nb">${esc(n.text)}</div>
