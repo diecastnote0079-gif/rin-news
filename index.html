@@ -42,6 +42,17 @@ h1{font-size:25px;font-weight:700;letter-spacing:-.025em}
 
 /* chips */
 
+/* ── 手勢：下拉刷新指示 ── */
+#ptr{position:fixed;left:50%;top:0;z-index:70;width:32px;height:32px;border-radius:50%;
+  background:var(--surface);border:1px solid rgba(255,255,255,.08);
+  display:flex;align-items:center;justify-content:center;font-size:15px;color:var(--accent);
+  transform:translate(-50%,-50px);opacity:0;
+  transition:transform .16s ease, opacity .16s ease;pointer-events:none}
+#ptr.show{opacity:1}
+#ptr.spin{animation:ptrspin .8s linear infinite}
+@keyframes ptrspin{to{transform:rotate(360deg)}}
+html{overscroll-behavior-y:contain}
+
 /* ── 今日新聞摘要 ── */
 .digest{padding:6px 0 4px}
 .digest .dh{font-size:13px;font-weight:700;letter-spacing:.02em;color:var(--fg);
@@ -211,6 +222,7 @@ a.row .cat{display:inline-block;font-size:10.5px;padding:1px 6px;border-radius:4
 
 
 
+<div id="ptr">⟳</div>
 <div id="reader">
   <div class="rbar"><button id="rclose">✕</button><span class="rsrc" id="rsrc"></span></div>
   <div class="rwrap" id="rbody"></div>
@@ -476,6 +488,83 @@ async function load(){
     $("#feed").innerHTML = '<div class="msg">拿不到資料，確認網路或等下次更新</div>';
   }
 }
+
+/* ══ 手勢 ══ */
+(() => {
+  const ptr = $("#ptr"), reader = $("#reader");
+  const isOpen = () => reader && reader.classList.contains("on");
+
+  // 1) 下拉刷新（在頁面最頂往下拉超過 70px）
+  let sy = 0, pulling = false, pullingArmed = false;
+  document.addEventListener("touchstart", e => {
+    if (isOpen() || e.touches.length !== 1) return;
+    pullingArmed = window.scrollY <= 0;
+    sy = e.touches[0].clientY;
+    pulling = false;
+  }, {passive:true});
+
+  document.addEventListener("touchmove", e => {
+    if (!pullingArmed || isOpen() || e.touches.length !== 1) return;
+    const dy = e.touches[0].clientY - sy;
+    if (dy <= 0 || window.scrollY > 0){ ptr.classList.remove("show"); return; }
+    pulling = true;
+    const pull = Math.min(dy, 110);
+    if (pull > 12){
+      ptr.classList.add("show");
+      ptr.style.transform = `translate(-50%, ${Math.min(pull * 0.55, 58) + 4}px) rotate(${pull * 2}deg)`;
+    }
+  }, {passive:true});
+
+  document.addEventListener("touchend", e => {
+    if (!pulling){ ptr.classList.remove("show"); ptr.style.transform = ""; return; }
+    const dy = (e.changedTouches[0]?.clientY || 0) - sy;
+    pulling = false; pullingArmed = false;
+    if (dy > 70 && window.scrollY <= 0){
+      ptr.style.transform = "";
+      ptr.classList.add("spin");
+      load().finally(() => setTimeout(() => {
+        ptr.classList.remove("spin", "show");
+        ptr.style.transform = "";
+      }, 420));
+    } else {
+      ptr.classList.remove("show");
+      ptr.style.transform = "";
+    }
+  }, {passive:true});
+
+  // 2) 閱讀模式：從左邊緣往右滑 → 關閉
+  let rx = 0, ry = 0, edge = false;
+  reader.addEventListener("touchstart", e => {
+    if (!isOpen()) return;
+    rx = e.touches[0].clientX; ry = e.touches[0].clientY;
+    edge = rx < 40;
+  }, {passive:true});
+  reader.addEventListener("touchmove", e => {
+    if (!edge || !isOpen()) return;
+    const dx = e.touches[0].clientX - rx;
+    const dy = Math.abs(e.touches[0].clientY - ry);
+    if (dx > 0 && dy < 60) reader.style.transform = `translateX(${Math.min(dx, 300)}px)`;
+  }, {passive:true});
+  reader.addEventListener("touchend", e => {
+    if (!edge) return;
+    const dx = (e.changedTouches[0]?.clientX || 0) - rx;
+    reader.style.transform = "";
+    if (dx > 70) { e.target.closest("#reader") && $("#rclose").click(); }
+    edge = false;
+  }, {passive:true});
+
+  // 3) 點兩下頂部（標題那行）→ 回到最上面
+  let lastTap = 0;
+  document.querySelector("#p-home header").addEventListener("click", e => {
+    if (e.target.closest("button, a")) return;
+    const now = Date.now();
+    if (now - lastTap < 320){
+      window.scrollTo({top:0, behavior:"smooth"});
+      e.preventDefault();
+    }
+    lastTap = now;
+  });
+})();
 
 load();
 </script>
