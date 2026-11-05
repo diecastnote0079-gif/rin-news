@@ -1,0 +1,33 @@
+{
+ "updated": 1793864825,
+ "quota": {
+  "rolling": 93,
+  "weekly": 87,
+  "monthly": 56,
+  "reset": "11m"
+ },
+ "host": {
+  "load": 0.06,
+  "mem_pct": 10,
+  "disk_pct": 3,
+  "disk_free_gb": 417,
+  "uptime_h": 13
+ },
+ "memory": {
+  "memory": {
+   "pct": 95,
+   "chars": 2099,
+   "limit": 2200
+  },
+  "user": {
+   "pct": 98,
+   "chars": 1341,
+   "limit": 1375
+  }
+ },
+ "cron": {
+  "enabled": 22,
+  "failed": 0,
+  "failed_names": []
+ }
+}
