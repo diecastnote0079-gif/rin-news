@@ -136,6 +136,13 @@ details[open] summary::after{transform:rotate(180deg)}
   border-radius:13px;border:1px solid var(--line);background:rgba(255,255,255,.04);
   color:var(--hot);text-decoration:none;font-size:13.5px;font-weight:600}
 .rorig:active{background:rgba(255,255,255,.08)}
+/* ── 通知（cron 簡報／提醒）── */
+.notice{padding:12px 14px;border-left:2px solid var(--line);margin:0 0 8px;
+        background:rgba(255,255,255,.02);border-radius:0 8px 8px 0}
+.notice .nh{font-size:11.5px;color:var(--dim2);margin-bottom:5px;letter-spacing:.02em}
+.notice .nh b{color:var(--fg);font-weight:600}
+.notice .nt{font-size:13.5px;line-height:1.55;color:var(--dim);white-space:pre-wrap;
+            display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
 </style>
 </head>
 <body>
@@ -158,7 +165,7 @@ details[open] summary::after{transform:rotate(180deg)}
 
 <script>
 const $ = s => document.querySelector(s);
-let PICKS = [], ALL = [], CATS = [], cat = "all", q = "", BYLINK = {}, NOTES = {};
+let PICKS = [], ALL = [], CATS = [], cat = "all", q = "", BYLINK = {}, NOTES = {}, NOTICES = [];
 
 const COLOR = {game:"var(--game)",tech:"var(--tech)",ai:"var(--tech)",local:"var(--local)",
                image:"var(--image)",pipeline:"var(--pipeline)",hermes:"var(--hermes)",
@@ -224,6 +231,15 @@ function render(){
   }
 
   let html = "";
+  if (NOTICES.length && cat === "all" && !q){
+    html += `<div class="sect"><h2>📮 今天收到</h2><span>${NOTICES.length} 則</span></div>`;
+    NOTICES.forEach(n => {
+      html += `<div class="notice">
+        <div class="nh"><b>${esc(n.job)}</b> · ${ago(n.ts) || ""}</div>
+        <div class="nt">${esc(n.text)}</div>
+      </div>`;
+    });
+  }
   if (hero.length){
     html += `<div class="sect"><h2>${(q || cat !== "all") ? "符合" : "重點新聞"}</h2>
              <span>${hero.length} 條</span></div>`;
@@ -319,6 +335,12 @@ async function load(bust){
     try {
       const nr = await fetch("notes.json?t=" + Date.now(), {cache: "no-store"});
       if (nr.ok) { const o = await nr.json(); if (o && typeof o === "object") NOTES = o; }
+    } catch (e) { /* 沒有就算了 */ }
+    // cron 的簡報與提醒
+    NOTICES = [];
+    try {
+      const tr = await fetch("notices.json?t=" + Date.now(), {cache: "no-store"});
+      if (tr.ok) { const a = await tr.json(); if (Array.isArray(a)) NOTICES = a; }
     } catch (e) { /* 沒有就算了 */ }
     ALL = (j.items || []).filter(d => !feed || feed.has(d.link));
     ALL.sort((a, b) => (b.ts || 0) - (a.ts || 0));          // 全部一律按時間新→舊

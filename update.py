@@ -62,7 +62,7 @@ def main() -> int:
     if not os.path.isdir(os.path.join(HERE, ".git")):
         print("no git repo here; done (local only)")
         return 0
-    code, diff = sh(["git", "status", "--porcelain", "items.json", "feed.json"])
+    code, diff = sh(["git", "status", "--porcelain", "items.json", "feed.json", "notes.json", "notices.json"])
     if not diff.strip():
         print("items.json unchanged; nothing to publish")
         return 0
@@ -70,8 +70,9 @@ def main() -> int:
     # 3) commit + push
     stamp = datetime.now().strftime("%Y-%m-%d %H:%M")
     sh(["git", "add", "items.json"])
-    if os.path.exists(os.path.join(HERE, "feed.json")):
-        sh(["git", "add", "feed.json"])
+    for extra in ("feed.json", "notes.json", "notices.json"):
+        if os.path.exists(os.path.join(HERE, extra)):
+            sh(["git", "add", extra])
     code, out = sh(["git", *GIT_USER, "commit", "-m", f"items: {stamp}"])
     print("commit:", out.splitlines()[0] if out else code)
 

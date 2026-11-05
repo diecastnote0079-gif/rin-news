@@ -1,0 +1,32 @@
+[
+ {
+  "job": "carousell-videogame-watch",
+  "ts": 1793862355,
+  "text": "Carousell 遊戲分類：新上架 2 筆\n- Nintendo Switch OLED with Games and Accessories ｜ Well used ｜ RM900 ｜ CeX 無此款 ｜ 4分鐘前 ｜ balabing\n  https://www.carousell.com.my/p/nintendo-switch-oled-with-games-and-accessories-1472341008/\n- Nintendo Game Boy Advance SP AGS 101 ｜ Well used ｜ RM499 ｜ CeX 無此款 ｜ 6分鐘前 ｜ niqz88\n  https://www.carousell.com.my/p/nintendo-game-boy-advance-sp-ags-101-1469319015/"
+ },
+ {
+  "job": "news-digest-evening",
+  "ts": 1793861413,
+  "text": "📰 今天值得看的\n・妮姬 PC 啟動器被駭，官方道歉、全球補 20 抽\n・大馬資安威脅等級 11/4 起從低升到「中等」\n・粉絲連署：吉隆坡想要一間永久寶可夢中心\n・Kimi K3.1 Pro 開源，2.8 兆參數、百萬 context\n・拉麵男明晚開訂，MG 命運脈衝／S 鋼彈再販\n・AI 伺服器搶料，PCB 缺貨訂單已排到 2030\n\n🔥 今天在討論\n泰國 BL/GL 圈整個洗版——GMMTV 新企劃、Scarlet Heart 首播、一整排藝人活動同時在刷；美國那邊還是 Trump、民主黨和期中選舉後續在吵。"
+ },
+ {
+  "job": "health-monitor",
+  "ts": 1793848195,
+  "text": "🔧 系統檢查\n・MEMORY.md 已 97%（2136/2200）\n・USER.md 已 98%（1344/1375）"
+ },
+ {
+  "job": "cex-morning-brief",
+  "ts": 1793839671,
+  "text": "昨天 CeX（4 號）的動靜：\n\n🆕 新上架遊戲片：Indika（PS5）RM70、RPG Maker With（PS5）RM140、Universe for Sale（Switch 中文版）RM115、Asterix & Obelix XXL 3（Switch）RM160\n🆕 新上架硬體：DJI Mini 5 Pro RC-N3 全配 A 級 RM3000（B RM2700、C RM2500）、Asus TUF K3 Gen II 初音聯名機械鍵盤 RM290\n📉 降價：Switch 2《惡靈古堡安魂曲》Pro 手把 RM340→240、Asus A409 筆電 RM900→800、AirPods Pro 3 的 B 級 RM750→660\n📦 回架：Switch 2《Sports Resort》《High on Life 2》、PS5《CoD: MW4》《Hi-Fi Rush》《Project Motor Racing》、PS4《CoD: MW2》《Outlast Trinity》\n📦 回架：Xbox 20 週年無線手把、8BitDo Pro 2、PICO 4 Ultra 256GB 全配\n🚫 賣光：Switch 2《Final Fantasy Resonance》、PS5《Control Resonant》《NBA 2K27》、PS4《Sakura Wars》\n🚫 賣光：PS3 320GB 原箱主機、PS4 500GB 星戰限定機、Xbox One 1TB Halo 5 限定機\n🚫 賣光：PS3《Transformers》《Guitar Hero 3》、PS Vita《Gravity Rush》、3DS《Etrian Mystery Dungeon》"
+ },
+ {
+  "job": "ai-research-daily",
+  "ts": 1793837014,
+  "text": "**AI 工具日報・11/05**\n\n**1｜Hermes v0.22.7（11/3）**\n是什麼：又一個 patch 打包（174 個 PR），整理好的說明要等 v0.23.0。\n對我們：這兩包裡跟你有關的只有 cron 漏跑補跑政策和 `/model reset`，其餘多半是桌面版群組聊天、Web Access 那類你用不到的。\n結論：觀察就好——等 0.23.0 說明再決定，不是現在升。\n\n**2｜FLUX 3 Image Klein（BFL，5.6B）**\n是什麼：一個模型同時做生圖、依指令修改圖片、最多 10 張參考圖合成，官方另出了 ComfyUI 打包版（10 月中發佈，這幾天上 HF trending）。\n對我們：int8 版 5.8GB，官方明寫是給 RTX 3070 這種 8GB 卡跑的；多參考圖正好對上你「同一個人要長一樣」那條線。\n結論：值得試——但文字編碼器和 upsampler 在 8GB 上要 offload，先量一張 1024 要幾秒再決定收不收。\n\n**3｜ComfyUI v0.44.0（11/4）**\n是什麼：常規更新，加 partner 節點與新模型支援（MiniMax H3、材質處理）。\n對我們：對 3070 Ti 真正有用的是修好 fp8 fast 在動態 VRAM 下偷偷掉回 bf16 的 bug——同樣設定可能快一點。\n結論：觀察就好，下次要動 workflow 時一起升，別為它專門停機。\n\n**4｜Kimi K3.1-Pro 權重開源（11/2–11/4）**\n是什麼：Moonshot 把旗艦模型放上 HF，總參數 2.8T、每次激活 104B、100 萬 context，用自訂授權。\n對我們：本地就算了吧（16G RAM＋8G VRAM），API 也不用換——主腦是固定的，換了只是多花錢。\n結論：不用管。\n\n都只是列出來給你挑，我沒動任何東西。"
+ },
+ {
+  "job": "mrt-pass-renew-reminder-20261030",
+  "ts": 1793338234,
+  "text": "阿夜，MRT 月卡今天（10-30）正式過期了，記得去 renew 喔 (๑•̀ㅂ•́)و"
+ }
+]
