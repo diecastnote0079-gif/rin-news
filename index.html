@@ -532,26 +532,50 @@ async function load(){
     }
   }, {passive:true});
 
-  // 2) 閱讀模式：從左邊緣往右滑 → 關閉
-  let rx = 0, ry = 0, edge = false;
+  // 2) 閱讀模式：右滑／下滑關閉（不限定邊緣 —— Android 系統返回手勢會先吃掉邊緣滑動）
+  let rx = 0, ry = 0, dragging = false, closedByGesture = false;
   reader.addEventListener("touchstart", e => {
     if (!isOpen()) return;
-    rx = e.touches[0].clientX; ry = e.touches[0].clientY;
-    edge = rx < 40;
+    rx = e.touches[0].clientX;
+    ry = e.touches[0].clientY;
+    dragging = true;
+    closedByGesture = false;
   }, {passive:true});
+
   reader.addEventListener("touchmove", e => {
-    if (!edge || !isOpen()) return;
+    if (!dragging || !isOpen()) return;
     const dx = e.touches[0].clientX - rx;
-    const dy = Math.abs(e.touches[0].clientY - ry);
-    if (dx > 0 && dy < 60) reader.style.transform = `translateX(${Math.min(dx, 300)}px)`;
+    const dy = e.touches[0].clientY - ry;
+    // 右滑：跟手橫移
+    if (dx > 10 && Math.abs(dy) < Math.abs(dx) * 0.9 && dx > 0){
+      reader.style.transition = "none";
+      reader.style.transform = `translateX(${Math.min(dx, 400)}px)`;
+    }
+    // 下滑：稍微跟手（做出可關閉的回饋）
+    else if (dy > 40 && dx < 40 && Math.abs(dx) < Math.abs(dy)){
+      reader.style.transition = "none";
+      reader.style.opacity = String(Math.max(0.35, 1 - dy / 500));
+    }
   }, {passive:true});
-  reader.addEventListener("touchend", e => {
-    if (!edge) return;
-    const dx = (e.changedTouches[0]?.clientX || 0) - rx;
+
+  const endSwipe = e => {
+    if (!dragging) return;
+    dragging = false;
+    const dx = (e.changedTouches[0]?.clientX || rx) - rx;
+    const dy = (e.changedTouches[0]?.clientY || ry) - ry;
+    reader.style.transition = "";
     reader.style.transform = "";
-    if (dx > 70) { e.target.closest("#reader") && $("#rclose").click(); }
-    edge = false;
-  }, {passive:true});
+    reader.style.opacity = "";
+    if (dx > 70 && Math.abs(dy) < 80){
+      closedByGesture = true;
+      $("#rclose").click();
+    } else if (dy > 130 && Math.abs(dx) < 70){
+      closedByGesture = true;
+      $("#rclose").click();
+    }
+  };
+  reader.addEventListener("touchend", endSwipe, {passive:true});
+  reader.addEventListener("touchcancel", endSwipe, {passive:true});
 
   // 3) 點兩下頂部（標題那行）→ 回到最上面
   let lastTap = 0;
