@@ -1,13 +1,49 @@
 {
-  "date": "2026-11-05",
-  "updated": "2026-11-05T16:50:00+08:00",
-  "items": [
-    {"text": "Switch 卡匣關鍵供應商要停產 ROM，實體遊戲再添變數", "link": "https://www.lowyat.net/2026/409257/nintendo-switch-cartridge-supplier-rom/", "source": "Lowyat", "ts": 1793857510},
-    {"text": "大馬玩家聯署，要求開一間永久寶可夢中心", "link": "https://www.lowyat.net/2026/409212/petition-permanent-pokemon-centre-msia/", "source": "Lowyat", "ts": 1793844012},
-    {"text": "樂高首款哥吉拉套組公開，怪獸之王終於積木化", "link": "https://www.kocpc.com.tw/archives/702123", "source": "電腦王阿達", "ts": 1793860831},
-    {"text": "NTT Docomo 疑遭駭，全日本 5G SA 一度斷線", "link": "https://www.4gamers.com.tw/news/detail/83101/ntt-docomo-suspected-cyberattack-online-services-japan-mobile-network-outage", "source": "4Gamers", "ts": 1793860209},
-    {"text": "妮姬 PC 啟動器遭竄改散佈惡意程式，官方推清除工具", "link": "https://infosecu.technews.tw/2026/11/05/tencents-official-nikke-launcher-used-to-spread-malware/", "source": "科技新報", "ts": 1793860209},
-    {"text": "開發者靠 Claude 把《瑪利歐奧德賽》搬上 Apple TV，跑 60FPS", "link": "https://www.kocpc.com.tw/archives/702106", "source": "電腦王阿達", "ts": 1793860409}
-  ],
-  "discussion": "泰國 BL 圈今天刷滿一整排，GMMTV NEXT 新企劃加上 DewTee、NuNew、JossGawin 的見面會；政治那邊美國期中選舉民主黨大勝，Trump、Senate、Texas 全在吵，順帶 Anwar 和伊朗。"
+ "date": "2026-11-05",
+ "updated": "2026-11-05T20:00:00+08:00",
+ "items": [
+  {
+   "text": "旺宏停產 Switch 1 卡匣，實體片恐怕又要漲",
+   "link": "https://www.4gamers.com.tw/news/detail/83108/macronix--stops-making-rom-memory-card",
+   "source": "4Gamers",
+   "ts": 1793871756
+  },
+  {
+   "text": "時之笛重製版今天發售，M 站 96 分今年最高",
+   "link": "https://www.4gamers.com.tw/news/detail/83104/the-legend-of-zelda-ocarina-of-time-scores-96-on-metacritic-with-80-reviews",
+   "source": "4Gamers",
+   "ts": 1793866092
+  },
+  {
+   "text": "任天堂營收升五成，主機銷量卻掉近四成",
+   "link": "https://www.4gamers.com.tw/news/detail/83114/nintendo-releases-its-financial-results-for-the-first-half-of-fiscal-year-2027",
+   "source": "4Gamers",
+   "ts": 1793873948
+  },
+  {
+   "text": "大馬玩家聯署，想留一間常設寶可夢中心",
+   "link": "https://www.lowyat.net/2026/409212/petition-permanent-pokemon-centre-msia/",
+   "source": "Lowyat",
+   "ts": 1793844012
+  },
+  {
+   "text": "SEGA 街機網被駭，太鼓、maimai 停擺四天",
+   "link": "https://unwire.hk/2026/11/05/sega-allnet-aime-arcade-hack-outage-nov-2026/tech-secure/?utm_source=rss&utm_medium=rss&utm_campaign=sega-allnet-aime-arcade-hack-outage-nov-2026",
+   "source": "Unwire HK",
+   "ts": 1793873542
+  },
+  {
+   "text": "Nothing 下月推首款「AI 原生」裝置",
+   "link": "https://www.lowyat.net/2026/409228/nothing-first-ai-native-product/",
+   "source": "Lowyat",
+   "ts": 1793846553
+  },
+  {
+   "text": "Claude Code 團隊在 IPO 前集體走人",
+   "link": "https://cyberq.tw/2026/11/05/anthropic-ipo-claude-code-exits/",
+   "source": "CyberQ",
+   "ts": 1793864227
+  }
+ ],
+ "discussion": "泰劇 BL／GL 圈今天整頁都是他們：GMMTV 明年企劃、iQIYI 泰劇發表會、Scarlet Heart 新一集輪流上榜；另一邊是美國期中選舉餘波，Trump、民主黨、德州、密西根、伊朗一路刷。本地只有 Anwar 和吉蘭丹插花。"
 }

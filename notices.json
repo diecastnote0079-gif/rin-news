@@ -1,13 +1,13 @@
 [
  {
+  "job": "今日新聞",
+  "ts": 1793880153,
+  "text": "📰 今天值得看的\n・旺宏停產 Switch 1 卡匣，實體版恐怕又要漲價\n・時之笛重製版於今天發售，M 站 96 分是今年最高分\n・任天堂營收升五成，主機銷量卻掉近四成\n・大馬玩家聯署，想留一間常設寶可夢中心\n・SEGA 街機網被駭，太鼓、maimai 停擺四天\n・Nothing 下月推首款「AI 原生」裝置\n・Anthropic 在 IPO 前，Claude Code 團隊集體走人\n\n🔥 今天在討論\n泰劇 BL／GL 圈今天佔滿整頁：GMMTV 明年企劃、iQIYI 泰劇發表會、Scarlet Heart 新一集輪流上榜；另一邊是美國期中選舉餘波，Trump、民主黨、德州、密西根、伊朗一路刷，本地只有 Anwar 和吉蘭丹順帶上榜。\n\ndigest.json 已寫好：`/home/rin/AI/news/digest.json`（7 條，順序與上面一致）。"
+ },
+ {
   "job": "CeX 早安",
   "ts": 1793874563,
   "text": "昨天 CeX 的動靜：\n\n🆕 新上架\n・Indika（PS5）RM70\n・RPG Maker With（PS5）RM140\n・Universe for Sale（Switch 中文版）RM115\n・Asterix & Obelix XXL 3: The Crystal Menhir（Switch）RM160\n・DJI Mini 5 Pro RC-N3 空拍機 全配 A 級 RM3000\n・Asus TUF K3 Gen II 機械鍵盤 初音聯名（A 級）RM290\n\n📉 降價\n・Switch 2 官方《惡靈古堡安魂曲》Pro 控制器 RM340 → RM240\n・Nikon Z8 機身（B 級）RM9000 → RM8500\n・Nikon Z6 III 機身（B 級）RM7000 → RM6500\n・Canon EOS R6 機身（A 級）RM5000 → RM4500\n・Sony A7C II 機身（A 級）RM6500 → RM6200\n・Olympus OM-D E-M10 Mark II + 14-42mm（C 級）RM1200 → RM1000\n\n📦 回架\n・PS5《Call of Duty: MW4》\n・Switch 2《High on Life 2》\n・Switch 2《Nintendo Switch Sports Resort》\n・PS5《Hi-Fi Rush》\n・PS5《Project Motor Racing》\n・Xbox Series 20 週年無線手把\n\n🚫 賣光\n・Switch 2《Final Fantasy Resonance》\n・PS5《Control Resonant》\n・PS5《NBA 2K27》\n・PS3 320GB 原箱主機\n・PS4 500GB 星戰限定機\n・Xbox One 1TB Halo 5 限定機"
- },
- {
-  "job": "今日新聞",
-  "ts": 1793868541,
-  "text": "📰 今天值得看的\n・Switch 卡匣的關鍵供應商要停產 ROM，實體遊戲再添變數\n・馬來西亞玩家聯署，要求開一間永久寶可夢中心\n・樂高首款哥吉拉套組公開，怪獸之王終於積木化\n・NTT Docomo 疑遭駭，全日本 5G SA 一度斷線\n・妮姬 PC 啟動器遭竄改散佈惡意程式，官方推清除工具\n・開發者靠 Claude 把《瑪利歐奧德賽》搬上 Apple TV，跑 60FPS\n\n🔥 今天在討論\n泰國 BL 圈今天刷滿一整排：GMMTV NEXT 新企劃，加上 DewTee、NuNew、JossGawin 的見面會。政治方面，美國期中選舉民主黨大勝，Trump、Senate、Texas 全在吵，順帶 Anwar 和伊朗。\n\ndigest.json 已寫入 `/home/rin/AI/news/digest.json`（6 條，連結與 ts 都對回 items.json 核過）。"
  },
  {
   "job": "AI 工具日報",
