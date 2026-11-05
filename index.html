@@ -184,12 +184,23 @@ html{overscroll-behavior-y:contain}
 .bb .nl li{position:relative;padding-left:13px;margin-bottom:4px;color:var(--fg)}
 .bb .nl li::before{content:"";position:absolute;left:2px;top:9px;width:3px;height:3px;
   border-radius:50%;background:var(--dim2)}
+.bb .ncat{display:flex;align-items:center;gap:8px;margin:15px 0 7px;padding-top:11px;
+  border-top:1px solid rgba(255,255,255,.055)}
+.bb .ncat.first{margin-top:4px;padding-top:0;border-top:0}
+.bb .ncat .nem{font-size:13px;line-height:1}
+.bb .ncat .nct{font-size:13px;font-weight:700;color:#f2f0ec;letter-spacing:.01em}
+.bb .ncat .nct::after{content:"";flex:1}
+.bb .price{color:#d8c398;font-weight:600;font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+.bb .arrow{color:var(--dim2);margin:0 3px;font-size:11px}
 .bb .nrow{display:flex;gap:7px;align-items:flex-start;margin:5px 0}
 .bb .nem{flex:0 0 auto;line-height:1.55}
 .bb .ntx{flex:1}
-.bb .nlab{flex:0 0 auto;font-size:10.5px;line-height:1.5;padding:1px 7px;border-radius:6px;
-  background:rgba(138,180,248,.13);color:var(--accent);margin-top:1px;white-space:nowrap;
-  min-width:42px;text-align:center}
+.bb .nlab{flex:0 0 auto;font-size:10.5px;line-height:1.5;padding:1.5px 7px;border-radius:6px;
+  background:rgba(255,255,255,.055);color:var(--dim2);margin-top:1px;white-space:nowrap;
+  min-width:44px;text-align:center;font-weight:500}
+.bb .nlab.good{background:rgba(143,191,159,.16);color:#9ecfae}
+.bb .nlab.meh{background:rgba(255,255,255,.06);color:var(--dim2)}
+.bb .nlab.bad{background:rgba(242,131,122,.13);color:#dfa09a}
 
 main{padding:0}
 
@@ -442,39 +453,95 @@ function renderReminders(list){
 
 /* ── 簡報輕量排版：粗體／清單／emoji 分類／標籤行 ── */
 function mdLite(t){
+  const CAT = /^(🆕|📉|📦|🚫|🔥|📰|⭐|💰|🎮|🛒|🤖|🧠|🔧|⚠️|✅|❌)/u;
   const src = esc(String(t||""));
-  const parts = src.split("\n");
-  let html = "", inUl = false;
-  const closeUl = () => { if (inUl){ html += "</ul>"; inUl = false; } };
+  const money = x => String(x)
+    .replace(/(→|➜|->)\s*(\d[\d,]*(?:\.\d+)?)/g, '$1 RM$2')   // RM340→240 補成 RM240
+    .replace(/(RM\s?\d[\d,]*(?:\.\d+)?)/g, '\u0001$1\u0002')  // 先標記，避免重複包
+    .replace(/(→|➜|->)/g, '\u0003$1\u0004')
+    .replace(/\u0001([^\u0002]+)\u0002/g, '<span class="price">$1</span>')
+    .replace(/\u0003([^\u0004]+)\u0004/g, '<span class="arrow">$1</span>');
 
-  for (const raw of parts){
+  // 一行多件 → 拆成多行（只切長句，避免把商品名切壞）
+  const splitItems = x => {
+    const v = String(x).trim();
+    if (v.length <= 28 || !v.includes("、")) return [v];
+    const out = []; let depth = 0, cur = "";
+    for (const ch of v){
+      if ("（(【[".includes(ch)) depth++;
+      else if ("）)】]".includes(ch)) depth--;
+      if (ch === "、" && depth <= 0){ if (cur.trim()) out.push(cur.trim()); cur = ""; }
+      else cur += ch;
+    }
+    if (cur.trim()) out.push(cur.trim());
+    return out.length > 1 ? out : [v];      // 切不開就整條保留
+  };
+
+  const toneOf = (k, v) => {
+    if (k !== "結論") return "";
+    if (/^值得|^推薦|^可以試|^買/.test(v)) return " good";
+    if (/^ obser|^觀察|^等|^先不|^暫/.test(v)) return " meh";
+    if (/^不用|^別|^避/.test(v)) return " bad";
+    return "";
+  };
+
+  const blocks = [];
+  let cur = null;
+
+  for (const raw of src.split("\n")){
     const ln = raw.trim();
-    if (!ln){ closeUl(); continue; }
+    if (!ln){ cur = null; continue; }
 
-    // 條列
     const li = ln.match(/^[・•·\-]\s*(.+)$/);
-    if (li){ if (!inUl){ html += '<ul class="nl">'; inUl = true; } html += `<li>${li[1]}</li>`; continue; }
-    closeUl();
-
-    // emoji 分類行（🆕 新上架 / 📉 降價 / 📦 回架 / 🚫 賣光 …）
-    const em = ln.match(/^([\u{1F300}-\u{1FAFF}\u2600-\u27BF\u2B00-\u2BFF]+)\uFE0F?\s*(.+)$/u);
-    if (em){
-      html += `<div class="nrow"><span class="nem">${em[1]}</span><span class="ntx">${em[2]}</span></div>`;
+    if (li){
+      if (cur && cur.type === "cat") cur.items.push(money(li[1]));
+      else blocks.push({type:"ul", items:[money(li[1])]});
       continue;
     }
 
-    // 「是什麼：/ 對我們：/ 結論：」標籤行
+    const em = ln.match(/^([\u{1F000}-\u{1FAFF}\u2600-\u27BF\u2B00-\u2BFF]+)\uFE0F?\s*(.+)$/u);
+    if (em && CAT.test(ln)){
+      let title = em[2], rest = "";
+      const c = title.search(/[：:]/);
+      if (c > 0 && c <= 12){ rest = title.slice(c + 1).trim(); title = title.slice(0, c).trim(); }
+      const dup = blocks.find(b => b.type === "cat" && b.emoji === em[1] && b.title === title);
+      if (dup){
+        if (rest) dup.items.push(...splitItems(rest).map(money));
+        cur = dup;
+      } else {
+        cur = {type:"cat", emoji:em[1], title, items: rest ? splitItems(rest).map(money) : []};
+        blocks.push(cur);
+      }
+      continue;
+    }
+
     const lab = ln.match(/^(是什麼|對我們|結論|為什麼|怎麼做|注意)[：:]\s*(.+)$/);
     if (lab){
-      html += `<div class="nrow"><span class="nlab">${lab[1]}</span><span class="ntx">${lab[2]}</span></div>`;
-      continue;
+      blocks.push({type:"lab", k:lab[1], v:money(lab[2]), tone:toneOf(lab[1], lab[2])});
+      cur = null; continue;
     }
 
-    // 純標題（**…** 已轉 <b>）或段落
-    if (/^<b>.+<\/b>$/.test(ln)) html += `<div class="nh2">${ln}</div>`;
-    else html += `<div class="np">${ln}</div>`;
+    if (/^<b>.+<\/b>$/.test(ln)){ blocks.push({type:"h", v:ln}); cur = null; }
+    else { blocks.push({type:"p", v:money(ln)}); cur = null; }
   }
-  closeUl();
+
+  let html = "", firstCat = true;
+  for (const b of blocks){
+    if (b.type === "cat"){
+      html += `<div class="ncat${firstCat ? " first" : ""}"><span class="nem">${b.emoji}</span><span class="nct">${b.title}</span></div>`;
+      firstCat = false;
+      if (b.items.length === 1) html += `<div class="np">${b.items[0]}</div>`;
+      else if (b.items.length > 1) html += `<ul class="nl">${b.items.map(i=>`<li>${i}</li>`).join("")}</ul>`;
+    } else if (b.type === "ul"){
+      html += `<ul class="nl">${b.items.map(i=>`<li>${i}</li>`).join("")}</ul>`;
+    } else if (b.type === "lab"){
+      html += `<div class="nrow"><span class="nlab${b.tone}">${b.k}</span><span class="ntx">${b.v}</span></div>`;
+    } else if (b.type === "h"){
+      html += `<div class="nh2">${b.v}</div>`;
+    } else {
+      html += `<div class="np">${b.v}</div>`;
+    }
+  }
   return html;
 }
 

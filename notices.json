@@ -1,13 +1,13 @@
 [
  {
-  "job": "今日新聞",
-  "ts": 1793861413,
-  "text": "📰 今天值得看的\n・妮姬 PC 啟動器被駭，官方道歉、全球補 20 抽\n・大馬資安威脅等級 11/4 起從低升到「中等」\n・粉絲連署：吉隆坡想要一間永久寶可夢中心\n・Kimi K3.1 Pro 開源，2.8 兆參數、百萬 context\n・拉麵男明晚開訂，MG 命運脈衝／S 鋼彈再販\n・AI 伺服器搶料，PCB 缺貨訂單已排到 2030\n\n🔥 今天在討論\n泰國 BL/GL 圈整個洗版——GMMTV 新企劃、Scarlet Heart 首播、一整排藝人活動同時在刷；美國那邊還是 Trump、民主黨和期中選舉後續在吵。"
+  "job": "CeX 早安",
+  "ts": 1793874563,
+  "text": "昨天 CeX 的動靜：\n\n🆕 新上架\n・Indika（PS5）RM70\n・RPG Maker With（PS5）RM140\n・Universe for Sale（Switch 中文版）RM115\n・Asterix & Obelix XXL 3: The Crystal Menhir（Switch）RM160\n・DJI Mini 5 Pro RC-N3 空拍機 全配 A 級 RM3000\n・Asus TUF K3 Gen II 機械鍵盤 初音聯名（A 級）RM290\n\n📉 降價\n・Switch 2 官方《惡靈古堡安魂曲》Pro 控制器 RM340 → RM240\n・Nikon Z8 機身（B 級）RM9000 → RM8500\n・Nikon Z6 III 機身（B 級）RM7000 → RM6500\n・Canon EOS R6 機身（A 級）RM5000 → RM4500\n・Sony A7C II 機身（A 級）RM6500 → RM6200\n・Olympus OM-D E-M10 Mark II + 14-42mm（C 級）RM1200 → RM1000\n\n📦 回架\n・PS5《Call of Duty: MW4》\n・Switch 2《High on Life 2》\n・Switch 2《Nintendo Switch Sports Resort》\n・PS5《Hi-Fi Rush》\n・PS5《Project Motor Racing》\n・Xbox Series 20 週年無線手把\n\n🚫 賣光\n・Switch 2《Final Fantasy Resonance》\n・PS5《Control Resonant》\n・PS5《NBA 2K27》\n・PS3 320GB 原箱主機\n・PS4 500GB 星戰限定機\n・Xbox One 1TB Halo 5 限定機"
  },
  {
-  "job": "CeX 早安",
-  "ts": 1793839671,
-  "text": "昨天 CeX（4 號）的動靜：\n\n🆕 新上架遊戲片：Indika（PS5）RM70、RPG Maker With（PS5）RM140、Universe for Sale（Switch 中文版）RM115、Asterix & Obelix XXL 3（Switch）RM160\n🆕 新上架硬體：DJI Mini 5 Pro RC-N3 全配 A 級 RM3000（B RM2700、C RM2500）、Asus TUF K3 Gen II 初音聯名機械鍵盤 RM290\n📉 降價：Switch 2《惡靈古堡安魂曲》Pro 手把 RM340→240、Asus A409 筆電 RM900→800、AirPods Pro 3 的 B 級 RM750→660\n📦 回架：Switch 2《Sports Resort》《High on Life 2》、PS5《CoD: MW4》《Hi-Fi Rush》《Project Motor Racing》、PS4《CoD: MW2》《Outlast Trinity》\n📦 回架：Xbox 20 週年無線手把、8BitDo Pro 2、PICO 4 Ultra 256GB 全配\n🚫 賣光：Switch 2《Final Fantasy Resonance》、PS5《Control Resonant》《NBA 2K27》、PS4《Sakura Wars》\n🚫 賣光：PS3 320GB 原箱主機、PS4 500GB 星戰限定機、Xbox One 1TB Halo 5 限定機\n🚫 賣光：PS3《Transformers》《Guitar Hero 3》、PS Vita《Gravity Rush》、3DS《Etrian Mystery Dungeon》"
+  "job": "今日新聞",
+  "ts": 1793868541,
+  "text": "📰 今天值得看的\n・Switch 卡匣的關鍵供應商要停產 ROM，實體遊戲再添變數\n・馬來西亞玩家聯署，要求開一間永久寶可夢中心\n・樂高首款哥吉拉套組公開，怪獸之王終於積木化\n・NTT Docomo 疑遭駭，全日本 5G SA 一度斷線\n・妮姬 PC 啟動器遭竄改散佈惡意程式，官方推清除工具\n・開發者靠 Claude 把《瑪利歐奧德賽》搬上 Apple TV，跑 60FPS\n\n🔥 今天在討論\n泰國 BL 圈今天刷滿一整排：GMMTV NEXT 新企劃，加上 DewTee、NuNew、JossGawin 的見面會。政治方面，美國期中選舉民主黨大勝，Trump、Senate、Texas 全在吵，順帶 Anwar 和伊朗。\n\ndigest.json 已寫入 `/home/rin/AI/news/digest.json`（6 條，連結與 ts 都對回 items.json 核過）。"
  },
  {
   "job": "AI 工具日報",
