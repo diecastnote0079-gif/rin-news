@@ -158,7 +158,7 @@ details[open] summary::after{transform:rotate(180deg)}
 
 <script>
 const $ = s => document.querySelector(s);
-let PICKS = [], ALL = [], CATS = [], cat = "all", q = "", BYLINK = {};
+let PICKS = [], ALL = [], CATS = [], cat = "all", q = "", BYLINK = {}, NOTES = {};
 
 const COLOR = {game:"var(--game)",tech:"var(--tech)",ai:"var(--tech)",local:"var(--local)",
                image:"var(--image)",pipeline:"var(--pipeline)",hermes:"var(--hermes)",
@@ -196,8 +196,8 @@ function cardHTML(d, hero){
         <span class="chip" style="color:${color}">${labelOf(d.cat)}</span>
         <span class="dot"></span><span>${ago(d.ts) || esc(d.date)}</span>
       </div>
-      <div class="t">${esc(d.zh || d.title)}</div>
-      ${d.zh ? `<div class="orig">${esc(d.title)}</div>` : ""}
+      <div class="t">${esc(NOTES[d.link] || d.zh || d.title)}</div>
+      ${(NOTES[d.link] || d.zh) ? `<div class="orig">${esc(d.title)}</div>` : ""}
       ${(!hero && d.summary) ? `<div class="s">${esc(d.summary)}</div>` : ""}
       ${hero && d.summary ? `<div class="s">${esc(d.summary)}</div>` : ""}
     </div>
@@ -314,6 +314,12 @@ async function load(bust){
         if (Array.isArray(arr) && arr.length) feed = new Set(arr);
       }
     } catch (e) { /* 沒有篩選檔就照舊 */ }
+    // 非中文條目的中文歸納（notes.json = {link: 一句話}）
+    NOTES = {};
+    try {
+      const nr = await fetch("notes.json?t=" + Date.now(), {cache: "no-store"});
+      if (nr.ok) { const o = await nr.json(); if (o && typeof o === "object") NOTES = o; }
+    } catch (e) { /* 沒有就算了 */ }
     ALL = (j.items || []).filter(d => !feed || feed.has(d.link));
     ALL.sort((a, b) => (b.ts || 0) - (a.ts || 0));          // 全部一律按時間新→舊
     PICKS = (j.picks && j.picks.length) ? j.picks.slice() : ALL.slice(0, 15);
