@@ -9,9 +9,15 @@
 <style>
 :root{
   --bg:#0b0c0f; --surface:#15171c; --surface2:#1c1f26; --line:#262a32;
-  --fg:#eceae6; --dim:#9ba1a8; --dim2:#697077;
-  --accent:#8ab4f8; --game:#7bd88f; --toy:#f4a261; --tech:#b39ddb; --hot:#ff8a80;
+  --fg:#eceae6;
+  /* 三階文字：主要 / 次要 / 輔助（輔助也維持 WCAG AA） */
+  --dim:#9aa0a8; --dim2:#7d848c;
+  /* 顏色只有三個用途：藍=可點、橘=將到期、紅=異常 */
+  --accent:#8ab4f8; --warn:#e0a45c; --hot:#f2837a;
+  --game:#8fbf9f; --toy:#c9a184; --tech:#a9a2c4;
   --tabh:58px;
+  /* 間距：8 的倍數 */
+  --s1:8px; --s2:16px; --s3:24px;
 }
 *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 html{background:var(--bg)}
@@ -107,9 +113,12 @@ html{overscroll-behavior-y:contain}
   animation:marquee 24s linear infinite;color:#ffb86b}
 .reminder.slow .track{animation-duration:40s}
 .reminder .ri{display:inline-block;margin-right:7px;padding:2px 9px;border-radius:99px;
-  background:rgba(255,184,107,.10);border:1px solid rgba(255,184,107,.16)}
+  background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.06);
+  color:var(--dim);font-size:11.5px}
+.reminder .ri:has(.soon){background:rgba(224,164,92,.10);border-color:rgba(224,164,92,.20);
+  color:#cbb69a}
 .reminder .ri .d{color:var(--dim2);margin-right:4px;font-variant-numeric:tabular-nums}
-.reminder .ri .soon{color:#ff8a80;font-weight:600}
+.reminder .ri .soon{color:var(--warn);font-weight:600}
 @keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 @media (prefers-reduced-motion: reduce){.reminder .track{animation:none}}
 
@@ -124,9 +133,10 @@ html{overscroll-behavior-y:contain}
   mask-image:linear-gradient(90deg,#000 94%,transparent)}
 .statusline::-webkit-scrollbar{display:none}
 .si{display:flex;align-items:baseline;gap:4px;flex:0 0 auto}
-.si .k{font-size:9.5px;color:var(--dim2);letter-spacing:.06em;text-transform:uppercase}
-.si .v{font-size:13px;font-weight:700;font-variant-numeric:tabular-nums;letter-spacing:-.01em}
-.si.warn .v{color:#ffb86b}
+.si .k{font-size:9px;color:var(--dim2);letter-spacing:.07em;text-transform:uppercase;font-weight:500}
+.si .v{font-size:12.5px;font-weight:600;font-variant-numeric:tabular-nums;letter-spacing:-.01em;
+  color:var(--dim)}
+.si.warn .v{color:var(--warn)}
 .si.bad .v{color:var(--hot)}
 
 /* ── 狀態小卡（天氣式）── */
@@ -151,9 +161,9 @@ html{overscroll-behavior-y:contain}
   padding:0 18px calc(26px + env(safe-area-inset-bottom));
   -webkit-overflow-scrolling:touch;scrollbar-width:none}
 .pg::-webkit-scrollbar{display:none}
-.dots{display:flex;justify-content:center;gap:6px;padding:2px 0 7px;flex:0 0 auto}
+.dots{display:flex;justify-content:center;gap:5px;padding:0 0 6px;flex:0 0 auto}
 .dots i{width:5px;height:5px;border-radius:50%;background:var(--dim2);opacity:.4;transition:all .22s}
-.dots i.on{opacity:1;background:var(--accent);width:15px;border-radius:3px}
+.dots i.on{opacity:1;background:#b9c0c9;width:15px;border-radius:3px}
 
 /* 簡報卡 */
 .briefwrap{padding-top:4px}
@@ -193,27 +203,29 @@ a.lead{display:block;text-decoration:none;color:inherit;position:relative;
   border-radius:16px;overflow:hidden;margin-bottom:12px;background:var(--surface)}
 a.lead .thumb{width:100%;aspect-ratio:16/10;background:var(--surface2);display:block}
 a.lead .thumb img{width:100%;height:100%;object-fit:cover;display:block}
-a.lead .txt{padding:14px 16px 16px}
-a.lead .t{font-size:19px;font-weight:700;line-height:1.36;letter-spacing:-.02em;
+a.lead .txt{padding:var(--s2) var(--s2) var(--s2)}
+a.lead .t{font-size:17px;font-weight:700;line-height:1.42;letter-spacing:-.015em;
+  text-wrap:balance;word-break:keep-all;overflow-wrap:anywhere;
   display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
-a.lead .m{display:flex;align-items:center;gap:6px;margin-top:9px;font-size:11.5px;color:var(--dim2);
+a.lead .m{display:flex;align-items:center;gap:6px;margin-top:var(--s1);font-size:11.5px;color:var(--dim2);
   font-variant-numeric:tabular-nums}
-a.lead .m .s{color:var(--dim);font-weight:500}
+a.lead .m .s{color:#a8aeb6;font-weight:500}
 
 /* ── 列表卡 ── */
 a.row{display:flex;gap:12px;text-decoration:none;color:inherit;padding:13px 0;
   border-bottom:1px solid rgba(255,255,255,.045)}
 a.row:last-child{border-bottom:0}
 a.row .txt{flex:1;min-width:0}
-a.row .t{font-size:14.5px;font-weight:600;line-height:1.45;letter-spacing:-.01em;
+a.row .t{font-size:15px;font-weight:600;line-height:1.45;letter-spacing:-.01em;
+  text-wrap:balance;word-break:keep-all;overflow-wrap:anywhere;
   display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
-a.row .m{display:flex;align-items:center;gap:5px;margin-top:6px;font-size:11px;color:var(--dim2);
+a.row .m{display:flex;align-items:center;gap:6px;margin-top:6px;font-size:11.5px;color:var(--dim2);
   font-variant-numeric:tabular-nums;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-a.row .m .s{color:var(--dim)}
+a.row .m .s{color:#a8aeb6;font-weight:500}
 a.row .pic{width:78px;height:78px;border-radius:10px;overflow:hidden;background:var(--surface2);flex:0 0 auto}
 a.row .pic img{width:100%;height:100%;object-fit:cover;display:block}
-a.row .cat{display:inline-block;font-size:10.5px;padding:1px 6px;border-radius:4px;
-  background:rgba(255,255,255,.06);color:var(--dim);font-weight:500}
+a.row .cat{display:inline-block;font-size:10.5px;padding:2px 7px;border-radius:5px;
+  background:rgba(255,255,255,.075);color:#b6bcc4;font-weight:500;letter-spacing:.01em}
 
 /* ── 通知頁 ── */
 .card{background:var(--surface);border-radius:14px;padding:15px 16px;margin-bottom:10px}
@@ -374,17 +386,18 @@ function matchItem(text){
 }
 
 function renderFeed(){
-  // 回到新聞列表：前兩則大卡，其餘小卡（不分類、不分「重點/更多」）
+  // 視覺重量按素材決定：有圖才給大卡，沒圖一律小卡（避免大字空盒）
   const el = $("#feed");
   if (!ALL.length){
     el.innerHTML = '<div class="msg">今天沒有東西</div>';
     return;
   }
-  const heads = ALL.slice(0, 2);
-  const rest = ALL.slice(2);
+  const withPic = ALL.filter(d => d.img);
+  const heads = withPic.slice(0, 2);
+  const rest = ALL.filter(d => !heads.includes(d));
   let html = "";
   heads.forEach(d => { html += leadHTML(d); });
-  rest.forEach((d, i) => { html += rowHTML(d, i % 4 === 0); });
+  rest.forEach((d, i) => { html += rowHTML(d, i < heads.length ? false : (i % 5 === 0 && !!d.img)); });
   el.innerHTML = html;
 }
 
@@ -403,7 +416,7 @@ function renderStatus(st){
     { k:"quota", v:(q.monthly ?? "—") + "%", cls:(q.monthly ?? 100) < 10 ? "bad" : ((q.monthly ?? 100) < 25 ? "warn" : "") },
     { k:"ram",   v:(h.mem_pct ?? "—") + "%", cls:(h.mem_pct ?? 0) > 90 ? "warn" : "" },
     { k:"disk",  v:(h.disk_free_gb ?? "—") + "G", cls:(h.disk_pct ?? 0) > 85 ? "bad" : "" },
-    { k:"mem",   v:mem + "%", cls:mem >= 97 ? "bad" : (mem >= 90 ? "warn" : "") },
+    { k:"mem",   v:mem + "%", cls:mem >= 99 ? "bad" : "" },
     { k:"up",    v:(h.uptime_h ?? "—") + "h", cls:"" },
   ];
   el.innerHTML = items.map(i =>
