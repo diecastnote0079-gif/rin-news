@@ -18,7 +18,7 @@ html{background:var(--bg)}
 body{background:var(--bg);color:var(--fg);
   font-family:-apple-system,"Samsung One",system-ui,"Noto Sans TC",sans-serif;
   -webkit-font-smoothing:antialiased;overscroll-behavior-y:none;
-  padding-bottom:calc(var(--tabh) + env(safe-area-inset-bottom))}
+  padding-bottom:calc(24px + env(safe-area-inset-bottom))}
 
 /* ── 頁面 ── */
 .page{display:none}
@@ -53,6 +53,20 @@ h1{font-size:25px;font-weight:700;letter-spacing:-.025em}
   background:transparent;color:var(--dim);font-size:12.5px;font-family:inherit;font-weight:500}
 .chip.on{background:rgba(138,180,248,.15);border-color:rgba(138,180,248,.4);color:var(--accent);font-weight:600}
 
+/* ── 首頁底部：今天收到（摺疊）── */
+.nf{margin:18px 18px calc(20px + env(safe-area-inset-bottom));border-top:1px solid var(--line);padding-top:2px}
+.nf>summary{list-style:none;cursor:pointer;padding:13px 0;font-size:12.5px;color:var(--dim2);
+  display:flex;align-items:center;gap:7px}
+.nf>summary::-webkit-details-marker{display:none}
+.nf>summary::after{content:"▾";margin-left:auto;opacity:.6}
+.nf[open]>summary::after{content:"▴"}
+.nf .nfl{padding-bottom:8px}
+.nf .ni{padding:11px 13px;background:var(--surface);border-radius:11px;margin-bottom:8px}
+.nf .nh{font-size:10.5px;color:var(--dim2);letter-spacing:.04em;margin-bottom:4px}
+.nf .nb{font-size:12.5px;line-height:1.6;color:var(--dim);white-space:pre-wrap;
+  display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+.nf .ni.open .nb{-webkit-line-clamp:unset}
+
 /* ── 提醒跑馬燈 ── */
 .reminder{overflow:hidden;white-space:nowrap;padding:0 0 7px;
   -webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);
@@ -71,6 +85,8 @@ h1{font-size:25px;font-weight:700;letter-spacing:-.025em}
 #p-home header{padding-top:calc(6px + env(safe-area-inset-top))}
 #p-home .hrow{gap:10px;min-height:28px}
 #p-home h1{font-size:21px;letter-spacing:-.03em}
+#sbtn{background:none;border:0;color:var(--dim2);font-size:17px;line-height:1;padding:4px 2px}
+#qwrap{margin:6px 0 8px}
 .hdate{font-size:12px;color:var(--dim2);margin-left:auto;font-variant-numeric:tabular-nums}
 #p-home .hmeta{font-size:11px;color:var(--dim2);margin-left:8px}
 .statusline{display:flex;align-items:baseline;gap:13px;padding:5px 0 9px;overflow-x:auto;
@@ -150,22 +166,6 @@ a.row .cat{display:inline-block;font-size:10.5px;padding:1px 6px;border-radius:4
 .tile .c{font-size:11.5px;color:var(--dim2);margin-top:3px;font-variant-numeric:tabular-nums}
 .tile .bar{height:3px;border-radius:2px;margin-bottom:10px;width:26px}
 
-/* ── 底部 tab ── */
-nav.tabs{position:fixed;left:0;right:0;bottom:0;z-index:40;
-  height:calc(var(--tabh) + env(safe-area-inset-bottom));
-  padding-bottom:env(safe-area-inset-bottom);
-  display:flex;background:rgba(13,14,18,.94);
-  backdrop-filter:blur(22px) saturate(1.5);border-top:1px solid var(--line)}
-nav.tabs button{flex:1;background:none;border:0;color:var(--dim2);font-family:inherit;
-  font-size:10.5px;display:flex;flex-direction:column;align-items:center;justify-content:center;
-  gap:2px;position:relative;padding:0}
-nav.tabs button .ic{font-size:19px;line-height:1}
-nav.tabs button.on{color:var(--accent);font-weight:600}
-nav.tabs button.on .ic{background:rgba(138,180,248,.14);border-radius:10px;padding:2px 12px}
-nav.tabs button .dot{position:absolute;top:9px;right:calc(50% - 15px);width:6px;height:6px;
-  border-radius:50%;background:var(--hot);display:none}
-nav.tabs button .dot.on{display:block}
-
 /* ── 閱讀模式 ── */
 #reader{position:fixed;inset:0;z-index:60;background:var(--bg);display:none;flex-direction:column}
 #reader.on{display:flex;animation:up .22s ease}
@@ -197,49 +197,18 @@ nav.tabs button .dot.on{display:block}
       <h1>今天</h1>
       <span class="hdate" id="h-date"></span>
       <span class="hmeta" id="h-meta"></span>
+      <button id="sbtn" aria-label="搜尋">⌕</button>
     </div>
+    <div class="qwrap" id="qwrap" hidden><input id="q" placeholder="搜尋標題、來源" autocomplete="off"></div>
     <div class="statusline" id="status"></div>
     <div class="reminder" id="reminder"></div>
     <div class="chips" id="chips"></div>
   </header>
   <main id="feed"><div class="msg">載入中…</div></main>
+  <details class="nf" id="nf"><summary></summary><div class="nfl" id="nfl"></div></details>
 </section>
 
-<!-- ═══ 通知 ═══ -->
-<section class="page" id="p-notices">
-  <header>
-    <div class="hrow"><h1>通知</h1><div class="hmeta" id="n-count"></div></div>
-    <div class="sub">我幫你跑的東西，7 天內都在這</div>
-  </header>
-  <main id="notices"><div class="msg">沒有通知</div></main>
-</section>
 
-<!-- ═══ 分類 ═══ -->
-<section class="page" id="p-cats">
-  <header>
-    <div class="hrow"><h1>分類</h1></div>
-    <div class="sub">點一個看你常看的</div>
-  </header>
-  <main><div class="grid" id="catgrid"></div></main>
-</section>
-
-<!-- ═══ 搜尋 ═══ -->
-<section class="page" id="p-search">
-  <header>
-    <div class="hrow"><h1>搜尋</h1></div>
-    <div class="qwrap" style="margin-top:10px">
-      <input id="q" placeholder="標題、來源都可以" autocomplete="off">
-    </div>
-  </header>
-  <main id="results"><div class="msg">打關鍵字，或直接點上面的分類</div></main>
-</section>
-
-<nav class="tabs">
-  <button data-tab="home" class="on"><span class="ic">◉</span>首頁</button>
-  <button data-tab="notices"><span class="ic">◔</span>通知<span class="dot" id="ndot"></span></button>
-  <button data-tab="cats"><span class="ic">▤</span>分類</button>
-  <button data-tab="search"><span class="ic">⌕</span>搜尋</button>
-</nav>
 
 <div id="reader">
   <div class="rbar"><button id="rclose">✕</button><span class="rsrc" id="rsrc"></span></div>
@@ -305,9 +274,14 @@ function rowHTML(d, showPic){
 
 /* ── 首頁 ── */
 function renderFeed(){
-  const match = d => (cat === "all" || d.cat === cat);
+  const k = q.trim().toLowerCase();
+  const match = d => (cat === "all" || d.cat === cat) &&
+    (!k || ((NOTES[d.link]||"") + " " + (d.title||"") + " " + (d.source||"")).toLowerCase().includes(k));
   const pool = ALL.filter(match);
-  if (!pool.length){ $("#feed").innerHTML = '<div class="msg">這一類目前沒有東西</div>'; return; }
+  if (!pool.length){
+    $("#feed").innerHTML = `<div class="msg">${k ? "找不到「"+esc(q)+"」" : "這一類目前沒有東西"}</div>`;
+    return;
+  }
 
   const picks = PICKS.filter(match);
   const leadN = Math.min(2, picks.length);
@@ -327,83 +301,17 @@ function renderFeed(){
   $("#feed").innerHTML = html;
 }
 
-/* ── 通知 ── */
+/* ── 今天收到（首頁底部）── */
 function renderNotices(){
-  if (!NOTICES.length){ $("#notices").innerHTML = '<div class="msg">還沒有通知</div>'; $("#ndot").classList.remove("on"); return; }
-  $("#n-count").textContent = `${NOTICES.length} 則`;
-  $("#ndot").classList.add("on");
-  $("#notices").innerHTML = NOTICES.map((n,i) => `
-    <div class="card" data-i="${i}">
-      <div class="ch"><span class="badge"></span>
-        <span class="cn">${esc(JOBNAME[n.job] || n.job)}</span>
-        <span class="ct">${ago(n.ts)}</span></div>
-      <div class="cb">${esc(n.text)}</div>
-      <span class="more">展開</span>
+  const box = $("#nf"), sum = box.querySelector("summary"), list = $("#nfl");
+  if (!NOTICES.length){ box.style.display = "none"; return; }
+  box.style.display = "";
+  sum.innerHTML = `<span class="badge"></span>今天收到 ${NOTICES.length} 則`;
+  list.innerHTML = NOTICES.map((n,i) => `
+    <div class="ni" data-i="${i}">
+      <div class="nh">${esc(JOBNAME[n.job] || n.job)} · ${ago(n.ts)}</div>
+      <div class="nb">${esc(n.text)}</div>
     </div>`).join("");
-}
-
-/* ── 分類 ── */
-function renderCats(){
-  $("#catgrid").innerHTML = CATS.map(([k,label]) => {
-    const n = ALL.filter(d => d.cat === k).length;
-    if (!n) return "";
-    return `<button class="tile" data-cat="${esc(k)}">
-      <div class="bar" style="background:${colorOf(k)}"></div>
-      <div class="n">${esc(label)}</div>
-      <div class="c">${n} 則</div>
-    </button>`;
-  }).join("");
-}
-
-/* ── 搜尋 ── */
-function renderSearch(){
-  const k = q.trim().toLowerCase();
-  if (!k){ $("#results").innerHTML = '<div class="msg">打關鍵字，或直接點上面的分類</div>'; return; }
-  const hit = ALL.filter(d =>
-    (titleOf(d) + " " + (d.title||"") + " " + (d.source||"")).toLowerCase().includes(k));
-  $("#results").innerHTML = hit.length
-    ? `<div class="sect"><h2>找到</h2><span>${hit.length} 則</span></div>` + hit.map(d => rowHTML(d, false)).join("")
-    : `<div class="msg">找不到「${esc(q)}」</div>`;
-}
-
-/* ── 狀態小卡 ── */
-const fmtReset = t => String(t||"")
-  .replace(/(\d+)d/g,"$1 天 ").replace(/(\d+)h/g,"$1 小時 ").replace(/(\d+)m/g,"$1 分")
-  .replace(/\s+/g," ").trim();
-
-function renderStatus(st){
-  const el = $("#status");
-  if (!st){ el.innerHTML = ""; return; }
-  const q = st.quota || {}, h = st.host || {}, m = st.memory || {};
-  const mem = Math.max(m.memory?.pct ?? 0, m.user?.pct ?? 0);
-
-  const items = [
-    { k:"quota", v:(q.monthly ?? "—") + "%", cls:(q.monthly ?? 100) < 10 ? "bad" : ((q.monthly ?? 100) < 25 ? "warn" : "") },
-    { k:"ram",   v:(h.mem_pct ?? "—") + "%", cls:(h.mem_pct ?? 0) > 90 ? "warn" : "" },
-    { k:"disk",  v:(h.disk_free_gb ?? "—") + "G", cls:(h.disk_pct ?? 0) > 85 ? "bad" : "" },
-    { k:"mem",   v:mem + "%", cls:mem >= 97 ? "bad" : (mem >= 90 ? "warn" : "") },
-    { k:"up",    v:(h.uptime_h ?? "—") + "h", cls:"" },
-  ];
-
-  el.innerHTML = items.map(i =>
-    `<span class="si ${i.cls}"><span class="k">${i.k}</span><span class="v">${esc(String(i.v))}</span></span>`
-  ).join("");
-}
-
-/* ── 提醒 ── */
-function renderReminders(list){
-  const el = $("#reminder");
-  if (!list || !list.length){ el.innerHTML = ""; return; }
-  const one = list.map(r => {
-    const soon = r.days <= 3 ? " soon" : "";
-    const when = r.days <= 0 ? "今天" : (r.days === 1 ? "明天" : `${r.days} 天`);
-    return `<span class="ri"><span class="d ${soon}">${esc(r.date)}</span>${esc(r.name)}<span class="d${soon}"> · ${when}</span></span>`;
-  }).join("");
-  // 只有一條就靜態顯示，多條才跑；內容複製兩份做無縫滾動
-  const many = list.length > 1;
-  el.className = "reminder" + (many ? "" : " slow");
-  el.innerHTML = `<div class="track">${one}${many ? one : ""}</div>`;
-  if (!many) el.querySelector(".track").style.animation = "none";
 }
 
 /* ── chips ── */
@@ -420,33 +328,11 @@ function buildChips(){
   });
 }
 
-/* ── 切換頁面 ── */
-function go(tab){
-  document.querySelectorAll(".page").forEach(p => p.classList.remove("on"));
-  $("#p-" + tab).classList.add("on");
-  document.querySelectorAll("nav.tabs button").forEach(b =>
-    b.classList.toggle("on", b.dataset.tab === tab));
-  window.scrollTo({top:0});
-  if (tab === "notices") $("#ndot").classList.remove("on");
-  if (tab === "search") setTimeout(() => $("#q").focus(), 60);
-}
-
-document.querySelectorAll("nav.tabs button").forEach(b => {
-  b.onclick = () => go(b.dataset.tab);
-});
-
 /* 通知展開 */
 document.addEventListener("click", e => {
-  const card = e.target.closest("#notices .card");
+  const card = e.target.closest(".nf .ni");
   if (card){
     card.classList.toggle("open");
-    const m = card.querySelector(".more");
-    if (m) m.textContent = card.classList.contains("open") ? "收起" : "展開";
-    return;
-  }
-  const tile = e.target.closest(".tile");
-  if (tile){
-    cat = tile.dataset.cat; buildChips(); renderFeed(); go("home");
     return;
   }
   const a = e.target.closest("a.lead, a.row");
@@ -472,7 +358,7 @@ function openReader(d){
 function closeReader(){ $("#reader").classList.remove("on"); document.body.style.overflow = ""; }
 $("#rclose").onclick = closeReader;
 
-$("#q").oninput = e => { q = e.target.value; renderSearch(); };
+$("#q").oninput = e => { q = e.target.value; renderFeed(); };
 
 /* 頂部陰影 */
 window.addEventListener("scroll", () => {
@@ -530,9 +416,8 @@ async function load(){
     $("#h-date").textContent = `${now.getMonth()+1}/${now.getDate()} 週${wd}`;
     $("#h-meta").textContent = (j.generated_at ? (ago(Date.parse(j.generated_at)/1000)||"剛剛") + "更新" : "");
 
-    buildChips(); renderFeed(); renderNotices(); renderCats(); renderSearch();
+    buildChips(); renderFeed(); renderNotices();
 
-    if (NOTICES.length) $("#ndot").classList.add("on");
   } catch(e){
     $("#feed").innerHTML = '<div class="msg">拿不到資料，確認網路或等下次更新</div>';
   }
