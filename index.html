@@ -236,7 +236,8 @@ a.row .cat{display:inline-block;font-size:10.5px;padding:1px 6px;border-radius:4
 .tile .bar{height:3px;border-radius:2px;margin-bottom:10px;width:26px}
 
 /* ── 閱讀模式 ── */
-#reader{position:fixed;inset:0;z-index:60;background:var(--bg);display:none;flex-direction:column}
+#reader{position:fixed;inset:0;z-index:60;background:var(--bg);display:none;flex-direction:column;
+  touch-action:pan-y;overscroll-behavior:contain}
 #reader.on{display:flex;animation:up .22s ease}
 @keyframes up{from{transform:translateY(3%);opacity:.6}to{transform:none;opacity:1}}
 .rbar{display:flex;align-items:center;gap:12px;
@@ -506,6 +507,7 @@ document.addEventListener("click", e => {
 
 /* ── 閱讀 ── */
 function openReader(d){
+  const pg = $("#pager"); if (pg) pg.style.overflowX = "hidden";
   $("#rsrc").textContent = (d.source||"") + " · " + (ago(d.ts) || d.date || "");
   const orig = (NOTES[d.link] || d.zh) ? d.title : "";
   const body = d.full
@@ -517,7 +519,8 @@ function openReader(d){
   $("#reader").classList.add("on");
   document.body.style.overflow = "hidden";
 }
-function closeReader(){ $("#reader").classList.remove("on"); document.body.style.overflow = ""; }
+function closeReader(){
+  const pg = $("#pager"); if (pg) pg.style.overflowX = ""; $("#reader").classList.remove("on"); document.body.style.overflow = ""; }
 $("#rclose").onclick = closeReader;
 
 
@@ -658,6 +661,8 @@ async function load(){
     const dy = e.touches[0].clientY - ry;
     // 左滑：跟手橫移（只在畫面左半邊啟動，避免和系統返回手勢打架）
     if (canPan && dx < -10 && Math.abs(dy) < Math.abs(dx) * 0.9){
+      e.preventDefault();                    // 不讓瀏覽器把這一下當成上一頁/下一頁
+
       reader.style.transition = "none";
       reader.style.transform = `translateX(${Math.max(dx, -400)}px)`;
     }
@@ -666,7 +671,7 @@ async function load(){
       reader.style.transition = "none";
       reader.style.opacity = String(Math.max(0.35, 1 - dy / 500));
     }
-  }, {passive:true});
+  }, {passive:false});
 
   const endSwipe = e => {
     if (!dragging) return;
