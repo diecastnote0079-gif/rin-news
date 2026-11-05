@@ -1,19 +1,19 @@
 {
- "updated": 1793865767,
+ "updated": 1793876454,
  "quota": {
-  "rolling": 100,
-  "weekly": 87,
-  "monthly": 56,
-  "reset_rolling": "4h 56m",
-  "reset_weekly": "3d 15h",
-  "reset_monthly": "12d 9h"
+  "rolling": 95,
+  "weekly": 85,
+  "monthly": 55,
+  "reset_rolling": "1h 58m",
+  "reset_weekly": "3d 12h",
+  "reset_monthly": "12d 6h"
  },
  "host": {
-  "load": 0.42,
-  "mem_pct": 11,
+  "load": 0.09,
+  "mem_pct": 12,
   "disk_pct": 3,
   "disk_free_gb": 417,
-  "uptime_h": 13
+  "uptime_h": 16
  },
  "memory": {
   "memory": {
@@ -28,16 +28,13 @@
   }
  },
  "cron": {
-  "enabled": 24,
-  "failed": 0,
-  "failed_names": []
+  "enabled": 23,
+  "failed": 1,
+  "failed_names": [
+   "news-refresh"
+  ]
  },
  "reminders": [
-  {
-   "name": "remind tissue",
-   "date": "11/05",
-   "days": 0
-  },
   {
    "name": "記憶插件觀察",
    "date": "11/09",
