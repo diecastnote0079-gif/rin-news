@@ -2,142 +2,199 @@
 <html lang="zh-Hant">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#0d0e11">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+<meta name="theme-color" content="#0b0c0f">
+<meta name="apple-mobile-web-app-capable" content="yes">
 <title>今天</title>
 <style>
 :root{
-  --bg:#0d0e11; --surface:#16181d; --surface2:#1d2026; --line:#262a31;
-  --fg:#e9e7e3; --dim:#9aa0a6; --dim2:#6b7075;
-  --accent:#8ab4f8;
-  --game:#7bd88f; --toy:#f4a261; --local:#8ab4f8; --tech:#b39ddb; --ai:#b39ddb; --hot:#ff8a80;
-  --r:14px; --r2:20px;
+  --bg:#0b0c0f; --surface:#15171c; --surface2:#1c1f26; --line:#262a32;
+  --fg:#eceae6; --dim:#9ba1a8; --dim2:#697077;
+  --accent:#8ab4f8; --game:#7bd88f; --toy:#f4a261; --tech:#b39ddb; --hot:#ff8a80;
+  --tabh:58px;
 }
 *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
-html,body{background:var(--bg);color:var(--fg);
+html{background:var(--bg)}
+body{background:var(--bg);color:var(--fg);
   font-family:-apple-system,"Samsung One",system-ui,"Noto Sans TC",sans-serif;
-  -webkit-font-smoothing:antialiased}
+  -webkit-font-smoothing:antialiased;overscroll-behavior-y:none;
+  padding-bottom:calc(var(--tabh) + env(safe-area-inset-bottom))}
+
+/* ── 頁面 ── */
+.page{display:none}
+.page.on{display:block}
 
 /* ── 頂部 ── */
-header{position:sticky;top:0;z-index:20;background:rgba(13,14,17,.86);
-  backdrop-filter:blur(20px) saturate(1.4);border-bottom:1px solid var(--line);
-  padding:calc(14px + env(safe-area-inset-top)) 20px 0}
-.hrow{display:flex;align-items:baseline;justify-content:space-between;gap:10px}
-h1{font-size:26px;font-weight:700;letter-spacing:-.02em}
+header{position:sticky;top:0;z-index:20;background:rgba(11,12,15,.92);
+  backdrop-filter:blur(22px) saturate(1.5);border-bottom:1px solid transparent;
+  padding:calc(10px + env(safe-area-inset-top)) 18px 0;transition:border-color .2s}
+header.scrolled{border-bottom-color:var(--line)}
+.hrow{display:flex;align-items:center;justify-content:space-between;min-height:34px}
+h1{font-size:25px;font-weight:700;letter-spacing:-.025em}
 .hmeta{font-size:11.5px;color:var(--dim2);font-variant-numeric:tabular-nums}
-.sub{font-size:12.5px;color:var(--dim);margin-top:2px}
+.sub{font-size:12px;color:var(--dim);margin-top:1px;margin-bottom:10px}
 
-.qwrap{position:relative;margin-top:12px}
-.qwrap::before{content:"⌕";position:absolute;left:14px;top:50%;transform:translateY(-50%);
-  color:var(--dim2);font-size:17px;pointer-events:none;line-height:1}
-#q{width:100%;margin:0;padding:11px 14px 11px 36px;border-radius:12px;border:1px solid var(--line);
+/* 搜尋 */
+.qwrap{position:relative;margin:0 0 10px}
+.qwrap::before{content:"⌕";position:absolute;left:13px;top:50%;transform:translateY(-50%);
+  color:var(--dim2);font-size:17px;line-height:1;pointer-events:none}
+#q{width:100%;padding:10px 14px 10px 34px;border-radius:11px;border:1px solid var(--line);
   background:var(--surface);color:var(--fg);font-size:14px;font-family:inherit;outline:none}
-#q:focus{border-color:#3b4250}
+#q:focus{border-color:#39404d}
 #q::placeholder{color:var(--dim2)}
 
-#tabs{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;
-  padding:12px 0 12px;margin:0 -20px;padding-left:20px;padding-right:24px;
-  -webkit-mask-image:linear-gradient(90deg,#000 94%,transparent);mask-image:linear-gradient(90deg,#000 94%,transparent)}
-#tabs::-webkit-scrollbar{display:none}
-button.tab{flex:0 0 auto;padding:7px 14px;border-radius:99px;border:1px solid var(--line);
-  background:transparent;color:var(--dim);font-size:13px;font-family:inherit;
-  font-weight:500;cursor:pointer;transition:.15s}
-button.tab.on{background:rgba(138,180,248,.16);border-color:rgba(138,180,248,.45);color:var(--accent);font-weight:600}
+/* chips */
+.chips{display:flex;gap:7px;overflow-x:auto;scrollbar-width:none;
+  margin:0 -18px;padding:0 18px 11px;
+  -webkit-mask-image:linear-gradient(90deg,#000 93%,transparent);
+  mask-image:linear-gradient(90deg,#000 93%,transparent)}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:0 0 auto;padding:6px 13px;border-radius:99px;border:1px solid var(--line);
+  background:transparent;color:var(--dim);font-size:12.5px;font-family:inherit;font-weight:500}
+.chip.on{background:rgba(138,180,248,.15);border-color:rgba(138,180,248,.4);color:var(--accent);font-weight:600}
 
-/* ── 主體 ── */
-main{padding:4px 20px calc(40px + env(safe-area-inset-bottom))}
+main{padding:0 18px 24px}
 
-.sect{display:flex;align-items:baseline;justify-content:space-between;
-  margin:22px 0 12px}
-.sect h2{font-size:13px;font-weight:600;letter-spacing:.02em;color:var(--fg)}
-.sect span{font-size:11.5px;color:var(--dim2);font-variant-numeric:tabular-nums}
+/* ── 分段標題 ── */
+.sect{display:flex;align-items:baseline;justify-content:space-between;padding:20px 0 10px}
+.sect h2{font-size:12.5px;font-weight:600;letter-spacing:.03em;color:var(--dim)}
+.sect span{font-size:11px;color:var(--dim2);font-variant-numeric:tabular-nums}
 
-/* ── 今日收到：摺疊摘要 ── */
-#notices{border:1px solid var(--line);border-radius:var(--r2);overflow:hidden;
-  background:var(--surface);margin-top:16px}
-#notices summary{list-style:none;cursor:pointer;padding:15px 16px;
-  display:flex;align-items:center;gap:10px}
-#notices summary::-webkit-details-marker{display:none}
-#notices .dot{width:7px;height:7px;border-radius:50%;background:var(--accent);flex:0 0 auto}
-#notices .nt1{font-size:14.5px;font-weight:600}
-#notices .nsub{font-size:11.5px;color:var(--dim2);margin-left:auto;font-variant-numeric:tabular-nums}
-#notices[open] summary{border-bottom:1px solid var(--line)}
-.nlist{padding:6px 4px 8px}
-.nitem{padding:12px 16px;border-bottom:1px solid rgba(255,255,255,.03)}
-.nitem:last-child{border-bottom:0}
-.nitem .nh{font-size:11px;color:var(--dim2);letter-spacing:.04em;text-transform:uppercase;
-  margin-bottom:4px}
-.nitem .nt{font-size:13.5px;line-height:1.6;color:var(--fg);white-space:pre-wrap;
-  display:-webkit-box;-webkit-line-clamp:5;-webkit-box-orient:vertical;overflow:hidden}
-.nitem.open .nt{-webkit-line-clamp:unset}
+/* ── 大卡（重點）── */
+a.lead{display:block;text-decoration:none;color:inherit;position:relative;
+  border-radius:16px;overflow:hidden;margin-bottom:12px;background:var(--surface)}
+a.lead .thumb{width:100%;aspect-ratio:16/10;background:var(--surface2);display:block}
+a.lead .thumb img{width:100%;height:100%;object-fit:cover;display:block}
+a.lead .txt{padding:14px 16px 16px}
+a.lead .t{font-size:19px;font-weight:700;line-height:1.36;letter-spacing:-.02em;
+  display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+a.lead .m{display:flex;align-items:center;gap:6px;margin-top:9px;font-size:11.5px;color:var(--dim2);
+  font-variant-numeric:tabular-nums}
+a.lead .m .s{color:var(--dim);font-weight:500}
 
-/* ── 新聞卡 ── */
-a.story{display:block;text-decoration:none;color:inherit;
-  background:var(--surface);border-radius:var(--r);overflow:hidden;
-  margin-bottom:10px;border:1px solid transparent;transition:.15s}
-a.story:active{border-color:var(--line);transform:scale(.995)}
-a.story.hero{border-radius:var(--r2);margin-bottom:14px}
-.story .thumb{width:100%;aspect-ratio:16/9;overflow:hidden;background:var(--surface2)}
-.story .thumb img{width:100%;height:100%;object-fit:cover;display:block}
-.story .body{padding:14px 16px 15px}
-.story.hero .body{padding:16px 18px 18px}
-.story .t{font-size:16px;font-weight:600;line-height:1.42;letter-spacing:-.01em;
+/* ── 列表卡 ── */
+a.row{display:flex;gap:12px;text-decoration:none;color:inherit;padding:13px 0;
+  border-bottom:1px solid rgba(255,255,255,.045)}
+a.row:last-child{border-bottom:0}
+a.row .txt{flex:1;min-width:0}
+a.row .t{font-size:14.5px;font-weight:600;line-height:1.45;letter-spacing:-.01em;
   display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
-.story.hero .t{font-size:20px;line-height:1.36;letter-spacing:-.02em;-webkit-line-clamp:4}
-.story .meta{display:flex;align-items:center;gap:7px;margin-top:9px;
-  font-size:11.5px;color:var(--dim2);font-variant-numeric:tabular-nums}
-.story .meta .src{color:var(--dim);font-weight:500}
-.story .meta img.fav{width:14px;height:14px;border-radius:3px;flex:0 0 auto;background:#fff;object-fit:contain;padding:1px}
-.story .meta .sep{opacity:.45}
+a.row .m{display:flex;align-items:center;gap:5px;margin-top:6px;font-size:11px;color:var(--dim2);
+  font-variant-numeric:tabular-nums;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+a.row .m .s{color:var(--dim)}
+a.row .pic{width:78px;height:78px;border-radius:10px;overflow:hidden;background:var(--surface2);flex:0 0 auto}
+a.row .pic img{width:100%;height:100%;object-fit:cover;display:block}
+a.row .cat{display:inline-block;font-size:10.5px;padding:1px 6px;border-radius:4px;
+  background:rgba(255,255,255,.06);color:var(--dim);font-weight:500}
 
-/* 純文字卡（無圖）左側色條 */
-a.story.plain .body{padding-left:16px}
+/* ── 通知頁 ── */
+.card{background:var(--surface);border-radius:14px;padding:15px 16px;margin-bottom:10px}
+.card .ch{display:flex;align-items:center;gap:8px;margin-bottom:7px}
+.card .cn{font-size:12.5px;font-weight:600;color:var(--fg)}
+.card .ct{font-size:11px;color:var(--dim2);margin-left:auto;font-variant-numeric:tabular-nums}
+.card .cb{font-size:13.5px;line-height:1.62;color:var(--dim);white-space:pre-wrap;
+  display:-webkit-box;-webkit-line-clamp:6;-webkit-box-orient:vertical;overflow:hidden}
+.card.open .cb{-webkit-line-clamp:unset}
+.card .more{font-size:11.5px;color:var(--accent);margin-top:7px;display:inline-block}
+.badge{width:6px;height:6px;border-radius:50%;background:var(--accent);flex:0 0 auto}
 
-details.more>summary{list-style:none;cursor:pointer;font-size:13px;color:var(--dim);
-  padding:14px 0 10px;text-align:center;font-weight:500}
-details.more>summary::-webkit-details-marker{display:none}
-details.more>summary::after{content:" ▾"}
-details.more[open]>summary::after{content:" ▴"}
+/* ── 分類頁 ── */
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding-top:4px}
+.tile{background:var(--surface);border-radius:14px;padding:16px;text-align:left;
+  border:1px solid transparent;font-family:inherit;color:inherit}
+.tile:active{border-color:var(--line)}
+.tile .n{font-size:14.5px;font-weight:600}
+.tile .c{font-size:11.5px;color:var(--dim2);margin-top:3px;font-variant-numeric:tabular-nums}
+.tile .bar{height:3px;border-radius:2px;margin-bottom:10px;width:26px}
 
-.msg{padding:60px 20px;text-align:center;color:var(--dim2);font-size:14px}
+/* ── 底部 tab ── */
+nav.tabs{position:fixed;left:0;right:0;bottom:0;z-index:40;
+  height:calc(var(--tabh) + env(safe-area-inset-bottom));
+  padding-bottom:env(safe-area-inset-bottom);
+  display:flex;background:rgba(13,14,18,.94);
+  backdrop-filter:blur(22px) saturate(1.5);border-top:1px solid var(--line)}
+nav.tabs button{flex:1;background:none;border:0;color:var(--dim2);font-family:inherit;
+  font-size:10.5px;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:2px;position:relative;padding:0}
+nav.tabs button .ic{font-size:19px;line-height:1}
+nav.tabs button.on{color:var(--accent);font-weight:600}
+nav.tabs button.on .ic{background:rgba(138,180,248,.14);border-radius:10px;padding:2px 12px}
+nav.tabs button .dot{position:absolute;top:9px;right:calc(50% - 15px);width:6px;height:6px;
+  border-radius:50%;background:var(--hot);display:none}
+nav.tabs button .dot.on{display:block}
 
 /* ── 閱讀模式 ── */
-#reader{position:fixed;inset:0;z-index:60;background:var(--bg);display:none;
-  flex-direction:column;overscroll-behavior:contain}
-#reader.on{display:flex}
-.rbar{display:flex;align-items:center;gap:12px;padding:calc(12px + env(safe-area-inset-top)) 16px 12px;
-  border-bottom:1px solid var(--line);background:rgba(13,14,17,.9);backdrop-filter:blur(16px)}
-#rclose{width:34px;height:34px;border-radius:50%;border:0;background:var(--surface);
-  color:var(--fg);font-size:16px;cursor:pointer;flex:0 0 auto}
+#reader{position:fixed;inset:0;z-index:60;background:var(--bg);display:none;flex-direction:column}
+#reader.on{display:flex;animation:up .22s ease}
+@keyframes up{from{transform:translateY(3%);opacity:.6}to{transform:none;opacity:1}}
+.rbar{display:flex;align-items:center;gap:12px;
+  padding:calc(10px + env(safe-area-inset-top)) 16px 10px;
+  border-bottom:1px solid var(--line);background:rgba(11,12,15,.92);backdrop-filter:blur(18px)}
+#rclose{width:34px;height:34px;border-radius:50%;border:0;background:var(--surface2);
+  color:var(--fg);font-size:15px;flex:0 0 auto}
 .rsrc{font-size:11.5px;color:var(--dim2);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.rwrap{flex:1;overflow-y:auto;padding:22px 20px calc(60px + env(safe-area-inset-bottom))}
-.rwrap h2{font-size:23px;line-height:1.36;letter-spacing:-.02em;font-weight:700;margin-bottom:14px}
-.rorig{font-size:12px;color:var(--dim2);border-left:2px solid var(--line);
-  padding-left:10px;margin-bottom:18px;line-height:1.5}
-.rtext p{font-size:15.5px;line-height:1.78;color:#d6d3cf;margin-bottom:16px}
-.rnone{font-size:13px;color:var(--dim2);margin-bottom:14px}
-.ropen{display:inline-block;margin-top:8px;padding:12px 18px;border-radius:12px;
-  background:var(--surface2);color:var(--accent);text-decoration:none;font-size:14px;font-weight:600}
+.rwrap{flex:1;overflow-y:auto;padding:20px 20px calc(50px + env(safe-area-inset-bottom))}
+.rwrap h2{font-size:22px;line-height:1.38;letter-spacing:-.02em;font-weight:700;margin-bottom:12px}
+.rorig{font-size:12px;color:var(--dim2);border-left:2px solid var(--line);padding-left:10px;
+  margin-bottom:16px;line-height:1.5}
+.rtext p{font-size:15.5px;line-height:1.8;color:#d4d1cc;margin-bottom:15px}
+.rnone{font-size:13px;color:var(--dim2);margin-bottom:12px}
+.ropen{display:inline-block;margin-top:6px;padding:11px 17px;border-radius:11px;
+  background:var(--surface2);color:var(--accent);text-decoration:none;font-size:13.5px;font-weight:600}
+
+.msg{padding:70px 20px;text-align:center;color:var(--dim2);font-size:13.5px;line-height:1.7}
 </style>
 </head>
 <body>
-<header>
-  <div class="hrow">
-    <h1>今天</h1>
-    <div class="hmeta" id="meta"></div>
-  </div>
-  <div class="sub" id="today"></div>
-  <div class="qwrap"><input id="q" placeholder="搜尋標題或來源…" autocomplete="off"></div>
-  <nav id="tabs"></nav>
-</header>
 
-<main id="list"><div class="msg">載入中…</div></main>
+<!-- ═══ 首頁 ═══ -->
+<section class="page on" id="p-home">
+  <header>
+    <div class="hrow"><h1>今天</h1><div class="hmeta" id="h-meta"></div></div>
+    <div class="sub" id="h-date"></div>
+    <div class="chips" id="chips"></div>
+  </header>
+  <main id="feed"><div class="msg">載入中…</div></main>
+</section>
+
+<!-- ═══ 通知 ═══ -->
+<section class="page" id="p-notices">
+  <header>
+    <div class="hrow"><h1>通知</h1><div class="hmeta" id="n-count"></div></div>
+    <div class="sub">我幫你跑的東西，7 天內都在這</div>
+  </header>
+  <main id="notices"><div class="msg">沒有通知</div></main>
+</section>
+
+<!-- ═══ 分類 ═══ -->
+<section class="page" id="p-cats">
+  <header>
+    <div class="hrow"><h1>分類</h1></div>
+    <div class="sub">點一個看你常看的</div>
+  </header>
+  <main><div class="grid" id="catgrid"></div></main>
+</section>
+
+<!-- ═══ 搜尋 ═══ -->
+<section class="page" id="p-search">
+  <header>
+    <div class="hrow"><h1>搜尋</h1></div>
+    <div class="qwrap" style="margin-top:10px">
+      <input id="q" placeholder="標題、來源都可以" autocomplete="off">
+    </div>
+  </header>
+  <main id="results"><div class="msg">打關鍵字，或直接點上面的分類</div></main>
+</section>
+
+<nav class="tabs">
+  <button data-tab="home" class="on"><span class="ic">◉</span>首頁</button>
+  <button data-tab="notices"><span class="ic">◔</span>通知<span class="dot" id="ndot"></span></button>
+  <button data-tab="cats"><span class="ic">▤</span>分類</button>
+  <button data-tab="search"><span class="ic">⌕</span>搜尋</button>
+</nav>
 
 <div id="reader">
-  <div class="rbar">
-    <button id="rclose" aria-label="關閉">✕</button>
-    <span class="rsrc" id="rsrc"></span>
-  </div>
+  <div class="rbar"><button id="rclose">✕</button><span class="rsrc" id="rsrc"></span></div>
   <div class="rwrap" id="rbody"></div>
 </div>
 
@@ -146,28 +203,18 @@ const $ = s => document.querySelector(s);
 const esc = s => String(s ?? "").replace(/[&<>"']/g, c =>
   ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 
-let PICKS = [], ALL = [], CATS = [], cat = "all", q = "", BYLINK = {}, NOTES = {}, NOTICES = [];
-
-const COLOR = {game:"var(--game)",tech:"var(--tech)",ai:"var(--ai)",local:"var(--local)",
-  toy:"var(--toy)",image:"var(--tech)",pipeline:"var(--tech)",hermes:"var(--tech)",
-  hype:"var(--toy)",news:"var(--local)"};
+let ALL = [], PICKS = [], CATS = [], cat = "all", q = "", BYLINK = {}, NOTES = {}, NOTICES = [];
 
 const LABEL = {game:"遊戲",tech:"科技",ai:"AI",local:"本地",toy:"玩具模型",
   image:"圖像",pipeline:"工具",hermes:"Hermes",hype:"潮物",news:"新聞"};
-
-/* cron 的 slug → 人看得懂的名字 */
+const COLOR = {game:"var(--game)",tech:"var(--tech)",ai:"var(--tech)",local:"var(--accent)",
+  toy:"var(--toy)",image:"var(--tech)",pipeline:"var(--tech)",hermes:"var(--tech)",hype:"var(--toy)"};
 const JOBNAME = {
-  "carousell-videogame-watch":"Carousell 上新",
-  "news-digest-evening":"今日新聞摘要",
-  "cex-morning-brief":"CeX 早安",
-  "ai-research-daily":"AI 工具日報",
-  "health-monitor":"系統檢查",
-  "memory-audit-weekly":"記憶審計",
-  "weekly-maintenance":"每週維修",
-  "snkrdunk-watch":"SNKRDUNK 卡價",
-  "samsung-watch":"Samsung 監控",
-  "life-log-nightly":"生活記錄",
-  "trending-politics":"熱點",
+  "carousell-videogame-watch":"Carousell 上新","news-digest-evening":"今日新聞",
+  "cex-morning-brief":"CeX 早安","ai-research-daily":"AI 工具日報",
+  "health-monitor":"系統檢查","memory-audit-weekly":"記憶審計",
+  "weekly-maintenance":"每週維修","snkrdunk-watch":"SNKRDUNK 卡價",
+  "samsung-watch":"Samsung 監控","life-log-nightly":"生活記錄","trending-politics":"熱點"
 };
 
 const labelOf = c => LABEL[c] || c || "其他";
@@ -177,146 +224,177 @@ function ago(ts){
   if(!ts) return "";
   const s = Math.floor(Date.now()/1000 - ts);
   if (s < 60) return "剛剛";
-  if (s < 3600) return Math.floor(s/60) + " 分鐘前";
-  if (s < 86400) return Math.floor(s/3600) + " 小時前";
-  if (s < 2592000) return Math.floor(s/86400) + " 天前";
+  if (s < 3600) return Math.floor(s/60)+" 分鐘";
+  if (s < 86400) return Math.floor(s/3600)+" 小時";
+  if (s < 604800) return Math.floor(s/86400)+" 天";
   return new Date(ts*1000).toLocaleDateString("zh-TW",{month:"numeric",day:"numeric"});
 }
+const fav = l => { try { return "https://www.google.com/s2/favicons?sz=64&domain="+new URL(l).hostname; } catch(e){ return ""; } };
+const titleOf = d => NOTES[d.link] || d.zh || d.title || "";
 
-function favicon(link){
-  try { return "https://www.google.com/s2/favicons?sz=64&domain=" + new URL(link).hostname; }
-  catch(e){ return ""; }
-}
-
-/* ── 卡片：一則新聞一張卡 ── */
-function storyHTML(d, hero){
-  const color = colorOf(d.cat);
-  const title = NOTES[d.link] || d.zh || d.title || "";
-  const showOrig = !!(NOTES[d.link] || d.zh);
-  const fav = favicon(d.link);
-  const hasImg = !!d.img;
-  const cls = "story" + (hero ? " hero" : "") + (hasImg ? "" : " plain");
-  return `
-  <a class="${cls}" href="${esc(d.link)}" data-link="${esc(d.link)}"
-     rel="noopener" style="--accent:${color}">
-    ${hasImg ? `<div class="thumb"><img src="${esc(d.img)}" loading="lazy" referrerpolicy="no-referrer"
-        onerror="this.parentNode.remove()"></div>` : ""}
-    <div class="body">
-      <div class="t">${esc(title)}</div>
-      <div class="meta">
-        ${fav ? `<img class="fav" src="${esc(fav)}" loading="lazy" onerror="this.remove()">` : ""}
-        <span class="src">${esc(d.source || "")}</span>
-        <span class="sep">·</span>
-        <span>${ago(d.ts) || esc(d.date || "")}</span>
-        <span class="sep">·</span>
-        <span style="color:${color}">${labelOf(d.cat)}</span>
-      </div>
-      ${showOrig ? "" : ""}
+/* ── 卡片 ── */
+function leadHTML(d){
+  const img = d.img ? `<span class="thumb"><img src="${esc(d.img)}" loading="lazy" referrerpolicy="no-referrer" onerror="this.parentNode.remove()"></span>` : "";
+  return `<a class="lead" href="${esc(d.link)}" data-link="${esc(d.link)}" rel="noopener">
+    ${img}
+    <div class="txt">
+      <div class="t">${esc(titleOf(d))}</div>
+      <div class="m">${fav(d.link)?`<img src="${esc(fav(d.link))}" width="13" height="13" style="border-radius:3px;background:#fff" onerror="this.remove()">`:""}
+        <span class="s">${esc(d.source||"")}</span><span>·</span><span>${ago(d.ts)}</span></div>
     </div>
   </a>`;
 }
 
-function noticesHTML(){
-  if (!NOTICES.length || cat !== "all" || q) return "";
-  const first = NOTICES[0];
-  const names = NOTICES.map(n => JOBNAME[n.job] || n.job);
-  const uniq = [...new Set(names)].slice(0,3).join("｜");
-  return `
-  <details id="notices">
-    <summary>
-      <span class="dot"></span>
-      <span class="nt1">今天收到 ${NOTICES.length} 則</span>
-      <span class="nsub">${esc(uniq)}${names.length>3?"…":""}</span>
-    </summary>
-    <div class="nlist">
-      ${NOTICES.map(n => `
-        <div class="nitem">
-          <div class="nh">${esc(JOBNAME[n.job] || n.job)} · ${ago(n.ts)}</div>
-          <div class="nt">${esc(n.text)}</div>
-        </div>`).join("")}
-    </div>
-  </details>`;
+function rowHTML(d, showPic){
+  const img = showPic && d.img ? `<span class="pic"><img src="${esc(d.img)}" loading="lazy" referrerpolicy="no-referrer" onerror="this.parentNode.remove()"></span>` : "";
+  return `<a class="row" href="${esc(d.link)}" data-link="${esc(d.link)}" rel="noopener">
+    <span class="txt">
+      <div class="t">${esc(titleOf(d))}</div>
+      <div class="m"><span class="cat">${labelOf(d.cat)}</span><span class="s">${esc(d.source||"")}</span><span>·</span><span>${ago(d.ts)}</span></div>
+    </span>${img}
+  </a>`;
 }
 
-function render(){
-  const match = d => (cat === "all" || d.cat === cat) &&
-    (!q || ((NOTES[d.link]||"") + " " + (d.title||"") + " " + (d.source||"")).toLowerCase().includes(q));
+/* ── 首頁 ── */
+function renderFeed(){
+  const match = d => (cat === "all" || d.cat === cat);
+  const pool = ALL.filter(match);
+  if (!pool.length){ $("#feed").innerHTML = '<div class="msg">這一類目前沒有東西</div>'; return; }
 
   const picks = PICKS.filter(match);
-  const hero = picks.slice(0, 3);                 // 上面三則做重點（有大標）
-  const rest = ALL.filter(match).filter(d => !hero.some(h => h.link === d.link));
+  const leadN = Math.min(2, picks.length);
+  const leads = picks.slice(0, leadN);
+  const leadLinks = new Set(leads.map(d => d.link));
+  const rest = pool.filter(d => !leadLinks.has(d.link));
 
-  const list = $("#list");
-  if (!hero.length && !rest.length){
-    list.innerHTML = `<div class="msg">${q ? "找不到「"+esc(q)+"」" : "沒有符合的"}</div>`;
-    return;
+  let html = "";
+  if (leads.length){
+    html += `<div class="sect"><h2>重點</h2><span>${leads.length}</span></div>`;
+    leads.forEach(d => html += leadHTML(d));
   }
-
-  let html = noticesHTML();
-
-  if (hero.length){
-    html += `<div class="sect"><h2>${(q||cat!=="all")?"符合":"重點"}</h2>
-             <span>${hero.length} 則</span></div>`;
-    hero.forEach((d,i) => { html += storyHTML(d, i === 0 && !q && cat === "all"); });
-  }
-
   if (rest.length){
-    html += `<div class="sect"><h2>${(q||cat!=="all")?"其他":"更多"}</h2>
-             <span>${rest.length} 則</span></div>`;
-    rest.forEach(d => { html += storyHTML(d, false); });
+    html += `<div class="sect"><h2>更多</h2><span>${rest.length} 則</span></div>`;
+    rest.forEach((d,i) => html += rowHTML(d, i % 3 === 0));
   }
-
-  list.innerHTML = html;
+  $("#feed").innerHTML = html;
 }
 
-function buildTabs(){
-  const nav = $("#tabs");
-  nav.innerHTML = "";
-  CATS.forEach(([k, label]) => {
+/* ── 通知 ── */
+function renderNotices(){
+  if (!NOTICES.length){ $("#notices").innerHTML = '<div class="msg">還沒有通知</div>'; $("#ndot").classList.remove("on"); return; }
+  $("#n-count").textContent = `${NOTICES.length} 則`;
+  $("#ndot").classList.add("on");
+  $("#notices").innerHTML = NOTICES.map((n,i) => `
+    <div class="card" data-i="${i}">
+      <div class="ch"><span class="badge"></span>
+        <span class="cn">${esc(JOBNAME[n.job] || n.job)}</span>
+        <span class="ct">${ago(n.ts)}</span></div>
+      <div class="cb">${esc(n.text)}</div>
+      <span class="more">展開</span>
+    </div>`).join("");
+}
+
+/* ── 分類 ── */
+function renderCats(){
+  $("#catgrid").innerHTML = CATS.map(([k,label]) => {
+    const n = ALL.filter(d => d.cat === k).length;
+    if (!n) return "";
+    return `<button class="tile" data-cat="${esc(k)}">
+      <div class="bar" style="background:${colorOf(k)}"></div>
+      <div class="n">${esc(label)}</div>
+      <div class="c">${n} 則</div>
+    </button>`;
+  }).join("");
+}
+
+/* ── 搜尋 ── */
+function renderSearch(){
+  const k = q.trim().toLowerCase();
+  if (!k){ $("#results").innerHTML = '<div class="msg">打關鍵字，或直接點上面的分類</div>'; return; }
+  const hit = ALL.filter(d =>
+    (titleOf(d) + " " + (d.title||"") + " " + (d.source||"")).toLowerCase().includes(k));
+  $("#results").innerHTML = hit.length
+    ? `<div class="sect"><h2>找到</h2><span>${hit.length} 則</span></div>` + hit.map(d => rowHTML(d, false)).join("")
+    : `<div class="msg">找不到「${esc(q)}」</div>`;
+}
+
+/* ── chips ── */
+function buildChips(){
+  const el = $("#chips"); el.innerHTML = "";
+  CATS.forEach(([k,label]) => {
     const n = k === "all" ? ALL.length : ALL.filter(d => d.cat === k).length;
     if (!n && k !== "all") return;
     const b = document.createElement("button");
-    b.className = "tab" + (k === cat ? " on" : "");
-    b.textContent = `${label} ${n}`;
-    b.onclick = () => { cat = k; buildTabs(); render(); window.scrollTo({top:0,behavior:"smooth"}); };
-    nav.appendChild(b);
+    b.className = "chip" + (k === cat ? " on" : "");
+    b.textContent = k === "all" ? `全部 ${n}` : `${label} ${n}`;
+    b.onclick = () => { cat = k; buildChips(); renderFeed(); window.scrollTo({top:0,behavior:"smooth"}); };
+    el.appendChild(b);
   });
 }
 
-/* ── 閱讀模式 ── */
+/* ── 切換頁面 ── */
+function go(tab){
+  document.querySelectorAll(".page").forEach(p => p.classList.remove("on"));
+  $("#p-" + tab).classList.add("on");
+  document.querySelectorAll("nav.tabs button").forEach(b =>
+    b.classList.toggle("on", b.dataset.tab === tab));
+  window.scrollTo({top:0});
+  if (tab === "notices") $("#ndot").classList.remove("on");
+  if (tab === "search") setTimeout(() => $("#q").focus(), 60);
+}
+
+document.querySelectorAll("nav.tabs button").forEach(b => {
+  b.onclick = () => go(b.dataset.tab);
+});
+
+/* 通知展開 */
+document.addEventListener("click", e => {
+  const card = e.target.closest("#notices .card");
+  if (card){
+    card.classList.toggle("open");
+    const m = card.querySelector(".more");
+    if (m) m.textContent = card.classList.contains("open") ? "收起" : "展開";
+    return;
+  }
+  const tile = e.target.closest(".tile");
+  if (tile){
+    cat = tile.dataset.cat; buildChips(); renderFeed(); go("home");
+    return;
+  }
+  const a = e.target.closest("a.lead, a.row");
+  if (a){
+    const d = BYLINK[a.dataset.link];
+    if (d){ e.preventDefault(); openReader(d); }
+  }
+});
+
+/* ── 閱讀 ── */
 function openReader(d){
-  if (!d) return;
   $("#rsrc").textContent = (d.source||"") + " · " + (ago(d.ts) || d.date || "");
-  const title = NOTES[d.link] || d.zh || d.title || "";
   const orig = (NOTES[d.link] || d.zh) ? d.title : "";
   const body = d.full
     ? `<div class="rtext">${d.full.split(/\n\n+/).map(p=>`<p>${esc(p)}</p>`).join("")}</div>`
-    : `<div class="rnone">這條沒抓到正文，只有摘要：</div>
-       <div class="rtext"><p>${esc(d.summary || d.title || "")}</p></div>`;
-  $("#rbody").innerHTML = `
-    <h2>${esc(title)}</h2>
-    ${orig ? `<div class="rorig">${esc(orig)}</div>` : ""}
-    ${body}
+    : `<div class="rnone">抓不到正文，只有摘要：</div><div class="rtext"><p>${esc(d.summary||d.title||"")}</p></div>`;
+  $("#rbody").innerHTML = `<h2>${esc(titleOf(d))}</h2>
+    ${orig ? `<div class="rorig">${esc(orig)}</div>` : ""}${body}
     <a class="ropen" href="${esc(d.link)}" target="_blank" rel="noopener">看原文 ↗</a>`;
   $("#reader").classList.add("on");
   document.body.style.overflow = "hidden";
 }
-function closeReader(){
-  $("#reader").classList.remove("on");
-  document.body.style.overflow = "";
-}
-
-document.addEventListener("click", e => {
-  const a = e.target.closest("a.story");
-  if (!a) return;
-  const d = BYLINK[a.dataset.link];
-  if (!d) return;
-  e.preventDefault();
-  openReader(d);
-});
+function closeReader(){ $("#reader").classList.remove("on"); document.body.style.overflow = ""; }
 $("#rclose").onclick = closeReader;
-$("#q").oninput = e => { q = e.target.value.toLowerCase().trim(); render(); };
 
+$("#q").oninput = e => { q = e.target.value; renderSearch(); };
+
+/* 頂部陰影 */
+window.addEventListener("scroll", () => {
+  document.querySelectorAll("header").forEach(h => {
+    if (h.closest(".page")?.classList.contains("on"))
+      h.classList.toggle("scrolled", window.scrollY > 4);
+  });
+}, {passive:true});
+
+/* ── 載入 ── */
 async function load(){
   try {
     const r = await fetch("items.json?t=" + Date.now(), {cache:"no-store"});
@@ -326,31 +404,25 @@ async function load(){
     let feed = null;
     try {
       const fr = await fetch("feed.json?t=" + Date.now(), {cache:"no-store"});
-      if (fr.ok){ const arr = await fr.json(); if (Array.isArray(arr) && arr.length) feed = new Set(arr); }
+      if (fr.ok){ const a = await fr.json(); if (Array.isArray(a) && a.length) feed = new Set(a); }
     } catch(e){}
-
-    NOTES = {};
     try {
       const nr = await fetch("notes.json?t=" + Date.now(), {cache:"no-store"});
       if (nr.ok){ const o = await nr.json(); if (o && typeof o === "object") NOTES = o; }
     } catch(e){}
-
-    NOTICES = [];
     try {
       const tr = await fetch("notices.json?t=" + Date.now(), {cache:"no-store"});
       if (tr.ok){ const a = await tr.json(); if (Array.isArray(a)) NOTICES = a; }
     } catch(e){}
 
-    ALL = (j.items || [])
-      .filter(d => !feed || feed.has(d.link))
-      .sort((a,b) => (b.ts||0) - (a.ts||0));
-
-    PICKS = (j.picks && j.picks.length) ? j.picks.slice() : ALL.slice(0, 12);
-    if (feed) {
+    ALL = (j.items||[]).filter(d => !feed || feed.has(d.link))
+                       .sort((a,b) => (b.ts||0)-(a.ts||0));
+    PICKS = (j.picks && j.picks.length) ? j.picks.slice() : ALL.slice(0,10);
+    if (feed){
       PICKS = PICKS.filter(d => feed.has(d.link));
-      if (PICKS.length < 3) PICKS = ALL.slice(0, 6);
+      if (PICKS.length < 2) PICKS = ALL.slice(0, 4);
     }
-    PICKS = PICKS.map(d => d).sort((a,b) => (b.ts||0) - (a.ts||0));
+    PICKS.sort((a,b) => (b.ts||0)-(a.ts||0));
 
     CATS = j.cats || [];
     BYLINK = {};
@@ -359,16 +431,14 @@ async function load(){
 
     const now = new Date();
     const wd = ["日","一","二","三","四","五","六"][now.getDay()];
-    $("#today").textContent = `${now.getMonth()+1} 月 ${now.getDate()} 日 · 星期${wd}`;
-    $("#meta").textContent = `${ALL.length} 則` +
-      (j.generated_at ? " · " + (ago(Date.parse(j.generated_at)/1000) || "剛剛") + "更新" : "");
+    $("#h-date").textContent = `${now.getMonth()+1} 月 ${now.getDate()} 日 · 星期${wd}`;
+    $("#h-meta").textContent = (j.generated_at ? (ago(Date.parse(j.generated_at)/1000)||"剛剛") + "更新" : "");
 
-    buildTabs();
-    render();
+    buildChips(); renderFeed(); renderNotices(); renderCats(); renderSearch();
+
+    if (NOTICES.length) $("#ndot").classList.add("on");
   } catch(e){
-    if (!ALL.length) $("#list").innerHTML =
-      '<div class="msg">拿不到資料<br>確認一下網路，或等下次更新</div>';
-    $("#meta").textContent = "離線 · 顯示上次資料";
+    $("#feed").innerHTML = '<div class="msg">拿不到資料，確認網路或等下次更新</div>';
   }
 }
 
