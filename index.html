@@ -80,9 +80,24 @@ html{overscroll-behavior-y:contain}
 .nf .nfl{padding-bottom:8px}
 .nf .ni{padding:11px 13px;background:var(--surface);border-radius:11px;margin-bottom:8px}
 .nf .nh{font-size:10.5px;color:var(--dim2);letter-spacing:.04em;margin-bottom:4px}
-.nf .nb{font-size:12.5px;line-height:1.6;color:var(--dim);white-space:pre-wrap;
+.nf .nb{font-size:13px;line-height:1.62;color:var(--dim);
   display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
-.nf .ni.open .nb{-webkit-line-clamp:unset}
+.nf .ni.open .nb{display:block;-webkit-line-clamp:unset;overflow:visible}
+.nf .nb b{color:var(--fg);font-weight:600}
+.nf .nb code{font-family:ui-monospace,monospace;font-size:11.5px;background:rgba(255,255,255,.06);
+  padding:1px 5px;border-radius:5px;color:var(--accent)}
+.nf .nb .nh2{font-size:13px;font-weight:700;color:var(--fg);margin:9px 0 5px}
+.nf .nb .nh2:first-child{margin-top:0}
+.nf .nb .np{margin:3px 0;color:var(--dim)}
+.nf .nb .nl{list-style:none;padding:0;margin:3px 0 6px}
+.nf .nb .nl li{position:relative;padding-left:13px;margin-bottom:4px;color:var(--fg)}
+.nf .nb .nl li::before{content:"";position:absolute;left:2px;top:9px;width:3px;height:3px;
+  border-radius:50%;background:var(--dim2)}
+.nf .nb .nrow{display:flex;gap:7px;align-items:flex-start;margin:4px 0}
+.nf .nb .nem{flex:0 0 auto;font-size:12.5px;line-height:1.5}
+.nf .nb .ntx{flex:1;color:var(--fg)}
+.nf .nb .nlab{flex:0 0 auto;font-size:10.5px;line-height:1.5;padding:1px 7px;border-radius:6px;
+  background:rgba(138,180,248,.12);color:var(--accent);margin-top:1px;white-space:nowrap}
 
 /* ── 提醒跑馬燈 ── */
 .reminder{overflow:hidden;white-space:nowrap;padding:0 0 7px;
@@ -127,7 +142,46 @@ html{overscroll-behavior-y:contain}
 .stat.warn .sv{color:#ffb86b}
 .stat.bad  .sv{color:var(--hot)}
 
-main{padding:0 18px 24px}
+/* ── 兩頁式：新聞 / 簡報，左右滑 ── */
+#p-home{display:flex;flex-direction:column;height:100dvh;overflow:hidden}
+.pager{flex:1;min-height:0;display:flex;overflow-x:auto;overflow-y:hidden;
+  scroll-snap-type:x mandatory;scrollbar-width:none;overscroll-behavior-x:contain}
+.pager::-webkit-scrollbar{display:none}
+.pg{flex:0 0 100%;scroll-snap-align:start;overflow-y:auto;
+  padding:0 18px calc(26px + env(safe-area-inset-bottom));
+  -webkit-overflow-scrolling:touch;scrollbar-width:none}
+.pg::-webkit-scrollbar{display:none}
+.dots{display:flex;justify-content:center;gap:6px;padding:2px 0 7px;flex:0 0 auto}
+.dots i{width:5px;height:5px;border-radius:50%;background:var(--dim2);opacity:.4;transition:all .22s}
+.dots i.on{opacity:1;background:var(--accent);width:15px;border-radius:3px}
+
+/* 簡報卡 */
+.briefwrap{padding-top:4px}
+.bcard{background:var(--surface);border:1px solid rgba(255,255,255,.045);border-radius:14px;
+  padding:14px 15px 15px;margin-bottom:12px}
+.bh{display:flex;align-items:center;gap:7px;font-size:13.5px;font-weight:600;color:var(--fg);
+  padding-bottom:10px;margin-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06)}
+.bh .bi{font-size:14px}
+.bh .bt{margin-left:auto;font-size:11px;color:var(--dim2);font-weight:400;font-variant-numeric:tabular-nums}
+.bb{font-size:13.5px;line-height:1.68;color:var(--dim)}
+.bb b{color:var(--fg);font-weight:600}
+.bb code{font-family:ui-monospace,monospace;font-size:11.5px;background:rgba(255,255,255,.06);
+  padding:1px 5px;border-radius:5px;color:var(--accent)}
+.bb .nh2{font-size:13.5px;font-weight:700;color:var(--fg);margin:11px 0 5px}
+.bb .nh2:first-child{margin-top:0}
+.bb .np{margin:3px 0}
+.bb .nl{list-style:none;padding:0;margin:4px 0 7px}
+.bb .nl li{position:relative;padding-left:13px;margin-bottom:4px;color:var(--fg)}
+.bb .nl li::before{content:"";position:absolute;left:2px;top:9px;width:3px;height:3px;
+  border-radius:50%;background:var(--dim2)}
+.bb .nrow{display:flex;gap:7px;align-items:flex-start;margin:5px 0}
+.bb .nem{flex:0 0 auto;line-height:1.55}
+.bb .ntx{flex:1}
+.bb .nlab{flex:0 0 auto;font-size:10.5px;line-height:1.5;padding:1px 7px;border-radius:6px;
+  background:rgba(138,180,248,.13);color:var(--accent);margin-top:1px;white-space:nowrap;
+  min-width:42px;text-align:center}
+
+main{padding:0}
 
 /* ── 分段標題 ── */
 .sect{display:flex;align-items:baseline;justify-content:space-between;padding:20px 0 10px}
@@ -216,8 +270,11 @@ a.row .cat{display:inline-block;font-size:10.5px;padding:1px 6px;border-radius:4
     <div class="statusline" id="status"></div>
     <div class="reminder" id="reminder"></div>
   </header>
-  <main id="feed"><div class="msg">載入中…</div></main>
-  <details class="nf" id="nf"><summary></summary><div class="nfl" id="nfl"></div></details>
+  <div class="dots" id="dots"><i class="on"></i><i></i></div>
+  <div class="pager" id="pager">
+    <div class="pg"><main id="feed"><div class="msg">載入中…</div></main></div>
+    <div class="pg"><div class="briefwrap" id="brieflist"></div></div>
+  </div>
 </section>
 
 
@@ -369,17 +426,58 @@ function renderReminders(list){
   if (!many) el.querySelector(".track").style.animation = "none";
 }
 
+/* ── 簡報輕量排版：粗體／清單／emoji 分類／標籤行 ── */
+function mdLite(t){
+  const src = esc(String(t||""));
+  const parts = src.split("\n");
+  let html = "", inUl = false;
+  const closeUl = () => { if (inUl){ html += "</ul>"; inUl = false; } };
+
+  for (const raw of parts){
+    const ln = raw.trim();
+    if (!ln){ closeUl(); continue; }
+
+    // 條列
+    const li = ln.match(/^[・•·\-]\s*(.+)$/);
+    if (li){ if (!inUl){ html += '<ul class="nl">'; inUl = true; } html += `<li>${li[1]}</li>`; continue; }
+    closeUl();
+
+    // emoji 分類行（🆕 新上架 / 📉 降價 / 📦 回架 / 🚫 賣光 …）
+    const em = ln.match(/^([\u{1F300}-\u{1FAFF}\u2600-\u27BF\u2B00-\u2BFF]+)\uFE0F?\s*(.+)$/u);
+    if (em){
+      html += `<div class="nrow"><span class="nem">${em[1]}</span><span class="ntx">${em[2]}</span></div>`;
+      continue;
+    }
+
+    // 「是什麼：/ 對我們：/ 結論：」標籤行
+    const lab = ln.match(/^(是什麼|對我們|結論|為什麼|怎麼做|注意)[：:]\s*(.+)$/);
+    if (lab){
+      html += `<div class="nrow"><span class="nlab">${lab[1]}</span><span class="ntx">${lab[2]}</span></div>`;
+      continue;
+    }
+
+    // 純標題（**…** 已轉 <b>）或段落
+    if (/^<b>.+<\/b>$/.test(ln)) html += `<div class="nh2">${ln}</div>`;
+    else html += `<div class="np">${ln}</div>`;
+  }
+  closeUl();
+  return html;
+}
+
 /* ── 今天收到（首頁底部）── */
 function renderNotices(){
-  const box = $("#nf"), sum = box.querySelector("summary"), list = $("#nfl");
+  const box = $("#brieflist");
+  if (!box) return;
   const rest = NOTICES.filter(n => n.job !== "今日新聞");
-  if (!rest.length){ box.style.display = "none"; return; }
-  box.style.display = "";
-  sum.innerHTML = `<span class="badge"></span>還有 ${rest.length} 則簡報`;
-  list.innerHTML = rest.map((n,i) => `
-    <div class="ni" data-i="${i}">
-      <div class="nh">${esc(JOBNAME[n.job] || n.job)} · ${ago(n.ts)}</div>
-      <div class="nb">${esc(n.text)}</div>
+  if (!rest.length){
+    box.innerHTML = '<div class="msg">今天沒有簡報</div>';
+    return;
+  }
+  const ICON = { "CeX 早安": "🛒", "AI 工具日報": "🤖", "記憶審計": "🧠", "每週維修": "🔧" };
+  box.innerHTML = rest.map(n => `
+    <div class="bcard">
+      <div class="bh"><span class="bi">${ICON[n.job] || "▤"}</span>${esc(n.job)}<span class="bt">${ago(n.ts)}</span></div>
+      <div class="bb">${mdLite(n.text)}</div>
     </div>`).join("");
 }
 
@@ -488,6 +586,16 @@ async function load(){
     $("#feed").innerHTML = '<div class="msg">拿不到資料，確認網路或等下次更新</div>';
   }
 }
+
+/* ══ 分頁指示 ══ */
+(() => {
+  const pager = $("#pager"), dots = [...document.querySelectorAll("#dots i")];
+  if (!pager) return;
+  pager.addEventListener("scroll", () => {
+    const i = Math.round(pager.scrollLeft / pager.clientWidth);
+    dots.forEach((d, k) => d.classList.toggle("on", k === i));
+  }, {passive:true});
+})();
 
 /* ══ 手勢 ══ */
 (() => {
