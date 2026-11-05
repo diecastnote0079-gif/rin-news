@@ -53,6 +53,22 @@ h1{font-size:25px;font-weight:700;letter-spacing:-.025em}
   background:transparent;color:var(--dim);font-size:12.5px;font-family:inherit;font-weight:500}
 .chip.on{background:rgba(138,180,248,.15);border-color:rgba(138,180,248,.4);color:var(--accent);font-weight:600}
 
+/* ── 首頁頂部壓縮 ── */
+#p-home header{padding-top:calc(6px + env(safe-area-inset-top))}
+#p-home .hrow{gap:10px;min-height:28px}
+#p-home h1{font-size:21px;letter-spacing:-.03em}
+.hdate{font-size:12px;color:var(--dim2);margin-left:auto;font-variant-numeric:tabular-nums}
+#p-home .hmeta{font-size:11px;color:var(--dim2);margin-left:8px}
+.statusline{display:flex;align-items:baseline;gap:13px;padding:5px 0 9px;overflow-x:auto;
+  scrollbar-width:none;-webkit-mask-image:linear-gradient(90deg,#000 94%,transparent);
+  mask-image:linear-gradient(90deg,#000 94%,transparent)}
+.statusline::-webkit-scrollbar{display:none}
+.si{display:flex;align-items:baseline;gap:4px;flex:0 0 auto}
+.si .k{font-size:9.5px;color:var(--dim2);letter-spacing:.06em;text-transform:uppercase}
+.si .v{font-size:13px;font-weight:700;font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+.si.warn .v{color:#ffb86b}
+.si.bad .v{color:var(--hot)}
+
 /* ── 狀態小卡（天氣式）── */
 .statgrid{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:2px 0 13px}
 .stat{background:var(--surface);border:1px solid rgba(255,255,255,.04);border-radius:13px;
@@ -163,9 +179,12 @@ nav.tabs button .dot.on{display:block}
 <!-- ═══ 首頁 ═══ -->
 <section class="page on" id="p-home">
   <header>
-    <div class="hrow"><h1>今天</h1><div class="hmeta" id="h-meta"></div></div>
-    <div class="sub" id="h-date"></div>
-    <div class="statgrid" id="status"></div>
+    <div class="hrow">
+      <h1>今天</h1>
+      <span class="hdate" id="h-date"></span>
+      <span class="hmeta" id="h-meta"></span>
+    </div>
+    <div class="statusline" id="status"></div>
     <div class="chips" id="chips"></div>
   </header>
   <main id="feed"><div class="msg">載入中…</div></main>
@@ -340,36 +359,20 @@ const fmtReset = t => String(t||"")
 function renderStatus(st){
   const el = $("#status");
   if (!st){ el.innerHTML = ""; return; }
-  const q = st.quota || {}, h = st.host || {}, m = st.memory || {}, c = st.cron || {};
-  const low = (q.monthly ?? 100) < 20;
-  const memBad = Math.max(m.memory?.pct ?? 0, m.user?.pct ?? 0);
+  const q = st.quota || {}, h = st.host || {}, m = st.memory || {};
+  const mem = Math.max(m.memory?.pct ?? 0, m.user?.pct ?? 0);
 
-  const cards = [
-    // 額度：主數字是「剩餘」，標題寫清楚
-    { l:"模型額度（月）", v:(q.monthly ?? "—"), u:"%",
-      s:`週 ${q.weekly ?? "—"}% · 5 小時 ${q.rolling ?? "—"}% · ${fmtReset(q.reset_monthly)}後重置`,
-      g:"⚡", cls: (q.monthly ?? 100) < 10 ? "bad" : ((q.monthly ?? 100) < 25 ? "warn" : "") },
-    // 記憶體：主數字 = 已用 %，副標給負載
-    { l:"記憶體", v:(h.mem_pct ?? "—"), u:"%",
-      s:`負載 ${h.load ?? "—"} · 開機 ${h.uptime_h ?? "—"} 小時`,
-      g:"▤", cls: (h.mem_pct ?? 0) > 90 ? "warn" : "" },
-    // 磁碟：主數字 = 可用空間（這是他在意的），副標 = 已用 %
-    { l:"磁碟", v:(h.disk_free_gb ?? "—"), u:" GB",
-      s:`已用 ${h.disk_pct ?? "—"}%`,
-      g:"◍", cls: (h.disk_pct ?? 0) > 85 ? "bad" : "" },
-    // 記憶水位：主數字 = 兩份取高的那份
-    { l:"記憶水位", v:memBad, u:"%",
-      s:`MEM ${m.memory?.pct ?? "—"}% · 你 ${m.user?.pct ?? "—"}%`,
-      g:"◆", cls: memBad >= 97 ? "bad" : (memBad >= 90 ? "warn" : "") },
+  const items = [
+    { k:"quota", v:(q.monthly ?? "—") + "%", cls:(q.monthly ?? 100) < 10 ? "bad" : ((q.monthly ?? 100) < 25 ? "warn" : "") },
+    { k:"ram",   v:(h.mem_pct ?? "—") + "%", cls:(h.mem_pct ?? 0) > 90 ? "warn" : "" },
+    { k:"disk",  v:(h.disk_free_gb ?? "—") + "G", cls:(h.disk_pct ?? 0) > 85 ? "bad" : "" },
+    { k:"mem",   v:mem + "%", cls:mem >= 97 ? "bad" : (mem >= 90 ? "warn" : "") },
+    { k:"up",    v:(h.uptime_h ?? "—") + "h", cls:"" },
   ];
 
-  el.innerHTML = cards.map(cd => `
-    <div class="stat ${cd.cls}">
-      <div class="g">${cd.g}</div>
-      <div class="sl">${cd.l}</div>
-      <div class="sv">${esc(String(cd.v))}${cd.u ? `<small>${cd.u}</small>` : ""}</div>
-      <div class="ss">${esc(cd.s)}</div>
-    </div>`).join("");
+  el.innerHTML = items.map(i =>
+    `<span class="si ${i.cls}"><span class="k">${i.k}</span><span class="v">${esc(String(i.v))}</span></span>`
+  ).join("");
 }
 
 /* ── chips ── */
@@ -489,7 +492,7 @@ async function load(){
 
     const now = new Date();
     const wd = ["日","一","二","三","四","五","六"][now.getDay()];
-    $("#h-date").textContent = `${now.getMonth()+1} 月 ${now.getDate()} 日 · 星期${wd}`;
+    $("#h-date").textContent = `${now.getMonth()+1}/${now.getDate()} 週${wd}`;
     $("#h-meta").textContent = (j.generated_at ? (ago(Date.parse(j.generated_at)/1000)||"剛剛") + "更新" : "");
 
     buildChips(); renderFeed(); renderNotices(); renderCats(); renderSearch();
