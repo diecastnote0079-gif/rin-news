@@ -184,6 +184,22 @@ html{overscroll-behavior-y:contain}
 .bb .nl li{position:relative;padding-left:13px;margin-bottom:4px;color:var(--fg)}
 .bb .nl li::before{content:"";position:absolute;left:2px;top:9px;width:3px;height:3px;
   border-radius:50%;background:var(--dim2)}
+.bb .tnode{background:rgba(255,255,255,.028);border:1px solid rgba(255,255,255,.05);
+  border-left:2px solid rgba(255,255,255,.09);
+  border-radius:12px;padding:12px 13px 13px;margin:11px 0}
+/* 結論決定左側色條：值得試=綠、觀察=灰、不用管=紅 */
+.bb .tnode:has(.nlab.good){border-left-color:#7fb894}
+.bb .tnode:has(.nlab.bad){border-left-color:#c9807a}
+.bb .tnode:has(.nlab.meh){border-left-color:rgba(255,255,255,.14)}
+.bb .tnode + .tnode{margin-top:8px}
+.bb .th{display:flex;align-items:baseline;gap:7px;margin-bottom:9px}
+.bb .tnum{flex:0 0 auto;font-size:10px;font-weight:700;color:var(--dim2);
+  background:rgba(255,255,255,.07);border-radius:4px;padding:1.5px 5px;line-height:1.4;
+  font-variant-numeric:tabular-nums}
+.bb .ttl{font-size:13.5px;font-weight:700;color:var(--fg);line-height:1.42;letter-spacing:-.005em}
+.bb .tnode .nrow{margin:6px 0}
+.bb .tnode .nrow:last-child{margin-bottom:0}
+.bb .tnode .nlab{min-width:40px;font-size:10px}
 .bb .ncat{display:flex;align-items:center;gap:8px;margin:15px 0 7px;padding-top:11px;
   border-top:1px solid rgba(255,255,255,.055)}
 .bb .ncat.first{margin-top:4px;padding-top:0;border-top:0}
@@ -454,7 +470,9 @@ function renderReminders(list){
 /* ── 簡報輕量排版：粗體／清單／emoji 分類／標籤行 ── */
 function mdLite(t){
   const CAT = /^(🆕|📉|📦|🚫|🔥|📰|⭐|💰|🎮|🛒|🤖|🧠|🔧|⚠️|✅|❌)/u;
-  const src = esc(String(t||""));
+  const src = esc(String(t||""))
+    .replace(/\*\*(.+?)\*\*/g, '<b>$1</b>')      // **粗體** → <b>
+    .replace(/`([^`]+)`/g, '<code>$1</code>');
   const money = x => String(x)
     .replace(/(→|➜|->)\s*(\d[\d,]*(?:\.\d+)?)/g, '$1 RM$2')   // RM340→240 補成 RM240
     .replace(/(RM\s?\d[\d,]*(?:\.\d+)?)/g, '\u0001$1\u0002')  // 先標記，避免重複包
@@ -525,23 +543,46 @@ function mdLite(t){
     else { blocks.push({type:"p", v:money(ln)}); cur = null; }
   }
 
-  let html = "", firstCat = true;
+  let html = "", firstCat = true, inNode = false;
+  const closeNode = () => { if (inNode){ html += '</div>'; inNode = false; } };
+
   for (const b of blocks){
+    if (b.type === "h"){
+      // **1｜工具名** → 開一張子卡
+      const m = b.v.match(/^<b>\s*(\d+)\s*[｜|]\s*(.+?)\s*<\/b>$/);
+      if (m){
+        closeNode();
+        html += `<div class="tnode"><div class="th"><span class="tnum">${m[1]}</span><span class="ttl">${m[2]}</span></div>`;
+        inNode = true;
+      } else {
+        closeNode();
+        html += `<div class="nh2">${b.v}</div>`;
+      }
+      continue;
+    }
+
     if (b.type === "cat"){
+      closeNode();
       html += `<div class="ncat${firstCat ? " first" : ""}"><span class="nem">${b.emoji}</span><span class="nct">${b.title}</span></div>`;
       firstCat = false;
       if (b.items.length === 1) html += `<div class="np">${b.items[0]}</div>`;
       else if (b.items.length > 1) html += `<ul class="nl">${b.items.map(i=>`<li>${i}</li>`).join("")}</ul>`;
-    } else if (b.type === "ul"){
-      html += `<ul class="nl">${b.items.map(i=>`<li>${i}</li>`).join("")}</ul>`;
-    } else if (b.type === "lab"){
-      html += `<div class="nrow"><span class="nlab${b.tone}">${b.k}</span><span class="ntx">${b.v}</span></div>`;
-    } else if (b.type === "h"){
-      html += `<div class="nh2">${b.v}</div>`;
-    } else {
-      html += `<div class="np">${b.v}</div>`;
+      continue;
     }
+
+    if (b.type === "ul"){
+      html += `<ul class="nl">${b.items.map(i=>`<li>${i}</li>`).join("")}</ul>`;
+      continue;
+    }
+
+    if (b.type === "lab"){
+      html += `<div class="nrow"><span class="nlab${b.tone}">${b.k}</span><span class="ntx">${b.v}</span></div>`;
+      continue;
+    }
+
+    html += `<div class="np">${b.v}</div>`;
   }
+  closeNode();
   return html;
 }
 

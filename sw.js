@@ -1,6 +1,6 @@
 // Service worker: 離線時給上一次的 items.json，線上永遠拿新的。
 // 策略：items.json = network-first（逾時才 fallback）；其餘靜態 = stale-while-revalidate。
-const CACHE = "rin-news-v24";
+const CACHE = "rin-news-v25";
 const SHELL = ["./", "./index.html", "./manifest.json", "./icon.svg"];
 
 self.addEventListener("install", e => {
