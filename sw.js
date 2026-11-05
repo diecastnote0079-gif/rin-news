@@ -1,6 +1,6 @@
 // Service worker: 離線時給上一次的 items.json，線上永遠拿新的。
 // 策略：items.json = network-first（逾時才 fallback）；其餘靜態 = stale-while-revalidate。
-const CACHE = "rin-news-v2";
+const CACHE = "rin-news-v3";
 const SHELL = ["./", "./index.html", "./manifest.json", "./icon.svg"];
 
 self.addEventListener("install", e => {
@@ -32,6 +32,21 @@ self.addEventListener("fetch", e => {
       } catch {
         const cached = await caches.match(e.request);
         return cached || new Response('{"items":[],"cats":[]}', { headers: { "Content-Type": "application/json" } });
+      }
+    })());
+    return;
+  }
+
+  // HTML：先網路（改版要立刻看到，不能先給舊快取）
+  if (url.pathname === "/" || url.pathname.endsWith(".html")) {
+    e.respondWith((async () => {
+      try {
+        const fresh = await fetch(e.request, { cache: "no-store" });
+        const c = await caches.open(CACHE);
+        c.put(e.request, fresh.clone());
+        return fresh;
+      } catch {
+        return (await caches.match(e.request)) || new Response("", { status: 504 });
       }
     })());
     return;
