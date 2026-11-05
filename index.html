@@ -540,18 +540,18 @@ async function load(){
     ry = e.touches[0].clientY;
     dragging = true;
     closedByGesture = false;
-    // 左側 40% 留給系統的返回手勢，不搶；水平右滑只在右半邊啟動
-    canPan = rx > window.innerWidth * 0.4;
+    // 右側 40% 留給系統的返回手勢；水平左滑只在左半邊啟動
+    canPan = rx < window.innerWidth * 0.6;
   }, {passive:true});
 
   reader.addEventListener("touchmove", e => {
     if (!dragging || !isOpen()) return;
     const dx = e.touches[0].clientX - rx;
     const dy = e.touches[0].clientY - ry;
-    // 右滑：跟手橫移（只在畫面右半邊啟動，避免和系統返回手勢打架）
-    if (canPan && dx > 10 && Math.abs(dy) < Math.abs(dx) * 0.9 && dx > 0){
+    // 左滑：跟手橫移（只在畫面左半邊啟動，避免和系統返回手勢打架）
+    if (canPan && dx < -10 && Math.abs(dy) < Math.abs(dx) * 0.9){
       reader.style.transition = "none";
-      reader.style.transform = `translateX(${Math.min(dx, 400)}px)`;
+      reader.style.transform = `translateX(${Math.max(dx, -400)}px)`;
     }
     // 下滑：稍微跟手（做出可關閉的回饋）
     else if (dy > 40 && dx < 40 && Math.abs(dx) < Math.abs(dy)){
@@ -568,7 +568,7 @@ async function load(){
     reader.style.transition = "";
     reader.style.transform = "";
     reader.style.opacity = "";
-    if (canPan && dx > 70 && Math.abs(dy) < 80){
+    if (canPan && dx < -70 && Math.abs(dy) < 80){
       closedByGesture = true;
       $("#rclose").click();
     } else if (dy > 130 && Math.abs(dx) < 70){
