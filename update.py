@@ -19,7 +19,17 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 PY = sys.executable
 GIT_USER = ["-c", "user.name=Rin-news", "-c", "user.email=news@local"]
 REPO_SLUG = "diecastnote0079-gif/rin-news"
-HERMES_ENV = os.path.expanduser("~/AppData/Local/hermes/.env")
+def _hermes_env() -> str:
+    r"""Windows: %LOCALAPPDATA%\hermes\.env · Linux/macOS: $HERMES_HOME/.env"""
+    if os.name == "nt":
+        la = os.environ.get("LOCALAPPDATA")
+        if la:
+            return os.path.join(la, "hermes", ".env")
+    home = os.environ.get("HERMES_HOME") or os.path.expanduser("~/.hermes")
+    return os.path.join(home, ".env")
+
+
+HERMES_ENV = _hermes_env()
 
 
 def github_token() -> str | None:
@@ -52,7 +62,7 @@ def main() -> int:
     if not os.path.isdir(os.path.join(HERE, ".git")):
         print("no git repo here; done (local only)")
         return 0
-    code, diff = sh(["git", "status", "--porcelain", "items.json"])
+    code, diff = sh(["git", "status", "--porcelain", "items.json", "feed.json"])
     if not diff.strip():
         print("items.json unchanged; nothing to publish")
         return 0
@@ -60,6 +70,8 @@ def main() -> int:
     # 3) commit + push
     stamp = datetime.now().strftime("%Y-%m-%d %H:%M")
     sh(["git", "add", "items.json"])
+    if os.path.exists(os.path.join(HERE, "feed.json")):
+        sh(["git", "add", "feed.json"])
     code, out = sh(["git", *GIT_USER, "commit", "-m", f"items: {stamp}"])
     print("commit:", out.splitlines()[0] if out else code)
 
