@@ -1,49 +1,49 @@
 {
- "date": "2026-11-05",
- "updated": "2026-11-05T20:00:00+08:00",
- "items": [
-  {
-   "text": "旺宏停產 Switch 1 卡匣，實體片恐怕又要漲",
-   "link": "https://www.4gamers.com.tw/news/detail/83108/macronix--stops-making-rom-memory-card",
-   "source": "4Gamers",
-   "ts": 1793871756
-  },
-  {
-   "text": "時之笛重製版今天發售，M 站 96 分今年最高",
-   "link": "https://www.4gamers.com.tw/news/detail/83104/the-legend-of-zelda-ocarina-of-time-scores-96-on-metacritic-with-80-reviews",
-   "source": "4Gamers",
-   "ts": 1793866092
-  },
-  {
-   "text": "任天堂營收升五成，主機銷量卻掉近四成",
-   "link": "https://www.4gamers.com.tw/news/detail/83114/nintendo-releases-its-financial-results-for-the-first-half-of-fiscal-year-2027",
-   "source": "4Gamers",
-   "ts": 1793873948
-  },
-  {
-   "text": "大馬玩家聯署，想留一間常設寶可夢中心",
-   "link": "https://www.lowyat.net/2026/409212/petition-permanent-pokemon-centre-msia/",
-   "source": "Lowyat",
-   "ts": 1793844012
-  },
-  {
-   "text": "SEGA 街機網被駭，太鼓、maimai 停擺四天",
-   "link": "https://unwire.hk/2026/11/05/sega-allnet-aime-arcade-hack-outage-nov-2026/tech-secure/?utm_source=rss&utm_medium=rss&utm_campaign=sega-allnet-aime-arcade-hack-outage-nov-2026",
-   "source": "Unwire HK",
-   "ts": 1793873542
-  },
-  {
-   "text": "Nothing 下月推首款「AI 原生」裝置",
-   "link": "https://www.lowyat.net/2026/409228/nothing-first-ai-native-product/",
-   "source": "Lowyat",
-   "ts": 1793846553
-  },
-  {
-   "text": "Claude Code 團隊在 IPO 前集體走人",
-   "link": "https://cyberq.tw/2026/11/05/anthropic-ipo-claude-code-exits/",
-   "source": "CyberQ",
-   "ts": 1793864227
-  }
- ],
- "discussion": "泰劇 BL／GL 圈今天整頁都是他們：GMMTV 明年企劃、iQIYI 泰劇發表會、Scarlet Heart 新一集輪流上榜；另一邊是美國期中選舉餘波，Trump、民主黨、德州、密西根、伊朗一路刷。本地只有 Anwar 和吉蘭丹插花。"
+  "date": "2026-11-06",
+  "updated": "2026-11-06T20:00:00+08:00",
+  "items": [
+    {
+      "text": "GPT-6 Cyber 能自己找漏洞並實際利用",
+      "link": "https://mlllm.io/news/3736-openai-releases-gpt-6-cyber-ai-autonomously-finds-and-exploits-vulnerabilities/",
+      "source": "mlllm",
+      "ts": 1793898767
+    },
+    {
+      "text": "Claude Code 會把你的 email 送給網站",
+      "link": "https://cyberq.tw/2026/11/06/claude-code-inserts-emails-into-the-user/",
+      "source": "CyberQ",
+      "ts": 1793925370
+    },
+    {
+      "text": "GTA 6 免費下載全是假站，點下去中木馬",
+      "link": "https://www.kocpc.com.tw/archives/702265",
+      "source": "電腦王阿達",
+      "ts": 1793931269
+    },
+    {
+      "text": "索尼 PS5 舊機回收最高換 1.3 萬",
+      "link": "https://www.kocpc.com.tw/archives/702337",
+      "source": "電腦王阿達",
+      "ts": 1793945755
+    },
+    {
+      "text": "Anthropic 解禁 Claude Code 做遊戲",
+      "link": "https://www.kocpc.com.tw/archives/702288",
+      "source": "電腦王阿達",
+      "ts": 1793942591
+    },
+    {
+      "text": "Volks 推 NieR 2B 與 Kaine 人偶",
+      "link": "https://hjweb.jp/article/2870930/",
+      "source": "Hobby Japan",
+      "ts": 1793926800
+    },
+    {
+      "text": "AEON 馬來西亞推人臉付款買菜",
+      "link": "https://soyacincau.com/2026/11/06/aeon-malaysia-facepay-facial-recognition-payment-kl-midtown/",
+      "source": "SoyaCincau",
+      "ts": 1793949629
+    }
+  ],
+  "discussion": "泰國 BL 圈很熱：GMMTV 快閃店開到馬來西亞、iQIYI 2027 一整排新企劃；韓團消息照樣刷榜。政治那邊是 Najib、UMNO、Anwar 加上美國期中選舉後的 Trump 與兩黨。"
 }
