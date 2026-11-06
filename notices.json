@@ -1,5 +1,20 @@
 [
  {
+  "job": "doc reconcile",
+  "ts": 1793994930,
+  "text": "【文件 vs 現況 對帳】\n • 手機頁資料 5.9 小時前（上限 5）：2026-11-06T14:02:27Z\n • 本機最後一輪 5.9 小時前（20261106220035）"
+ },
+ {
+  "job": "pending review nightly",
+  "ts": 1793994449,
+  "text": "佇列清空（11 份 → archive，sweep 已跑，殘留 0）。\n\n落了 3 條：① 主機更正——Windows 現用 desktop-akpf18q／100.79.35.48（akpfl8q 已離線），我對過 tailscale 和 win.sh 才改；② cex cron 更正成 cex-0830、morning-brief、cex-3h；③ 帳號安全那條把「已開 2FA」改成他不開，並刪掉重複的舊條目。\n丟掉約 30 條建議：換句話說的、跟現有條目重複的、dreaming 已落地的。\n沒落但先記在這裡給你：Alpaca paper MCP 的啟動參數（venv、env-file、要 /reload-mcp）屬工具操作，留在 archive 沒塞記憶。\n水位：記憶 91%（2009/2200），你的 profile 95%（1319/1375）——profile 該整理了，等你說。"
+ },
+ {
+  "job": "生活記錄",
+  "ts": 1793991699,
+  "text": "寫了 8 條：#11–#18。主題是作息（早上九點半才睡、抱怨被我拖到很晚）、心情（NIKKE 啟動器的心理陰影、只玩 NIKKE）、對生活的想法（想整台換 Linux、電腦跑圖 RAM 不夠、股票只是好玩）、想要（想買彩色小屏幕給我跑 Live2D），還有他偏愛白髮的凜。\n\n（#4 已記過「只睡兩小時」，這條沒重複寫；插排那條 #6 已存在，也只跳過。）"
+ },
+ {
   "job": "cex 3h",
   "ts": 1793973801,
   "text": "健康檢查：20261106220035（範圍 web，77472 筆）\n  ✅ freshness  資料 0.0 小時前抓的\n  ✅ volume     筆數 77472（與上次 77465 差 0.01%）\n  ✅ schema     60 個欄位，與上次指紋一致\n  ✅ quality    77472 筆：主鍵無重複、標價與名稱完整\n  ✅ heartbeat  距上次抓取 1.8 小時（20261106201150 → 20261106220035）\n\n全部正常"
@@ -23,15 +38,5 @@
   "job": "AI 工具日報",
   "ts": 1793923337,
   "text": "**AI 工具日報 · 11/06（週五）**\n\n1. **Hermes Agent v0.23.0**（昨晚發布）把整台機器的所有入口收成一個 gateway，CLI、Telegram、cron 共用同一份對話；cron 現在可以中途取消，只跑一次的任務也省掉約 1,570 個 prompt token。\n2. 對你有用：以後 Telegram 跟 cron 不會再各跑一份 agent 而重複發話；但舊的 `browser_*` 十個工具被整批移除，只剩 `browser_exec`，你那些爬蟲 skill 和腳本要先改。\n3. 值得試——**先別升**，我列完要改的檔案再動。\n\n1. **Scrapling**（今日 GitHub trending）：Python 抓網頁框架，內建處理 Cloudflare 和反爬，從單頁到整站都包。\n2. 對你有用：Carousell 那種 403 或空頁它有現成解法，可以替掉 cex-monitor 裡比較容易失敗的 Playwright 段。\n3. 觀察就好——拿一個實際被擋的 Carousell 頁面測過再說。\n\n1. **ai-goofish-monitor**（trending）：閒魚（中國二手）多任務監控系統，Playwright＋AI 判斷值不值，附後台 UI。\n2. 對你有用：這跟你的 cex-monitor 是同一類型的工具，值得看它的篩選邏輯和後台怎麼設計，但它不能直接跑你的市場。\n3. 觀察就好。\n\n1. **Linum P-JiT**：2B 像素空間生圖模型，花約 $21K 訓練出來的開源權重（Apache 2.0）。\n2. 對你有用：方向新，但權重 fp32 8.7GB ＋ 文字編碼器 8GB ＝ 17GB，3070 Ti 8GB 跑不進去，而且它不會畫字。\n3. 不用管。\n\n1. **騰訊 Hy4**：770B 總參數／49B 激活的開源模型（Apache 2.0），已在 OpenRouter，輸入 ¥6／百萬 token，Hy4 Flash 快要推出。\n2. 對你有用：本機完全不可能，只有 Hy4 Flash 真的便宜時，才顯得有吸引力，當備用鏈斷掉時的候選；你現在固定用 deepseek-v4.1-flash，我不會去動。\n3. 觀察就好。\n\n來源：Hermes GitHub releases（v0.23.0，11/5 21:32 UTC）、Hacker News 前 30、GitHub daily trending、Hy4 官方與 Linum 模型卡。Claude Code 2.1.318、opencode 2.2.5 本週沒有影響到你的變動，略過。"
- },
- {
-  "job": "pending review nightly",
-  "ts": 1793908141,
-  "text": "清完佇列：1 筆。\n\n落了 1 條：新聞台 repo 是公開可讀的，站上不放生意判斷（順手寫進 news-desk 的硬規則）。\n丟了 1 條：write_file 那條只是換句話說，沒有新資訊。\n水位 87%（1,921/2,200），沒到 92%，不用合併。\n檔案已移到 memory.archive，sweep 跑完無殘留。"
- },
- {
-  "job": "生活記錄",
-  "ts": 1793905924,
-  "text": "寫了 8 條：作息（六點睡、十二點半起，昨晚十一點睡到凌晨一點半就醒）、出門買紙巾比價選了 Vinda、Tapo 插排常連不上、我這台小電腦沒裝屏幕、對 AI 速度不焦慮、只看結果不驗證、笑我畫的貓像雞。"
  }
 ]
