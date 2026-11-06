@@ -293,6 +293,15 @@ a.row .cat{display:inline-block;font-size:10.5px;padding:2px 7px;border-radius:5
 .rnone{font-size:13px;color:var(--dim2);margin-bottom:12px}
 .ropen{display:inline-block;margin-top:6px;padding:11px 17px;border-radius:11px;
   background:var(--surface2);color:var(--accent);text-decoration:none;font-size:13.5px;font-weight:600}
+/* 問凜：把這則新聞推回對話，方便追問 */
+.rrow{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.rask{margin-top:6px;padding:11px 17px;border-radius:11px;border:0;font-family:inherit;
+  background:var(--accent);color:#0b0c0f;font-size:13.5px;font-weight:700}
+.rask:active{opacity:.75}
+#fab{position:fixed;right:16px;bottom:calc(var(--tabh) + 16px + env(safe-area-inset-bottom));
+  z-index:30;border:0;border-radius:999px;padding:11px 16px;font-family:inherit;font-size:13px;
+  font-weight:600;background:var(--surface2);color:var(--accent);box-shadow:0 6px 20px rgba(0,0,0,.45)}
+#fab:active{opacity:.75}
 
 .msg{padding:70px 20px;text-align:center;color:var(--dim2);font-size:13.5px;line-height:1.7}
 </style>
@@ -319,6 +328,7 @@ a.row .cat{display:inline-block;font-size:10.5px;padding:2px 7px;border-radius:5
 
 
 
+<button id="fab" onclick="location.href='https://t.me/hermes_unrokdeajl5yb2k7_bot'">問凜</button>
 <div id="ptr">⟳</div>
 <div id="reader">
   <div class="rbar"><button id="rclose">✕</button><span class="rsrc" id="rsrc"></span></div>
@@ -619,6 +629,8 @@ document.addEventListener("click", e => {
     else if (/^https?:/.test(link)) window.open(link, "_blank", "noopener");
     return;
   }
+  const ask = e.target.closest("[data-ask]");
+  if (ask){ e.preventDefault(); askRin(ask.dataset.ask); return; }
   const a = e.target.closest("a.lead, a.row");
   if (a){
     const d = BYLINK[a.dataset.link];
@@ -636,12 +648,30 @@ function openReader(d){
     : `<div class="rnone">抓不到正文，只有摘要：</div><div class="rtext"><p>${esc(d.summary||d.title||"")}</p></div>`;
   $("#rbody").innerHTML = `<h2>${esc(titleOf(d))}</h2>
     ${orig ? `<div class="rorig">${esc(orig)}</div>` : ""}${body}
-    <a class="ropen" href="${esc(d.link)}" target="_blank" rel="noopener">看原文 ↗</a>`;
+    <div class="rrow"><a class="ropen" href="${esc(d.link)}" target="_blank" rel="noopener">看原文 ↗</a>
+    <button class="rask" data-ask="${esc(d.link)}">問凜 →</button></div>`;
   $("#reader").classList.add("on");
   document.body.style.overflow = "hidden";
 }
 function closeReader(){
   const pg = $("#pager"); if (pg) pg.style.overflowX = ""; $("#reader").classList.remove("on"); document.body.style.overflow = ""; }
+
+/* ── 問凜：把這則新聞推回對話 ─────────────────────────────
+   為什麼用 t.me/share 而不是打 API：新聞站是公開靜態頁，
+   任何「直接打 bot API」的做法都要把 token 放進前端 = 洩漏。
+   share 連結只帶文字，由他選對話送出，兩下手勢、零憑證。 */
+const BOT = "hermes_unrokdeajl5yb2k7_bot";
+function askRin(link){
+  const d = BYLINK[link] || { link };
+  const title = titleOf(d) || "";
+  const src = d.source || "";
+  const head = `問凜｜${title}${src ? "（" + src + "）" : ""}`;
+  const msg = `${head}\n${d.link || link}`;
+  // 先複製到剪貼簿當備援（Telegram 沒裝或分享取消時還貼得上）
+  try { navigator.clipboard && navigator.clipboard.writeText(msg); } catch(e){}
+  location.href = "https://t.me/share/url?url=" + encodeURIComponent(d.link || link)
+                + "&text=" + encodeURIComponent(head);
+}
 $("#rclose").onclick = closeReader;
 
 
