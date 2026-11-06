@@ -1,5 +1,25 @@
 [
  {
+  "job": "cex 3h",
+  "ts": 1793930589,
+  "text": "健康檢查：20261106100057（範圍 web，77411 筆）\n  ✅ freshness  資料 0.0 小時前抓的\n  ✅ volume     筆數 77411（與上次 77411 差 0.00%）\n  ✅ schema     60 個欄位，與上次指紋一致\n  ✅ quality    77411 筆：主鍵無重複、標價與名稱完整\n  ✅ heartbeat  距上次抓取 0.7 小時（20261106091632 → 20261106100057）\n\n全部正常"
+ },
+ {
+  "job": "SNKRDUNK 卡價",
+  "ts": 1793926861,
+  "text": "SNKRDUNK 變化\n📈 3rd Anniversary Set — ENGLISH\n   最低在售 ¥64,898 → ¥63,999\n📈 3rd Anniversary Set — CHINA\n   在售 45 → 48 件\n📈 Luffy SEC-RSP OP13-118\n   A ¥2,550,000 → ¥2,200,000\n   PSA10 ¥3,000,000 → ¥2,900,000\n📈 Luffy SEC-SP EB04-061\n   A ¥1,650,000 → ¥1,550,000"
+ },
+ {
+  "job": "CeX 早安",
+  "ts": 1793926316,
+  "text": "昨天 CeX 的動靜：\n\n🆕 新上架\n・Final Fantasy IX（Switch）RM210\n・The Witch's Bakery（Switch 2）RM150\n・Anbernic RG476H 8+128 灰（掌機）RM700\n・REDMAGIC Astra 256GB 電競平板（B 級）RM1600\n・PNY GeForce RTX 3060 Ti 8GB（顯卡）RM1400\n\n📉 降價\n・MacBook Air M5 15\" 16+512（A 級）RM6300 → RM5800\n・Canon EOS R8 + RF 24-50（A 級）RM5500 → RM5000\n・Canon EOS 6D Mark II 機身（A 級）RM4500 → RM4050\n・Nikon D850 機身（B 級）RM4000 → RM3600\n・Fire Emblem: Fortune's Weave（Switch 2）RM320 → RM300\n・Onimusha: Way of the Sword（PS5）RM230 → RM220\n\n📦 回架\n・Call of Duty: MW2 (2022)（PS5）RM140\n・Football Manager Console 2024（PS5）RM100\n・Samurai Shodown NeoGeo Collection（Switch）RM120\n・Trimui Smart Pro 掌機（B 級）RM145\n・MacBook Air M1 13\" 8+256（B 級）RM2550\n\n🚫 賣光\n・Switch 2 惡靈古堡安魂曲 Pro 手把 RM240\n・Xbox Series S 1TB（Discounted）RM1600\n・PS5《CoD: MW4》RM260\n・Valve Index VR 頭盔（B 級）RM1000\n・PS4《CoD: MW2 (2022)》RM160"
+ },
+ {
+  "job": "AI 工具日報",
+  "ts": 1793923337,
+  "text": "**AI 工具日報 · 11/06（週五）**\n\n1. **Hermes Agent v0.23.0**（昨晚發布）把整台機器的所有入口收成一個 gateway，CLI、Telegram、cron 共用同一份對話；cron 現在可以中途取消，只跑一次的任務也省掉約 1,570 個 prompt token。\n2. 對你有用：以後 Telegram 跟 cron 不會再各跑一份 agent 而重複發話；但舊的 `browser_*` 十個工具被整批移除，只剩 `browser_exec`，你那些爬蟲 skill 和腳本要先改。\n3. 值得試——**先別升**，我列完要改的檔案再動。\n\n1. **Scrapling**（今日 GitHub trending）：Python 抓網頁框架，內建處理 Cloudflare 和反爬，從單頁到整站都包。\n2. 對你有用：Carousell 那種 403 或空頁它有現成解法，可以替掉 cex-monitor 裡比較容易失敗的 Playwright 段。\n3. 觀察就好——拿一個實際被擋的 Carousell 頁面測過再說。\n\n1. **ai-goofish-monitor**（trending）：閒魚（中國二手）多任務監控系統，Playwright＋AI 判斷值不值，附後台 UI。\n2. 對你有用：這跟你的 cex-monitor 是同一類型的工具，值得看它的篩選邏輯和後台怎麼設計，但它不能直接跑你的市場。\n3. 觀察就好。\n\n1. **Linum P-JiT**：2B 像素空間生圖模型，花約 $21K 訓練出來的開源權重（Apache 2.0）。\n2. 對你有用：方向新，但權重 fp32 8.7GB ＋ 文字編碼器 8GB ＝ 17GB，3070 Ti 8GB 跑不進去，而且它不會畫字。\n3. 不用管。\n\n1. **騰訊 Hy4**：770B 總參數／49B 激活的開源模型（Apache 2.0），已在 OpenRouter，輸入 ¥6／百萬 token，Hy4 Flash 快要推出。\n2. 對你有用：本機完全不可能，只有 Hy4 Flash 真的便宜時，才顯得有吸引力，當備用鏈斷掉時的候選；你現在固定用 deepseek-v4.1-flash，我不會去動。\n3. 觀察就好。\n\n來源：Hermes GitHub releases（v0.23.0，11/5 21:32 UTC）、Hacker News 前 30、GitHub daily trending、Hy4 官方與 Linum 模型卡。Claude Code 2.1.318、opencode 2.2.5 本週沒有影響到你的變動，略過。"
+ },
+ {
   "job": "pending review nightly",
   "ts": 1793908141,
   "text": "清完佇列：1 筆。\n\n落了 1 條：新聞台 repo 是公開可讀的，站上不放生意判斷（順手寫進 news-desk 的硬規則）。\n丟了 1 條：write_file 那條只是換句話說，沒有新資訊。\n水位 87%（1,921/2,200），沒到 92%，不用合併。\n檔案已移到 memory.archive，sweep 跑完無殘留。"
@@ -13,15 +33,5 @@
   "job": "今日新聞",
   "ts": 1793880153,
   "text": "📰 今天值得看的\n・旺宏停產 Switch 1 卡匣，實體版恐怕又要漲價\n・時之笛重製版於今天發售，M 站 96 分是今年最高分\n・任天堂營收升五成，主機銷量卻掉近四成\n・大馬玩家聯署，想留一間常設寶可夢中心\n・SEGA 街機網被駭，太鼓、maimai 停擺四天\n・Nothing 下月推首款「AI 原生」裝置\n・Anthropic 在 IPO 前，Claude Code 團隊集體走人\n\n🔥 今天在討論\n泰劇 BL／GL 圈今天佔滿整頁：GMMTV 明年企劃、iQIYI 泰劇發表會、Scarlet Heart 新一集輪流上榜；另一邊是美國期中選舉餘波，Trump、民主黨、德州、密西根、伊朗一路刷，本地只有 Anwar 和吉蘭丹順帶上榜。\n\ndigest.json 已寫好：`/home/rin/AI/news/digest.json`（7 條，順序與上面一致）。"
- },
- {
-  "job": "CeX 早安",
-  "ts": 1793874563,
-  "text": "昨天 CeX 的動靜：\n\n🆕 新上架\n・Indika（PS5）RM70\n・RPG Maker With（PS5）RM140\n・Universe for Sale（Switch 中文版）RM115\n・Asterix & Obelix XXL 3: The Crystal Menhir（Switch）RM160\n・DJI Mini 5 Pro RC-N3 空拍機 全配 A 級 RM3000\n・Asus TUF K3 Gen II 機械鍵盤 初音聯名（A 級）RM290\n\n📉 降價\n・Switch 2 官方《惡靈古堡安魂曲》Pro 控制器 RM340 → RM240\n・Nikon Z8 機身（B 級）RM9000 → RM8500\n・Nikon Z6 III 機身（B 級）RM7000 → RM6500\n・Canon EOS R6 機身（A 級）RM5000 → RM4500\n・Sony A7C II 機身（A 級）RM6500 → RM6200\n・Olympus OM-D E-M10 Mark II + 14-42mm（C 級）RM1200 → RM1000\n\n📦 回架\n・PS5《Call of Duty: MW4》\n・Switch 2《High on Life 2》\n・Switch 2《Nintendo Switch Sports Resort》\n・PS5《Hi-Fi Rush》\n・PS5《Project Motor Racing》\n・Xbox Series 20 週年無線手把\n\n🚫 賣光\n・Switch 2《Final Fantasy Resonance》\n・PS5《Control Resonant》\n・PS5《NBA 2K27》\n・PS3 320GB 原箱主機\n・PS4 500GB 星戰限定機\n・Xbox One 1TB Halo 5 限定機"
- },
- {
-  "job": "AI 工具日報",
-  "ts": 1793837014,
-  "text": "**AI 工具日報・11/05**\n\n**1｜Hermes v0.22.7（11/3）**\n是什麼：又一個 patch 打包（174 個 PR），整理好的說明要等 v0.23.0。\n對我們：這兩包裡跟你有關的只有 cron 漏跑補跑政策和 `/model reset`，其餘多半是桌面版群組聊天、Web Access 那類你用不到的。\n結論：觀察就好——等 0.23.0 說明再決定，不是現在升。\n\n**2｜FLUX 3 Image Klein（BFL，5.6B）**\n是什麼：一個模型同時做生圖、依指令修改圖片、最多 10 張參考圖合成，官方另出了 ComfyUI 打包版（10 月中發佈，這幾天上 HF trending）。\n對我們：int8 版 5.8GB，官方明寫是給 RTX 3070 這種 8GB 卡跑的；多參考圖正好對上你「同一個人要長一樣」那條線。\n結論：值得試——但文字編碼器和 upsampler 在 8GB 上要 offload，先量一張 1024 要幾秒再決定收不收。\n\n**3｜ComfyUI v0.44.0（11/4）**\n是什麼：常規更新，加 partner 節點與新模型支援（MiniMax H3、材質處理）。\n對我們：對 3070 Ti 真正有用的是修好 fp8 fast 在動態 VRAM 下偷偷掉回 bf16 的 bug——同樣設定可能快一點。\n結論：觀察就好，下次要動 workflow 時一起升，別為它專門停機。\n\n**4｜Kimi K3.1-Pro 權重開源（11/2–11/4）**\n是什麼：Moonshot 把旗艦模型放上 HF，總參數 2.8T、每次激活 104B、100 萬 context，用自訂授權。\n對我們：本地就算了吧（16G RAM＋8G VRAM），API 也不用換——主腦是固定的，換了只是多花錢。\n結論：不用管。\n\n都只是列出來給你挑，我沒動任何東西。"
  }
 ]

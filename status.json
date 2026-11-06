@@ -1,47 +1,49 @@
 {
- "updated": 1793919655,
+ "updated": 1793941254,
  "quota": {
-  "rolling": 98,
-  "weekly": 82,
+  "rolling": 100,
+  "weekly": 81,
   "monthly": 53,
-  "reset_rolling": "26m",
-  "reset_weekly": "3d 0h",
-  "reset_monthly": "11d 18h"
+  "reset_rolling": "4h 59m",
+  "reset_weekly": "2d 18h",
+  "reset_monthly": "11d 12h"
  },
  "host": {
-  "load": 0.11,
-  "mem_pct": 12,
+  "load": 0.25,
+  "mem_pct": 13,
   "disk_pct": 4,
-  "disk_free_gb": 415,
-  "uptime_h": 28
+  "disk_free_gb": 414,
+  "uptime_h": 34
  },
  "memory": {
   "memory": {
-   "pct": 96,
-   "chars": 2102,
+   "pct": 99,
+   "chars": 2173,
    "limit": 2200
   },
   "user": {
-   "pct": 95,
-   "chars": 1308,
+   "pct": 98,
+   "chars": 1344,
    "limit": 1375
   }
  },
  "cron": {
-  "enabled": 24,
-  "failed": 0,
-  "failed_names": []
+  "enabled": 25,
+  "failed": 1,
+  "failed_names": [
+   "news-refresh"
+  ]
  },
  "reminders": [
   {
    "name": "記憶插件觀察",
    "date": "11/09",
-   "days": 3
+   "days": 2
   },
   {
    "name": "BF 遊戲掃描",
    "date": "11/20",
-   "days": 14
+   "days": 13
   },
   {
    "name": "MRT 月卡續期",
