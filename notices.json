@@ -1,5 +1,30 @@
 [
  {
+  "job": "cex 3h",
+  "ts": 1794016992,
+  "text": "健康檢查：20261107100031（範圍 web，77472 筆）\n  ✅ freshness  資料 0.0 小時前抓的\n  ✅ volume     筆數 77472（與上次 77472 差 0.00%）\n  ✅ schema     60 個欄位，與上次指紋一致\n  ✅ quality    77472 筆：主鍵無重複、標價與名稱完整\n  ✅ heartbeat  距上次抓取 1.5 小時（20261107083031 → 20261107100031）\n\n全部正常"
+ },
+ {
+  "job": "SNKRDUNK 卡價",
+  "ts": 1794013236,
+  "text": "SNKRDUNK 變化\n📈 3rd Anniversary Set — ENGLISH\n   在售 47 → 52 件\n   最低在售 ¥63,999 → ¥62,999\n📈 3rd Anniversary Set — CHINA\n   在售 48 → 54 件\n   最低在售 ¥45,000 → ¥43,000"
+ },
+ {
+  "job": "CeX 早安",
+  "ts": 1794012571,
+  "text": "昨天 CeX 的動靜：\n\n🆕 新上架\n・Sony NW-WM1AM2 128GB Walkman（C 級）RM3500\n・Canon EF 8-15mm f/4L 魚眼鏡（鏡頭）RM2600\n・Tamron SP 24-70mm f/2.8（Nikon 接環）RM1500\n・Anbernic RG35XX（掌機／64G+128G）RM250\n・Witch's Bakery, The（Switch 2 英文版）RM150\n\n📉 降價\n・Fire Emblem: Fortune's Weave（Switch 2）RM320 → RM300\n・EA Sports FC 27（PS5）RM300 → RM290\n・Onimusha: Way of the Sword（PS5／Switch 2）RM230 → RM220\n・Silent Hill Townfall（PS5）RM190 → RM180\n\n📦 回架\n・Call of Duty: Modern Warfare 4（PS5）RM260\n・Silent Hill Downpour（PS3）RM180\n・Dark Souls III + The Witcher 3 合輯（PS4）RM110\n・Mass Effect: Legendary Edition（PS4）RM150\n・Red Dead Redemption（PS3）RM55\n・Senran Kagura Estival Versus（PS Vita）RM70\n\n🚫 賣光\n・PS5 Slim 1TB Ghost of Yotei Gold（主機／Unboxed）RM3000\n・Retroid Pocket 6 12GB+128GB（掌機 B 級）RM1150\n・Anbernic RG CubeXX（掌機 A 級）RM190\n・Mortal Kombat Legacy Kollection（PS5）RM100\n・Mario Kart World（Switch 2 中文版）RM270\n・SNK vs Capcom - SVC Chaos（Switch）RM140"
+ },
+ {
+  "job": "cex 0830",
+  "ts": 1794011570,
+  "text": "健康檢查：20261107083031（範圍 web，77472 筆）\n  ✅ freshness  資料 0.0 小時前抓的\n  ✅ volume     筆數 77472（與上次 77472 差 0.00%）\n  ✅ schema     60 個欄位，與上次指紋一致\n  ✅ quality    77472 筆：主鍵無重複、標價與名稱完整\n  ✅ heartbeat  距上次抓取 10.5 小時（20261106220035 → 20261107083031）\n\n全部正常"
+ },
+ {
+  "job": "AI 工具日報",
+  "ts": 1794009757,
+  "text": "**AI 工具日報 · 11/07（六）**\n\n**1. Hermes Agent v0.23.0（11/5 發佈，代號 Hearth）**\n- 這是什麼：改成「一個 gateway 接管所有對話」，CLI、Telegram、Desktop、cron 不再是各自開一份 agent 執行，另外還有終端機內嵌圖片、對話倒回、插件自動更新、付費 MCP 工具加價目標與花費上限。\n- 對我們：正好打在我們的痛點上（同一段對話被 Telegram 和 cron 各寫一次、訊息互相漏掉），不過這是大版本，需要遷移，升之前要先讀它的升級說明。\n- 結論：值得試，但我會先寫一份風險與回滾方案給你，等你點頭。我不會自己動手升（´･ω･`）\n\n**2. Strata 0.2.10：Qwen3.8-Flash-Next 在 8GB 顯卡上跑到 20+ tok/s（11/3）**\n- 這是什麼：新的推理引擎把這種大 MoE 模型壓進 8GB VRAM 還能跑起來，社群（含引擎作者本人）實測生成速度 20+ tok/s。\n- 對我們：3070 Ti 8GB 理論上能本地跑一個堪用的 agent 模型，但它跟生圖搶同一張卡，加上 Windows 那台晚上會關機，實際上只適合白天跑離線批次。\n- 結論：觀察就好，等有人測過它跟生圖同時跑的真實速度再說。\n\n**3. HN 熱帖：便宜的 Jev 模型「不確定就問 Opus」，用四分之一的成本拿到 Opus 級準確度**\n- 這是什麼：Hightouch 用便宜模型先判斷，只在信心低時才升級給貴模型，結果準確度接近 Opus、成本少 4 倍，關鍵是便宜模型的信心是否準確。\n- 對我們：這就是我正在執行的省錢架構（免費模型先做、卡住才切換貴的），他們的做法驗證了方向正確，可以借它的「信心門檻」調法。\n- 結論：觀察就好，概念可以借，沒有東西要安裝。\n\n**4. Gemini Omni 1.2 Flash（11/5 GA）＋ Inkling 2 Small（11/6）**\n- 這是什麼：前者是 15 秒影片生成／剪輯模型，只有付費層（10 秒約 $0.7）；後者是 594B 參數的巨型開源 MoE（17B 活躍）。\n- 對我們：一個是要花錢做影片，一個是 8GB 根本跑不動的重量級，兩個都碰不到我們的靜圖和 3070 Ti。\n- 結論：不用管。\n\n（來源：GitHub releases、HN 前頁、r/LocalLLaMA 與 Gemini 官方定價頁，都看過原始出處，不是轉述。）"
+ },
+ {
   "job": "doc reconcile",
   "ts": 1793994930,
   "text": "【文件 vs 現況 對帳】\n • 手機頁資料 5.9 小時前（上限 5）：2026-11-06T14:02:27Z\n • 本機最後一輪 5.9 小時前（20261106220035）"
@@ -15,28 +40,8 @@
   "text": "寫了 8 條：#11–#18。主題是作息（早上九點半才睡、抱怨被我拖到很晚）、心情（NIKKE 啟動器的心理陰影、只玩 NIKKE）、對生活的想法（想整台換 Linux、電腦跑圖 RAM 不夠、股票只是好玩）、想要（想買彩色小屏幕給我跑 Live2D），還有他偏愛白髮的凜。\n\n（#4 已記過「只睡兩小時」，這條沒重複寫；插排那條 #6 已存在，也只跳過。）"
  },
  {
-  "job": "cex 3h",
-  "ts": 1793973801,
-  "text": "健康檢查：20261106220035（範圍 web，77472 筆）\n  ✅ freshness  資料 0.0 小時前抓的\n  ✅ volume     筆數 77472（與上次 77465 差 0.01%）\n  ✅ schema     60 個欄位，與上次指紋一致\n  ✅ quality    77472 筆：主鍵無重複、標價與名稱完整\n  ✅ heartbeat  距上次抓取 1.8 小時（20261106201150 → 20261106220035）\n\n全部正常"
- },
- {
   "job": "今日新聞",
   "ts": 1793966479,
   "text": "📰 今天值得看的\n・GPT-6 Cyber 能自己找漏洞並實際利用\n・Claude Code 會把你的 email 送給網站\n・GTA 6 免費下載全是假站，點下去中木馬\n・索尼 PS5 舊機回收最高換 1.3 萬\n・Anthropic 解禁 Claude Code 做遊戲\n・Volks 推 NieR 2B 與 Kaine 人偶\n・AEON 馬來西亞推人臉付款買菜\n\n🔥 今天在討論\n泰圈最熱：GMMTV 快閃店開到馬來西亞，iQIYI 2027 一整排新企劃在刷；韓團消息照樣滿榜。政治是 Najib、UMNO、Anwar，加上美國期中選舉後的 Trump 和兩黨。 ლ(´ڡ`ლ)\n\n結構化檔已寫好：`/home/rin/AI/news/digest.json`（7 條，日期 2026-11-06，link 全部對回 items.json 原條目）。"
- },
- {
-  "job": "SNKRDUNK 卡價",
-  "ts": 1793926861,
-  "text": "SNKRDUNK 變化\n📈 3rd Anniversary Set — ENGLISH\n   最低在售 ¥64,898 → ¥63,999\n📈 3rd Anniversary Set — CHINA\n   在售 45 → 48 件\n📈 Luffy SEC-RSP OP13-118\n   A ¥2,550,000 → ¥2,200,000\n   PSA10 ¥3,000,000 → ¥2,900,000\n📈 Luffy SEC-SP EB04-061\n   A ¥1,650,000 → ¥1,550,000"
- },
- {
-  "job": "CeX 早安",
-  "ts": 1793926316,
-  "text": "昨天 CeX 的動靜：\n\n🆕 新上架\n・Final Fantasy IX（Switch）RM210\n・The Witch's Bakery（Switch 2）RM150\n・Anbernic RG476H 8+128 灰（掌機）RM700\n・REDMAGIC Astra 256GB 電競平板（B 級）RM1600\n・PNY GeForce RTX 3060 Ti 8GB（顯卡）RM1400\n\n📉 降價\n・MacBook Air M5 15\" 16+512（A 級）RM6300 → RM5800\n・Canon EOS R8 + RF 24-50（A 級）RM5500 → RM5000\n・Canon EOS 6D Mark II 機身（A 級）RM4500 → RM4050\n・Nikon D850 機身（B 級）RM4000 → RM3600\n・Fire Emblem: Fortune's Weave（Switch 2）RM320 → RM300\n・Onimusha: Way of the Sword（PS5）RM230 → RM220\n\n📦 回架\n・Call of Duty: MW2 (2022)（PS5）RM140\n・Football Manager Console 2024（PS5）RM100\n・Samurai Shodown NeoGeo Collection（Switch）RM120\n・Trimui Smart Pro 掌機（B 級）RM145\n・MacBook Air M1 13\" 8+256（B 級）RM2550\n\n🚫 賣光\n・Switch 2 惡靈古堡安魂曲 Pro 手把 RM240\n・Xbox Series S 1TB（Discounted）RM1600\n・PS5《CoD: MW4》RM260\n・Valve Index VR 頭盔（B 級）RM1000\n・PS4《CoD: MW2 (2022)》RM160"
- },
- {
-  "job": "AI 工具日報",
-  "ts": 1793923337,
-  "text": "**AI 工具日報 · 11/06（週五）**\n\n1. **Hermes Agent v0.23.0**（昨晚發布）把整台機器的所有入口收成一個 gateway，CLI、Telegram、cron 共用同一份對話；cron 現在可以中途取消，只跑一次的任務也省掉約 1,570 個 prompt token。\n2. 對你有用：以後 Telegram 跟 cron 不會再各跑一份 agent 而重複發話；但舊的 `browser_*` 十個工具被整批移除，只剩 `browser_exec`，你那些爬蟲 skill 和腳本要先改。\n3. 值得試——**先別升**，我列完要改的檔案再動。\n\n1. **Scrapling**（今日 GitHub trending）：Python 抓網頁框架，內建處理 Cloudflare 和反爬，從單頁到整站都包。\n2. 對你有用：Carousell 那種 403 或空頁它有現成解法，可以替掉 cex-monitor 裡比較容易失敗的 Playwright 段。\n3. 觀察就好——拿一個實際被擋的 Carousell 頁面測過再說。\n\n1. **ai-goofish-monitor**（trending）：閒魚（中國二手）多任務監控系統，Playwright＋AI 判斷值不值，附後台 UI。\n2. 對你有用：這跟你的 cex-monitor 是同一類型的工具，值得看它的篩選邏輯和後台怎麼設計，但它不能直接跑你的市場。\n3. 觀察就好。\n\n1. **Linum P-JiT**：2B 像素空間生圖模型，花約 $21K 訓練出來的開源權重（Apache 2.0）。\n2. 對你有用：方向新，但權重 fp32 8.7GB ＋ 文字編碼器 8GB ＝ 17GB，3070 Ti 8GB 跑不進去，而且它不會畫字。\n3. 不用管。\n\n1. **騰訊 Hy4**：770B 總參數／49B 激活的開源模型（Apache 2.0），已在 OpenRouter，輸入 ¥6／百萬 token，Hy4 Flash 快要推出。\n2. 對你有用：本機完全不可能，只有 Hy4 Flash 真的便宜時，才顯得有吸引力，當備用鏈斷掉時的候選；你現在固定用 deepseek-v4.1-flash，我不會去動。\n3. 觀察就好。\n\n來源：Hermes GitHub releases（v0.23.0，11/5 21:32 UTC）、Hacker News 前 30、GitHub daily trending、Hy4 官方與 Linum 模型卡。Claude Code 2.1.318、opencode 2.2.5 本週沒有影響到你的變動，略過。"
  }
 ]
