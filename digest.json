@@ -1,49 +1,43 @@
 {
-  "date": "2026-11-06",
-  "updated": "2026-11-06T20:00:00+08:00",
+  "date": "2026-11-07",
+  "updated": "2026-11-07T20:01:27+08:00",
   "items": [
     {
-      "text": "GPT-6 Cyber 能自己找漏洞並實際利用",
-      "link": "https://mlllm.io/news/3736-openai-releases-gpt-6-cyber-ai-autonomously-finds-and-exploits-vulnerabilities/",
-      "source": "mlllm",
-      "ts": 1793898767
+      "text": "時之笛重製版上市，老玩家找回感動、新手也好上手",
+      "link": "https://www.4gamers.com.tw/news/detail/83153/the-legend-of-zelda-ocarina-of-time-review",
+      "source": "4Gamers",
+      "ts": 1794028330
     },
     {
-      "text": "Claude Code 會把你的 email 送給網站",
-      "link": "https://cyberq.tw/2026/11/06/claude-code-inserts-emails-into-the-user/",
+      "text": "McFarlane Toys 多數股權易手投資機構",
+      "link": "https://www.toyark.com/2026/11/06/mcfarlane-toys-majority-stake-acquired-by-gladstone-investment-602252",
+      "source": "ToyArk",
+      "ts": 1794001225
+    },
+    {
+      "text": "Bank Rakyat 疑遭駭，官網與網銀下架",
+      "link": "https://www.lowyat.net/2026/409395/bank-rakyat-takes-down-sites-after-suspected-cyber-attack/",
+      "source": "Lowyat",
+      "ts": 1793993993
+    },
+    {
+      "text": "DeepSeek 寫碼 agent 被一句註解騙走憑證",
+      "link": "https://cyberq.tw/2026/11/07/deepseek-dsh-superagent-prototype-test/",
       "source": "CyberQ",
-      "ts": 1793925370
+      "ts": 1794021595
     },
     {
-      "text": "GTA 6 免費下載全是假站，點下去中木馬",
-      "link": "https://www.kocpc.com.tw/archives/702265",
-      "source": "電腦王阿達",
-      "ts": 1793931269
+      "text": "便宜模型提問、貴模型解題，成本剩四分之一",
+      "link": "https://cyberq.tw/2026/11/07/using-a-cheaper-model-as-the-questioner/",
+      "source": "CyberQ",
+      "ts": 1794012493
     },
     {
-      "text": "索尼 PS5 舊機回收最高換 1.3 萬",
-      "link": "https://www.kocpc.com.tw/archives/702337",
-      "source": "電腦王阿達",
-      "ts": 1793945755
-    },
-    {
-      "text": "Anthropic 解禁 Claude Code 做遊戲",
-      "link": "https://www.kocpc.com.tw/archives/702288",
-      "source": "電腦王阿達",
-      "ts": 1793942591
-    },
-    {
-      "text": "Volks 推 NieR 2B 與 Kaine 人偶",
-      "link": "https://hjweb.jp/article/2870930/",
-      "source": "Hobby Japan",
-      "ts": 1793926800
-    },
-    {
-      "text": "AEON 馬來西亞推人臉付款買菜",
-      "link": "https://soyacincau.com/2026/11/06/aeon-malaysia-facepay-facial-recognition-payment-kl-midtown/",
-      "source": "SoyaCincau",
-      "ts": 1793949629
+      "text": "Meta Muse 能視像通話，虛擬角色有表情",
+      "link": "https://unwire.hk/2026/11/07/meta-muse-voice-ai-avatar-video-chat/ai/?utm_source=rss&utm_medium=rss&utm_campaign=meta-muse-voice-ai-avatar-video-chat",
+      "source": "Unwire HK",
+      "ts": 1794039053
     }
   ],
-  "discussion": "泰國 BL 圈很熱：GMMTV 快閃店開到馬來西亞、iQIYI 2027 一整排新企劃；韓團消息照樣刷榜。政治那邊是 Najib、UMNO、Anwar 加上美國期中選舉後的 Trump 與兩黨。"
+  "discussion": "馬來西亞的 X 幾乎被泰國 BL 圈佔滿——GMMTV 大馬快閃店、ZeeNuNew、DewTee 見面會輪流上榜；旁邊夾著 Deepavali 祝福、Najib 的政治話題和韓國偶像 HYBE、Woohyun。"
 }
