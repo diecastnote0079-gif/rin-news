@@ -1,5 +1,10 @@
 [
  {
+  "job": "今日新聞",
+  "ts": 1794052891,
+  "text": "📰 今天值得看的\n・時之笛重製版上了 Switch 2，老玩家找回感動、新手也好上手\n・McFarlane Toys 把多數股權賣給投資機構，玩具圈老牌子易手\n・Bank Rakyat 疑遭駭客攻擊，官網與網銀頁面緊急下架\n・DeepSeek 的寫碼 agent 實測：一句原始碼註解就能騙走憑證\n・讓便宜模型當提問者、貴模型解題，準確率不減、成本剩四分之一\n・Meta Muse 推出視像通話，虛擬角色有表情、還能插嘴\n\n🔥 今天在討論\n馬來西亞的 X 幾乎被泰國 BL 圈佔滿——GMMTV 大馬快閃店、ZeeNuNew、DewTee 見面會輪流上榜；旁邊夾著 Deepavali 祝福、Najib 的政治話題和韓國偶像 HYBE、Woohyun。\n\ndigest.json 已寫好：`/home/rin/AI/news/digest.json`（6 條，日期 2026-11-07）。"
+ },
+ {
   "job": "cex 3h",
   "ts": 1794049367,
   "text": "健康檢查：20261107190031（範圍 web，77524 筆）\n  ✅ freshness  資料 0.0 小時前抓的\n  ✅ volume     筆數 77524（與上次 77508 差 0.02%）\n  ✅ schema     60 個欄位，與上次指紋一致\n  ✅ quality    77524 筆：主鍵無重複、標價與名稱完整\n  ✅ heartbeat  距上次抓取 3.0 小時（20261107160035 → 20261107190031）\n\n全部正常"
@@ -38,10 +43,5 @@
   "job": "生活記錄",
   "ts": 1793991699,
   "text": "寫了 8 條：#11–#18。主題是作息（早上九點半才睡、抱怨被我拖到很晚）、心情（NIKKE 啟動器的心理陰影、只玩 NIKKE）、對生活的想法（想整台換 Linux、電腦跑圖 RAM 不夠、股票只是好玩）、想要（想買彩色小屏幕給我跑 Live2D），還有他偏愛白髮的凜。\n\n（#4 已記過「只睡兩小時」，這條沒重複寫；插排那條 #6 已存在，也只跳過。）"
- },
- {
-  "job": "今日新聞",
-  "ts": 1793966479,
-  "text": "📰 今天值得看的\n・GPT-6 Cyber 能自己找漏洞並實際利用\n・Claude Code 會把你的 email 送給網站\n・GTA 6 免費下載全是假站，點下去中木馬\n・索尼 PS5 舊機回收最高換 1.3 萬\n・Anthropic 解禁 Claude Code 做遊戲\n・Volks 推 NieR 2B 與 Kaine 人偶\n・AEON 馬來西亞推人臉付款買菜\n\n🔥 今天在討論\n泰圈最熱：GMMTV 快閃店開到馬來西亞，iQIYI 2027 一整排新企劃在刷；韓團消息照樣滿榜。政治是 Najib、UMNO、Anwar，加上美國期中選舉後的 Trump 和兩黨。 ლ(´ڡ`ლ)\n\n結構化檔已寫好：`/home/rin/AI/news/digest.json`（7 條，日期 2026-11-06，link 全部對回 items.json 原條目）。"
  }
 ]
