@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
-<meta name="theme-color" content="#0b0c0f">
+<meta name="theme-color" content="#0C0B0A">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<title>今天</title>
+<title>早報</title>
 <style>
 :root{
   --bg:#0b0c0f; --surface:#15171c; --surface2:#1c1f26; --line:#262a32;
@@ -301,6 +301,109 @@ a.row .cat{display:inline-block;font-size:10.5px;padding:2px 7px;border-radius:5
 
 .msg{padding:70px 20px;text-align:center;color:var(--dim2);font-size:13.5px;line-height:1.7}
 </style>
+
+<style id="editorial-skin">
+/* ── 編輯風皮膚：只覆蓋顏色與字體，不動版面邏輯 ── */
+:root{
+  --bg:#0A0D10; --surface:#12171C; --surface2:#182028; --line:rgba(226,236,245,.12);
+  --fg:#E8EDF2; --dim:#A8B3BE; --dim2:#74808C;
+  --accent:#6FA8C7; --warn:#C9A96B; --hot:#D98A7A;
+  --game:#93B8A6; --toy:#B9A18C; --tech:#A5A8C9;
+  --serif:"Noto Serif TC","Songti TC",serif;
+}
+body{background:
+  radial-gradient(120% 45% at 50% -12%, rgba(111,168,199,.06), transparent 62%),
+  var(--bg)}
+header{background:rgba(10,13,16,.94);border-bottom:1px solid rgba(226,236,245,.12)}
+.hrow{min-height:34px;align-items:baseline}
+.mast{display:none!important}
+.hdate{font-family:inherit;font-size:12.5px;font-weight:500;letter-spacing:.14em;color:var(--dim)}
+.hmeta{letter-spacing:.1em;font-size:10px;color:var(--dim2);font-variant-numeric:tabular-nums}
+.cnt{font-size:10px;letter-spacing:.14em;color:var(--dim2);font-variant-numeric:tabular-nums}
+/* 標題一律襯線 */
+.lead .t,.row .t,.nh2,.ncat .nct,.th .ttl,.msg,.rwrap h2{font-family:var(--serif)}
+.lead .txt .t,.lead .t{font-size:27px!important;font-weight:900!important;line-height:1.4!important;letter-spacing:-.2px}
+.row .txt .t,.row .t{font-size:15px!important;font-weight:600!important;line-height:1.62!important}
+/* 分類標籤＝報紙小標 */
+.cat{letter-spacing:.18em;font-size:9.5px}
+/* 卡片之間的細線取代圓角卡 */
+.lead,.row{background:transparent!important;border-radius:0!important;border-bottom:1px solid var(--line)!important;
+  box-shadow:none!important;padding-left:0!important;padding-right:0!important}
+.lead .m,.row .m{letter-spacing:.06em;font-size:10px}
+/* 縮圖收斂：小一點、方一點 */
+.lead .thumb img,.row .pic img{border-radius:2px!important}
+/* 搜尋框：細線，不要圓潤卡片感 */
+#q{background:transparent;border:0;border-bottom:1px solid var(--line);border-radius:0;
+   padding:10px 0 10px 30px;font-size:13px;letter-spacing:.02em}
+#q:focus{border-bottom-color:rgba(237,233,227,.5)}
+/* 狀態列：發行資訊 */
+.statusline{border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:2px}
+.si .k{letter-spacing:.16em;text-transform:uppercase;font-size:9px;color:var(--dim2)}
+.si .v{font-variant-numeric:tabular-nums;letter-spacing:.02em}
+/* 提醒 */
+.reminder{border-bottom:1px solid var(--line);padding:6px 0}
+/* 分頁點 */
+.dots i{background:rgba(237,233,227,.18)}
+.dots i.on{background:var(--accent)}
+/* 閱讀器＝文章頁 */
+#reader{background:var(--bg)}
+.rbar{border-bottom:1px solid var(--line);background:transparent}
+.rsrc{letter-spacing:.14em;font-size:10px;color:var(--dim)}
+.rwrap{font-family:var(--serif);font-size:15px;line-height:1.95;color:#DDD8D0;padding:18px 20px 40px}
+.rwrap h2{font-size:24px;font-weight:900;line-height:1.42;letter-spacing:-.2px;margin:0 0 12px}
+.rwrap p{margin:0 0 14px}
+.rwrap p:first-of-type:first-letter{font-size:42px;float:left;line-height:.92;
+  padding:5px 8px 0 0;font-weight:900;color:var(--accent)}
+.rwrap img{max-width:100%;border-radius:2px}
+/* 簡報頁：同一套編輯語言 */
+.briefwrap{font-family:var(--serif)}
+.nh2{font-size:21px;font-weight:900;line-height:1.45;letter-spacing:-.2px}
+.ncat .nem{opacity:.75}
+.ncat .nct{letter-spacing:.14em;font-size:11px;color:var(--accent)}
+.np,.nl li{font-size:14.5px;line-height:1.85;color:#DDD8D0}
+.nrow .nlab{letter-spacing:.14em;font-size:10px;color:var(--accent)}
+.nrow .ntx{font-size:14.5px;line-height:1.8}
+.th .tnum{font-family:var(--serif);color:var(--accent)}
+/* 下拉更新 */
+#ptr{color:var(--accent)}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600;900&display=swap" rel="stylesheet">
+
+<style id="editorial-dropcap-fix">
+.rwrap p.no-drop:first-of-type:first-letter{float:none!important;font-size:inherit!important;
+  color:inherit!important;padding:0!important;font-weight:inherit!important}
+</style>
+<style id="editorial-refresh">
+.hrow{display:flex;align-items:center;gap:10px}
+.hdate,.hmeta{line-height:1.2}
+.cnt{margin-left:auto}
+.ref{order:9;width:32px;height:32px;flex:none;border-radius:50%;border:1px solid var(--line);
+  background:transparent;color:var(--dim);display:flex;align-items:center;justify-content:center;padding:0}
+.ref svg{width:15px;height:15px}
+.ref{position:relative}
+.ref:after{content:"";position:absolute;inset:-6px;border-radius:50%}
+.ref:active{transform:scale(.94);color:var(--accent);border-color:var(--accent)}
+.ref.spin svg{animation:rspin .8s linear infinite}
+@keyframes rspin{to{transform:rotate(360deg)}}
+</style>
+<style id="editorial-search">
+.sch{order:9;width:32px;height:32px;flex:none;border-radius:50%;border:1px solid var(--line);
+  background:transparent;color:var(--dim);display:flex;align-items:center;justify-content:center;
+  padding:0;position:relative}
+.sch svg{width:15px;height:15px}
+.sch:after{content:"";position:absolute;inset:-6px;border-radius:50%}
+.sch:active{transform:scale(.94);color:var(--accent);border-color:var(--accent)}
+.sch.on{color:var(--accent);border-color:var(--accent)}
+.sbar{display:none;align-items:center;gap:8px;padding:2px 0 8px;border-bottom:1px solid var(--line)}
+.sbar.on{display:flex}
+#sinput{flex:1;background:transparent;border:0;outline:none;color:var(--fg);
+  font:13px/1.6 inherit;letter-spacing:.02em;padding:8px 0}
+#sinput::placeholder{color:var(--dim2)}
+#sclear{background:none;border:0;color:var(--dim2);font-size:13px;padding:8px 2px}
+#scount{font-size:10px;letter-spacing:.14em;color:var(--dim2);font-variant-numeric:tabular-nums}
+</style>
 </head>
 <body>
 
@@ -308,16 +411,21 @@ a.row .cat{display:inline-block;font-size:10.5px;padding:2px 7px;border-radius:5
 <section class="page on" id="p-home">
   <header>
     <div class="hrow">
-      <h1>今天</h1>
       <span class="hdate" id="h-date"></span>
       <span class="hmeta" id="h-meta"></span>
+      <button class="sch" id="sch" aria-label="搜尋" title="搜尋"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4 4"/></svg></button>
+    </div>
+    <div class="sbar" id="sbar">
+      <input id="sinput" type="search" placeholder="搜尋標題或來源" autocomplete="off" enterkeyhint="search">
+      <button id="sclear" aria-label="清除">✕</button>
+      <span id="scount"></span>
     </div>
     <div class="statusline" id="status"></div>
     <div class="reminder" id="reminder"></div>
   </header>
   <div class="dots" id="dots"><i class="on"></i><i></i></div>
   <div class="pager" id="pager">
-    <div class="pg"><main id="feed"><div class="msg">載入中…</div></main></div>
+    <div class="pg"><main id="sresults" hidden></main><main id="feed"><div class="msg">載入中…</div></main></div>
     <div class="pg"><div class="briefwrap" id="brieflist"></div></div>
   </div>
 </section>
@@ -852,6 +960,115 @@ async function load(){
 })();
 
 load();
+</script>
+
+<script>
+/* 標題列補上「今天幾則」——比品牌字有用 */
+(function(){
+  const put = () => {
+    const row = document.querySelector('.hrow');
+    if(!row || row.querySelector('.cnt')) return false;
+    const n = (window.ALL && ALL.length) || document.querySelectorAll('#feed .lead,#feed .row').length;
+    if(!n) return false;
+    const sp = document.createElement('span');
+    sp.className = 'cnt';
+    sp.textContent = n + ' 則';
+    row.appendChild(sp);
+    return true;
+  };
+  // 用 items.json 的總數，不是畫面上已渲染的列數
+  fetch('items.json?t=' + Date.now(), {cache:'no-store'}).then(r => r.json()).then(j => {
+    const n = (j.stats && j.stats.total) || (j.items || []).length;
+    if(!n) return;
+    const row = document.querySelector('.hrow');
+    if(!row) return;
+    let sp = row.querySelector('.cnt');
+    if(!sp){ sp = document.createElement('span'); sp.className = 'cnt'; row.appendChild(sp); }
+    sp.textContent = n + ' 則';
+  }).catch(() => {});
+  let tries = 0;
+  const t = setInterval(() => { if(put() || ++tries > 40) clearInterval(t); }, 250);
+})();
+</script>
+<script>
+/* 首字放大只在中文文章生效：英文字開頭會把 "DeepSeek" 拆成 D + eepSeek */
+(function(){
+  const fix = root => {
+    const p = root && root.querySelector ? root.querySelector('.rwrap p') : null;
+    if(!p) return;
+    const t = (p.textContent || '').trim();
+    p.classList.toggle('no-drop', /^[A-Za-z0-9]/.test(t));
+  };
+  const rd = document.getElementById('reader');
+  if(!rd) return;
+  new MutationObserver(() => fix(rd)).observe(rd, {childList:true, subtree:true});
+  fix(rd);
+})();
+</script>
+<script>
+/* 搜尋：對 items.json 全量搜，結果用同一套 .row 樣式渲染 */
+(function(){
+  const btn=document.getElementById('sch'), bar=document.getElementById('sbar');
+  const inp=document.getElementById('sinput'), clr=document.getElementById('sclear');
+  const cnt=document.getElementById('scount');
+  const feed=document.getElementById('feed'), res=document.getElementById('sresults');
+  if(!btn||!bar||!res) return;
+
+  const LABEL={game:"遊戲",tech:"科技",ai:"AI",local:"本地",toy:"玩具模型",image:"圖像",
+               pipeline:"工具",hermes:"Hermes",hype:"潮物",news:"新聞",dev:"開發"};
+  const esc=t=>String(t==null?'':t).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+  const norm=t=>String(t||'').toLowerCase().replace(/\s+/g,'');
+  const ago=ts=>{ if(!ts) return '';
+    const s=Math.floor(Date.now()/1000-ts);
+    if(s<60) return '剛剛'; if(s<3600) return Math.floor(s/60)+' 分鐘';
+    if(s<86400) return Math.floor(s/3600)+' 小時';
+    if(s<604800) return Math.floor(s/86400)+' 天';
+    return new Date(ts*1000).toLocaleDateString('zh-TW',{month:'numeric',day:'numeric'}); };
+
+  let DATA=null, loading=false;
+  async function data(){
+    if(DATA) return DATA;
+    if(loading) return null;
+    loading=true;
+    try{
+      const r=await fetch('items.json?t='+Date.now(),{cache:'no-store'});
+      const j=await r.json();
+      DATA=(j.items||[]).slice().sort((a,b)=>(b.ts||0)-(a.ts||0));
+    }catch(e){ DATA=[]; }
+    loading=false;
+    return DATA;
+  }
+
+  function row(d){
+    return '<a class="row" href="'+esc(d.link)+'" target="_blank" rel="noopener">'
+      + '<span class="txt"><div class="t">'+esc(d.title)+'</div>'
+      + '<div class="m"><span class="cat">'+esc(LABEL[d.cat]||d.cat||'其他')+'</span>'
+      + '<span class="s">'+esc(d.source||'')+'</span><span>·</span><span>'+ago(d.ts)+'</span></div></span></a>';
+  }
+
+  async function run(){
+    const q=norm(inp.value);
+    if(!q){ res.hidden=true; res.innerHTML=''; feed.style.display=''; cnt.textContent=''; return; }
+    const list=await data();
+    if(list===null) return;
+    const hits=list.filter(d=>norm((d.title||'')+(d.source||'')+(d.summary||'')).includes(q)).slice(0,60);
+    feed.style.display='none';
+    res.hidden=false;
+    res.innerHTML = hits.length
+      ? hits.map(row).join('')
+      : '<div class="msg">「'+esc(inp.value)+'」沒有結果</div>';
+    cnt.textContent = hits.length+' 則';
+  }
+
+  btn.addEventListener('click',()=>{
+    const on=bar.classList.toggle('on');
+    btn.classList.toggle('on',on);
+    if(on){ setTimeout(()=>inp.focus(),30); data(); }
+    else { inp.value=''; run(); }
+  });
+  inp.addEventListener('input',run);
+  clr.addEventListener('click',()=>{ inp.value=''; run(); inp.focus(); });
+})();
 </script>
 </body>
 </html>
