@@ -1,19 +1,19 @@
 {
- "updated": 1794141029,
+ "updated": 1794148229,
  "quota": {
-  "rolling": 100,
+  "rolling": 99,
   "weekly": 71,
   "monthly": 48,
-  "reset_rolling": "4h 4m",
-  "reset_weekly": "11h 29m",
-  "reset_monthly": "9d 4h"
+  "reset_rolling": "2h 4m",
+  "reset_weekly": "9h 29m",
+  "reset_monthly": "9d 2h"
  },
  "host": {
-  "load": 0.52,
+  "load": 0.01,
   "mem_pct": 15,
   "disk_pct": 5,
   "disk_free_gb": 411,
-  "uptime_h": 89
+  "uptime_h": 91
  },
  "memory": {
   "memory": {
@@ -22,16 +22,15 @@
    "limit": 2200
   },
   "user": {
-   "pct": 94,
-   "chars": 1296,
+   "pct": 99,
+   "chars": 1358,
    "limit": 1375
   }
  },
  "cron": {
   "enabled": 27,
-  "failed": 2,
+  "failed": 1,
   "failed_names": [
-   "cex-3h",
    "cex-0830"
   ]
  },

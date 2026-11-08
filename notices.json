@@ -1,5 +1,10 @@
 [
  {
+  "job": "cex 3h",
+  "ts": 1794146988,
+  "text": "健康檢查：20261108220030（範圍 web，77622 筆）\n  ✅ freshness  資料 0.0 小時前抓的\n  ✅ volume     筆數 77622（與上次 77596 差 0.03%）\n  ✅ schema     60 個欄位，與上次指紋一致\n  ✅ quality    77622 筆：主鍵無重複、標價與名稱完整\n  ✅ heartbeat  距上次抓取 2.9 小時（20261108190646 → 20261108220030）\n\n全部正常"
+ },
+ {
   "job": "今日新聞",
   "ts": 1794139309,
   "text": "📰 今天值得看的\n・EGS 限免復古競速《GMH》，明早 7 點前領\n・《哥吉拉-0.0》基多拉回歸，靈感來自貓打架\n・《獵人》克洛洛披風版 Grandista 景品\n・WhatsApp 測試自選：誰看得到你號碼\n・Claude Code 省一步，千個公開 repo 洩密\n・美國准 H200 銷中國，獲批公司是空屋\n\n🔥 今天在討論\n泰劇和 K-pop 粉絲今天幾乎佔滿整個熱搜：GMMTV 快閃店、DewTee 見面會、Freen 的曼谷場，加上一整片 Deepavali 祝福；政治討論裡，Najib 和 1MDB 又回到熱搜。\n\ndigest.json 已寫好：/home/rin/AI/news/digest.json（6 條，跟上面一一對應）。"
