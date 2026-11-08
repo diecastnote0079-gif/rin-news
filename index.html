@@ -405,6 +405,28 @@ header{background:rgba(10,13,16,.94);border-bottom:1px solid rgba(226,236,245,.1
 #scount{font-size:10px;letter-spacing:.14em;color:var(--dim2);font-variant-numeric:tabular-nums}
 </style>
 <style id="brief-ui">
+/* 簡報卡（與狀態頁同一套視覺） */
+.bcard{border-radius:17px!important;border:1px solid rgba(255,255,255,.07)!important;
+  background:#131110!important;padding:14px 14px 12px!important}
+.bcard .bh{font-size:13px;color:#F2EEE8;letter-spacing:.01em}
+.bcard .bh .bi{opacity:.85}
+.bcard .bh .bt{font-size:10.5px;color:#6B645B}
+.bcard .bb{color:#DDD8D0}
+/* 價格列：名稱 / 變化% / 現價 + 幅度條 */
+.pitem{padding:11px 0;border-bottom:1px solid rgba(255,255,255,.05)}
+.pitem:last-child{border-bottom:0;padding-bottom:2px}
+.pname{font-size:12.5px;color:#F2EEE8;letter-spacing:.01em;line-height:1.35}
+.prow{display:flex;align-items:baseline;gap:8px;margin-top:7px}
+.plab{font-size:10px;color:#6B645B;min-width:52px}
+.pdelta{font-size:11px;font-variant-numeric:tabular-nums;font-weight:600}
+.pdelta.dn{color:#EE5A44}.pdelta.up{color:#6FB894}.pdelta.flat{color:#9C948A}
+.pnow{margin-left:auto;font-size:12.5px;color:#E8E2D9;font-variant-numeric:tabular-nums}
+.pold{font-size:10.5px;color:#6B645B;text-decoration:line-through;font-variant-numeric:tabular-nums}
+.pbar{height:4px;border-radius:3px;background:rgba(255,255,255,.06);margin-top:7px;overflow:hidden}
+.pbar b{display:block;height:4px;border-radius:3px;background:#EE5A44;opacity:.75}
+.pbar b.up{background:#6FB894}
+.pbar b.flat{background:#5A544C}
+.pqty{margin-left:auto;font-size:11.5px;color:#B5AEA3;font-variant-numeric:tabular-nums}
 /* 簡報卡：狀態點 + 健康檢查鍵值列 */
 .bh{position:relative}
 .bdot{width:6px;height:6px;border-radius:50%;margin-left:2px;flex:none}
@@ -820,7 +842,7 @@ function renderNotices(){
     <div class="bcard">
       <div class="bh"><span class="bi">${ICON[n.job] || "▤"}</span>${esc(n.job)}
         <span class="bdot ${lvl}"></span><span class="bt">${ago(n.ts)}</span></div>
-      <div class="bb">${renderBody(n.text)}</div>
+      <div class="bb">${/卡價|SNKRDUNK/i.test(n.job) ? priceBody(n.text) : renderBody(n.text)}</div>
     </div>`;
   }).join("");
 }
@@ -900,6 +922,47 @@ function sparkPath(items, w, h){
     const y = h - 4 - ((v - min) / span) * (h - 10);
     return (i ? "L" : "M") + x.toFixed(1) + "," + y.toFixed(1);
   }).join(" ");
+}
+
+
+/* 卡價卡：每張卡一行，附變化% 與幅度條 */
+function priceBody(text){
+  const lines = String(text || "").split("\n");
+  const items = [];
+  for (const raw of lines){
+    const t = raw.trim();
+    if (!t) continue;
+    if (/^[📈📉]/.test(t) || (!/→/.test(t) && !items.length)){
+      const name = t.replace(/^[📈📉📍]\s*/, "");
+      if (!/→/.test(name)) items.push({ name, rows: [] });
+      continue;
+    }
+    const m = t.match(/^(.*?)\s*¥?([\d,]+)\s*(?:→|➜|->)\s*¥?([\d,]+)\s*([^\d]*)$/);
+    if (!m || !items.length) continue;
+    const from = +m[2].replace(/,/g, ""), to = +m[3].replace(/,/g, "");
+    if (!from) continue;
+    items.push && items[items.length - 1].rows.push({
+      label: (m[1] || "").trim() || "最低在售",
+      from, to, unit: (m[4] || "").trim(), pct: (to - from) / from * 100,
+    });
+  }
+  if (!items.length) return renderBody(text);
+  return items.map(it => `
+    <div class="pitem">
+      <div class="pname">${esc(it.name)}</div>
+      ${it.rows.map(r => {
+        const cls = Math.abs(r.pct) < 0.05 ? "flat" : (r.pct < 0 ? "dn" : "up");
+        const w = Math.min(100, Math.abs(r.pct) * 12).toFixed(0);
+        const isQty = /件/.test(r.unit);
+        return `<div class="prow">
+            <span class="plab">${esc(r.label)}</span>
+            <span class="pdelta ${cls}">${r.pct > 0 ? "+" : ""}${r.pct.toFixed(1)}%</span>
+            ${isQty
+              ? `<span class="pqty">${r.from.toLocaleString()} → ${r.to.toLocaleString()} 件</span>`
+              : `<span class="pold">${r.from.toLocaleString()}</span><span class="pnow">${r.to.toLocaleString()}</span>`}
+          </div><div class="pbar"><b class="${cls}" style="width:${Math.max(4, w)}%"></b></div>`;
+      }).join("")}
+    </div>`).join("");
 }
 
 function renderDash(){
