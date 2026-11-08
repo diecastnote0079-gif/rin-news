@@ -58,11 +58,18 @@ def main() -> int:
         print("fetch failed; page keeps previous data")
         return 0            # not an error: last data stays live
 
+    # 1b) 狀態頁的健康資料（實跑 doctor + runs 表；失敗不影響新聞）
+    try:
+        code, out = sh([PY, os.path.expanduser("~/.hermes/scripts/build_health.py")])
+        print("health:", (out or "").strip())
+    except Exception as e:
+        print("health build skipped:", e)
+
     # 2) anything to publish?
     if not os.path.isdir(os.path.join(HERE, ".git")):
         print("no git repo here; done (local only)")
         return 0
-    code, diff = sh(["git", "status", "--porcelain", "items.json", "feed.json", "notes.json", "notices.json", "status.json", "digest.json"])
+    code, diff = sh(["git", "status", "--porcelain", "items.json", "feed.json", "notes.json", "notices.json", "status.json", "digest.json", "health.json"])
     if not diff.strip():
         print("items.json unchanged; nothing to publish")
         return 0
@@ -70,7 +77,7 @@ def main() -> int:
     # 3) commit + push
     stamp = datetime.now().strftime("%Y-%m-%d %H:%M")
     sh(["git", "add", "items.json"])
-    for extra in ("feed.json", "notes.json", "notices.json", "status.json", "digest.json"):
+    for extra in ("feed.json", "notes.json", "notices.json", "status.json", "digest.json", "health.json"):
         if os.path.exists(os.path.join(HERE, extra)):
             sh(["git", "add", extra])
     code, out = sh(["git", *GIT_USER, "commit", "-m", f"items: {stamp}"])

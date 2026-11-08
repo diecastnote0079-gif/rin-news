@@ -404,6 +404,100 @@ header{background:rgba(10,13,16,.94);border-bottom:1px solid rgba(226,236,245,.1
 #sclear{background:none;border:0;color:var(--dim2);font-size:13px;padding:8px 2px}
 #scount{font-size:10px;letter-spacing:.14em;color:var(--dim2);font-variant-numeric:tabular-nums}
 </style>
+<style id="brief-ui">
+/* 簡報卡：狀態點 + 健康檢查鍵值列 */
+.bh{position:relative}
+.bdot{width:6px;height:6px;border-radius:50%;margin-left:2px;flex:none}
+.bdot.ok{background:#7fb894;box-shadow:0 0 8px rgba(127,184,148,.5)}
+.bdot.warn{background:#c9a96b}
+.bdot.bad{background:#c9807a}
+.bh .bt{margin-left:auto}
+
+/* 狀態欄：一條分段的顏色帶，有問題的那格會亮起來 */
+.sbar{display:flex;align-items:center;gap:3px;margin:6px 0 0}
+.sbar .seg{flex:1;height:7px;border-radius:2px;background:rgba(127,184,148,.28)}
+.sbar .seg.ok{background:rgba(127,184,148,.28)}
+.sbar .seg.warn{background:#E8D3A6;height:9px}
+.sbar .seg.bad{background:#E2503C;height:11px;box-shadow:0 0 14px rgba(226,80,60,.7)}
+.slabs{display:flex;gap:3px;margin-top:6px}
+.slabs .slab{flex:1;font-size:9.5px;letter-spacing:.02em;color:var(--dim);text-align:center}
+.slabs .slab.warn{color:#E8D3A6}
+.slabs .slab.bad{color:#E2503C}
+.sbads{margin-top:10px;display:flex;flex-direction:column;gap:4px}
+.sbads .bad{font-size:12px;color:#E2503C}
+.sbads .bad.warn{color:#E8D3A6}
+.hlist{margin:2px 0 4px;border-top:1px solid rgba(255,255,255,.055)}
+.hlist .hrow{display:flex;align-items:flex-start;gap:9px;padding:9px 0;
+  border-bottom:1px solid rgba(255,255,255,.045)}
+.hlist .hrow:last-child{border-bottom:0}
+.hst{flex:0 0 14px;height:14px;line-height:14px;text-align:center;border-radius:4px;
+  font-size:9px;font-weight:700;margin-top:2px}
+.hst.ok{background:rgba(127,184,148,.16);color:#8fc9a6}
+.hst.warn{background:rgba(201,169,107,.18);color:#c9a96b}
+.hst.bad{background:rgba(201,128,122,.18);color:#c9807a}
+.hk{flex:0 0 56px;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--dim2);padding-top:3px}
+.hv{flex:1;font-size:12.5px;line-height:1.62;color:var(--fg);
+  text-wrap:pretty;word-break:normal;overflow-wrap:break-word}
+.hv b{color:var(--fg)}
+.hv .price{color:#d8c398;font-variant-numeric:tabular-nums;font-weight:600}
+.hrid{font-size:10.5px;letter-spacing:.08em;color:var(--dim);margin:0 0 5px}
+.hsum{margin-top:10px;padding:8px 10px;border-radius:8px;font-size:12px;letter-spacing:.04em;
+  background:rgba(127,184,148,.10);color:#8fc9a6;border:1px solid rgba(127,184,148,.18)}
+/* 狀態條：3px，長度＝離紅線還多遠 */
+.hbar{display:block;height:3px;border-radius:3px;margin-top:7px;overflow:hidden;
+  background:rgba(255,255,255,.07)}
+.hbar b{display:block;height:3px;border-radius:3px;opacity:.85}
+.hbar b.ok{background:#7fb894}
+.hbar b.warn{background:#c9a96b}
+.hbar b.bad{background:#c9807a}
+
+/* ═══ 狀態頁（只放技術指標） ═══ */
+.dsh{padding:2px 14px 26px;display:flex;flex-direction:column;gap:10px}
+.dsh .dhd{display:flex;align-items:center;gap:8px;padding:4px 2px 2px}
+.dsh .dhd h2{margin:0;font-size:15px;font-weight:600;letter-spacing:.02em;color:var(--fg,#EDE9E3)}
+.dsh .dhd .t{margin-left:auto;font-size:10.5px;color:var(--dim2)}
+.dsh .pulse{width:7px;height:7px;border-radius:50%;background:#6FB894;animation:dsp 2.6s infinite}
+@keyframes dsp{0%{box-shadow:0 0 0 0 rgba(111,184,148,.45)}70%{box-shadow:0 0 0 7px rgba(111,184,148,0)}100%{box-shadow:0 0 0 0 rgba(111,184,148,0)}}
+.drow{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.dcard{border-radius:17px;padding:13px 13px 12px;background:#131110;border:1px solid rgba(255,255,255,.07);
+  position:relative;overflow:hidden;color:#F2EEE8}
+.dcard.glow{background:radial-gradient(120% 90% at 82% 0%,rgba(111,184,148,.11),transparent 62%),#131110}
+.dcard .lab{font-size:9.5px;letter-spacing:.13em;color:#6B645B;text-transform:uppercase}
+.dcard .big{font-size:26px;font-weight:300;letter-spacing:-.02em;font-variant-numeric:tabular-nums;line-height:1;margin-top:8px}
+.dcard .big small{font-size:10px;color:#9C948A;margin-left:3px;letter-spacing:0}
+.dcard .sub{font-size:10.5px;color:#6B645B;margin-top:5px}
+.dcard .sub em{font-style:normal;color:#6FB894}
+.dcard .sub em.bad{color:#EE5A44}
+.ringwrap{position:relative;width:76px;height:76px;margin:3px auto 0}
+.halo{position:absolute;inset:-14px;border-radius:50%;pointer-events:none;
+  background:radial-gradient(circle,rgba(111,184,148,.26),transparent 68%);animation:bre 4.5s ease-in-out infinite}
+@keyframes bre{0%,100%{opacity:.55;transform:scale(.96)}50%{opacity:1;transform:scale(1.04)}}
+.ringwrap b{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+  font-size:17px;font-weight:300;letter-spacing:-.02em}
+.spark{display:block;width:100%;height:42px;margin-top:8px;overflow:visible}
+.dband{border-radius:17px;padding:14px 14px 12px;background:#131110;border:1px solid rgba(255,255,255,.07)}
+.dband .bh{display:flex;align-items:center;font-size:10.5px;color:#9C948A;margin-bottom:11px}
+.dband .bh b{margin-left:auto;color:#6FB894;font-weight:500}
+.dband .bh b.bad{color:#EE5A44}
+.dband .bar{display:flex;align-items:center;gap:4px}
+.dband .bar i{flex:1;height:6px;border-radius:3px;background:rgba(111,184,148,.30)}
+.dband .bar i.w{background:#E4C98A;height:9px;box-shadow:0 0 10px rgba(228,201,138,.35)}
+.dband .bar i.r{background:#EE5A44;height:11px;box-shadow:0 0 14px rgba(238,90,68,.55)}
+.dband .labs{display:flex;gap:4px;margin-top:8px}
+.dband .labs span{flex:1;text-align:center;font-size:9.5px;color:#6B645B}
+.dband .labs span.w{color:#E4C98A}
+.dband .labs span.r{color:#EE5A44;font-weight:600}
+.ddots{display:flex;align-items:center;gap:7px;margin-top:13px}
+.ddots i{width:8px;height:8px;border-radius:50%;background:rgba(111,184,148,.55)}
+.ddots i.z{background:#EE5A44;box-shadow:0 0 10px rgba(238,90,68,.6)}
+.dalert{border-radius:17px;padding:12px 13px 11px;background:linear-gradient(90deg,rgba(228,201,138,.09),rgba(228,201,138,.01));
+  border:1px solid rgba(228,201,138,.18)}
+.dalert.bad{background:linear-gradient(90deg,rgba(238,90,68,.10),rgba(238,90,68,.01));border-color:rgba(238,90,68,.22)}
+.dalert b{display:block;font-size:11.5px;font-weight:600;color:#E4C98A;margin-bottom:3px}
+.dalert.bad b{color:#F3A395}
+.dalert p{margin:0;font-size:10.5px;color:#9C948A;line-height:1.55;word-break:keep-all;overflow-wrap:break-word}
+</style>
 </head>
 <body>
 
@@ -423,10 +517,11 @@ header{background:rgba(10,13,16,.94);border-bottom:1px solid rgba(226,236,245,.1
     <div class="statusline" id="status"></div>
     <div class="reminder" id="reminder"></div>
   </header>
-  <div class="dots" id="dots"><i class="on"></i><i></i></div>
+  <div class="dots" id="dots"><i class="on"></i><i></i><i></i></div>
   <div class="pager" id="pager">
     <div class="pg"><main id="sresults" hidden></main><main id="feed"><div class="msg">載入中…</div></main></div>
     <div class="pg"><div class="briefwrap" id="brieflist"></div></div>
+    <div class="pg"><div class="dsh" id="dash"></div></div>
   </div>
 </section>
 
@@ -587,7 +682,7 @@ function mdLite(t){
     .replace(/\*\*(.+?)\*\*/g, '<b>$1</b>')      // **粗體** → <b>
     .replace(/`([^`]+)`/g, '<code>$1</code>');
   const money = x => String(x)
-    .replace(/(→|➜|->)\s*(\d[\d,]*(?:\.\d+)?)/g, '$1 RM$2')   // RM340→240 補成 RM240
+    .replace(/(→|➜|->)\s*(\d{1,7}(?:[.,]\d+)?)(?!\d)(?!\s*(件|個|筆|次|張|套|人))/g, '$1 RM$2')   // RM340→240 補成 RM240（長數字如時間戳不動）
     .replace(/(RM\s?\d[\d,]*(?:\.\d+)?)/g, '\u0001$1\u0002')  // 先標記，避免重複包
     .replace(/(→|➜|->)/g, '\u0003$1\u0004')
     .replace(/\u0001([^\u0002]+)\u0002/g, '<span class="price">$1</span>')
@@ -709,12 +804,223 @@ function renderNotices(){
     return;
   }
   const ICON = { "CeX 早安": "🛒", "AI 工具日報": "🤖", "記憶審計": "🧠", "每週維修": "🔧" };
-  box.innerHTML = rest.map(n => `
+  box.innerHTML = rest.map(n => {
+    const lvl = /❌|失敗|error|Error/.test(n.text) ? "bad"
+              : /⚠️|警告|warn/.test(n.text) ? "warn" : "ok";
+    return `
     <div class="bcard">
-      <div class="bh"><span class="bi">${ICON[n.job] || "▤"}</span>${esc(n.job)}<span class="bt">${ago(n.ts)}</span></div>
-      <div class="bb">${mdLite(n.text)}</div>
-    </div>`).join("");
+      <div class="bh"><span class="bi">${ICON[n.job] || "▤"}</span>${esc(n.job)}
+        <span class="bdot ${lvl}"></span><span class="bt">${ago(n.ts)}</span></div>
+      <div class="bb">${renderBody(n.text)}</div>
+    </div>`;
+  }).join("");
 }
+
+/* 把簡報內文排版成可讀的區塊：健康檢查→鍵值列、價格→前後對比、總結→狀態藥丸 */
+function renderBody(text){
+  const raw = String(text || "");
+  const STATUS = /^([✅⚠️❌🟢🟡🔴])\ufe0f?\s*([A-Za-z_][A-Za-z0-9_]*)\s+(.+)$/u;
+  const lines = raw.split("\n");
+  let out = "", buf = [], hlist = [], inH = false;
+
+  const flushP = () => { if (buf.length){ out += mdLite(buf.join("\n")); buf = []; } };
+  const flushH = () => {
+    if (!hlist.length) return;
+    const segs = hlist.map(([st, k]) => `<i class="seg ${st}"></i>`).join("");
+    const labs = hlist.map(([st, k]) => `<span class="slab ${st}">${esc(shortKey(k))}</span>`).join("");
+    const bad  = hlist.filter(([st]) => st !== "ok")
+                       .map(([st, k, v]) => `<span class="bad ${st}">${esc(shortKey(k))} ${compact(k, v)}</span>`).join("");
+    out += `<div class="sbar">${segs}</div><div class="slabs">${labs}</div>`
+         + (bad ? `<div class="sbads">${bad}</div>` : "");
+    hlist = [];
+  };
+
+  for (const ln of lines){
+    const t = ln.trim();
+    const m = t.match(STATUS);
+    if (m){
+      flushP();
+      const sym = m[1];
+      const st = (sym === "✅" || sym === "🟢") ? "ok" : (sym === "⚠️" || sym === "🟡") ? "warn" : "bad";
+      hlist.push([st, m[2], m[3]]);
+      inH = true;
+      continue;
+    }
+    if (inH){ flushH(); inH = false; }
+    if (/^健康檢查[:：]/.test(t)){
+      flushP();
+      const rid = (t.match(/(\d{8,})/) || [])[1] || "";
+      out += `<div class="hrid">run ${rid.slice(-8)}</div>`;
+      continue;
+    }
+    if (/^全部正常|^一切正常/.test(t)){
+      flushP();
+      out += `<div class="hsum ok">✓ ${esc(t)}</div>`;
+      continue;
+    }
+    buf.push(ln);
+  }
+  flushH(); flushP();
+  return out || mdLite(raw);
+}
+
+
+
+/* ═══ 狀態頁：只畫技術指標 ═══ */
+let HEALTH = null;
+const KSHORT = { freshness:"新鮮", volume:"筆數", schema:"欄位", quality:"品質", heartbeat:"心跳" };
+
+async function loadHealth(){
+  try {
+    const r = await fetch("health.json?t=" + Date.now(), { cache: "no-store" });
+    if (!r.ok) throw new Error("HTTP " + r.status);
+    HEALTH = await r.json();
+    renderDash();
+  } catch (e) {
+    const d = document.getElementById("dash");
+    if (d) d.innerHTML = '<div class="msg">狀態資料讀不到</div>';
+  }
+}
+
+function sparkPath(items, w, h){
+  const vals = items.filter(v => typeof v === "number" && v > 0);
+  if (vals.length < 2) return "";
+  const min = Math.min(...vals), max = Math.max(...vals), span = Math.max(1, max - min);
+  return vals.map((v, i) => {
+    const x = (i / (vals.length - 1)) * w;
+    const y = h - 4 - ((v - min) / span) * (h - 10);
+    return (i ? "L" : "M") + x.toFixed(1) + "," + y.toFixed(1);
+  }).join(" ");
+}
+
+function renderDash(){
+  const box = document.getElementById("dash");
+  if (!box || !HEALTH) return;
+  const chk = HEALTH.checks || [], runs = HEALTH.runs || [], atts = HEALTH.attempts || [];
+  const okN = chk.filter(c => c.st === "ok").length, total = chk.length || 1;
+  const pct = Math.round(okN / total * 100);
+  const vals = runs.map(r => r.items);
+  const now = vals.length ? vals[vals.length - 1] : 0;
+  const delta = vals.length > 1 ? now - vals[vals.length - 2] : 0;
+  const C = 2 * Math.PI * 31;
+  const off = C * (1 - pct / 100);
+  const sp = sparkPath(vals, 150, 42);
+  const segs = chk.map(c => `<i class="${c.st === "ok" ? "" : c.st === "warn" ? "w" : "r"}"></i>`).join("");
+  const labs = chk.map(c => `<span class="${c.st === "ok" ? "" : c.st === "warn" ? "w" : "r"}">${KSHORT[c.k] || c.k}</span>`).join("");
+  const dots = atts.map(a => `<i class="${a.ok ? "" : "z"}"></i>`).join("");
+  const failN = atts.filter(a => !a.ok).length;
+  const lastFail = [...atts].reverse().find(a => !a.ok);
+  const bad = chk.some(c => c.st !== "ok");
+
+  box.innerHTML = `
+  <div class="dhd"><span class="pulse"></span><h2>系統狀態</h2>
+    <span class="t">${ago(Math.floor(new Date(HEALTH.updated).getTime()/1000))} 前</span></div>
+
+  <div class="drow">
+    <div class="dcard glow">
+      <div class="lab">健康度</div>
+      <div class="ringwrap">
+        <div class="halo"></div>
+        <svg viewBox="0 0 76 76" style="width:76px;height:76px;transform:rotate(-90deg)">
+          <defs>
+            <linearGradient id="rg" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#8FD9B6"/><stop offset="100%" stop-color="#4E9C7A"/>
+            </linearGradient>
+            <filter id="rgl" x="-50%" y="-50%" width="200%" height="200%">
+              <feGaussianBlur stdDeviation="2.2" result="b"/>
+              <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+          </defs>
+          <circle cx="38" cy="38" r="31" fill="none" stroke="rgba(255,255,255,.07)" stroke-width="6"/>
+          <circle class="rval" cx="38" cy="38" r="31" fill="none" stroke="url(#rg)" stroke-width="6"
+                  stroke-linecap="round" filter="url(#rgl)"
+                  stroke-dasharray="${C.toFixed(1)}" stroke-dashoffset="${C.toFixed(1)}"/>
+        </svg>
+        <b>${pct}%</b>
+      </div>
+      <div class="sub" style="text-align:center">${okN} / ${total} 檢查通過</div>
+    </div>
+
+    <div class="dcard">
+      <div class="lab">筆數</div>
+      <div class="big">${now ? now.toLocaleString() : "—"}</div>
+      <div class="sub">${delta >= 0 ? "<em>+" + delta + "</em>" : "<em class='bad'>" + delta + "</em>"} 較上輪</div>
+      <svg class="spark" viewBox="0 0 150 42" preserveAspectRatio="none">
+        <defs><linearGradient id="sg" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#6FB894" stop-opacity=".28"/><stop offset="100%" stop-color="#6FB894" stop-opacity="0"/>
+        </linearGradient></defs>
+        <path d="${sp}" fill="none" stroke="#6FB894" stroke-width="1.6" stroke-linecap="round"/>
+        <path d="${sp} L150,42 L0,42 Z" fill="url(#sg)"/>
+      </svg>
+    </div>
+  </div>
+
+  <div class="dband">
+    <div class="bh"><span>檢查</span><b class="${bad ? "bad" : ""}">${bad ? okN + " / " + total + " 通過" : "全部正常"}</b></div>
+    <div class="bar">${segs}</div>
+    <div class="labs">${labs}</div>
+  </div>
+
+  <div class="drow">
+    <div class="dcard">
+      <div class="lab">最近 ${atts.length} 次</div>
+      <div class="ddots">${dots}</div>
+      <div class="sub">${atts.length - failN} 成功${failN ? " · <em class='bad'>" + failN + " 失敗</em>" : ""}</div>
+    </div>
+    <div class="dalert ${lastFail ? "" : "bad"}">
+      <b>${lastFail ? "已處理" : "沒有待處理"}</b>
+      <p>${lastFail ? lastFail.at.slice(11,16) + " 失敗 · 下輪自動重試" : "最近一輪正常"}</p>
+    </div>
+  </div>`;
+
+  // 環形動畫：先畫到 0，再補到實際值
+  const ring = box.querySelector(".rval");
+  if (ring) requestAnimationFrame(() => {
+    ring.style.transition = "stroke-dashoffset 1.1s cubic-bezier(.22,.8,.25,1)";
+    ring.style.strokeDashoffset = off.toFixed(1);
+  });
+}
+
+/* 壓縮：標籤與數值都只留必要資訊 */
+function shortKey(k){
+  return ({ freshness:"新鮮", volume:"筆數", schema:"欄位", quality:"品質", heartbeat:"心跳" })[String(k).toLowerCase()] || esc(k);
+}
+function compact(k, v){
+  const t = String(v);
+  const h = t.match(/([\d.]+)\s*小時/);
+  const n = t.match(/([\d,]{3,})/);              // 第一個「像數字」的東西（筆數 77596 / 60 個欄位）
+  const p = t.match(/差\s*(-?[\d.]+)\s*%/);
+  switch (String(k).toLowerCase()){
+    case "freshness":   return h ? h[1] + " <i>h</i>" : esc(t.slice(0, 20));
+    case "heartbeat":   return h ? h[1] + " <i>h</i>" : esc(t.slice(0, 20));
+    case "volume":      return (n ? fmtNum(n[1]) : "—") + (p ? ` <em class="${p[1].startsWith("-") ? "dn" : "up"}">${p[1]}%</em>` : "");
+    case "schema":      { const cols = t.match(/(\d+)\s*個/); return (cols ? cols[1] + " <i>欄</i>" : "") + (/一致/.test(t) ? ` <em class="ok">一致</em>` : ""); }
+    case "quality":     return /無重複/.test(t) ? "無重複" : (/完整/.test(t) ? "完整" : esc(t.slice(0, 12)));
+    default:            return esc(t.slice(0, 24));
+  }
+}
+function fmtNum(x){ return String(x).replace(/\B(?=(\d{3})+(?!\d))/g, ","); }
+
+/* 從文字裡抽出數字畫成「餘裕條」：所有行同一個意思，越長＝離紅線越遠 */
+function vizBar(key, val, st){
+  const num = (re) => { const m = String(val).match(re); return m ? parseFloat(m[1].replace(/,/g, "")) : null; };
+  const clamp = (v) => Math.max(4, Math.min(100, v));
+  let score = null;
+
+  if (/freshness/i.test(key)){
+    const h = num(/([\d.]+)\s*小時/); if (h !== null) score = 100 - Math.min(h, 6) * 15;
+  } else if (/heartbeat/i.test(key)){
+    const h = num(/([\d.]+)\s*小時/); if (h !== null) score = 100 - Math.min(h, 6) * 12;
+  } else if (/volume/i.test(key)){
+    const d = num(/差\s*(-?[\d.]+)\s*%/); if (d !== null) score = 100 - Math.min(Math.abs(d), 10) * 8;
+  } else if (/quality|schema/i.test(key)){
+    score = 100;
+  }
+  if (score === null) return "";
+  const tone = score < 40 ? "bad" : score < 70 ? "warn" : "ok";
+  return `<i class="hbar" title="餘裕 ${score.toFixed(0)}"><b class="${tone}" style="width:${clamp(score).toFixed(0)}%"></b></i>`;
+}
+
 
 /* 通知展開 */
 document.addEventListener("click", e => {
@@ -960,6 +1266,7 @@ async function load(){
 })();
 
 load();
+loadHealth();
 </script>
 
 <script>
