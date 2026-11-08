@@ -412,6 +412,26 @@ header{background:rgba(10,13,16,.94);border-bottom:1px solid rgba(226,236,245,.1
 .bcard .bh .bi{opacity:.85}
 .bcard .bh .bt{font-size:10.5px;color:#6B645B}
 .bcard .bb{color:#DDD8D0}
+/* 股票 watchlist 式：一行一項 */
+.trow{padding:9px 0;min-height:40px;border-bottom:1px solid rgba(255,255,255,.05);cursor:pointer}
+.trow:last-of-type{border-bottom:0}
+.trow.hid{display:none}
+.tmain{display:grid;grid-template-columns:1fr auto 62px;align-items:baseline;gap:8px}
+.tname{font-size:12.5px;color:#F2EEE8;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.tval{font-size:12.5px;color:#DDD8D0;font-variant-numeric:tabular-nums}
+.tchip{font-size:11px;font-weight:600;font-variant-numeric:tabular-nums;text-align:right;
+  padding:2px 6px;border-radius:6px}
+.tchip.dn{color:#EE5A44;background:rgba(238,90,68,.10)}
+.tchip.up{color:#6FB894;background:rgba(111,184,148,.12)}
+.tchip.flat{color:#9C948A;background:rgba(255,255,255,.06)}
+.tlbl{font-size:10px;color:#6B645B;margin-top:2px}
+.tmore{display:none}
+.trow.open .tmore{display:block;padding-top:6px}
+.tsub{font-size:11px;color:#9C948A;padding:2px 0 2px 2px;font-variant-numeric:tabular-nums}
+.tsub em{font-style:normal;margin-left:6px}
+.tsub em.dn{color:#EE5A44}.tsub em.up{color:#6FB894}.tsub em.flat{color:#9C948A}
+.tmore-btn{width:100%;margin-top:8px;padding:7px;border-radius:8px;background:rgba(255,255,255,.04);
+  border:1px solid rgba(255,255,255,.07);color:#9C948A;font-size:11px;font-family:inherit}
 /* 價格列：名稱 / 變化% / 現價 + 幅度條 */
 .pitem{padding:11px 0;border-bottom:1px solid rgba(255,255,255,.05)}
 .pitem:last-child{border-bottom:0;padding-bottom:2px}
@@ -925,44 +945,61 @@ function sparkPath(items, w, h){
 }
 
 
-/* 卡價卡：每張卡一行，附變化% 與幅度條 */
+/* 卡價卡：股票 watchlist 式，一行一項；預設只列變動最大的 5 項 */
 function priceBody(text){
   const lines = String(text || "").split("\n");
   const items = [];
   for (const raw of lines){
     const t = raw.trim();
     if (!t) continue;
-    if (/^[📈📉]/.test(t) || (!/→/.test(t) && !items.length)){
-      const name = t.replace(/^[📈📉📍]\s*/, "");
-      if (!/→/.test(name)) items.push({ name, rows: [] });
+    // 標題行（沒有箭頭、沒有 📈 的開頭）直接跳過
+    if (!/→/.test(t) && !/^[📈📉]/.test(t)) continue;
+    if (/^[📈📉]/.test(t)){
+      items.push({ name: t.replace(/^[^\p{L}\p{N}]+/u, "").trim(), rows: [] });
       continue;
     }
     const m = t.match(/^(.*?)\s*¥?([\d,]+)\s*(?:→|➜|->)\s*¥?([\d,]+)\s*([^\d]*)$/);
     if (!m || !items.length) continue;
     const from = +m[2].replace(/,/g, ""), to = +m[3].replace(/,/g, "");
     if (!from) continue;
-    items.push && items[items.length - 1].rows.push({
+    items[items.length - 1].rows.push({
       label: (m[1] || "").trim() || "最低在售",
       from, to, unit: (m[4] || "").trim(), pct: (to - from) / from * 100,
     });
   }
   if (!items.length) return renderBody(text);
-  return items.map(it => `
-    <div class="pitem">
-      <div class="pname">${esc(it.name)}</div>
-      ${it.rows.map(r => {
-        const cls = Math.abs(r.pct) < 0.05 ? "flat" : (r.pct < 0 ? "dn" : "up");
-        const w = Math.min(100, Math.abs(r.pct) * 12).toFixed(0);
-        const isQty = /件/.test(r.unit);
-        return `<div class="prow">
-            <span class="plab">${esc(r.label)}</span>
-            <span class="pdelta ${cls}">${r.pct > 0 ? "+" : ""}${r.pct.toFixed(1)}%</span>
-            ${isQty
-              ? `<span class="pqty">${r.from.toLocaleString()} → ${r.to.toLocaleString()} 件</span>`
-              : `<span class="pold">${r.from.toLocaleString()}</span><span class="pnow">${r.to.toLocaleString()}</span>`}
-          </div><div class="pbar"><b class="${cls}" style="width:${Math.max(4, w)}%"></b></div>`;
-      }).join("")}
-    </div>`).join("");
+
+  // 每項取「變化最大」的那一列做代表，依絕對幅度排序
+  const flat = items.map(it => {
+    const r = it.rows.slice().sort((a, b) => Math.abs(b.pct) - Math.abs(a.pct))[0] || {};
+    return { name: it.name, r, all: it.rows };
+  }).sort((a, b) => Math.abs(b.r.pct || 0) - Math.abs(a.r.pct || 0));
+
+  const SHOW = 5;
+  const row = (x, i) => {
+    const r = x.r, pct = r.pct || 0;
+    const cls = Math.abs(pct) < 0.05 ? "flat" : (pct < 0 ? "dn" : "up");
+    const isQty = /件/.test(r.unit || "");
+    const val = isQty ? r.to + " 件" : (r.to || 0).toLocaleString();
+    const more = x.all.length > 1
+      ? x.all.filter(y => y !== r).map(y =>
+          `<div class="tsub">${esc(y.label)} ${y.from.toLocaleString()} → ${y.to.toLocaleString()}${/件/.test(y.unit) ? " 件" : ""}
+             <em class="${y.pct < 0 ? "dn" : y.pct > 0 ? "up" : "flat"}">${y.pct > 0 ? "+" : ""}${y.pct.toFixed(1)}%</em></div>`).join("")
+      : "";
+    return `<div class="trow ${i >= SHOW ? "hid" : ""}" data-i="${i}">
+        <div class="tmain">
+          <span class="tname">${esc(x.name)}</span>
+          <span class="tval">${val}</span>
+          <span class="tchip ${cls}">${pct > 0 ? "+" : ""}${pct.toFixed(1)}%</span>
+        </div>
+        <div class="tlbl">${r.label && r.label !== "最低在售" ? esc(r.label) : "&nbsp;"}</div>
+        <div class="tmore">${more}</div>
+      </div>`;
+  };
+
+  const hidden = flat.length - SHOW;
+  return flat.map(row).join("")
+    + (hidden > 0 ? `<button class="tmore-btn" onclick="this.previousElementSibling||0;document.querySelectorAll('.trow.hid').forEach(e=>e.classList.remove('hid'));this.remove()">還有 ${hidden} 項</button>` : "");
 }
 
 function renderDash(){
@@ -1118,6 +1155,8 @@ function vizBar(key, val, st){
 
 /* 通知展開 */
 document.addEventListener("click", e => {
+  const tr = e.target.closest(".trow");
+  if (tr && tr.querySelector(".tmore").textContent.trim()) tr.classList.toggle("open");
   const card = e.target.closest(".nf .ni");
   if (card){
     card.classList.toggle("open");
