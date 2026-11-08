@@ -488,6 +488,10 @@ header{background:rgba(10,13,16,.94);border-bottom:1px solid rgba(226,236,245,.1
 .dband .labs span{flex:1;text-align:center;font-size:9.5px;color:#6B645B}
 .dband .labs span.w{color:#E4C98A}
 .dband .labs span.r{color:#EE5A44;font-weight:600}
+.dcard .minibar{height:4px;border-radius:3px;background:rgba(255,255,255,.07);margin-top:11px;overflow:hidden}
+.dcard .minibar b{display:block;height:4px;border-radius:3px;background:rgba(111,184,148,.6)}
+.dcard .minibar b.w{background:#E4C98A}
+.dcard .minibar b.r{background:#EE5A44}
 .ddots{display:flex;align-items:center;gap:7px;margin-top:13px}
 .ddots i{width:8px;height:8px;border-radius:50%;background:rgba(111,184,148,.55)}
 .ddots i.z{background:#EE5A44;box-shadow:0 0 10px rgba(238,90,68,.6)}
@@ -801,7 +805,9 @@ function renderNotices(){
   // cex 3h 的健康檢查已搬到「狀態」頁，簡報頁不再重複顯示
   const rest = NOTICES.filter(n => n.job !== "今日新聞"
     && !/^健康檢查/.test(String(n.text || "").trim())
-    && !/^cex\s*3h$/i.test(String(n.job || "").trim()));
+    && !/^cex\s*3h$/i.test(String(n.job || "").trim())
+    && !/^每週維修$/.test(String(n.job || "").trim())
+    && !/^doc reconcile$/i.test(String(n.job || "").trim()));
   if (!rest.length){
     box.innerHTML = '<div class="msg">今天沒有簡報</div>';
     return;
@@ -915,6 +921,23 @@ function renderDash(){
   const lastFail = [...atts].reverse().find(a => !a.ok);
   const bad = chk.some(c => c.st !== "ok");
 
+  const mt = HEALTH.maint, ds = HEALTH.docsync;
+  const M = mt ? `<div class="dcard">
+      <div class="lab">維護</div>
+      <div class="big">${mt.behind_days}<small>天</small></div>
+      <div class="sub">Hermes 落後 · 清 ${mt.freed_mb} MB · ${mt.pkg} 套件待升</div>
+      <div class="minibar"><b class="${mt.behind_days > 14 ? "r" : mt.behind_days > 7 ? "w" : ""}"
+        style="width:${Math.min(100, mt.behind_days / 30 * 100).toFixed(0)}%"></b></div>
+    </div>` : "";
+  const over = ds && ds.age_h != null && ds.limit_h ? ds.age_h > ds.limit_h : false;
+  const D = ds ? `<div class="dcard">
+      <div class="lab">文件同步</div>
+      <div class="big" style="${over ? "color:#EE5A44" : ""}">${ds.age_h}<small>h</small></div>
+      <div class="sub">${over ? "超過上限 " + ds.limit_h + "h" : "上限 " + ds.limit_h + "h"}</div>
+      <div class="minibar"><b class="${over ? "r" : ""}"
+        style="width:${Math.min(100, (ds.age_h / (ds.limit_h || 1)) * 100).toFixed(0)}%"></b></div>
+    </div>` : "";
+
   box.innerHTML = `
   <div class="dhd"><span class="pulse"></span><h2>系統狀態</h2>
     <span class="t">${ago(Math.floor(new Date(HEALTH.updated).getTime()/1000))} 前</span></div>
@@ -962,6 +985,11 @@ function renderDash(){
     <div class="bh"><span>檢查</span><b class="${bad ? "bad" : ""}">${bad ? okN + " / " + total + " 通過" : "全部正常"}</b></div>
     <div class="bar">${segs}</div>
     <div class="labs">${labs}</div>
+  </div>
+
+  <div class="drow">
+    ${M}
+    ${D}
   </div>
 
   <div class="drow">
