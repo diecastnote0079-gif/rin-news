@@ -1,5 +1,25 @@
 [
  {
+  "job": "SNKRDUNK 卡價",
+  "ts": 1794099636,
+  "text": "SNKRDUNK 變化\n📈 3rd Anniversary Set — ENGLISH\n   最低在售 ¥62,999 → ¥61,800\n📈 3rd Anniversary Set — CHINA\n   在售 54 → 56 件\n   最低在售 ¥43,000 → ¥42,000\n📈 Luffy SEC-SP EB04-061\n   A ¥1,550,000 → ¥1,500,000\n   PSA10 ¥2,100,000 → ¥2,000,000"
+ },
+ {
+  "job": "CeX 早安",
+  "ts": 1794098825,
+  "text": "昨天 CeX 的動靜：\n\n🆕 新上架\n・AYN Thor 掌機 8 Gen2／128GB（B 級）RM1750\n・PS5《Beast of Reincarnation》（中文版）RM180\n・PS5《Star Wars: Galactic Racer》（英文版）RM180\n・Prism+ F270i PRO 27\" 200Hz 螢幕（C 級）RM340\n\n📉 降價\n・Huawei Watch GT 5 Pro 46mm 鈦金屬（B 級）RM880 → RM650\n・Samsung 990 PRO 1TB NVMe RM800 → RM740\n\n📦 回架\n・Switch OLED 猩紅／紫 主機（開箱品）RM1150\n・Switch Lite 薩爾達金 主機（開箱品）RM675\n・Nintendo 2DS 黑藍（開箱品）RM850\n・Switch 2《薩爾達傳說 時之笛》RM290\n・PS5《Final Fantasy Resonance》（中文版）RM210\n・PS Vita《Gravity Rush》（英文版）RM90\n\n🚫 賣光\n・Switch 2《EA Sports FC 27》RM230\n・Switch 2《The Witch's Bakery》RM150\n・PS4《Call of Duty: Vanguard》RM100\n・Xbox 360《Assassin's Creed Ezio Trilogy》RM50\n・PS3《Ratchet & Clank: Quest for Booty》RM140\n・PS Vita《Deception IV: Blood Ties》RM45"
+ },
+ {
+  "job": "AI 工具日報",
+  "ts": 1794096129,
+  "text": "**AI 工具日報 · 11/08**\n\n**1. Hermes Agent v0.23.0「Hearth」（11/5 發布，含 0.22.1–0.22.7 全部內容）**\n・這版把 CLI／TUI／桌面／bot／cron 全部收進同一個 gateway，每個 session 只有一個主人；桌面工作區改由自己的 gateway 開在瀏覽器分頁；插件會自己更新；內建技能砍掉一批。\n・對我們：我們正好就是長駐 gateway＋Telegram＋cron 這套用法，「一個 session 只能有一個主人」直接決定 cron 和 TG 看到的是不是同一段對話；插件自動更新＝我的工具會自己換版本。\n・結論：值得試——但挑你在線時再升，升完先跑一次 cron，看有沒有重複回話。\n\n**2. Claude Code「不再詢問」洩密事件（Apiiro 11/6 公布）**\n・你按「是，不要再問」的那條指令，會被原文寫進專案的 .claude/settings.local.json，連裡面的密碼、token 一起；10 萬個公開 repo 裡有 1,122 個中標、1,379 組秘密，gitleaks 和 TruffleHog 各漏掉一半。\n・對我們：新聞站是公開 repo，而「approval 規則連指令一起落地」不是 Claude Code 專屬的毛病，任何 agent 都可能犯同樣的事。\n・結論：值得試——找一天掃我們公開 repo（含 git 歷史）有沒有帶 token 的設定檔，順手把 .gitignore 補死。\n\n**3. billion-context（今日 GitHub trending，4.6k★，+191/日）**\n・卡在 agent 和模型 API 中間的上下文壓縮代理，聲稱省 5 倍 token，還有現成的 `bili hermes` 啟動器。\n・對我們：省 token 正中你的痛點，但它要 MITM 全部 API 流量（金鑰都經過它），也可能打亂 opencode-go 的 prompt cache。\n・結論：觀察就好，等有人拿我們的 provider 實測過再說。\n\n**4. ComfyUI 0.44.0（11/4）＋ P-H3-Image（11/3）**\n・ComfyUI 這版原生支援 MiniMax-H3 與 P-H3-Image、多了 ProRes 輸出；P-H3 標榜 8 步生 4MP。\n・對我們：P-H3 連 4-bit 都要 21GB VRAM，3070 Ti 8GB 直接出局；這週生圖圈的新東西（Krea 3、H3 Dials、P-H3）門檻全在 16GB 以上。\n・結論：不用管——8GB 這條線這週沒有值得追的東西。"
+ },
+ {
+  "job": "每週維修",
+  "ts": 1794081635,
+  "text": "🔧 每週維修\n・🧹 清掉 1 MB（cache 1 項、cron 紀錄 0 份）\n・⬆️ Hermes 落後 4 天（725 個 commit；未升級，等你點頭）\n・📦 系統有 14 個套件可升級"
+ },
+ {
   "job": "doc reconcile",
   "ts": 1794081330,
   "text": "【文件 vs 現況 對帳】\n • 手機頁資料 5.9 小時前（上限 5）：2026-11-07T14:02:26Z\n • 本機最後一輪 5.9 小時前（20261107220030）"
@@ -23,25 +43,5 @@
   "job": "今日新聞",
   "ts": 1794052891,
   "text": "📰 今天值得看的\n・時之笛重製版上了 Switch 2，老玩家找回感動、新手也好上手\n・McFarlane Toys 把多數股權賣給投資機構，玩具圈老牌子易手\n・Bank Rakyat 疑遭駭客攻擊，官網與網銀頁面緊急下架\n・DeepSeek 的寫碼 agent 實測：一句原始碼註解就能騙走憑證\n・讓便宜模型當提問者、貴模型解題，準確率不減、成本剩四分之一\n・Meta Muse 推出視像通話，虛擬角色有表情、還能插嘴\n\n🔥 今天在討論\n馬來西亞的 X 幾乎被泰國 BL 圈佔滿——GMMTV 大馬快閃店、ZeeNuNew、DewTee 見面會輪流上榜；旁邊夾著 Deepavali 祝福、Najib 的政治話題和韓國偶像 HYBE、Woohyun。\n\ndigest.json 已寫好：`/home/rin/AI/news/digest.json`（6 條，日期 2026-11-07）。"
- },
- {
-  "job": "SNKRDUNK 卡價",
-  "ts": 1794013236,
-  "text": "SNKRDUNK 變化\n📈 3rd Anniversary Set — ENGLISH\n   在售 47 → 52 件\n   最低在售 ¥63,999 → ¥62,999\n📈 3rd Anniversary Set — CHINA\n   在售 48 → 54 件\n   最低在售 ¥45,000 → ¥43,000"
- },
- {
-  "job": "CeX 早安",
-  "ts": 1794012571,
-  "text": "昨天 CeX 的動靜：\n\n🆕 新上架\n・Sony NW-WM1AM2 128GB Walkman（C 級）RM3500\n・Canon EF 8-15mm f/4L 魚眼鏡（鏡頭）RM2600\n・Tamron SP 24-70mm f/2.8（Nikon 接環）RM1500\n・Anbernic RG35XX（掌機／64G+128G）RM250\n・Witch's Bakery, The（Switch 2 英文版）RM150\n\n📉 降價\n・Fire Emblem: Fortune's Weave（Switch 2）RM320 → RM300\n・EA Sports FC 27（PS5）RM300 → RM290\n・Onimusha: Way of the Sword（PS5／Switch 2）RM230 → RM220\n・Silent Hill Townfall（PS5）RM190 → RM180\n\n📦 回架\n・Call of Duty: Modern Warfare 4（PS5）RM260\n・Silent Hill Downpour（PS3）RM180\n・Dark Souls III + The Witcher 3 合輯（PS4）RM110\n・Mass Effect: Legendary Edition（PS4）RM150\n・Red Dead Redemption（PS3）RM55\n・Senran Kagura Estival Versus（PS Vita）RM70\n\n🚫 賣光\n・PS5 Slim 1TB Ghost of Yotei Gold（主機／Unboxed）RM3000\n・Retroid Pocket 6 12GB+128GB（掌機 B 級）RM1150\n・Anbernic RG CubeXX（掌機 A 級）RM190\n・Mortal Kombat Legacy Kollection（PS5）RM100\n・Mario Kart World（Switch 2 中文版）RM270\n・SNK vs Capcom - SVC Chaos（Switch）RM140"
- },
- {
-  "job": "cex 0830",
-  "ts": 1794011570,
-  "text": "健康檢查：20261107083031（範圍 web，77472 筆）\n  ✅ freshness  資料 0.0 小時前抓的\n  ✅ volume     筆數 77472（與上次 77472 差 0.00%）\n  ✅ schema     60 個欄位，與上次指紋一致\n  ✅ quality    77472 筆：主鍵無重複、標價與名稱完整\n  ✅ heartbeat  距上次抓取 10.5 小時（20261106220035 → 20261107083031）\n\n全部正常"
- },
- {
-  "job": "AI 工具日報",
-  "ts": 1794009757,
-  "text": "**AI 工具日報 · 11/07（六）**\n\n**1. Hermes Agent v0.23.0（11/5 發佈，代號 Hearth）**\n- 這是什麼：改成「一個 gateway 接管所有對話」，CLI、Telegram、Desktop、cron 不再是各自開一份 agent 執行，另外還有終端機內嵌圖片、對話倒回、插件自動更新、付費 MCP 工具加價目標與花費上限。\n- 對我們：正好打在我們的痛點上（同一段對話被 Telegram 和 cron 各寫一次、訊息互相漏掉），不過這是大版本，需要遷移，升之前要先讀它的升級說明。\n- 結論：值得試，但我會先寫一份風險與回滾方案給你，等你點頭。我不會自己動手升（´･ω･`）\n\n**2. Strata 0.2.10：Qwen3.8-Flash-Next 在 8GB 顯卡上跑到 20+ tok/s（11/3）**\n- 這是什麼：新的推理引擎把這種大 MoE 模型壓進 8GB VRAM 還能跑起來，社群（含引擎作者本人）實測生成速度 20+ tok/s。\n- 對我們：3070 Ti 8GB 理論上能本地跑一個堪用的 agent 模型，但它跟生圖搶同一張卡，加上 Windows 那台晚上會關機，實際上只適合白天跑離線批次。\n- 結論：觀察就好，等有人測過它跟生圖同時跑的真實速度再說。\n\n**3. HN 熱帖：便宜的 Jev 模型「不確定就問 Opus」，用四分之一的成本拿到 Opus 級準確度**\n- 這是什麼：Hightouch 用便宜模型先判斷，只在信心低時才升級給貴模型，結果準確度接近 Opus、成本少 4 倍，關鍵是便宜模型的信心是否準確。\n- 對我們：這就是我正在執行的省錢架構（免費模型先做、卡住才切換貴的），他們的做法驗證了方向正確，可以借它的「信心門檻」調法。\n- 結論：觀察就好，概念可以借，沒有東西要安裝。\n\n**4. Gemini Omni 1.2 Flash（11/5 GA）＋ Inkling 2 Small（11/6）**\n- 這是什麼：前者是 15 秒影片生成／剪輯模型，只有付費層（10 秒約 $0.7）；後者是 594B 參數的巨型開源 MoE（17B 活躍）。\n- 對我們：一個是要花錢做影片，一個是 8GB 根本跑不動的重量級，兩個都碰不到我們的靜圖和 3070 Ti。\n- 結論：不用管。\n\n（來源：GitHub releases、HN 前頁、r/LocalLLaMA 與 Gemini 官方定價頁，都看過原始出處，不是轉述。）"
  }
 ]

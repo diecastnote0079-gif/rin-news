@@ -1,19 +1,19 @@
 {
- "updated": 1794081629,
+ "updated": 1794103229,
  "quota": {
   "rolling": 100,
   "weekly": 73,
   "monthly": 49,
-  "reset_rolling": "2h 51m",
-  "reset_weekly": "1d 3h",
-  "reset_monthly": "9d 21h"
+  "reset_rolling": "3h 0m",
+  "reset_weekly": "21h 59m",
+  "reset_monthly": "9d 15h"
  },
  "host": {
   "load": 0.02,
   "mem_pct": 16,
   "disk_pct": 5,
-  "disk_free_gb": 412,
-  "uptime_h": 73
+  "disk_free_gb": 411,
+  "uptime_h": 79
  },
  "memory": {
   "memory": {
@@ -28,20 +28,23 @@
   }
  },
  "cron": {
-  "enabled": 26,
-  "failed": 0,
-  "failed_names": []
+  "enabled": 27,
+  "failed": 2,
+  "failed_names": [
+   "news-refresh",
+   "cex-0830"
+  ]
  },
  "reminders": [
   {
    "name": "記憶插件觀察",
    "date": "11/09",
-   "days": 1
+   "days": 0
   },
   {
    "name": "BF 遊戲掃描",
    "date": "11/20",
-   "days": 12
+   "days": 11
   },
   {
    "name": "MRT 月卡續期",
