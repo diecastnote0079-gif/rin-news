@@ -1,43 +1,43 @@
 {
-  "date": "2026-11-07",
-  "updated": "2026-11-07T20:01:27+08:00",
+  "date": "2026-11-08",
+  "updated": "2026-11-08T20:00:00+08:00",
   "items": [
     {
-      "text": "時之笛重製版上市，老玩家找回感動、新手也好上手",
-      "link": "https://www.4gamers.com.tw/news/detail/83153/the-legend-of-zelda-ocarina-of-time-review",
+      "text": "EGS 限免復古競速《GMH》，明早 7 點前領",
+      "link": "https://www.4gamers.com.tw/news/detail/83161/gmh-good-morning-human-is-free-to-keep-on-egs",
       "source": "4Gamers",
-      "ts": 1794028330
+      "ts": 1794122826
     },
     {
-      "text": "McFarlane Toys 多數股權易手投資機構",
-      "link": "https://www.toyark.com/2026/11/06/mcfarlane-toys-majority-stake-acquired-by-gladstone-investment-602252",
-      "source": "ToyArk",
-      "ts": 1794001225
+      "text": "《哥吉拉-0.0》基多拉回歸，靈感來自貓打架",
+      "link": "https://www.4gamers.com.tw/news/detail/83160/godzilla-minus-zero-cat-fight-ghidorah-takashi-yamazaki",
+      "source": "4Gamers",
+      "ts": 1794116589
     },
     {
-      "text": "Bank Rakyat 疑遭駭，官網與網銀下架",
-      "link": "https://www.lowyat.net/2026/409395/bank-rakyat-takes-down-sites-after-suspected-cyber-attack/",
+      "text": "《獵人》克洛洛披風版 Grandista 景品",
+      "link": "https://hobby.dengeki.com/news/3210090/",
+      "source": "電撃Hobby",
+      "ts": 1794103200
+    },
+    {
+      "text": "WhatsApp 測試自選：誰看得到你號碼",
+      "link": "https://www.lowyat.net/2026/409449/whatsapp-tests-users-control-numbers/",
       "source": "Lowyat",
-      "ts": 1793993993
+      "ts": 1794128251
     },
     {
-      "text": "DeepSeek 寫碼 agent 被一句註解騙走憑證",
-      "link": "https://cyberq.tw/2026/11/07/deepseek-dsh-superagent-prototype-test/",
+      "text": "Claude Code 省一步，千個公開 repo 洩密",
+      "link": "https://cyberq.tw/2026/11/08/claude-codes-dont-ask-again-option-led/",
       "source": "CyberQ",
-      "ts": 1794021595
+      "ts": 1794113141
     },
     {
-      "text": "便宜模型提問、貴模型解題，成本剩四分之一",
-      "link": "https://cyberq.tw/2026/11/07/using-a-cheaper-model-as-the-questioner/",
-      "source": "CyberQ",
-      "ts": 1794012493
-    },
-    {
-      "text": "Meta Muse 能視像通話，虛擬角色有表情",
-      "link": "https://unwire.hk/2026/11/07/meta-muse-voice-ai-avatar-video-chat/ai/?utm_source=rss&utm_medium=rss&utm_campaign=meta-muse-voice-ai-avatar-video-chat",
+      "text": "美國准 H200 銷中國，獲批公司是空屋",
+      "link": "https://unwire.hk/2026/11/08/nvidia-h200-china-empty-office-license-review/ai/?utm_source=rss&utm_medium=rss&utm_campaign=nvidia-h200-china-empty-office-license-review",
       "source": "Unwire HK",
-      "ts": 1794039053
+      "ts": 1794130230
     }
   ],
-  "discussion": "馬來西亞的 X 幾乎被泰國 BL 圈佔滿——GMMTV 大馬快閃店、ZeeNuNew、DewTee 見面會輪流上榜；旁邊夾著 Deepavali 祝福、Najib 的政治話題和韓國偶像 HYBE、Woohyun。"
+  "discussion": "馬來西亞今天整條榜都是泰劇與 K-pop 粉絲在刷活動——GMMTV 快閃店、DewTee 見面會、Freen 曼谷場，外加一整片 Deepavali 祝福；政治那頭 Najib 與 1MDB 又爬回來。"
 }

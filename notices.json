@@ -1,8 +1,8 @@
 [
  {
-  "job": "cex 3h",
-  "ts": 1794124966,
-  "text": "健康檢查：20261108160030（範圍 web，77574 筆）\n  ✅ freshness  資料 0.0 小時前抓的\n  ✅ volume     筆數 77574（與上次 77563 差 0.01%）\n  ✅ schema     60 個欄位，與上次指紋一致\n  ✅ quality    77574 筆：主鍵無重複、標價與名稱完整\n  ✅ heartbeat  距上次抓取 3.0 小時（20261108130031 → 20261108160030）\n\n全部正常"
+  "job": "今日新聞",
+  "ts": 1794139309,
+  "text": "📰 今天值得看的\n・EGS 限免復古競速《GMH》，明早 7 點前領\n・《哥吉拉-0.0》基多拉回歸，靈感來自貓打架\n・《獵人》克洛洛披風版 Grandista 景品\n・WhatsApp 測試自選：誰看得到你號碼\n・Claude Code 省一步，千個公開 repo 洩密\n・美國准 H200 銷中國，獲批公司是空屋\n\n🔥 今天在討論\n泰劇和 K-pop 粉絲今天幾乎佔滿整個熱搜：GMMTV 快閃店、DewTee 見面會、Freen 的曼谷場，加上一整片 Deepavali 祝福；政治討論裡，Najib 和 1MDB 又回到熱搜。\n\ndigest.json 已寫好：/home/rin/AI/news/digest.json（6 條，跟上面一一對應）。"
  },
  {
   "job": "SNKRDUNK 卡價",
@@ -38,10 +38,5 @@
   "job": "生活記錄",
   "ts": 1794078195,
   "text": "昨晚（11-07）沒有「不許記下」的跡象，已寫入 6 條生活事實。\n\n寫了 6 條，主題：他玩外匯 demo 的感想（漲跌沒邏輯、只紙上玩）與「不貪心、該止損就止損」的金錢觀、存款放 Ryt Bank／Touch 'n Go 約 4% 年利、在觀望圖靈 USB 副屏、喜歡白色內衣款式、作息一路聊到早上六點多才停。"
- },
- {
-  "job": "今日新聞",
-  "ts": 1794052891,
-  "text": "📰 今天值得看的\n・時之笛重製版上了 Switch 2，老玩家找回感動、新手也好上手\n・McFarlane Toys 把多數股權賣給投資機構，玩具圈老牌子易手\n・Bank Rakyat 疑遭駭客攻擊，官網與網銀頁面緊急下架\n・DeepSeek 的寫碼 agent 實測：一句原始碼註解就能騙走憑證\n・讓便宜模型當提問者、貴模型解題，準確率不減、成本剩四分之一\n・Meta Muse 推出視像通話，虛擬角色有表情、還能插嘴\n\n🔥 今天在討論\n馬來西亞的 X 幾乎被泰國 BL 圈佔滿——GMMTV 大馬快閃店、ZeeNuNew、DewTee 見面會輪流上榜；旁邊夾著 Deepavali 祝福、Najib 的政治話題和韓國偶像 HYBE、Woohyun。\n\ndigest.json 已寫好：`/home/rin/AI/news/digest.json`（6 條，日期 2026-11-07）。"
  }
 ]
