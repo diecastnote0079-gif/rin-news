@@ -1,19 +1,19 @@
 {
- "updated": 1794112229,
+ "updated": 1794119429,
  "quota": {
   "rolling": 100,
   "weekly": 73,
   "monthly": 49,
-  "reset_rolling": "30m",
-  "reset_weekly": "19h 29m",
-  "reset_monthly": "9d 12h"
+  "reset_rolling": "4h 59m",
+  "reset_weekly": "17h 29m",
+  "reset_monthly": "9d 10h"
  },
  "host": {
-  "load": 0.13,
-  "mem_pct": 16,
+  "load": 0.26,
+  "mem_pct": 15,
   "disk_pct": 5,
   "disk_free_gb": 411,
-  "uptime_h": 81
+  "uptime_h": 83
  },
  "memory": {
   "memory": {
@@ -29,9 +29,8 @@
  },
  "cron": {
   "enabled": 27,
-  "failed": 2,
+  "failed": 1,
   "failed_names": [
-   "cex-3h",
    "cex-0830"
   ]
  },
@@ -49,7 +48,7 @@
   {
    "name": "MRT 月卡續期",
    "date": "11/29",
-   "days": 21
+   "days": 20
   }
  ]
 }

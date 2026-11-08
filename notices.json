@@ -1,5 +1,10 @@
 [
  {
+  "job": "cex 3h",
+  "ts": 1794114168,
+  "text": "健康檢查：20261108130031（範圍 web，77563 筆）\n  ✅ freshness  資料 0.0 小時前抓的\n  ✅ volume     筆數 77563（與上次 77543 差 0.03%）\n  ✅ schema     60 個欄位，與上次指紋一致\n  ✅ quality    77563 筆：主鍵無重複、標價與名稱完整\n  ✅ heartbeat  距上次抓取 15.0 小時（20261107220030 → 20261108130031）\n\n全部正常"
+ },
+ {
   "job": "SNKRDUNK 卡價",
   "ts": 1794099636,
   "text": "SNKRDUNK 變化\n📈 3rd Anniversary Set — ENGLISH\n   最低在售 ¥62,999 → ¥61,800\n📈 3rd Anniversary Set — CHINA\n   在售 54 → 56 件\n   最低在售 ¥43,000 → ¥42,000\n📈 Luffy SEC-SP EB04-061\n   A ¥1,550,000 → ¥1,500,000\n   PSA10 ¥2,100,000 → ¥2,000,000"
