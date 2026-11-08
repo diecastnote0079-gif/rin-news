@@ -1,5 +1,20 @@
 [
  {
+  "job": "doc reconcile",
+  "ts": 1794167731,
+  "text": "【文件 vs 現況 對帳】\n • 手機頁資料 5.8 小時前（上限 5）：2026-11-08T14:09:02Z\n • 本機最後一輪 5.8 小時前（20261108220030）"
+ },
+ {
+  "job": "pending review nightly",
+  "ts": 1794167728,
+  "text": "寫 0 條、丟 0 條。\n\n記憶工具這次一次都沒落：04ce94a6 的「客戶端隔離修正」patch 4 次匹配失敗（找不到對應 entry），批次全反轉，連帶 NIKKE 收菜與省 token 2 個新增也沒寫。目前水位仍 2,085/2,200 沒變；pending 檔案未動。這塊卡住了，等您要我重試或改法。"
+ },
+ {
+  "job": "生活記錄",
+  "ts": 1794164721,
+  "text": "I stopped retrying because I kept running tool_call 8 times without making progress. The last result above shows what blocked it. Tell me how you'd like to proceed, or send `continue` and I'll try a different approach."
+ },
+ {
   "job": "cex 3h",
   "ts": 1794146988,
   "text": "健康檢查：20261108220030（範圍 web，77622 筆）\n  ✅ freshness  資料 0.0 小時前抓的\n  ✅ volume     筆數 77622（與上次 77596 差 0.03%）\n  ✅ schema     60 個欄位，與上次指紋一致\n  ✅ quality    77622 筆：主鍵無重複、標價與名稱完整\n  ✅ heartbeat  距上次抓取 2.9 小時（20261108190646 → 20261108220030）\n\n全部正常"
@@ -28,20 +43,5 @@
   "job": "每週維修",
   "ts": 1794081635,
   "text": "🔧 每週維修\n・🧹 清掉 1 MB（cache 1 項、cron 紀錄 0 份）\n・⬆️ Hermes 落後 4 天（725 個 commit；未升級，等你點頭）\n・📦 系統有 14 個套件可升級"
- },
- {
-  "job": "doc reconcile",
-  "ts": 1794081330,
-  "text": "【文件 vs 現況 對帳】\n • 手機頁資料 5.9 小時前（上限 5）：2026-11-07T14:02:26Z\n • 本機最後一輪 5.9 小時前（20261107220030）"
- },
- {
-  "job": "pending review nightly",
-  "ts": 1794080801,
-  "text": "佇列清完：4 個檔案全數移到 archive，sweep 乾淨（pending/memory 已空）。\n\n落 1 條：模型條目改正，現在是「備援清空、api_max_retries=2、他自己在 TG 手動換」，原本寫的 stepfun→meituan 快切是錯的，已照 config 實測改掉。\n丟 3 條：Windows 主機、decisions.md 兩筆只是縮字沒新資訊；新聞台暗色 skin 是外觀細節，不值得進記憶。\n兩條有用的沒塞記憶、改寫進文件：`approve.once` 一次性通行證機制補進 agent-gates.md（原本那張票完全沒記載，我照腳本實作驗證過），rin-box 硬體（AZW SER／5800H、Type-C 無 PD 要另供電）補進 host-map.md。\n水位 89%（1,974／2,200），沒到 92%，不需要合併。"
- },
- {
-  "job": "生活記錄",
-  "ts": 1794078195,
-  "text": "昨晚（11-07）沒有「不許記下」的跡象，已寫入 6 條生活事實。\n\n寫了 6 條，主題：他玩外匯 demo 的感想（漲跌沒邏輯、只紙上玩）與「不貪心、該止損就止損」的金錢觀、存款放 Ryt Bank／Touch 'n Go 約 4% 年利、在觀望圖靈 USB 副屏、喜歡白色內衣款式、作息一路聊到早上六點多才停。"
  }
 ]
