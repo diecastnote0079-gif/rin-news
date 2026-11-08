@@ -798,7 +798,10 @@ function mdLite(t){
 function renderNotices(){
   const box = $("#brieflist");
   if (!box) return;
-  const rest = NOTICES.filter(n => n.job !== "今日新聞");
+  // cex 3h 的健康檢查已搬到「狀態」頁，簡報頁不再重複顯示
+  const rest = NOTICES.filter(n => n.job !== "今日新聞"
+    && !/^健康檢查/.test(String(n.text || "").trim())
+    && !/^cex\s*3h$/i.test(String(n.job || "").trim()));
   if (!rest.length){
     box.innerHTML = '<div class="msg">今天沒有簡報</div>';
     return;
