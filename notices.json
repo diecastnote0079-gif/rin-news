@@ -1,5 +1,30 @@
 [
  {
+  "job": "cex 3h",
+  "ts": 1794190163,
+  "text": "健康檢查：20261109100030（範圍 web，77626 筆）\n  ✅ freshness  資料 0.0 小時前抓的\n  ✅ volume     筆數 77626（與上次 77626 差 0.00%）\n  ✅ schema     60 個欄位，與上次指紋一致\n  ✅ quality    77626 筆：主鍵無重複、標價與名稱完整\n  ✅ heartbeat  距上次抓取 1.5 小時（20261109083030 → 20261109100030）\n\n全部正常"
+ },
+ {
+  "job": "記憶審計",
+  "ts": 1794186247,
+  "text": "檢計結果（未修改任何檔案）：\n\n1. **MEMORY.md：乾淨** — 20 條無重複、矛盾、過期條目。無 Letta 提及；cron id 皆 2026-11-05 起現用；gateway 已明確為 rin-box（systemd user）；路徑均為 `~/AI`。按「Windows 是主機、又說 Linux」式矛盾：不存在——文件同頁明確寫「大本營＝ rin-box（Ubuntu）」、Windows=「現用 desktop-akpf18q」。\n\n2. **USER.md：乾淨於重複與矛盾** — 但條目「D:\\AI\\cex-desk 是他最好的作品、每天在用」與 MEMORY.md「專案在 ~/AI」路徑衝突：前者是 Windows 磁碟路徑，後者是 Linux home。需確認桌面端 cex-desk 是否是 Windows 節點的刻意複本；若非，改寫為 `~/AI`（或補一筆 sync 說明）。\n\n3. **~/.hermes/reference/ops/：乾淨** — 只找到歷史留痕：`akpfl8q` 只在 post-reset-install.md、`D:\\AI` 只在歷史文件、`Letta` 只在 migration/log 文章裡，cron-ops.md 已標示「舊的 Letta letta cron 流程已作廢」；無活的舊路徑或舊 cron id。\n\n4. **記憶水位**：MEMORY.md 94%（2,085/2,200 chars）、USER.md 95%（1,308/1,375 chars）→ 雙檔逼近容量，建議一併壓縮。\n\n結論：唯一待處理是 USER.md 裡的 `D:\\AI\\cex-desk` 路徑確認；其餘皆乾淨。本次未改任何檔案。"
+ },
+ {
+  "job": "SNKRDUNK 卡價",
+  "ts": 1794186037,
+  "text": "SNKRDUNK 變化\n📈 3rd Anniversary Set — ENGLISH\n   在售 52 → 51 件\n   最低在售 ¥61,800 → ¥62,900\n📈 3rd Anniversary Set — CHINA\n   在售 56 → 53 件\n   最低在售 ¥42,000 → ¥42,500\n📈 Luffy SEC-SP EB04-061\n   A ¥1,500,000 → ¥1,450,000\n   PSA10 ¥2,000,000 → ¥1,990,000"
+ },
+ {
+  "job": "CeX 早安",
+  "ts": 1794185363,
+  "text": "昨天 CeX 的動靜：\n\n🆕 新上架\n・Super Monkey Ball 1&2 Remake（PS4）RM60\n・TV Superstars（PS3）RM25\n・Fantech Nova Pro WGP14v2 Wireless Controller (Multiplatform) - Luffy（通用手柄）RM125\n・8BitDo Lite 2 Bluetooth Gamepad - Pink（Switch/Android）RM65\n・Trimui Smart Pro（掌機）RM130\n・Maxsun Terminator GeForce RTX 5060 8GB GDDR7（獨立顯卡）RM1800\n\n📉 降價\n・Sphero BB-8 Star Wars Droid (No App Support), A（機器人）RM200 → RM130\n・Sphero BB-8 Star Wars Droid (No App Support), B（機器人）RM180 → RM120\n・Sphero BB-8 Star Wars Droid (No App Support), A（機器人）RM100 → RM65\n・Sphero BB-8 Star Wars Droid (No App Support), B（機器人）RM90 → RM60\n\n📦 回架\n・EA Sports FC 27（Switch 2）\n・Five Nights at Freddy's: Help Wanted（Switch）\n・Mario Kart World（Switch 2）\n・Assassin's Creed Shadows（Switch 2）\n・Shingeki No Kyojin 2（PS4）\n・Attack On Titan 2 Final Battle（PS4）\n\n🚫 賣光\n・New 3DS XL Console, Hyrule Edition, Discounted（3DS 主機）\n・Captain Tsubasa 2: World Fighters（PS5）\n・Elden Ring（Switch 2）\n・EA Sports FC 27（PS4）\n・Fist Of The North Star: Kens Rage 2（PS3）\n・Dragon Ball: The Breakers（PS4）"
+ },
+ {
+  "job": "cex 0830",
+  "ts": 1794184762,
+  "text": "健康檢查：20261109083030（範圍 web，77626 筆）\n  ✅ freshness  資料 0.0 小時前抓的\n  ✅ volume     筆數 77626（與上次 77622 差 0.01%）\n  ✅ schema     60 個欄位，與上次指紋一致\n  ✅ quality    77626 筆：主鍵無重複、標價與名稱完整\n  ✅ heartbeat  距上次抓取 10.5 小時（20261108220030 → 20261109083030）\n\n全部正常"
+ },
+ {
   "job": "AI 工具日報",
   "ts": 1794182677,
   "text": "# 2026-11-09（週一）AI 工具日報\n\n**1. Hermes 0.23.0「Hearth」** — 什麼：整個桌面工作空間用自己的 gateway 開在瀏覽器 Tab，CLI、TUI、桌面、機器人、cron 歸一；終端機可行內顯示圖片、可倒回對話。\n- 我們：小主機跑 Hermes、Telegram 監控、生圖都靠得更近；機器人也能由 gateway 綁帳號跑，推群組時更省事。\n- 結論：值得試。\n\n**2. OpenCode 2.2** — 什麼：/goal 目標模式、可選 image_generate 圖片生成功能、用 Claude Code 登入的 Claude Agent 提供者；2 版升級把舊 1 版插件生態拆了。\n- 我們：RTX 3070 Ti 8GB 生圖能交給 agent 跑；但係 2 版新生態，舊 1 版方式不能用，得照安裝文搞定。\n- 結論：值得試（二選一）。\n\n**3. 免費 API 入口更新** — 什麼：UnoRouter 等自由 API 站又收了 Solar Pro4、Solar Mini4、GPT 5.6 Luna、Claude Haiku 4.5、DeepSeek、Qwen 3.7 Flash 等，已列 279 個模型。\n- 我們：股票、新聞、商品監控這類低成本任務，可能有更便宜入口；但價格、額度、賬號審核天天變，沒人敢訂。\n- 結論：觀察就好。\n\n**4. GitHub 熱門：NVIDIA/auto-ontology** — 什麼：把資料建成語義圖，讓 agent 做可判斷的查詢生成查資料，而不再只靠向量相似度。\n- 我們：股票與新聞資料庫可慢慢把索引做成圖，未來查詢會更穩；但現在不動正式庫，先看懂它怎麼索引。\n- 結論：觀察就好。\n\n**5. GitHub 熱門：vercel-labs/agent-browser** — 什麼：AI agent 操瀏覽器的 CLI，能打開頁面、截圖、排程動作。\n- 我們：還是 CeX／Carousell 以跑腳手動為主，這是備選；若之後想把「看網頁→比價→入手」自動化，比自己寫 Playwright 更現成。\n- 結論：值得試（備選，不急）。\n\n來源：Github releases、OpenCode Changelog、llmperks 免費 API 清單、GitHub trending（11/3～11/6）。  \n（懶得翻英文釋字的話，就看上面三個結論，告訴我想試哪一個。）"
@@ -20,24 +45,9 @@
   "text": "I stopped retrying because I kept running tool_call 8 times without making progress. The last result above shows what blocked it. Tell me how you'd like to proceed, or send `continue` and I'll try a different approach."
  },
  {
-  "job": "cex 3h",
-  "ts": 1794146988,
-  "text": "健康檢查：20261108220030（範圍 web，77622 筆）\n  ✅ freshness  資料 0.0 小時前抓的\n  ✅ volume     筆數 77622（與上次 77596 差 0.03%）\n  ✅ schema     60 個欄位，與上次指紋一致\n  ✅ quality    77622 筆：主鍵無重複、標價與名稱完整\n  ✅ heartbeat  距上次抓取 2.9 小時（20261108190646 → 20261108220030）\n\n全部正常"
- },
- {
   "job": "今日新聞",
   "ts": 1794139309,
   "text": "📰 今天值得看的\n・EGS 限免復古競速《GMH》，明早 7 點前領\n・《哥吉拉-0.0》基多拉回歸，靈感來自貓打架\n・《獵人》克洛洛披風版 Grandista 景品\n・WhatsApp 測試自選：誰看得到你號碼\n・Claude Code 省一步，千個公開 repo 洩密\n・美國准 H200 銷中國，獲批公司是空屋\n\n🔥 今天在討論\n泰劇和 K-pop 粉絲今天幾乎佔滿整個熱搜：GMMTV 快閃店、DewTee 見面會、Freen 的曼谷場，加上一整片 Deepavali 祝福；政治討論裡，Najib 和 1MDB 又回到熱搜。\n\ndigest.json 已寫好：/home/rin/AI/news/digest.json（6 條，跟上面一一對應）。"
- },
- {
-  "job": "SNKRDUNK 卡價",
-  "ts": 1794099636,
-  "text": "SNKRDUNK 變化\n📈 3rd Anniversary Set — ENGLISH\n   最低在售 ¥62,999 → ¥61,800\n📈 3rd Anniversary Set — CHINA\n   在售 54 → 56 件\n   最低在售 ¥43,000 → ¥42,000\n📈 Luffy SEC-SP EB04-061\n   A ¥1,550,000 → ¥1,500,000\n   PSA10 ¥2,100,000 → ¥2,000,000"
- },
- {
-  "job": "CeX 早安",
-  "ts": 1794098825,
-  "text": "昨天 CeX 的動靜：\n\n🆕 新上架\n・AYN Thor 掌機 8 Gen2／128GB（B 級）RM1750\n・PS5《Beast of Reincarnation》（中文版）RM180\n・PS5《Star Wars: Galactic Racer》（英文版）RM180\n・Prism+ F270i PRO 27\" 200Hz 螢幕（C 級）RM340\n\n📉 降價\n・Huawei Watch GT 5 Pro 46mm 鈦金屬（B 級）RM880 → RM650\n・Samsung 990 PRO 1TB NVMe RM800 → RM740\n\n📦 回架\n・Switch OLED 猩紅／紫 主機（開箱品）RM1150\n・Switch Lite 薩爾達金 主機（開箱品）RM675\n・Nintendo 2DS 黑藍（開箱品）RM850\n・Switch 2《薩爾達傳說 時之笛》RM290\n・PS5《Final Fantasy Resonance》（中文版）RM210\n・PS Vita《Gravity Rush》（英文版）RM90\n\n🚫 賣光\n・Switch 2《EA Sports FC 27》RM230\n・Switch 2《The Witch's Bakery》RM150\n・PS4《Call of Duty: Vanguard》RM100\n・Xbox 360《Assassin's Creed Ezio Trilogy》RM50\n・PS3《Ratchet & Clank: Quest for Booty》RM140\n・PS Vita《Deception IV: Blood Ties》RM45"
  },
  {
   "job": "每週維修",
