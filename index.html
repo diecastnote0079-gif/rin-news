@@ -1238,7 +1238,7 @@ async function load(){
       if (fr.ok){ const a = await fr.json(); if (Array.isArray(a) && a.length) feed = new Set(a); }
     } catch(e){}
     try {
-      const nr = await fetch("notes.json?t=" + Date.now(), {cache:"no-store"});
+      const nr = await fetch("notes2.json?t=" + Date.now(), {cache:"no-store"});
       if (nr.ok){ const o = await nr.json(); if (o && typeof o === "object") NOTES = o; }
     } catch(e){}
     try {

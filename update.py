@@ -83,6 +83,16 @@ def main() -> int:
     except Exception as e:
         print("notes guard skipped:", e)
 
+    # 1a-3) notes2.json：index.html 讀這個名字（CDN 會把 notes.json 快取住，
+    # 2026-11-09 因此推不動修正）。每次同步寫一份。
+    try:
+        _src = os.path.join(HERE, "notes.json")
+        if os.path.exists(_src):
+            import shutil as _sh
+            _sh.copyfile(_src, os.path.join(HERE, "notes2.json"))
+    except Exception as e:
+        print("notes2 copy skipped:", e)
+
     # 2) anything to publish?
     if not os.path.isdir(os.path.join(HERE, ".git")):
         print("no git repo here; done (local only)")
@@ -95,7 +105,7 @@ def main() -> int:
     # 3) commit + push
     stamp = datetime.now().strftime("%Y-%m-%d %H:%M")
     sh(["git", "add", "items.json"])
-    for extra in ("feed.json", "notes.json", "notices.json", "status.json", "digest.json", "health.json"):
+    for extra in ("feed.json", "notes.json", "notes2.json", "notices.json", "status.json", "digest.json", "health.json"):
         if os.path.exists(os.path.join(HERE, extra)):
             sh(["git", "add", extra])
     code, out = sh(["git", *GIT_USER, "commit", "-m", f"items: {stamp}"])
