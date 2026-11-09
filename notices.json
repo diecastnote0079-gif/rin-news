@@ -1,8 +1,18 @@
 [
  {
+  "job": "今日新聞",
+  "ts": 1794226634,
+  "text": "📰 今天值得看的\n・4Gamers：寶可夢 球聯賽 4000 戶\n・電撃Hobby：ガンダム VAKIT 食玩\n・Lowyat：特斯拉 2027 年 停產\n・愛范兒：Apple 曝人形機器人 宇樹 G1\n・CyberQ：高盛收回 Claude Code\n・微軟不續約 Oracle AI 算力租約\n\n🔥 今天在討論\n馬來西亞 X 熱搜以 GMMTV 泰國 BL 劇與 K 偶像為主，足球、F1、迪闇節、NVIDIA 黃仁勳風波也很熱。\n\ndigest.json 已寫入 /home/rin/AI/news/digest.json（6 條按上述順序對齊，link 與 ts 來自 items.json 原欄位）。"
+ },
+ {
   "job": "cex 3h",
-  "ts": 1794211705,
-  "text": "健康檢查：20261109160030（範圍 web，77678 筆）\n  ✅ freshness  資料 0.0 小時前抓的\n  ✅ volume     筆數 77678（與上次 77640 差 0.05%）\n  ✅ schema     60 個欄位，與上次指紋一致\n  ✅ quality    77678 筆：主鍵無重複、標價與名稱完整\n  ✅ heartbeat  距上次抓取 3.0 小時（20261109130030 → 20261109160030）\n\n全部正常"
+  "ts": 1794222619,
+  "text": "健康檢查：20261109190030（範圍 web，77693 筆）\n  ✅ freshness  資料 0.0 小時前抓的\n  ✅ volume     筆數 77693（與上次 77678 差 0.02%）\n  ✅ schema     60 個欄位，與上次指紋一致\n  ✅ quality    77693 筆：主鍵無重複、標價與名稱完整\n  ✅ heartbeat  距上次抓取 3.0 小時（20261109160030 → 20261109190030）\n\n全部正常"
+ },
+ {
+  "job": "kl daily brief",
+  "ts": 1794221466,
+  "text": "☀️ 今日 11/09 (Mon)\n\n天氣：24–31°C，最高降雨機率 92%\n　降雨時段：12:00（57%）、13:00（77%）、14:00（90%）、15:00（92%）、16:00（89%）、17:00（84%）\n\nMid Valley 本週活動（9 項）\n・Voicsky by All IT — East Lobby (EEL), Ground Floor\n　9 Nov - 15 Nov 2026\n・GWM Roadshow — Centre Court (CC), Ground Floor\n　11 Nov - 15 Nov 2026\n・BYD Roadshow — North Court (NC), Ground Floor\n　11 Nov - 15 Nov 2026\n・Blackmores by Caring — Centre Court (CC), Lower Ground Floor\n　10 Nov - 15 Nov 2026\n\n\n電子／玩具優惠\n・Sony Centre Plaza Low Yat Reopening Promotion – Save\n　11-09　Lot G-007\n・HOMElove Home Expo: Up to 80% OFF, Air Conditioners \n　11-07→11-09　Sunway Pyramid Conventio\n・DS HOME Home Appliance Sale & Promotion at @HOMElove\n　11-07→11-09　Sunway Pyramid Conventio\n・Big Bad Wolf Books The Wolf Den Sale\n　11-07→11-09\n・PRISM+ Malaysia 11.11 TV Sale – Enjoy Up to RM800 Sa\n　11-01→11-09\n・Switch Malaysia Apple TikTok LIVE Sale Promotion – E\n　11-10→11-11\n\n倉庫特賣／清倉\n・Dreamland Mattress Warehouse Sale\n　11-05–11-22\n・adidas Factory Outlet Special Promotion – Buy 2 at 50% Off\n　11-06–11-09　Mitsui Outlet Park KLIA Se\n・REFASH Malaysia 11.11 Clearance Sale – All Preloved Fashio\n　11-09–11-16\n\n優惠（節錄）\n・Ace Cards & Collectibles：Try your luck with the acecards Lucky Scratch event! Re"
  },
  {
   "job": "記憶審計",
@@ -43,11 +53,6 @@
   "job": "生活記錄",
   "ts": 1794164721,
   "text": "I stopped retrying because I kept running tool_call 8 times without making progress. The last result above shows what blocked it. Tell me how you'd like to proceed, or send `continue` and I'll try a different approach."
- },
- {
-  "job": "今日新聞",
-  "ts": 1794139309,
-  "text": "📰 今天值得看的\n・EGS 限免復古競速《GMH》，明早 7 點前領\n・《哥吉拉-0.0》基多拉回歸，靈感來自貓打架\n・《獵人》克洛洛披風版 Grandista 景品\n・WhatsApp 測試自選：誰看得到你號碼\n・Claude Code 省一步，千個公開 repo 洩密\n・美國准 H200 銷中國，獲批公司是空屋\n\n🔥 今天在討論\n泰劇和 K-pop 粉絲今天幾乎佔滿整個熱搜：GMMTV 快閃店、DewTee 見面會、Freen 的曼谷場，加上一整片 Deepavali 祝福；政治討論裡，Najib 和 1MDB 又回到熱搜。\n\ndigest.json 已寫好：/home/rin/AI/news/digest.json（6 條，跟上面一一對應）。"
  },
  {
   "job": "每週維修",
