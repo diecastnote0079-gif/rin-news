@@ -1,5 +1,20 @@
 [
  {
+  "job": "doc reconcile",
+  "ts": 1794254131,
+  "text": "【文件 vs 現況 對帳】\n • 手機頁資料 5.8 小時前（上限 5）：2026-11-09T14:09:08Z\n • 本機最後一輪 5.8 小時前（20261109220030）"
+ },
+ {
+  "job": "pending review nightly",
+  "ts": 1794254022,
+  "text": "處理完畢，報告如下：\n\n落了 3 條：\n1) 兩台主機入口那條記錄一併修了——客戶端隔離實測未生效（掃 /24 得 8 台，2026-11-08），Windows 板與 rin-box 硬體資料寫進去。\n2) 使用者偏好收束：股票外匯只做 Alpaca paper，不投真錢；短炒練判斷，主張不止损、跌了加倉攤平、藍籌看長線。\n3) 過時筆記清理：X 帖文抓取笔记（api.fxtwitter.com）已失效，删掉。\n\n丢了 9 條：全部是重複、換說或同 dreaming 已有（客戶端隔離同句反覆、mall 細節、news 第三頁狀態頁、pre_tool_call 通行證、電話/遊戲/APP 點子等），加上這輪寫完 memory 已跑到 2,195/2,200，放不下。\n\n水位：memory 2,195/2,200（99.8%），user 1,333/1,375（96.9%）；memory 已接近上限，本次不再新增。17 筆 pending 文件均已移到 memory.archive，用 sweep 結束（0 筆殘留）。"
+ },
+ {
+  "job": "生活記錄",
+  "ts": 1794251118,
+  "text": "寫了 5 條到 fact_store。\n\n**依據**：用 python sqlite3 讀 `/home/rin/.hermes/state.db` 的 `messages` 表，篩出 `role='user'` 且 `timestamp > now-86400` 的 305 條訊息，支援馬來西亞時間（UTC+8），時間跨度 2026-11-09 03:45 至 2026-11-10 03:00。`sqlite3` CLI 不在 PATH，改用 python3 讀取。\n\n**取法**：剔除已知的任務訊息（Carousell 玩具過濾器模板、CeX 查詢、商場平面圖、API/插件討論），只留「生活面」：\n- 整天在逛 Carousell 整理二手遊戲清單，傍晚才提到每天去的地方固定；\n- 抱怨商場資料更新很快、很麻煩，催要 cleanup 與倉庫活動；\n- 耳機幾次使用後修好；\n- 聊 AI 只感到「疲憊感」，不是明確要答案；\n- 23:52 連續追問我最好看的女人長什麼樣子，但隨即收回。\n\n**注意**：訊息中包含大量性暗示/角色扮演的床線，但都不屬「非任務生活事實」，我沒有記錄。也沒有看到「不許記下」或拒絕的跡象，所以沒有整晚跳過。"
+ },
+ {
   "job": "今日新聞",
   "ts": 1794226634,
   "text": "📰 今天值得看的\n・4Gamers：寶可夢 球聯賽 4000 戶\n・電撃Hobby：ガンダム VAKIT 食玩\n・Lowyat：特斯拉 2027 年 停產\n・愛范兒：Apple 曝人形機器人 宇樹 G1\n・CyberQ：高盛收回 Claude Code\n・微軟不續約 Oracle AI 算力租約\n\n🔥 今天在討論\n馬來西亞 X 熱搜以 GMMTV 泰國 BL 劇與 K 偶像為主，足球、F1、迪闇節、NVIDIA 黃仁勳風波也很熱。\n\ndigest.json 已寫入 /home/rin/AI/news/digest.json（6 條按上述順序對齊，link 與 ts 來自 items.json 原欄位）。"
@@ -33,21 +48,6 @@
   "job": "AI 工具日報",
   "ts": 1794182677,
   "text": "# 2026-11-09（週一）AI 工具日報\n\n**1. Hermes 0.23.0「Hearth」** — 什麼：整個桌面工作空間用自己的 gateway 開在瀏覽器 Tab，CLI、TUI、桌面、機器人、cron 歸一；終端機可行內顯示圖片、可倒回對話。\n- 我們：小主機跑 Hermes、Telegram 監控、生圖都靠得更近；機器人也能由 gateway 綁帳號跑，推群組時更省事。\n- 結論：值得試。\n\n**2. OpenCode 2.2** — 什麼：/goal 目標模式、可選 image_generate 圖片生成功能、用 Claude Code 登入的 Claude Agent 提供者；2 版升級把舊 1 版插件生態拆了。\n- 我們：RTX 3070 Ti 8GB 生圖能交給 agent 跑；但係 2 版新生態，舊 1 版方式不能用，得照安裝文搞定。\n- 結論：值得試（二選一）。\n\n**3. 免費 API 入口更新** — 什麼：UnoRouter 等自由 API 站又收了 Solar Pro4、Solar Mini4、GPT 5.6 Luna、Claude Haiku 4.5、DeepSeek、Qwen 3.7 Flash 等，已列 279 個模型。\n- 我們：股票、新聞、商品監控這類低成本任務，可能有更便宜入口；但價格、額度、賬號審核天天變，沒人敢訂。\n- 結論：觀察就好。\n\n**4. GitHub 熱門：NVIDIA/auto-ontology** — 什麼：把資料建成語義圖，讓 agent 做可判斷的查詢生成查資料，而不再只靠向量相似度。\n- 我們：股票與新聞資料庫可慢慢把索引做成圖，未來查詢會更穩；但現在不動正式庫，先看懂它怎麼索引。\n- 結論：觀察就好。\n\n**5. GitHub 熱門：vercel-labs/agent-browser** — 什麼：AI agent 操瀏覽器的 CLI，能打開頁面、截圖、排程動作。\n- 我們：還是 CeX／Carousell 以跑腳手動為主，這是備選；若之後想把「看網頁→比價→入手」自動化，比自己寫 Playwright 更現成。\n- 結論：值得試（備選，不急）。\n\n來源：Github releases、OpenCode Changelog、llmperks 免費 API 清單、GitHub trending（11/3～11/6）。  \n（懶得翻英文釋字的話，就看上面三個結論，告訴我想試哪一個。）"
- },
- {
-  "job": "doc reconcile",
-  "ts": 1794167731,
-  "text": "【文件 vs 現況 對帳】\n • 手機頁資料 5.8 小時前（上限 5）：2026-11-08T14:09:02Z\n • 本機最後一輪 5.8 小時前（20261108220030）"
- },
- {
-  "job": "pending review nightly",
-  "ts": 1794167728,
-  "text": "寫 0 條、丟 0 條。\n\n記憶工具這次一次都沒落：04ce94a6 的「客戶端隔離修正」patch 4 次匹配失敗（找不到對應 entry），批次全反轉，連帶 NIKKE 收菜與省 token 2 個新增也沒寫。目前水位仍 2,085/2,200 沒變；pending 檔案未動。這塊卡住了，等您要我重試或改法。"
- },
- {
-  "job": "生活記錄",
-  "ts": 1794164721,
-  "text": "I stopped retrying because I kept running tool_call 8 times without making progress. The last result above shows what blocked it. Tell me how you'd like to proceed, or send `continue` and I'll try a different approach."
  },
  {
   "job": "每週維修",
