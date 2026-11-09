@@ -1239,7 +1239,14 @@ async function load(){
     } catch(e){}
     try {
       const nr = await fetch("notes2.json?t=" + Date.now(), {cache:"no-store"});
-      if (nr.ok){ const o = await nr.json(); if (o && typeof o === "object") NOTES = o; }
+      if (nr.ok){ const o = await nr.json();
+          if (o && typeof o === "object"){
+            // 2026-11-09：curate 模型曾把 29 條 link 全寫成同一句，前端全部同標題。
+            // 同一句重複 >3 次就當壞資料丟掉，退回 zh／原標題。
+            const cnt = {}; Object.values(o).forEach(v => cnt[v] = (cnt[v]||0)+1);
+            Object.keys(o).forEach(k => { if (cnt[o[k]] > 3) delete o[k]; });
+            NOTES = o;
+          } }
     } catch(e){}
     try {
       const tr = await fetch("notices.json?t=" + Date.now(), {cache:"no-store"});
