@@ -1510,5 +1510,13 @@ loadHealth();
   clr.addEventListener('click',()=>{ inp.value=''; run(); inp.focus(); });
 })();
 </script>
+<script>
+/* 2026-11-09：舊版 service worker 會把舊頁留在手機上（改版後仍看到舊標題），
+   這裡主動移除所有 SW 與快取。本站資料每次上網抓，不需要離線殼。 */
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.getRegistrations().then(rs => rs.forEach(r => { try { r.unregister(); } catch (e) {} }));
+  if (window.caches && caches.keys) caches.keys().then(ks => ks.forEach(k => caches.delete(k)));
+}
+</script>
 </body>
 </html>

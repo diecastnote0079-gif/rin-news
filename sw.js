@@ -1,62 +1,20 @@
-// Service worker: 離線時給上一次的 items.json，線上永遠拿新的。
-// 策略：items.json = network-first（逾時才 fallback）；其餘靜態 = stale-while-revalidate。
-const CACHE = "rin-news-v26";
-const SHELL = ["./", "./index.html", "./manifest.json", "./icon.svg"];
+// 2026-11-09 停用 service worker（自我移除）。
+// 原因：舊版 SW 把舊 index.html 留在手機上，改版後仍看到舊頁
+//（實例：搜尋結果每一列都顯示同一個標題）。本站資料每次上網抓，
+// 離線快取的價值遠低於「看到舊頁」的代價。
+self.addEventListener("install", () => self.skipWaiting());
 
-self.addEventListener("install", e => {
-  e.waitUntil(caches.open(CACHE).then(c => c.addAll(SHELL)).then(() => self.skipWaiting()));
-});
-
-self.addEventListener("activate", e => {
-  e.waitUntil(
-    caches.keys().then(keys => Promise.all(keys.filter(k => k !== CACHE).map(k => caches.delete(k))))
-      .then(() => self.clients.claim())
-  );
-});
-
-self.addEventListener("fetch", e => {
-  const url = new URL(e.request.url);
-  if (e.request.method !== "GET") return;
-
-  // 資料檔：先網路（3.5 秒逾時），失敗才用快取
-  if (url.pathname.endsWith("/items.json")) {
-    e.respondWith((async () => {
-      try {
-        const fresh = await Promise.race([
-          fetch(e.request, { cache: "no-store" }),
-          new Promise((_, rej) => setTimeout(() => rej(new Error("timeout")), 3500)),
-        ]);
-        const c = await caches.open(CACHE);
-        c.put(e.request, fresh.clone());
-        return fresh;
-      } catch {
-        const cached = await caches.match(e.request);
-        return cached || new Response('{"items":[],"cats":[]}', { headers: { "Content-Type": "application/json" } });
-      }
-    })());
-    return;
-  }
-
-  // HTML：先網路（改版要立刻看到，不能先給舊快取）
-  if (url.pathname === "/" || url.pathname.endsWith(".html")) {
-    e.respondWith((async () => {
-      try {
-        const fresh = await fetch(e.request, { cache: "no-store" });
-        const c = await caches.open(CACHE);
-        c.put(e.request, fresh.clone());
-        return fresh;
-      } catch {
-        return (await caches.match(e.request)) || new Response("", { status: 504 });
-      }
-    })());
-    return;
-  }
-
-  // 其他靜態資源：先給快取，背景更新
-  e.respondWith((async () => {
-    const c = await caches.open(CACHE);
-    const cached = await c.match(e.request);
-    const net = fetch(e.request).then(r => { c.put(e.request, r.clone()); return r; }).catch(() => null);
-    return cached || (await net) || new Response("", { status: 504 });
+self.addEventListener("activate", (e) => {
+  e.waitUntil((async () => {
+    try {
+      const keys = await caches.keys();
+      await Promise.all(keys.map((k) => caches.delete(k)));
+    } catch (err) {}
+    try { await self.registration.unregister(); } catch (err) {}
+    const cs = await self.clients.matchAll({ type: "window" });
+    for (const c of cs) { try { c.navigate(c.url); } catch (err) {} }
   })());
 });
+
+// 不再攔截任何請求
+self.addEventListener("fetch", () => {});
