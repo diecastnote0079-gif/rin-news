@@ -1,5 +1,10 @@
 [
  {
+  "job": "AI 工具日報",
+  "ts": 1794182677,
+  "text": "# 2026-11-09（週一）AI 工具日報\n\n**1. Hermes 0.23.0「Hearth」** — 什麼：整個桌面工作空間用自己的 gateway 開在瀏覽器 Tab，CLI、TUI、桌面、機器人、cron 歸一；終端機可行內顯示圖片、可倒回對話。\n- 我們：小主機跑 Hermes、Telegram 監控、生圖都靠得更近；機器人也能由 gateway 綁帳號跑，推群組時更省事。\n- 結論：值得試。\n\n**2. OpenCode 2.2** — 什麼：/goal 目標模式、可選 image_generate 圖片生成功能、用 Claude Code 登入的 Claude Agent 提供者；2 版升級把舊 1 版插件生態拆了。\n- 我們：RTX 3070 Ti 8GB 生圖能交給 agent 跑；但係 2 版新生態，舊 1 版方式不能用，得照安裝文搞定。\n- 結論：值得試（二選一）。\n\n**3. 免費 API 入口更新** — 什麼：UnoRouter 等自由 API 站又收了 Solar Pro4、Solar Mini4、GPT 5.6 Luna、Claude Haiku 4.5、DeepSeek、Qwen 3.7 Flash 等，已列 279 個模型。\n- 我們：股票、新聞、商品監控這類低成本任務，可能有更便宜入口；但價格、額度、賬號審核天天變，沒人敢訂。\n- 結論：觀察就好。\n\n**4. GitHub 熱門：NVIDIA/auto-ontology** — 什麼：把資料建成語義圖，讓 agent 做可判斷的查詢生成查資料，而不再只靠向量相似度。\n- 我們：股票與新聞資料庫可慢慢把索引做成圖，未來查詢會更穩；但現在不動正式庫，先看懂它怎麼索引。\n- 結論：觀察就好。\n\n**5. GitHub 熱門：vercel-labs/agent-browser** — 什麼：AI agent 操瀏覽器的 CLI，能打開頁面、截圖、排程動作。\n- 我們：還是 CeX／Carousell 以跑腳手動為主，這是備選；若之後想把「看網頁→比價→入手」自動化，比自己寫 Playwright 更現成。\n- 結論：值得試（備選，不急）。\n\n來源：Github releases、OpenCode Changelog、llmperks 免費 API 清單、GitHub trending（11/3～11/6）。  \n（懶得翻英文釋字的話，就看上面三個結論，告訴我想試哪一個。）"
+ },
+ {
   "job": "doc reconcile",
   "ts": 1794167731,
   "text": "【文件 vs 現況 對帳】\n • 手機頁資料 5.8 小時前（上限 5）：2026-11-08T14:09:02Z\n • 本機最後一輪 5.8 小時前（20261108220030）"
@@ -33,11 +38,6 @@
   "job": "CeX 早安",
   "ts": 1794098825,
   "text": "昨天 CeX 的動靜：\n\n🆕 新上架\n・AYN Thor 掌機 8 Gen2／128GB（B 級）RM1750\n・PS5《Beast of Reincarnation》（中文版）RM180\n・PS5《Star Wars: Galactic Racer》（英文版）RM180\n・Prism+ F270i PRO 27\" 200Hz 螢幕（C 級）RM340\n\n📉 降價\n・Huawei Watch GT 5 Pro 46mm 鈦金屬（B 級）RM880 → RM650\n・Samsung 990 PRO 1TB NVMe RM800 → RM740\n\n📦 回架\n・Switch OLED 猩紅／紫 主機（開箱品）RM1150\n・Switch Lite 薩爾達金 主機（開箱品）RM675\n・Nintendo 2DS 黑藍（開箱品）RM850\n・Switch 2《薩爾達傳說 時之笛》RM290\n・PS5《Final Fantasy Resonance》（中文版）RM210\n・PS Vita《Gravity Rush》（英文版）RM90\n\n🚫 賣光\n・Switch 2《EA Sports FC 27》RM230\n・Switch 2《The Witch's Bakery》RM150\n・PS4《Call of Duty: Vanguard》RM100\n・Xbox 360《Assassin's Creed Ezio Trilogy》RM50\n・PS3《Ratchet & Clank: Quest for Booty》RM140\n・PS Vita《Deception IV: Blood Ties》RM45"
- },
- {
-  "job": "AI 工具日報",
-  "ts": 1794096129,
-  "text": "**AI 工具日報 · 11/08**\n\n**1. Hermes Agent v0.23.0「Hearth」（11/5 發布，含 0.22.1–0.22.7 全部內容）**\n・這版把 CLI／TUI／桌面／bot／cron 全部收進同一個 gateway，每個 session 只有一個主人；桌面工作區改由自己的 gateway 開在瀏覽器分頁；插件會自己更新；內建技能砍掉一批。\n・對我們：我們正好就是長駐 gateway＋Telegram＋cron 這套用法，「一個 session 只能有一個主人」直接決定 cron 和 TG 看到的是不是同一段對話；插件自動更新＝我的工具會自己換版本。\n・結論：值得試——但挑你在線時再升，升完先跑一次 cron，看有沒有重複回話。\n\n**2. Claude Code「不再詢問」洩密事件（Apiiro 11/6 公布）**\n・你按「是，不要再問」的那條指令，會被原文寫進專案的 .claude/settings.local.json，連裡面的密碼、token 一起；10 萬個公開 repo 裡有 1,122 個中標、1,379 組秘密，gitleaks 和 TruffleHog 各漏掉一半。\n・對我們：新聞站是公開 repo，而「approval 規則連指令一起落地」不是 Claude Code 專屬的毛病，任何 agent 都可能犯同樣的事。\n・結論：值得試——找一天掃我們公開 repo（含 git 歷史）有沒有帶 token 的設定檔，順手把 .gitignore 補死。\n\n**3. billion-context（今日 GitHub trending，4.6k★，+191/日）**\n・卡在 agent 和模型 API 中間的上下文壓縮代理，聲稱省 5 倍 token，還有現成的 `bili hermes` 啟動器。\n・對我們：省 token 正中你的痛點，但它要 MITM 全部 API 流量（金鑰都經過它），也可能打亂 opencode-go 的 prompt cache。\n・結論：觀察就好，等有人拿我們的 provider 實測過再說。\n\n**4. ComfyUI 0.44.0（11/4）＋ P-H3-Image（11/3）**\n・ComfyUI 這版原生支援 MiniMax-H3 與 P-H3-Image、多了 ProRes 輸出；P-H3 標榜 8 步生 4MP。\n・對我們：P-H3 連 4-bit 都要 21GB VRAM，3070 Ti 8GB 直接出局；這週生圖圈的新東西（Krea 3、H3 Dials、P-H3）門檻全在 16GB 以上。\n・結論：不用管——8GB 這條線這週沒有值得追的東西。"
  },
  {
   "job": "每週維修",
