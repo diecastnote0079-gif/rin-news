@@ -65,6 +65,24 @@ def main() -> int:
     except Exception as e:
         print("health build skipped:", e)
 
+    # 1a-2) notes.json 守門：curate 模型偶爾把所有 link 寫成同一句（2026-11-09 實際發生，
+    # 前端每一列都顯示同一個標題）。重複率過高就整個作廢，退回 items 的 zh／原標題。
+    try:
+        np = os.path.join(HERE, "notes.json")
+        if os.path.exists(np):
+            import json as _json
+            with open(np, encoding="utf-8") as _f:
+                _n = _json.load(_f)
+            if isinstance(_n, dict) and len(_n) >= 5:
+                vals = list(_n.values())
+                top = max(vals.count(v) for v in set(vals))
+                if top / len(vals) > 0.5:
+                    with open(np, "w", encoding="utf-8") as _f:
+                        _json.dump({}, _f, ensure_ascii=False)
+                    print(f"notes.json 異常（{top}/{len(vals)} 條重複），已清空退回原標題")
+    except Exception as e:
+        print("notes guard skipped:", e)
+
     # 2) anything to publish?
     if not os.path.isdir(os.path.join(HERE, ".git")):
         print("no git repo here; done (local only)")
