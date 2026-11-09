@@ -73,13 +73,47 @@ FEEDS = [
     # 2026-10-30 第三輪：他要「AI 圈新東西、新 project、新用法」
     ("CyberQ",        "ai",       "https://cyberq.tw/feed/"),
     ("GN·AI",         "ai",       _gn("AI 模型 開源 專案 GitHub 工具")),
+    # 2026-11-05 他要 arXiv、Hacker News、GitHub Trending 三源。
+    # 都是英文、量大、雜訊多——抓進來先用關鍵詞在 fetch 階段砍一輪，
+    # 剩下的交給 08:00／16:00 的 news-curate-feed（會寫中文一句進 notes.json）。
+    ("Hacker News",     "ai",  "https://hnrss.org/best?points=150"),
+    ("arXiv",           "ai",  "http://export.arxiv.org/api/query?"
+                                "search_query=cat:cs.AI+OR+cat:cs.CL+OR+cat:cs.LG"
+                                "&sortBy=submittedDate&sortOrder=descending&max_results=40"),
+    ("GitHub Trending", "dev", "https://mshibanami.github.io/GitHubTrendingRSS/daily/all.xml"),
 ]
+
+# 每個來源進 items.json 前的關鍵詞門檻（零 token）。命中標題或摘要任一才留。
+# arXiv／HN 的雜訊不是「壞新聞」，是「跟他沒關係」：理論論文、SSH 漏洞、冷門語言專案。
+FILTERS = {
+    "Hacker News": [
+        "llm", " ai", "ai ", "agent", "model", "inference", "gpu", "local", "open source",
+        "open-source", "coding", "developer", "python", "cli", "terminal",
+        "sqlite", "database", "context", "memory", "embedding", "quantiz",
+        "llama", "qwen", "deepseek", "gemini", "claude", "gpt", "diffusion", "image gen",
+        "video gen", "comfy", "llama.cpp", "vllm", "mcp", "tool use", "rag",
+    ],
+    "arXiv": [
+        "agent", "agentic", "tool use", "tool-use", "memory", "retrieval", "rag",
+        "inference", "efficient", "quantiz", "distill", "small language", "on-device",
+        "long context", "multi-agent", "web agent", "computer use", "code generation",
+        "diffusion", "image generation", "video generation", "reward model",
+        "benchmark", "evaluation", "prompt",
+    ],
+    "GitHub Trending": [
+        "llm", "ai", "agent", "model", "inference", "rag", "mcp", "prompt", "llama",
+        "qwen", "deepseek", "diffusion", "image", "video", "comfy", "training", "lora",
+        "fine-tun", "embedding", "vector", "context", "memory", "cli", "terminal",
+        "automation", "workflow", "scrap", "browser", "skill", "coding",
+    ],
+}
 
 CATS = [
     ("all",      "全部"),
     ("game",     "遊戲"),
     ("tech",     "科技"),
     ("ai",       "AI"),
+    ("dev",      "開發"),
     ("toy",      "玩具模型"),
     ("hype",     "炒賣"),
     ("local",    "本地"),
@@ -89,7 +123,7 @@ CATS = [
 ]
 
 UA = "HermesRin-news/1.0 (+local reader)"
-DEFAULT_OUT = r"D:\AI\news"
+DEFAULT_OUT = os.path.dirname(os.path.abspath(__file__))
 
 
 def clean(s: str) -> str:
@@ -251,6 +285,102 @@ def fetch_gnews(url: str, limit: int):
     return rows[:limit]
 
 
+def hn_meta(link: str) -> dict:
+    """HN 的 RSS description 只有「Comments URL」——沒有分數、沒有摘要，
+    篩選模型等於只看得到標題。改用 Firebase API 補齊分數與討論數。"""
+    m = re.search(r"id=(\d+)", link or "")
+    if not m:
+        return {}
+    try:
+        req = urllib.request.Request(f"https://hacker-news.firebaseio.com/v0/item/{m.group(1)}.json",
+                                     headers={"User-Agent": UA})
+        with urllib.request.urlopen(req, timeout=10) as r:
+            d = json.load(r)
+        url = d.get("url") or ""
+        host = re.sub(r"^www\.", "", url.split("/")[2]) if "://" in url else ""
+        return {"score": d.get("score", 0), "comments": d.get("descendants", 0), "host": host}
+    except Exception:
+        return {}
+
+
+_gh_tok_cache = {}
+
+
+def gh_meta(full_name: str) -> dict:
+    """GitHub Trending 只有 repo 名＋README 第一句，沒有星數。補一次 repo API。"""
+    if not full_name or "/" not in full_name:
+        return {}
+    if "tok" not in _gh_tok_cache:
+        tok = ""
+        _env = os.path.join(os.environ.get("HERMES_HOME") or os.path.expanduser("~/.hermes"), ".env")
+        for p in (_env,):
+            try:
+                with open(p, encoding="utf-8", errors="ignore") as f:
+                    for line in f:
+                        if line.strip().startswith("GITHUB_TOKEN"):
+                            tok = line.split("=", 1)[1].strip().strip('"').strip("'")
+                            break
+            except OSError:
+                pass
+            if tok:
+                break
+        _gh_tok_cache["tok"] = tok or os.environ.get("GITHUB_TOKEN", "")
+    h = {"User-Agent": UA, "Accept": "application/vnd.github+json"}
+    tok = _gh_tok_cache["tok"]
+    if tok:
+        h["Authorization"] = f"Bearer {tok}"
+    try:
+        req = urllib.request.Request(f"https://api.github.com/repos/{full_name}", headers=h)
+        with urllib.request.urlopen(req, timeout=10) as r:
+            d = json.load(r)
+        return {"stars": d.get("stargazers_count", 0), "lang": d.get("language") or "",
+                "pushed": (d.get("pushed_at") or "")[:10], "desc": (d.get("description") or "")[:160]}
+    except Exception:
+        return {}
+
+
+def fetch_hn(limit: int = 30):
+    """Hacker News 走 Firebase 官方 API，不用 hnrss（實測經常 502）。
+
+    topstories 給 id 清單，逐條取 item：分數、討論數、原文網域。
+    RSS 的 description 只有一條「Comments URL」，篩選模型等於只看得到標題。
+    """
+    base = "https://hacker-news.firebaseio.com/v0"
+    out = []
+    try:
+        req = urllib.request.Request(f"{base}/topstories.json", headers={"User-Agent": UA})
+        with urllib.request.urlopen(req, timeout=15) as r:
+            ids = json.load(r)
+    except Exception:
+        return out
+    for i in ids[:70]:
+        if len(out) >= limit:
+            break
+        try:
+            req = urllib.request.Request(f"{base}/item/{i}.json", headers={"User-Agent": UA})
+            with urllib.request.urlopen(req, timeout=10) as r:
+                d = json.load(r)
+        except Exception:
+            continue
+        if not d or d.get("type") != "story" or d.get("dead") or d.get("deleted"):
+            continue
+        score = d.get("score") or 0
+        if score < 150:
+            continue
+        url = d.get("url") or ""
+        host = re.sub(r"^www\.", "", url.split("/")[2]) if "://" in url else ""
+        bits = [f"{score} 分", f"{d.get('descendants') or 0} 則討論"]
+        if host:
+            bits.append(host)
+        ts = d.get("time")
+        out.append((clean(d.get("title") or ""),
+                    url or f"https://news.ycombinator.com/item?id={i}",
+                    " · ".join(bits),
+                    datetime.fromtimestamp(ts, tz=timezone.utc) if ts else None,
+                    ""))
+    return out
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--limit", type=int, default=12)
@@ -261,7 +391,11 @@ def main() -> int:
     for name, cat, url in FEEDS:
         is_gn = "news.google.com" in url
         try:
-            rows = fetch_gnews(url, a.limit) if is_gn else fetch(url, a.limit)
+            lim = 40 if name in ("arXiv", "GitHub Trending", "Hacker News") else a.limit
+            if name == "Hacker News":
+                rows = fetch_hn(lim)
+            else:
+                rows = fetch_gnews(url, lim) if is_gn else fetch(url, lim)
         except Exception:
             failed.append(name)
             continue
@@ -273,8 +407,38 @@ def main() -> int:
                 real_src = ""
             if not title or not link:
                 continue
-            if name in ("Hermes", "ComfyUI") and ("/ru/" in link or "/zh/" in link):
+            # GitHub Trending 的 RSS 沒有逐條 pubDate（只有 channel 的）→ 當成「今天」
+            if not d and name == "GitHub Trending":
+                d = datetime.now(timezone.utc)
+            # 同一則新聞的多語言版本（mlllm 有英／俄、GitHub release 有 ru/zh 翻譯頁）：只留英文
+            if ("/ru/" in link or "/zh/" in link) and name in ("Hermes", "ComfyUI", "mlllm"):
                 continue                        # GitHub release 的翻譯頁
+            # 過濾要用「清洗前」的完整摘要判斷，否則 GitHub 只留第一句會把關鍵詞砍掉
+            blob = f"{title} {summary}".lower()
+            # HN：已經由 fetch_hn() 給了「分數 · 討論數 · 網域」就不再處理
+            if name == "Hacker News" and not re.search(r"\d+ 分", summary):
+                summary = re.sub(r"Article URL:\s*\S+", "", summary)
+                summary = re.sub(r"Comments URL:\s*\S+", "", summary)
+                summary = re.sub(r"(Points|Comments):\s*\d+", "", summary)
+                summary = re.sub(r"^\s*Comments\s*$", "", summary).strip()
+            # GitHub Trending 的 description 是整段 README，只留第一句
+            if name == "GitHub Trending":
+                m = re.match(r"(.{40,220}?[.。!?！？])\s", summary)
+                if m:
+                    summary = m.group(1)
+                meta = gh_meta(title)
+                if meta:
+                    head = f"⭐{meta['stars']}"
+                    if meta.get("lang"):
+                        head += f" · {meta['lang']}"
+                    if meta.get("pushed"):
+                        head += f" · 最後更新 {meta['pushed']}"
+                    summary = f"{head}｜{meta.get('desc') or summary}"
+
+            words = FILTERS.get(name)
+            if words:
+                if not any(w in blob for w in words):
+                    continue
             items.append({
                 "source": real_src or name, "cat": cat, "title": title, "link": link,
                 "summary": summary, "img": img,
