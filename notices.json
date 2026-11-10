@@ -1,8 +1,13 @@
 [
  {
   "job": "cex 3h",
-  "ts": 1794298163,
-  "text": "健康檢查：20261110160030（範圍 web，77729 筆）\n  ✅ freshness  資料 0.0 小時前抓的\n  ✅ volume     筆數 77729（與上次 77712 差 0.02%）\n  ✅ schema     60 個欄位，與上次指紋一致\n  ✅ quality    77729 筆：主鍵無重複、標價與名稱完整\n  ✅ heartbeat  距上次抓取 3.0 小時（20261110130030 → 20261110160030）\n\n全部正常"
+  "ts": 1794308986,
+  "text": "健康檢查：20261110190030（範圍 web，77740 筆）\n  ✅ freshness  資料 0.0 小時前抓的\n  ✅ volume     筆數 77740（與上次 77729 差 0.01%）\n  ✅ schema     60 個欄位，與上次指紋一致\n  ✅ quality    77740 筆：主鍵無重複、標價與名稱完整\n  ✅ heartbeat  距上次抓取 3.0 小時（20261110160030 → 20261110190030）\n\n全部正常"
+ },
+ {
+  "job": "AI 工具日報",
+  "ts": 1794305613,
+  "text": "AI 日報 · 11/10\n\n【AI 工具】\n・Hermes Agent v0.23.0（Hearth，11/5）\n　這一版把所有對話都交給同一個 gateway 管理（CLI、Telegram、Desktop、cron 都連到它），並把整個桌面工作區開在瀏覽器分頁裡。\n　對我們：以前 CLI、bot、cron 各跑一份 agent，才會出現訊息重複寫或漏掉；這版改掉的就是這個問題；另外 plugin 可自動更新、付費 MCP 會先報價再花錢。\n　結論：值得試，但先確認 skills 與 cron 沒被搬位置（有些舊功能已移出核心、改成插件）。\n・OpenCode v2.2.6（11/6）\n　`opencode run -w` 可以在新的 git worktree 裡跑腳本化任務、`--archived` 讓 CI 場次不塞進列表，MCP 連線也改成共用。\n　對我們：我們只是用 opencode-go 當模型供應商，不常開 OpenCode 介面，這幾項對現有流程沒動到。\n　結論：觀察就好。\n・Observer（開源，全本機跑）\n　盯螢幕、鏡頭、麥克風的本地 agent，條件成立就發 Telegram 通知（「補貨了」、「晚上渲染掛了」這類）。\n　對我們：CeX 有 API 用不到它，但「要看畫面才知道」的場景（包裹、印表機、Shopee 頁面變動）它能補上，前提是 3070 Ti 跑得動小號視覺模型。\n　結論：值得試，先挑一個場景就好。\n・Kimi-K3.1-Pro 開源權重 ＋ llama.cpp 的 llama_moe_cache 補丁\n　前者又是一個大模型放權重，後者是讓 MoE 模型「沒用到的專家丟去 CPU 跑」，直接正對消費級顯卡記憶體不足。\n　對我們：K3.1 那種規模 8GB 一定跑不動；llama_moe_cache 真的併進主線，才輪到 5800H＋3070 Ti 去碰 30B 級 MoE。\n　結論：觀察就好（PR 還沒合併）。\n・RuView（GitHub 今日熱門）\n　拿 Wi-Fi 訊號（ESP32 抓 CSI）判斷有沒有人、在呼吸還是在動，完全不用鏡頭。\n　對我們：比你現在 ping 192.168.0.9 多的是「在哪一間、有沒有動靜」，代價是要買 ESP32 而且 CSI 得在這台機上調。\n　結論：觀察就好，現有 ping 夠用。\n\n【🔧 新奇專案】\n・ldraw-mecha\n　丟一個 LDraw 樂高模型給 agent，它自己反推齒輪與連桿，再吐 Blender 骨架和動畫（範例是 Fabuland 飛機起飛，570 幀成品）。\n　有趣：等於讓 AI 讀懂樂高說明書裡的機構，靜態模型直接變會動的，開 Blender 就能玩。\n・watched.earth\n　輸入任一個地點，列出過去 7 天飛過上空的每一顆衛星，並附上它們真"
  },
  {
   "job": "SNKRDUNK 卡價",
@@ -23,11 +28,6 @@
   "job": "kl daily brief",
   "ts": 1794270660,
   "text": "☀️ 今日 11/10 (Tue)\n\n天氣：24–30°C，最高降雨機率 98%\n　降雨時段：13:00（63%）、14:00（86%）、15:00（95%）、16:00（98%）、17:00（98%）、18:00（97%）\n\nMid Valley 本週活動（8 項）\n・Voicsky by All IT — East Lobby (EEL), Ground Floor\n　9 Nov - 15 Nov 2026\n・GWM Roadshow — Centre Court (CC), Ground Floor\n　11 Nov - 15 Nov 2026\n・BYD Roadshow — North Court (NC), Ground Floor\n　11 Nov - 15 Nov 2026\n・Blackmores by Caring — Centre Court (CC), Lower Ground Floor\n　10 Nov - 15 Nov 2026\n\n\n電子／玩具優惠\n・Switch Malaysia Apple TikTok LIVE Sale Promotion – E\n　11-10→11-11\n・DDPAI Malaysia 11.11 Biggest Sale – Up to 40% OFF St\n　11-10→11-11　Shopee Official Store\n・OPPO 11.11 Shopee Sale – OPPO Pad 3 Now RM1,599 with\n　11-08→11-11\n・Harvey Norman Malaysia: The Beat Kiara Bay 1st Anniv\n　11-05→11-11\n・Inter-Asia Technology 11.11 Sale on Shopee Mall Mala\n　11-01→11-11\n・Brightstar Computer 11.11 Clearance Giler Sale – Fla\n　11-09→11-12\n\n倉庫特賣／清倉\n・Dreamland Mattress Warehouse Sale\n　11-05–11-22\n・REFASH Malaysia 11.11 Clearance Sale – All Preloved Fashio\n　11-09–11-16\n\n優惠（節錄）\n・Ace Cards & Collectibles：Try your luck with the acecards Lucky Scratch event! Receive one scrat"
- },
- {
-  "job": "AI 工具日報",
-  "ts": 1794269063,
-  "text": "# AI 工具日報（2026-11-10）\n\n1. **Hermes Agent v0.23.0（11/5 發）** — 什麼：他用的 hermes 邁入 v0.23.0，桌面版可開瀏覽器看聊天，各裝置共用一條對話線，CLI 裡也能直接顯示圖片、/rewind 回退。  \n   有用：每天跑的 cron 與桌面共用同一條對話線，記錄不會掉兩次；外掛自我更新、付費 MCP 工具顯示成本，減少人工維護。  \n   結論：觀察就好（桌面版預設關；舊插件若仍走瀏覽器工具，要切換到 browser_exec）。\n\n2. **蚂蚁 Ling-3.2-flash（11/5 發，API 免至 11/19 左右）** — 什麼：560B 大小學、25B 激活、1M 上下文、照片・字串・影片原生輸入，API 兼容 OpenAI／Anthropic 格式。  \n   有用：兩週免 API 費，能試大模型處理圖片與長文本，對 CeX 掃價或新聞摘要這類消耗有省錢空間。  \n   結論：值得試（前兩週免，用完就要出價，不要等過期）。\n\n3. **大模型開源門誌（Kimi K3.1 Pro / Ripple-65B / Mistral Large 4 / Qwen4）** — 什麼：多個模型放出權重或重申開源承諾，Kimi 兩點八兆、Ripple 65B、Mistral 1T，且 Qwen 4/5 將持續開源。  \n   有用：Kimi 兩點八兆、Mistral 1T 放出權重，Ripple 65B 只適合高配雲端跑；阿夜的本機（5800H＋3070Ti 8G）放不下，與現有本地模型路徑無關。  \n   結論：不用管（只有 Qwen 開源承諾降低本地模型路線風險，未來幾天可留意）。\n\n4. **AI 省市監控腳本（Usagi-org/ai-goofish-monitor）** — 什麼：Playwright＋AI，24 小時盯某電商平台的商品與價格，後台報表一目了然。  \n   有用：正是你看 CeX／Carousell 價格的同類實作，只是這個專門對閒魚（Taobao 買家端），阿夜的平台不用。  \n   結論：觀察就好（原理可借鏡，不用換平台就套用）。\n\n5. **Codex / Claude Code / OpenCode 更新（0.167 / 2.1.319 / 2.2.6）** — 什麼：Codex 2.0 命令中心、Claude Code 後臺 MCP 對接、OpenCode 共享 MCP 連線與 worktree 跑。  \n   有用：都是寫程式用的 terminal tool，阿夜現有 CeX／監控生意不接觸。  \n   結論：不用管。"
  },
  {
   "job": "doc reconcile",
