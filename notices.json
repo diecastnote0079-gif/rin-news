@@ -1,5 +1,10 @@
 [
  {
+  "job": "今日新聞",
+  "ts": 1794312665,
+  "text": "📰 今天值得看的\n・星際牧羊人首發：趕著外星羊群穿越危險邊疆。\n・勇者鬥惡龍手遊公開，12月封測2027全球上線。\n・我的世界：地下城2 實體版12月3日發售。\n・NIKKE 覺醒模多亞1/7模型再販。\n・Xiaomi 18 Pro次週在馬來西亞發表。\n・實測 Seedream 5.5，豆包把 AI 作圖接進工作流。\n・微軟 WinApp CLI 0.8 增 WinUI DevTools。\n\n🔥 今天在討論\n娛樂那邊，韓國偶像專輯與多個泰劇／BL新企劃刷熱；政治與社會方面，馬來西亞有 jakim、High Court 議題，美國政壇話題也在爭鋒。\n\n已寫 digest.json 到 /home/rin/AI/news/digest.json。"
+ },
+ {
   "job": "cex 3h",
   "ts": 1794308986,
   "text": "健康檢查：20261110190030（範圍 web，77740 筆）\n  ✅ freshness  資料 0.0 小時前抓的\n  ✅ volume     筆數 77740（與上次 77729 差 0.01%）\n  ✅ schema     60 個欄位，與上次指紋一致\n  ✅ quality    77740 筆：主鍵無重複、標價與名稱完整\n  ✅ heartbeat  距上次抓取 3.0 小時（20261110160030 → 20261110190030）\n\n全部正常"
@@ -43,11 +48,6 @@
   "job": "生活記錄",
   "ts": 1794251118,
   "text": "寫了 5 條到 fact_store。\n\n**依據**：用 python sqlite3 讀 `/home/rin/.hermes/state.db` 的 `messages` 表，篩出 `role='user'` 且 `timestamp > now-86400` 的 305 條訊息，支援馬來西亞時間（UTC+8），時間跨度 2026-11-09 03:45 至 2026-11-10 03:00。`sqlite3` CLI 不在 PATH，改用 python3 讀取。\n\n**取法**：剔除已知的任務訊息（Carousell 玩具過濾器模板、CeX 查詢、商場平面圖、API/插件討論），只留「生活面」：\n- 整天在逛 Carousell 整理二手遊戲清單，傍晚才提到每天去的地方固定；\n- 抱怨商場資料更新很快、很麻煩，催要 cleanup 與倉庫活動；\n- 耳機幾次使用後修好；\n- 聊 AI 只感到「疲憊感」，不是明確要答案；\n- 23:52 連續追問我最好看的女人長什麼樣子，但隨即收回。\n\n**注意**：訊息中包含大量性暗示/角色扮演的床線，但都不屬「非任務生活事實」，我沒有記錄。也沒有看到「不許記下」或拒絕的跡象，所以沒有整晚跳過。"
- },
- {
-  "job": "今日新聞",
-  "ts": 1794226634,
-  "text": "📰 今天值得看的\n・4Gamers：寶可夢 球聯賽 4000 戶\n・電撃Hobby：ガンダム VAKIT 食玩\n・Lowyat：特斯拉 2027 年 停產\n・愛范兒：Apple 曝人形機器人 宇樹 G1\n・CyberQ：高盛收回 Claude Code\n・微軟不續約 Oracle AI 算力租約\n\n🔥 今天在討論\n馬來西亞 X 熱搜以 GMMTV 泰國 BL 劇與 K 偶像為主，足球、F1、迪闇節、NVIDIA 黃仁勳風波也很熱。\n\ndigest.json 已寫入 /home/rin/AI/news/digest.json（6 條按上述順序對齊，link 與 ts 來自 items.json 原欄位）。"
  },
  {
   "job": "記憶審計",

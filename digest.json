@@ -1,43 +1,42 @@
 {
-  "date": "2026-11-09",
-  "updated": "2026-11-09T20:00:00+08:00",
+  "date": "2026-11-10",
+  "updated": "2026-11-10T20:00:00+08:00",
   "items": [
     {
-      "text": "4Gamers：寶可夢 球聯賽 4000 戶",
-      "link": "https://www.4gamers.com.tw/news/detail/83171/2026-27-pokemon-asia-championship-series-taiwan-premier-ball-league",
-      "source": "4Gamers",
-      "ts": 1794194422
+      "text": "星際牧羊人首發：趕著外星羊群穿越危險邊疆。",
+      "link": "https://gnn.gamer.com.tw/detail.php?sn=314797",
+      "source": "巴哈 GNN"
     },
     {
-      "text": "電撃Hobby：ガンダム VAKIT 食玩",
-      "link": "https://hobby.dengeki.com/news/3223923/",
-      "source": "電撃Hobby",
-      "ts": 1794213900
+      "text": "勇者鬥惡龍手遊公開，12月封測2027全球上線。",
+      "link": "https://www.4gamers.com.tw/news/detail/83213/new-dragon-quest-mobile-game-revealed",
+      "source": "4Gamers"
     },
     {
-      "text": "Lowyat：特斯拉 2027 年 停產",
-      "link": "https://www.lowyat.net/2026/409465/tesla-wind-down-cybertruck-for-cybercab/",
-      "source": "Lowyat",
-      "ts": 1794212191
+      "text": "我的世界：地下城2 實體版12月3日發售。",
+      "link": "https://gnn.gamer.com.tw/detail.php?sn=314791",
+      "source": "巴哈 GNN"
     },
     {
-      "text": "愛范兒：Apple 曝人形機器人 宇樹 G1",
-      "link": "https://www.ifanr.com/1688485?utm_source=rss&utm_medium=rss&utm_campaign=",
-      "source": "愛范兒",
-      "ts": 1794211018
+      "text": "NIKKE 覺醒模多亞1/7模型再販。",
+      "link": "https://hobby.dengeki.com/news/3224848/",
+      "source": "電撃Hobby"
     },
     {
-      "text": "CyberQ：高盛收回 Claude Code",
-      "link": "https://cyberq.tw/2026/11/09/why-did-goldman-sachs-take-claude-code/",
-      "source": "CyberQ",
-      "ts": 1794184080
+      "text": "Xiaomi 18 Pro次週在馬來西亞發表。",
+      "link": "https://www.lowyat.net/2026/409543/xiaomi-18-pro-series-launch-malaysia/",
+      "source": "Lowyat"
     },
     {
-      "text": "微軟不續約 Oracle AI 算力租約",
-      "link": "https://www.inside.com.tw/article/42860-microsoft-winds-down-oracle-ai-cloud-capacity-bing",
-      "source": "INSIDE",
-      "ts": 1794213900
+      "text": "實測 Seedream 5.5，豆包把 AI 作圖接進工作流。",
+      "link": "https://www.ifanr.com/1688447?utm_source=rss&utm_medium=rss&utm_campaign=",
+      "source": "愛范兒"
+    },
+    {
+      "text": "微軟 WinApp CLI 0.8 增 WinUI DevTools。",
+      "link": "https://www.ithome.com.tw/news/180394",
+      "source": "iThome"
     }
   ],
-  "discussion": "馬來西亞 X 熱搜以 GMMTV 泰國 BL 劇與 K 偶像為主，足球、F1、迪闇節、NVIDIA 黃仁勳風波也很熱。"
+  "discussion": "娛樂那邊，韓國偶像專輯與多個泰劇／BL新企劃刷熱；政治與社會方面，馬來西亞有 jakim、High Court 議題，美國政壇話題也在爭鋒。"
 }
