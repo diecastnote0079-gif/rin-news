@@ -1,5 +1,25 @@
 [
  {
+  "job": "CeX 早安",
+  "ts": 1794271944,
+  "text": "昨天 CeX 的動靜：\n\n🆕 新上架\n・Indika（PS5）RM70\n・RPG Maker With（PS5）RM140\n・Legend of Zelda: Ocarina of Time（Switch 2）RM290\n・EA Sports FC 27（PS5）RM300\n・Ace Combat 8: Wings of Theve（PS5）RM420\n・XFX Swift AMD Radeon RX 9070 XT 16GB GDDR6（PC）RM3400\n\n📉 降價\n・Sony ICD-UX570 語音錄音機 RM180 → RM160\n・Tanchjim Space Pro portable DAC & amplifier RM550 → RM500\n・HP 14-DY0022 14英寸筆電 RM1150 → RM1000\n\n📦 回架\n・PS5《Call of Duty: Modern Warfare 4 (No DLC)》\n・PS4《Ninja Gaiden: Master Collection》\n・Switch《Dragon Quest III HD-2D Remake》\n・PS5《Microsoft Flight Simulator 2024》\n・PS5《EA Sports FC 27》\n・Switch 2《Nintendo Switch 2 Console, 256GB + Mixed Joy-Con 2 (No DLC) Discount》\n\n🚫 賣光\n・PS5《Microsoft Flight Simulator 2024》\n・PS4《Ninja Gaiden: Master Collection》\n・PS5《King of Fighters XV (No DLC)》\n・PS4《Street Fighter 30th Anniversary Collection》\n・PS4《Astro Bot Rescue Mission (PSVR)》\n・PS5《Playstation 5 Pro Console, 2TB》"
+ },
+ {
+  "job": "cex 0830",
+  "ts": 1794271159,
+  "text": "健康檢查：20261110083030（範圍 web，77708 筆）\n  ✅ freshness  資料 0.0 小時前抓的\n  ✅ volume     筆數 77708（與上次 77708 差 0.00%）\n  ✅ schema     60 個欄位，與上次指紋一致\n  ✅ quality    77708 筆：主鍵無重複、標價與名稱完整\n  ✅ heartbeat  距上次抓取 10.5 小時（20261109220030 → 20261110083030）\n\n全部正常"
+ },
+ {
+  "job": "kl daily brief",
+  "ts": 1794270660,
+  "text": "☀️ 今日 11/10 (Tue)\n\n天氣：24–30°C，最高降雨機率 98%\n　降雨時段：13:00（63%）、14:00（86%）、15:00（95%）、16:00（98%）、17:00（98%）、18:00（97%）\n\nMid Valley 本週活動（8 項）\n・Voicsky by All IT — East Lobby (EEL), Ground Floor\n　9 Nov - 15 Nov 2026\n・GWM Roadshow — Centre Court (CC), Ground Floor\n　11 Nov - 15 Nov 2026\n・BYD Roadshow — North Court (NC), Ground Floor\n　11 Nov - 15 Nov 2026\n・Blackmores by Caring — Centre Court (CC), Lower Ground Floor\n　10 Nov - 15 Nov 2026\n\n\n電子／玩具優惠\n・Switch Malaysia Apple TikTok LIVE Sale Promotion – E\n　11-10→11-11\n・DDPAI Malaysia 11.11 Biggest Sale – Up to 40% OFF St\n　11-10→11-11　Shopee Official Store\n・OPPO 11.11 Shopee Sale – OPPO Pad 3 Now RM1,599 with\n　11-08→11-11\n・Harvey Norman Malaysia: The Beat Kiara Bay 1st Anniv\n　11-05→11-11\n・Inter-Asia Technology 11.11 Sale on Shopee Mall Mala\n　11-01→11-11\n・Brightstar Computer 11.11 Clearance Giler Sale – Fla\n　11-09→11-12\n\n倉庫特賣／清倉\n・Dreamland Mattress Warehouse Sale\n　11-05–11-22\n・REFASH Malaysia 11.11 Clearance Sale – All Preloved Fashio\n　11-09–11-16\n\n優惠（節錄）\n・Ace Cards & Collectibles：Try your luck with the acecards Lucky Scratch event! Receive one scrat"
+ },
+ {
+  "job": "AI 工具日報",
+  "ts": 1794269063,
+  "text": "# AI 工具日報（2026-11-10）\n\n1. **Hermes Agent v0.23.0（11/5 發）** — 什麼：他用的 hermes 邁入 v0.23.0，桌面版可開瀏覽器看聊天，各裝置共用一條對話線，CLI 裡也能直接顯示圖片、/rewind 回退。  \n   有用：每天跑的 cron 與桌面共用同一條對話線，記錄不會掉兩次；外掛自我更新、付費 MCP 工具顯示成本，減少人工維護。  \n   結論：觀察就好（桌面版預設關；舊插件若仍走瀏覽器工具，要切換到 browser_exec）。\n\n2. **蚂蚁 Ling-3.2-flash（11/5 發，API 免至 11/19 左右）** — 什麼：560B 大小學、25B 激活、1M 上下文、照片・字串・影片原生輸入，API 兼容 OpenAI／Anthropic 格式。  \n   有用：兩週免 API 費，能試大模型處理圖片與長文本，對 CeX 掃價或新聞摘要這類消耗有省錢空間。  \n   結論：值得試（前兩週免，用完就要出價，不要等過期）。\n\n3. **大模型開源門誌（Kimi K3.1 Pro / Ripple-65B / Mistral Large 4 / Qwen4）** — 什麼：多個模型放出權重或重申開源承諾，Kimi 兩點八兆、Ripple 65B、Mistral 1T，且 Qwen 4/5 將持續開源。  \n   有用：Kimi 兩點八兆、Mistral 1T 放出權重，Ripple 65B 只適合高配雲端跑；阿夜的本機（5800H＋3070Ti 8G）放不下，與現有本地模型路徑無關。  \n   結論：不用管（只有 Qwen 開源承諾降低本地模型路線風險，未來幾天可留意）。\n\n4. **AI 省市監控腳本（Usagi-org/ai-goofish-monitor）** — 什麼：Playwright＋AI，24 小時盯某電商平台的商品與價格，後台報表一目了然。  \n   有用：正是你看 CeX／Carousell 價格的同類實作，只是這個專門對閒魚（Taobao 買家端），阿夜的平台不用。  \n   結論：觀察就好（原理可借鏡，不用換平台就套用）。\n\n5. **Codex / Claude Code / OpenCode 更新（0.167 / 2.1.319 / 2.2.6）** — 什麼：Codex 2.0 命令中心、Claude Code 後臺 MCP 對接、OpenCode 共享 MCP 連線與 worktree 跑。  \n   有用：都是寫程式用的 terminal tool，阿夜現有 CeX／監控生意不接觸。  \n   結論：不用管。"
+ },
+ {
   "job": "doc reconcile",
   "ts": 1794254131,
   "text": "【文件 vs 現況 對帳】\n • 手機頁資料 5.8 小時前（上限 5）：2026-11-09T14:09:08Z\n • 本機最後一輪 5.8 小時前（20261109220030）"
@@ -20,11 +40,6 @@
   "text": "📰 今天值得看的\n・4Gamers：寶可夢 球聯賽 4000 戶\n・電撃Hobby：ガンダム VAKIT 食玩\n・Lowyat：特斯拉 2027 年 停產\n・愛范兒：Apple 曝人形機器人 宇樹 G1\n・CyberQ：高盛收回 Claude Code\n・微軟不續約 Oracle AI 算力租約\n\n🔥 今天在討論\n馬來西亞 X 熱搜以 GMMTV 泰國 BL 劇與 K 偶像為主，足球、F1、迪闇節、NVIDIA 黃仁勳風波也很熱。\n\ndigest.json 已寫入 /home/rin/AI/news/digest.json（6 條按上述順序對齊，link 與 ts 來自 items.json 原欄位）。"
  },
  {
-  "job": "kl daily brief",
-  "ts": 1794221466,
-  "text": "☀️ 今日 11/09 (Mon)\n\n天氣：24–31°C，最高降雨機率 92%\n　降雨時段：12:00（57%）、13:00（77%）、14:00（90%）、15:00（92%）、16:00（89%）、17:00（84%）\n\nMid Valley 本週活動（9 項）\n・Voicsky by All IT — East Lobby (EEL), Ground Floor\n　9 Nov - 15 Nov 2026\n・GWM Roadshow — Centre Court (CC), Ground Floor\n　11 Nov - 15 Nov 2026\n・BYD Roadshow — North Court (NC), Ground Floor\n　11 Nov - 15 Nov 2026\n・Blackmores by Caring — Centre Court (CC), Lower Ground Floor\n　10 Nov - 15 Nov 2026\n\n\n電子／玩具優惠\n・Sony Centre Plaza Low Yat Reopening Promotion – Save\n　11-09　Lot G-007\n・HOMElove Home Expo: Up to 80% OFF, Air Conditioners \n　11-07→11-09　Sunway Pyramid Conventio\n・DS HOME Home Appliance Sale & Promotion at @HOMElove\n　11-07→11-09　Sunway Pyramid Conventio\n・Big Bad Wolf Books The Wolf Den Sale\n　11-07→11-09\n・PRISM+ Malaysia 11.11 TV Sale – Enjoy Up to RM800 Sa\n　11-01→11-09\n・Switch Malaysia Apple TikTok LIVE Sale Promotion – E\n　11-10→11-11\n\n倉庫特賣／清倉\n・Dreamland Mattress Warehouse Sale\n　11-05–11-22\n・adidas Factory Outlet Special Promotion – Buy 2 at 50% Off\n　11-06–11-09　Mitsui Outlet Park KLIA Se\n・REFASH Malaysia 11.11 Clearance Sale – All Preloved Fashio\n　11-09–11-16\n\n優惠（節錄）\n・Ace Cards & Collectibles：Try your luck with the acecards Lucky Scratch event! Re"
- },
- {
   "job": "記憶審計",
   "ts": 1794186247,
   "text": "檢計結果（未修改任何檔案）：\n\n1. **MEMORY.md：乾淨** — 20 條無重複、矛盾、過期條目。無 Letta 提及；cron id 皆 2026-11-05 起現用；gateway 已明確為 rin-box（systemd user）；路徑均為 `~/AI`。按「Windows 是主機、又說 Linux」式矛盾：不存在——文件同頁明確寫「大本營＝ rin-box（Ubuntu）」、Windows=「現用 desktop-akpf18q」。\n\n2. **USER.md：乾淨於重複與矛盾** — 但條目「D:\\AI\\cex-desk 是他最好的作品、每天在用」與 MEMORY.md「專案在 ~/AI」路徑衝突：前者是 Windows 磁碟路徑，後者是 Linux home。需確認桌面端 cex-desk 是否是 Windows 節點的刻意複本；若非，改寫為 `~/AI`（或補一筆 sync 說明）。\n\n3. **~/.hermes/reference/ops/：乾淨** — 只找到歷史留痕：`akpfl8q` 只在 post-reset-install.md、`D:\\AI` 只在歷史文件、`Letta` 只在 migration/log 文章裡，cron-ops.md 已標示「舊的 Letta letta cron 流程已作廢」；無活的舊路徑或舊 cron id。\n\n4. **記憶水位**：MEMORY.md 94%（2,085/2,200 chars）、USER.md 95%（1,308/1,375 chars）→ 雙檔逼近容量，建議一併壓縮。\n\n結論：唯一待處理是 USER.md 裡的 `D:\\AI\\cex-desk` 路徑確認；其餘皆乾淨。本次未改任何檔案。"
@@ -33,21 +48,6 @@
   "job": "SNKRDUNK 卡價",
   "ts": 1794186037,
   "text": "SNKRDUNK 變化\n📈 3rd Anniversary Set — ENGLISH\n   在售 52 → 51 件\n   最低在售 ¥61,800 → ¥62,900\n📈 3rd Anniversary Set — CHINA\n   在售 56 → 53 件\n   最低在售 ¥42,000 → ¥42,500\n📈 Luffy SEC-SP EB04-061\n   A ¥1,500,000 → ¥1,450,000\n   PSA10 ¥2,000,000 → ¥1,990,000"
- },
- {
-  "job": "CeX 早安",
-  "ts": 1794185363,
-  "text": "昨天 CeX 的動靜：\n\n🆕 新上架\n・Super Monkey Ball 1&2 Remake（PS4）RM60\n・TV Superstars（PS3）RM25\n・Fantech Nova Pro WGP14v2 Wireless Controller (Multiplatform) - Luffy（通用手柄）RM125\n・8BitDo Lite 2 Bluetooth Gamepad - Pink（Switch/Android）RM65\n・Trimui Smart Pro（掌機）RM130\n・Maxsun Terminator GeForce RTX 5060 8GB GDDR7（獨立顯卡）RM1800\n\n📉 降價\n・Sphero BB-8 Star Wars Droid (No App Support), A（機器人）RM200 → RM130\n・Sphero BB-8 Star Wars Droid (No App Support), B（機器人）RM180 → RM120\n・Sphero BB-8 Star Wars Droid (No App Support), A（機器人）RM100 → RM65\n・Sphero BB-8 Star Wars Droid (No App Support), B（機器人）RM90 → RM60\n\n📦 回架\n・EA Sports FC 27（Switch 2）\n・Five Nights at Freddy's: Help Wanted（Switch）\n・Mario Kart World（Switch 2）\n・Assassin's Creed Shadows（Switch 2）\n・Shingeki No Kyojin 2（PS4）\n・Attack On Titan 2 Final Battle（PS4）\n\n🚫 賣光\n・New 3DS XL Console, Hyrule Edition, Discounted（3DS 主機）\n・Captain Tsubasa 2: World Fighters（PS5）\n・Elden Ring（Switch 2）\n・EA Sports FC 27（PS4）\n・Fist Of The North Star: Kens Rage 2（PS3）\n・Dragon Ball: The Breakers（PS4）"
- },
- {
-  "job": "cex 0830",
-  "ts": 1794184762,
-  "text": "健康檢查：20261109083030（範圍 web，77626 筆）\n  ✅ freshness  資料 0.0 小時前抓的\n  ✅ volume     筆數 77626（與上次 77622 差 0.01%）\n  ✅ schema     60 個欄位，與上次指紋一致\n  ✅ quality    77626 筆：主鍵無重複、標價與名稱完整\n  ✅ heartbeat  距上次抓取 10.5 小時（20261108220030 → 20261109083030）\n\n全部正常"
- },
- {
-  "job": "AI 工具日報",
-  "ts": 1794182677,
-  "text": "# 2026-11-09（週一）AI 工具日報\n\n**1. Hermes 0.23.0「Hearth」** — 什麼：整個桌面工作空間用自己的 gateway 開在瀏覽器 Tab，CLI、TUI、桌面、機器人、cron 歸一；終端機可行內顯示圖片、可倒回對話。\n- 我們：小主機跑 Hermes、Telegram 監控、生圖都靠得更近；機器人也能由 gateway 綁帳號跑，推群組時更省事。\n- 結論：值得試。\n\n**2. OpenCode 2.2** — 什麼：/goal 目標模式、可選 image_generate 圖片生成功能、用 Claude Code 登入的 Claude Agent 提供者；2 版升級把舊 1 版插件生態拆了。\n- 我們：RTX 3070 Ti 8GB 生圖能交給 agent 跑；但係 2 版新生態，舊 1 版方式不能用，得照安裝文搞定。\n- 結論：值得試（二選一）。\n\n**3. 免費 API 入口更新** — 什麼：UnoRouter 等自由 API 站又收了 Solar Pro4、Solar Mini4、GPT 5.6 Luna、Claude Haiku 4.5、DeepSeek、Qwen 3.7 Flash 等，已列 279 個模型。\n- 我們：股票、新聞、商品監控這類低成本任務，可能有更便宜入口；但價格、額度、賬號審核天天變，沒人敢訂。\n- 結論：觀察就好。\n\n**4. GitHub 熱門：NVIDIA/auto-ontology** — 什麼：把資料建成語義圖，讓 agent 做可判斷的查詢生成查資料，而不再只靠向量相似度。\n- 我們：股票與新聞資料庫可慢慢把索引做成圖，未來查詢會更穩；但現在不動正式庫，先看懂它怎麼索引。\n- 結論：觀察就好。\n\n**5. GitHub 熱門：vercel-labs/agent-browser** — 什麼：AI agent 操瀏覽器的 CLI，能打開頁面、截圖、排程動作。\n- 我們：還是 CeX／Carousell 以跑腳手動為主，這是備選；若之後想把「看網頁→比價→入手」自動化，比自己寫 Playwright 更現成。\n- 結論：值得試（備選，不急）。\n\n來源：Github releases、OpenCode Changelog、llmperks 免費 API 清單、GitHub trending（11/3～11/6）。  \n（懶得翻英文釋字的話，就看上面三個結論，告訴我想試哪一個。）"
  },
  {
   "job": "每週維修",
