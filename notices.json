@@ -1,5 +1,15 @@
 [
  {
+  "job": "cex 3h",
+  "ts": 1794276557,
+  "text": "健康檢查：20261110100030（範圍 web，77708 筆）\n  ✅ freshness  資料 0.0 小時前抓的\n  ✅ volume     筆數 77708（與上次 77708 差 0.00%）\n  ✅ schema     60 個欄位，與上次指紋一致\n  ✅ quality    77708 筆：主鍵無重複、標價與名稱完整\n  ✅ heartbeat  距上次抓取 1.5 小時（20261110083030 → 20261110100030）\n\n全部正常"
+ },
+ {
+  "job": "SNKRDUNK 卡價",
+  "ts": 1794272436,
+  "text": "SNKRDUNK 變化\n📈 3rd Anniversary Set — ENGLISH\n   在售 51 → 49 件\n   最低在售 ¥62,900 → ¥63,500\n📈 3rd Anniversary Set — CHINA\n   在售 53 → 55 件\n📈 Luffy SEC-RSP OP13-118\n   PSA10 ¥2,900,000 → ¥3,000,000\n📈 Luffy SEC-SP EB04-061\n   PSA10 ¥1,990,000 → ¥1,900,000"
+ },
+ {
   "job": "CeX 早安",
   "ts": 1794271944,
   "text": "昨天 CeX 的動靜：\n\n🆕 新上架\n・Indika（PS5）RM70\n・RPG Maker With（PS5）RM140\n・Legend of Zelda: Ocarina of Time（Switch 2）RM290\n・EA Sports FC 27（PS5）RM300\n・Ace Combat 8: Wings of Theve（PS5）RM420\n・XFX Swift AMD Radeon RX 9070 XT 16GB GDDR6（PC）RM3400\n\n📉 降價\n・Sony ICD-UX570 語音錄音機 RM180 → RM160\n・Tanchjim Space Pro portable DAC & amplifier RM550 → RM500\n・HP 14-DY0022 14英寸筆電 RM1150 → RM1000\n\n📦 回架\n・PS5《Call of Duty: Modern Warfare 4 (No DLC)》\n・PS4《Ninja Gaiden: Master Collection》\n・Switch《Dragon Quest III HD-2D Remake》\n・PS5《Microsoft Flight Simulator 2024》\n・PS5《EA Sports FC 27》\n・Switch 2《Nintendo Switch 2 Console, 256GB + Mixed Joy-Con 2 (No DLC) Discount》\n\n🚫 賣光\n・PS5《Microsoft Flight Simulator 2024》\n・PS4《Ninja Gaiden: Master Collection》\n・PS5《King of Fighters XV (No DLC)》\n・PS4《Street Fighter 30th Anniversary Collection》\n・PS4《Astro Bot Rescue Mission (PSVR)》\n・PS5《Playstation 5 Pro Console, 2TB》"
@@ -43,11 +53,6 @@
   "job": "記憶審計",
   "ts": 1794186247,
   "text": "檢計結果（未修改任何檔案）：\n\n1. **MEMORY.md：乾淨** — 20 條無重複、矛盾、過期條目。無 Letta 提及；cron id 皆 2026-11-05 起現用；gateway 已明確為 rin-box（systemd user）；路徑均為 `~/AI`。按「Windows 是主機、又說 Linux」式矛盾：不存在——文件同頁明確寫「大本營＝ rin-box（Ubuntu）」、Windows=「現用 desktop-akpf18q」。\n\n2. **USER.md：乾淨於重複與矛盾** — 但條目「D:\\AI\\cex-desk 是他最好的作品、每天在用」與 MEMORY.md「專案在 ~/AI」路徑衝突：前者是 Windows 磁碟路徑，後者是 Linux home。需確認桌面端 cex-desk 是否是 Windows 節點的刻意複本；若非，改寫為 `~/AI`（或補一筆 sync 說明）。\n\n3. **~/.hermes/reference/ops/：乾淨** — 只找到歷史留痕：`akpfl8q` 只在 post-reset-install.md、`D:\\AI` 只在歷史文件、`Letta` 只在 migration/log 文章裡，cron-ops.md 已標示「舊的 Letta letta cron 流程已作廢」；無活的舊路徑或舊 cron id。\n\n4. **記憶水位**：MEMORY.md 94%（2,085/2,200 chars）、USER.md 95%（1,308/1,375 chars）→ 雙檔逼近容量，建議一併壓縮。\n\n結論：唯一待處理是 USER.md 裡的 `D:\\AI\\cex-desk` 路徑確認；其餘皆乾淨。本次未改任何檔案。"
- },
- {
-  "job": "SNKRDUNK 卡價",
-  "ts": 1794186037,
-  "text": "SNKRDUNK 變化\n📈 3rd Anniversary Set — ENGLISH\n   在售 52 → 51 件\n   最低在售 ¥61,800 → ¥62,900\n📈 3rd Anniversary Set — CHINA\n   在售 56 → 53 件\n   最低在售 ¥42,000 → ¥42,500\n📈 Luffy SEC-SP EB04-061\n   A ¥1,500,000 → ¥1,450,000\n   PSA10 ¥2,000,000 → ¥1,990,000"
  },
  {
   "job": "每週維修",
