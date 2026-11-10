@@ -1,5 +1,15 @@
 [
  {
+  "job": "doc reconcile",
+  "ts": 1794340531,
+  "text": "【文件 vs 現況 對帳】\n • 手機頁資料 5.8 小時前（上限 5）：2026-11-10T14:08:58Z\n • 本機最後一輪 5.8 小時前（20261110220030）"
+ },
+ {
+  "job": "pending review nightly",
+  "ts": 1794340342,
+  "text": "處理完成，判斷摘要：\n\n- 落了 3 條（各一句）：Bitwarden 修正 `bws` 不存在、只剩 `bw`；小店前端改為 `duckx3.my` 並注明 PocketBase 後端在 rin-box；新增「閘門 token 也比對 payload（job 名可當 token）」。\n- 丢了 7 條（偵查結束，未落）：fxtwitter 已失效/重寫 5 份重複；任務驗證「不是所有任務都要驗證」移除 2 份重複——缺證據為錯，保留原文；工具更新四版互相衝突，跳過；ASUS ROG、CeX 文字修、夢境節奏、問 app 字眼縮 6 份重複，均未落。\n- 水位：91%（2,015/2,200）未超 92%，不用合併。檔案已移到 `pending/memory.archive/`，`pending_sweep.py` 已清掉舊殘留。"
+ },
+ {
   "job": "生活記錄",
   "ts": 1794338344,
   "text": "寫了 8 條（fact_store，id 44–51）：主題是「到家開電、夜間無聊、審美追問、親密聊天、夜間生圖好奇、生化機器人玩笑、在手機位置確認」。\n\n過程補充：昨晚（馬來西亞時間 2026-11-10）有 341 筆 user 訊息，絕大多數是 Carousell 收購篩選等任務；我從中擷取 8 條非任務生活事實。另外兩次先誤寫到 `memory` 工具被收緊（容量寫滿），已改用 `fact_store` 完成。"
@@ -38,16 +48,6 @@
   "job": "kl daily brief",
   "ts": 1794270660,
   "text": "☀️ 今日 11/10 (Tue)\n\n天氣：24–30°C，最高降雨機率 98%\n　降雨時段：13:00（63%）、14:00（86%）、15:00（95%）、16:00（98%）、17:00（98%）、18:00（97%）\n\nMid Valley 本週活動（8 項）\n・Voicsky by All IT — East Lobby (EEL), Ground Floor\n　9 Nov - 15 Nov 2026\n・GWM Roadshow — Centre Court (CC), Ground Floor\n　11 Nov - 15 Nov 2026\n・BYD Roadshow — North Court (NC), Ground Floor\n　11 Nov - 15 Nov 2026\n・Blackmores by Caring — Centre Court (CC), Lower Ground Floor\n　10 Nov - 15 Nov 2026\n\n\n電子／玩具優惠\n・Switch Malaysia Apple TikTok LIVE Sale Promotion – E\n　11-10→11-11\n・DDPAI Malaysia 11.11 Biggest Sale – Up to 40% OFF St\n　11-10→11-11　Shopee Official Store\n・OPPO 11.11 Shopee Sale – OPPO Pad 3 Now RM1,599 with\n　11-08→11-11\n・Harvey Norman Malaysia: The Beat Kiara Bay 1st Anniv\n　11-05→11-11\n・Inter-Asia Technology 11.11 Sale on Shopee Mall Mala\n　11-01→11-11\n・Brightstar Computer 11.11 Clearance Giler Sale – Fla\n　11-09→11-12\n\n倉庫特賣／清倉\n・Dreamland Mattress Warehouse Sale\n　11-05–11-22\n・REFASH Malaysia 11.11 Clearance Sale – All Preloved Fashio\n　11-09–11-16\n\n優惠（節錄）\n・Ace Cards & Collectibles：Try your luck with the acecards Lucky Scratch event! Receive one scrat"
- },
- {
-  "job": "doc reconcile",
-  "ts": 1794254131,
-  "text": "【文件 vs 現況 對帳】\n • 手機頁資料 5.8 小時前（上限 5）：2026-11-09T14:09:08Z\n • 本機最後一輪 5.8 小時前（20261109220030）"
- },
- {
-  "job": "pending review nightly",
-  "ts": 1794254022,
-  "text": "處理完畢，報告如下：\n\n落了 3 條：\n1) 兩台主機入口那條記錄一併修了——客戶端隔離實測未生效（掃 /24 得 8 台，2026-11-08），Windows 板與 rin-box 硬體資料寫進去。\n2) 使用者偏好收束：股票外匯只做 Alpaca paper，不投真錢；短炒練判斷，主張不止损、跌了加倉攤平、藍籌看長線。\n3) 過時筆記清理：X 帖文抓取笔记（api.fxtwitter.com）已失效，删掉。\n\n丢了 9 條：全部是重複、換說或同 dreaming 已有（客戶端隔離同句反覆、mall 細節、news 第三頁狀態頁、pre_tool_call 通行證、電話/遊戲/APP 點子等），加上這輪寫完 memory 已跑到 2,195/2,200，放不下。\n\n水位：memory 2,195/2,200（99.8%），user 1,333/1,375（96.9%）；memory 已接近上限，本次不再新增。17 筆 pending 文件均已移到 memory.archive，用 sweep 結束（0 筆殘留）。"
  },
  {
   "job": "記憶審計",
