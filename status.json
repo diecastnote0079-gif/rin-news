@@ -1,19 +1,19 @@
 {
- "updated": 1794353429,
+ "updated": 1794362429,
  "quota": {
-  "rolling": 95,
+  "rolling": 100,
   "weekly": 90,
   "monthly": 41,
-  "reset_rolling": "12m",
-  "reset_weekly": "5d 0h",
-  "reset_monthly": "6d 17h"
+  "reset_rolling": "2h 58m",
+  "reset_weekly": "4d 21h",
+  "reset_monthly": "6d 15h"
  },
  "host": {
-  "load": 0.03,
-  "mem_pct": 16,
+  "load": 0.16,
+  "mem_pct": 18,
   "disk_pct": 6,
   "disk_free_gb": 408,
-  "uptime_h": 148
+  "uptime_h": 151
  },
  "memory": {
   "memory": {
@@ -36,7 +36,7 @@
   {
    "name": "BF 遊戲掃描",
    "date": "11/20",
-   "days": 9
+   "days": 8
   },
   {
    "name": "MRT 月卡續期",

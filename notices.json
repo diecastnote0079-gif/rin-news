@@ -1,5 +1,30 @@
 [
  {
+  "job": "SNKRDUNK 卡價",
+  "ts": 1794358837,
+  "text": "SNKRDUNK 變化\n📈 3rd Anniversary Set — ENGLISH\n   在售 49 → 48 件\n   最低在售 ¥63,500 → ¥64,000\n📈 3rd Anniversary Set — CHINA\n   在售 55 → 57 件\n   最低在售 ¥42,500 → ¥41,990"
+ },
+ {
+  "job": "CeX 早安",
+  "ts": 1794358807,
+  "text": "昨天 CeX 的動靜：\n\n🆕 新上架\n・Final Fantasy XV: Ultimate Collector's Ed. w/Figure & Artbook (4 Disc)（PS4）RM800\n・Mouse P.I. For Hire（PS5）RM160\n・Toy Story: Retro Roundup! + Toy Story 3 Complete Ed.（Switch）RM200\n・Nintendo Wii Official MotionPlus RM50\n\n📉 降價\n・VITURE Pro 手機多功能支架（多平台）RM450 → RM400\n・Xiaomi Smart Band 9 金屬支腳 RM65 → RM55\n・Samsung Galaxy Watch Ultra PeakForm 帶（White Sand）RM130 → RM110\n・Samsung The Freestyle (2nd Gen) 投影機 RM1400 → RM1250\n\n📦 回架\n・Call of Duty: Modern Warfare (2019)《Xbox One》\n・Front Mission 1st《PS5》\n・Gravity Rush 2《PS4》\n・Sonic Racing: Crossworlds《PS5》\n・Digimon All-Star Rumble《PS3》\n・Tales of Vesperia Definitive Edition《Switch》\n\n🚫 賣光\n・Lost Judgment《PS5》\n・Disco Elysium: The Final Cut《PS4》\n・Dying Light 2: Stay Human (No DLC)《PS5》\n・Cloudpunk《PS4》\n・Assassin's Creed Chronicles《PS Vita》\n・F1 2018 (No DLC)《PS4》"
+ },
+ {
+  "job": "cex 0830",
+  "ts": 1794357563,
+  "text": "健康檢查：20261111083030（範圍 web，78667 筆）\n  ✅ freshness  資料 0.0 小時前抓的\n  ✅ volume     筆數 78667（與上次 78667 差 0.00%）\n  ✅ schema     60 個欄位，與上次指紋一致\n  ✅ quality    78667 筆：主鍵無重複、標價與名稱完整\n  ✅ heartbeat  距上次抓取 10.5 小時（20261110220030 → 20261111083030）\n\n全部正常"
+ },
+ {
+  "job": "kl daily brief",
+  "ts": 1794357059,
+  "text": "☀️ 今日 11/11 (Wed)\n\n天氣：25–31°C，最高降雨機率 100%\n　降雨時段：07:00（50%）、13:00（73%）、14:00（94%）、15:00（100%）、16:00（100%）、17:00（98%）\n\nMid Valley 本週活動（10 項）\n・Blackmores by Caring — Centre Court (CC), Lower Ground Floor\n　10 Nov - 15 Nov 2026\n・SK-II Festive Pop-Up — South Void 2 (SV2), Ground Floor\n　9 Nov - 15 Nov 2026\n・25th Private and International School Fair (PISF) — Hall 1 & Hall 2, Mid Valley Exhibition Centre (MVEC), Third Floor, Centre Court\n　14 Nov - 15 Nov 2026\n・Ekspo Rumah BPEX — Hall 3, Mid Valley Exhibition Centre (MVEC), Third Floor, Centre Court\n　14 Nov - 15 Nov 2026\n\n\n電子／玩具優惠\n・DirectD 11.11 Mega Madness Sale – 24-Hour Online Sho\n　11-11　12AM with Exclusive Deal\n・HONOR Malaysia 11.11 Mega Sale – Get 2,000 Free Poin\n　11-11\n・Eubiq GSS Malaysia 11.11 GSS System Factory Clearanc\n　11-11\n・DirectD 11.11 Mega Madness Sale – 24-Hour Online Exc\n　11-11　12AM\n・DDPAI Malaysia 11.11 Biggest Sale – Up to 40% OFF St\n　11-10→11-11　Shopee Official Store\n・Switch Malaysia Apple TikTok LIVE Sale Promotion – E\n　11-10→11-11\n\n大型活動（會展／體育館）\n・11-12 FUEL YOUR STRIDE | 12 November 2026\n　Pintu Gate VIP Stadium Bukit Jalil\n・11-27 Resilience by Design: Are You Scaling AI or \n　The Ruma Hotel and Residences\n・11-27 Sustiana"
+ },
+ {
+  "job": "AI 工具日報",
+  "ts": 1794355359,
+  "text": "**AI 工具日報 · 2026/11/11**\n\n【一｜AI 工具】\n1. **Hermes Agent v0.23.1** — 昨天出的補丁；它把插件目錄上限從 2MB 提高到 16MB，修掉了 `plugins install` 偷偷退回舊清單、找不到新插件的問題。\n對我們：我就跑在 Hermes 上；若你還在 0.23.0，之後想安裝插件，會一直拿到過期的版本固定。\n→ 值得試（執行 `hermes update`；要我先查版本再動也行）。\n2. **billion-context** — 一個用 npm 安裝的本機壓縮代理，把長會話壓進 100K 窗口，宣稱可省 5 倍 token。\n對我們：它只支援 OpenCode、Claude Code、Codex 這類 CLI，不支援 Hermes，還會自己在背景更新；省 token 雖然很誘人，但接不進我們這條線。\n→ 觀察就好。\n3. **RuView** — 用 Wi-Fi 訊號（CSI）穿牆偵測有沒有人、呼吸與心跳，加一個 $8 的 ESP32 就能多一個感測點。\n對我們：你現在判斷「人在不在家」是靠手機 ping，這個方法不用人帶手機；但它是研究原型（README 自己寫明不是醫療或安全裝置），每個房間都要校準。\n→ 觀察就好，先不用買板子。\n4. **OpenCode v2.2.6** — 加了 `run --archived`（排程跑完不會堆進收件匣）、`-w` 開獨立 worktree、MCP 連線可共用。\n對我們：你的排程全在 Hermes 上跑，用不到；除非之後把 ~/AI 的腳本改丟給 OpenCode。\n→ 觀察就好。\n\n【二｜🔧 新奇專案】\n**Umbra** — 一個住在 Android 手機裡的 agent，用無障礙 API 在「隱形背景顯示器」上操作 app；你在滑手機時，它在旁邊跑任務，還能開 Debian 環境寫程式。\n好玩在：它不會搶你的螢幕，狀態掛在相機孔旁的小膠囊上；可惜它要求 Android 16，ROG 5s（Android 13）跑不了。\n**Recalc** — 把 Claude Code、Codex 塞進試算表每一格：一格式算式、一格跑指令、一格就是一個 agent 會話。\n好玩在：多個 agent 會變成一張一眼掃完的表格；紅字就代表驗算沒過，任何一格都能拉回終端接手。\n**Valencia 等角城市** — 有人在瀏覽器裡把整座西班牙 Valencia 做成 SimCity 那種等角視角，可以直接逛。\n好玩在：它把城市資料當成遊戲地圖，純看也很舒服；在 Show HN 上有 180 分。"
+ },
+ {
   "job": "doc reconcile",
   "ts": 1794340531,
   "text": "【文件 vs 現況 對帳】\n • 手機頁資料 5.8 小時前（上限 5）：2026-11-10T14:08:58Z\n • 本機最後一輪 5.8 小時前（20261110220030）"
@@ -23,31 +48,6 @@
   "job": "今日新聞",
   "ts": 1794312665,
   "text": "📰 今天值得看的\n・星際牧羊人首發：趕著外星羊群穿越危險邊疆。\n・勇者鬥惡龍手遊公開，12月封測2027全球上線。\n・我的世界：地下城2 實體版12月3日發售。\n・NIKKE 覺醒模多亞1/7模型再販。\n・Xiaomi 18 Pro次週在馬來西亞發表。\n・實測 Seedream 5.5，豆包把 AI 作圖接進工作流。\n・微軟 WinApp CLI 0.8 增 WinUI DevTools。\n\n🔥 今天在討論\n娛樂那邊，韓國偶像專輯與多個泰劇／BL新企劃刷熱；政治與社會方面，馬來西亞有 jakim、High Court 議題，美國政壇話題也在爭鋒。\n\n已寫 digest.json 到 /home/rin/AI/news/digest.json。"
- },
- {
-  "job": "AI 工具日報",
-  "ts": 1794305613,
-  "text": "AI 日報 · 11/10\n\n【AI 工具】\n・Hermes Agent v0.23.0（Hearth，11/5）\n　這一版把所有對話都交給同一個 gateway 管理（CLI、Telegram、Desktop、cron 都連到它），並把整個桌面工作區開在瀏覽器分頁裡。\n　對我們：以前 CLI、bot、cron 各跑一份 agent，才會出現訊息重複寫或漏掉；這版改掉的就是這個問題；另外 plugin 可自動更新、付費 MCP 會先報價再花錢。\n　結論：值得試，但先確認 skills 與 cron 沒被搬位置（有些舊功能已移出核心、改成插件）。\n・OpenCode v2.2.6（11/6）\n　`opencode run -w` 可以在新的 git worktree 裡跑腳本化任務、`--archived` 讓 CI 場次不塞進列表，MCP 連線也改成共用。\n　對我們：我們只是用 opencode-go 當模型供應商，不常開 OpenCode 介面，這幾項對現有流程沒動到。\n　結論：觀察就好。\n・Observer（開源，全本機跑）\n　盯螢幕、鏡頭、麥克風的本地 agent，條件成立就發 Telegram 通知（「補貨了」、「晚上渲染掛了」這類）。\n　對我們：CeX 有 API 用不到它，但「要看畫面才知道」的場景（包裹、印表機、Shopee 頁面變動）它能補上，前提是 3070 Ti 跑得動小號視覺模型。\n　結論：值得試，先挑一個場景就好。\n・Kimi-K3.1-Pro 開源權重 ＋ llama.cpp 的 llama_moe_cache 補丁\n　前者又是一個大模型放權重，後者是讓 MoE 模型「沒用到的專家丟去 CPU 跑」，直接正對消費級顯卡記憶體不足。\n　對我們：K3.1 那種規模 8GB 一定跑不動；llama_moe_cache 真的併進主線，才輪到 5800H＋3070 Ti 去碰 30B 級 MoE。\n　結論：觀察就好（PR 還沒合併）。\n・RuView（GitHub 今日熱門）\n　拿 Wi-Fi 訊號（ESP32 抓 CSI）判斷有沒有人、在呼吸還是在動，完全不用鏡頭。\n　對我們：比你現在 ping 192.168.0.9 多的是「在哪一間、有沒有動靜」，代價是要買 ESP32 而且 CSI 得在這台機上調。\n　結論：觀察就好，現有 ping 夠用。\n\n【🔧 新奇專案】\n・ldraw-mecha\n　丟一個 LDraw 樂高模型給 agent，它自己反推齒輪與連桿，再吐 Blender 骨架和動畫（範例是 Fabuland 飛機起飛，570 幀成品）。\n　有趣：等於讓 AI 讀懂樂高說明書裡的機構，靜態模型直接變會動的，開 Blender 就能玩。\n・watched.earth\n　輸入任一個地點，列出過去 7 天飛過上空的每一顆衛星，並附上它們真"
- },
- {
-  "job": "SNKRDUNK 卡價",
-  "ts": 1794272436,
-  "text": "SNKRDUNK 變化\n📈 3rd Anniversary Set — ENGLISH\n   在售 51 → 49 件\n   最低在售 ¥62,900 → ¥63,500\n📈 3rd Anniversary Set — CHINA\n   在售 53 → 55 件\n📈 Luffy SEC-RSP OP13-118\n   PSA10 ¥2,900,000 → ¥3,000,000\n📈 Luffy SEC-SP EB04-061\n   PSA10 ¥1,990,000 → ¥1,900,000"
- },
- {
-  "job": "CeX 早安",
-  "ts": 1794271944,
-  "text": "昨天 CeX 的動靜：\n\n🆕 新上架\n・Indika（PS5）RM70\n・RPG Maker With（PS5）RM140\n・Legend of Zelda: Ocarina of Time（Switch 2）RM290\n・EA Sports FC 27（PS5）RM300\n・Ace Combat 8: Wings of Theve（PS5）RM420\n・XFX Swift AMD Radeon RX 9070 XT 16GB GDDR6（PC）RM3400\n\n📉 降價\n・Sony ICD-UX570 語音錄音機 RM180 → RM160\n・Tanchjim Space Pro portable DAC & amplifier RM550 → RM500\n・HP 14-DY0022 14英寸筆電 RM1150 → RM1000\n\n📦 回架\n・PS5《Call of Duty: Modern Warfare 4 (No DLC)》\n・PS4《Ninja Gaiden: Master Collection》\n・Switch《Dragon Quest III HD-2D Remake》\n・PS5《Microsoft Flight Simulator 2024》\n・PS5《EA Sports FC 27》\n・Switch 2《Nintendo Switch 2 Console, 256GB + Mixed Joy-Con 2 (No DLC) Discount》\n\n🚫 賣光\n・PS5《Microsoft Flight Simulator 2024》\n・PS4《Ninja Gaiden: Master Collection》\n・PS5《King of Fighters XV (No DLC)》\n・PS4《Street Fighter 30th Anniversary Collection》\n・PS4《Astro Bot Rescue Mission (PSVR)》\n・PS5《Playstation 5 Pro Console, 2TB》"
- },
- {
-  "job": "cex 0830",
-  "ts": 1794271159,
-  "text": "健康檢查：20261110083030（範圍 web，77708 筆）\n  ✅ freshness  資料 0.0 小時前抓的\n  ✅ volume     筆數 77708（與上次 77708 差 0.00%）\n  ✅ schema     60 個欄位，與上次指紋一致\n  ✅ quality    77708 筆：主鍵無重複、標價與名稱完整\n  ✅ heartbeat  距上次抓取 10.5 小時（20261109220030 → 20261110083030）\n\n全部正常"
- },
- {
-  "job": "kl daily brief",
-  "ts": 1794270660,
-  "text": "☀️ 今日 11/10 (Tue)\n\n天氣：24–30°C，最高降雨機率 98%\n　降雨時段：13:00（63%）、14:00（86%）、15:00（95%）、16:00（98%）、17:00（98%）、18:00（97%）\n\nMid Valley 本週活動（8 項）\n・Voicsky by All IT — East Lobby (EEL), Ground Floor\n　9 Nov - 15 Nov 2026\n・GWM Roadshow — Centre Court (CC), Ground Floor\n　11 Nov - 15 Nov 2026\n・BYD Roadshow — North Court (NC), Ground Floor\n　11 Nov - 15 Nov 2026\n・Blackmores by Caring — Centre Court (CC), Lower Ground Floor\n　10 Nov - 15 Nov 2026\n\n\n電子／玩具優惠\n・Switch Malaysia Apple TikTok LIVE Sale Promotion – E\n　11-10→11-11\n・DDPAI Malaysia 11.11 Biggest Sale – Up to 40% OFF St\n　11-10→11-11　Shopee Official Store\n・OPPO 11.11 Shopee Sale – OPPO Pad 3 Now RM1,599 with\n　11-08→11-11\n・Harvey Norman Malaysia: The Beat Kiara Bay 1st Anniv\n　11-05→11-11\n・Inter-Asia Technology 11.11 Sale on Shopee Mall Mala\n　11-01→11-11\n・Brightstar Computer 11.11 Clearance Giler Sale – Fla\n　11-09→11-12\n\n倉庫特賣／清倉\n・Dreamland Mattress Warehouse Sale\n　11-05–11-22\n・REFASH Malaysia 11.11 Clearance Sale – All Preloved Fashio\n　11-09–11-16\n\n優惠（節錄）\n・Ace Cards & Collectibles：Try your luck with the acecards Lucky Scratch event! Receive one scrat"
  },
  {
   "job": "記憶審計",
