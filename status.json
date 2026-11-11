@@ -1,19 +1,19 @@
 {
- "updated": 1794391229,
+ "updated": 1794398429,
  "quota": {
-  "rolling": 99,
+  "rolling": 100,
   "weekly": 89,
   "monthly": 41,
-  "reset_rolling": "1h 7m",
-  "reset_weekly": "4d 13h",
-  "reset_monthly": "6d 7h"
+  "reset_rolling": "4h 55m",
+  "reset_weekly": "4d 11h",
+  "reset_monthly": "6d 5h"
  },
  "host": {
-  "load": 0.25,
-  "mem_pct": 16,
+  "load": 0.17,
+  "mem_pct": 18,
   "disk_pct": 6,
   "disk_free_gb": 407,
-  "uptime_h": 159
+  "uptime_h": 161
  },
  "memory": {
   "memory": {
@@ -29,10 +29,8 @@
  },
  "cron": {
   "enabled": 29,
-  "failed": 1,
-  "failed_names": [
-   "news-refresh"
-  ]
+  "failed": 0,
+  "failed_names": []
  },
  "reminders": [
   {

@@ -1,42 +1,43 @@
 {
-  "date": "2026-11-10",
-  "updated": "2026-11-10T20:00:00+08:00",
+  "date": "2026-11-11",
+  "updated": "2026-11-11T20:00:00+08:00",
   "items": [
     {
-      "text": "星際牧羊人首發：趕著外星羊群穿越危險邊疆。",
-      "link": "https://gnn.gamer.com.tw/detail.php?sn=314797",
-      "source": "巴哈 GNN"
+      "text": "Pokémon GO 開啟與香港麥當勞限時聯乘，遊戲玩家可實體收集慶典",
+      "link": "https://gnn.gamer.com.tw/detail.php?sn=314858",
+      "source": "巴哈 GNN",
+      "ts": 1794391801
     },
     {
-      "text": "勇者鬥惡龍手遊公開，12月封測2027全球上線。",
-      "link": "https://www.4gamers.com.tw/news/detail/83213/new-dragon-quest-mobile-game-revealed",
-      "source": "4Gamers"
+      "text": "《對魔忍2》繁中正式發售，收錄完全版劇情",
+      "link": "https://gnn.gamer.com.tw/detail.php?sn=314857",
+      "source": "巴哈 GNN",
+      "ts": 1794391495
     },
     {
-      "text": "我的世界：地下城2 實體版12月3日發售。",
-      "link": "https://gnn.gamer.com.tw/detail.php?sn=314791",
-      "source": "巴哈 GNN"
+      "text": "《魔御：STAR DIVE》1.5 版更新，加入新 5 星角色 M.A.D.",
+      "link": "https://gnn.gamer.com.tw/detail.php?sn=314849",
+      "source": "巴哈 GNN",
+      "ts": 1794389653
     },
     {
-      "text": "NIKKE 覺醒模多亞1/7模型再販。",
-      "link": "https://hobby.dengeki.com/news/3224848/",
-      "source": "電撃Hobby"
+      "text": "OpenAI 建「死亡開關」35 秒內切斷研究模型輸出，防失控",
+      "link": "https://technews.tw/2026/11/11/openai-builds-a-kill-switch-for-its-research-models/",
+      "source": "科技新報",
+      "ts": 1794385823
     },
     {
-      "text": "Xiaomi 18 Pro次週在馬來西亞發表。",
-      "link": "https://www.lowyat.net/2026/409543/xiaomi-18-pro-series-launch-malaysia/",
-      "source": "Lowyat"
+      "text": "索尼復刻 1979 年 Walkman 耳機並加 USB-C，懷舊熱潮再起",
+      "link": "https://ccc.technews.tw/2026/11/11/sony-revives-the-original-walkman-headphones-adds-usb-c/",
+      "source": "科技新報",
+      "ts": 1794385220
     },
     {
-      "text": "實測 Seedream 5.5，豆包把 AI 作圖接進工作流。",
-      "link": "https://www.ifanr.com/1688447?utm_source=rss&utm_medium=rss&utm_campaign=",
-      "source": "愛范兒"
-    },
-    {
-      "text": "微軟 WinApp CLI 0.8 增 WinUI DevTools。",
-      "link": "https://www.ithome.com.tw/news/180394",
-      "source": "iThome"
+      "text": "Infinix 推 XBook 14 Neo 顏料黑 RM2,199，狙擊 MacBook Neo",
+      "link": "https://soyacincau.com/2026/11/11/infinix-xbook-14-neo-malaysia-launch-macbook-neo-rival/",
+      "source": "SoyaCincau",
+      "ts": 1794358313
     }
   ],
-  "discussion": "娛樂那邊，韓國偶像專輯與多個泰劇／BL新企劃刷熱；政治與社會方面，馬來西亞有 jakim、High Court 議題，美國政壇話題也在爭鋒。"
+  "discussion": "🔥 馬來西亞熱搜：韓國偶像與泰劇／BL 劇話題佔大半，Wanda、KIIRAS、Please JASPER、JUNGKOOK×GRAFF 這些新企劃接連刷；另一邊是 Jensen 風波、NVIDIA 這種新聞話題也黏人；娛樂那邊有 coachella 開幕、BANANAS MV 這種新動向。"
 }
