@@ -1,5 +1,30 @@
 [
  {
+  "job": "cex 3h",
+  "ts": 1794449431,
+  "text": "健康檢查：20261112100030（範圍 web，78723 筆）\n  ✅ freshness  資料 0.0 小時前抓的\n  ✅ volume     筆數 78723（與上次 78723 差 0.00%）\n  ✅ schema     60 個欄位，與上次指紋一致\n  ✅ quality    78723 筆：主鍵無重複、標價與名稱完整\n  ✅ heartbeat  距上次抓取 1.5 小時（20261112083030 → 20261112100030）\n\n全部正常"
+ },
+ {
+  "job": "SNKRDUNK 卡價",
+  "ts": 1794445237,
+  "text": "SNKRDUNK 變化\n📈 3rd Anniversary Set — ENGLISH\n   在售 48 → 49 件\n📈 3rd Anniversary Set — CHINA\n   在售 57 → 53 件\n   最低在售 ¥41,990 → ¥43,000\n📈 Luffy SEC-RSP OP13-118\n   PSA10 ¥3,000,000 → ¥3,150,000\n📈 Luffy SEC-SP EB04-061\n   A ¥1,450,000 → ¥1,400,000\n   PSA10 ¥1,900,000 → ¥1,850,000"
+ },
+ {
+  "job": "CeX 早安",
+  "ts": 1794444685,
+  "text": "昨天 CeX 的動靜：\n\n🆕 新上架\n・EA Sports FC 27（Switch）RM210\n・Final Fantasy Resonance（Switch 2）RM210\n・Teenage Mutant Ninja Turtles: Mutants Unleashed（PS5）RM90\n・Insta360 Ace Pro 2 動感相機（雙電池套裝）RM1,850\n・Moza KS 賽車方向盤 RM900\n・KLEVV Cras V DDR5 記憶體（2x24GB）RM2,850\n\n📦 回架\n・Hades II（Switch 2）RM190\n・Samurai Warriors 5（PS4 CHI）RM110\n・Control - Ultimate Edition（PS4）RM100\n・DJI Mini 2 SE 微型無人機 RM740\n・Insta360 X4 360° 動感相機 RM1,200\n・Trimai Smart Pro 手持遊戲機 RM270\n\n備注：本機沒安 sqlite3 CLI，用 python3 sqlite3 查 `/home/rin/AI/cex-db/cex.sqlite` 同一表，同一馬來西亞時間區間（2026-11-10 16:00 UTC → 2026-11-11 16:00 UTC），共 57 筆新上架、83 筆回架、3 筆降價、1 筆賣光。降價全是螢幕、賣光只剩鍵盤，皆不在遊戲／主機／罕見硬體優先範圍，故不列。"
+ },
+ {
+  "job": "cex 0830",
+  "ts": 1794443964,
+  "text": "健康檢查：20261112083030（範圍 web，78723 筆）\n  ✅ freshness  資料 0.0 小時前抓的\n  ✅ volume     筆數 78723（與上次 78723 差 0.00%）\n  ✅ schema     60 個欄位，與上次指紋一致\n  ✅ quality    78723 筆：主鍵無重複、標價與名稱完整\n  ✅ heartbeat  距上次抓取 10.5 小時（20261111220030 → 20261112083030）\n\n全部正常"
+ },
+ {
+  "job": "kl daily brief",
+  "ts": 1794443461,
+  "text": "☀️ 今日 11/12 (Thu)\n\n天氣：25–30°C，最高降雨機率 100%\n　降雨時段：11:00（53%）、12:00（66%）、13:00（82%）、14:00（94%）、15:00（100%）、16:00（100%）\n\nMid Valley 本週活動（10 項）\n・Ekspo Rumah BPEX — Hall 3, Mid Valley Exhibition Centre (MVEC), Third Floor, Centre Court\n　14 Nov - 15 Nov 2026\n・25th Private and International School Fair (PISF) KL Nov 2026 — Hall 1 & Hall 2, Mid Valley Exhibition Centre (MVEC), Third Floor, Centre Court\n　14 Nov - 15 Nov 2026\n・Blackmores by Caring — Centre Court (CC), Lower Ground Floor\n　10 Nov - 15 Nov 2026\n・SK-II Festive Pop-Up — South Void 2 (SV2), Ground Floor\n　9 Nov - 15 Nov 2026\n\n\n電子／玩具優惠\n・Brightstar Computer 11.11 Clearance Giler Sale – Fla\n　11-09→11-12\n・HomePro Malaysia 11.11 Deepavali Double Deals Sale –\n　11-04→11-12　7 Locations Nationwide &\n・TMT Malaysia: TMT Go TAR UMT Arena 2026 – Enjoy Up t\n　11-13　TAR UMT\n・Xiaomi Malaysia 11.11 Mega Sale – Enjoy Up to 45% OF\n　11-12→11-13　Mi.com\n・TMT Malaysia 11.11 TechOver Madness Sale – Up to RM5\n　11-11→11-13\n・ASUS Republic of Gamers (ROG) Malaysia: Gaming Monit\n　11-07→11-13\n\n大型活動（會展／體育館）\n・11-12 FUEL YOUR STRIDE | 12 November 2026\n　Pintu Gate VIP Stadium Bukit Jalil\n・11-27 Resilience by Design: Are You Scaling AI or \n　The Ruma Hotel and Residenc"
+ },
+ {
   "job": "AI 工具日報",
   "ts": 1794441699,
   "text": "**AI 工具 + 新奇專案日報｜11/12（三）**\n\n【第一節｜AI 工具】\n\n・Hermes Agent v0.23.1（補丁）\n　是什麼：插件目錄檔超過 2MB 上限，導致 `hermes plugins install` 一直默默用回舊目錄；這版把上限提高到 16MB。\n　對我們：你經常裝插件，只要不更新，11/9 之後新上架的插件就永遠找不到（不是報錯，是靜靜裝了舊版）。\n　結論：值得更新 —— 但這是修 bug，不是新功能，你點頭我再跑。\n\n・agent-browser（Vercel Labs，49.8k★）\n　是什麼：一個用 Rust 寫的指令列工具，背後跑一個常駐 daemon 控制 Chrome；它把頁面轉成帶 `@e1` 編號的純文字，讓 agent 一步步點、每次點完再讀一次頁面確認結果。\n　對我們：Carousell／CeX 那邊現在靠 Brave CDP 和我自己寫的腳本硬撐，這正好是同類做法但成熟的成品，抓取失敗時的除錯會省很多。\n　結論：值得試 —— 先拿 Carousell 一頁當試點，不要一次換掉現有流程。\n\n・Codex Security（openai/codex-security，11.3k★）\n　是什麼：一行 `cs scan .` 掃 repo 找漏洞，會驗證、生成修補、輸出 SARIF／Markdown 報告，Apache-2.0。\n　對我們：duckx3.my 的 PocketBase 後端和 refsite 從來沒人審過；但這要 OpenAI key，跑一次要花錢。\n　結論：觀察就好 —— 費用比效果更不確定，等有人發實測再說。\n\n・MiniMax H3-Image（開源權重圖像模型）\n　是什麼：MiniMax 放出的開源生圖模型，8-bit 版本約 68GB。\n　對我們：3070 Ti 只有 8GB，本地連載入都做不到，跟你現在的生圖流程完全無關。\n　結論：不用管 —— 除非哪天走雲端租卡。\n\n【第二節｜🔧 新奇專案】\n\n・Talkie-1930（talkie-lm，HuggingFace＋GitHub）\n　是什麼：13B 模型，只用 1931 年前的英文文本訓練，連微調資料都從 1930 年代的禮儀手冊、書信指南、百科抽出來。\n　有趣：可以問「1930 年的人」怎麼看電、火車、無線電，看它的世界觀在哪一句話斷掉；作者還放了一個同架構的現代版當對照組，等於做了一個時光對照實驗。\n\n・Legend of Elya（N64 自製遊戲）\n　是什麼：Zelda 式地城遊戲，NPC 的對話是 6.36M 參數 transformer 直接跑在 1996 年那顆 93.75MHz MIPS CPU 上，實測 1.2 tok/s。\n　有趣：沒有查表、沒有預錄台詞，真的做矩陣乘法和 softmax；插 EverDrive "
@@ -20,34 +45,9 @@
   "text": "「今晚沒有」"
  },
  {
-  "job": "cex 3h",
-  "ts": 1794406253,
-  "text": "健康檢查：20261111220030（範圍 web，78723 筆）\n  ✅ freshness  資料 0.0 小時前抓的\n  ✅ volume     筆數 78723（與上次 78700 差 0.03%）\n  ✅ schema     60 個欄位，與上次指紋一致\n  ✅ quality    78723 筆：主鍵無重複、標價與名稱完整\n  ✅ heartbeat  距上次抓取 3.0 小時（20261111190030 → 20261111220030）\n\n全部正常"
- },
- {
   "job": "今日新聞",
   "ts": 1794398705,
   "text": "digest.json 已寫好（`/home/rin/AI/news/digest.json`），以下是今日內容：\n\n📰 今天值得看的\n・Pokémon GO 開啟與香港麥當勞限時聯乘，遊戲玩家可實體收集慶典\n・《對魔忍2》繁中正式發售，收錄完全版劇情\n・《魔御：STAR DIVE》1.5 版更新，加入新 5 星角色 M.A.D.\n・OpenAI 建「死亡開關」35 秒內切斷研究模型輸出，防失控\n・索尼復刻 1979 年 Walkman 耳機並加 USB-C，懷舊熱潮再起\n・Infinix 推 XBook 14 Neo 顏料黑 RM2,199，狙擊 MacBook Neo\n\n🔥 今天在討論\n馬來西亞熱搜：韓國偶像與泰劇／BL 劇話題佔大半，Wanda、KIIRAS、Please JASPER、JUNGKOOK×GRAFF 這些新企劃接連刷；另一邊是 Jensen 風波、NVIDIA 這種新聞話題也黏人；娛樂那邊有 coachella 開幕、BANANAS MV 這種新動向。"
- },
- {
-  "job": "SNKRDUNK 卡價",
-  "ts": 1794358837,
-  "text": "SNKRDUNK 變化\n📈 3rd Anniversary Set — ENGLISH\n   在售 49 → 48 件\n   最低在售 ¥63,500 → ¥64,000\n📈 3rd Anniversary Set — CHINA\n   在售 55 → 57 件\n   最低在售 ¥42,500 → ¥41,990"
- },
- {
-  "job": "CeX 早安",
-  "ts": 1794358807,
-  "text": "昨天 CeX 的動靜：\n\n🆕 新上架\n・Final Fantasy XV: Ultimate Collector's Ed. w/Figure & Artbook (4 Disc)（PS4）RM800\n・Mouse P.I. For Hire（PS5）RM160\n・Toy Story: Retro Roundup! + Toy Story 3 Complete Ed.（Switch）RM200\n・Nintendo Wii Official MotionPlus RM50\n\n📉 降價\n・VITURE Pro 手機多功能支架（多平台）RM450 → RM400\n・Xiaomi Smart Band 9 金屬支腳 RM65 → RM55\n・Samsung Galaxy Watch Ultra PeakForm 帶（White Sand）RM130 → RM110\n・Samsung The Freestyle (2nd Gen) 投影機 RM1400 → RM1250\n\n📦 回架\n・Call of Duty: Modern Warfare (2019)《Xbox One》\n・Front Mission 1st《PS5》\n・Gravity Rush 2《PS4》\n・Sonic Racing: Crossworlds《PS5》\n・Digimon All-Star Rumble《PS3》\n・Tales of Vesperia Definitive Edition《Switch》\n\n🚫 賣光\n・Lost Judgment《PS5》\n・Disco Elysium: The Final Cut《PS4》\n・Dying Light 2: Stay Human (No DLC)《PS5》\n・Cloudpunk《PS4》\n・Assassin's Creed Chronicles《PS Vita》\n・F1 2018 (No DLC)《PS4》"
- },
- {
-  "job": "cex 0830",
-  "ts": 1794357563,
-  "text": "健康檢查：20261111083030（範圍 web，78667 筆）\n  ✅ freshness  資料 0.0 小時前抓的\n  ✅ volume     筆數 78667（與上次 78667 差 0.00%）\n  ✅ schema     60 個欄位，與上次指紋一致\n  ✅ quality    78667 筆：主鍵無重複、標價與名稱完整\n  ✅ heartbeat  距上次抓取 10.5 小時（20261110220030 → 20261111083030）\n\n全部正常"
- },
- {
-  "job": "kl daily brief",
-  "ts": 1794357059,
-  "text": "☀️ 今日 11/11 (Wed)\n\n天氣：25–31°C，最高降雨機率 100%\n　降雨時段：07:00（50%）、13:00（73%）、14:00（94%）、15:00（100%）、16:00（100%）、17:00（98%）\n\nMid Valley 本週活動（10 項）\n・Blackmores by Caring — Centre Court (CC), Lower Ground Floor\n　10 Nov - 15 Nov 2026\n・SK-II Festive Pop-Up — South Void 2 (SV2), Ground Floor\n　9 Nov - 15 Nov 2026\n・25th Private and International School Fair (PISF) — Hall 1 & Hall 2, Mid Valley Exhibition Centre (MVEC), Third Floor, Centre Court\n　14 Nov - 15 Nov 2026\n・Ekspo Rumah BPEX — Hall 3, Mid Valley Exhibition Centre (MVEC), Third Floor, Centre Court\n　14 Nov - 15 Nov 2026\n\n\n電子／玩具優惠\n・DirectD 11.11 Mega Madness Sale – 24-Hour Online Sho\n　11-11　12AM with Exclusive Deal\n・HONOR Malaysia 11.11 Mega Sale – Get 2,000 Free Poin\n　11-11\n・Eubiq GSS Malaysia 11.11 GSS System Factory Clearanc\n　11-11\n・DirectD 11.11 Mega Madness Sale – 24-Hour Online Exc\n　11-11　12AM\n・DDPAI Malaysia 11.11 Biggest Sale – Up to 40% OFF St\n　11-10→11-11　Shopee Official Store\n・Switch Malaysia Apple TikTok LIVE Sale Promotion – E\n　11-10→11-11\n\n大型活動（會展／體育館）\n・11-12 FUEL YOUR STRIDE | 12 November 2026\n　Pintu Gate VIP Stadium Bukit Jalil\n・11-27 Resilience by Design: Are You Scaling AI or \n　The Ruma Hotel and Residences\n・11-27 Sustiana"
  },
  {
   "job": "記憶審計",
