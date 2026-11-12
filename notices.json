@@ -1,5 +1,10 @@
 [
  {
+  "job": "今日新聞",
+  "ts": 1794487670,
+  "text": "digest.json 寫好了：`/home/rin/AI/news/digest.json`（覆寫昨天的舊檔，結構化項目保持一條對一條）。\n\n📰 今天值得看的\n・變形金剛：無盡戰爭 首發，雙平台同步開戰。\n・貓咪大戰爭 推出卡牌遊戲，明年 3 月發售。\n・炭治郎穿隊服登場，魂ストア限定特典。\n・Grok Bot 1.0 推出，AI 隊友進會議。\n・無印良品 109 萬筆卡號資料外洩。\n・Vivo V80 即將來馬來西亞，預售已開放。\n🔥 今天在討論\n馬來西亞熱搜一邊是韓國偶像與泰劇新劇的話題，一邊是電商紅包與聖誕 NFT 貼文，NVIDIA 黃仁勳風波與馬來西亞政壇（Rosmah、Najib）也有餘溫。"
+ },
+ {
   "job": "nightly reflection",
   "ts": 1794481132,
   "text": "改了 3 個 skill、共 4 條：\n\n- **anima-image**（2 條）：局部重畫換動作時 denoise 要接近 1.0，交付前先量像素差才說「已改成 X」；兩主體黏在一起的原圖不能當換姿勢母本。\n- **graphic-design**（1 條）：他的參考圖一到手先量化（主色佔比、區塊比例、描邊寬度）再出下一版，不要用自己鎖的色盤或形容詞再猜。\n- **engineering-principles**（1 條）：縮小範圍時不要替它發明聽起來像既有做法的名詞，直說是新提的替代方案。\n\n（Shopee 下架對帳、改名備份那兩條原本就在 shopee-import.md，不重寫。）"
@@ -48,11 +53,6 @@
   "job": "生活記錄",
   "ts": 1794423933,
   "text": "「今晚沒有」"
- },
- {
-  "job": "今日新聞",
-  "ts": 1794398705,
-  "text": "digest.json 已寫好（`/home/rin/AI/news/digest.json`），以下是今日內容：\n\n📰 今天值得看的\n・Pokémon GO 開啟與香港麥當勞限時聯乘，遊戲玩家可實體收集慶典\n・《對魔忍2》繁中正式發售，收錄完全版劇情\n・《魔御：STAR DIVE》1.5 版更新，加入新 5 星角色 M.A.D.\n・OpenAI 建「死亡開關」35 秒內切斷研究模型輸出，防失控\n・索尼復刻 1979 年 Walkman 耳機並加 USB-C，懷舊熱潮再起\n・Infinix 推 XBook 14 Neo 顏料黑 RM2,199，狙擊 MacBook Neo\n\n🔥 今天在討論\n馬來西亞熱搜：韓國偶像與泰劇／BL 劇話題佔大半，Wanda、KIIRAS、Please JASPER、JUNGKOOK×GRAFF 這些新企劃接連刷；另一邊是 Jensen 風波、NVIDIA 這種新聞話題也黏人；娛樂那邊有 coachella 開幕、BANANAS MV 這種新動向。"
  },
  {
   "job": "記憶審計",
