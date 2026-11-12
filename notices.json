@@ -1,5 +1,10 @@
 [
  {
+  "job": "AI 工具日報",
+  "ts": 1794441699,
+  "text": "**AI 工具 + 新奇專案日報｜11/12（三）**\n\n【第一節｜AI 工具】\n\n・Hermes Agent v0.23.1（補丁）\n　是什麼：插件目錄檔超過 2MB 上限，導致 `hermes plugins install` 一直默默用回舊目錄；這版把上限提高到 16MB。\n　對我們：你經常裝插件，只要不更新，11/9 之後新上架的插件就永遠找不到（不是報錯，是靜靜裝了舊版）。\n　結論：值得更新 —— 但這是修 bug，不是新功能，你點頭我再跑。\n\n・agent-browser（Vercel Labs，49.8k★）\n　是什麼：一個用 Rust 寫的指令列工具，背後跑一個常駐 daemon 控制 Chrome；它把頁面轉成帶 `@e1` 編號的純文字，讓 agent 一步步點、每次點完再讀一次頁面確認結果。\n　對我們：Carousell／CeX 那邊現在靠 Brave CDP 和我自己寫的腳本硬撐，這正好是同類做法但成熟的成品，抓取失敗時的除錯會省很多。\n　結論：值得試 —— 先拿 Carousell 一頁當試點，不要一次換掉現有流程。\n\n・Codex Security（openai/codex-security，11.3k★）\n　是什麼：一行 `cs scan .` 掃 repo 找漏洞，會驗證、生成修補、輸出 SARIF／Markdown 報告，Apache-2.0。\n　對我們：duckx3.my 的 PocketBase 後端和 refsite 從來沒人審過；但這要 OpenAI key，跑一次要花錢。\n　結論：觀察就好 —— 費用比效果更不確定，等有人發實測再說。\n\n・MiniMax H3-Image（開源權重圖像模型）\n　是什麼：MiniMax 放出的開源生圖模型，8-bit 版本約 68GB。\n　對我們：3070 Ti 只有 8GB，本地連載入都做不到，跟你現在的生圖流程完全無關。\n　結論：不用管 —— 除非哪天走雲端租卡。\n\n【第二節｜🔧 新奇專案】\n\n・Talkie-1930（talkie-lm，HuggingFace＋GitHub）\n　是什麼：13B 模型，只用 1931 年前的英文文本訓練，連微調資料都從 1930 年代的禮儀手冊、書信指南、百科抽出來。\n　有趣：可以問「1930 年的人」怎麼看電、火車、無線電，看它的世界觀在哪一句話斷掉；作者還放了一個同架構的現代版當對照組，等於做了一個時光對照實驗。\n\n・Legend of Elya（N64 自製遊戲）\n　是什麼：Zelda 式地城遊戲，NPC 的對話是 6.36M 參數 transformer 直接跑在 1996 年那顆 93.75MHz MIPS CPU 上，實測 1.2 tok/s。\n　有趣：沒有查表、沒有預錄台詞，真的做矩陣乘法和 softmax；插 EverDrive "
+ },
+ {
   "job": "doc reconcile",
   "ts": 1794426981,
   "text": "【文件 vs 現況 對帳】\n • 手機頁資料 5.8 小時前（上限 5）：2026-11-11T14:10:06Z\n • 本機最後一輪 5.8 小時前（20261111220030）"
@@ -43,11 +48,6 @@
   "job": "kl daily brief",
   "ts": 1794357059,
   "text": "☀️ 今日 11/11 (Wed)\n\n天氣：25–31°C，最高降雨機率 100%\n　降雨時段：07:00（50%）、13:00（73%）、14:00（94%）、15:00（100%）、16:00（100%）、17:00（98%）\n\nMid Valley 本週活動（10 項）\n・Blackmores by Caring — Centre Court (CC), Lower Ground Floor\n　10 Nov - 15 Nov 2026\n・SK-II Festive Pop-Up — South Void 2 (SV2), Ground Floor\n　9 Nov - 15 Nov 2026\n・25th Private and International School Fair (PISF) — Hall 1 & Hall 2, Mid Valley Exhibition Centre (MVEC), Third Floor, Centre Court\n　14 Nov - 15 Nov 2026\n・Ekspo Rumah BPEX — Hall 3, Mid Valley Exhibition Centre (MVEC), Third Floor, Centre Court\n　14 Nov - 15 Nov 2026\n\n\n電子／玩具優惠\n・DirectD 11.11 Mega Madness Sale – 24-Hour Online Sho\n　11-11　12AM with Exclusive Deal\n・HONOR Malaysia 11.11 Mega Sale – Get 2,000 Free Poin\n　11-11\n・Eubiq GSS Malaysia 11.11 GSS System Factory Clearanc\n　11-11\n・DirectD 11.11 Mega Madness Sale – 24-Hour Online Exc\n　11-11　12AM\n・DDPAI Malaysia 11.11 Biggest Sale – Up to 40% OFF St\n　11-10→11-11　Shopee Official Store\n・Switch Malaysia Apple TikTok LIVE Sale Promotion – E\n　11-10→11-11\n\n大型活動（會展／體育館）\n・11-12 FUEL YOUR STRIDE | 12 November 2026\n　Pintu Gate VIP Stadium Bukit Jalil\n・11-27 Resilience by Design: Are You Scaling AI or \n　The Ruma Hotel and Residences\n・11-27 Sustiana"
- },
- {
-  "job": "AI 工具日報",
-  "ts": 1794355359,
-  "text": "**AI 工具日報 · 2026/11/11**\n\n【一｜AI 工具】\n1. **Hermes Agent v0.23.1** — 昨天出的補丁；它把插件目錄上限從 2MB 提高到 16MB，修掉了 `plugins install` 偷偷退回舊清單、找不到新插件的問題。\n對我們：我就跑在 Hermes 上；若你還在 0.23.0，之後想安裝插件，會一直拿到過期的版本固定。\n→ 值得試（執行 `hermes update`；要我先查版本再動也行）。\n2. **billion-context** — 一個用 npm 安裝的本機壓縮代理，把長會話壓進 100K 窗口，宣稱可省 5 倍 token。\n對我們：它只支援 OpenCode、Claude Code、Codex 這類 CLI，不支援 Hermes，還會自己在背景更新；省 token 雖然很誘人，但接不進我們這條線。\n→ 觀察就好。\n3. **RuView** — 用 Wi-Fi 訊號（CSI）穿牆偵測有沒有人、呼吸與心跳，加一個 $8 的 ESP32 就能多一個感測點。\n對我們：你現在判斷「人在不在家」是靠手機 ping，這個方法不用人帶手機；但它是研究原型（README 自己寫明不是醫療或安全裝置），每個房間都要校準。\n→ 觀察就好，先不用買板子。\n4. **OpenCode v2.2.6** — 加了 `run --archived`（排程跑完不會堆進收件匣）、`-w` 開獨立 worktree、MCP 連線可共用。\n對我們：你的排程全在 Hermes 上跑，用不到；除非之後把 ~/AI 的腳本改丟給 OpenCode。\n→ 觀察就好。\n\n【二｜🔧 新奇專案】\n**Umbra** — 一個住在 Android 手機裡的 agent，用無障礙 API 在「隱形背景顯示器」上操作 app；你在滑手機時，它在旁邊跑任務，還能開 Debian 環境寫程式。\n好玩在：它不會搶你的螢幕，狀態掛在相機孔旁的小膠囊上；可惜它要求 Android 16，ROG 5s（Android 13）跑不了。\n**Recalc** — 把 Claude Code、Codex 塞進試算表每一格：一格式算式、一格跑指令、一格就是一個 agent 會話。\n好玩在：多個 agent 會變成一張一眼掃完的表格；紅字就代表驗算沒過，任何一格都能拉回終端接手。\n**Valencia 等角城市** — 有人在瀏覽器裡把整座西班牙 Valencia 做成 SimCity 那種等角視角，可以直接逛。\n好玩在：它把城市資料當成遊戲地圖，純看也很舒服；在 Show HN 上有 180 分。"
  },
  {
   "job": "記憶審計",
