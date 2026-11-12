@@ -1,19 +1,19 @@
 {
- "updated": 1794479414,
+ "updated": 1794486614,
  "quota": {
-  "rolling": 98,
-  "weekly": 83,
-  "monthly": 38,
-  "reset_rolling": "4h 8m",
-  "reset_weekly": "3d 13h",
-  "reset_monthly": "5d 6h"
+  "rolling": 92,
+  "weekly": 81,
+  "monthly": 37,
+  "reset_rolling": "2h 8m",
+  "reset_weekly": "3d 11h",
+  "reset_monthly": "5d 4h"
  },
  "host": {
   "load": 0.01,
   "mem_pct": 16,
   "disk_pct": 6,
   "disk_free_gb": 407,
-  "uptime_h": 183
+  "uptime_h": 185
  },
  "memory": {
   "memory": {
@@ -28,11 +28,18 @@
   }
  },
  "cron": {
-  "enabled": 30,
-  "failed": 0,
-  "failed_names": []
+  "enabled": 33,
+  "failed": 1,
+  "failed_names": [
+   "cex-3h"
+  ]
  },
  "reminders": [
+  {
+   "name": "gsc sitemap reminder",
+   "date": "11/13",
+   "days": 0
+  },
   {
    "name": "BF 遊戲掃描",
    "date": "11/20",
