@@ -1,34 +1,34 @@
 {
- "updated": 1794511814,
+ "updated": 1794517215,
  "quota": {
-  "rolling": 96,
-  "weekly": 78,
-  "monthly": 36,
-  "reset_rolling": "23m",
-  "reset_weekly": "3d 4h",
-  "reset_monthly": "4d 21h"
+  "rolling": 98,
+  "weekly": 77,
+  "monthly": 35,
+  "reset_rolling": "3h 53m",
+  "reset_weekly": "3d 2h",
+  "reset_monthly": "4d 20h"
  },
  "host": {
-  "load": 0.01,
-  "mem_pct": 15,
-  "disk_pct": 6,
-  "disk_free_gb": 406,
-  "uptime_h": 192
+  "load": 0.38,
+  "mem_pct": 14,
+  "disk_pct": 8,
+  "disk_free_gb": 398,
+  "uptime_h": 194
  },
  "memory": {
   "memory": {
-   "pct": 99,
-   "chars": 2168,
+   "pct": 82,
+   "chars": 1803,
    "limit": 2200
   },
   "user": {
-   "pct": 99,
-   "chars": 1358,
+   "pct": 96,
+   "chars": 1324,
    "limit": 1375
   }
  },
  "cron": {
-  "enabled": 32,
+  "enabled": 33,
   "failed": 2,
   "failed_names": [
    "news-refresh",
