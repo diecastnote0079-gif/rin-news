@@ -1,8 +1,13 @@
 [
  {
+  "job": "今日新聞",
+  "ts": 1794571478,
+  "text": "📰 今天值得看的\n・《來自深淵：覺醒的神秘》11/20上映，特典開放\n・卡牌圈示警：跨境電商賣假認證磚，收藏者要小心\n・ONE PIECE 角色納米新服装模型預約開跑\n・李飞飞世界模型正式開放，一句話畫出重慶山城\n・豆包接入 Kimi、DeepSeek，模型自由來了\n・黃仁勳辭職：內部 97% 投票要他回任\n・馬來西亞 10 月電動車增長5.7%，普羅頓61%\n\n🔥 今天在討論 娛樂那邊：泰劇韓劇的新劇新企劃在一起刷——《UNSPOKEN Rebecca Armstrong》《Fool in Love EP11》《NAMTAN FILM》《#NCT127 in KL》全燒馬來西亞熱搜，中央世界聖誕燈也有人圍；科技那邊：NVIDIA 搞得人心惶惶——黃仁勳辭職、Kress 暫代、內部 97% 討論要他回任，Bitcoin 跟 Tim Cook 也被拽進來。digest 已寫：/home/rin/AI/news/digest.json"
+ },
+ {
   "job": "cex 3h",
-  "ts": 1794557345,
-  "text": "健康檢查：20261113160015（範圍 web，77334 筆）\n  ✅ freshness  資料 0.0 小時前抓的\n  ✅ volume     筆數 77334（與上次 77319 差 0.02%）\n  ✅ schema     60 個欄位，與上次指紋一致\n  ✅ quality    77334 筆：主鍵無重複、標價與名稱完整\n  ✅ heartbeat  距上次抓取 3.0 小時（20261113130015 → 20261113160015）\n\n全部正常"
+  "ts": 1794568146,
+  "text": "健康檢查：20261113190015（範圍 web，77352 筆）\n  ✅ freshness  資料 0.0 小時前抓的\n  ✅ volume     筆數 77352（與上次 77334 差 0.02%）\n  ✅ schema     60 個欄位，與上次指紋一致\n  ✅ quality    77352 筆：主鍵無重複、標價與名稱完整\n  ✅ heartbeat  距上次抓取 3.0 小時（20261113160015 → 20261113190015）\n\n全部正常"
  },
  {
   "job": "SNKRDUNK 卡價",
@@ -58,11 +63,6 @@
   "job": "nightly reflection",
   "ts": 1794497656,
   "text": "改了 2 個 skill、共 3 條：\n\n- **hunting-cex**（2 條）：wrangler 不要裝在 node 版本目錄下（node 一重裝就消失、部署靜默失敗）→ symlink 到固定 `~/.hermes/tools/bin/` ＋ `cex_daily.py` 開頭檢查缺就發 TG；判斷部署新不新鮮只看線上 `meta.json`／`daily.log` 的「✅ 已部署」，不要用 `cex-cf-stage` 的 mtime 推論。\n- **engineering-principles**（1 條）：他卡在具體障礙時給繞過障礙的方法，不要給換方案（「換成 B 會怎樣」要分兩句答）。\n\n順帶更正我今晚 23:27 的一句話：我說「雲端停在 11 月 6 日」是錯的——線上 `generatedAt` 是今天 16:10，實際是 19:08 那輪起 wrangler 才消失（node 目錄 17:30 被換新）。裝 wrangler 這件事還在等你點頭。"
- },
- {
-  "job": "今日新聞",
-  "ts": 1794487670,
-  "text": "digest.json 寫好了：`/home/rin/AI/news/digest.json`（覆寫昨天的舊檔，結構化項目保持一條對一條）。\n\n📰 今天值得看的\n・變形金剛：無盡戰爭 首發，雙平台同步開戰。\n・貓咪大戰爭 推出卡牌遊戲，明年 3 月發售。\n・炭治郎穿隊服登場，魂ストア限定特典。\n・Grok Bot 1.0 推出，AI 隊友進會議。\n・無印良品 109 萬筆卡號資料外洩。\n・Vivo V80 即將來馬來西亞，預售已開放。\n🔥 今天在討論\n馬來西亞熱搜一邊是韓國偶像與泰劇新劇的話題，一邊是電商紅包與聖誕 NFT 貼文，NVIDIA 黃仁勳風波與馬來西亞政壇（Rosmah、Najib）也有餘溫。"
  },
  {
   "job": "記憶審計",

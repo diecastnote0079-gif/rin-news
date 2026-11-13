@@ -1,43 +1,49 @@
 {
-  "date": "2026-11-12",
-  "updated": "2026-11-12T20:00:00+08:00",
+  "date": "2026-11-13",
+  "updated": "2026-11-13T20:00:00+08:00",
   "items": [
     {
-      "text": "變形金剛：無盡戰爭 首發，雙平台同步開戰。",
-      "link": "https://gnn.gamer.com.tw/detail.php?sn=314932",
-      "source": "巴哈 GNN",
-      "ts": 1794475231
+      "text": "《來自深淵：覺醒的神秘》11/20上映，特典開放",
+      "link": "https://www.4gamers.com.tw/news/detail/83299/made-in-abyss-the-awakening-mystery-first-week",
+      "source": "4Gamers",
+      "ts": 1794567131
     },
     {
-      "text": "貓咪大戰爭 推出卡牌遊戲，明年 3 月發售。",
-      "link": "https://gnn.gamer.com.tw/detail.php?sn=314939",
-      "source": "巴哈 GNN",
-      "ts": 1794478854
+      "text": "卡牌圈示警：跨境電商賣假認證磚，收藏者要小心",
+      "link": "https://www.4gamers.com.tw/news/detail/83294/pokemon-tcg-fake-psa-slabs-aliexpress-custom-labels",
+      "source": "4Gamers",
+      "ts": 1794562475
     },
     {
-      "text": "炭治郎穿隊服登場，魂ストア限定特典。",
-      "link": "https://hobby.dengeki.com/news/3230435/",
-      "source": "電撃Hobby",
-      "ts": 1794476700
+      "text": "ONE PIECE 角色納米新服装模型預約開跑",
+      "link": "https://hjweb.jp/article/2879349/",
+      "source": "Hobby Japan",
+      "ts": 1794538800
     },
     {
-      "text": "Grok Bot 1.0 推出，AI 隊友進會議。",
-      "link": "https://unwire.hk/2026/11/12/grok-bot-1-team-meetings-proactive/ai/",
-      "source": "Unwire HK",
-      "ts": 1794476506
+      "text": "李飞飞世界模型正式開放，一句話畫出重慶山城",
+      "link": "https://www.ifanr.com/1689379?utm_source=rss&utm_medium=rss&utm_campaign=",
+      "source": "愛范兒",
+      "ts": 1794564295
     },
     {
-      "text": "無印良品 109 萬筆卡號資料外洩。",
-      "link": "https://finance.technews.tw/2026/11/12/muji-japan-1-09-million-credit-card-data-leak-16-digit-card-numbers-exposed/",
-      "source": "科技新報",
-      "ts": 1794477626
+      "text": "豆包接入 Kimi、DeepSeek，模型自由來了",
+      "link": "https://www.ifanr.com/1689176?utm_source=rss&utm_medium=rss&utm_campaign=",
+      "source": "愛范兒",
+      "ts": 1794459005
     },
     {
-      "text": "Vivo V80 即將來馬來西亞，預售已開放。",
-      "link": "https://soyacincau.com/2026/11/12/vivo-v80-coming-to-malaysia-pre-order-promo/",
+      "text": "黃仁勳辭職：內部 97% 投票要他回任",
+      "link": "https://www.kocpc.com.tw/archives/703300",
+      "source": "電腦王阿達",
+      "ts": 1794568588
+    },
+    {
+      "text": "馬來西亞 10 月電動車增長5.7%，普羅頓61%",
+      "link": "https://soyacincau.com/2026/11/13/malaysia-jpj-ev-registration-october-2026/",
       "source": "SoyaCincau",
-      "ts": 1794463508
+      "ts": 1794550977
     }
   ],
-  "discussion": "馬來西亞熱搜一邊是韓國偶像與泰劇新劇的話題，一邊是電商紅包與聖誕 NFT 貼文，NVIDIA 黃仁勳風波與馬來西亞政壇（Rosmah、Najib）也有餘溫。"
+  "discussion": "娛樂那邊：泰劇韓劇的新劇新企劃在一起刷——《UNSPOKEN Rebecca Armstrong》《Fool in Love EP11》《NAMTAN FILM》《#NCT127 in KL》全燒馬來西亞熱搜，中央世界聖誕燈也有人圍；科技那邊：NVIDIA 搞得人心惶惶——黃仁勳辭職、Kress 暫代、內部 97% 討論要他回任，Bitcoin 跟 Tim Cook 也被拽進來。"
 }
