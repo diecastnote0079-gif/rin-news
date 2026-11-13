@@ -25,11 +25,6 @@
   "text": "☀️ 今日 11/13 (Fri)\n\n天氣：25–31°C，最高降雨機率 97%\n　降雨時段：07:00（64%）、08:00（55%）、09:00（58%）、10:00（67%）、11:00（76%）、12:00（82%）\n\nMid Valley 本週活動（10 項）\n・Ekspo Rumah BPEX — Hall 3, Mid Valley Exhibition Centre (MVEC), Third Floor, Centre Court\n　14 Nov - 15 Nov 2026\n・25th Private and International School Fair (PISF) KL Nov 2026 — Hall 1 & Hall 2, Mid Valley Exhibition Centre (MVEC), Third Floor, Centre Court\n　14 Nov - 15 Nov 2026\n・Blackmores by Caring — Centre Court (CC), Lower Ground Floor\n　10 Nov - 15 Nov 2026\n・SK-II Festive Pop-Up — South Void 2 (SV2), Ground Floor\n　9 Nov - 15 Nov 2026\n\n雪隆活動（未來 14 天，命中興趣 1 項）\n・11/27 Resilience by Design: Are You Scaling AI or Scal\n　The Ruma Hotel and Residences\n\n電子／玩具優惠\n・TMT Malaysia: TMT Go TAR UMT Arena 2026 – Enjoy Up t\n　11-13　TAR UMT\n・Xiaomi Malaysia 11.11 Mega Sale – Enjoy Up to 45% OF\n　11-13　Mi.com\n・TMT Malaysia 11.11 TechOver Madness Sale – Up to RM5\n　11-11→11-13\n・ASUS Republic of Gamers (ROG) Malaysia: Gaming Monit\n　11-07→11-13\n・GIGABYTE AORUS 11.11 OLED Sale Malaysia – Enjoy Excl\n　11-13→11-14　Official Shopee & Lazada\n・PC Image ASUS & ROG WiFi 7 Router Sale – Enjoy Up to\n　11-08→11-14　All Participating Stores\n\n大型活動（會展／體育館）\n・11-27 Resilience by Design: Are "
  },
  {
-  "job": "Samsung 監控",
-  "ts": 1794529281,
-  "text": "🆕 *Samsung 馬來西亞有新上架*\n・Galaxy S24 FE（SM-S721BLBBXME） — 有貨 RM 3,049.00"
- },
- {
   "job": "ai research push",
   "ts": 1794528621,
   "text": "**⚡ 建議動手**\n1. 先 `hermes --version` 對一下版本；不是 v0.23.1 就 `hermes update`（3 分鐘）。v0.23.1 修的是插件目錄上限 2MiB→16MiB——留在舊版的話 `hermes plugins install` 會默默退回出廠目錄，找不到新插件也不報錯。\n2. 升完順手搜一下 skills／排程 prompt 有沒有寫死 `browser_navigate` 這類舊工具名（v0.23.0 起只剩 `browser_exec`）。5 分鐘，不做以後某個排程會突然啞掉。"
