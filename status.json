@@ -1,19 +1,19 @@
 {
- "updated": 1794589214,
+ "updated": 1794596415,
  "quota": {
-  "rolling": 94,
-  "weekly": 71,
-  "monthly": 32,
-  "reset_rolling": "15m",
-  "reset_weekly": "2d 6h",
-  "reset_monthly": "4d 0h"
+  "rolling": 84,
+  "weekly": 63,
+  "monthly": 28,
+  "reset_rolling": "3h 15m",
+  "reset_weekly": "2d 4h",
+  "reset_monthly": "3d 22h"
  },
  "host": {
-  "load": 0.24,
-  "mem_pct": 14,
+  "load": 0.3,
+  "mem_pct": 15,
   "disk_pct": 8,
   "disk_free_gb": 398,
-  "uptime_h": 214
+  "uptime_h": 216
  },
  "memory": {
   "memory": {
@@ -28,13 +28,18 @@
   }
  },
  "cron": {
-  "enabled": 34,
+  "enabled": 36,
   "failed": 1,
   "failed_names": [
    "cex-3h"
   ]
  },
  "reminders": [
+  {
+   "name": "phone plan update",
+   "date": "11/14",
+   "days": 0
+  },
   {
    "name": "BF 遊戲掃描",
    "date": "11/20",
