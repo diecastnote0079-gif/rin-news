@@ -1,7 +1,15 @@
 {
- "updated": "2026-11-14T00:57:16+08:00",
- "count": 7,
+ "updated": "2026-11-14T04:01:30+08:00",
+ "count": 8,
  "items": [
+  {
+   "cat": "tech",
+   "title": "CMP 170HX 礦卡破解熔絲鎖變 80GB A100",
+   "note": "用不到 10 美元的 STM32 板燒斷 NVIDIA 熔絲，8GB 礦卡改成 80GB、85.9 TFLOPS 跑贏兩萬美元原版；二手礦卡價已從 200 漲到 3,000 美元。",
+   "source": "電腦王阿達",
+   "ts": 1794595400,
+   "added": "2026-11-14T04:01:30+08:00"
+  },
   {
    "cat": "game",
    "title": "《God of War: Sons of Sparta》11/16 登 PS4",
