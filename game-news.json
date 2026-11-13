@@ -1,12 +1,41 @@
 {
-  "updated": "2026-11-13T22:51:00+08:00",
-  "items": [
-    {"cat": "game", "title": "PS5 銷量宣布破億，索尼同步推出新款 PS Portal", "note": "破億這數字終於落地，順帶一款新的串流掌機；同一集也提到 Falcom 財報透露《界之軌跡》續篇時程。", "source": "巴哈電玩瘋"},
-    {"cat": "game", "title": "《超級瑪利歐派對 空前盛會》NS2 版免費更新「遊戲分享」", "note": "靠遊戲聊天把畫面分享出去，朋友只要手上有 NS2 就能加入，最多 4 人一起玩。", "source": "4Gamers"},
-    {"cat": "game", "title": "《九王》正式版 1.0 上線（Roguelike 自走棋）", "note": "脫離搶先體驗，Steam／GOG／Epic／微軟商店同步，首日就進 PC Game Pass。", "source": "Gematsu"},
-    {"cat": "game", "title": "寶可夢《傳說 Z-A》《Pokopia》神秘禮物開跑", "note": "11/12 起輸入密語 CELEBRATE30TH，Z-A 可領異色哲爾尼亞斯或伊裴爾塔爾。", "source": "巴哈 GNN"},
-    {"cat": "game", "title": "微軟確認《德軍總部 III》進入開發", "note": "Bethesda 重啟三部曲的最終章總算動了，離《新巨像》2017 已九年。", "source": "Gematsu"},
-    {"cat": "game", "title": "《瑪奇英雄傳：反抗命運》2027 登 PS5 與 Steam", "note": "NEXON 確認 PS5 版，首位原創角色 Noctia 露臉。", "source": "4Gamers"},
-    {"cat": "tech", "title": "GTA 6 南韓曾險遭禁售", "note": "男性角色全裸畫面惹爭議，三輪審查終獲成人分級。", "source": "Unwire HK"}
-  ]
+ "updated": "2026-11-13T23:34:29+08:00",
+ "items": [
+  {
+   "cat": "game",
+   "title": "《俠盜獵車手 6》PS5 實體版開箱：盒裡沒有光碟",
+   "note": "11/19 發售，包裝內只有印在封面紙內側的下載代碼＋雙面海報，標準版 NT$2,320。",
+   "source": "巴哈 GNN"
+  },
+  {
+   "cat": "game",
+   "title": "《God of War: Sons of Sparta》11/16 登 PS4",
+   "note": "同步推免費內容更新，2026 年的新作還回頭照顧 PS4 玩家。",
+   "source": "Gematsu"
+  },
+  {
+   "cat": "game",
+   "title": "PS5 基礎版 AI 升頻 QSSR 擴大到 6 款遊戲",
+   "note": "蜘蛛人 2、ARC Raiders、No Man's Sky 等加入，不必買 Pro 也有近似升頻。",
+   "source": "Gematsu"
+  },
+  {
+   "cat": "game",
+   "title": "《STRANGER THAN HEAVEN》Act 2「吳」故事預告",
+   "note": "SEGA／人龍工作室新 IP 第二幕預告，繼續鋪世界觀。",
+   "source": "Gematsu"
+  },
+  {
+   "cat": "game",
+   "title": "《Lucky Luke》合集宣布，全平台含 Switch 2",
+   "note": "Atari 旗下 Infogrames 復活老西部 IP，PS5／Xbox／Switch 2／PC 同步。",
+   "source": "Gematsu"
+  },
+  {
+   "cat": "game",
+   "title": "《GTA 6》遊戲內動畫影集「Macca & Friends」預告",
+   "note": "Rockstar 在遊戲裡塞了一整套自製動畫節目，先放前導預告。",
+   "source": "Gematsu"
+  }
+ ]
 }
