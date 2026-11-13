@@ -1,5 +1,15 @@
 [
  {
+  "job": "cex 3h",
+  "ts": 1794535770,
+  "text": "健康檢查：20261113100015（範圍 web，77310 筆）\n  ✅ freshness  資料 0.0 小時前抓的\n  ✅ volume     筆數 77310（與上次 77310 差 0.00%）\n  ✅ schema     60 個欄位，與上次指紋一致\n  ✅ quality    77310 筆：主鍵無重複、標價與名稱完整\n  ✅ heartbeat  距上次抓取 1.5 小時（20261113083015 → 20261113100015）\n\n全部正常"
+ },
+ {
+  "job": "SNKRDUNK 卡價",
+  "ts": 1794531621,
+  "text": "SNKRDUNK 變化\n📈 3rd Anniversary Set — ENGLISH\n   在售 49 → 50 件\n   最低在售 ¥64,000 → ¥63,000\n📈 3rd Anniversary Set — CHINA\n   在售 53 → 54 件\n   最低在售 ¥43,000 → ¥41,000\n📈 Luffy SEC-SP EB04-061\n   A ¥1,400,000 → ¥1,410,000\n   PSA10 ¥1,850,000 → ¥1,830,000"
+ },
+ {
   "job": "CeX 早安",
   "ts": 1794530991,
   "text": "昨天 CeX 的動靜：\n\n🆕 新上架\n・Batman Arkham Collection (2 Disc)（PS4）RM135\n・Halloween: The Game (No DLC)（PS5）RM230\n・Clive Barker's Hellraiser: Revival（PS5）RM120\n・Rush Rally Collection（Switch）RM200\n\n📉 降價\n・Lost Soul Aside（PS5）RM150 → RM100\n・SpongeBob SquarePants: The Cosmic Shake（Xbox）RM110 → RM90\n・Bleeding Edge（Xbox）RM100 → RM80\n・Far Cry 4（Xbox）RM90 → RM80\n・Metal Gear Solid V: The Phantom Pain（Xbox）RM50 → RM40\n・Final Fantasy XII The Zodiac Age（Xbox）RM75 → RM65\n\n📦 回架\n・PS5《PS5 Slim Digital Edition Console, 825GB, White, Discounted》\n・Switch《WarioWare: Get It Together!》\n・Switch《Five Nights at Freddy's: Into the Pit》\n・Switch《Toy Story: Retro Roundup! + Toy Story 3 Complete Ed.》\n・PS4《Hogwarts Legacy (No DLC)》\n・PS5《Assassin's Creed Mirage (No DLC)》\n\n🚫 賣光\n・PS5《Hi-Fi Rush》\n・Switch《Outer Wilds》\n・Switch《Mega Man Legacy Collection 1 Only (No DLC)》\n・PS4《FIFA 17》\n・Switch《Nintendo Amiibo Super Smash Bros. Sheik Figure》\n・Switch《Nintendo Amiibo Super Smash Bros. Olimar Figure》\n\n補充：昨天（馬來西亞時間 2026-11-12）`changes` 表共 2,233 筆，遊戲／主機／罕見硬體相關篩選後才整理出上述 22 條。降價那邊整批都 2026-11-12T00:38:49Z 批次下來的，都是舊價 → 新價；回架以 RESTOCK（舊 0 → 新 1）為主，舊貨的 PS3、Wii、PSP 光碟沒列進來，只挑值得看的。"
@@ -58,11 +68,6 @@
   "job": "今日新聞",
   "ts": 1794487670,
   "text": "digest.json 寫好了：`/home/rin/AI/news/digest.json`（覆寫昨天的舊檔，結構化項目保持一條對一條）。\n\n📰 今天值得看的\n・變形金剛：無盡戰爭 首發，雙平台同步開戰。\n・貓咪大戰爭 推出卡牌遊戲，明年 3 月發售。\n・炭治郎穿隊服登場，魂ストア限定特典。\n・Grok Bot 1.0 推出，AI 隊友進會議。\n・無印良品 109 萬筆卡號資料外洩。\n・Vivo V80 即將來馬來西亞，預售已開放。\n🔥 今天在討論\n馬來西亞熱搜一邊是韓國偶像與泰劇新劇的話題，一邊是電商紅包與聖誕 NFT 貼文，NVIDIA 黃仁勳風波與馬來西亞政壇（Rosmah、Najib）也有餘溫。"
- },
- {
-  "job": "SNKRDUNK 卡價",
-  "ts": 1794445237,
-  "text": "SNKRDUNK 變化\n📈 3rd Anniversary Set — ENGLISH\n   在售 48 → 49 件\n📈 3rd Anniversary Set — CHINA\n   在售 57 → 53 件\n   最低在售 ¥41,990 → ¥43,000\n📈 Luffy SEC-RSP OP13-118\n   PSA10 ¥3,000,000 → ¥3,150,000\n📈 Luffy SEC-SP EB04-061\n   A ¥1,450,000 → ¥1,400,000\n   PSA10 ¥1,900,000 → ¥1,850,000"
  },
  {
   "job": "記憶審計",
