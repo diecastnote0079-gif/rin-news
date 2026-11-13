@@ -1,5 +1,20 @@
 [
  {
+  "job": "生活記錄",
+  "ts": 1794601071,
+  "text": "今晚沒有。\n\n昨天（馬來西亞時間）的 user 訊息不是複雜，是 615 條都在做工作——短影片、FB 貼文、DuckX3 標案、Carousell 過濾工具、CeX 程式碼評審——找不到「去了哪／遇到誰／想吃什麼／好笑的事」這類生活面。出現的情緒只有「累死了」，而那是接在一堆露骨性內容後的角色扮演語氣，不是生活事實；有少女海報配樂命令、女婿肉棒等字眼，按「只記生活」這條一律不寫。沒有「不許記下」字樣，但可記的本來就沒有。"
+ },
+ {
+  "job": "duckx3 maintenance",
+  "ts": 1794600048,
+  "text": "兩個部分都成功：清掉了 **0 筆**收件匣記錄（收件匣共 112 筆，全都是 7 天內或 status=new）；備份 `pb_data-20261114-040018.tar.gz`，231.7MB（約 242,951,740 bytes），已確認含 `data.db` 與 2486 個 storage 檔案。沒有任何 FAILED。"
+ },
+ {
+  "job": "pending review nightly",
+  "ts": 1794599532,
+  "text": "完成。落了 3 條：閘門一次性通行證（approve.once，job_id 發證）；撞牆規則先交 Luna 再給 prompt；模型固定＋Luna 理解好，撞牆才 delegate deep 跑一次。併入 1 條重複舊條目（閘門 token 也比對 payload），水位從 98% 降至 97%。丟了 20 條／12 檔：重複版 2 組（455bd789 撞牆、b0ebcab9/bce7d71c 內容方向）、程序細節（Anima 版、MEDIA 路徑、yt-dlp/ffmpeg、Windows 8188）、cex 刪檔建議。水位 97%（2,138/2,200）；pending/memory 清空，15 份建議檔已移進 memory.archive，不再留下。"
+ },
+ {
   "job": "nightly reflection",
   "ts": 1794583914,
   "text": "改了 2 個 skill，共 3 條。\n\n- **duckx3-fb-news** 1 條：值不值得報的兩關判準（講得出不合理＋外面還沒洗版），不用品類核對、不用「跟店有關」。\n- **news-site-ops** 2 條：前端檔案不在 `update.py` 的白名單、push 後要 grep 線上元素而不是看 200；讀資料檔先印結構不假設 schema。\n\n（另外兩條本來就在 skill 裡，沒重寫：「未定不寫沒有」、「Gematsu 圖被 Cloudflare 擋改抓轉載站」。）"
@@ -43,21 +58,6 @@
   "job": "product pages rebuild",
   "ts": 1794520815,
   "text": "頁面 403 個｜清掉舊頁 3｜sitemap 404 條"
- },
- {
-  "job": "生活記錄",
-  "ts": 1794514721,
-  "text": "寫了 3 條，主題是 飲食 / 心情 / 人際。\n\n細節：\n- 工具：`fact_store` 這個能力在本次可用的工具集裡找不到（`tool_describe`/`tool_search` 皆回 no match），改用同是持久化事實的 `memory` 工具落地，3 條已寫入 memory 貯存（已讀回存，15→17 條）。\n- 來源窗口：按你給的 SQL 抓 `role='user'`、24 小時內（2026-11-12 04:16 → 2026-11-13 04:15 MYT），共 435 條 user 訊息，主體是 Carousell 實體遊戲過濾、Shopee 稿站、AI 影音工具研究等任務訊息。\n- 抽到的非任務生活面只有三處：\n  1. 18:03 提到想去大排檔吃。\n  2. 18:05 說太遠了就算了，隨便吃。\n  3. 03:52 提到「D」應該和他沒什麼關係了。\n- 沒發現「不許記下」或拒絕跡象；憑證/地址/電話均未寫入。"
- },
- {
-  "job": "pending review nightly",
-  "ts": 1794513339,
-  "text": "處理完成。報告如下：\n\n落了 1 條（SSH /tailscale status last-seen 觀察寫入記憶）。\n\n丟了 8 檔到 archive（本次核的 8 份，含 7 筆重複/換句話說的草稿）。\n\n其餘 70 份同批 mv 混入 archive（未判斷，待清理）。\n\n已跑 pending_sweep.py，pending 清空。\n\n目記憶水位 77%（1,697/2,200）。"
- },
- {
-  "job": "doc reconcile",
-  "ts": 1794513315,
-  "text": "【文件 vs 現況 對帳】\n • 本機最後一輪 5.8 小時前（20261112220015）"
  },
  {
   "job": "記憶審計",
