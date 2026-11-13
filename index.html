@@ -923,7 +923,9 @@ function renderNotices(){
     && !/^健康檢查/.test(String(n.text || "").trim())
     && !/^cex\s*3h$/i.test(String(n.job || "").trim())
     && !/^每週維修$/.test(String(n.job || "").trim())
-    && !/^doc reconcile$/i.test(String(n.job || "").trim()));
+    && !/^doc reconcile$/i.test(String(n.job || "").trim())
+    // 遊戲／科技新聞已經有第 2 頁（game-news.json），簡報頁不再重複
+    && !/duckx3\s*game\s*news/i.test(String(n.job || "").trim()));
   if (!rest.length){
     box.innerHTML = '<div class="msg">今天沒有簡報</div>';
     return;

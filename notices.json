@@ -1,8 +1,8 @@
 [
  {
-  "job": "duckx3 game news watch",
-  "ts": 1794581498,
-  "text": "看了一輪，只有這 6 條是新的：\n\n・PS5 銷量宣布破億，索尼同步推出新款 PS Portal（巴哈電玩瘋）\n　破億這數字終於落地，順帶一款新的串流掌機；同一集也提到 Falcom 財報透露《界之軌跡》續篇時程。\n\n・《超級瑪利歐派對 空前盛會》NS2 版免費更新「遊戲分享」\n　靠遊戲聊天把畫面分享出去，朋友只要手上有 NS2 就能加入，最多 4 人一起玩，不用擠在同一台電視前。\n\n・《九王》正式版 1.0 上線（Roguelike 自走棋）\n　脫離搶先體驗，Steam／GOG／Epic／微軟商店同步，首日就進 PC Game Pass，加「小丑模式」和 30 多條新法令。\n\n・寶可夢《傳說 Z-A》《Pokopia》神秘禮物開跑\n　11/12 起輸入密語，Z-A 可領異色哲爾尼亞斯或伊裴爾塔爾，Pokopia 給家具套組，期間限定。\n\n・微軟確認《德軍總部 III》進入開發\n　Bethesda 重啟三部曲的最終章總算動了，離《新巨像》2017 已九年。\n\n・《瑪奇英雄傳：反抗命運》2027 登 PS5 與 Steam\n　NEXON 確認 PS5 版，首位原創角色 Noctia 露臉，TwitchCon 2026 的試玩會開放到第五名可操作角色。\n\n今晚做過卡的那些（皮克敏 4、餓狼拉奧、PSA 仿冒、GTA6）沒重報。要哪條出貼文跟我說。"
+  "job": "nightly reflection",
+  "ts": 1794583914,
+  "text": "改了 2 個 skill，共 3 條。\n\n- **duckx3-fb-news** 1 條：值不值得報的兩關判準（講得出不合理＋外面還沒洗版），不用品類核對、不用「跟店有關」。\n- **news-site-ops** 2 條：前端檔案不在 `update.py` 的白名單、push 後要 grep 線上元素而不是看 200；讀資料檔先印結構不假設 schema。\n\n（另外兩條本來就在 skill 裡，沒重寫：「未定不寫沒有」、「Gematsu 圖被 Cloudflare 擋改抓轉載站」。）"
  },
  {
   "job": "今日新聞",
@@ -58,11 +58,6 @@
   "job": "doc reconcile",
   "ts": 1794513315,
   "text": "【文件 vs 現況 對帳】\n • 本機最後一輪 5.8 小時前（20261112220015）"
- },
- {
-  "job": "nightly reflection",
-  "ts": 1794497656,
-  "text": "改了 2 個 skill、共 3 條：\n\n- **hunting-cex**（2 條）：wrangler 不要裝在 node 版本目錄下（node 一重裝就消失、部署靜默失敗）→ symlink 到固定 `~/.hermes/tools/bin/` ＋ `cex_daily.py` 開頭檢查缺就發 TG；判斷部署新不新鮮只看線上 `meta.json`／`daily.log` 的「✅ 已部署」，不要用 `cex-cf-stage` 的 mtime 推論。\n- **engineering-principles**（1 條）：他卡在具體障礙時給繞過障礙的方法，不要給換方案（「換成 B 會怎樣」要分兩句答）。\n\n順帶更正我今晚 23:27 的一句話：我說「雲端停在 11 月 6 日」是錯的——線上 `generatedAt` 是今天 16:10，實際是 19:08 那輪起 wrangler 才消失（node 目錄 17:30 被換新）。裝 wrangler 這件事還在等你點頭。"
  },
  {
   "job": "記憶審計",
