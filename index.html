@@ -410,8 +410,8 @@ header{background:rgba(10,13,16,.94);border-bottom:1px solid rgba(226,236,245,.1
 .sch:after{content:"";position:absolute;inset:-6px;border-radius:50%}
 .sch:active{transform:scale(.94);color:var(--accent);border-color:var(--accent)}
 .sch.on{color:var(--accent);border-color:var(--accent)}
-.sbar{display:none;align-items:center;gap:8px;padding:2px 0 8px;border-bottom:1px solid var(--line)}
-.sbar.on{display:flex}
+.searchbar{display:none;align-items:center;gap:8px;padding:2px 0 8px;border-bottom:1px solid var(--line)}
+.searchbar.on{display:flex}
 #sinput{flex:1;background:transparent;border:0;outline:none;color:var(--fg);
   font:13px/1.6 inherit;letter-spacing:.02em;padding:8px 0}
 #sinput::placeholder{color:var(--dim2)}
@@ -470,11 +470,11 @@ header{background:rgba(10,13,16,.94);border-bottom:1px solid rgba(226,236,245,.1
 .bh .bt{margin-left:auto}
 
 /* 狀態欄：一條分段的顏色帶，有問題的那格會亮起來 */
-.sbar{display:flex;align-items:center;gap:3px;margin:6px 0 0}
-.sbar .seg{flex:1;height:7px;border-radius:2px;background:rgba(127,184,148,.28)}
-.sbar .seg.ok{background:rgba(127,184,148,.28)}
-.sbar .seg.warn{background:#E8D3A6;height:9px}
-.sbar .seg.bad{background:#E2503C;height:11px;box-shadow:0 0 14px rgba(226,80,60,.7)}
+.healthbar{display:flex;align-items:center;gap:3px;margin:6px 0 0}
+.healthbar .seg{flex:1;height:7px;border-radius:2px;background:rgba(127,184,148,.28)}
+.healthbar .seg.ok{background:rgba(127,184,148,.28)}
+.healthbar .seg.warn{background:#E8D3A6;height:9px}
+.healthbar .seg.bad{background:#E2503C;height:11px;box-shadow:0 0 14px rgba(226,80,60,.7)}
 .slabs{display:flex;gap:3px;margin-top:6px}
 .slabs .slab{flex:1;font-size:9.5px;letter-spacing:.02em;color:var(--dim);text-align:center}
 .slabs .slab.warn{color:#E8D3A6}
@@ -569,7 +569,7 @@ header{background:rgba(10,13,16,.94);border-bottom:1px solid rgba(226,236,245,.1
       <span class="hmeta" id="h-meta"></span>
       <button class="sch" id="sch" aria-label="搜尋" title="搜尋"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4 4"/></svg></button>
     </div>
-    <div class="sbar" id="sbar">
+    <div class="searchbar" id="searchbar">
       <input id="sinput" type="search" placeholder="搜尋標題或來源" autocomplete="off" enterkeyhint="search">
       <button id="sclear" aria-label="清除">✕</button>
       <span id="scount"></span>
@@ -957,7 +957,7 @@ function renderBody(text){
     const labs = hlist.map(([st, k]) => `<span class="slab ${st}">${esc(shortKey(k))}</span>`).join("");
     const bad  = hlist.filter(([st]) => st !== "ok")
                        .map(([st, k, v]) => `<span class="bad ${st}">${esc(shortKey(k))} ${compact(k, v)}</span>`).join("");
-    out += `<div class="sbar">${segs}</div><div class="slabs">${labs}</div>`
+    out += `<div class="healthbar">${segs}</div><div class="slabs">${labs}</div>`
          + (bad ? `<div class="sbads">${bad}</div>` : "");
     hlist = [];
   };
@@ -1293,13 +1293,23 @@ function askRin(link){
 $("#rclose").onclick = closeReader;
 
 
-/* 頂部陰影 */
-window.addEventListener("scroll", () => {
-  document.querySelectorAll("header").forEach(h => {
-    if (h.closest(".page")?.classList.contains("on"))
-      h.classList.toggle("scrolled", window.scrollY > 4);
-  });
-}, {passive:true});
+/* 垂直捲動的是 .pg（overflow-y:auto），不是 window——所以不能用 window.scrollY */
+function activePg(){
+  const p = document.getElementById("pager");
+  if (!p) return null;
+  const i = Math.round(p.scrollLeft / Math.max(1, p.clientWidth));
+  const all = p.querySelectorAll(".pg");
+  return all[i] || all[0] || null;
+}
+function topNow(){ const a = activePg(); return a ? a.scrollTop : 0; }
+
+/* 頂部陰影：監聽各 .pg 的捲動 */
+document.querySelectorAll("#pager .pg").forEach(pg => {
+  pg.addEventListener("scroll", () => {
+    const h = document.querySelector("#p-home header");
+    if (h) h.classList.toggle("scrolled", topNow() > 4);
+  }, {passive:true});
+});
 
 /* ── 載入 ── */
 async function load(){
@@ -1385,7 +1395,7 @@ async function load(){
   let sy = 0, pulling = false, pullingArmed = false;
   document.addEventListener("touchstart", e => {
     if (isOpen() || e.touches.length !== 1) return;
-    pullingArmed = window.scrollY <= 0;
+    pullingArmed = topNow() <= 0;
     sy = e.touches[0].clientY;
     pulling = false;
   }, {passive:true});
@@ -1393,7 +1403,7 @@ async function load(){
   document.addEventListener("touchmove", e => {
     if (!pullingArmed || isOpen() || e.touches.length !== 1) return;
     const dy = e.touches[0].clientY - sy;
-    if (dy <= 0 || window.scrollY > 0){ ptr.classList.remove("show"); return; }
+    if (dy <= 0 || topNow() > 0){ ptr.classList.remove("show"); return; }
     pulling = true;
     const pull = Math.min(dy, 110);
     if (pull > 12){
@@ -1406,7 +1416,7 @@ async function load(){
     if (!pulling){ ptr.classList.remove("show"); ptr.style.transform = ""; return; }
     const dy = (e.changedTouches[0]?.clientY || 0) - sy;
     pulling = false; pullingArmed = false;
-    if (dy > 70 && window.scrollY <= 0){
+    if (dy > 70 && topNow() <= 0){
       ptr.style.transform = "";
       ptr.classList.add("spin");
       load().finally(() => setTimeout(() => {
@@ -1474,7 +1484,7 @@ async function load(){
     if (e.target.closest("button, a")) return;
     const now = Date.now();
     if (now - lastTap < 320){
-      window.scrollTo({top:0, behavior:"smooth"});
+      const _p = activePg(); if (_p) _p.scrollTo({top:0, behavior:"smooth"});
       e.preventDefault();
     }
     lastTap = now;
@@ -1531,7 +1541,7 @@ loadHealth();
 <script>
 /* 搜尋：對 items.json 全量搜，結果用同一套 .row 樣式渲染 */
 (function(){
-  const btn=document.getElementById('sch'), bar=document.getElementById('sbar');
+  const btn=document.getElementById('sch'), bar=document.getElementById('searchbar');
   const inp=document.getElementById('sinput'), clr=document.getElementById('sclear');
   const cnt=document.getElementById('scount');
   const feed=document.getElementById('feed'), res=document.getElementById('sresults');
