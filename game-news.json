@@ -4,45 +4,51 @@
  "items": [
   {
    "cat": "game",
-   "title": "《俠盜獵車手 6》PS5 實體版開箱：盒裡沒有光碟",
-   "note": "11/19 發售，包裝內只有印在封面紙內側的下載代碼＋雙面海報，標準版 NT$2,320。",
-   "source": "巴哈 GNN",
-   "added": "2026-11-13T22:51:00+08:00"
-  },
-  {
-   "cat": "game",
    "title": "《God of War: Sons of Sparta》11/16 登 PS4",
    "note": "同步推免費內容更新，2026 年的新作還回頭照顧 PS4 玩家。",
    "source": "Gematsu",
-   "added": "2026-11-13T22:51:00+08:00"
+   "added": "2026-11-13T22:51:00+08:00",
+   "ts": 1794582328
+  },
+  {
+   "cat": "game",
+   "title": "《俠盜獵車手 6》PS5 實體版開箱：盒裡沒有光碟",
+   "note": "11/19 發售，包裝內只有印在封面紙內側的下載代碼＋雙面海報，標準版 NT$2,320。",
+   "source": "巴哈 GNN",
+   "added": "2026-11-13T22:51:00+08:00",
+   "ts": 1794582276
   },
   {
    "cat": "game",
    "title": "PS5 基礎版 AI 升頻 QSSR 擴大到 6 款遊戲",
    "note": "蜘蛛人 2、ARC Raiders、No Man's Sky 等加入，不必買 Pro 也有近似升頻。",
    "source": "Gematsu",
-   "added": "2026-11-13T22:51:00+08:00"
-  },
-  {
-   "cat": "game",
-   "title": "《STRANGER THAN HEAVEN》Act 2「吳」故事預告",
-   "note": "SEGA／人龍工作室新 IP 第二幕預告，繼續鋪世界觀。",
-   "source": "Gematsu",
-   "added": "2026-11-13T22:51:00+08:00"
-  },
-  {
-   "cat": "game",
-   "title": "《Lucky Luke》合集宣布，全平台含 Switch 2",
-   "note": "Atari 旗下 Infogrames 復活老西部 IP，PS5／Xbox／Switch 2／PC 同步。",
-   "source": "Gematsu",
-   "added": "2026-11-13T22:51:00+08:00"
+   "added": "2026-11-13T22:51:00+08:00",
+   "ts": 1794581016
   },
   {
    "cat": "game",
    "title": "《GTA 6》遊戲內動畫影集「Macca & Friends」預告",
    "note": "Rockstar 在遊戲裡塞了一整套自製動畫節目，先放前導預告。",
    "source": "Gematsu",
-   "added": "2026-11-13T22:51:00+08:00"
+   "added": "2026-11-13T22:51:00+08:00",
+   "ts": 1794580164
+  },
+  {
+   "cat": "game",
+   "title": "《Lucky Luke》合集宣布，全平台含 Switch 2",
+   "note": "Atari 旗下 Infogrames 復活老西部 IP，PS5／Xbox／Switch 2／PC 同步。",
+   "source": "Gematsu",
+   "added": "2026-11-13T22:51:00+08:00",
+   "ts": 1794579302
+  },
+  {
+   "cat": "game",
+   "title": "《STRANGER THAN HEAVEN》Act 2「吳」故事預告",
+   "note": "SEGA／人龍工作室新 IP 第二幕預告，繼續鋪世界觀。",
+   "source": "Gematsu",
+   "added": "2026-11-13T22:51:00+08:00",
+   "ts": 1794387610
   }
  ]
 }

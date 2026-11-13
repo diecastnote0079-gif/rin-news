@@ -898,9 +898,13 @@ async function renderGameNews(){
         const tag = x.cat === "tech"
           ? '<span class="gntag tech">科技</span>'
           : '<span class="gntag">遊戲</span>';
+        let t = "";
+        const tsSec = x.ts || (x.added ? Math.floor(Date.parse(x.added) / 1000) : 0);
+        if (tsSec && !isNaN(tsSec)) t = ago(tsSec) || "";
+        const meta = [x.source, t].filter(Boolean).map(esc).join(" · ");
         return `<div class="gni"><div class="gnt">${tag}${esc(x.title)}</div>` +
           (x.note ? `<div class="gnn">${esc(x.note)}</div>` : "") +
-          (x.source ? `<div class="gns">${esc(x.source)}</div>` : "") +
+          (meta ? `<div class="gns">${meta}</div>` : "") +
           `</div>`;
       }).join("");
     });
