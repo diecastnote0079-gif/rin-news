@@ -1,5 +1,10 @@
 [
  {
+  "job": "product pages rebuild",
+  "ts": 1794607215,
+  "text": "頁面 394 個｜清掉舊頁 9｜sitemap 395 條"
+ },
+ {
   "job": "生活記錄",
   "ts": 1794601071,
   "text": "今晚沒有。\n\n昨天（馬來西亞時間）的 user 訊息不是複雜，是 615 條都在做工作——短影片、FB 貼文、DuckX3 標案、Carousell 過濾工具、CeX 程式碼評審——找不到「去了哪／遇到誰／想吃什麼／好笑的事」這類生活面。出現的情緒只有「累死了」，而那是接在一堆露骨性內容後的角色扮演語氣，不是生活事實；有少女海報配樂命令、女婿肉棒等字眼，按「只記生活」這條一律不寫。沒有「不許記下」字樣，但可記的本來就沒有。"
@@ -53,11 +58,6 @@
   "job": "AI 工具日報",
   "ts": 1794528100,
   "text": "**⚡ 建議動手**\n1. 先 `hermes --version` 對一下版本；不是 v0.23.1 就 `hermes update`（3 分鐘）。v0.23.1 修的是插件目錄上限 2MiB→16MiB——留在舊版的話 `hermes plugins install` 會默默退回出廠目錄，找不到新插件也不報錯。\n2. 升完順手搜一下 skills／排程 prompt 有沒有寫死 `browser_navigate` 這類舊工具名（v0.23.0 起只剩 `browser_exec`）。5 分鐘，不做以後某個排程會突然啞掉。\n\n**第一節｜AI 工具**\n- Claude Code v2.1.323 加了實驗性 Code Mode：讓 Claude 寫一段 JavaScript 去呼叫工具，而不是一來一回 tool call。\n  我們沒在用 Claude Code，而且是 opt-in 實驗功能，短期沒收益。\n  結論：觀察就好。\n- MiniCPM-V 4.7 出了 MoE 版（35B-A3B），官方說 35B 那版在 iPhone 上能跑 13+ tok/s，另有 1B 小版。\n  3070 Ti 只有 8GB，35B 塞不進去；我們看圖都走雲端，1B 版沒有非用本地不可的理由。\n  結論：不用管。\n- Boole-1.7B 是 Qwen3-1.7B 的 1-bit 量化版，權重只有 247MB，官方評測約原版 86% 分數。\n  rin-box 沒 GPU，這種大小可以整顆放記憶體當便宜工人（分類、抽關鍵字、初篩標題）。\n  結論：觀察就好，等有人包成現成服務再碰。\n- OpenCode v2.2.7 主要加 GitHub Copilot 的 Auto 選模型，另有 pty daemon 0.5.2 這種內部釋出。\n  我們模型固定 opencode-go/deepseek，這版改動跟我們無關。\n  結論：不用管。\n\n**第二節｜🔧 新奇專案**\n- zigzag：Rust 寫的開源刺繡軟體，把 SVG 轉成刺繡機檔案，還內建 MCP 讓 AI agent 直接畫圖下針。\n  少見的是它把「實體機器」接進 agent——217 星、只有 5 個 commit、v0.1.1，很雛形但方向奇特，可以看看人家怎麼把機器控制包成工具。\n- smolmaxxing：一個人硬把 LLM 塞進愈來愈小的裝置，實驗紀錄寫到第 107 號，最新是在電視上跑 16B MoE、5.1 tok/s（專家權重放 flash 分頁載入）。\n  玩的不是「模型多強」而是「極限在哪」，整個 repo 就是一本實驗筆記，讀起來比教學文有趣。\n- OpenMontage：開源 agentic 影片製作系統，12 條製作 pipeline、100+ 工具、700+ 份 skill／知"
- },
- {
-  "job": "product pages rebuild",
-  "ts": 1794520815,
-  "text": "頁面 403 個｜清掉舊頁 3｜sitemap 404 條"
  },
  {
   "job": "記憶審計",
