@@ -2,7 +2,7 @@
 <html lang="zh-Hant">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#0C0B0A">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <title>早報</title>
@@ -176,6 +176,13 @@ html{overscroll-behavior-y:contain}
   -webkit-overflow-scrolling:touch;scrollbar-width:none}
 .pg::-webkit-scrollbar{display:none}
 .dots{display:flex;justify-content:center;gap:5px;padding:0 0 6px;flex:0 0 auto}
+.pgbar{display:flex;align-items:center;justify-content:center;gap:10px;padding:5px 0 7px}
+.pgbar .dots{padding:0}
+.pgname{font-size:12px;font-weight:700;color:var(--fg);letter-spacing:.02em}
+.pgnum{font-size:11px;color:var(--dim2);font-variant-numeric:tabular-nums}
+/* 點可以點：加大可點區域但視覺仍是 5px */
+.pgbar .dots i{width:5px;height:5px;position:relative;cursor:pointer}
+.pgbar .dots i::after{content:"";position:absolute;inset:-11px -6px}
 .dots i{width:5px;height:5px;border-radius:50%;background:var(--dim2);opacity:.4;transition:all .22s}
 .dots i.on{opacity:1;background:#b9c0c9;width:15px;border-radius:3px}
 
@@ -188,6 +195,13 @@ html{overscroll-behavior-y:contain}
 .bh .bi{font-size:14px}
 .bh .bt{margin-left:auto;font-size:11px;color:var(--dim2);font-weight:400;font-variant-numeric:tabular-nums}
 .bb{font-size:13.5px;line-height:1.68;color:var(--dim)}
+/* 簡報預設只露兩行，點開才看全文（14 份長簡報一次全展開沒人找得到東西） */
+.bcard .bb.clamp{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;
+  overflow:hidden;cursor:pointer}
+.bcard.open .bb.clamp{display:block;-webkit-line-clamp:unset;overflow:visible}
+.bcard{padding-bottom:2px}
+.bcard .bmore{display:block;font-size:11px;color:var(--dim2);padding:2px 0 9px;cursor:pointer}
+.bcard.open .bmore{display:none}
 .bb b{color:var(--fg);font-weight:600}
 .bb code{font-family:ui-monospace,monospace;font-size:11.5px;background:rgba(255,255,255,.06);
   padding:1px 5px;border-radius:5px;color:var(--accent)}
@@ -242,7 +256,7 @@ main{padding:0}
 /* ── 大卡（重點）── */
 a.lead{display:block;text-decoration:none;color:inherit;position:relative;
   border-radius:16px;overflow:hidden;margin-bottom:12px;background:var(--surface)}
-a.lead .thumb{width:100%;aspect-ratio:16/10;background:var(--surface2);display:block}
+a.lead .thumb{width:100%;aspect-ratio:16/7;background:var(--surface2);display:block}
 a.lead .thumb img{width:100%;height:100%;object-fit:cover;display:block}
 a.lead .txt{padding:var(--s2) var(--s2) var(--s2)}
 a.lead .t{font-size:17px;font-weight:700;line-height:1.42;letter-spacing:-.015em;
@@ -424,7 +438,7 @@ header{background:rgba(10,13,16,.94);border-bottom:1px solid rgba(226,236,245,.1
   background:#131110!important;padding:14px 14px 12px!important}
 .bcard .bh{font-size:13px;color:#F2EEE8;letter-spacing:.01em}
 .bcard .bh .bi{opacity:.85}
-.bcard .bh .bt{font-size:10.5px;color:#6B645B}
+.bcard .bh .bt{font-size:10.5px;color:#8A8378}
 .bcard .bb{color:#DDD8D0}
 /* 股票 watchlist 式：一行一項 */
 .trow{padding:9px 0;min-height:40px;border-bottom:1px solid rgba(255,255,255,.05);cursor:pointer}
@@ -438,7 +452,7 @@ header{background:rgba(10,13,16,.94);border-bottom:1px solid rgba(226,236,245,.1
 .tchip.dn{color:#EE5A44;background:rgba(238,90,68,.10)}
 .tchip.up{color:#6FB894;background:rgba(111,184,148,.12)}
 .tchip.flat{color:#9C948A;background:rgba(255,255,255,.06)}
-.tlbl{font-size:10px;color:#6B645B;margin-top:2px}
+.tlbl{font-size:10px;color:#8A8378;margin-top:2px}
 .tmore{display:none}
 .trow.open .tmore{display:block;padding-top:6px}
 .tsub{font-size:11px;color:#9C948A;padding:2px 0 2px 2px;font-variant-numeric:tabular-nums}
@@ -451,11 +465,11 @@ header{background:rgba(10,13,16,.94);border-bottom:1px solid rgba(226,236,245,.1
 .pitem:last-child{border-bottom:0;padding-bottom:2px}
 .pname{font-size:12.5px;color:#F2EEE8;letter-spacing:.01em;line-height:1.35}
 .prow{display:flex;align-items:baseline;gap:8px;margin-top:7px}
-.plab{font-size:10px;color:#6B645B;min-width:52px}
+.plab{font-size:10px;color:#8A8378;min-width:52px}
 .pdelta{font-size:11px;font-variant-numeric:tabular-nums;font-weight:600}
 .pdelta.dn{color:#EE5A44}.pdelta.up{color:#6FB894}.pdelta.flat{color:#9C948A}
 .pnow{margin-left:auto;font-size:12.5px;color:#E8E2D9;font-variant-numeric:tabular-nums}
-.pold{font-size:10.5px;color:#6B645B;text-decoration:line-through;font-variant-numeric:tabular-nums}
+.pold{font-size:10.5px;color:#8A8378;text-decoration:line-through;font-variant-numeric:tabular-nums}
 .pbar{height:4px;border-radius:3px;background:rgba(255,255,255,.06);margin-top:7px;overflow:hidden}
 .pbar b{display:block;height:4px;border-radius:3px;background:#EE5A44;opacity:.75}
 .pbar b.up{background:#6FB894}
@@ -519,10 +533,10 @@ header{background:rgba(10,13,16,.94);border-bottom:1px solid rgba(226,236,245,.1
 .dcard{border-radius:17px;padding:13px 13px 12px;background:#131110;border:1px solid rgba(255,255,255,.07);
   position:relative;overflow:hidden;color:#F2EEE8}
 .dcard.glow{background:radial-gradient(120% 90% at 82% 0%,rgba(111,184,148,.11),transparent 62%),#131110}
-.dcard .lab{font-size:9.5px;letter-spacing:.13em;color:#6B645B;text-transform:uppercase}
+.dcard .lab{font-size:9.5px;letter-spacing:.13em;color:#8A8378;text-transform:uppercase}
 .dcard .big{font-size:26px;font-weight:300;letter-spacing:-.02em;font-variant-numeric:tabular-nums;line-height:1;margin-top:8px}
 .dcard .big small{font-size:10px;color:#9C948A;margin-left:3px;letter-spacing:0}
-.dcard .sub{font-size:10.5px;color:#6B645B;margin-top:5px}
+.dcard .sub{font-size:10.5px;color:#8A8378;margin-top:5px}
 .dcard .sub em{font-style:normal;color:#6FB894}
 .dcard .sub em.bad{color:#EE5A44}
 .ringwrap{position:relative;width:76px;height:76px;margin:3px auto 0}
@@ -541,7 +555,7 @@ header{background:rgba(10,13,16,.94);border-bottom:1px solid rgba(226,236,245,.1
 .dband .bar i.w{background:#E4C98A;height:9px;box-shadow:0 0 10px rgba(228,201,138,.35)}
 .dband .bar i.r{background:#EE5A44;height:11px;box-shadow:0 0 14px rgba(238,90,68,.55)}
 .dband .labs{display:flex;gap:4px;margin-top:8px}
-.dband .labs span{flex:1;text-align:center;font-size:9.5px;color:#6B645B}
+.dband .labs span{flex:1;text-align:center;font-size:9.5px;color:#8A8378}
 .dband .labs span.w{color:#E4C98A}
 .dband .labs span.r{color:#EE5A44;font-weight:600}
 .dcard .minibar{height:4px;border-radius:3px;background:rgba(255,255,255,.07);margin-top:11px;overflow:hidden}
@@ -577,7 +591,11 @@ header{background:rgba(10,13,16,.94);border-bottom:1px solid rgba(226,236,245,.1
     <div class="statusline" id="status"></div>
     <div class="reminder" id="reminder"></div>
   </header>
-  <div class="dots" id="dots"><i class="on"></i><i></i><i></i><i></i></div>
+  <div class="pgbar">
+    <span class="pgname" id="pgname">新聞</span>
+    <span class="dots" id="dots"><i class="on"></i><i></i><i></i><i></i></span>
+    <span class="pgnum" id="pgnum">1/4</span>
+  </div>
   <div class="pager" id="pager">
     <div class="pg"><main id="sresults" hidden></main><main id="feed"><div class="msg">載入中…</div></main></div>
     <div class="pg"><div class="gnwrap" id="gamenews"><div class="msg">載入中…</div></div></div>
@@ -682,18 +700,20 @@ function matchItem(text){
 }
 
 function renderFeed(){
-  // 視覺重量按素材決定：有圖才給大卡，沒圖一律小卡（避免大字空盒）
+  // 保持時間順序：先排序，再依有沒有圖決定卡片樣式。
+  // 舊版把「有圖的」抽出來當大卡，會讓舊新聞跑到新新聞前面。
   const el = $("#feed");
   if (!ALL.length){
     el.innerHTML = '<div class="msg">今天沒有東西</div>';
     return;
   }
-  const withPic = ALL.filter(d => d.img);
-  const heads = withPic.slice(0, 2);
-  const rest = ALL.filter(d => !heads.includes(d));
+  const sorted = ALL.slice().sort((a,b) => (b.ts||0) - (a.ts||0));
+  const heads = new Set(sorted.slice(0, 1).filter(d => d.img));
   let html = "";
-  heads.forEach(d => { html += leadHTML(d); });
-  rest.forEach((d, i) => { html += rowHTML(d, i < heads.length ? false : (i % 5 === 0 && !!d.img)); });
+  sorted.forEach((d, i) => {
+    if (heads.has(d)) html += leadHTML(d);
+    else html += rowHTML(d, i % 5 === 0 && !!d.img);
+  });
   el.innerHTML = html;
 }
 
@@ -715,9 +735,24 @@ function renderStatus(st){
     { k:"mem",   v:mem + "%", cls:mem >= 99 ? "bad" : "" },
     { k:"up",    v:(h.uptime_h ?? "—") + "h", cls:"" },
   ];
-  el.innerHTML = items.map(i =>
-    `<span class="si ${i.cls}"><span class="k">${i.k}</span><span class="v">${esc(String(i.v))}</span></span>`
-  ).join("");
+  const bad = items.filter(i => i.cls === "bad");
+  const warn = items.filter(i => i.cls === "warn");
+
+  // 正常時只留一行字（原本 5 個技術數字佔掉首屏），有問題才把那個數字露出來。
+  // 完整指標在第 4 頁「狀態」。
+  if (!bad.length && !warn.length){
+    el.innerHTML = '<span class="si ok"><span class="v">服務正常</span></span>';
+  } else {
+    const show = [...bad, ...warn];
+    el.innerHTML = show.map(i =>
+      `<span class="si ${i.cls}"><span class="k">${i.k}</span><span class="v">${esc(String(i.v))}</span></span>`
+    ).join("");
+  }
+  el.style.cursor = "pointer";
+  el.onclick = () => {
+    const p = document.getElementById("pager");
+    if (p) p.scrollTo({left: p.clientWidth * 3, behavior: "smooth"});
+  };
 }
 
 /* ── 提醒跑馬燈 ── */
@@ -891,13 +926,15 @@ async function renderGameNews(){
     });
 
     const when = d.updated ? (ago(Date.parse(d.updated) / 1000) + "更新") : "";
+    // 整頁都是遊戲時就不必每張掛「遊戲」標籤，只有混了科技新聞才標
+    const hasTech = items.some(x => x.cat === "tech");
     let html = `<div class="gnh">遊戲／科技 · ${items.length} 則${when ? " · " + when : ""}</div>`;
     order.forEach(k => {
       html += `<div class="gnd">${esc(k)}</div>`;
       html += groups[k].map(x => {
-        const tag = x.cat === "tech"
-          ? '<span class="gntag tech">科技</span>'
-          : '<span class="gntag">遊戲</span>';
+        const tag = !hasTech ? ""
+          : (x.cat === "tech" ? '<span class="gntag tech">科技</span>'
+                              : '<span class="gntag">遊戲</span>');
         let t = "";
         const tsSec = x.ts || (x.added ? Math.floor(Date.parse(x.added) / 1000) : 0);
         if (tsSec && !isNaN(tsSec)) t = ago(tsSec) || "";
@@ -938,9 +975,20 @@ function renderNotices(){
     <div class="bcard">
       <div class="bh"><span class="bi">${ICON[n.job] || "▤"}</span>${esc(n.job)}
         <span class="bdot ${lvl}"></span><span class="bt">${ago(n.ts)}</span></div>
-      <div class="bb">${/卡價|SNKRDUNK/i.test(n.job) ? priceBody(n.text) : renderBody(n.text)}</div>
+      <div class="bb clamp">${/卡價|SNKRDUNK/i.test(n.job) ? priceBody(n.text) : renderBody(n.text)}</div>
+      <span class="bmore">展開全文</span>
     </div>`;
   }).join("");
+
+  // 點卡片（或「展開全文」）才展開，一次只開一張
+  box.querySelectorAll(".bcard").forEach(card => {
+    card.addEventListener("click", e => {
+      if (e.target.closest("a")) return;
+      const wasOpen = card.classList.contains("open");
+      box.querySelectorAll(".bcard.open").forEach(c => c.classList.remove("open"));
+      if (!wasOpen) card.classList.add("open");
+    });
+  });
 }
 
 /* 把簡報內文排版成可讀的區塊：健康檢查→鍵值列、價格→前後對比、總結→狀態藥丸 */
@@ -1380,10 +1428,23 @@ async function load(){
 (() => {
   const pager = $("#pager"), dots = [...document.querySelectorAll("#dots i")];
   if (!pager) return;
-  pager.addEventListener("scroll", () => {
-    const i = Math.round(pager.scrollLeft / pager.clientWidth);
+  // 頁名：讓他知道這是哪一頁、共有幾頁（只有小點看不出來）
+  const PGNAMES = ["新聞", "遊戲", "簡報", "狀態"];
+  const nameEl = $("#pgname"), numEl = $("#pgnum");
+  const syncNav = () => {
+    const i = Math.round(pager.scrollLeft / Math.max(1, pager.clientWidth));
     dots.forEach((d, k) => d.classList.toggle("on", k === i));
-  }, {passive:true});
+    if (nameEl) nameEl.textContent = PGNAMES[i] || "";
+    if (numEl) numEl.textContent = `${Math.min(i + 1, dots.length)}/${dots.length}`;
+  };
+  pager.addEventListener("scroll", syncNav, {passive:true});
+  syncNav();
+  // 點小點直接跳頁
+  dots.forEach((d, k) => {
+    d.addEventListener("click", () => {
+      pager.scrollTo({left: pager.clientWidth * k, behavior: "smooth"});
+    });
+  });
 })();
 
 /* ══ 手勢 ══ */
