@@ -76,6 +76,17 @@ html{overscroll-behavior-y:contain}
 .digest .dls{display:block;font-size:11px;color:var(--dim2);margin-top:3px;
   font-variant-numeric:tabular-nums}
 
+/* ── 遊戲／科技新聞頁 ── */
+.gnwrap{padding:2px 0 8px}
+.gnh{font-size:12.5px;color:var(--dim2);letter-spacing:.03em;padding:10px 0 12px}
+.gni{padding:13px 14px;background:var(--surface);border-radius:12px;margin-bottom:9px}
+.gnt{font-size:15px;font-weight:600;line-height:1.45;color:var(--fg)}
+.gnn{font-size:13.5px;line-height:1.62;color:var(--dim);margin-top:5px}
+.gns{font-size:11px;color:var(--dim2);margin-top:7px;font-variant-numeric:tabular-nums}
+.gntag{display:inline-block;font-size:10px;padding:1px 6px;border-radius:4px;
+  background:rgba(143,191,159,.14);color:var(--game);margin-right:6px;vertical-align:1px;font-weight:600}
+.gntag.tech{background:rgba(169,162,196,.14);color:var(--tech)}
+
 /* ── 首頁底部：今天收到（摺疊）── */
 .nf{margin:18px 18px calc(20px + env(safe-area-inset-bottom));border-top:1px solid var(--line);padding-top:2px}
 .nf>summary{list-style:none;cursor:pointer;padding:13px 0;font-size:12.5px;color:var(--dim2);
@@ -563,9 +574,10 @@ header{background:rgba(10,13,16,.94);border-bottom:1px solid rgba(226,236,245,.1
     <div class="statusline" id="status"></div>
     <div class="reminder" id="reminder"></div>
   </header>
-  <div class="dots" id="dots"><i class="on"></i><i></i><i></i></div>
+  <div class="dots" id="dots"><i class="on"></i><i></i><i></i><i></i></div>
   <div class="pager" id="pager">
     <div class="pg"><main id="sresults" hidden></main><main id="feed"><div class="msg">載入中…</div></main></div>
+    <div class="pg"><div class="gnwrap" id="gamenews"><div class="msg">載入中…</div></div></div>
     <div class="pg"><div class="briefwrap" id="brieflist"></div></div>
     <div class="pg"><div class="dsh" id="dash"></div></div>
   </div>
@@ -838,6 +850,35 @@ function mdLite(t){
   }
   closeNode();
   return html;
+}
+
+/* ── 遊戲／科技新聞（第 2 頁）── */
+async function renderGameNews(){
+  const el = $("#gamenews");
+  if (!el) return;
+  try{
+    const r = await fetch("game-news.json?t=" + Date.now(), {cache:"no-store"});
+    if (!r.ok) throw new Error("no file");
+    const d = await r.json();
+    const items = (d.items || []).slice(0, 40);
+    if (!items.length){
+      el.innerHTML = '<div class="msg">目前沒有新的遊戲新聞</div>';
+      return;
+    }
+    const when = d.updated ? (ago(Date.parse(d.updated) / 1000) + "更新") : "";
+    el.innerHTML = `<div class="gnh">遊戲／科技${when ? " · " + when : ""}</div>` +
+      items.map(x => {
+        const tag = x.cat === "tech"
+          ? '<span class="gntag tech">科技</span>'
+          : '<span class="gntag">遊戲</span>';
+        return `<div class="gni"><div class="gnt">${tag}${esc(x.title)}</div>` +
+          (x.note ? `<div class="gnn">${esc(x.note)}</div>` : "") +
+          (x.source ? `<div class="gns">${esc(x.source)}</div>` : "") +
+          `</div>`;
+      }).join("");
+  }catch(e){
+    el.innerHTML = '<div class="msg">還沒有資料，等下一輪排程</div>';
+  }
 }
 
 /* ── 今天收到（首頁底部）── */
@@ -1283,7 +1324,7 @@ async function load(){
     $("#h-date").textContent = `${now.getMonth()+1}/${now.getDate()} 週${wd}`;
     $("#h-meta").textContent = (j.generated_at ? (ago(Date.parse(j.generated_at)/1000)||"剛剛") + "更新" : "");
 
-    renderFeed(); renderNotices();
+    renderFeed(); renderGameNews(); renderNotices();
 
   } catch(e){
     $("#feed").innerHTML = '<div class="msg">拿不到資料，確認網路或等下次更新</div>';

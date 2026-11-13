@@ -45,7 +45,7 @@ def github_token() -> str | None:
 
 
 def sh(args, check=False):
-    r = subprocess.run(args, cwd=HERE, capture_output=True, text=True, timeout=180)
+    r = subprocess.run(args, cwd=HERE, capture_output=True, text=True, timeout=420)
     msg = (r.stdout + r.stderr).strip()
     return r.returncode, msg.replace(os.environ.get("_PUSH_SECRET", "\0"), "***")
 
@@ -97,7 +97,7 @@ def main() -> int:
     if not os.path.isdir(os.path.join(HERE, ".git")):
         print("no git repo here; done (local only)")
         return 0
-    code, diff = sh(["git", "status", "--porcelain", "items.json", "feed.json", "notes.json", "notices.json", "status.json", "digest.json", "health.json"])
+    code, diff = sh(["git", "status", "--porcelain", "items.json", "feed.json", "notes.json", "notices.json", "status.json", "digest.json", "health.json", "game-news.json"])
     if not diff.strip():
         print("items.json unchanged; nothing to publish")
         return 0
@@ -105,7 +105,7 @@ def main() -> int:
     # 3) commit + push
     stamp = datetime.now().strftime("%Y-%m-%d %H:%M")
     sh(["git", "add", "items.json"])
-    for extra in ("feed.json", "notes.json", "notes2.json", "notices.json", "status.json", "digest.json", "health.json"):
+    for extra in ("feed.json", "notes.json", "notes2.json", "notices.json", "status.json", "digest.json", "health.json", "game-news.json"):
         if os.path.exists(os.path.join(HERE, extra)):
             sh(["git", "add", extra])
     code, out = sh(["git", *GIT_USER, "commit", "-m", f"items: {stamp}"])

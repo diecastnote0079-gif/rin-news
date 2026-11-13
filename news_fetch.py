@@ -46,6 +46,8 @@ def _gn(q: str, when: str = "7d", gl: str = "TW", ceid: str = "TW:zh-Hant") -> s
 FEEDS = [
     ("4Gamers",      "game",     "https://www.4gamers.com.tw/rss"),
     ("巴哈 GNN",     "game",     "https://gnn.gamer.com.tw/rss.xml"),
+    # 2026-11-13 加：日系遊戲新聞英文首發站。實測 200/20 條。英文條目由凜精細翻譯（不是機翻）。
+    ("Gematsu",      "game",     "https://www.gematsu.com/feed"),
     ("INSIDE",       "tech",     "https://www.inside.com.tw/feed/rss"),
     ("iThome",       "tech",     "https://www.ithome.com.tw/rss"),
     ("Unwire HK",    "tech",     "https://unwire.hk/feed/"),
