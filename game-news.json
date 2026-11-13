@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-13T23:34:40+08:00",
- "count": 6,
+ "updated": "2026-11-14T00:57:16+08:00",
+ "count": 7,
  "items": [
   {
    "cat": "game",
@@ -33,6 +33,14 @@
    "source": "Gematsu",
    "added": "2026-11-13T22:51:00+08:00",
    "ts": 1794580164
+  },
+  {
+   "cat": "game",
+   "title": "《Forest Escape: Last Train》確認登陸 PS5",
+   "note": "PS5 版確定、同步公開新地點；原本以 PC 為主的獨立作，主機版照樣排進來。",
+   "source": "Gematsu",
+   "ts": 1794579748,
+   "added": "2026-11-14T00:57:16+08:00"
   },
   {
    "cat": "game",
