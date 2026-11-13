@@ -79,6 +79,9 @@ html{overscroll-behavior-y:contain}
 /* ── 遊戲／科技新聞頁 ── */
 .gnwrap{padding:2px 0 8px}
 .gnh{font-size:12.5px;color:var(--dim2);letter-spacing:.03em;padding:10px 0 12px}
+.gnd{font-size:11.5px;font-weight:700;color:var(--dim2);letter-spacing:.06em;
+  padding:14px 0 8px;border-bottom:1px solid var(--line);margin-bottom:9px}
+.gnd:first-of-type{padding-top:2px}
 .gni{padding:13px 14px;background:var(--surface);border-radius:12px;margin-bottom:9px}
 .gnt{font-size:15px;font-weight:600;line-height:1.45;color:var(--fg)}
 .gnn{font-size:13.5px;line-height:1.62;color:var(--dim);margin-top:5px}
@@ -853,6 +856,18 @@ function mdLite(t){
 }
 
 /* ── 遊戲／科技新聞（第 2 頁）── */
+function gnDay(iso){
+  if (!iso) return "更早";
+  const d = new Date(iso);
+  if (isNaN(d)) return "更早";
+  const today = new Date(); today.setHours(0,0,0,0);
+  const t = new Date(d); t.setHours(0,0,0,0);
+  const diff = Math.round((today - t) / 86400000);
+  if (diff <= 0) return "今天";
+  if (diff === 1) return "昨天";
+  return `${d.getMonth()+1}/${d.getDate()}`;
+}
+
 async function renderGameNews(){
   const el = $("#gamenews");
   if (!el) return;
@@ -860,14 +875,26 @@ async function renderGameNews(){
     const r = await fetch("game-news.json?t=" + Date.now(), {cache:"no-store"});
     if (!r.ok) throw new Error("no file");
     const d = await r.json();
-    const items = (d.items || []).slice(0, 40);
+    const items = (d.items || []).slice(0, 200);
     if (!items.length){
       el.innerHTML = '<div class="msg">目前沒有新的遊戲新聞</div>';
       return;
     }
+
+    // 按日分組，新的在上面
+    const order = [];
+    const groups = {};
+    items.forEach(x => {
+      const k = gnDay(x.added);
+      if (!groups[k]){ groups[k] = []; order.push(k); }
+      groups[k].push(x);
+    });
+
     const when = d.updated ? (ago(Date.parse(d.updated) / 1000) + "更新") : "";
-    el.innerHTML = `<div class="gnh">遊戲／科技${when ? " · " + when : ""}</div>` +
-      items.map(x => {
+    let html = `<div class="gnh">遊戲／科技 · ${items.length} 則${when ? " · " + when : ""}</div>`;
+    order.forEach(k => {
+      html += `<div class="gnd">${esc(k)}</div>`;
+      html += groups[k].map(x => {
         const tag = x.cat === "tech"
           ? '<span class="gntag tech">科技</span>'
           : '<span class="gntag">遊戲</span>';
@@ -876,6 +903,8 @@ async function renderGameNews(){
           (x.source ? `<div class="gns">${esc(x.source)}</div>` : "") +
           `</div>`;
       }).join("");
+    });
+    el.innerHTML = html;
   }catch(e){
     el.innerHTML = '<div class="msg">還沒有資料，等下一輪排程</div>';
   }
