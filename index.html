@@ -708,10 +708,17 @@ function renderFeed(){
     return;
   }
   const sorted = ALL.slice().sort((a,b) => (b.ts||0) - (a.ts||0));
-  const heads = new Set(sorted.slice(0, 1).filter(d => d.img));
+  // 2026-11-14：前 2 條要大卡（他定的規格），優先取 PICKS 內有圖的，不足再用時間序補。
+  // 注意：picks 與 items 是兩份獨立解析出來的物件，不能用物件身分比對，要用 link。
+  const headLinks = new Set();
+  for (const d of PICKS.concat(sorted)){
+    if (headLinks.size >= 2) break;
+    if (d.img && !headLinks.has(d.link)) headLinks.add(d.link);
+  }
+  const emitted = new Set();
   let html = "";
   sorted.forEach((d, i) => {
-    if (heads.has(d)) html += leadHTML(d);
+    if (headLinks.has(d.link) && !emitted.has(d.link)){ emitted.add(d.link); html += leadHTML(d); }
     else html += rowHTML(d, i % 5 === 0 && !!d.img);
   });
   el.innerHTML = html;
@@ -1360,11 +1367,20 @@ document.querySelectorAll("#pager .pg").forEach(pg => {
 });
 
 /* ── 載入 ── */
+// 2026-11-14：items.json 原本在主線被 fetch 三次（載入、計數、搜尋），每次 206KB。
+// 改成共用同一個 promise，整頁只抓一次。
+let ITEMS_P = null;
+function getItems(){
+  if (!ITEMS_P){
+    ITEMS_P = fetch("items.json?t=" + Date.now(), {cache:"no-store"})
+      .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); });
+  }
+  return ITEMS_P;
+}
+
 async function load(){
   try {
-    const r = await fetch("items.json?t=" + Date.now(), {cache:"no-store"});
-    if (!r.ok) throw new Error(r.status);
-    const j = await r.json();
+    const j = await getItems();
 
     let feed = null;
     try {
@@ -1399,13 +1415,11 @@ async function load(){
       }
     } catch(e){}
 
-    ALL = (j.items||[]).filter(d => !feed || feed.has(d.link))
-                       .sort((a,b) => (b.ts||0)-(a.ts||0));
+    // 2026-11-14：feed.json 原本用來「過濾」新聞流，導致 287 條只剩 21 條顯示、
+    // 而且 feed 沒更新時新新聞永遠進不來。改成：全部顯示（新的在上），
+    // feed 只影響大卡挑選（PICKS 優先）。
+    ALL = (j.items||[]).slice().sort((a,b) => (b.ts||0)-(a.ts||0));
     PICKS = (j.picks && j.picks.length) ? j.picks.slice() : ALL.slice(0,10);
-    if (feed){
-      PICKS = PICKS.filter(d => feed.has(d.link));
-      if (PICKS.length < 2) PICKS = ALL.slice(0, 4);
-    }
     PICKS.sort((a,b) => (b.ts||0)-(a.ts||0));
 
     BYLINK = {};
@@ -1528,10 +1542,13 @@ async function load(){
     reader.style.transition = "";
     reader.style.transform = "";
     reader.style.opacity = "";
-    if (Math.abs(dx) > 70 && Math.abs(dy) < 80){
+    const rb = document.getElementById("rbody");
+    const atTop = !rb || rb.scrollTop <= 0;
+    if (Math.abs(dx) > 110 && Math.abs(dy) < 80){
       closedByGesture = true;
       $("#rclose").click();
-    } else if (dy > 130 && Math.abs(dx) < 70){
+    } else if (dy > 130 && Math.abs(dx) < 70 && atTop){
+      // 2026-11-14：只有已經捲到頂才准用下拉關閉，否則讀長文往上捲會誤關。
       closedByGesture = true;
       $("#rclose").click();
     }
@@ -1571,7 +1588,7 @@ loadHealth();
     return true;
   };
   // 用 items.json 的總數，不是畫面上已渲染的列數
-  fetch('items.json?t=' + Date.now(), {cache:'no-store'}).then(r => r.json()).then(j => {
+  getItems().then(j => {
     const n = (j.stats && j.stats.total) || (j.items || []).length;
     if(!n) return;
     const row = document.querySelector('.hrow');
@@ -1625,8 +1642,7 @@ loadHealth();
     if(loading) return null;
     loading=true;
     try{
-      const r=await fetch('items.json?t='+Date.now(),{cache:'no-store'});
-      const j=await r.json();
+      const j=await getItems();
       DATA=(j.items||[]).slice().sort((a,b)=>(b.ts||0)-(a.ts||0));
     }catch(e){ DATA=[]; }
     loading=false;

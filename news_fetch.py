@@ -65,6 +65,16 @@ FEEDS = [
     ("電撃Hobby",     "toy",      "https://hobby.dengeki.com/feed/"),
     ("Hypebeast",     "hype",     "https://hypebeast.com/zh/feed"),
     ("ToyArk",        "toy",      "https://news.toyark.com/feed"),
+    # 2026-11-14 第五輪（兩路子代理實測 60+ 個源後篩選，全部 curl 驗過條數）：
+    # 繁中遊戲缺口、簡中硬體價格、日文一線、卡牌行情。
+    ("udn 遊戲角落",   "game",     "https://game.udn.com/game/rssfeed"),          # 186 條
+    ("ETtoday 遊戲雲", "game",     "https://feeds.feedburner.com/ettoday/game"),  # 50 條，標題本來就是社群語氣
+    ("超能網",        "tech",     "https://www.expreview.com/rss.php"),         # 50 條，顯卡/SSD 價格
+    ("4Gamer",        "game",     "https://www.4gamer.net/rss/index.xml"),      # 101 條，日文一線
+    ("トレカ日和",     "hype",     "https://torecabiyori.com/rss.xml"),           # 128 條，日文卡價行情（唯一穩定可抓）
+    ("onepiece.gg",   "hype",     "https://onepiece.gg/feed"),                  # 10 條，OP TCG 一手
+    # 抓不到的一律不列（2026-11-14 實測）：PSA／Beckett／Cardmarket／VideoCardz 全 Cloudflare 403；
+    # 巴哈舊 feed、游民、3DM 403；Famitsu feed 停在 2024；One Piece 官方與 TCGplayer 無 RSS。
     # Google News 關鍵詞聚合（2026-10-26）：單站中文 RSS 幾乎全死，這條補得回來。
     # 標題尾端會帶「 - 來源名」，fetch 時會清掉；source 用 <source> 裡的真站名。
     ("GN·玩具",       "toy",      _gn("玩具 模型 公仔 限量")),
