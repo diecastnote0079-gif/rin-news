@@ -1,7 +1,15 @@
 {
- "updated": "2026-11-14T14:18:47+08:00",
- "count": 11,
+ "updated": "2026-11-14T16:22:52+08:00",
+ "count": 12,
  "items": [
+  {
+   "cat": "game",
+   "title": "kaiHEN 開源釋出：Switch 2 首個公開自製程式環境",
+   "note": "Switch 2 第一個公開 homebrew 環境開源了，但入口還是得靠《SmileBASIC 4》或《文明帝國 7》的遊戲漏洞；那兩片實體可能要留意。",
+   "source": "ONE Jailbreak",
+   "ts": 1794638512,
+   "added": "2026-11-14T16:22:52+08:00"
+  },
   {
    "cat": "tech",
    "title": "台灣大賣 GTA6 PS5 Slim 雙控同捆，綁 5G 1399 專案價 990 元",
