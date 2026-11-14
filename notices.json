@@ -1,18 +1,23 @@
 [
  {
   "job": "news ig story queue",
-  "ts": 1794668443,
+  "ts": 1794675643,
   "text": "佇列裡沒有適合這一輪的項目，跳過"
  },
  {
   "job": "news fb queue",
-  "ts": 1794668443,
+  "ts": 1794675643,
   "text": "佇列裡沒有適合這一輪的項目，跳過"
  },
  {
   "job": "news fb story queue",
-  "ts": 1794668443,
+  "ts": 1794675643,
   "text": "佇列裡沒有適合這一輪的項目，跳過"
+ },
+ {
+  "job": "nightly reflection",
+  "ts": 1794670354,
+  "text": "今天 3 條教訓，寫進 3 個 skill：\n\n- **delegating-work** 1 條 — 設計類 brief 要附「缺一即不合格」的元件檢查表，並點名現成 renderer 路徑叫它先讀；稿回來我自己逐項對錶補缺件。\n- **image-text-recovery** 1 條 — 教他手動調之前先問用哪個 app，直接給該 app 的英文滑桿名，不要給通用中文名。\n- **news-social-card** 1 條 — 新設計方向一律先用兩張真實官方 key art 排過再交，成稿看不到角色／產品＝沒做完。"
  },
  {
   "job": "cex 3h",
@@ -68,11 +73,6 @@
   "job": "pending review nightly",
   "ts": 1794599532,
   "text": "完成。落了 3 條：閘門一次性通行證（approve.once，job_id 發證）；撞牆規則先交 Luna 再給 prompt；模型固定＋Luna 理解好，撞牆才 delegate deep 跑一次。併入 1 條重複舊條目（閘門 token 也比對 payload），水位從 98% 降至 97%。丟了 20 條／12 檔：重複版 2 組（455bd789 撞牆、b0ebcab9/bce7d71c 內容方向）、程序細節（Anima 版、MEDIA 路徑、yt-dlp/ffmpeg、Windows 8188）、cex 刪檔建議。水位 97%（2,138/2,200）；pending/memory 清空，15 份建議檔已移進 memory.archive，不再留下。"
- },
- {
-  "job": "nightly reflection",
-  "ts": 1794583914,
-  "text": "改了 2 個 skill，共 3 條。\n\n- **duckx3-fb-news** 1 條：值不值得報的兩關判準（講得出不合理＋外面還沒洗版），不用品類核對、不用「跟店有關」。\n- **news-site-ops** 2 條：前端檔案不在 `update.py` 的白名單、push 後要 grep 線上元素而不是看 200；讀資料檔先印結構不假設 schema。\n\n（另外兩條本來就在 skill 裡，沒重寫：「未定不寫沒有」、「Gematsu 圖被 Cloudflare 擋改抓轉載站」。）"
  },
  {
   "job": "記憶審計",
