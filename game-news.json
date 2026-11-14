@@ -1,7 +1,15 @@
 {
- "updated": "2026-11-14T16:22:52+08:00",
- "count": 12,
+ "updated": "2026-11-14T22:29:40+08:00",
+ "count": 13,
  "items": [
+  {
+   "cat": "tech",
+   "title": "任天堂 2027/1/26 停止 Google／Apple 快速登入 Nintendo Account",
+   "note": "屆時也不能用這兩種方式開新帳號，現有用戶要先確認信箱密碼或改用 Passkey，不然會登不進去。",
+   "source": "Unwire HK",
+   "ts": 1794661201,
+   "added": "2026-11-14T22:29:40+08:00"
+  },
   {
    "cat": "game",
    "title": "kaiHEN 開源釋出：Switch 2 首個公開自製程式環境",
