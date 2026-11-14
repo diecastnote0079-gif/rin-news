@@ -1,10 +1,10 @@
 {
- "updated": "2026-11-15T03:50:52+08:00",
+ "updated": "2026-11-15T05:52:47+08:00",
  "checks": [
   {
    "k": "freshness",
    "st": "ok",
-   "v": "資料 5.8 小時前抓的"
+   "v": "資料 7.8 小時前抓的"
   },
   {
    "k": "volume",
@@ -104,11 +104,14 @@
   }
  ],
  "maint": {
-  "freed_mb": 1,
-  "cache": 1,
-  "behind_days": 4,
-  "behind_commits": 725,
+  "freed_mb": 229,
+  "cache": 323,
+  "behind_days": 14,
+  "behind_commits": 6995,
   "pkg": 14
  },
- "docsync": null
+ "docsync": {
+  "age_h": 5.9,
+  "limit_h": 5.0
+ }
 }

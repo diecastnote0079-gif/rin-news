@@ -1,18 +1,43 @@
 [
  {
   "job": "news ig story queue",
-  "ts": 1794682843,
-  "text": "佇列裡沒有適合這一輪的項目，跳過"
- },
- {
-  "job": "news fb queue",
-  "ts": 1794682843,
+  "ts": 1794690043,
   "text": "佇列裡沒有適合這一輪的項目，跳過"
  },
  {
   "job": "news fb story queue",
-  "ts": 1794682843,
+  "ts": 1794690043,
   "text": "佇列裡沒有適合這一輪的項目，跳過"
+ },
+ {
+  "job": "news fb queue",
+  "ts": 1794690042,
+  "text": "佇列裡沒有適合這一輪的項目，跳過"
+ },
+ {
+  "job": "生活記錄",
+  "ts": 1794687600,
+  "text": "今晚沒有——對話裡有「停停停／沒叫過你做／不許哭／算了」等拒絕跡象，按規則整晚不記任何生活事實（只跑了 state.db 查詢，535 筆 user 訊息，全部未寫入 fact_store）。"
+ },
+ {
+  "job": "duckx3 maintenance",
+  "ts": 1794686460,
+  "text": "清理和備份都成功，沒有 FAILED。\n\n- 收件匣：刪 0 筆（沒有超過 7 天且非 new 的紀錄），現有 112 筆\n- 備份：`~/backups/pb_data-20261115-040046.tar.gz`，232MB。`data.db` 在裡面，storage 影像檔 2481 個也在\n- 備份目錄目前只有 4 份（保留上限 14，還沒滿，屬正常）\n\n小提醒：過去三次清理都是 0 筆，代表照片紀錄都還維持在 new 或 7 天內；如果那不是你要的，可以說一聲我改保留天數。"
+ },
+ {
+  "job": "每週維修",
+  "ts": 1794686446,
+  "text": "🔧 每週維修\n・🧹 清掉 229 MB（cache 323 項、cron 紀錄 0 份）\n・⬆️ Hermes 落後 14 天（6995 個 commit；未升級，等你點頭）\n・📦 系統有 14 個套件可升級"
+ },
+ {
+  "job": "doc reconcile",
+  "ts": 1794686142,
+  "text": "【文件 vs 現況 對帳】\n • 手機頁資料 5.9 小時前（上限 5）：2026-11-14T14:02:14Z\n • 本機最後一輪 5.9 小時前（20261114220043）"
+ },
+ {
+  "job": "pending review nightly",
+  "ts": 1794686131,
+  "text": "清空記憶寫入佇列處理完畢，全部落地並已收尾：\n\n落 3 條：MEMORY.md 補上「PSD 進不來 Telegram」的實際路徑（檔案不落地、win.sh scp 到 Windows 桌面、tools python 有 psd-tools）；USER.md 補上介面「說明太長跳過、要我決定」；USER.md 補上「不要提 STT／不叫他睡／他不拍照、等他說完」。\n\n丟 2 條：301e0d4c 的 op1（cron job_id 只是舊話重複＋meta 註腳）、op2（tailscale 只是縮句，舊文字已較完整）。\n\n檔案收尾：3 個 pending JSON 已 mv 進 memory.archive，pending_sweep 掃出 0 筆殘留。\n\n水位：MEMORY.md 99%（2,175/2,200），USER.md 99.6%（1,369/1,375）——都超過 92%，但兩庫中找不到可安全合併的同義條目，不做強行合併。"
  },
  {
   "job": "nightly reflection",
@@ -60,28 +85,8 @@
   "text": "頁面 394 個｜清掉舊頁 9｜sitemap 395 條"
  },
  {
-  "job": "生活記錄",
-  "ts": 1794601071,
-  "text": "今晚沒有。\n\n昨天（馬來西亞時間）的 user 訊息不是複雜，是 615 條都在做工作——短影片、FB 貼文、DuckX3 標案、Carousell 過濾工具、CeX 程式碼評審——找不到「去了哪／遇到誰／想吃什麼／好笑的事」這類生活面。出現的情緒只有「累死了」，而那是接在一堆露骨性內容後的角色扮演語氣，不是生活事實；有少女海報配樂命令、女婿肉棒等字眼，按「只記生活」這條一律不寫。沒有「不許記下」字樣，但可記的本來就沒有。"
- },
- {
-  "job": "duckx3 maintenance",
-  "ts": 1794600048,
-  "text": "兩個部分都成功：清掉了 **0 筆**收件匣記錄（收件匣共 112 筆，全都是 7 天內或 status=new）；備份 `pb_data-20261114-040018.tar.gz`，231.7MB（約 242,951,740 bytes），已確認含 `data.db` 與 2486 個 storage 檔案。沒有任何 FAILED。"
- },
- {
-  "job": "pending review nightly",
-  "ts": 1794599532,
-  "text": "完成。落了 3 條：閘門一次性通行證（approve.once，job_id 發證）；撞牆規則先交 Luna 再給 prompt；模型固定＋Luna 理解好，撞牆才 delegate deep 跑一次。併入 1 條重複舊條目（閘門 token 也比對 payload），水位從 98% 降至 97%。丟了 20 條／12 檔：重複版 2 組（455bd789 撞牆、b0ebcab9/bce7d71c 內容方向）、程序細節（Anima 版、MEDIA 路徑、yt-dlp/ffmpeg、Windows 8188）、cex 刪檔建議。水位 97%（2,138/2,200）；pending/memory 清空，15 份建議檔已移進 memory.archive，不再留下。"
- },
- {
   "job": "記憶審計",
   "ts": 1794186247,
   "text": "檢計結果（未修改任何檔案）：\n\n1. **MEMORY.md：乾淨** — 20 條無重複、矛盾、過期條目。無 Letta 提及；cron id 皆 2026-11-05 起現用；gateway 已明確為 rin-box（systemd user）；路徑均為 `~/AI`。按「Windows 是主機、又說 Linux」式矛盾：不存在——文件同頁明確寫「大本營＝ rin-box（Ubuntu）」、Windows=「現用 desktop-akpf18q」。\n\n2. **USER.md：乾淨於重複與矛盾** — 但條目「D:\\AI\\cex-desk 是他最好的作品、每天在用」與 MEMORY.md「專案在 ~/AI」路徑衝突：前者是 Windows 磁碟路徑，後者是 Linux home。需確認桌面端 cex-desk 是否是 Windows 節點的刻意複本；若非，改寫為 `~/AI`（或補一筆 sync 說明）。\n\n3. **~/.hermes/reference/ops/：乾淨** — 只找到歷史留痕：`akpfl8q` 只在 post-reset-install.md、`D:\\AI` 只在歷史文件、`Letta` 只在 migration/log 文章裡，cron-ops.md 已標示「舊的 Letta letta cron 流程已作廢」；無活的舊路徑或舊 cron id。\n\n4. **記憶水位**：MEMORY.md 94%（2,085/2,200 chars）、USER.md 95%（1,308/1,375 chars）→ 雙檔逼近容量，建議一併壓縮。\n\n結論：唯一待處理是 USER.md 裡的 `D:\\AI\\cex-desk` 路徑確認；其餘皆乾淨。本次未改任何檔案。"
- },
- {
-  "job": "每週維修",
-  "ts": 1794081635,
-  "text": "🔧 每週維修\n・🧹 清掉 1 MB（cache 1 項、cron 紀錄 0 份）\n・⬆️ Hermes 落後 4 天（725 個 commit；未升級，等你點頭）\n・📦 系統有 14 個套件可升級"
  }
 ]
