@@ -1,18 +1,23 @@
 [
  {
   "job": "news ig story queue",
-  "ts": 1794690043,
-  "text": "佇列裡沒有適合這一輪的項目，跳過"
- },
- {
-  "job": "news fb story queue",
-  "ts": 1794690043,
+  "ts": 1794697243,
   "text": "佇列裡沒有適合這一輪的項目，跳過"
  },
  {
   "job": "news fb queue",
-  "ts": 1794690042,
+  "ts": 1794697243,
   "text": "佇列裡沒有適合這一輪的項目，跳過"
+ },
+ {
+  "job": "news fb story queue",
+  "ts": 1794697243,
+  "text": "佇列裡沒有適合這一輪的項目，跳過"
+ },
+ {
+  "job": "product pages rebuild",
+  "ts": 1794693643,
+  "text": "頁面 393 個｜清掉舊頁 1｜sitemap 394 條"
  },
  {
   "job": "生活記錄",
@@ -78,11 +83,6 @@
   "job": "AI 工具日報",
   "ts": 1794614556,
   "text": "⚡ 建議動手\n今天沒有要動的——三個更新都沒碰到我們在跑的東西，理由逐條寫在下面。\n\n【第一節｜AI 工具】\n▪ llama.cpp v1.0.0（11/13 正式發 1.0）\n　本地模型推論引擎進 1.0：砍掉 35 個舊 API、ggml 同步 1.0、新增 FP8 KV cache 和「MoE 專家快取可分給 CPU 記憶體」，llama-server 補了 SSRF／CORS／DNS rebinding 一批安全洞，多一個 /v1/audio/speech。\n　對我們：我們現在沒有本地 LLM，這版真正的意義是「8GB VRAM 跑大 MoE」變可行；等你哪天想把部分工作搬回本機才輪到它。\n　結論：觀察就好。\n\n▪ Hermes Agent v0.23.1（11/9，canary 已到 11/13）\n　patch 版把 v0.23.0 之後約 618 個 PR 滾成穩定版；release notes 明講對使用者的修正只有外掛安裝那條（舊版會默默用出廠的外掛目錄，看不到新上架的外掛）。\n　對我們：只有你要裝新外掛時才受影響，技能、記憶、cron 都不動。\n　結論：觀察就好，真要裝外掛前先更新。\n\n▪ Claude Code v2.1.325（11/13）\n　修了 zstd 壓縮回應解碼的安全問題，另外被組織政策擋住時會提示可以 /rewind 改訊息。\n　對我們沒用——你不跑 Claude Code，主模型是 deepseek-v4.1-flash。\n　結論：不用管。\n\n【第二節｜🔧 新奇專案】\n▪ lexifina/global-law\n　全世界的法律放進 git：每國一個 repo、每條生效的法律就是一個 commit，能用 git blame 查「這行字是哪條法寫的」，還附 MCP server 給 agent 核對引註。\n　有趣在於它把查法條變成翻 commit 歷史——可以問「這條法 2019 年 3 月長什麼樣、誰改的」，而且整個庫是 Claude 自己蓋出來的。\n▪ valentderah/totk-pc-recomp\n　把《王國之淚》靜態重編譯成原生 Windows／Linux x86-64＋Vulkan renderer，不含遊戲檔（7,085 stars、MIT）。\n　有趣在於它不是模擬器，是把主機遊戲直接翻成 PC 程式，這條路線比模擬器少見太多。\n▪ Eglantine-Community/Eglantine\n　開源 Switch 2 模擬器（C++，yuzu／Eden 血統），README 說馬力歐賽車世界能跑到接近滿速，但要自備主機 keys 和自己 dump 的遊戲。\n　有趣在於新主機這麼快就被逆到能跑，跟你做的遊戲新聞同一條線，之後大概有得報。\n▪ aschmelyun/print-my-profile-pic\n　st"
- },
- {
-  "job": "product pages rebuild",
-  "ts": 1794607215,
-  "text": "頁面 394 個｜清掉舊頁 9｜sitemap 395 條"
  },
  {
   "job": "記憶審計",
