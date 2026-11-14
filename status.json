@@ -1,19 +1,19 @@
 {
- "updated": 1794627015,
+ "updated": 1794634214,
  "quota": {
   "rolling": 100,
   "weekly": 60,
   "monthly": 27,
-  "reset_rolling": "4h 59m",
-  "reset_weekly": "1d 20h",
-  "reset_monthly": "3d 13h"
+  "reset_rolling": "3h 5m",
+  "reset_weekly": "1d 18h",
+  "reset_monthly": "3d 11h"
  },
  "host": {
-  "load": 0.0,
-  "mem_pct": 15,
+  "load": 0.02,
+  "mem_pct": 14,
   "disk_pct": 9,
   "disk_free_gb": 390,
-  "uptime_h": 224
+  "uptime_h": 226
  },
  "memory": {
   "memory": {
@@ -28,18 +28,13 @@
   }
  },
  "cron": {
-  "enabled": 36,
+  "enabled": 35,
   "failed": 1,
   "failed_names": [
    "kl-daily-brief"
   ]
  },
  "reminders": [
-  {
-   "name": "phone plan update",
-   "date": "11/14",
-   "days": 0
-  },
   {
    "name": "BF 遊戲掃描",
    "date": "11/20",
@@ -48,7 +43,7 @@
   {
    "name": "MRT 月卡續期",
    "date": "11/29",
-   "days": 15
+   "days": 14
   }
  ]
 }
