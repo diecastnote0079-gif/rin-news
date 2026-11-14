@@ -1,5 +1,30 @@
 [
  {
+  "job": "SNKRDUNK 卡價",
+  "ts": 1794618021,
+  "text": "SNKRDUNK 變化\n📈 3rd Anniversary Set — ENGLISH\n   在售 50 → 51 件\n   最低在售 ¥63,000 → ¥61,000\n📈 3rd Anniversary Set — CHINA\n   最低在售 ¥41,000 → ¥43,000\n📈 Luffy SEC-RSP OP13-118\n   A ¥2,200,000 → ¥2,400,000\n📈 Luffy SEC-SP EB04-061\n   A ¥1,410,000 → ¥1,420,000\n   PSA10 ¥1,830,000 → ¥1,835,000"
+ },
+ {
+  "job": "CeX 早安",
+  "ts": 1794617287,
+  "text": "```\n昨天 CeX 的動靜：\n\n🆕 新上架\n・Tamagotchi Plaza - Nintendo Switch 2 Edition（Switch 2）RM190\n・Lets Sing 2027（Switch）RM220\n・Tales of Eternia Remastered（Switch）RM150\n・Metal Slug Anthology（PSP）RM150\n・Simpsons Game, The（DS）RM130\n・Hot Wheels: World's Best Driver（Wii U）RM80\n\n📉 降價\n・Fire Emblem: Fortune's Weave（Switch 2）RM300 → RM290\n・EA Sports FC 27（PS4）RM270 → RM260\n\n📦 回架\n・《Legend of Zelda: Breath of the Wild - Nintendo Switch 2 Edition》\n・《EA Sports FC 27》\n・《Clive Barker's Hellraiser: Revival》\n・《FIFA 22》\n・《Rhythm Heaven Groove》\n・《Pokemon Diamond》\n\n🚫 賣光\n・《EA Sports FC 27》\n・《Sonic Racing: Crossworlds》\n・《Generation Zero》\n・《Super Robot Wars OG: The Moon Dwellers》\n・《Asura's Wrath》\n・《LMA Manager 2003》\n```"
+ },
+ {
+  "job": "cex 0830",
+  "ts": 1794616332,
+  "text": "健康檢查：20261114083015（範圍 web，77363 筆）\n  ✅ freshness  資料 0.0 小時前抓的\n  ✅ volume     筆數 77363（與上次 77363 差 0.00%）\n  ✅ schema     60 個欄位，與上次指紋一致\n  ✅ quality    77363 筆：主鍵無重複、標價與名稱完整\n  ✅ heartbeat  距上次抓取 8.1 小時（20261114002515 → 20261114083015）\n\n全部正常"
+ },
+ {
+  "job": "ai research push",
+  "ts": 1794615019,
+  "text": "今天沒有要動的"
+ },
+ {
+  "job": "AI 工具日報",
+  "ts": 1794614556,
+  "text": "⚡ 建議動手\n今天沒有要動的——三個更新都沒碰到我們在跑的東西，理由逐條寫在下面。\n\n【第一節｜AI 工具】\n▪ llama.cpp v1.0.0（11/13 正式發 1.0）\n　本地模型推論引擎進 1.0：砍掉 35 個舊 API、ggml 同步 1.0、新增 FP8 KV cache 和「MoE 專家快取可分給 CPU 記憶體」，llama-server 補了 SSRF／CORS／DNS rebinding 一批安全洞，多一個 /v1/audio/speech。\n　對我們：我們現在沒有本地 LLM，這版真正的意義是「8GB VRAM 跑大 MoE」變可行；等你哪天想把部分工作搬回本機才輪到它。\n　結論：觀察就好。\n\n▪ Hermes Agent v0.23.1（11/9，canary 已到 11/13）\n　patch 版把 v0.23.0 之後約 618 個 PR 滾成穩定版；release notes 明講對使用者的修正只有外掛安裝那條（舊版會默默用出廠的外掛目錄，看不到新上架的外掛）。\n　對我們：只有你要裝新外掛時才受影響，技能、記憶、cron 都不動。\n　結論：觀察就好，真要裝外掛前先更新。\n\n▪ Claude Code v2.1.325（11/13）\n　修了 zstd 壓縮回應解碼的安全問題，另外被組織政策擋住時會提示可以 /rewind 改訊息。\n　對我們沒用——你不跑 Claude Code，主模型是 deepseek-v4.1-flash。\n　結論：不用管。\n\n【第二節｜🔧 新奇專案】\n▪ lexifina/global-law\n　全世界的法律放進 git：每國一個 repo、每條生效的法律就是一個 commit，能用 git blame 查「這行字是哪條法寫的」，還附 MCP server 給 agent 核對引註。\n　有趣在於它把查法條變成翻 commit 歷史——可以問「這條法 2019 年 3 月長什麼樣、誰改的」，而且整個庫是 Claude 自己蓋出來的。\n▪ valentderah/totk-pc-recomp\n　把《王國之淚》靜態重編譯成原生 Windows／Linux x86-64＋Vulkan renderer，不含遊戲檔（7,085 stars、MIT）。\n　有趣在於它不是模擬器，是把主機遊戲直接翻成 PC 程式，這條路線比模擬器少見太多。\n▪ Eglantine-Community/Eglantine\n　開源 Switch 2 模擬器（C++，yuzu／Eden 血統），README 說馬力歐賽車世界能跑到接近滿速，但要自備主機 keys 和自己 dump 的遊戲。\n　有趣在於新主機這麼快就被逆到能跑，跟你做的遊戲新聞同一條線，之後大概有得報。\n▪ aschmelyun/print-my-profile-pic\n　st"
+ },
+ {
   "job": "product pages rebuild",
   "ts": 1794607215,
   "text": "頁面 394 個｜清掉舊頁 9｜sitemap 395 條"
@@ -28,36 +53,6 @@
   "job": "今日新聞",
   "ts": 1794571478,
   "text": "📰 今天值得看的\n・《來自深淵：覺醒的神秘》11/20上映，特典開放\n・卡牌圈示警：跨境電商賣假認證磚，收藏者要小心\n・ONE PIECE 角色納米新服装模型預約開跑\n・李飞飞世界模型正式開放，一句話畫出重慶山城\n・豆包接入 Kimi、DeepSeek，模型自由來了\n・黃仁勳辭職：內部 97% 投票要他回任\n・馬來西亞 10 月電動車增長5.7%，普羅頓61%\n\n🔥 今天在討論 娛樂那邊：泰劇韓劇的新劇新企劃在一起刷——《UNSPOKEN Rebecca Armstrong》《Fool in Love EP11》《NAMTAN FILM》《#NCT127 in KL》全燒馬來西亞熱搜，中央世界聖誕燈也有人圍；科技那邊：NVIDIA 搞得人心惶惶——黃仁勳辭職、Kress 暫代、內部 97% 討論要他回任，Bitcoin 跟 Tim Cook 也被拽進來。digest 已寫：/home/rin/AI/news/digest.json"
- },
- {
-  "job": "SNKRDUNK 卡價",
-  "ts": 1794531621,
-  "text": "SNKRDUNK 變化\n📈 3rd Anniversary Set — ENGLISH\n   在售 49 → 50 件\n   最低在售 ¥64,000 → ¥63,000\n📈 3rd Anniversary Set — CHINA\n   在售 53 → 54 件\n   最低在售 ¥43,000 → ¥41,000\n📈 Luffy SEC-SP EB04-061\n   A ¥1,400,000 → ¥1,410,000\n   PSA10 ¥1,850,000 → ¥1,830,000"
- },
- {
-  "job": "CeX 早安",
-  "ts": 1794530991,
-  "text": "昨天 CeX 的動靜：\n\n🆕 新上架\n・Batman Arkham Collection (2 Disc)（PS4）RM135\n・Halloween: The Game (No DLC)（PS5）RM230\n・Clive Barker's Hellraiser: Revival（PS5）RM120\n・Rush Rally Collection（Switch）RM200\n\n📉 降價\n・Lost Soul Aside（PS5）RM150 → RM100\n・SpongeBob SquarePants: The Cosmic Shake（Xbox）RM110 → RM90\n・Bleeding Edge（Xbox）RM100 → RM80\n・Far Cry 4（Xbox）RM90 → RM80\n・Metal Gear Solid V: The Phantom Pain（Xbox）RM50 → RM40\n・Final Fantasy XII The Zodiac Age（Xbox）RM75 → RM65\n\n📦 回架\n・PS5《PS5 Slim Digital Edition Console, 825GB, White, Discounted》\n・Switch《WarioWare: Get It Together!》\n・Switch《Five Nights at Freddy's: Into the Pit》\n・Switch《Toy Story: Retro Roundup! + Toy Story 3 Complete Ed.》\n・PS4《Hogwarts Legacy (No DLC)》\n・PS5《Assassin's Creed Mirage (No DLC)》\n\n🚫 賣光\n・PS5《Hi-Fi Rush》\n・Switch《Outer Wilds》\n・Switch《Mega Man Legacy Collection 1 Only (No DLC)》\n・PS4《FIFA 17》\n・Switch《Nintendo Amiibo Super Smash Bros. Sheik Figure》\n・Switch《Nintendo Amiibo Super Smash Bros. Olimar Figure》\n\n補充：昨天（馬來西亞時間 2026-11-12）`changes` 表共 2,233 筆，遊戲／主機／罕見硬體相關篩選後才整理出上述 22 條。降價那邊整批都 2026-11-12T00:38:49Z 批次下來的，都是舊價 → 新價；回架以 RESTOCK（舊 0 → 新 1）為主，舊貨的 PS3、Wii、PSP 光碟沒列進來，只挑值得看的。"
- },
- {
-  "job": "cex 0830",
-  "ts": 1794530350,
-  "text": "健康檢查：20261113083015（範圍 web，77310 筆）\n  ✅ freshness  資料 0.0 小時前抓的\n  ✅ volume     筆數 77310（與上次 78791 差 -1.88%）\n  ✅ schema     60 個欄位，與上次指紋一致\n  ✅ quality    77310 筆：主鍵無重複、標價與名稱完整\n  ✅ heartbeat  距上次抓取 10.5 小時（20261112220015 → 20261113083015）\n\n全部正常"
- },
- {
-  "job": "kl daily brief",
-  "ts": 1794529845,
-  "text": "☀️ 今日 11/13 (Fri)\n\n天氣：25–31°C，最高降雨機率 97%\n　降雨時段：07:00（64%）、08:00（55%）、09:00（58%）、10:00（67%）、11:00（76%）、12:00（82%）\n\nMid Valley 本週活動（10 項）\n・Ekspo Rumah BPEX — Hall 3, Mid Valley Exhibition Centre (MVEC), Third Floor, Centre Court\n　14 Nov - 15 Nov 2026\n・25th Private and International School Fair (PISF) KL Nov 2026 — Hall 1 & Hall 2, Mid Valley Exhibition Centre (MVEC), Third Floor, Centre Court\n　14 Nov - 15 Nov 2026\n・Blackmores by Caring — Centre Court (CC), Lower Ground Floor\n　10 Nov - 15 Nov 2026\n・SK-II Festive Pop-Up — South Void 2 (SV2), Ground Floor\n　9 Nov - 15 Nov 2026\n\n雪隆活動（未來 14 天，命中興趣 1 項）\n・11/27 Resilience by Design: Are You Scaling AI or Scal\n　The Ruma Hotel and Residences\n\n電子／玩具優惠\n・TMT Malaysia: TMT Go TAR UMT Arena 2026 – Enjoy Up t\n　11-13　TAR UMT\n・Xiaomi Malaysia 11.11 Mega Sale – Enjoy Up to 45% OF\n　11-13　Mi.com\n・TMT Malaysia 11.11 TechOver Madness Sale – Up to RM5\n　11-11→11-13\n・ASUS Republic of Gamers (ROG) Malaysia: Gaming Monit\n　11-07→11-13\n・GIGABYTE AORUS 11.11 OLED Sale Malaysia – Enjoy Excl\n　11-13→11-14　Official Shopee & Lazada\n・PC Image ASUS & ROG WiFi 7 Router Sale – Enjoy Up to\n　11-08→11-14　All Participating Stores\n\n大型活動（會展／體育館）\n・11-27 Resilience by Design: Are "
- },
- {
-  "job": "ai research push",
-  "ts": 1794528621,
-  "text": "**⚡ 建議動手**\n1. 先 `hermes --version` 對一下版本；不是 v0.23.1 就 `hermes update`（3 分鐘）。v0.23.1 修的是插件目錄上限 2MiB→16MiB——留在舊版的話 `hermes plugins install` 會默默退回出廠目錄，找不到新插件也不報錯。\n2. 升完順手搜一下 skills／排程 prompt 有沒有寫死 `browser_navigate` 這類舊工具名（v0.23.0 起只剩 `browser_exec`）。5 分鐘，不做以後某個排程會突然啞掉。"
- },
- {
-  "job": "AI 工具日報",
-  "ts": 1794528100,
-  "text": "**⚡ 建議動手**\n1. 先 `hermes --version` 對一下版本；不是 v0.23.1 就 `hermes update`（3 分鐘）。v0.23.1 修的是插件目錄上限 2MiB→16MiB——留在舊版的話 `hermes plugins install` 會默默退回出廠目錄，找不到新插件也不報錯。\n2. 升完順手搜一下 skills／排程 prompt 有沒有寫死 `browser_navigate` 這類舊工具名（v0.23.0 起只剩 `browser_exec`）。5 分鐘，不做以後某個排程會突然啞掉。\n\n**第一節｜AI 工具**\n- Claude Code v2.1.323 加了實驗性 Code Mode：讓 Claude 寫一段 JavaScript 去呼叫工具，而不是一來一回 tool call。\n  我們沒在用 Claude Code，而且是 opt-in 實驗功能，短期沒收益。\n  結論：觀察就好。\n- MiniCPM-V 4.7 出了 MoE 版（35B-A3B），官方說 35B 那版在 iPhone 上能跑 13+ tok/s，另有 1B 小版。\n  3070 Ti 只有 8GB，35B 塞不進去；我們看圖都走雲端，1B 版沒有非用本地不可的理由。\n  結論：不用管。\n- Boole-1.7B 是 Qwen3-1.7B 的 1-bit 量化版，權重只有 247MB，官方評測約原版 86% 分數。\n  rin-box 沒 GPU，這種大小可以整顆放記憶體當便宜工人（分類、抽關鍵字、初篩標題）。\n  結論：觀察就好，等有人包成現成服務再碰。\n- OpenCode v2.2.7 主要加 GitHub Copilot 的 Auto 選模型，另有 pty daemon 0.5.2 這種內部釋出。\n  我們模型固定 opencode-go/deepseek，這版改動跟我們無關。\n  結論：不用管。\n\n**第二節｜🔧 新奇專案**\n- zigzag：Rust 寫的開源刺繡軟體，把 SVG 轉成刺繡機檔案，還內建 MCP 讓 AI agent 直接畫圖下針。\n  少見的是它把「實體機器」接進 agent——217 星、只有 5 個 commit、v0.1.1，很雛形但方向奇特，可以看看人家怎麼把機器控制包成工具。\n- smolmaxxing：一個人硬把 LLM 塞進愈來愈小的裝置，實驗紀錄寫到第 107 號，最新是在電視上跑 16B MoE、5.1 tok/s（專家權重放 flash 分頁載入）。\n  玩的不是「模型多強」而是「極限在哪」，整個 repo 就是一本實驗筆記，讀起來比教學文有趣。\n- OpenMontage：開源 agentic 影片製作系統，12 條製作 pipeline、100+ 工具、700+ 份 skill／知"
  },
  {
   "job": "記憶審計",

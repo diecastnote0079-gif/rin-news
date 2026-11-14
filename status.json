@@ -1,37 +1,38 @@
 {
- "updated": 1794612615,
+ "updated": 1794619814,
  "quota": {
-  "rolling": 99,
-  "weekly": 61,
+  "rolling": 98,
+  "weekly": 60,
   "monthly": 27,
-  "reset_rolling": "3h 45m",
-  "reset_weekly": "2d 0h",
-  "reset_monthly": "3d 17h"
+  "reset_rolling": "1h 45m",
+  "reset_weekly": "1d 22h",
+  "reset_monthly": "3d 15h"
  },
  "host": {
-  "load": 0.63,
-  "mem_pct": 46,
-  "disk_pct": 11,
-  "disk_free_gb": 382,
-  "uptime_h": 220
+  "load": 0.27,
+  "mem_pct": 15,
+  "disk_pct": 9,
+  "disk_free_gb": 390,
+  "uptime_h": 222
  },
  "memory": {
   "memory": {
-   "pct": 97,
-   "chars": 2138,
+   "pct": 91,
+   "chars": 2005,
    "limit": 2200
   },
   "user": {
-   "pct": 94,
-   "chars": 1289,
+   "pct": 88,
+   "chars": 1206,
    "limit": 1375
   }
  },
  "cron": {
   "enabled": 36,
-  "failed": 1,
+  "failed": 2,
   "failed_names": [
-   "cex-3h"
+   "cex-3h",
+   "kl-daily-brief"
   ]
  },
  "reminders": [
@@ -43,7 +44,7 @@
   {
    "name": "BF 遊戲掃描",
    "date": "11/20",
-   "days": 6
+   "days": 5
   },
   {
    "name": "MRT 月卡續期",
