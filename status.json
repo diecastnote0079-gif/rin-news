@@ -1,19 +1,19 @@
 {
- "updated": 1794758442,
+ "updated": 1794765642,
  "quota": {
-  "rolling": 100,
-  "weekly": 48,
-  "monthly": 21,
-  "reset_rolling": "4h 49m",
-  "reset_weekly": "7h 59m",
-  "reset_monthly": "2d 1h"
+  "rolling": 97,
+  "weekly": 47,
+  "monthly": 20,
+  "reset_rolling": "2h 49m",
+  "reset_weekly": "5h 59m",
+  "reset_monthly": "1d 23h"
  },
  "host": {
   "load": 0.57,
-  "mem_pct": 17,
-  "disk_pct": 8,
-  "disk_free_gb": 396,
-  "uptime_h": 261
+  "mem_pct": 18,
+  "disk_pct": 9,
+  "disk_free_gb": 393,
+  "uptime_h": 263
  },
  "memory": {
   "memory": {
@@ -34,9 +34,9 @@
  },
  "reminders": [
   {
-   "name": "windows smart",
+   "name": "collect parcel one utama",
    "date": "11/16",
-   "days": -1
+   "days": 0
   },
   {
    "name": "BF 遊戲掃描",
