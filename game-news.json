@@ -1,7 +1,39 @@
 {
- "updated": "2026-11-15T14:50:39+08:00",
- "count": 22,
+ "updated": "2026-11-15T16:53:26+08:00",
+ "count": 26,
  "items": [
+  {
+   "cat": "game",
+   "title": "SEGA 街機服務遭駭後陸續恢復 《音擊》《頭文字D THE ARCADE》重啟",
+   "note": "ALL.Net 與 Aime 被駭停擺後，11/15 起分批試行復線，線上遊玩與 IC 卡功能回來。",
+   "source": "4Gamers",
+   "ts": 1794729151,
+   "added": "2026-11-15T16:53:26+08:00"
+  },
+  {
+   "cat": "game",
+   "title": "Steam 免費犯罪沙盒《ROB RUN》同上破 41 萬",
+   "note": "俄團隊 Kefir 的免費遊戲上線十天峰值 418,021 人，評論 4 萬則但平衡問題炸鍋。",
+   "source": "4Gamers",
+   "ts": 1794726937,
+   "added": "2026-11-15T16:53:26+08:00"
+  },
+  {
+   "cat": "game",
+   "title": "TGA 2026 入圍名單 11/18 揭曉 《GTA6》角逐 GOTY",
+   "note": "台灣時間 11/18 凌晨 1 點直播公布，Geoff Keighley 主持。",
+   "source": "4Gamers",
+   "ts": 1794723453,
+   "added": "2026-11-15T16:53:26+08:00"
+  },
+  {
+   "cat": "game",
+   "title": "工廠經營喜劇《南氏公司》上市 和媽媽妹妹一起拼銷量",
+   "note": "日本 Code and DESIGN 出品，Steam 與 Android 同步，支援繁中。",
+   "source": "巴哈 GNN",
+   "ts": 1794722447,
+   "added": "2026-11-15T16:53:26+08:00"
+  },
   {
    "cat": "game",
    "title": "《英雄聯盟》世界大賽 2027 首度登陸日本，瑞士輪在名古屋",
