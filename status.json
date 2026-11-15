@@ -1,19 +1,19 @@
 {
- "updated": 1794744043,
+ "updated": 1794751243,
  "quota": {
-  "rolling": 100,
-  "weekly": 52,
-  "monthly": 23,
-  "reset_rolling": "3h 40m",
-  "reset_weekly": "11h 59m",
-  "reset_monthly": "2d 5h"
+  "rolling": 96,
+  "weekly": 50,
+  "monthly": 22,
+  "reset_rolling": "1h 40m",
+  "reset_weekly": "9h 59m",
+  "reset_monthly": "2d 3h"
  },
  "host": {
-  "load": 0.01,
-  "mem_pct": 15,
+  "load": 0.18,
+  "mem_pct": 18,
   "disk_pct": 8,
   "disk_free_gb": 396,
-  "uptime_h": 257
+  "uptime_h": 259
  },
  "memory": {
   "memory": {
@@ -28,11 +28,16 @@
   }
  },
  "cron": {
-  "enabled": 38,
+  "enabled": 40,
   "failed": 0,
   "failed_names": []
  },
  "reminders": [
+  {
+   "name": "windows smart",
+   "date": "11/16",
+   "days": 0
+  },
   {
    "name": "BF 遊戲掃描",
    "date": "11/20",

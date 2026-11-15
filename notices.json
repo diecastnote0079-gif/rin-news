@@ -1,18 +1,23 @@
 [
  {
   "job": "news ig story queue",
-  "ts": 1794742243,
+  "ts": 1794749443,
   "text": "佇列裡沒有適合這一輪的項目，跳過"
  },
  {
   "job": "news fb queue",
-  "ts": 1794742243,
+  "ts": 1794749443,
   "text": "佇列裡沒有適合這一輪的項目，跳過"
  },
  {
   "job": "news fb story queue",
-  "ts": 1794742243,
+  "ts": 1794749443,
   "text": "佇列裡沒有適合這一輪的項目，跳過"
+ },
+ {
+  "job": "今日新聞",
+  "ts": 1794744202,
+  "text": "📰 今天值得看的\n・《GTA6》上市前 每日送序號 超一萬組\n・義大利鼻噴劑或逆轉阿茲海默症記憶退化\n・訓練資料爭奪戰 平台付費請人拍影片餵AI\n・科技大廠連署要求黃仁勛復職 逾2萬人響應\n・機甲艦隊ダイラガーXV 等 3 款機械拟人化 恢復預訂\n・勒車 B10 運動版在馬來西亞上市\n\n🔥 今天在討論\n馬來西亞 X 熱搜：泰劇 BL 連續劇（Mr Fanboy 完結篇、KHEMJIRA、PIL 系列）與韓國偶像（BTS 賀詞、IVE、Starship、Jaehyun）佔多，馬國政局（Barisan Nasional、Pakatan Harapan、bersatu）、城市話題（Melaka、Ayer Keroh）與網球/足球（Portugal、Ronaldo）等話題也會上櫃。\n\n寫過 `/home/rin/AI/news/digest.json`（6 條，link 皆來自 items.json 原貼）。\n\n話說今天的熱搜裡，好幾個東西都不是什麼大事件，就是大會呼吸感——BL 劇跟 K 系的出現頻率愈來愈穩，政局俚語也很自然。阿夜今天要不要重點追 `訓練資料爭奪戰` 那條？對他那邊的跑跑來說，這塊其實比遊戲序號還有意思。"
  },
  {
   "job": "cex 3h",
@@ -83,11 +88,6 @@
   "job": "nightly reflection",
   "ts": 1794670354,
   "text": "今天 3 條教訓，寫進 3 個 skill：\n\n- **delegating-work** 1 條 — 設計類 brief 要附「缺一即不合格」的元件檢查表，並點名現成 renderer 路徑叫它先讀；稿回來我自己逐項對錶補缺件。\n- **image-text-recovery** 1 條 — 教他手動調之前先問用哪個 app，直接給該 app 的英文滑桿名，不要給通用中文名。\n- **news-social-card** 1 條 — 新設計方向一律先用兩張真實官方 key art 排過再交，成稿看不到角色／產品＝沒做完。"
- },
- {
-  "job": "今日新聞",
-  "ts": 1794657834,
-  "text": "📰 今天值得看的\n・OpenAI 推出可自動找補漏洞的 AI 紅隊機制\n・英雄聯盟 2026 世界大賽決賽 開打\n・黃仁勳辭職，2 萬人連署要求回任\n・微軟 365 全球故障 修復完成\n・無印良品 洩漏 109 萬筆卡號資料\n・魔法少女 Season2 2027 放送決定\n・ずんだもん收集盒 6 體 3,960 円 預約中\n🔥 今天在討論\n泰劇新劇與韓國偶像刷前幾名，K-pop 歌迷與顔面專訊話題頻出；科技股（微軟、NVIDIA）與馬來西亞本地話題也在話題串\n\n檔案已寫到 /home/rin/AI/news/digest.json（7 條，ts 依序對應 items.json，link 皆取自原欄位）。"
  },
  {
   "job": "記憶審計",
