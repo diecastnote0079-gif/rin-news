@@ -1,5 +1,30 @@
 [
  {
+  "job": "news fb story queue",
+  "ts": 1794778248,
+  "text": "FB story published: 1501413182036664"
+ },
+ {
+  "job": "news ig story queue",
+  "ts": 1794778243,
+  "text": "距上一則不到 240 分鐘（還差 211 分），這一輪跳過"
+ },
+ {
+  "job": "news fb queue",
+  "ts": 1794778243,
+  "text": "距上一則不到 240 分鐘（還差 181 分），這一輪跳過"
+ },
+ {
+  "job": "生活記錄",
+  "ts": 1794774267,
+  "text": "I stopped retrying because I kept running tool_call 8 times without making progress. The last result above shows what blocked it. Tell me how you'd like to proceed, or send `continue` and I'll try a different approach."
+ },
+ {
+  "job": "duckx3 maintenance",
+  "ts": 1794772854,
+  "text": "清潔與備份都成功：\n\n- 收件匣移除 **0 筆**（現有 112 筆，7 天內與 status=new 全保留）\n- 備份 `pb_data-20261116-040045.tar.gz`，231.1MB，內含 data.db 與 storage 2480 個檔案（保留 14 份）\n- 無 FAILED"
+ },
+ {
   "job": "pending review nightly",
   "ts": 1794772796,
   "text": "落了 3 條（手機開 Tailscale 接家裡一律 100.115.218.116；影片截圖必須本機 chromium 且無 video codec；美術偏二遊立繪＋藍橙塗色分區表達）。\n丟了 5 筆重複或無新訊息的整理建議（portal 8790 專案清單三份重複、英文客群／英文專頁 11-14 已定案、餘為舊 HTML→PNG/claude/PSD/卡價目錄的清理或重複描述）。\n目前記憶水位 99%（2,193/2,200 chars），已將重複的 HTML→PNG 細節併入新條目。"
@@ -8,21 +33,6 @@
   "job": "doc reconcile",
   "ts": 1794772542,
   "text": "【文件 vs 現況 對帳】\n • 手機頁資料 5.9 小時前（上限 5）：2026-11-15T14:02:14Z\n • 本機最後一輪 5.9 小時前（20261115220043）"
- },
- {
-  "job": "news ig story queue",
-  "ts": 1794771043,
-  "text": "距上一則不到 240 分鐘（還差 61 分），這一輪跳過"
- },
- {
-  "job": "news fb queue",
-  "ts": 1794771043,
-  "text": "距上一則不到 240 分鐘（還差 35 分），這一輪跳過"
- },
- {
-  "job": "news fb story queue",
-  "ts": 1794771043,
-  "text": "距上一則不到 240 分鐘（還差 91 分），這一輪跳過"
  },
  {
   "job": "nightly reflection",
@@ -73,16 +83,6 @@
   "job": "product pages rebuild",
   "ts": 1794693643,
   "text": "頁面 393 個｜清掉舊頁 1｜sitemap 394 條"
- },
- {
-  "job": "生活記錄",
-  "ts": 1794687600,
-  "text": "今晚沒有——對話裡有「停停停／沒叫過你做／不許哭／算了」等拒絕跡象，按規則整晚不記任何生活事實（只跑了 state.db 查詢，535 筆 user 訊息，全部未寫入 fact_store）。"
- },
- {
-  "job": "duckx3 maintenance",
-  "ts": 1794686460,
-  "text": "清理和備份都成功，沒有 FAILED。\n\n- 收件匣：刪 0 筆（沒有超過 7 天且非 new 的紀錄），現有 112 筆\n- 備份：`~/backups/pb_data-20261115-040046.tar.gz`，232MB。`data.db` 在裡面，storage 影像檔 2481 個也在\n- 備份目錄目前只有 4 份（保留上限 14，還沒滿，屬正常）\n\n小提醒：過去三次清理都是 0 筆，代表照片紀錄都還維持在 new 或 7 天內；如果那不是你要的，可以說一聲我改保留天數。"
  },
  {
   "job": "每週維修",
