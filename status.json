@@ -1,19 +1,19 @@
 {
- "updated": 1794751243,
+ "updated": 1794758442,
  "quota": {
-  "rolling": 96,
-  "weekly": 50,
-  "monthly": 22,
-  "reset_rolling": "1h 40m",
-  "reset_weekly": "9h 59m",
-  "reset_monthly": "2d 3h"
+  "rolling": 100,
+  "weekly": 48,
+  "monthly": 21,
+  "reset_rolling": "4h 49m",
+  "reset_weekly": "7h 59m",
+  "reset_monthly": "2d 1h"
  },
  "host": {
-  "load": 0.18,
-  "mem_pct": 18,
+  "load": 0.57,
+  "mem_pct": 17,
   "disk_pct": 8,
   "disk_free_gb": 396,
-  "uptime_h": 259
+  "uptime_h": 261
  },
  "memory": {
   "memory": {
@@ -36,7 +36,7 @@
   {
    "name": "windows smart",
    "date": "11/16",
-   "days": 0
+   "days": -1
   },
   {
    "name": "BF 遊戲掃描",
