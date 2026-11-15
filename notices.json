@@ -1,18 +1,48 @@
 [
  {
-  "job": "news ig story queue",
-  "ts": 1794697243,
+  "job": "news fb queue",
+  "ts": 1794706243,
   "text": "佇列裡沒有適合這一輪的項目，跳過"
  },
  {
-  "job": "news fb queue",
-  "ts": 1794697243,
+  "job": "SNKRDUNK 卡價",
+  "ts": 1794704449,
+  "text": "SNKRDUNK 變化\n📈 3rd Anniversary Set — ENGLISH\n   在售 51 → 54 件\n   最低在售 ¥61,000 → ¥63,499\n📈 3rd Anniversary Set — CHINA\n   在售 54 → 56 件\n   最低在售 ¥43,000 → ¥42,900\n📈 Luffy SEC-SP EB04-061\n   A ¥1,420,000 → ¥1,430,000\n   PSA10 ¥1,835,000 → ¥1,798,000"
+ },
+ {
+  "job": "news ig story queue",
+  "ts": 1794704443,
   "text": "佇列裡沒有適合這一輪的項目，跳過"
  },
  {
   "job": "news fb story queue",
-  "ts": 1794697243,
+  "ts": 1794704443,
   "text": "佇列裡沒有適合這一輪的項目，跳過"
+ },
+ {
+  "job": "CeX 早安",
+  "ts": 1794703766,
+  "text": "查了一下（`sqlite3` CLI 沒裝，改用 python3 的 sqlite3 查的），昨晚（馬來西亞時間 2026-11-14）`changes` 表共 3940 筆變化，篩了遊戲／主機／硬體相關的，整理如下：\n\n昨天 CeX 的動靜：\n\n🆕 新上架\n・Tamagotchi Plaza - Nintendo Switch 2 Edition（Switch 2）RM190\n・Lets Sing 2027（Switch）RM220\n・Tales of Eternia Remastered（Switch）RM150\n・Metal Slug Anthology（PSP）RM150\n・Simpsons Game（DS）RM130\n・Hot Wheels: World's Best Driver（Wii U）RM80\n\n📉 降價\n・Fire Emblem: Fortune's Weave（Switch）RM300 → RM290\n・EA Sports FC 27（PS4）RM270 → RM260\n\n📦 回架\n・Legend of Zelda: Breath of the Wild - Nintendo Switch 2 Edition（Switch 2）\n・EA Sports FC 27（Switch）\n・Art Academy - Learn Painting & Drawing（DS）\n・Pokemon Diamond（DS）\n・Rayman DS（DS）\n・Super Pokemon Rumble（3DS）\n\n🚫 賣光\n・PS4《Generation Zero》\n・PS Vita《God Eater 2: Rage Burst》\n・PS5《Sonic Racing: Crossworlds》\n・PS3《Asura's Wrath》\n・PS4《Super Robot Wars OG: The Moon Dwellers》\n・PS4《EA Sports FC 27》"
+ },
+ {
+  "job": "cex 0830",
+  "ts": 1794702756,
+  "text": "健康檢查：20261115083044（範圍 web，77432 筆）\n  ✅ freshness  資料 0.0 小時前抓的\n  ✅ volume     筆數 77432（與上次 77432 差 0.00%）\n  ✅ schema     60 個欄位，與上次指紋一致\n  ✅ quality    77432 筆：主鍵無重複、標價與名稱完整\n  ✅ heartbeat  距上次抓取 10.5 小時（20261114220043 → 20261115083044）\n\n全部正常"
+ },
+ {
+  "job": "kl daily brief",
+  "ts": 1794702678,
+  "text": "☀️ 今日 11/15 (Sun)\n\n天氣：24–30°C，最高降雨機率 100%\n　降雨時段：12:00（53%）、13:00（81%）、14:00（100%）、15:00（100%）、16:00（100%）、17:00（100%）\n\nMid Valley 本週活動（10 項）\n・Ekspo Rumah BPEX — Hall 3, Mid Valley Exhibition Centre (MVEC), Third Floor, Centre Court\n　14 Nov - 15 Nov 2026\n・25th Private and International School Fair (PISF) KL Nov 2026 — Hall 1 & Hall 2, Mid Valley Exhibition Centre (MVEC), Third Floor, Centre Court\n　14 Nov - 15 Nov 2026\n・Blackmores by Caring — Centre Court (CC), Lower Ground Floor\n　10 Nov - 15 Nov 2026\n・SK-II Festive Pop-Up — South Void 2 (SV2), Ground Floor\n　9 Nov - 15 Nov 2026\n\n雪隆活動（未來 14 天，命中興趣 1 項）\n・11/27 Resilience by Design: Are You Scaling AI or Scal\n　The Ruma Hotel and Residences\n\n電子／玩具優惠\n・TMT Malaysia: TMT TAR UMT Arena Grand Opening Sale –\n　11-15　TAR UMT\n・DirectD 11.11 Apple Sale – Exclusive Savings on Sele\n　11-15　Maybank\n・Toy Garden Warehouse Clearance Sale\n　11-13→11-15\n・DirectD 11.11 DOUBLE DEALS Apple Promotion – Get App\n　11-11→11-15\n・T-Pot Malaysia Early Bird Flash Sale at Kota Kemunin\n　11-11→11-15　Level 1\n・YL Camera: 11.11 Content Creator Experience 2026 Sal\n　11-11→11-15\n\n大型活動（會展／體育館）\n・11-27 Resilience by Design: Are You Scaling AI or \n　The Ruma Hotel and Residences\n・11"
+ },
+ {
+  "job": "ai research push",
+  "ts": 1794701451,
+  "text": "⚡ **建議動手**\n・**Hermes 升到 v0.23.1**（5 分鐘，`hermes update`；先 `hermes doctor` 看版本，已在 v0.23.1 就跳過）——release notes 明寫：v0.23.0 及更舊的 `hermes plugins install` 一直在靜默退回出廠的舊目錄，因為線上 catalog 超過客戶端 2 MiB 上限，這版把上限提到 16 MiB 才修好。\n・**在 Windows 的 3070 Ti 跑 MAPLE 剪枝版 Gemma 4 26B**（下載＋設定約 30 分鐘，4.75 GB GGUF 有直接下載）——80 個休眠專家被剪掉後整顆進 VRAM，作者在 6 GB 筆電卡量到 45 tok/s，你的 8 GB 只會更寬鬆；但保真度 93.8% 是他自己跑四項小測試報的，別當定論。"
+ },
+ {
+  "job": "AI 工具日報",
+  "ts": 1794700958,
+  "text": "⚡ **建議動手**\n・**Hermes 升到 v0.23.1**（5 分鐘，`hermes update`；先 `hermes doctor` 看版本，已在 v0.23.1 就跳過）——release notes 明寫：v0.23.0 及更舊的 `hermes plugins install` 一直在靜默退回出廠的舊目錄，因為線上 catalog 超過客戶端 2 MiB 上限，這版把上限提到 16 MiB 才修好。\n・**在 Windows 的 3070 Ti 跑 MAPLE 剪枝版 Gemma 4 26B**（下載＋設定約 30 分鐘，4.75 GB GGUF 有直接下載）——80 個休眠專家被剪掉後整顆進 VRAM，作者在 6 GB 筆電卡量到 45 tok/s，你的 8 GB 只會更寬鬆；但保真度 93.8% 是他自己跑四項小測試報的，別當定論。\n\n**第一節｜AI 工具**\n【Hermes Agent】11/9 的 v0.23.1 是 v0.23.0 以來約 618 個 PR 的滾動修補；11/13、11/14 的 canary 只有 changelog 連結、沒有任何條目，細節我沒取得。\n判斷：真正對我們有影響的只有插件安裝那條，其餘官方自己說「未列入說明」、要等 v0.24.0 的完整筆記。\n結論：值得試（就上面那句更新）。\n\n【OpenCode v2.3.0】11/13：subagent 預設丟到背景跑、閒下來才回報父 session，TUI 把整串工具呼叫收成一行可折疊。\n判斷：我接的是 opencode-go 當 provider，不跑它的 CLI，這兩個改動對我們沒有直接作用。\n結論：觀察就好。\n\n【MiniMax H3-Image】11/10 放開源權重：33B DiT，一次直出 4096×4096（約 16 MP），6 步、不用 CFG，ComfyUI 0.45.0 已原生支援。\n判斷：最瘦的 int8 版仍要 21 GB，8 GB 的 3070 Ti 會一路換頁，實務上跑不動，要雲端或大卡才有意義。\n結論：觀察就好。\n\n【免費 API 又多了幾家】11/14 一天內公開：SambaNova 免綁卡的免費層、Inception 新 key 送 1 億 token、Nscale 送 $5 額度。\n判斷：分類、翻譯、抓摘要這類雜活丟免費層，就不燒你的付費額度，跟「只要不燒 token 啥都行」一致。\n結論：值得試，挑一家開 key 就好。\n\n**第二節｜🔧 新奇專案**\n【klad】給 coding agent 一副真筆刷的 2D 繪圖＋動畫軟體：agent 用 `klad` 指令在畫布落筆，你用筆在同一張圖上改，兩邊即時看到對方。\n好玩在它刻意沒有圖像模型——不是叫 AI 生一張圖交差，是你和 agent 共用一塊畫布，每一筆都留著路"
  },
  {
   "job": "product pages rebuild",
@@ -58,31 +88,6 @@
   "job": "今日新聞",
   "ts": 1794657834,
   "text": "📰 今天值得看的\n・OpenAI 推出可自動找補漏洞的 AI 紅隊機制\n・英雄聯盟 2026 世界大賽決賽 開打\n・黃仁勳辭職，2 萬人連署要求回任\n・微軟 365 全球故障 修復完成\n・無印良品 洩漏 109 萬筆卡號資料\n・魔法少女 Season2 2027 放送決定\n・ずんだもん收集盒 6 體 3,960 円 預約中\n🔥 今天在討論\n泰劇新劇與韓國偶像刷前幾名，K-pop 歌迷與顔面專訊話題頻出；科技股（微軟、NVIDIA）與馬來西亞本地話題也在話題串\n\n檔案已寫到 /home/rin/AI/news/digest.json（7 條，ts 依序對應 items.json，link 皆取自原欄位）。"
- },
- {
-  "job": "SNKRDUNK 卡價",
-  "ts": 1794618021,
-  "text": "SNKRDUNK 變化\n📈 3rd Anniversary Set — ENGLISH\n   在售 50 → 51 件\n   最低在售 ¥63,000 → ¥61,000\n📈 3rd Anniversary Set — CHINA\n   最低在售 ¥41,000 → ¥43,000\n📈 Luffy SEC-RSP OP13-118\n   A ¥2,200,000 → ¥2,400,000\n📈 Luffy SEC-SP EB04-061\n   A ¥1,410,000 → ¥1,420,000\n   PSA10 ¥1,830,000 → ¥1,835,000"
- },
- {
-  "job": "CeX 早安",
-  "ts": 1794617287,
-  "text": "```\n昨天 CeX 的動靜：\n\n🆕 新上架\n・Tamagotchi Plaza - Nintendo Switch 2 Edition（Switch 2）RM190\n・Lets Sing 2027（Switch）RM220\n・Tales of Eternia Remastered（Switch）RM150\n・Metal Slug Anthology（PSP）RM150\n・Simpsons Game, The（DS）RM130\n・Hot Wheels: World's Best Driver（Wii U）RM80\n\n📉 降價\n・Fire Emblem: Fortune's Weave（Switch 2）RM300 → RM290\n・EA Sports FC 27（PS4）RM270 → RM260\n\n📦 回架\n・《Legend of Zelda: Breath of the Wild - Nintendo Switch 2 Edition》\n・《EA Sports FC 27》\n・《Clive Barker's Hellraiser: Revival》\n・《FIFA 22》\n・《Rhythm Heaven Groove》\n・《Pokemon Diamond》\n\n🚫 賣光\n・《EA Sports FC 27》\n・《Sonic Racing: Crossworlds》\n・《Generation Zero》\n・《Super Robot Wars OG: The Moon Dwellers》\n・《Asura's Wrath》\n・《LMA Manager 2003》\n```"
- },
- {
-  "job": "cex 0830",
-  "ts": 1794616332,
-  "text": "健康檢查：20261114083015（範圍 web，77363 筆）\n  ✅ freshness  資料 0.0 小時前抓的\n  ✅ volume     筆數 77363（與上次 77363 差 0.00%）\n  ✅ schema     60 個欄位，與上次指紋一致\n  ✅ quality    77363 筆：主鍵無重複、標價與名稱完整\n  ✅ heartbeat  距上次抓取 8.1 小時（20261114002515 → 20261114083015）\n\n全部正常"
- },
- {
-  "job": "ai research push",
-  "ts": 1794615019,
-  "text": "今天沒有要動的"
- },
- {
-  "job": "AI 工具日報",
-  "ts": 1794614556,
-  "text": "⚡ 建議動手\n今天沒有要動的——三個更新都沒碰到我們在跑的東西，理由逐條寫在下面。\n\n【第一節｜AI 工具】\n▪ llama.cpp v1.0.0（11/13 正式發 1.0）\n　本地模型推論引擎進 1.0：砍掉 35 個舊 API、ggml 同步 1.0、新增 FP8 KV cache 和「MoE 專家快取可分給 CPU 記憶體」，llama-server 補了 SSRF／CORS／DNS rebinding 一批安全洞，多一個 /v1/audio/speech。\n　對我們：我們現在沒有本地 LLM，這版真正的意義是「8GB VRAM 跑大 MoE」變可行；等你哪天想把部分工作搬回本機才輪到它。\n　結論：觀察就好。\n\n▪ Hermes Agent v0.23.1（11/9，canary 已到 11/13）\n　patch 版把 v0.23.0 之後約 618 個 PR 滾成穩定版；release notes 明講對使用者的修正只有外掛安裝那條（舊版會默默用出廠的外掛目錄，看不到新上架的外掛）。\n　對我們：只有你要裝新外掛時才受影響，技能、記憶、cron 都不動。\n　結論：觀察就好，真要裝外掛前先更新。\n\n▪ Claude Code v2.1.325（11/13）\n　修了 zstd 壓縮回應解碼的安全問題，另外被組織政策擋住時會提示可以 /rewind 改訊息。\n　對我們沒用——你不跑 Claude Code，主模型是 deepseek-v4.1-flash。\n　結論：不用管。\n\n【第二節｜🔧 新奇專案】\n▪ lexifina/global-law\n　全世界的法律放進 git：每國一個 repo、每條生效的法律就是一個 commit，能用 git blame 查「這行字是哪條法寫的」，還附 MCP server 給 agent 核對引註。\n　有趣在於它把查法條變成翻 commit 歷史——可以問「這條法 2019 年 3 月長什麼樣、誰改的」，而且整個庫是 Claude 自己蓋出來的。\n▪ valentderah/totk-pc-recomp\n　把《王國之淚》靜態重編譯成原生 Windows／Linux x86-64＋Vulkan renderer，不含遊戲檔（7,085 stars、MIT）。\n　有趣在於它不是模擬器，是把主機遊戲直接翻成 PC 程式，這條路線比模擬器少見太多。\n▪ Eglantine-Community/Eglantine\n　開源 Switch 2 模擬器（C++，yuzu／Eden 血統），README 說馬力歐賽車世界能跑到接近滿速，但要自備主機 keys 和自己 dump 的遊戲。\n　有趣在於新主機這麼快就被逆到能跑，跟你做的遊戲新聞同一條線，之後大概有得報。\n▪ aschmelyun/print-my-profile-pic\n　st"
  },
  {
   "job": "記憶審計",
