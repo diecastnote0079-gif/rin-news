@@ -1,7 +1,39 @@
 {
- "updated": "2026-11-16T09:15:18+08:00",
- "count": 33,
+ "updated": "2026-11-16T13:21:29+08:00",
+ "count": 37,
  "items": [
+  {
+   "cat": "game",
+   "title": "《GTA6》實體版序號印成空白或被搶先兌換　玩家無法預載",
+   "note": "首發實體盒不附光碟，序號直接印在封底：有人拿到空白欄位，有人輸進去顯示「代碼已遭兌換」。距 11/19 發售三天，PS 叫你找零售商、零售商叫你找 Rockstar，而盒裡沒有光碟可以替代。",
+   "source": "4Gamers",
+   "ts": 1794802797,
+   "added": "2026-11-16T13:21:29+08:00"
+  },
+  {
+   "cat": "tech",
+   "title": "Pixel Tag、AirTag、SmartTag、Xiaomi Tag 四款防丟器比一比",
+   "note": "Google 11/11 在台開賣首款 Pixel Tag（單入與四入組），這篇把四家的功能與定位攤在同一張表上；走 YouTube 嵌入所以 run_news 抓不到預覽圖，被跳過兩輪。",
+   "source": "電腦王阿達",
+   "ts": 1794801021,
+   "added": "2026-11-16T13:21:29+08:00"
+  },
+  {
+   "cat": "game",
+   "title": "Xbox 25 週年　Series X/S 可切換歷代 7 種開機動畫",
+   "note": "設定＞系統＞啟動＞動畫就能換，從初代能量反應爐、360 的地裂球與彩帶球、One 的綠底白球到現在的「We Are XBOX」，每個都有預覽。",
+   "source": "4Gamers",
+   "ts": 1794800844,
+   "added": "2026-11-16T13:21:29+08:00"
+  },
+  {
+   "cat": "game",
+   "title": "本週日本遊戲發售清單　主角是《GTA6》",
+   "note": "Gematsu 每週固定整理，這週 PS5／Xbox Series 的 GTA6 掛頭牌，其餘是零星移植與小作。",
+   "source": "Gematsu",
+   "ts": 1794798560,
+   "added": "2026-11-16T13:21:29+08:00"
+  },
   {
    "cat": "game",
    "title": "《Mega Man: Dual Override》頭目大賽冠軍「清潔人」",
