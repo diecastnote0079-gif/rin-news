@@ -1,18 +1,23 @@
 [
  {
   "job": "news ig story queue",
-  "ts": 1794792703,
-  "text": "IG story published: 18111103739263948"
+  "ts": 1794799843,
+  "text": "距上一則不到 240 分鐘（還差 121 分），這一輪跳過"
  },
  {
   "job": "news fb queue",
-  "ts": 1794792643,
-  "text": "距上一則不到 120 分鐘（還差 91 分），這一輪跳過"
+  "ts": 1794799843,
+  "text": "佇列裡沒有適合這一輪的項目，跳過"
  },
  {
   "job": "news fb story queue",
-  "ts": 1794792643,
-  "text": "距上一則不到 240 分鐘（還差 1 分），這一輪跳過"
+  "ts": 1794799843,
+  "text": "距上一則不到 240 分鐘（還差 151 分），這一輪跳過"
+ },
+ {
+  "job": "cex 3h",
+  "ts": 1794794555,
+  "text": "健康檢查：20261116100043（範圍 web，77533 筆）\n  ✅ freshness  資料 0.0 小時前抓的\n  ✅ volume     筆數 77533（與上次 77533 差 0.00%）\n  ✅ schema     60 個欄位，與上次指紋一致\n  ✅ quality    77533 筆：主鍵無重複、標價與名稱完整\n  ✅ heartbeat  距上次抓取 1.5 小時（20261116083043 → 20261116100043）\n\n全部正常"
  },
  {
   "job": "記憶審計",
@@ -83,11 +88,6 @@
   "job": "nightly reflection",
   "ts": 1794756875,
   "text": "今天改了 4 個 skill、共 4 條：\n\n- **mobile-app-ui** 1 條 — 改版前先給你 2–3 個真實範本截圖（寫明借哪幾條、不抄哪幾條），你挑過才寫 CSS；視覺方向派 deep 拿方案，我只做實作與量測。\n- **hermes-runtime-ops** 1 條 — 「不准停」來自 `tool_use_enforcement`／`execution_guidance` 名單命中 deepseek；別動 config 開關，界線寫在 SOUL.md Hard constraints 最前面，且下一條對話才生效。\n- **rin-box-services** 1 條 — 你說「關電腦」就是他那台 Windows，不反問哪一台、不把 rin-box 列成選項。\n- **engineering-principles** 1 條 — 自我歸因要指得出數字或出處，指不出就說不知道，別遞一個聽起來合理的機制。"
- },
- {
-  "job": "cex 3h",
-  "ts": 1794751355,
-  "text": "健康檢查：20261115220043（範圍 web，77533 筆）\n  ✅ freshness  資料 0.0 小時前抓的\n  ✅ volume     筆數 77533（與上次 77512 差 0.03%）\n  ✅ schema     60 個欄位，與上次指紋一致\n  ✅ quality    77533 筆：主鍵無重複、標價與名稱完整\n  ✅ heartbeat  距上次抓取 3.0 小時（20261115190043 → 20261115220043）\n\n全部正常"
  },
  {
   "job": "今日新聞",
