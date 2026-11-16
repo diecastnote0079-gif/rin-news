@@ -1,23 +1,28 @@
 [
  {
-  "job": "cex 2h",
-  "ts": 1794837755,
-  "text": "健康檢查：20261116220043（範圍 web，77602 筆）\n  ✅ freshness  資料 0.0 小時前抓的\n  ✅ volume     筆數 77602（與上次 77596 差 0.01%）\n  ✅ schema     60 個欄位，與上次指紋一致\n  ✅ quality    77602 筆：主鍵無重複、標價與名稱完整\n  ✅ heartbeat  距上次抓取 1.2 小時（20261116204859 → 20261116220043）\n\n全部正常"
- },
- {
   "job": "news ig story queue",
-  "ts": 1794837643,
+  "ts": 1794844843,
   "text": "佇列裡沒有適合這一輪的項目，跳過"
  },
  {
   "job": "news fb queue",
-  "ts": 1794837643,
+  "ts": 1794844843,
   "text": "佇列裡沒有適合這一輪的項目，跳過"
  },
  {
   "job": "news fb story queue",
-  "ts": 1794837643,
+  "ts": 1794844843,
   "text": "佇列裡沒有適合這一輪的項目，跳過"
+ },
+ {
+  "job": "nightly reflection",
+  "ts": 1794843254,
+  "text": "今天改了 2 個 skill、共 4 條（rin-portal-ui 3 條，engineering-principles 1 條；portal-mobile-page-track 順手把跟 rin-portal-ui 打架的舊預設改成同一條）：\n\n- **rin-portal-ui**：iPad Pro 12.9 橫向 CSS viewport 是 1366×1024，不是 1280×800；平板斷點上限改 1399px，否則橫放 iPad 漏回桌機樣式，尺寸一律實測不引機型規格。\n- **rin-portal-ui**：「最上面這行」＝外殼導覽列（凜／系統／新聞＋時鐘），子頁 topbar 只有截圖劃掉才動。\n- **rin-portal-ui**：退回一次只退一層，第二步用他截圖的可見特徵在備份上逐項核對再覆蓋。\n- **engineering-principles**：給他的每個連結自己先打一次看到 200，`git remote -v` 不等於線上 repo 還在。"
+ },
+ {
+  "job": "cex 2h",
+  "ts": 1794837755,
+  "text": "健康檢查：20261116220043（範圍 web，77602 筆）\n  ✅ freshness  資料 0.0 小時前抓的\n  ✅ volume     筆數 77602（與上次 77596 差 0.01%）\n  ✅ schema     60 個欄位，與上次指紋一致\n  ✅ quality    77602 筆：主鍵無重複、標價與名稱完整\n  ✅ heartbeat  距上次抓取 1.2 小時（20261116204859 → 20261116220043）\n\n全部正常"
  },
  {
   "job": "今日新聞",
@@ -88,11 +93,6 @@
   "job": "doc reconcile",
   "ts": 1794772542,
   "text": "【文件 vs 現況 對帳】\n • 手機頁資料 5.9 小時前（上限 5）：2026-11-15T14:02:14Z\n • 本機最後一輪 5.9 小時前（20261115220043）"
- },
- {
-  "job": "nightly reflection",
-  "ts": 1794756875,
-  "text": "今天改了 4 個 skill、共 4 條：\n\n- **mobile-app-ui** 1 條 — 改版前先給你 2–3 個真實範本截圖（寫明借哪幾條、不抄哪幾條），你挑過才寫 CSS；視覺方向派 deep 拿方案，我只做實作與量測。\n- **hermes-runtime-ops** 1 條 — 「不准停」來自 `tool_use_enforcement`／`execution_guidance` 名單命中 deepseek；別動 config 開關，界線寫在 SOUL.md Hard constraints 最前面，且下一條對話才生效。\n- **rin-box-services** 1 條 — 你說「關電腦」就是他那台 Windows，不反問哪一台、不把 rin-box 列成選項。\n- **engineering-principles** 1 條 — 自我歸因要指得出數字或出處，指不出就說不知道，別遞一個聽起來合理的機制。"
  },
  {
   "job": "每週維修",
