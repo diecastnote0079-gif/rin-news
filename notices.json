@@ -1,18 +1,18 @@
 [
  {
-  "job": "news fb queue",
-  "ts": 1794807051,
-  "text": "FB photo: https://www.facebook.com/122157732333132826/posts/122158094817132826"
+  "job": "news ig story queue",
+  "ts": 1794814243,
+  "text": "距上一則不到 240 分鐘（還差 151 分），這一輪跳過"
  },
  {
-  "job": "news ig story queue",
-  "ts": 1794807043,
-  "text": "距上一則不到 240 分鐘（還差 1 分），這一輪跳過"
+  "job": "news fb queue",
+  "ts": 1794814243,
+  "text": "距上一則不到 120 分鐘（還差 1 分），這一輪跳過"
  },
  {
   "job": "news fb story queue",
-  "ts": 1794807043,
-  "text": "距上一則不到 240 分鐘（還差 31 分），這一輪跳過"
+  "ts": 1794814243,
+  "text": "距上一則不到 240 分鐘（還差 181 分），這一輪跳過"
  },
  {
   "job": "cex 3h",

@@ -1,19 +1,19 @@
 {
- "updated": 1794808842,
+ "updated": 1794816043,
  "quota": {
-  "rolling": 100,
-  "weekly": 100,
-  "monthly": 16,
-  "reset_rolling": "1h 20m",
-  "reset_weekly": "6d 17h",
-  "reset_monthly": "1d 11h"
+  "rolling": 82,
+  "weekly": 92,
+  "monthly": 12,
+  "reset_rolling": "4h 23m",
+  "reset_weekly": "6d 15h",
+  "reset_monthly": "1d 9h"
  },
  "host": {
-  "load": 0.4,
-  "mem_pct": 19,
+  "load": 0.31,
+  "mem_pct": 20,
   "disk_pct": 9,
   "disk_free_gb": 392,
-  "uptime_h": 275
+  "uptime_h": 277
  },
  "memory": {
   "memory": {
@@ -36,7 +36,7 @@
   {
    "name": "collect parcel one utama",
    "date": "11/16",
-   "days": 0
+   "days": -1
   },
   {
    "name": "BF 遊戲掃描",
