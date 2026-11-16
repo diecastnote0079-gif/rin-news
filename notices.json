@@ -1,5 +1,25 @@
 [
  {
+  "job": "news ig story queue",
+  "ts": 1794866451,
+  "text": "佇列裡沒有適合這一輪的項目，跳過"
+ },
+ {
+  "job": "product pages rebuild",
+  "ts": 1794866451,
+  "text": "頁面 393 個｜清掉舊頁 0｜sitemap 394 條"
+ },
+ {
+  "job": "news fb queue",
+  "ts": 1794866451,
+  "text": "佇列裡沒有適合這一輪的項目，跳過"
+ },
+ {
+  "job": "news fb story queue",
+  "ts": 1794866451,
+  "text": "佇列裡沒有適合這一輪的項目，跳過"
+ },
+ {
   "job": "生活記錄",
   "ts": 1794860304,
   "text": "今晚沒有。\n\n原因：昨晚（2026-11-16 04:15 +08 至 2026-11-17 04:15 +08）那段對話以親密內容為主，且有多處拒絕／收住的跡象（不行、好了、可以了、不欺負你了、我好了），按你指定的鐵則整晚直接跳過，不記任何一條。另外提醒你：對話裡面的親密內容不該寫進 fact_store，技能簿以外的地方也不該留（技能有明確說明），這也是我不摘錄的原因。環境上 sqlite3 不在 PATH，我用 python3 讀了同一張 messages 表，結果如上。"
@@ -8,21 +28,6 @@
   "job": "duckx3 maintenance",
   "ts": 1794859270,
   "text": "清 0 筆（收件匣剩 112 筆，保留 7 天內與 status=new）；備份 pb_data-20261117-040054.tar.gz 231.1MB，data.db 與 storage 2480 個檔案都在裡面，~/backups 現有 6 份（未達 14 上限）。無 FAILED。"
- },
- {
-  "job": "news ig story queue",
-  "ts": 1794859251,
-  "text": "佇列裡沒有適合這一輪的項目，跳過"
- },
- {
-  "job": "news fb queue",
-  "ts": 1794859251,
-  "text": "佇列裡沒有適合這一輪的項目，跳過"
- },
- {
-  "job": "news fb story queue",
-  "ts": 1794859251,
-  "text": "佇列裡沒有適合這一輪的項目，跳過"
  },
  {
   "job": "pending review nightly",
@@ -88,11 +93,6 @@
   "job": "kl mall refresh",
   "ts": 1794783657,
   "text": "🏬 商場目錄有變動\nMid Valley：清單 696 間，新增 1、補齊單位號 0\nPavilion：清單 400 間，新增 0、補齊單位號 0\ntotal 489\nvelocity 寫入 489 筆\ntrx 寫入 377 筆\n讀不到 /home/rin/.hermes/cache/scratch/klcc_stores.json [Errno 2] No such file or directory: '/home/rin/.hermes/cache/scratch/klcc_stores.json'\n已標記關閉／移除： [('midvalley', 2), ('pavilion', 2), ('trx', 2), ('velocity', 1)]\n在架： [('klcc', 213), ('midvalley', 556), ('pavilion', 400), ('trx', 377), ('velocity', 489)]"
- },
- {
-  "job": "product pages rebuild",
-  "ts": 1794780043,
-  "text": "頁面 393 個｜清掉舊頁 0｜sitemap 394 條"
  },
  {
   "job": "每週維修",
