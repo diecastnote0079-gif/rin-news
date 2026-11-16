@@ -1,18 +1,38 @@
 [
  {
+  "job": "生活記錄",
+  "ts": 1794860304,
+  "text": "今晚沒有。\n\n原因：昨晚（2026-11-16 04:15 +08 至 2026-11-17 04:15 +08）那段對話以親密內容為主，且有多處拒絕／收住的跡象（不行、好了、可以了、不欺負你了、我好了），按你指定的鐵則整晚直接跳過，不記任何一條。另外提醒你：對話裡面的親密內容不該寫進 fact_store，技能簿以外的地方也不該留（技能有明確說明），這也是我不摘錄的原因。環境上 sqlite3 不在 PATH，我用 python3 讀了同一張 messages 表，結果如上。"
+ },
+ {
+  "job": "duckx3 maintenance",
+  "ts": 1794859270,
+  "text": "清 0 筆（收件匣剩 112 筆，保留 7 天內與 status=new）；備份 pb_data-20261117-040054.tar.gz 231.1MB，data.db 與 storage 2480 個檔案都在裡面，~/backups 現有 6 份（未達 14 上限）。無 FAILED。"
+ },
+ {
   "job": "news ig story queue",
-  "ts": 1794852043,
+  "ts": 1794859251,
   "text": "佇列裡沒有適合這一輪的項目，跳過"
  },
  {
   "job": "news fb queue",
-  "ts": 1794852043,
+  "ts": 1794859251,
   "text": "佇列裡沒有適合這一輪的項目，跳過"
  },
  {
   "job": "news fb story queue",
-  "ts": 1794852043,
+  "ts": 1794859251,
   "text": "佇列裡沒有適合這一輪的項目，跳過"
+ },
+ {
+  "job": "pending review nightly",
+  "ts": 1794859210,
+  "text": "記忆寫入佇列處理完畢（cron 跑批，03:45 +08）：\n\n- 已落：3 筆（同一 batcg）— CeX App＝庫存變動主線（誤解商品目錄需修正）；專案條目增加 portal 8790；刪除 write_file 純流程條目\n- 棄：63 筆（20 個 json 中的重複／換句話說欄位，與背景審查已併合的內容重疊，不再重複落地）\n- 記憶水位：99%（2,196/2,200）— 超過 92%，順手合併 1–2 條同義條目的動作已規劃：目前庫存裡沒有可查證的同義條目，且已滿（2,196/2,200）無法再寫入，必須先釋空間\n- 邊緣單：model 路由 patch（fast＝hy4-flash-free 到 11 月底、write＝claude-haiku-5-5、deep＝gpt-6-luna）順上述 batcg 壓不進 2,200 字上限，留待下一輪釋空間後再補，不決定性推進。"
+ },
+ {
+  "job": "doc reconcile",
+  "ts": 1794858950,
+  "text": "【文件 vs 現況 對帳】\n • cex 排程不符：缺 ['0 10,13,16,19,22 * * *']；實際 ['0 10,12,14,16,18,20,22 * * *', '30 8 * * *']\n • 手機頁資料 5.9 小時前（上限 5）：2026-11-16T14:02:13Z\n • 本機最後一輪 5.9 小時前（20261116220043）"
  },
  {
   "job": "nightly reflection",
@@ -73,26 +93,6 @@
   "job": "product pages rebuild",
   "ts": 1794780043,
   "text": "頁面 393 個｜清掉舊頁 0｜sitemap 394 條"
- },
- {
-  "job": "生活記錄",
-  "ts": 1794774267,
-  "text": "I stopped retrying because I kept running tool_call 8 times without making progress. The last result above shows what blocked it. Tell me how you'd like to proceed, or send `continue` and I'll try a different approach."
- },
- {
-  "job": "duckx3 maintenance",
-  "ts": 1794772854,
-  "text": "清潔與備份都成功：\n\n- 收件匣移除 **0 筆**（現有 112 筆，7 天內與 status=new 全保留）\n- 備份 `pb_data-20261116-040045.tar.gz`，231.1MB，內含 data.db 與 storage 2480 個檔案（保留 14 份）\n- 無 FAILED"
- },
- {
-  "job": "pending review nightly",
-  "ts": 1794772796,
-  "text": "落了 3 條（手機開 Tailscale 接家裡一律 100.115.218.116；影片截圖必須本機 chromium 且無 video codec；美術偏二遊立繪＋藍橙塗色分區表達）。\n丟了 5 筆重複或無新訊息的整理建議（portal 8790 專案清單三份重複、英文客群／英文專頁 11-14 已定案、餘為舊 HTML→PNG/claude/PSD/卡價目錄的清理或重複描述）。\n目前記憶水位 99%（2,193/2,200 chars），已將重複的 HTML→PNG 細節併入新條目。"
- },
- {
-  "job": "doc reconcile",
-  "ts": 1794772542,
-  "text": "【文件 vs 現況 對帳】\n • 手機頁資料 5.9 小時前（上限 5）：2026-11-15T14:02:14Z\n • 本機最後一輪 5.9 小時前（20261115220043）"
  },
  {
   "job": "每週維修",
