@@ -1,23 +1,28 @@
 [
  {
+  "job": "今日新聞",
+  "ts": 1794830692,
+  "text": "_digest.json 已覆寫。\n\n📰 今天值得看的\n・異病偵探 Steam 同時上線破紀錄 官方公布後續\n・寵物 MMORPG《執筆山河誌》11/22 公測\n・キューティーハニー 變身型 1/12 樹脂雕像 登場\n・DeepSeek 算力告急 限流 7 日不支援\n・Samsung 加入 ShopeePay 馬來西亞\n・BLG 3:1 碾壓 GEN 奪 S16 世界冠軍\n🔥 今天在討論\n泰國 BL 劇粉刷新好幾個新企劃（Fool in Love EP12、Khemjira Forever EP3、Mr Fanboy Final EP、Bite Me），馬來西亞 PEBACA 音樂會熱，自由憑證與賭博連結也搶燈。\n\n寫檔：/home/rin/AI/news/digest.json — 日期 2026-11-16、6 條文章連結與 ts 來自 items.json，討論以概括句收尾。"
+ },
+ {
   "job": "news ig story queue",
-  "ts": 1794823244,
-  "text": "距上一則不到 240 分鐘（還差 1 分），這一輪跳過"
+  "ts": 1794830443,
+  "text": "佇列裡沒有適合這一輪的項目，跳過"
  },
  {
   "job": "news fb queue",
-  "ts": 1794823244,
+  "ts": 1794830443,
   "text": "佇列裡沒有適合這一輪的項目，跳過"
  },
  {
   "job": "news fb story queue",
-  "ts": 1794823244,
-  "text": "距上一則不到 240 分鐘（還差 31 分），這一輪跳過"
+  "ts": 1794830443,
+  "text": "佇列裡沒有適合這一輪的項目，跳過"
  },
  {
   "job": "cex 3h",
-  "ts": 1794816154,
-  "text": "健康檢查：20261116160043（範圍 web，77568 筆）\n  ✅ freshness  資料 0.0 小時前抓的\n  ✅ volume     筆數 77568（與上次 77541 差 0.03%）\n  ✅ schema     60 個欄位，與上次指紋一致\n  ✅ quality    77568 筆：主鍵無重複、標價與名稱完整\n  ✅ heartbeat  距上次抓取 3.0 小時（20261116130044 → 20261116160043）\n\n全部正常"
+  "ts": 1794826955,
+  "text": "健康檢查：20261116190043（範圍 web，77587 筆）\n  ✅ freshness  資料 0.0 小時前抓的\n  ✅ volume     筆數 77587（與上次 77568 差 0.02%）\n  ✅ schema     60 個欄位，與上次指紋一致\n  ✅ quality    77587 筆：主鍵無重複、標價與名稱完整\n  ✅ heartbeat  距上次抓取 3.0 小時（20261116160043 → 20261116190043）\n\n全部正常"
  },
  {
   "job": "記憶審計",
@@ -88,11 +93,6 @@
   "job": "nightly reflection",
   "ts": 1794756875,
   "text": "今天改了 4 個 skill、共 4 條：\n\n- **mobile-app-ui** 1 條 — 改版前先給你 2–3 個真實範本截圖（寫明借哪幾條、不抄哪幾條），你挑過才寫 CSS；視覺方向派 deep 拿方案，我只做實作與量測。\n- **hermes-runtime-ops** 1 條 — 「不准停」來自 `tool_use_enforcement`／`execution_guidance` 名單命中 deepseek；別動 config 開關，界線寫在 SOUL.md Hard constraints 最前面，且下一條對話才生效。\n- **rin-box-services** 1 條 — 你說「關電腦」就是他那台 Windows，不反問哪一台、不把 rin-box 列成選項。\n- **engineering-principles** 1 條 — 自我歸因要指得出數字或出處，指不出就說不知道，別遞一個聽起來合理的機制。"
- },
- {
-  "job": "今日新聞",
-  "ts": 1794744202,
-  "text": "📰 今天值得看的\n・《GTA6》上市前 每日送序號 超一萬組\n・義大利鼻噴劑或逆轉阿茲海默症記憶退化\n・訓練資料爭奪戰 平台付費請人拍影片餵AI\n・科技大廠連署要求黃仁勛復職 逾2萬人響應\n・機甲艦隊ダイラガーXV 等 3 款機械拟人化 恢復預訂\n・勒車 B10 運動版在馬來西亞上市\n\n🔥 今天在討論\n馬來西亞 X 熱搜：泰劇 BL 連續劇（Mr Fanboy 完結篇、KHEMJIRA、PIL 系列）與韓國偶像（BTS 賀詞、IVE、Starship、Jaehyun）佔多，馬國政局（Barisan Nasional、Pakatan Harapan、bersatu）、城市話題（Melaka、Ayer Keroh）與網球/足球（Portugal、Ronaldo）等話題也會上櫃。\n\n寫過 `/home/rin/AI/news/digest.json`（6 條，link 皆來自 items.json 原貼）。\n\n話說今天的熱搜裡，好幾個東西都不是什麼大事件，就是大會呼吸感——BL 劇跟 K 系的出現頻率愈來愈穩，政局俚語也很自然。阿夜今天要不要重點追 `訓練資料爭奪戰` 那條？對他那邊的跑跑來說，這塊其實比遊戲序號還有意思。"
  },
  {
   "job": "每週維修",
