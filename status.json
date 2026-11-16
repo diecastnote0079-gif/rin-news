@@ -1,19 +1,19 @@
 {
- "updated": 1794780043,
+ "updated": 1794787243,
  "quota": {
-  "rolling": 94,
-  "weekly": 42,
-  "monthly": 18,
-  "reset_rolling": "3h 49m",
-  "reset_weekly": "1h 59m",
-  "reset_monthly": "1d 19h"
+  "rolling": 86,
+  "weekly": 100,
+  "monthly": 16,
+  "reset_rolling": "1h 49m",
+  "reset_weekly": "6d 23h",
+  "reset_monthly": "1d 17h"
  },
  "host": {
-  "load": 0.69,
+  "load": 0.33,
   "mem_pct": 19,
   "disk_pct": 9,
   "disk_free_gb": 392,
-  "uptime_h": 267
+  "uptime_h": 269
  },
  "memory": {
   "memory": {
@@ -28,7 +28,7 @@
   }
  },
  "cron": {
-  "enabled": 40,
+  "enabled": 41,
   "failed": 0,
   "failed_names": []
  },
@@ -42,6 +42,11 @@
    "name": "BF 遊戲掃描",
    "date": "11/20",
    "days": 4
+  },
+  {
+   "name": "reminder urban republic sale",
+   "date": "11/25",
+   "days": 9
   },
   {
    "name": "MRT 月卡續期",
