@@ -17,7 +17,7 @@ import os
 import sys
 from datetime import datetime, timezone
 
-OUT = r"D:\AI\news"
+OUT = os.path.expanduser("~/AI/news")
 PATH = os.path.join(OUT, "curated.json")
 CATS = {"game", "tech", "ai", "toy", "hype", "local", "image", "pipeline", "hermes"}
 

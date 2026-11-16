@@ -78,5 +78,15 @@
   "img": "",
   "ts": 1793691959,
   "date": "11-03 15:45"
+ },
+ {
+  "title": "kaiHEN 開源釋出：Switch 2 首個公開自製程式環境",
+  "link": "https://onejailbreak.com/blog/kaihen-released-as-switch-2-homebrew-environment/",
+  "source": "ONE Jailbreak",
+  "cat": "game",
+  "summary": "kurumuz 在 GitHub 公開 kaiHEN（GPL-2.0，107 星），含 libnx 相容的 libounce 與 OunceVK，Switch 1 自製程式可幾乎不用改就編到 Switch 2；仍需 SmileBASIC 4 或文明帝國 7 的遊戲漏洞當入口。",
+  "img": "",
+  "ts": 1794638512,
+  "date": "11-14 14:41"
  }
 ]

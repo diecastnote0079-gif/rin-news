@@ -1,19 +1,19 @@
 {
- "updated": 1794801643,
+ "updated": 1794808842,
  "quota": {
   "rolling": 100,
   "weekly": 100,
   "monthly": 16,
-  "reset_rolling": "3h 20m",
-  "reset_weekly": "6d 19h",
-  "reset_monthly": "1d 13h"
+  "reset_rolling": "1h 20m",
+  "reset_weekly": "6d 17h",
+  "reset_monthly": "1d 11h"
  },
  "host": {
-  "load": 0.08,
-  "mem_pct": 18,
+  "load": 0.4,
+  "mem_pct": 19,
   "disk_pct": 9,
   "disk_free_gb": 392,
-  "uptime_h": 273
+  "uptime_h": 275
  },
  "memory": {
   "memory": {
@@ -51,7 +51,7 @@
   {
    "name": "MRT 月卡續期",
    "date": "11/29",
-   "days": 13
+   "days": 12
   }
  ]
 }

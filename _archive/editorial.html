@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0C0B0A">
+<title>早報</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600;900&family=Noto+Sans+TC:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0C0B0A; --ink:#EDE9E3; --body:#DDD8D0; --mid:#B5AEA3; --dim:#7E776C;
+    --rule:rgba(237,233,227,.13); --red:#E2503C;
+    --serif:"Noto Serif TC","Songti TC",serif;
+    --sans:"Noto Sans TC",-apple-system,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+  body{background:var(--bg);color:var(--ink);font-family:var(--sans);
+       max-width:560px;margin:0 auto;padding-bottom:env(safe-area-inset-bottom)}
+  .top{position:sticky;top:0;z-index:9;background:rgba(12,11,10,.94);
+       backdrop-filter:saturate(1.2) blur(14px);padding:8px 20px 0;border-bottom:1px solid var(--rule)}
+  .row1{display:flex;align-items:baseline;justify-content:space-between}
+  .logo{font-family:var(--serif);font-size:29px;font-weight:900;letter-spacing:.14em}
+  .logo em{font-style:normal;color:var(--red)}
+  .date{font-size:10px;letter-spacing:.1em;color:var(--dim)}
+  .dual{height:3px;border-top:1px solid rgba(237,233,227,.55);border-bottom:1px solid rgba(237,233,227,.2);margin-top:8px}
+  .cats{display:flex;gap:16px;overflow-x:auto;padding:10px 0 11px;font-size:11px;letter-spacing:.14em;
+        color:var(--dim);scrollbar-width:none}
+  .cats::-webkit-scrollbar{display:none}
+  .cats button{background:none;border:0;color:inherit;font:inherit;letter-spacing:inherit;padding:4px 0;white-space:nowrap}
+  .cats button.on{color:var(--red);font-weight:600}
+  main{padding:0 20px}
+  .lead{padding-top:18px}
+  .kicker{font-size:10px;letter-spacing:.24em;color:var(--red)}
+  .lead h1{font-family:var(--serif);font-size:27px;font-weight:900;line-height:1.4;letter-spacing:-.2px;margin-top:8px}
+  a{color:inherit;text-decoration:none}
+  .lead .dek{font-family:var(--serif);font-size:13px;line-height:1.8;color:var(--mid);margin-top:10px;
+             display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+  .byline{display:flex;gap:10px;font-size:10px;letter-spacing:.08em;color:var(--dim);
+          margin-top:12px;padding-bottom:13px;border-bottom:1px solid var(--rule)}
+  .label{font-size:10px;letter-spacing:.24em;color:var(--dim);padding:16px 0 8px;
+         display:flex;justify-content:space-between;align-items:baseline}
+  .label b{color:var(--red);font-weight:600;letter-spacing:.24em}
+  .item{display:flex;gap:12px;padding:13px 0;border-bottom:1px solid var(--rule)}
+  .num{font-family:var(--serif);font-size:11px;color:var(--red);min-width:16px;padding-top:3px}
+  .item .t{font-family:var(--serif);font-size:15px;font-weight:600;line-height:1.62}
+  .item .m{font-size:10px;color:var(--dim);margin-top:4px;letter-spacing:.06em}
+  .empty{padding:60px 0;text-align:center;color:var(--dim);font-size:13px;line-height:1.9}
+  footer{padding:22px 20px 30px;border-top:1px solid var(--rule);margin-top:20px;
+         font-size:10px;letter-spacing:.18em;color:var(--dim);text-align:center}
+</style>
+</head>
+<body>
+<div class="top">
+  <div class="row1"><div class="logo">早<em>報</em></div><div class="date" id="date"></div></div>
+  <div class="dual"></div>
+  <div class="cats" id="cats"></div>
+</div>
+<main id="main"><div class="empty">載入中…</div></main>
+<footer id="foot">—</footer>
+
+<script>
+let ALL = [], PICKS = [], CATS = [], cur = "all";
+
+const esc = s => String(s == null ? "" : s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const catName = c => (CATS.find(x => x[0] === c) || [, "新聞"])[1];
+
+function draw(){
+  const inCat = d => cur === "all" || d.cat === cur;
+  const picks = PICKS.filter(inCat);
+  const main = document.getElementById("main");
+
+  let lead = picks[0];
+  let rest = [];
+  if(lead){
+    rest = ALL.filter(d => inCat(d) && d.link !== lead.link);
+  }else{
+    const items = ALL.filter(inCat);
+    if(!items.length){ main.innerHTML = '<div class="empty">這個分類今天還沒有東西。</div>'; return; }
+    lead = items[0]; rest = items.slice(1);
+  }
+
+  let h = '<section class="lead">'
+        + '<div class="kicker">' + (picks.length ? "頭條" : "最新") + ' · ' + esc(catName(lead.cat)) + '</div>'
+        + '<h1><a href="' + esc(lead.link) + '" target="_blank" rel="noopener">' + esc(lead.title) + '</a></h1>';
+  if(lead.summary) h += '<div class="dek">' + esc(lead.summary) + '</div>';
+  h += '<div class="byline"><span>' + esc(lead.source) + '</span><span>' + esc(lead.date) + '</span></div></section>';
+
+  const more = picks.slice(1, 4);
+  if(more.length){
+    h += '<div class="label"><b>編輯精選</b><span>' + more.length + ' 則</span></div>';
+    more.forEach((d, i) => {
+      h += '<article class="item"><div class="num">0' + (i + 2) + '</div><div>'
+         + '<div class="t"><a href="' + esc(d.link) + '" target="_blank" rel="noopener">' + esc(d.title) + '</a></div>'
+         + '<div class="m">' + esc(d.source) + ' · ' + esc(d.date) + '</div></div></article>';
+    });
+  }
+
+  h += '<div class="label"><b>最新</b><span>' + rest.length + ' 則</span></div>';
+  rest.slice(0, 60).forEach((d, i) => {
+    h += '<article class="item"><div class="num">' + String(i + 1).padStart(2, "0") + '</div><div>'
+       + '<div class="t"><a href="' + esc(d.link) + '" target="_blank" rel="noopener">' + esc(d.title) + '</a></div>'
+       + '<div class="m">' + esc(d.source) + ' · ' + esc(d.date) + '</div></div></article>';
+  });
+  main.innerHTML = h;
+  document.getElementById("foot").textContent = "手指往下滑";
+}
+
+function drawCats(){
+  const box = document.getElementById("cats");
+  box.innerHTML = CATS.map(([k, v]) =>
+    '<button data-k="' + k + '" class="' + (k === cur ? "on" : "") + '">' + esc(v) + '</button>').join("");
+  box.querySelectorAll("button").forEach(b => b.onclick = () => { cur = b.dataset.k; drawCats(); draw(); window.scrollTo(0, 0); });
+}
+
+async function boot(){
+  try{
+    const r = await fetch("items.json?t=" + Date.now(), {cache: "no-store"});
+    const j = await r.json();
+    ALL = (j.items || []).slice().sort((a, b) => (b.ts || 0) - (a.ts || 0));
+    PICKS = (j.picks || []).slice().sort((a, b) => (b.score || 0) - (a.score || 0));
+    CATS = j.cats || [["all", "全部"]];
+    document.getElementById("date").textContent = new Date().toLocaleDateString("zh-TW",
+      {year: "numeric", month: "2-digit", day: "2-digit", weekday: "short"});
+    drawCats(); draw();
+  }catch(e){
+    document.getElementById("main").innerHTML = '<div class="empty">沒連上網路，或資料還沒產生。<br>' + esc(e.message) + '</div>';
+  }
+}
+boot();
+</script>
+</body>
+</html>

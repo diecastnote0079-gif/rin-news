@@ -45,6 +45,10 @@ SOURCE_TRUST = {
     "電撃Hobby": 0.62,
     "Hypebeast": 0.5,     # 炒賣／限量／聯名（中文）；但 8 成是球鞋時裝，不是他的收藏範圍
     "ToyArk": 0.6,        # 英文玩具新聞
+    # 2026-11-05 新增三源（英文，靠 fetch 階段的關鍵詞門檻先篩過）
+    "Hacker News": 0.85,      # 工程師圈的實作討論，雜訊是人為話題
+    "arXiv": 0.8,             # 論文標題準確但「能不能動手」要看內容
+    "GitHub Trending": 0.9,   # 直接是新專案，他最想要的那一類
 }
 DEFAULT_TRUST = 0.5
 RELEASE_SOURCES = {"Hermes", "ComfyUI"}
