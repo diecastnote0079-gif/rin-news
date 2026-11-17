@@ -1,5 +1,45 @@
 [
  {
+  "job": "cex 2h",
+  "ts": 1794880963,
+  "text": "健康檢查：20261117100051（範圍 web，77602 筆）\n  ✅ freshness  資料 0.0 小時前抓的\n  ✅ volume     筆數 77602（與上次 77602 差 0.00%）\n  ✅ schema     60 個欄位，與上次指紋一致\n  ✅ quality    77602 筆：主鍵無重複、標價與名稱完整\n  ✅ heartbeat  距上次抓取 1.5 小時（20261117083051 → 20261117100051）\n\n全部正常"
+ },
+ {
+  "job": "news ig story queue",
+  "ts": 1794880851,
+  "text": "佇列裡沒有適合這一輪的項目，跳過"
+ },
+ {
+  "job": "news fb queue",
+  "ts": 1794880851,
+  "text": "佇列裡沒有適合這一輪的項目，跳過"
+ },
+ {
+  "job": "news fb story queue",
+  "ts": 1794880851,
+  "text": "佇列裡沒有適合這一輪的項目，跳過"
+ },
+ {
+  "job": "SNKRDUNK 卡價",
+  "ts": 1794877258,
+  "text": "SNKRDUNK 變化\n📈 3rd Anniversary Set — ENGLISH\n   在售 56 → 62 件\n   最低在售 ¥63,350 → ¥62,500\n📈 3rd Anniversary Set — CHINA\n   在售 57 → 58 件\n   最低在售 ¥42,000 → ¥41,500\n📈 Luffy SEC-RSP OP13-118\n   PSA10 ¥3,150,000 → ¥3,130,000\n📈 Luffy SEC-SP EB04-061\n   A ¥1,430,000 → ¥1,370,000\n   PSA10 ¥1,835,000 → ¥1,750,000"
+ },
+ {
+  "job": "CeX 早安",
+  "ts": 1794876945,
+  "text": "昨天 CeX 的動靜：\n\n🆕 新上架\n・It Takes Two（Switch 2）RM210\n・Fading Afternoon - Uncensored（Switch）RM160\n\n📉 降價\n・Coraline（Wii）RM370 → RM350\n・Legend of Legacy, The（3DS）RM140 → RM120\n・Just Dance 3: Special Edition（Wii）RM50 → RM30\n・Shin Megami Tensei IV: Apocalypse（3DS）RM220 → RM210\n・Detective Pikachu（3DS）RM180 → RM170\n・Persona Q: Shadow of the Labyrinth（3DS）RM150 → RM140\n\n📦 回架\n・Switch《Switch Console, 64GB OLED Legend of Zelda + Gold Joy-Con, Unboxed》\n・Switch 2《It Takes Two》\n・PS5《Metal Gear Solid: Master Collection Vol. 1》\n・PS4《EA Sports FC 27》\n・PS4《Mass Effect: Legendary Edition (2 Disc)》\n・PS4《Harvest Moon: The Winds of Anthos》\n\n🚫 賣光\n・PS4《Call of Duty: Vanguard (No DLC)》\n・PS5《Spirit Hunter: Death Mark II》\n・Switch《Human Fall Flat: Anniversary Edition》\n・Switch《Bendy & The Ink Machine》\n・PS3《FIFA 18》\n・Xbox《Forza Horizon 3》"
+ },
+ {
+  "job": "cex 0830",
+  "ts": 1794875565,
+  "text": "健康檢查：20261117083051（範圍 web，77602 筆）\n  ✅ freshness  資料 0.0 小時前抓的\n  ✅ volume     筆數 77602（與上次 77602 差 0.00%）\n  ✅ schema     60 個欄位，與上次指紋一致\n  ✅ quality    77602 筆：主鍵無重複、標價與名稱完整\n  ✅ heartbeat  距上次抓取 10.5 小時（20261116220043 → 20261117083051）\n\n全部正常"
+ },
+ {
+  "job": "kl daily brief",
+  "ts": 1794875484,
+  "text": "☀️ 今日 11/17 (Tue)\n\n天氣：24–29°C，最高降雨機率 100%\n　降雨時段：10:00（52%）、11:00（67%）、12:00（80%）、13:00（92%）、14:00（100%）、15:00（100%）\n\nMid Valley 本週活動（5 項）\n・ITSU Roadshow — Centre Court (CC), Lower Ground Floor\n　16 Nov - 22 Nov 2026\n・MyBeauty & Cosmetics Expo — Atrium, Mid Valley Exhibition Centre (MVEC), Third Floor, Centre Court\n　19 Nov - 22 Nov 2026\n・CelcomDigi Pop Up — East Atrium (EEA), Ground Floor\n　16 Nov - 22 Nov 2026\n・Glad 2 Glow by Watsons — North Court (NC), Ground Floor\n　16 Nov - 22 Nov 2026\n\n雪隆活動（未來 14 天，命中興趣 1 項）\n・11/27 Resilience by Design: Are You Scaling AI or Scal\n　The Ruma Hotel and Residences\n\n電子／玩具優惠\n・Harvey Norman Malaysia Big Savings Sale on Electrica\n　11-17→11-18　Unbeatable Prices\n・ALL IT Hypermarket Malaysia 11.11 Promotion – Enjoy \n　11-05→11-20\n・PC Image Hypershell Malaysia: 11.11 Exclusive Sale –\n　11-05→11-20\n・TBM Malaysia Axtra Dreams Monthly Home Consultation \n　11-15→11-21　All TBM Outlets\n・Harvey Norman Malaysia Black Friday Early Deals Sale\n　11-21→11-22\n・LG Year-End Home Fest 2026: Discover Exclusive LG Su\n　11-19→11-22　Pavilion Bukit Jalil\n\n大型活動（會展／體育館）\n・11-22 My Art My Story Book Launching\n　Tsutaya Books Bukit Jalil\n・11-27 Sustianaboleh Lifestyle & Food Festival\n　The C"
+ },
+ {
   "job": "ai research push",
   "ts": 1794874261,
   "text": "⚡ **建議動手**\n・更新 Hermes 到 v0.23.2（執行 `hermes update`，約 5 分鐘）—— 11/16 補丁修掉「Telegram 串流中斷後冒出重複回覆」（PR #156546），你每天在 Telegram 上用，這個會有感；同一版還提供 cron 每個 job 的 `wrap_response`、每次執行都開新 thread 的選項。想跑就說一聲，我不會自己動。\n・今天只有這一件。"
@@ -8,21 +48,6 @@
   "job": "AI 工具日報",
   "ts": 1794873728,
   "text": "⚡ **建議動手**\n・更新 Hermes 到 v0.23.2（執行 `hermes update`，約 5 分鐘）—— 11/16 補丁修掉「Telegram 串流中斷後冒出重複回覆」（PR #156546），你每天在 Telegram 上用，這個會有感；同一版還提供 cron 每個 job 的 `wrap_response`、每次執行都開新 thread 的選項。想跑就說一聲，我不會自己動。\n・今天只有這一件。\n\n**第一節｜AI 工具**\n\n**OpenCode v2.3.0（11/13）**\n1. 子代理改成預設在背景執行（回傳後繼續跑、空閒時回報），TUI 把每次工具呼叫與思考收成一行可折疊的活動列。\n2. 我們只在 opencode-go 這層使用它，Hermes 本身自己管理子代理，所以主線沒有變化；你哪天直接開 OpenCode CLI 跑長任務，才會有感。\n3. 觀察就好。\n\n**Claude Code 2.1.326**\n1. 一批串流與權限提示的雜問題修正（例如把刪檔指令誤記成搜尋、`/rewind` 還原不完整），Code Mode 可與 agent teams 同時開。\n2. 我們沒在用它的 CLI，這些修復對現有流程沒有影響。\n3. 不用管。\n\n**新開源模型（r/LocalLLaMA，11/14–16）**\n1. 社群在比較 Qwen3.8-Flash-Next 與 GLM-5.3-Flash 誰好答，另有 Hy4 只放話、權重還沒放出來。\n2. 模型路線固定不動，換了也沒有收益；而且這種「誰比較強」的說法多半來自個人體感，沒有可靠的實測。\n3. 觀察就好。\n\n**LongCat-Video-Avatar 1.6（11/15 開源）**\n1. 音訊驅動的人物影片生成模型，主打嘴型與音訊同步、長片段人物一致性。\n2. 這個量級在 8GB 的 3070 Ti 上跑不動，Anima 生圖那條路完全不受影響。\n3. 不用管。\n\n**第二節｜🔧 新奇專案**\n\n**terminactory**（GitLab／snipedbywifi，Rust + ratatui）\n1. 在終端機裡跑的放置型工廠遊戲，蓋產線、看收益、有假論壇和科技樹。\n2. 玩法是「等 agent 跑長任務時的消遣」：作者把 Claude Code hooks 接上，agent 的回覆會變成遊戲裡的「電報」，邊等邊收菜。\n\n**CheeseDB**（github.com/govinargo-labs/cheesedb，純標準庫 Go）\n1. agent 記憶庫，每條記憶都綁定來源，撤回一個爛來源時「它教過的東西」也一起消失。\n2. 一般記憶庫刪了來源，模型還是照著錯的答案走；它把溯源做成一條規則，連磁碟上的文字都抹掉，概念乾淨得少見。\n\n**Carton Clock**（"
- },
- {
-  "job": "news ig story queue",
-  "ts": 1794873651,
-  "text": "佇列裡沒有適合這一輪的項目，跳過"
- },
- {
-  "job": "news fb queue",
-  "ts": 1794873651,
-  "text": "佇列裡沒有適合這一輪的項目，跳過"
- },
- {
-  "job": "news fb story queue",
-  "ts": 1794873651,
-  "text": "佇列裡沒有適合這一輪的項目，跳過"
  },
  {
   "job": "product pages rebuild",
@@ -55,11 +80,6 @@
   "text": "今天改了 2 個 skill、共 4 條（rin-portal-ui 3 條，engineering-principles 1 條；portal-mobile-page-track 順手把跟 rin-portal-ui 打架的舊預設改成同一條）：\n\n- **rin-portal-ui**：iPad Pro 12.9 橫向 CSS viewport 是 1366×1024，不是 1280×800；平板斷點上限改 1399px，否則橫放 iPad 漏回桌機樣式，尺寸一律實測不引機型規格。\n- **rin-portal-ui**：「最上面這行」＝外殼導覽列（凜／系統／新聞＋時鐘），子頁 topbar 只有截圖劃掉才動。\n- **rin-portal-ui**：退回一次只退一層，第二步用他截圖的可見特徵在備份上逐項核對再覆蓋。\n- **engineering-principles**：給他的每個連結自己先打一次看到 200，`git remote -v` 不等於線上 repo 還在。"
  },
  {
-  "job": "cex 2h",
-  "ts": 1794837755,
-  "text": "健康檢查：20261116220043（範圍 web，77602 筆）\n  ✅ freshness  資料 0.0 小時前抓的\n  ✅ volume     筆數 77602（與上次 77596 差 0.01%）\n  ✅ schema     60 個欄位，與上次指紋一致\n  ✅ quality    77602 筆：主鍵無重複、標價與名稱完整\n  ✅ heartbeat  距上次抓取 1.2 小時（20261116204859 → 20261116220043）\n\n全部正常"
- },
- {
   "job": "今日新聞",
   "ts": 1794830692,
   "text": "_digest.json 已覆寫。\n\n📰 今天值得看的\n・異病偵探 Steam 同時上線破紀錄 官方公布後續\n・寵物 MMORPG《執筆山河誌》11/22 公測\n・キューティーハニー 變身型 1/12 樹脂雕像 登場\n・DeepSeek 算力告急 限流 7 日不支援\n・Samsung 加入 ShopeePay 馬來西亞\n・BLG 3:1 碾壓 GEN 奪 S16 世界冠軍\n🔥 今天在討論\n泰國 BL 劇粉刷新好幾個新企劃（Fool in Love EP12、Khemjira Forever EP3、Mr Fanboy Final EP、Bite Me），馬來西亞 PEBACA 音樂會熱，自由憑證與賭博連結也搶燈。\n\n寫檔：/home/rin/AI/news/digest.json — 日期 2026-11-16、6 條文章連結與 ts 來自 items.json，討論以概括句收尾。"
@@ -68,26 +88,6 @@
   "job": "記憶審計",
   "ts": 1794790946,
   "text": "記憶審計報告（未改動任何檔案，僅讀取）\n\n1. 記憶水位｜~/.hermes/memories/MEMORY.md：2193/2200 字 = **99.7%**（上限 2200，config `memory_char_limit`）— 幾乎寫滿，建議收尾後併入下一筆\n2. 記憶水位｜~/.hermes/memories/USER.md：1294/1375 字 = **94.1%**（上限 1375，`user_char_limit`）— 過齊，暫無垃圾\n3. 重複條目｜MEMORY.md：乾淨（逐條逐條比對，無同文複製）\n4. 重複條目｜USER.md：乾淨（無與 MEMORY.md 或自身重疊項）\n5. 矛盾／過期指引｜MEMORY.md：乾淨—「兩台主機：rin-box ＋ Windows desktop-akpf18q」只在一處，未出現「Windows＝主機 + Linux」的矛盾，也未見 Letta、D:\\AI、舊 cron id、Windows gateway 記載\n6. 矛盾／過期指引｜USER.md：乾淨—同上，無相關過期或矛盾指引\n7. ops 指引旧路徑｜reference/ops/MEMORY.md index：乾淨—只列 active-tasks／lhdn-tax-index／handoff／gate-framework／machine-migration／hermes-settings 六項，全為目前有效檔\n8. ops 歷史殘留｜post-reset-install.md 的 `D:\\AI` 不動、memory-provider.md 的 `D:\\AI\\_backup\\mnemo-enable.log`、active-tasks.md 的「舊的 longcat 是 Letta 時代設定」——均已標記為歷史記錄，不是活躍指引；建議下次整理時改名或移進 attic，免被誤作活路徑\n9. ops 能動指引｜無過期 Windows gateway 指引、無 Letta 路由、無舊 cron job id（cron-ops.md 已寫「舊的 Letta cron 已作廢」且列出現行 6 個 job）— 乾淨\n\n結論：**兩份記憶本體乾淨；ops/ index 也乾淨；唯 operations 資料夾中仍有幾份標為歷史的殘留（D:\\AI、Letta 年代），不影響現行路由，待決處理即可。**"
- },
- {
-  "job": "SNKRDUNK 卡價",
-  "ts": 1794790849,
-  "text": "SNKRDUNK 變化\n📈 3rd Anniversary Set — ENGLISH\n   在售 54 → 56 件\n   最低在售 ¥63,499 → ¥63,350\n📈 3rd Anniversary Set — CHINA\n   在售 56 → 57 件\n   最低在售 ¥42,900 → ¥42,000\n📈 Luffy SEC-SP EB04-061\n   PSA10 ¥1,798,000 → ¥1,835,000"
- },
- {
-  "job": "CeX 早安",
-  "ts": 1794790138,
-  "text": "昨天 CeX 的動靜：\n\n🆕 新上架\n・Call of Duty: Modern Warfare 2 (2022)（PS4）\n・Sonic Racing: Crossworlds（PS5）\n・Astroneer（PS4）\n・Hello Neighbor: Hide & Seek（PS4）\n・Cabela's The Hunt: Championship Edition（Switch）\n・World Of Final Fantasy（Switch）\n\n📦 回架\n・New 3DS XL Console, Pikachu Edition, Discounted（3DS）\n・Nintendo Amiibo Super Smash Bros. Pac-Man Figure（Switch）\n\n🚫 賣光\n・PS5 Digital Edition Console, 825GB, White, Unboxed（PS5）\n・Silent Hill: Book of Memories（PS Vita）\n・Rock Band 4（PS4）\n・Digimon Story: Time Stranger（Switch）\n・Valve Steam Controller 2nd Gen (1011) w/Puck, A（PC）\n・Official Nintendo Wii Zapper（Wii）\n\n備考：昨天的價格變動（降價）在遊戲／主機／配件這一欄基本上沒有值得列的，134 筆「降價」全是電池供應器，跟玩具店無關，沒列。新上架那欄的 2198 筆變動裡也有電池套、記憶卡、電腦配件，已依遊戲／主機／稀有配件過濾；價格欄「RM」因資料庫沒有這欄，無法補上，只有分類和名稱。"
- },
- {
-  "job": "cex 0830",
-  "ts": 1794789155,
-  "text": "健康檢查：20261116083043（範圍 web，77533 筆）\n  ✅ freshness  資料 0.0 小時前抓的\n  ✅ volume     筆數 77533（與上次 77533 差 0.00%）\n  ✅ schema     60 個欄位，與上次指紋一致\n  ✅ quality    77533 筆：主鍵無重複、標價與名稱完整\n  ✅ heartbeat  距上次抓取 10.5 小時（20261115220043 → 20261116083043）\n\n全部正常"
- },
- {
-  "job": "kl daily brief",
-  "ts": 1794789075,
-  "text": "☀️ 今日 11/16 (Mon)\n\n天氣：24–32°C，最高降雨機率 100%\n　降雨時段：12:00（51%）、13:00（79%）、14:00（100%）、15:00（100%）、16:00（100%）、17:00（100%）\n\nMid Valley 本週活動（5 項）\n・MyBeauty & Cosmetics Expo — Atrium, Mid Valley Exhibition Centre (MVEC), Third Floor, Centre Court\n　19 Nov - 22 Nov 2026\n・CelcomDigi Pop Up — East Atrium (EEA), Ground Floor\n　16 Nov - 22 Nov 2026\n・Glad 2 Glow by Watsons — North Court (NC), Ground Floor\n　16 Nov - 22 Nov 2026\n・ITSU Roadshow — Centre Court (CC), Ground Floor\n　16 Nov - 22 Nov 2026\n\n雪隆活動（未來 14 天，命中興趣 1 項）\n・11/27 Resilience by Design: Are You Scaling AI or Scal\n　The Ruma Hotel and Residences\n\n電子／玩具優惠\n・Giant Malaysia Bandar Kinrara Electrical Appliances \n　11-16　Giant\n・Amazfit Malaysia First Kiosk Grand Opening Sale\n　11-14→11-16\n・Viewnet 11.11 Monitor Sale – Save Up to RM590 on ROG\n　11-10→11-16　Plaza Low Yat Kuala Lump\n・Epson EcoTank 11.11 Sale: Save Up to 31%, Enjoy Free\n　11-10→11-16\n・Toys”R”Us Malaysia FREE SHIPPING Promotion – Enjoy F\n　11-07→11-16　Toys”R”Us Malaysia\n・Harvey Norman Malaysia Big Savings Sale on Electrica\n　11-16→11-18　Unbeatable Prices\n\n大型活動（會展／體育館）\n・11-22 My Art My Story Book Launching\n　Tsutaya Books Bukit Jalil\n・11-27 Resilience by Design: Are You Scaling AI or \n　Th"
  },
  {
   "job": "kl mall refresh",
