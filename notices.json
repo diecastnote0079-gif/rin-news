@@ -1,23 +1,33 @@
 [
  {
+  "job": "ai research push",
+  "ts": 1794874261,
+  "text": "⚡ **建議動手**\n・更新 Hermes 到 v0.23.2（執行 `hermes update`，約 5 分鐘）—— 11/16 補丁修掉「Telegram 串流中斷後冒出重複回覆」（PR #156546），你每天在 Telegram 上用，這個會有感；同一版還提供 cron 每個 job 的 `wrap_response`、每次執行都開新 thread 的選項。想跑就說一聲，我不會自己動。\n・今天只有這一件。"
+ },
+ {
+  "job": "AI 工具日報",
+  "ts": 1794873728,
+  "text": "⚡ **建議動手**\n・更新 Hermes 到 v0.23.2（執行 `hermes update`，約 5 分鐘）—— 11/16 補丁修掉「Telegram 串流中斷後冒出重複回覆」（PR #156546），你每天在 Telegram 上用，這個會有感；同一版還提供 cron 每個 job 的 `wrap_response`、每次執行都開新 thread 的選項。想跑就說一聲，我不會自己動。\n・今天只有這一件。\n\n**第一節｜AI 工具**\n\n**OpenCode v2.3.0（11/13）**\n1. 子代理改成預設在背景執行（回傳後繼續跑、空閒時回報），TUI 把每次工具呼叫與思考收成一行可折疊的活動列。\n2. 我們只在 opencode-go 這層使用它，Hermes 本身自己管理子代理，所以主線沒有變化；你哪天直接開 OpenCode CLI 跑長任務，才會有感。\n3. 觀察就好。\n\n**Claude Code 2.1.326**\n1. 一批串流與權限提示的雜問題修正（例如把刪檔指令誤記成搜尋、`/rewind` 還原不完整），Code Mode 可與 agent teams 同時開。\n2. 我們沒在用它的 CLI，這些修復對現有流程沒有影響。\n3. 不用管。\n\n**新開源模型（r/LocalLLaMA，11/14–16）**\n1. 社群在比較 Qwen3.8-Flash-Next 與 GLM-5.3-Flash 誰好答，另有 Hy4 只放話、權重還沒放出來。\n2. 模型路線固定不動，換了也沒有收益；而且這種「誰比較強」的說法多半來自個人體感，沒有可靠的實測。\n3. 觀察就好。\n\n**LongCat-Video-Avatar 1.6（11/15 開源）**\n1. 音訊驅動的人物影片生成模型，主打嘴型與音訊同步、長片段人物一致性。\n2. 這個量級在 8GB 的 3070 Ti 上跑不動，Anima 生圖那條路完全不受影響。\n3. 不用管。\n\n**第二節｜🔧 新奇專案**\n\n**terminactory**（GitLab／snipedbywifi，Rust + ratatui）\n1. 在終端機裡跑的放置型工廠遊戲，蓋產線、看收益、有假論壇和科技樹。\n2. 玩法是「等 agent 跑長任務時的消遣」：作者把 Claude Code hooks 接上，agent 的回覆會變成遊戲裡的「電報」，邊等邊收菜。\n\n**CheeseDB**（github.com/govinargo-labs/cheesedb，純標準庫 Go）\n1. agent 記憶庫，每條記憶都綁定來源，撤回一個爛來源時「它教過的東西」也一起消失。\n2. 一般記憶庫刪了來源，模型還是照著錯的答案走；它把溯源做成一條規則，連磁碟上的文字都抹掉，概念乾淨得少見。\n\n**Carton Clock**（"
+ },
+ {
   "job": "news ig story queue",
-  "ts": 1794866451,
+  "ts": 1794873651,
+  "text": "佇列裡沒有適合這一輪的項目，跳過"
+ },
+ {
+  "job": "news fb queue",
+  "ts": 1794873651,
+  "text": "佇列裡沒有適合這一輪的項目，跳過"
+ },
+ {
+  "job": "news fb story queue",
+  "ts": 1794873651,
   "text": "佇列裡沒有適合這一輪的項目，跳過"
  },
  {
   "job": "product pages rebuild",
   "ts": 1794866451,
   "text": "頁面 393 個｜清掉舊頁 0｜sitemap 394 條"
- },
- {
-  "job": "news fb queue",
-  "ts": 1794866451,
-  "text": "佇列裡沒有適合這一輪的項目，跳過"
- },
- {
-  "job": "news fb story queue",
-  "ts": 1794866451,
-  "text": "佇列裡沒有適合這一輪的項目，跳過"
  },
  {
   "job": "生活記錄",
@@ -78,16 +88,6 @@
   "job": "kl daily brief",
   "ts": 1794789075,
   "text": "☀️ 今日 11/16 (Mon)\n\n天氣：24–32°C，最高降雨機率 100%\n　降雨時段：12:00（51%）、13:00（79%）、14:00（100%）、15:00（100%）、16:00（100%）、17:00（100%）\n\nMid Valley 本週活動（5 項）\n・MyBeauty & Cosmetics Expo — Atrium, Mid Valley Exhibition Centre (MVEC), Third Floor, Centre Court\n　19 Nov - 22 Nov 2026\n・CelcomDigi Pop Up — East Atrium (EEA), Ground Floor\n　16 Nov - 22 Nov 2026\n・Glad 2 Glow by Watsons — North Court (NC), Ground Floor\n　16 Nov - 22 Nov 2026\n・ITSU Roadshow — Centre Court (CC), Ground Floor\n　16 Nov - 22 Nov 2026\n\n雪隆活動（未來 14 天，命中興趣 1 項）\n・11/27 Resilience by Design: Are You Scaling AI or Scal\n　The Ruma Hotel and Residences\n\n電子／玩具優惠\n・Giant Malaysia Bandar Kinrara Electrical Appliances \n　11-16　Giant\n・Amazfit Malaysia First Kiosk Grand Opening Sale\n　11-14→11-16\n・Viewnet 11.11 Monitor Sale – Save Up to RM590 on ROG\n　11-10→11-16　Plaza Low Yat Kuala Lump\n・Epson EcoTank 11.11 Sale: Save Up to 31%, Enjoy Free\n　11-10→11-16\n・Toys”R”Us Malaysia FREE SHIPPING Promotion – Enjoy F\n　11-07→11-16　Toys”R”Us Malaysia\n・Harvey Norman Malaysia Big Savings Sale on Electrica\n　11-16→11-18　Unbeatable Prices\n\n大型活動（會展／體育館）\n・11-22 My Art My Story Book Launching\n　Tsutaya Books Bukit Jalil\n・11-27 Resilience by Design: Are You Scaling AI or \n　Th"
- },
- {
-  "job": "ai research push",
-  "ts": 1794787849,
-  "text": "【⚡ 建議動手】\n・更新 Hermes 到 v0.23.1（`hermes update`，約 10 分鐘）：這個版本修好了插件目錄上限，把上限從 2MiB 改成 16MiB；如果不更新，執行 `hermes plugins install` 時會默默退回出廠時內建的那份目錄，導致新插件一律裝不到。\n・今天沒有第二件要動的。"
- },
- {
-  "job": "AI 工具日報",
-  "ts": 1794787412,
-  "text": "【⚡ 建議動手】\n・更新 Hermes 到 v0.23.1（`hermes update`，約 10 分鐘）：這版修好插件目錄上限，從 2MiB 改成 16MiB；沒更新的話，`hermes plugins install` 會默默退回出廠時內建的那份目錄，新插件一律裝不到。\n・今天沒有第二件要動的。\n\n【第一節｜AI 工具】\nHermes Agent v0.23.1（11/9 穩定版）＋11/15 canary：穩定版只修插件目錄上限；canary 我看到的條目全是插件目錄新增和插件設定檔，核心沒動。\n對我們：沒更新就看不到新插件（video-xray 是影片分析工作台、progression 會標記哪個對話或子代理正在等你回話）；canary 沒看到 Telegram／CLI 新功能。\n值得更新穩定版；canary 觀察就好，等 v0.24.0 的整理版說明。\n\nOpenCode v2.3.0（11/13）：子代理改成預設在背景跑，回傳 session id 後就讓你先繼續做事；TUI 把連續的工具呼叫收成一列，要看細節再展開。\n對我們：我們走的是 Hermes，只有你哪天直接在終端跑 opencode 才有差。\n觀察就好。\n\nInferSSD（Apache-2.0，10 月開源）：用 SSD 串流 MoE 的 expert，讓 763B 模型跑在遠小於它的 RAM／VRAM 上，底層仍是 llama.cpp，附 OpenAI 相容 API。\n對我們：8GB VRAM 正是它的目標級別（官方測試機含 5060 Ti 8GB），但 Windows 版還在開發，rin-box 也沒有獨顯。\n觀察就好，等 Windows 版。\n\n【第二節｜🔧 新奇專案】\nTotK Recomp：不是模擬器，是把 Switch《王國之淚》靜態重編譯成原生 x86-64＋Vulkan 的 PC 程式，RTX 還能掛 DLSS；遊戲檔要自己主機 dump。\n好玩在整款遊戲被「翻譯」成 PC 程式，setup 在你機器上當場編譯一次；這條路走通，理論上能複製到別的主機遊戲。\n\nCaveman：讓 agent 講野人語、少讀檔案來省 token，官方自稱砍 65%；既是 skill 也是 proxy，Apache-2.0，曾衝上 GitHub Trending 第一。\n玩法少見（code 保持精確、話變少），`caveman browse` 把網頁壓成 121 token、`/caveman-compress` 壓記憶檔；它自己在「誠實數字」頁寫了哪裡會輸，這點反而好看。\n\nTensorFold：一個人用 Zig 寫的 LLM 推理引擎，Metal／CUDA／Vulkan 全吃，另附 orchestrator 和手機配對的網頁 client。\n有趣在它是 llama.cpp 之外的第三"
  },
  {
   "job": "kl mall refresh",
