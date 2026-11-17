@@ -1,28 +1,18 @@
 [
  {
+  "job": "社群熱度",
+  "ts": 1794925551,
+  "text": "社群熱度選題 — 最近 30 天（Reddit 遊戲 43 則 / HN 60 則）\n\n 1. [r/pcgaming 週榜#1] Before Resigning, Jensen Huang Admitted He Was Facing an “Avalanche” of Excess Wafers and Memory, New Report Sheds More Light on the GPU & RAM Crisis\n    https://www.reddit.com/r/pcgaming/comments/1xv8b25/before_resigning_jensen_huang_admitted_he_was/\n 2. [r/PS5 週榜#2] Grand Theft Auto VI is now the most pre-ordered game in the history of PlayStation Store.\n    https://www.reddit.com/r/PS5/comments/1xsq56p/grand_theft_auto_vi_is_now_the_most_preordered/\n 3. [r/PS5 週榜#3] GTA 6 Has 'Far Too Much Genital Exposure,' According To South Korean Regulators\n    https://www.reddit.com/r/PS5/comments/1xugtdk/gta_6_has_far_too_much_genital_exposure_according/\n 4. [r/PS5 週榜#4] GTA 6 Generates $1 Billion From Pre-Orders Ahead Of Launch, 10.3 Million Copies Sold\n    https://www.reddit.com/r/PS5/comments/1xtknu6/gta_6_generates_1_billion_from_preorders_ahead_of/\n 5. [r/PS5 週榜#5] GTA VI - Update Version 1.002 available (1 GB)\n    https://www.reddit.com/r/PS5/comments/1xv60mc/gta_vi_update_version_1002_available_1_gb/\n 6. [r/NintendoSwitch 週榜#6] News Release: Nov. 11, 2026 \"The Legend of Zelda: Ocarina of Time for Nintendo Switch 2 Sel"
+ },
+ {
   "job": "cex 2h",
-  "ts": 1794916936,
-  "text": "健康檢查：20261117200003（範圍 web，77650 筆）\n  ✅ freshness  資料 0.0 小時前抓的\n  ✅ volume     筆數 77650（與上次 77627 差 0.03%）\n  ✅ schema     60 個欄位，與上次指紋一致\n  ✅ quality    77650 筆：主鍵無重複、標價與名稱完整\n  ✅ heartbeat  距上次抓取 4.0 小時（20261117160002 → 20261117200003）\n\n全部正常\n發布驗證：第 1 次重試後線上已追上（run=20261117200003）"
+  "ts": 1794924120,
+  "text": "健康檢查：20261117220004（範圍 web，77653 筆）\n  ✅ freshness  資料 0.0 小時前抓的\n  ✅ volume     筆數 77653（與上次 77650 差 0.00%）\n  ✅ schema     60 個欄位，與上次指紋一致\n  ✅ quality    77653 筆：主鍵無重複、標價與名稱完整\n  ✅ heartbeat  距上次抓取 2.0 小時（20261117200003 → 20261117220004）\n\n全部正常"
  },
  {
   "job": "今日新聞",
   "ts": 1794916910,
   "text": "📰 今天值得看的\n・SONIC PICO PARK 上架，追加金屬索尼克\n・GTA6 台灣預購指南\n・俠盜獵車手6 稱霸全球 PS 暢銷榜\n・豐收物語 11/22 上架\n・Estella 音感遊戲 1 月搶先體驗\n・RE:4 里昂 黏土人 預購開放\n・美國控 AI 晶片，集邦訂單或延遲\n🔥 今天在討論\n演藝娛樂是主線：泰國 Ch3 2027 年曆與多個劇集計劃火熱，韓團 5SOS 首站 KL、Aespa 歌曲也連登；Bond / Robert Pattinson 接連上榜。\n\n結構化檔案寫到 `/home/rin/AI/news/digest.json`（7 條，順序對齊，資料來自 items.json 的真實 link/ts）。"
- },
- {
-  "job": "news ig story queue",
-  "ts": 1794916863,
-  "text": "IG story published: 17980805472139007"
- },
- {
-  "job": "news fb story queue",
-  "ts": 1794916811,
-  "text": "FB story published: 1675707224221397"
- },
- {
-  "job": "news fb queue",
-  "ts": 1794916809,
-  "text": "FB photo: https://www.facebook.com/122157732333132826/posts/122158245441132826"
  },
  {
   "job": "go renew monthly",

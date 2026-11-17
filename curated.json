@@ -88,5 +88,15 @@
   "img": "",
   "ts": 1794638512,
   "date": "11-14 14:41"
+ },
+ {
+  "title": "PS4 越獄後跑 9B 模型，每秒 43 token，全程離線",
+  "link": "https://github.com/leonardo-alegria/garlic-llm",
+  "source": "GitHub / Garlic LLM",
+  "cat": "ai",
+  "summary": "Qwen3.5-9B 壓到 4.5GB 塞進 PS4 的 8GB 記憶體，手寫 PM4 指令直接驅動 2013 年的 GCN GPU；聊天 31–39 tok/s，寫程式 43 tok/s，還內建語音對話與聽寫。",
+  "img": "",
+  "ts": 1794890461,
+  "date": "11-17 12:41"
  }
 ]
