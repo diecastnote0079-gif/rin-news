@@ -1,7 +1,15 @@
 {
- "updated": "2026-11-17T06:52:18+08:00",
- "count": 64,
+ "updated": "2026-11-17T08:56:33+08:00",
+ "count": 66,
  "items": [
+  {
+   "cat": "game",
+   "title": "《High Roller Penny》2027/1/12 上 Steam",
+   "note": "彈珠台玩法 roguelike，地下賭場主題，PC 獨佔、純數位，沒有實體。",
+   "source": "Gematsu",
+   "ts": 1794871641,
+   "added": "2026-11-17T08:56:33+08:00"
+  },
   {
    "cat": "game",
    "title": "《Mercenaries Grace》日本 11/25 先出 PS5",
@@ -169,6 +177,14 @@
    "source": "巴哈 GNN",
    "ts": 1794814109,
    "added": "2026-11-16T17:29:46+08:00"
+  },
+  {
+   "cat": "game",
+   "title": "《GTA6》高層談實體遊戲光碟就像黑膠唱片",
+   "note": "Take-Two 執行長 Zelnick 說實體遊戲最後只會變成小眾收藏，還拿 GTA6 實體盒裡沒光碟當例子。",
+   "source": "udn 遊戲角落",
+   "ts": 1794811115,
+   "added": "2026-11-17T08:56:33+08:00"
   },
   {
    "cat": "game",
