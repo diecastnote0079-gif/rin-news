@@ -1,5 +1,10 @@
 [
  {
+  "job": "nightly reflection",
+  "ts": 1794929632,
+  "text": "今天改了 2 個 skill、共 2 條：\n\n- **short-form-video**：1 條 — 刪掉「Kokoro 中文不行」那句（它與同檔新的正確設定互相打架，下次會照舊句走），改成指向正確段落。\n- **engineering-principles**：1 條 — 寫下新結論時，同一份檔案裡相反的那句必須一起掃掉，留著舊句的修正不算落地。\n\n其餘今天的教訓（CeX 被封、FB 限動重複發／相對路徑、新聞台 push 與 Pages 驗證、AGENDA 完成制、開機自啟稽核、`ulimit -v` 擋 mmap）在當場就寫進對應 skill 了，不重複記。"
+ },
+ {
   "job": "社群熱度",
   "ts": 1794925551,
   "text": "社群熱度選題 — 最近 30 天（Reddit 遊戲 43 則 / HN 60 則）\n\n 1. [r/pcgaming 週榜#1] Before Resigning, Jensen Huang Admitted He Was Facing an “Avalanche” of Excess Wafers and Memory, New Report Sheds More Light on the GPU & RAM Crisis\n    https://www.reddit.com/r/pcgaming/comments/1xv8b25/before_resigning_jensen_huang_admitted_he_was/\n 2. [r/PS5 週榜#2] Grand Theft Auto VI is now the most pre-ordered game in the history of PlayStation Store.\n    https://www.reddit.com/r/PS5/comments/1xsq56p/grand_theft_auto_vi_is_now_the_most_preordered/\n 3. [r/PS5 週榜#3] GTA 6 Has 'Far Too Much Genital Exposure,' According To South Korean Regulators\n    https://www.reddit.com/r/PS5/comments/1xugtdk/gta_6_has_far_too_much_genital_exposure_according/\n 4. [r/PS5 週榜#4] GTA 6 Generates $1 Billion From Pre-Orders Ahead Of Launch, 10.3 Million Copies Sold\n    https://www.reddit.com/r/PS5/comments/1xtknu6/gta_6_generates_1_billion_from_preorders_ahead_of/\n 5. [r/PS5 週榜#5] GTA VI - Update Version 1.002 available (1 GB)\n    https://www.reddit.com/r/PS5/comments/1xv60mc/gta_vi_update_version_1002_available_1_gb/\n 6. [r/NintendoSwitch 週榜#6] News Release: Nov. 11, 2026 \"The Legend of Zelda: Ocarina of Time for Nintendo Switch 2 Sel"
@@ -73,11 +78,6 @@
   "job": "doc reconcile",
   "ts": 1794858950,
   "text": "【文件 vs 現況 對帳】\n • cex 排程不符：缺 ['0 10,13,16,19,22 * * *']；實際 ['0 10,12,14,16,18,20,22 * * *', '30 8 * * *']\n • 手機頁資料 5.9 小時前（上限 5）：2026-11-16T14:02:13Z\n • 本機最後一輪 5.9 小時前（20261116220043）"
- },
- {
-  "job": "nightly reflection",
-  "ts": 1794843254,
-  "text": "今天改了 2 個 skill、共 4 條（rin-portal-ui 3 條，engineering-principles 1 條；portal-mobile-page-track 順手把跟 rin-portal-ui 打架的舊預設改成同一條）：\n\n- **rin-portal-ui**：iPad Pro 12.9 橫向 CSS viewport 是 1366×1024，不是 1280×800；平板斷點上限改 1399px，否則橫放 iPad 漏回桌機樣式，尺寸一律實測不引機型規格。\n- **rin-portal-ui**：「最上面這行」＝外殼導覽列（凜／系統／新聞＋時鐘），子頁 topbar 只有截圖劃掉才動。\n- **rin-portal-ui**：退回一次只退一層，第二步用他截圖的可見特徵在備份上逐項核對再覆蓋。\n- **engineering-principles**：給他的每個連結自己先打一次看到 200，`git remote -v` 不等於線上 repo 還在。"
  },
  {
   "job": "記憶審計",
