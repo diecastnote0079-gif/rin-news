@@ -1,19 +1,19 @@
 {
- "updated": 1794889803,
+ "updated": 1794897002,
  "quota": {
-  "rolling": 100,
-  "weekly": 77,
-  "monthly": 5,
-  "reset_rolling": "4h 34m",
-  "reset_weekly": "5d 19h",
-  "reset_monthly": "12h 43m"
+  "rolling": 98,
+  "weekly": 76,
+  "monthly": 4,
+  "reset_rolling": "2h 34m",
+  "reset_weekly": "5d 17h",
+  "reset_monthly": "10h 43m"
  },
  "host": {
-  "load": 0.64,
+  "load": 0.4,
   "mem_pct": 14,
   "disk_pct": 9,
-  "disk_free_gb": 391,
-  "uptime_h": 10
+  "disk_free_gb": 390,
+  "uptime_h": 12
  },
  "memory": {
   "memory": {
@@ -29,8 +29,12 @@
  },
  "cron": {
   "enabled": 40,
-  "failed": 0,
-  "failed_names": []
+  "failed": 4,
+  "failed_names": [
+   "cex-2h",
+   "news-fb-queue",
+   "news-ig-story-queue"
+  ]
  },
  "reminders": [
   {
@@ -46,7 +50,7 @@
   {
    "name": "MRT 月卡續期",
    "date": "11/29",
-   "days": 12
+   "days": 11
   }
  ]
 }
