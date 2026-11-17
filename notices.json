@@ -1,5 +1,30 @@
 [
  {
+  "job": "cex 2h",
+  "ts": 1794916936,
+  "text": "健康檢查：20261117200003（範圍 web，77650 筆）\n  ✅ freshness  資料 0.0 小時前抓的\n  ✅ volume     筆數 77650（與上次 77627 差 0.03%）\n  ✅ schema     60 個欄位，與上次指紋一致\n  ✅ quality    77650 筆：主鍵無重複、標價與名稱完整\n  ✅ heartbeat  距上次抓取 4.0 小時（20261117160002 → 20261117200003）\n\n全部正常\n發布驗證：第 1 次重試後線上已追上（run=20261117200003）"
+ },
+ {
+  "job": "今日新聞",
+  "ts": 1794916910,
+  "text": "📰 今天值得看的\n・SONIC PICO PARK 上架，追加金屬索尼克\n・GTA6 台灣預購指南\n・俠盜獵車手6 稱霸全球 PS 暢銷榜\n・豐收物語 11/22 上架\n・Estella 音感遊戲 1 月搶先體驗\n・RE:4 里昂 黏土人 預購開放\n・美國控 AI 晶片，集邦訂單或延遲\n🔥 今天在討論\n演藝娛樂是主線：泰國 Ch3 2027 年曆與多個劇集計劃火熱，韓團 5SOS 首站 KL、Aespa 歌曲也連登；Bond / Robert Pattinson 接連上榜。\n\n結構化檔案寫到 `/home/rin/AI/news/digest.json`（7 條，順序對齊，資料來自 items.json 的真實 link/ts）。"
+ },
+ {
+  "job": "news ig story queue",
+  "ts": 1794916863,
+  "text": "IG story published: 17980805472139007"
+ },
+ {
+  "job": "news fb story queue",
+  "ts": 1794916811,
+  "text": "FB story published: 1675707224221397"
+ },
+ {
+  "job": "news fb queue",
+  "ts": 1794916809,
+  "text": "FB photo: https://www.facebook.com/122157732333132826/posts/122158245441132826"
+ },
+ {
   "job": "go renew monthly",
   "ts": 1794888060,
   "text": "目前月結前的狀況給你了：\n\n📊 **OpenCode Go 餘額【hermes usage】**\n- 月度：**5% 剩餘**（95% 用掉），**13 小時 12 分鐘後重置**（2026-11-18 01:13 +08）\n- 週度：77% 剩餘（11/23 08:00 重置）\n- Rolling：100% 剩餘（11/17 17:00 重置）\n- 訂閱狀態：**未綁信用卡**，屬手動續訂\n\n⚠️ **重點**：就像你 Memo 裡的記錄，OpenCode Go 是**沒有綁信用卡**，必須靠阿夜手動續訂。月度只剩 5%，11 號晚上 01:13 那個門一關，往後就要等重置才能再開，派生子代（Luna/Claude）會直接吃同一個共享池，剩太少它們會連主模型 DeepSeek 都撐不住。\n\n所以今晚 11 號 23:59 前那個 13 小時的窗口很關鍵——**你要不是真的耗到快沒了，要不就是手動續訂**。看你自己決定，這次我就只是把數字報給你，還沒動任何訂閱相關的東西。"
@@ -63,11 +88,6 @@
   "job": "nightly reflection",
   "ts": 1794843254,
   "text": "今天改了 2 個 skill、共 4 條（rin-portal-ui 3 條，engineering-principles 1 條；portal-mobile-page-track 順手把跟 rin-portal-ui 打架的舊預設改成同一條）：\n\n- **rin-portal-ui**：iPad Pro 12.9 橫向 CSS viewport 是 1366×1024，不是 1280×800；平板斷點上限改 1399px，否則橫放 iPad 漏回桌機樣式，尺寸一律實測不引機型規格。\n- **rin-portal-ui**：「最上面這行」＝外殼導覽列（凜／系統／新聞＋時鐘），子頁 topbar 只有截圖劃掉才動。\n- **rin-portal-ui**：退回一次只退一層，第二步用他截圖的可見特徵在備份上逐項核對再覆蓋。\n- **engineering-principles**：給他的每個連結自己先打一次看到 200，`git remote -v` 不等於線上 repo 還在。"
- },
- {
-  "job": "今日新聞",
-  "ts": 1794830692,
-  "text": "_digest.json 已覆寫。\n\n📰 今天值得看的\n・異病偵探 Steam 同時上線破紀錄 官方公布後續\n・寵物 MMORPG《執筆山河誌》11/22 公測\n・キューティーハニー 變身型 1/12 樹脂雕像 登場\n・DeepSeek 算力告急 限流 7 日不支援\n・Samsung 加入 ShopeePay 馬來西亞\n・BLG 3:1 碾壓 GEN 奪 S16 世界冠軍\n🔥 今天在討論\n泰國 BL 劇粉刷新好幾個新企劃（Fool in Love EP12、Khemjira Forever EP3、Mr Fanboy Final EP、Bite Me），馬來西亞 PEBACA 音樂會熱，自由憑證與賭博連結也搶燈。\n\n寫檔：/home/rin/AI/news/digest.json — 日期 2026-11-16、6 條文章連結與 ts 來自 items.json，討論以概括句收尾。"
  },
  {
   "job": "記憶審計",
