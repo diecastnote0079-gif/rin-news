@@ -1,7 +1,39 @@
 {
- "updated": "2026-11-18T15:43:47+08:00",
- "count": 118,
+ "updated": "2026-11-18T17:47:16+08:00",
+ "count": 122,
  "items": [
+  {
+   "cat": "game",
+   "title": "《模擬國家公園：護林員之路》正式版上 PC 與主機",
+   "note": "astragon 發行、To-Go Games 開發，正式版新增雙人合作與新任務。",
+   "source": "巴哈 GNN",
+   "ts": 1794993242,
+   "added": "2026-11-18T17:47:16+08:00"
+  },
+  {
+   "cat": "game",
+   "title": "Steam 限免《The Ghost Of Solaris》要轉付費",
+   "note": "免費動作冒險今宣布改成付費販售，玩家趕在收費前先入庫。",
+   "source": "巴哈 GNN",
+   "ts": 1794992618,
+   "added": "2026-11-18T17:47:16+08:00"
+  },
+  {
+   "cat": "game",
+   "title": "GTA6 倒數 24 小時　亞特蘭大警方叫玩家別上街",
+   "note": "亞特蘭大警察局先發公告，呼籲別把罪惡市的虛構犯罪搬進現實街頭。",
+   "source": "巴哈 GNN",
+   "ts": 1794992380,
+   "added": "2026-11-18T17:47:16+08:00"
+  },
+  {
+   "cat": "tech",
+   "title": "Tube Snip 免費抓 4K 影片　連 IG、FB、TikTok 都吃",
+   "note": "線上工具，YouTube 可下載 4K 有聲 MP4 與 MP3，實測幾秒完成。",
+   "source": "電腦王阿達",
+   "ts": 1794991537,
+   "added": "2026-11-18T17:47:16+08:00"
+  },
   {
    "cat": "tech",
    "title": "SmoovPlay 免費開源　AI 補幀把 GTA6 拉到 120fps",
