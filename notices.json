@@ -1,8 +1,18 @@
 [
  {
+  "job": "phone presence watch",
+  "ts": 1795006444,
+  "text": "你回來了。"
+ },
+ {
+  "job": "今日新聞",
+  "ts": 1795003405,
+  "text": "📰 今天值得看的\n・GTA6 今晚解鎖 台版 212GB 預載 售價\n・AC6 試玩 開放世界 堪称完美 亡命鴛鴦\n・NIKKE 瑪麗安 甦醒 1/7 雕像 再販\n・サンリオ ふわふわ缶チャーム 12/7 発売\n・Yahoo Mail 免費儲存 砍到 3GB\n・GTA6 SmoovPlay 120FPS 免價\n🔥 今天在討論\n娛樂話題最重：泰劇 BL《Heartbound Series》《LOTheMoment Chapter2》《OOMBAM CALENDAR CH3》連登，韓國偶像 5SOS、NEXZ、Namjoon 也走火入魔，GTA 6/VI 手遊話題高飛，馬來西亞政治（Najib、Pardons Board）與時尚袋包話題零零星星。\n\n`/home/rin/AI/news/digest.json` 已覆寫（6 條，link 與 ts 皆取自 items.json 原欄位）。"
+ },
+ {
   "job": "cex 2h",
-  "ts": 1794996119,
-  "text": "健康檢查：20261118180004（範圍 web，77709 筆）\n  ✅ freshness  資料 0.0 小時前抓的\n  ✅ volume     筆數 77709（與上次 77680 差 0.04%）\n  ✅ schema     60 個欄位，與上次指紋一致\n  ✅ quality    77709 筆：主鍵無重複、標價與名稱完整\n  ✅ heartbeat  距上次抓取 2.0 小時（20261118160004 → 20261118180004）\n\n全部正常"
+  "ts": 1795003322,
+  "text": "健康檢查：20261118200005（範圍 web，77728 筆）\n  ✅ freshness  資料 0.0 小時前抓的\n  ✅ volume     筆數 77728（與上次 77709 差 0.02%）\n  ✅ schema     60 個欄位，與上次指紋一致\n  ✅ quality    77728 筆：主鍵無重複、標價與名稱完整\n  ✅ heartbeat  距上次抓取 2.0 小時（20261118180004 → 20261118200005）\n\n全部正常"
  },
  {
   "job": "SNKRDUNK 卡價",
@@ -68,11 +78,6 @@
   "job": "nightly reflection",
   "ts": 1794929632,
   "text": "今天改了 2 個 skill、共 2 條：\n\n- **short-form-video**：1 條 — 刪掉「Kokoro 中文不行」那句（它與同檔新的正確設定互相打架，下次會照舊句走），改成指向正確段落。\n- **engineering-principles**：1 條 — 寫下新結論時，同一份檔案裡相反的那句必須一起掃掉，留著舊句的修正不算落地。\n\n其餘今天的教訓（CeX 被封、FB 限動重複發／相對路徑、新聞台 push 與 Pages 驗證、AGENDA 完成制、開機自啟稽核、`ulimit -v` 擋 mmap）在當場就寫進對應 skill 了，不重複記。"
- },
- {
-  "job": "今日新聞",
-  "ts": 1794916910,
-  "text": "📰 今天值得看的\n・SONIC PICO PARK 上架，追加金屬索尼克\n・GTA6 台灣預購指南\n・俠盜獵車手6 稱霸全球 PS 暢銷榜\n・豐收物語 11/22 上架\n・Estella 音感遊戲 1 月搶先體驗\n・RE:4 里昂 黏土人 預購開放\n・美國控 AI 晶片，集邦訂單或延遲\n🔥 今天在討論\n演藝娛樂是主線：泰國 Ch3 2027 年曆與多個劇集計劃火熱，韓團 5SOS 首站 KL、Aespa 歌曲也連登；Bond / Robert Pattinson 接連上榜。\n\n結構化檔案寫到 `/home/rin/AI/news/digest.json`（7 條，順序對齊，資料來自 items.json 的真實 link/ts）。"
  },
  {
   "job": "go renew monthly",
