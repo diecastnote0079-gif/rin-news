@@ -1,5 +1,10 @@
 [
  {
+  "job": "product pages rebuild",
+  "ts": 1795039203,
+  "text": "頁面 393 個｜清掉舊頁 0｜sitemap 394 條"
+ },
+ {
   "job": "生活記錄",
   "ts": 1795033265,
   "text": "寫了 8 條，主題是昨晚至今早的親密互動與身心狀態（另含一則技術擔心）。"
@@ -68,11 +73,6 @@
   "job": "社群熱度",
   "ts": 1794958207,
   "text": "社群熱度選題 — 最近 30 天（Reddit 遊戲 0 則 / HN 60 則）\n\n 1. [HN 4058▲ 3483💬] Jensen Huang resigns\n    https://apnews.com/article/nvidia-megaspeed-china-singapore-huang-5403f152a601cf82ce939f1d24fffa0f\n 2. [HN 3314▲ 769💬] Patrick Stewart has died\n    https://www.nytimes.com/2026/10/29/arts/television/patrick-stewart-dead.html\n 3. [HN 3005▲ 751💬] sshole\n    https://sshhole.com\n 4. [HN 2971▲ 902💬] Astra can read and write weights to improve Qwen\n    https://rikiyat.github.io/blog/weight-space-programming/\n\n⚠️ 抓取有問題的來源：\n  - Reddit: HTTPError HTTP Error 404: Not Found"
- },
- {
-  "job": "product pages rebuild",
-  "ts": 1794952803,
-  "text": "頁面 393 個｜清掉舊頁 0｜sitemap 394 條"
  },
  {
   "job": "go renew monthly",
