@@ -1,5 +1,10 @@
 [
  {
+  "job": "nightly reflection",
+  "ts": 1795015951,
+  "text": "短-form-video 更新 5 處、實質 4 條：\n\n1. **CER 量測**（SKILL.md）：一句不算數，至少三句，且先用同一支 ASR 轉真人參考音當基線——ASR 自己會把「聲音」聽成「新恩」。他質疑數字時加測，不要用「只錯幾個字」稀釋。\n2. **回覆語音只走 GPU**（SKILL.md 引擎清單＋`references/qwen-tts.md` 回退鏈）：GPU 不通就 `return 2` 只回文字；CPU GGML 與 Kokoro 不再是回退項，`VOICE_CPU_FALLBACK=1` 只給手測。\n3. **`POST /v1/audio/voices` 的欄位只有兩種成功形狀**（qwen-tts.md）：`{name, wav_b64}`，或 `ref_text + spk_b64 + rvq_b64` 四欄齊；`ref_wav_b64` 這種第三個名字不要再試。\n4. **reel 每段素材都要是該主題的遊戲實機／官方預告畫面**（SKILL.md）：混試玩站截圖、排名圖、新聞卡會被退（「後面的素材也不是遊戲了」），填 in/out 前逐段抽格看。\n\n沒寫的：發佈前必過目、60fps 直剪會卡頓——今天已寫進 `duckx3-fb-news`／`short-form-video`，不重複。"
+ },
+ {
   "job": "cex 2h",
   "ts": 1795010552,
   "text": "健康檢查：20261118220005（範圍 web，77730 筆）\n  ✅ freshness  資料 0.0 小時前抓的\n  ✅ volume     筆數 77730（與上次 77728 差 0.00%）\n  ✅ schema     60 個欄位，與上次指紋一致\n  ✅ quality    77730 筆：主鍵無重複、標價與名稱完整\n  ✅ heartbeat  距上次抓取 2.0 小時（20261118200005 → 20261118220005）\n\n全部正常\n發布驗證：第 1 次重試後線上已追上（run=20261118220005）"
@@ -68,11 +73,6 @@
   "job": "doc reconcile",
   "ts": 1794945301,
   "text": "【文件 vs 現況 對帳】\n • cex 排程不符：缺 ['0 10,13,16,19,22 * * *']；實際 ['0 10,12,14,16,18,20,22 * * *', '30 8 * * *']\n • 手機頁資料 5.9 小時前（上限 5）：2026-11-17T14:01:35Z\n • 本機最後一輪 5.9 小時前（20261117220004）"
- },
- {
-  "job": "nightly reflection",
-  "ts": 1794929632,
-  "text": "今天改了 2 個 skill、共 2 條：\n\n- **short-form-video**：1 條 — 刪掉「Kokoro 中文不行」那句（它與同檔新的正確設定互相打架，下次會照舊句走），改成指向正確段落。\n- **engineering-principles**：1 條 — 寫下新結論時，同一份檔案裡相反的那句必須一起掃掉，留著舊句的修正不算落地。\n\n其餘今天的教訓（CeX 被封、FB 限動重複發／相對路徑、新聞台 push 與 Pages 驗證、AGENDA 完成制、開機自啟稽核、`ulimit -v` 擋 mmap）在當場就寫進對應 skill 了，不重複記。"
  },
  {
   "job": "go renew monthly",
