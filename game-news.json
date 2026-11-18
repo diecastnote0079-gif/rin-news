@@ -1,7 +1,23 @@
 {
- "updated": "2026-11-19T00:11:30+08:00",
- "count": 131,
+ "updated": "2026-11-19T02:14:55+08:00",
+ "count": 135,
  "items": [
+  {
+   "cat": "tech",
+   "title": "Appine 讓 Android 直接跑 Linux：免 root、免模擬器",
+   "note": "16MB 開源 App，ARM64 指令翻譯直跑，Docker、編譯 Rust、Codex CLI 都能用，已上 Google Play。",
+   "source": "電腦王阿達",
+   "ts": 1795021080,
+   "added": "2026-11-19T02:14:55+08:00"
+  },
+  {
+   "cat": "game",
+   "title": "PS5 釋出新版系統軟體 想玩《GTA6》就得先更新",
+   "note": "11/18 釋出 26.07-14.23.00，官方說只是安全性修正，但支援帳號特地發文提醒玩 GTA6 前一定要更新。",
+   "source": "巴哈 GNN",
+   "ts": 1795018613,
+   "added": "2026-11-19T02:14:55+08:00"
+  },
   {
    "cat": "tech",
    "title": "NVIDIA 驅動被爆每小時寫 30GB 進 SSD",
@@ -11,12 +27,28 @@
    "added": "2026-11-19T00:11:30+08:00"
   },
   {
+   "cat": "tech",
+   "title": "GTA6 今晚解鎖，NVIDIA 卻沒有新驅動",
+   "note": "Game Ready 停在 11/12 的 621.24，只加了三款遊戲，GTA6 上市前最後一版就是它。",
+   "source": "TechPowerUp",
+   "ts": 1795016744,
+   "added": "2026-11-19T02:14:55+08:00"
+  },
+  {
    "cat": "game",
    "title": "2026 韓國遊戲大獎　《赤血沙漠》掃 8 獎",
    "note": "《赤血沙漠》拿下總統獎，另掃技術、創作等 4 部門獎與優秀開發者獎共 8 項；《AION 2》拿 2 獎。",
    "source": "巴哈 GNN",
    "ts": 1795014783,
    "added": "2026-11-19T00:11:30+08:00"
+  },
+  {
+   "cat": "tech",
+   "title": "NVIDIA RTX Spark 桌機評測：1 公升迷你工作站，GPU 快 20%",
+   "note": "華碩 ProArt GR1X 是 RTX Spark 超級晶片的小桌機版本，遊戲加 AI 都吃，體積只有 1 公升。",
+   "source": "4Gamers",
+   "ts": 1795010400,
+   "added": "2026-11-19T02:14:55+08:00"
   },
   {
    "cat": "game",
