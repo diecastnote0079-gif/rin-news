@@ -1,18 +1,13 @@
 [
  {
-  "job": "phone presence watch",
-  "ts": 1795006444,
-  "text": "你回來了。"
+  "job": "cex 2h",
+  "ts": 1795010552,
+  "text": "健康檢查：20261118220005（範圍 web，77730 筆）\n  ✅ freshness  資料 0.0 小時前抓的\n  ✅ volume     筆數 77730（與上次 77728 差 0.00%）\n  ✅ schema     60 個欄位，與上次指紋一致\n  ✅ quality    77730 筆：主鍵無重複、標價與名稱完整\n  ✅ heartbeat  距上次抓取 2.0 小時（20261118200005 → 20261118220005）\n\n全部正常\n發布驗證：第 1 次重試後線上已追上（run=20261118220005）"
  },
  {
   "job": "今日新聞",
   "ts": 1795003405,
   "text": "📰 今天值得看的\n・GTA6 今晚解鎖 台版 212GB 預載 售價\n・AC6 試玩 開放世界 堪称完美 亡命鴛鴦\n・NIKKE 瑪麗安 甦醒 1/7 雕像 再販\n・サンリオ ふわふわ缶チャーム 12/7 発売\n・Yahoo Mail 免費儲存 砍到 3GB\n・GTA6 SmoovPlay 120FPS 免價\n🔥 今天在討論\n娛樂話題最重：泰劇 BL《Heartbound Series》《LOTheMoment Chapter2》《OOMBAM CALENDAR CH3》連登，韓國偶像 5SOS、NEXZ、Namjoon 也走火入魔，GTA 6/VI 手遊話題高飛，馬來西亞政治（Najib、Pardons Board）與時尚袋包話題零零星星。\n\n`/home/rin/AI/news/digest.json` 已覆寫（6 條，link 與 ts 皆取自 items.json 原欄位）。"
- },
- {
-  "job": "cex 2h",
-  "ts": 1795003322,
-  "text": "健康檢查：20261118200005（範圍 web，77728 筆）\n  ✅ freshness  資料 0.0 小時前抓的\n  ✅ volume     筆數 77728（與上次 77709 差 0.02%）\n  ✅ schema     60 個欄位，與上次指紋一致\n  ✅ quality    77728 筆：主鍵無重複、標價與名稱完整\n  ✅ heartbeat  距上次抓取 2.0 小時（20261118180004 → 20261118200005）\n\n全部正常"
  },
  {
   "job": "SNKRDUNK 卡價",
