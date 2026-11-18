@@ -1,5 +1,15 @@
 [
  {
+  "job": "cex 2h",
+  "ts": 1794967313,
+  "text": "健康檢查：20261118100004（範圍 web，77653 筆）\n  ✅ freshness  資料 0.0 小時前抓的\n  ✅ volume     筆數 77653（與上次 77649 差 0.01%）\n  ✅ schema     60 個欄位，與上次指紋一致\n  ✅ quality    77653 筆：主鍵無重複、標價與名稱完整\n  ✅ heartbeat  距上次抓取 1.5 小時（20261118083007 → 20261118100004）\n\n全部正常"
+ },
+ {
+  "job": "SNKRDUNK 卡價",
+  "ts": 1794963609,
+  "text": "SNKRDUNK 變化\n📈 3rd Anniversary Set — ENGLISH\n   在售 62 → 57 件\n   最低在售 ¥62,500 → ¥61,500\n📈 3rd Anniversary Set — CHINA\n   在售 58 → 59 件\n   最低在售 ¥41,500 → ¥41,000\n📈 Luffy SEC-RSP OP13-118\n   PSA10 ¥3,130,000 → ¥2,998,000\n📈 Luffy SEC-SP EB04-061\n   PSA10 ¥1,750,000 → ¥1,700,000"
+ },
+ {
   "job": "CeX 早安",
   "ts": 1794962949,
   "text": "昨天 CeX 的動靜：\n\n🆕 新上架\n・Switch 2, 256GB Legend of Zelda 40th Edition + Green Joy-Con 2, Boxed（Switch 2）RM2200\n・Switch 2, 256GB Legend of Zelda 40th Edition + Green Joy-Con 2, Discounted（Switch 2）RM2000\n・Teenage Mutant Ninja Turtles: Mutants Unleashed（PS5）\n・Mortal Kombat 11 (No Ultimate DLC)（PS5）\n・Romancing SaGa 2: Revenge Of The Seven（Switch）\n・Zotac GeForce RTX 3060 Ti Twin Edge White Edition 8GB GDDR6X（顯卡）RM1450\n\n📉 降價\n・Halloween: The Game (No DLC)（PS5）RM230 → RM200\n\n📦 回架\n・Teenage Mutant Ninja Turtles: Mutants Unleashed（PS5）\n・Mortal Kombat 11 (No Ultimate DLC)（PS5）\n・Romancing SaGa 2: Revenge Of The Seven（Switch）\n・Hidden Agenda (Playlink)（PS4）\n・Pokemon Pearl（DS）\n・Fading Afternoon - Uncensored（Switch）\n\n🚫 賣光\n・Playstation 5 Slim Console, 1TB, Ghost of Yotei Gold (No DLC), Discounted（PS5）\n・Control Ultimate Edition（PS5）\n・Mass Effect Trilogy（PS3）\n・Devil May Cry 5 (No DLC)（Xbox One）\n・Midnight Club Los Angeles（Xbox 360）\n・Kirby: Planet Robobot（3DS）\n\n說明：昨天（11-17 馬來西亞時間）的查詢結果只在 `changes` 表裡對應到這四類。新上架最值得注意的是 Switch 2 + 羅藝爾 40 週年限定套組（三種出貨狀態，RM2000–RM2200）；降價裡遊戲類只有一項（Halloween: The Game PS5 降 230→200），其他降價多是鼠標/路由器/平板配件，不進列。剩下 470 多筆為路由器/鼠標/鍵盤及手機、平板的日常調價，不列到這裡。"
@@ -60,11 +70,6 @@
   "text": "今天改了 2 個 skill、共 2 條：\n\n- **short-form-video**：1 條 — 刪掉「Kokoro 中文不行」那句（它與同檔新的正確設定互相打架，下次會照舊句走），改成指向正確段落。\n- **engineering-principles**：1 條 — 寫下新結論時，同一份檔案裡相反的那句必須一起掃掉，留著舊句的修正不算落地。\n\n其餘今天的教訓（CeX 被封、FB 限動重複發／相對路徑、新聞台 push 與 Pages 驗證、AGENDA 完成制、開機自啟稽核、`ulimit -v` 擋 mmap）在當場就寫進對應 skill 了，不重複記。"
  },
  {
-  "job": "cex 2h",
-  "ts": 1794924120,
-  "text": "健康檢查：20261117220004（範圍 web，77653 筆）\n  ✅ freshness  資料 0.0 小時前抓的\n  ✅ volume     筆數 77653（與上次 77650 差 0.00%）\n  ✅ schema     60 個欄位，與上次指紋一致\n  ✅ quality    77653 筆：主鍵無重複、標價與名稱完整\n  ✅ heartbeat  距上次抓取 2.0 小時（20261117200003 → 20261117220004）\n\n全部正常"
- },
- {
   "job": "今日新聞",
   "ts": 1794916910,
   "text": "📰 今天值得看的\n・SONIC PICO PARK 上架，追加金屬索尼克\n・GTA6 台灣預購指南\n・俠盜獵車手6 稱霸全球 PS 暢銷榜\n・豐收物語 11/22 上架\n・Estella 音感遊戲 1 月搶先體驗\n・RE:4 里昂 黏土人 預購開放\n・美國控 AI 晶片，集邦訂單或延遲\n🔥 今天在討論\n演藝娛樂是主線：泰國 Ch3 2027 年曆與多個劇集計劃火熱，韓團 5SOS 首站 KL、Aespa 歌曲也連登；Bond / Robert Pattinson 接連上榜。\n\n結構化檔案寫到 `/home/rin/AI/news/digest.json`（7 條，順序對齊，資料來自 items.json 的真實 link/ts）。"
@@ -73,11 +78,6 @@
   "job": "go renew monthly",
   "ts": 1794888060,
   "text": "目前月結前的狀況給你了：\n\n📊 **OpenCode Go 餘額【hermes usage】**\n- 月度：**5% 剩餘**（95% 用掉），**13 小時 12 分鐘後重置**（2026-11-18 01:13 +08）\n- 週度：77% 剩餘（11/23 08:00 重置）\n- Rolling：100% 剩餘（11/17 17:00 重置）\n- 訂閱狀態：**未綁信用卡**，屬手動續訂\n\n⚠️ **重點**：就像你 Memo 裡的記錄，OpenCode Go 是**沒有綁信用卡**，必須靠阿夜手動續訂。月度只剩 5%，11 號晚上 01:13 那個門一關，往後就要等重置才能再開，派生子代（Luna/Claude）會直接吃同一個共享池，剩太少它們會連主模型 DeepSeek 都撐不住。\n\n所以今晚 11 號 23:59 前那個 13 小時的窗口很關鍵——**你要不是真的耗到快沒了，要不就是手動續訂**。看你自己決定，這次我就只是把數字報給你，還沒動任何訂閱相關的東西。"
- },
- {
-  "job": "SNKRDUNK 卡價",
-  "ts": 1794877258,
-  "text": "SNKRDUNK 變化\n📈 3rd Anniversary Set — ENGLISH\n   在售 56 → 62 件\n   最低在售 ¥63,350 → ¥62,500\n📈 3rd Anniversary Set — CHINA\n   在售 57 → 58 件\n   最低在售 ¥42,000 → ¥41,500\n📈 Luffy SEC-RSP OP13-118\n   PSA10 ¥3,150,000 → ¥3,130,000\n📈 Luffy SEC-SP EB04-061\n   A ¥1,430,000 → ¥1,370,000\n   PSA10 ¥1,835,000 → ¥1,750,000"
  },
  {
   "job": "記憶審計",
