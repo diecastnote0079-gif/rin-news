@@ -1,8 +1,13 @@
 [
  {
+  "job": "今日新聞",
+  "ts": 1795090053,
+  "text": "📰 今天值得看的\n・GTA6 正式上市 212GB 容量展開\n・櫻蘭 20 周年 聯名餐廳今起台北開幕\n・魔法騎士 鳳凰寺風 1/7 フィギュア\n・馬來西亞 29 日起公開災害警報測試\n・Google 發表 Gemini 4 Neon\n・NVIDIA 驅動寫入 SSD 每小時 30GB\n・微軟 免費 AI Agent 課程 18 堂\n\n🔥 今天在討論\n馬來西亞熱搜在刷韓國偶像與劇集話題（NCT127 進駐、LUCIA、5SOS、Robert Pattinson），GTA 6 上市讓 Rockstar 與 GTA 系列持續齊上榜；政治與時尚頒獎也偶爾冒出。\n\ndigest 已寫：`/home/rin/AI/news/digest.json`（7 條，順序與上列一致，link 皆取自 items.json 原值）"
+ },
+ {
   "job": "cex 2h",
-  "ts": 1795082535,
-  "text": "健康檢查：20261119180004（範圍 web，77833 筆）\n  ✅ freshness  資料 0.0 小時前抓的\n  ✅ volume     筆數 77833（與上次 77817 差 0.02%）\n  ✅ schema     60 個欄位，與上次指紋一致\n  ✅ quality    77833 筆：主鍵無重複、標價與名稱完整\n  ✅ heartbeat  距上次抓取 2.0 小時（20261119160004 → 20261119180004）\n\n全部正常\n發布驗證：第 1 次重試後線上已追上（run=20261119180004）"
+  "ts": 1795089717,
+  "text": "健康檢查：20261119200004（範圍 web，77842 筆）\n  ✅ freshness  資料 0.0 小時前抓的\n  ✅ volume     筆數 77842（與上次 77833 差 0.01%）\n  ✅ schema     60 個欄位，與上次指紋一致\n  ✅ quality    77842 筆：主鍵無重複、標價與名稱完整\n  ✅ heartbeat  距上次抓取 2.0 小時（20261119180004 → 20261119200004）\n\n全部正常"
  },
  {
   "job": "SNKRDUNK 卡價",
@@ -68,11 +73,6 @@
   "job": "nightly reflection",
   "ts": 1795015951,
   "text": "短-form-video 更新 5 處、實質 4 條：\n\n1. **CER 量測**（SKILL.md）：一句不算數，至少三句，且先用同一支 ASR 轉真人參考音當基線——ASR 自己會把「聲音」聽成「新恩」。他質疑數字時加測，不要用「只錯幾個字」稀釋。\n2. **回覆語音只走 GPU**（SKILL.md 引擎清單＋`references/qwen-tts.md` 回退鏈）：GPU 不通就 `return 2` 只回文字；CPU GGML 與 Kokoro 不再是回退項，`VOICE_CPU_FALLBACK=1` 只給手測。\n3. **`POST /v1/audio/voices` 的欄位只有兩種成功形狀**（qwen-tts.md）：`{name, wav_b64}`，或 `ref_text + spk_b64 + rvq_b64` 四欄齊；`ref_wav_b64` 這種第三個名字不要再試。\n4. **reel 每段素材都要是該主題的遊戲實機／官方預告畫面**（SKILL.md）：混試玩站截圖、排名圖、新聞卡會被退（「後面的素材也不是遊戲了」），填 in/out 前逐段抽格看。\n\n沒寫的：發佈前必過目、60fps 直剪會卡頓——今天已寫進 `duckx3-fb-news`／`short-form-video`，不重複。"
- },
- {
-  "job": "今日新聞",
-  "ts": 1795003405,
-  "text": "📰 今天值得看的\n・GTA6 今晚解鎖 台版 212GB 預載 售價\n・AC6 試玩 開放世界 堪称完美 亡命鴛鴦\n・NIKKE 瑪麗安 甦醒 1/7 雕像 再販\n・サンリオ ふわふわ缶チャーム 12/7 発売\n・Yahoo Mail 免費儲存 砍到 3GB\n・GTA6 SmoovPlay 120FPS 免價\n🔥 今天在討論\n娛樂話題最重：泰劇 BL《Heartbound Series》《LOTheMoment Chapter2》《OOMBAM CALENDAR CH3》連登，韓國偶像 5SOS、NEXZ、Namjoon 也走火入魔，GTA 6/VI 手遊話題高飛，馬來西亞政治（Najib、Pardons Board）與時尚袋包話題零零星星。\n\n`/home/rin/AI/news/digest.json` 已覆寫（6 條，link 與 ts 皆取自 items.json 原欄位）。"
  },
  {
   "job": "go renew monthly",
