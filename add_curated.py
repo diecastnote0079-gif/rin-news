@@ -8,8 +8,8 @@
 規則：
 - 以 link 去重（同一個 link 已存在就更新內容，不新增）
 - ts 預設現在；同一條新聞請用原始發布時間，這樣排序才正確
-- 條目在 news_fetch.py 執行後併入 items/picks，14 天後自動淘汰
-- 只寫 D:\\AI\\news\\curated.json，不碰 items.json（那是產出物）
+- 條目在 news_fetch.py 執行後併入 items/picks，**3 天**後自動淘汰（實際行為由 news_fetch.py 決定）
+- 只寫 ~/AI/news/curated.json，不碰 items.json（那是產出物）
 """
 import argparse
 import json

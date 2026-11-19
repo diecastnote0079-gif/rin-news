@@ -45,7 +45,12 @@ def github_token() -> str | None:
 
 
 def sh(args, check=False):
-    r = subprocess.run(args, cwd=HERE, capture_output=True, text=True, timeout=420)
+    try:
+        r = subprocess.run(args, cwd=HERE, capture_output=True, text=True, timeout=420)
+    except subprocess.TimeoutExpired:
+        # 2026-11-19: 超時不可以讓整輪崩掉 - 後面的 notes 守門、commit、push 會全部跳過,
+        # 線上就靜靜停在舊資料。回 124（timeout 的慣例碼）讓 main() 照原流程往下走。
+        return 124, 'timeout after 420s'
     msg = (r.stdout + r.stderr).strip()
     return r.returncode, msg.replace(os.environ.get("_PUSH_SECRET", "\0"), "***")
 
