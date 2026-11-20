@@ -1,8 +1,43 @@
 [
  {
+  "job": "SNKRDUNK 卡價",
+  "ts": 1795136410,
+  "text": "SNKRDUNK 變化\n📈 3rd Anniversary Set — ENGLISH\n   在售 60 → 59 件\n   最低在售 ¥61,400 → ¥60,500\n📈 3rd Anniversary Set — CHINA\n   在售 58 → 57 件\n📈 Luffy SEC-RSP OP13-118\n   PSA10 ¥2,998,000 → ¥2,900,000"
+ },
+ {
+  "job": "CeX 早安",
+  "ts": 1795135723,
+  "text": "昨天 CeX 的動靜：\n\n🆕 新上架\n・HORI Ace Combat 8 WINGS OF THEVE Flight Stick (PS5/PS4/PC) RM700\n・MCHOSE L7 Pro 8K 26000 DPI Wireless Gaming Mouse (PC) RM220\n・Xpanse SB-ZPSB RGB Smart Gaming Mouse (PC) RM200\n・Harvest Moon: Echoes of Teradea (Switch 2) RM140\n・IINE Switch L1265 Pro Dreamy Home Wireless Controller (Switch) RM80\n・IINE Athena Wireless Controller for PC (PC) RM70\n\n📉 降價\n・IINE Athena Wireless Controller for PC - White, B RM170 → RM75\n\n📦 回架\n・NBA 2K27 (PS5)\n・EA Sports FC 27 (Switch)\n・Legend of Zelda: Ocarina of Time (Switch 2)\n・Control Ultimate Edition (PS5)\n・Legend of Heroes, The: Trails In The Sky 2nd Chapter (Switch 2)\n・Last Stand, The: Aftermath (PS4)\n\n🚫 賣光\n・Switch 2, 256GB Legend of Zelda 40th Edition + Green Joy-Con 2 (Switch 2)\n・PlayStation 5 Pro Console, 2TB, White, Discounted (PS5)\n・Marvel's Midnight Suns (No DLC) (PS5)\n・NBA 2K27 (PS5)\n・Professor Layton & The Spectre's Call (DS)\n・Sniper Ghost Warrior Contracts 2 (PS4)"
+ },
+ {
+  "job": "cex 0830",
+  "ts": 1795134714,
+  "text": "健康檢查：20261120083002（範圍 web，77848 筆）\n  ✅ freshness  資料 0.0 小時前抓的\n  ✅ volume     筆數 77848（與上次 77852 差 -0.01%）\n  ✅ schema     60 個欄位，與上次指紋一致\n  ✅ quality    77848 筆：主鍵無重複、標價與名稱完整\n  ✅ heartbeat  距上次抓取 10.5 小時（20261119220004 → 20261120083002）\n\n全部正常"
+ },
+ {
+  "job": "kl daily brief",
+  "ts": 1795134634,
+  "text": "☀️ 今日 11/20 (Fri)\n\n天氣：25–32°C，最高降雨機率 59%\n　降雨時段：16:00（56%）、17:00（59%）、18:00（55%）\n\nMid Valley 本週活動（6 項）\n・Christmas 2026 — Mall Wide (MW), Ground Floor\n　21 Nov 2026 - 3 Jan 2027\n・ITSU Roadshow — Centre Court (CC), Lower Ground Floor\n　16 Nov - 22 Nov 2026\n・MyBeauty & Cosmetics Expo — Atrium, Mid Valley Exhibition Centre (MVEC), Third Floor, Centre Court\n　19 Nov - 22 Nov 2026\n・CelcomDigi Pop Up — East Atrium (EEA), Ground Floor\n　16 Nov - 22 Nov 2026\n\n雪隆活動（未來 14 天，命中興趣 2 項）\n・11/25 AI-Powered OEM: Scaling Beauty, Health and Perso\n　Lazada Malaysia\n・11/27 Resilience by Design: Are You Scaling AI or Scal\n　The Ruma Hotel and Residences\n\n電子／玩具優惠\n・ALL IT Hypermarket Malaysia 11.11 Promotion – Enjoy \n　11-05→11-20\n・PC Image Hypershell Malaysia: 11.11 Exclusive Sale –\n　11-05→11-20\n・TBM Malaysia Axtra Dreams Monthly Home Consultation \n　11-15→11-21　All TBM Outlets\n・Harvey Norman Malaysia Black Friday Early Deals Sale\n　11-21→11-22\n・Nojima Malaysia Black Friday Sale – Up to 70% Off Sm\n　11-20→11-22　LaLaport BBCC Kuala Lump\n・LG Year-End Home Fest 2026: Discover Exclusive LG Su\n　11-19→11-22　Pavilion Bukit Jalil\n\n大型活動（會展／體育館）\n・11-22 My Art My Story Book Launching\n　Tsutaya Books Bukit Jalil\n・11-25 AI-Power"
+ },
+ {
+  "job": "ai research push",
+  "ts": 1795133408,
+  "text": "⚡ 建議動手\n・**把備用機交給我**：先跑 `hermes plugins install phone-harness/phone-harness/integrations/hermes`；你插在 rin-box 的那支 ROG 已用 adb 接通，不用 root、也不用在手機上裝東西。大約 15 分鐘。之後手機上的事我自己看畫面、點、打字，你不用截圖貼過來。Shopee 小號照舊不碰。\n・**影片試著自己生成**：FreeVideo 當 ComfyUI 插件裝，3070 Ti 8GB 就能跑 MiniMax H3（含下載模型約 1 小時）。reel 不用只剪官方預告，能補自己的 B-roll。Windows 晚上休眠，要白天手動開。"
+ },
+ {
+  "job": "AI 工具日報",
+  "ts": 1795132888,
+  "text": "⚡ 建議動手\n・**把備用機交給我**：先跑 `hermes plugins install phone-harness/phone-harness/integrations/hermes`；你插在 rin-box 的那支 ROG 已用 adb 接通，不用 root、也不用在手機上裝東西。大約 15 分鐘。之後手機上的事我自己看畫面、點、打字，你不用截圖貼過來。Shopee 小號照舊不碰。\n・**影片試著自己生成**：FreeVideo 當 ComfyUI 插件裝，3070 Ti 8GB 就能跑 MiniMax H3（含下載模型約 1 小時）。reel 不用只剪官方預告，能補自己的 B-roll。Windows 晚上休眠，要白天手動開。\n\n第一節｜AI 工具\n1. **Clairic／Clairic-flash**（Cloudflare，11/18 開源權重，Apache 2.0）｜與聊天模型不同，它是抽取模型：你給欄位名，它從收據、發票、PDF 直接回傳總額、日期、明細（27B／9B flash）。\n2. 對我們有用：小店進貨單跟收據能整批變表格，不用手打；flash 版 4-bit 約 7GB，3070 Ti 吃得下，也能直接打 Workers AI（目前每百萬輸入 token $0.10）。\n3. 結論：值得試。\n4. **Hermes Agent canary v0.23.2**（11/19）｜這輪幾乎全是快取與壓縮的帳單修正：過期快取改用對話的暖前綴做摘要、prompt-cache 生命週期收成一個 package，還修了「1 小時寫入被按 5 分鐘計價」這類錯帳。\n5. 對我們有用：直接關係額度燒得多快，長對話壓縮那條最有感。\n6. 結論：值得試，但等進正式版再升，canary 不追。\n7. **OpenCode v2.3.2**（11/18）｜修好 GPT-6.2 系統提示每一步都被當未快取輸入重複計費，每步未快取輸入從約 14,000 token 降到 3。\n8. 對我們有用：我們走 deepseek-v4.1-flash，不吃這條；只是提醒同類計費坑別家也可能有。\n9. 結論：不用管。\n10. **Claude Code v2.1.329**（11/19）｜修一堆東西，跟我們沾邊的只有 Code Mode 的失控迴圈會吃滿整台機器記憶體（已加上限），還有 hook 載入失敗現在會明講。\n11. 對我們有用：沒在跑 Claude Code，只有「記憶體被吃滿」這條當警訊記著。\n12. 結論：不用管。\n\n第二節｜🔧 新奇專案\n・**PaperOrchestra**（google-research）：多 agent 流水線自動寫 AI 論文，研究→寫→審→改→定稿一條龍，昨天一天 +1,196 stars。\n　玩法：叫它寫一篇「二手遊戲機跨境套利"
+ },
+ {
   "job": "voucher daily",
-  "ts": 1795123645,
-  "text": "今天沒有變化：未用 27 張 RM2577。"
+  "ts": 1795131322,
+  "text": "今天沒有變化：未用 9 張 RM696"
+ },
+ {
+  "job": "社群熱度",
+  "ts": 1795131008,
+  "text": "社群熱度選題 — 最近 30 天（Reddit 遊戲 0 則 / HN 60 則）\n\n 1. [HN 4059▲ 3492💬] Jensen Huang resigns\n    https://apnews.com/article/nvidia-megaspeed-china-singapore-huang-5403f152a601cf82ce939f1d24fffa0f\n 2. [HN 3314▲ 769💬] Patrick Stewart has died\n    https://www.nytimes.com/2026/10/29/arts/television/patrick-stewart-dead.html\n 3. [HN 3007▲ 751💬] sshole\n    https://sshhole.com\n 4. [HN 2971▲ 902💬] Astra can read and write weights to improve Qwen\n    https://rikiyat.github.io/blog/weight-space-programming/\n\n⚠️ 抓取有問題的來源：\n  - Reddit: HTTPError HTTP Error 404: Not Found"
  },
  {
   "job": "生活記錄",
@@ -38,41 +73,6 @@
   "job": "今日新聞",
   "ts": 1795090053,
   "text": "📰 今天值得看的\n・GTA6 正式上市 212GB 容量展開\n・櫻蘭 20 周年 聯名餐廳今起台北開幕\n・魔法騎士 鳳凰寺風 1/7 フィギュア\n・馬來西亞 29 日起公開災害警報測試\n・Google 發表 Gemini 4 Neon\n・NVIDIA 驅動寫入 SSD 每小時 30GB\n・微軟 免費 AI Agent 課程 18 堂\n\n🔥 今天在討論\n馬來西亞熱搜在刷韓國偶像與劇集話題（NCT127 進駐、LUCIA、5SOS、Robert Pattinson），GTA 6 上市讓 Rockstar 與 GTA 系列持續齊上榜；政治與時尚頒獎也偶爾冒出。\n\ndigest 已寫：`/home/rin/AI/news/digest.json`（7 條，順序與上列一致，link 皆取自 items.json 原值）"
- },
- {
-  "job": "SNKRDUNK 卡價",
-  "ts": 1795050009,
-  "text": "SNKRDUNK 變化\n📈 3rd Anniversary Set — ENGLISH\n   在售 57 → 60 件\n   最低在售 ¥61,500 → ¥61,400\n📈 3rd Anniversary Set — CHINA\n   在售 59 → 58 件\n   最低在售 ¥41,000 → ¥40,500"
- },
- {
-  "job": "CeX 早安",
-  "ts": 1795049377,
-  "text": "昨天 CeX 的動靜：\n\n🆕 新上架\n・MSI GeForce RTX 3080 Ti 12GB Ventus 3X（顯卡）RM2600\n・Nintendo 3DS 瑪莉歐黑色特別版（3DS）RM950\n・Nintendo DSi 機王貳貓特別版（DSi）RM800\n・PSP Slim & Lite 3000《怪物獵人 3rd 限量版》（PSP）RM700\n・Switch 2《Fantasian Neo Dimension》（Switch 2）RM180\n・PS5《Demon Slayer Kimetsu No Yaiba：Sweep the Board!》（PS5）RM120\n\n📉 降價\n・Logitech G Pro X Superlight 2C 黑（手把）RM500 → RM450\n・Logitech G Pro X2 Superstrike 落月色（手把）RM700 → RM600\n・ASUS ROG Ally X 4TB（掌機）RM4200 → RM3800\n・Lenovo Legion Go 2 32GB+2TB（掌機）RM6300 → RM5700\n・Logitech G Pro X Superlight 2 黑（手把）RM500 → RM450\n・Logitech G Pro X Superlight 2C 粉（手把）RM550 → RM480\n\n📦 回架\n・PS5《One Piece: Pirate Warriors 4》\n・PS5《Nioh 3》\n・PS4《Call of Duty: Modern Warfare (2019)》\n・Switch《Go Vacation》\n・PS5 Pro 2TB 白（主機）\n・PSP Slim & Lite 3000《怪物獵人 3rd 限量版》（主機）\n\n🚫 賣光\n・Switch《EA Sports FC 27》\n・PS4《Minecraft: Story Mode》\n・PS4《Call of Duty: Modern Warfare (2019)》\n・PS3《NBA 2K16》\n・PS4《WWE 2K17》\n・Xbox One《Just Dance 2016》\n\n資料範圍：2026-11-18 00:00 至 2026-11-19 00:00 馬來西亞時間（detected_at 2026-11-17T16:00Z 至 2026-11-18T16:00Z），共 3718 筆變化。各欄僅保留「遊戲片／主機／稀有硬體」優先、數位商品／代儲／帳號排除，每欄各 6 條。降價那欄本地幾乎全是手把與掌機折扣，遊戲主機本身沒出現降價。"
- },
- {
-  "job": "cex 0830",
-  "ts": 1795048318,
-  "text": "健康檢查：20261119083004（範圍 web，77732 筆）\n  ✅ freshness  資料 0.0 小時前抓的\n  ✅ volume     筆數 77732（與上次 77730 差 0.00%）\n  ✅ schema     60 個欄位，與上次指紋一致\n  ✅ quality    77732 筆：主鍵無重複、標價與名稱完整\n  ✅ heartbeat  距上次抓取 10.5 小時（20261118220005 → 20261119083004）\n\n全部正常"
- },
- {
-  "job": "kl daily brief",
-  "ts": 1795048265,
-  "text": "☀️ 今日 11/19 (Thu)\n\n天氣：24–31°C，最高降雨機率 96%\n　降雨時段：12:00（52%）、13:00（73%）、14:00（88%）、15:00（94%）、16:00（96%）、17:00（94%）\n\nMid Valley 本週活動（5 項）\n・ITSU Roadshow — Centre Court (CC), Lower Ground Floor\n　16 Nov - 22 Nov 2026\n・MyBeauty & Cosmetics Expo — Atrium, Mid Valley Exhibition Centre (MVEC), Third Floor, Centre Court\n　19 Nov - 22 Nov 2026\n・CelcomDigi Pop Up — East Atrium (EEA), Ground Floor\n　16 Nov - 22 Nov 2026\n・Glad 2 Glow by Watsons — North Court (NC), Ground Floor\n　16 Nov - 22 Nov 2026\n\n雪隆活動（未來 14 天，命中興趣 1 項）\n・11/27 Resilience by Design: Are You Scaling AI or Scal\n　The Ruma Hotel and Residences\n\n電子／玩具優惠\n・ALL IT Hypermarket Malaysia 11.11 Promotion – Enjoy \n　11-05→11-20\n・PC Image Hypershell Malaysia: 11.11 Exclusive Sale –\n　11-05→11-20\n・TBM Malaysia Axtra Dreams Monthly Home Consultation \n　11-15→11-21　All TBM Outlets\n・Harvey Norman Malaysia Black Friday Early Deals Sale\n　11-21→11-22\n・LG Year-End Home Fest 2026: Discover Exclusive LG Su\n　11-19→11-22　Pavilion Bukit Jalil\n・Ban Hin Bee (BHB) Warehouse Sale – Up to 70% OFF Hom\n　11-19→11-22\n\n大型活動（會展／體育館）\n・11-22 My Art My Story Book Launching\n　Tsutaya Books Bukit Jalil\n・11-27 Resilience by Design: Are You Scaling AI or \n　The Ruma Hotel and Re"
- },
- {
-  "job": "ai research push",
-  "ts": 1795047008,
-  "text": "⚡ 建議動手\n・叫我把 Hermes 插件一次更新（`hermes plugins update`）— 約 3 分鐘，之後社群插件不用一顆顆手動點，卡在舊版的小毛病也順帶消掉。\n・裝 last30days 技能，挑一個題目試跑（約 10 分鐘、免費、不用 API key）— 查卡價或 CeX 風向時，看的是真人討論和用真錢押注的賠率，不是新聞稿。"
- },
- {
-  "job": "AI 工具日報",
-  "ts": 1795046492,
-  "text": "AI 工具日報 · 11/19（四）\n\n⚡ 建議動手\n・叫我把 Hermes 插件一次更新（`hermes plugins update`）— 約 3 分鐘，之後社群插件不用一顆顆手動點，卡在舊版的小毛病也順帶消掉。\n・裝 last30days 技能，挑一個題目試跑（約 10 分鐘、免費、不用 API key）— 查卡價或 CeX 風向時，看的是真人討論和用真錢押注的賠率，不是新聞稿。\n\n第一節｜AI 工具\n・Hermes Agent：canary 頻道更新到 v0.23.2（11/18），以下都是 release notes 裡看得到的實條目。\n・近期幾版有：插件可一次全更新、可選自動更新，付費 MCP 工具會先標價並在單次對話超支前先詢問（連 YOLO 模式也擋），Esc 按兩下可倒帶、改提問重發；插件目錄從約 600 增至 1050 個，另加官方認證層。\n・值得試，但等 canary 轉 stable 再上；現在先知道有這些就好。\n\n・OpenCode：更新到 v2.3.2，前後兩版的重點都在省 token。\n・GPT 系列的系統提示改成可快取的 developer 訊息（官方數字：某路由每步未快取輸入由約 14,000 token 降到 3）；摘要壓縮改成背景寫、不卡下一句；指令超時也不再被直接終止，轉背景跑完。\n・觀察就好，我們沒在用它；但那兩個省錢設計值得當習慣抄過來。\n\n・Claude Code：v2.1.327，整版幾乎都是修 bug、沒有新花樣。\n・只有兩件有用：`/status` 現在會列出壞掉的 skill、command、hook，以及永遠不會命中的 hook 規則；`claude mcp add-json -` 改從 stdin 讀 JSON，token 不再留在指令列。\n・觀察就好（那份「壞掉清單」，我們自己的 skills 也該有一份）。\n\n・last30days-skill：今天 GitHub trending 第一，一個 agent 技能，同時掃 Reddit、X、YouTube、HN、Polymarket、GitHub，再彙整成一份簡報。\n・Reddit、HN、Polymarket、GitHub 零設定就能跑、免費免 key，找「真人在講什麼」比 Google 準得多。\n・值得試，上面建議動手裝的就是它。\n\n第二節｜🔧 新奇專案\n・wifi-sensing-kit：三塊約 10 美元的 ESP32-S3，先讓網路攝影機當老師訓練，之後把鏡頭蓋掉，光靠 WiFi 訊號就能分辨你在坐、蹲、跳、轉圈（8 種動作 79.5%，亂猜是 12.5%）。\n・玩法少見在「攝影機教 WiFi 認人，然後把攝影機拿走」；等於一種沒有影像的監視，換房間或換人就得分別重練。\n・pueo：把「便宜黃色小螢幕」那塊 ESP32 做成掌上多無線電工具，"
- },
- {
-  "job": "社群熱度",
-  "ts": 1795044608,
-  "text": "社群熱度選題 — 最近 30 天（Reddit 遊戲 0 則 / HN 60 則）\n\n 1. [HN 4059▲ 3490💬] Jensen Huang resigns\n    https://apnews.com/article/nvidia-megaspeed-china-singapore-huang-5403f152a601cf82ce939f1d24fffa0f\n 2. [HN 3314▲ 769💬] Patrick Stewart has died\n    https://www.nytimes.com/2026/10/29/arts/television/patrick-stewart-dead.html\n 3. [HN 3007▲ 751💬] sshole\n    https://sshhole.com\n 4. [HN 2971▲ 902💬] Astra can read and write weights to improve Qwen\n    https://rikiyat.github.io/blog/weight-space-programming/\n\n⚠️ 抓取有問題的來源：\n  - Reddit: HTTPError HTTP Error 404: Not Found"
  },
  {
   "job": "go renew monthly",

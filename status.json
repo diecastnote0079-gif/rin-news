@@ -1,19 +1,19 @@
 {
- "updated": 1795131003,
+ "updated": 1795138203,
  "quota": {
   "rolling": 98,
   "weekly": 85,
   "monthly": 93,
-  "reset_rolling": "2h 17m",
-  "reset_weekly": "3d 0h",
-  "reset_monthly": "27d 17h"
+  "reset_rolling": "17m",
+  "reset_weekly": "2d 22h",
+  "reset_monthly": "27d 15h"
  },
  "host": {
-  "load": 0.31,
-  "mem_pct": 18,
+  "load": 0.67,
+  "mem_pct": 17,
   "disk_pct": 20,
   "disk_free_gb": 344,
-  "uptime_h": 77
+  "uptime_h": 79
  },
  "memory": {
   "memory": {
@@ -28,18 +28,13 @@
   }
  },
  "cron": {
-  "enabled": 42,
+  "enabled": 41,
   "failed": 1,
   "failed_names": [
    "product-pages-rebuild"
   ]
  },
  "reminders": [
-  {
-   "name": "BF 遊戲掃描",
-   "date": "11/20",
-   "days": 0
-  },
   {
    "name": "reminder urban republic sale",
    "date": "11/25",
