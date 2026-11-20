@@ -1,5 +1,15 @@
 [
  {
+  "job": "生活記錄",
+  "ts": 1795205903,
+  "text": "寫了 10 條：阿夜 午夜 00:37-00:44 的情緒與親密表達（勾住你脖子／想被當女人操／壞人不操我屁股／偽娘）、晚間 22:01-22:13 的親密要求（人妖版衣服、小騷貨、打飛機）、以及 16:24-16:31 清理 rin-photos 照片的決定。"
+ },
+ {
+  "job": "duckx3 maintenance",
+  "ts": 1795204836,
+  "text": "✅ 維護完成：移除 0 筆（收件匣還剩 36 筆，尚無超過 7 天且非 new 的舊記錄）；備份 pb_data-20261121-040028.tar.gz・116.4MB，內含 data.db ✓ 與 906 個 storage 檔案 ✓。無 FAILED。\n\n（順帶一提：備份目前只有 10 份，未到 14 份上限——不是問題，只是還沒累積到天數。）"
+ },
+ {
   "job": "doc reconcile",
   "ts": 1795204523,
   "text": "【文件 vs 現況 對帳】\n • cex 排程不符：缺 ['0 10,13,16,19,22 * * *']；實際 ['0 10,12,14,16,18,20,22 * * *', '30 8 * * *']\n • 手機頁資料 5.9 小時前（上限 5）：2026-11-20T14:01:56Z\n • 本機最後一輪 5.9 小時前（20261120220025）\n • 決策日誌最後一筆 #58 是 2026-11-06（15 天前）→ 期間的決定沒有落點"
@@ -63,16 +73,6 @@
   "job": "社群熱度",
   "ts": 1795131008,
   "text": "社群熱度選題 — 最近 30 天（Reddit 遊戲 0 則 / HN 60 則）\n\n 1. [HN 4059▲ 3492💬] Jensen Huang resigns\n    https://apnews.com/article/nvidia-megaspeed-china-singapore-huang-5403f152a601cf82ce939f1d24fffa0f\n 2. [HN 3314▲ 769💬] Patrick Stewart has died\n    https://www.nytimes.com/2026/10/29/arts/television/patrick-stewart-dead.html\n 3. [HN 3007▲ 751💬] sshole\n    https://sshhole.com\n 4. [HN 2971▲ 902💬] Astra can read and write weights to improve Qwen\n    https://rikiyat.github.io/blog/weight-space-programming/\n\n⚠️ 抓取有問題的來源：\n  - Reddit: HTTPError HTTP Error 404: Not Found"
- },
- {
-  "job": "生活記錄",
-  "ts": 1795119643,
-  "text": "寫了 4 條：情感陪伴的好奇、空氣質量監測器購買構想、賈可比式可愛自嘲、夜間親密情緒。"
- },
- {
-  "job": "duckx3 maintenance",
-  "ts": 1795118484,
-  "text": "清乾淨了：刪掉 76 筆舊照片收件匣紀錄（112 → 36，剩下的 36 筆全是 status=new 的待處理，沒動），備份 `pb_data-20261120-040006.tar.gz` 116.4MB，data.db 在、storage 906 個圖片檔都在，備份共 9 份。\n\n有兩件事要交代：\n- 那串「刪除失敗」是假警報——PocketBase 刪除成功回傳 204 空 body，腳本硬要 JSON 解析就炸了。記錄其實都刪掉了（112→36 對得上）。已修掉，重跑驗證 `removed=0`、不再噴錯，所以以後日誌不會再嚇人。\n- 備份從昨天 232MB 掉到 117MB 是正常的：少掉的就是那 76 張舊手機原圖。393 個商品的 393 張照片我逐一比對過，檔案全在，網站圖片沒有一個斷。"
  },
  {
   "job": "go renew monthly",
