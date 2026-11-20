@@ -1,7 +1,71 @@
 {
- "updated": "2026-11-20T20:22:11+08:00",
+ "updated": "2026-11-21T04:33:17+08:00",
  "count": 183,
  "items": [
+  {
+   "cat": "game",
+   "title": "《Mr. Magpie's Harmless Card Game》2027 年 2 月 18 日推出",
+   "note": "以卡牌為主題的新作，定在 2027 年 2 月中上市。",
+   "source": "Gematsu",
+   "ts": 1795204203,
+   "added": "2026-11-21T04:33:17+08:00"
+  },
+  {
+   "cat": "game",
+   "title": "GTA 6 首日零售額 37.9 億美元、預購 3,250 萬套",
+   "note": "Take-Two 稱創遊戲史最大發行規模，換算平均每套約 117 美元。",
+   "source": "Gematsu",
+   "ts": 1795203315,
+   "added": "2026-11-21T04:33:17+08:00"
+  },
+  {
+   "cat": "game",
+   "title": "生存恐怖新作《Ugly Within》由 Serafini 發行",
+   "note": "第三人稱恐怖，登上 PS5、Xbox Series 與 Switch。",
+   "source": "Gematsu",
+   "ts": 1795201226,
+   "added": "2026-11-21T04:33:17+08:00"
+  },
+  {
+   "cat": "game",
+   "title": "《BrokenLore: MIKI-CHAN》追加 Switch 2 版",
+   "note": "原本的 PC／Switch 恐怖作補上 Switch 2 版本。",
+   "source": "Gematsu",
+   "ts": 1795200033,
+   "added": "2026-11-21T04:33:17+08:00"
+  },
+  {
+   "cat": "tech",
+   "title": "HyperX Cloud II 電競耳機 Amazon 特價中",
+   "note": "老牌有線電競耳機在 Amazon 降價。",
+   "source": "games.gg",
+   "ts": 1795189273,
+   "added": "2026-11-21T04:33:17+08:00"
+  },
+  {
+   "cat": "game",
+   "title": "《絕區零》3.4 版 12 月 2 日上線",
+   "note": "改版名「The Finality of the Day」，12 月 2 日實裝。",
+   "source": "Gematsu",
+   "ts": 1795179915,
+   "added": "2026-11-21T04:33:17+08:00"
+  },
+  {
+   "cat": "game",
+   "title": "《Temtem: Swarm》Switch 版 2027 年 1 月 21 日發售",
+   "note": "Temtem 的 Roguelite 外傳正式登陸 Switch。",
+   "source": "Gematsu",
+   "ts": 1795179617,
+   "added": "2026-11-21T04:33:17+08:00"
+  },
+  {
+   "cat": "game",
+   "title": "《Chasing Kaleidorider》封閉測試 12 月 17 日開跑",
+   "note": "封測名為「Doki Test」，12 月 17 日開始。",
+   "source": "Gematsu",
+   "ts": 1795176013,
+   "added": "2026-11-21T04:33:17+08:00"
+  },
   {
    "cat": "game",
    "title": "成人向《跟我開房！不然我曝光你小帳！》登 Steam",
@@ -1395,76 +1459,12 @@
    "added": "2026-11-14T12:14:41+08:00"
   },
   {
-   "cat": "tech",
-   "title": "CMP 170HX 礦卡破解熔絲鎖變 80GB A100",
-   "note": "用不到 10 美元的 STM32 板燒斷 NVIDIA 熔絲，8GB 礦卡改成 80GB、85.9 TFLOPS 跑贏兩萬美元原版；二手礦卡價已從 200 漲到 3,000 美元。",
-   "source": "電腦王阿達",
-   "ts": 1794595400,
-   "added": "2026-11-14T04:01:30+08:00"
-  },
-  {
-   "cat": "game",
-   "title": "《God of War: Sons of Sparta》11/16 登 PS4",
-   "note": "同步推免費內容更新，2026 年的新作還回頭照顧 PS4 玩家。",
-   "source": "Gematsu",
-   "added": "2026-11-13T22:51:00+08:00",
-   "ts": 1794582328
-  },
-  {
-   "cat": "game",
-   "title": "《俠盜獵車手 6》PS5 實體版開箱：盒裡沒有光碟",
-   "note": "11/19 發售，包裝內只有印在封面紙內側的下載代碼＋雙面海報，標準版 NT$2,320。",
-   "source": "巴哈 GNN",
-   "added": "2026-11-13T22:51:00+08:00",
-   "ts": 1794582276
-  },
-  {
-   "cat": "game",
-   "title": "PS5 基礎版 AI 升頻 QSSR 擴大到 6 款遊戲",
-   "note": "蜘蛛人 2、ARC Raiders、No Man's Sky 等加入，不必買 Pro 也有近似升頻。",
-   "source": "Gematsu",
-   "added": "2026-11-13T22:51:00+08:00",
-   "ts": 1794581016
-  },
-  {
-   "cat": "game",
-   "title": "《GTA 6》遊戲內動畫影集「Macca & Friends」預告",
-   "note": "Rockstar 在遊戲裡塞了一整套自製動畫節目，先放前導預告。",
-   "source": "Gematsu",
-   "added": "2026-11-13T22:51:00+08:00",
-   "ts": 1794580164
-  },
-  {
-   "cat": "game",
-   "title": "《Forest Escape: Last Train》確認登陸 PS5",
-   "note": "PS5 版確定、同步公開新地點；原本以 PC 為主的獨立作，主機版照樣排進來。",
-   "source": "Gematsu",
-   "ts": 1794579748,
-   "added": "2026-11-14T00:57:16+08:00"
-  },
-  {
-   "cat": "game",
-   "title": "《Lucky Luke》合集宣布，全平台含 Switch 2",
-   "note": "Atari 旗下 Infogrames 復活老西部 IP，PS5／Xbox／Switch 2／PC 同步。",
-   "source": "Gematsu",
-   "added": "2026-11-13T22:51:00+08:00",
-   "ts": 1794579302
-  },
-  {
    "cat": "game",
    "title": "跨境電商出現可客製的 PSA 假標籤，認證編號都能盜用",
    "note": "貼紙＋空卡磚就能把任意寶可夢卡裝成 PSA 評級卡，編號是真的、殼是假的，光查號已分不出",
    "source": "4Gamers",
    "ts": 1794562475,
    "added": "2026-11-14T10:11:20+08:00"
-  },
-  {
-   "cat": "game",
-   "title": "《STRANGER THAN HEAVEN》Act 2「吳」故事預告",
-   "note": "SEGA／人龍工作室新 IP 第二幕預告，繼續鋪世界觀。",
-   "source": "Gematsu",
-   "added": "2026-11-13T22:51:00+08:00",
-   "ts": 1794387610
   }
  ]
 }
