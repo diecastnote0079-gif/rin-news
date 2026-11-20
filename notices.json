@@ -1,5 +1,10 @@
 [
  {
+  "job": "cex 2h",
+  "ts": 1795140135,
+  "text": "健康檢查：20261120100003（範圍 web，77848 筆）\n  ✅ freshness  資料 0.0 小時前抓的\n  ✅ volume     筆數 77848（與上次 77848 差 0.00%）\n  ✅ schema     60 個欄位，與上次指紋一致\n  ✅ quality    77848 筆：主鍵無重複、標價與名稱完整\n  ✅ heartbeat  距上次抓取 1.5 小時（20261120083002 → 20261120100003）\n\n全部正常\n發布驗證：第 1 次重試後線上已追上（run=20261120100003）"
+ },
+ {
   "job": "SNKRDUNK 卡價",
   "ts": 1795136410,
   "text": "SNKRDUNK 變化\n📈 3rd Anniversary Set — ENGLISH\n   在售 60 → 59 件\n   最低在售 ¥61,400 → ¥60,500\n📈 3rd Anniversary Set — CHINA\n   在售 58 → 57 件\n📈 Luffy SEC-RSP OP13-118\n   PSA10 ¥2,998,000 → ¥2,900,000"
@@ -63,11 +68,6 @@
   "job": "nightly reflection",
   "ts": 1795102394,
   "text": "三條已寫入，全部落在既有段落，沒有新增段落：\n\n- **hunting-cex** 1 條（Task 4 判斷順序第 7 點）：答「某店有什麼值得看」要遊戲／主機分兩段，遊戲那段不能空。\n- **engineering-principles** 1 條（Basis before conclusion）：他的過去不能當素材編，「你之前…」只能引用記錄。\n- **small-commerce-site** 1 條（文案 prompt 硬規則旁）：舊文案是 Shopee 抄的，不可當素材改寫，要重寫並連舊 desc 一起換掉。\n\n今天其餘的打槍（commit 不 push、$500 額度 vs 模型池、`config set` 陣列假 key、封面兩輪核對、官網價 vs App 價）在對應 skill 裡已經有規則，沒有重寫。"
- },
- {
-  "job": "cex 2h",
-  "ts": 1795096938,
-  "text": "健康檢查：20261119220004（範圍 web，77852 筆）\n  ✅ freshness  資料 0.0 小時前抓的\n  ✅ volume     筆數 77852（與上次 77842 差 0.01%）\n  ✅ schema     60 個欄位，與上次指紋一致\n  ✅ quality    77852 筆：主鍵無重複、標價與名稱完整\n  ✅ heartbeat  距上次抓取 2.0 小時（20261119200004 → 20261119220004）\n\n全部正常\n發布驗證：第 1 次重試後線上已追上（run=20261119220004）"
  },
  {
   "job": "今日新聞",
