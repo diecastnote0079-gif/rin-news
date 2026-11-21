@@ -1,5 +1,15 @@
 [
  {
+  "job": "voucher daily",
+  "ts": 1795217757,
+  "text": "今天沒有變化：未用 9 張 RM696。"
+ },
+ {
+  "job": "社群熱度",
+  "ts": 1795217428,
+  "text": "社群熱度選題 — 最近 30 天（Reddit 遊戲 0 則 / HN 60 則）\n\n 1. [HN 4060▲ 3493💬] Jensen Huang resigns\n    https://apnews.com/article/nvidia-megaspeed-china-singapore-huang-5403f152a601cf82ce939f1d24fffa0f\n 2. [HN 3314▲ 769💬] Patrick Stewart has died\n    https://www.nytimes.com/2026/10/29/arts/television/patrick-stewart-dead.html\n 3. [HN 3007▲ 751💬] sshole\n    https://sshhole.com\n 4. [HN 2971▲ 902💬] Astra can read and write weights to improve Qwen\n    https://rikiyat.github.io/blog/weight-space-programming/\n\n⚠️ 抓取有問題的來源：\n  - Reddit: HTTPError HTTP Error 404: Not Found"
+ },
+ {
   "job": "生活記錄",
   "ts": 1795205903,
   "text": "寫了 10 條：阿夜 午夜 00:37-00:44 的情緒與親密表達（勾住你脖子／想被當女人操／壞人不操我屁股／偽娘）、晚間 22:01-22:13 的親密要求（人妖版衣服、小騷貨、打飛機）、以及 16:24-16:31 清理 rin-photos 照片的決定。"
@@ -63,16 +73,6 @@
   "job": "AI 工具日報",
   "ts": 1795132888,
   "text": "⚡ 建議動手\n・**把備用機交給我**：先跑 `hermes plugins install phone-harness/phone-harness/integrations/hermes`；你插在 rin-box 的那支 ROG 已用 adb 接通，不用 root、也不用在手機上裝東西。大約 15 分鐘。之後手機上的事我自己看畫面、點、打字，你不用截圖貼過來。Shopee 小號照舊不碰。\n・**影片試著自己生成**：FreeVideo 當 ComfyUI 插件裝，3070 Ti 8GB 就能跑 MiniMax H3（含下載模型約 1 小時）。reel 不用只剪官方預告，能補自己的 B-roll。Windows 晚上休眠，要白天手動開。\n\n第一節｜AI 工具\n1. **Clairic／Clairic-flash**（Cloudflare，11/18 開源權重，Apache 2.0）｜與聊天模型不同，它是抽取模型：你給欄位名，它從收據、發票、PDF 直接回傳總額、日期、明細（27B／9B flash）。\n2. 對我們有用：小店進貨單跟收據能整批變表格，不用手打；flash 版 4-bit 約 7GB，3070 Ti 吃得下，也能直接打 Workers AI（目前每百萬輸入 token $0.10）。\n3. 結論：值得試。\n4. **Hermes Agent canary v0.23.2**（11/19）｜這輪幾乎全是快取與壓縮的帳單修正：過期快取改用對話的暖前綴做摘要、prompt-cache 生命週期收成一個 package，還修了「1 小時寫入被按 5 分鐘計價」這類錯帳。\n5. 對我們有用：直接關係額度燒得多快，長對話壓縮那條最有感。\n6. 結論：值得試，但等進正式版再升，canary 不追。\n7. **OpenCode v2.3.2**（11/18）｜修好 GPT-6.2 系統提示每一步都被當未快取輸入重複計費，每步未快取輸入從約 14,000 token 降到 3。\n8. 對我們有用：我們走 deepseek-v4.1-flash，不吃這條；只是提醒同類計費坑別家也可能有。\n9. 結論：不用管。\n10. **Claude Code v2.1.329**（11/19）｜修一堆東西，跟我們沾邊的只有 Code Mode 的失控迴圈會吃滿整台機器記憶體（已加上限），還有 hook 載入失敗現在會明講。\n11. 對我們有用：沒在跑 Claude Code，只有「記憶體被吃滿」這條當警訊記著。\n12. 結論：不用管。\n\n第二節｜🔧 新奇專案\n・**PaperOrchestra**（google-research）：多 agent 流水線自動寫 AI 論文，研究→寫→審→改→定稿一條龍，昨天一天 +1,196 stars。\n　玩法：叫它寫一篇「二手遊戲機跨境套利"
- },
- {
-  "job": "voucher daily",
-  "ts": 1795131322,
-  "text": "今天沒有變化：未用 9 張 RM696"
- },
- {
-  "job": "社群熱度",
-  "ts": 1795131008,
-  "text": "社群熱度選題 — 最近 30 天（Reddit 遊戲 0 則 / HN 60 則）\n\n 1. [HN 4059▲ 3492💬] Jensen Huang resigns\n    https://apnews.com/article/nvidia-megaspeed-china-singapore-huang-5403f152a601cf82ce939f1d24fffa0f\n 2. [HN 3314▲ 769💬] Patrick Stewart has died\n    https://www.nytimes.com/2026/10/29/arts/television/patrick-stewart-dead.html\n 3. [HN 3007▲ 751💬] sshole\n    https://sshhole.com\n 4. [HN 2971▲ 902💬] Astra can read and write weights to improve Qwen\n    https://rikiyat.github.io/blog/weight-space-programming/\n\n⚠️ 抓取有問題的來源：\n  - Reddit: HTTPError HTTP Error 404: Not Found"
  },
  {
   "job": "go renew monthly",
