@@ -1,5 +1,10 @@
 [
  {
+  "job": "nightly reflection",
+  "ts": 1795275317,
+  "text": "改了 3 個 skill、共 3 條：**anima-image** 1 條（講「可本地跑」前先用 HF `blobs=true` 查檔案大小對 8.6GB，別先說能跑再改口）、**model-router** 1 條（工具型訂閱第一欄先查 API 額度，例：Google AI Pro $10/月 credit＋AI Studio 每日額度）、**local-inference** 1 條（他問「這張卡還能跑什麼」是指生圖／影片，別再提本地 LLM 省額度）。\n\n今天其餘的（排程被閘門擋、`tool_call` 漏 `name` 重試兩次）在既有規則或工具 schema 裡已經寫到，沒有重複堆。"
+ },
+ {
   "job": "cex 2h",
   "ts": 1795269737,
   "text": "健康檢查：20261121220024（範圍 web，77979 筆）\n  ✅ freshness  資料 0.0 小時前抓的\n  ✅ volume     筆數 77979（與上次 77976 差 0.00%）\n  ✅ schema     60 個欄位，與上次指紋一致\n  ✅ quality    77979 筆：主鍵無重複、標價與名稱完整\n  ✅ heartbeat  距上次抓取 2.0 小時（20261121200025 → 20261121220024）\n\n全部正常"
@@ -68,11 +73,6 @@
   "job": "pending review nightly",
   "ts": 1795204179,
   "text": "落 2 條：MEMORY.md 的密碼庫條目更新為「API key 走 Secrets Manager、值可讀 ~/.hermes/bws_cache.json、bw CLI 未登入別碰；Gmail 已接 IMAP 兩帳號、All Mail 用 LIST 的 \\All 找、CeX voucher 五欄在 PDF 附件」；USER.md 的「說明太長」條目補上「工具若要他自己抄資料，就等於没解決（還不如我直接找 email）」。  \n丟 2 條：3f9eb27a 裡兩筆只改措辭（Windows 改成 `tailscale last seen`、手機開 Tailscale 改成「攔 LAN」）與現有條目重複，不落。  \n水位：MEMORY.md 2,091/2,200（95%）、USER.md 1,341/1,375（97.5%）；兩份都已超過 92%，但找不到安全可合併的同義條目。  \n收尾：兩筆處理檔以 mv 移進 `~/.hermes/pending/memory.archive/`，`pending_sweep.py` 已跑完，pending/memory 目錄清空。"
- },
- {
-  "job": "nightly reflection",
-  "ts": 1795188731,
-  "text": "三個 skill 各改一條，全部已回讀確認落地。\n\n**rin-portal-ui**（1 條，改錯非新增）— 原本寫著「靠 eReceipt 主旨配對推斷已用」，那正是今天把 4 張新票誤標、總額假跌到 RM648 的原因。改成只認訂單信的 `Voucher used CeX : <code>`，eReceipt 是開票收據不是使用紀錄。\n\n**hermes-runtime-ops**（1 條）— phone-harness 在 Linux 上安裝全程印成功，實際是上游把 macOS Vision 當硬依賴，第一次呼叫才崩；記下每次重裝／升級後要跑 `ph_fix_macos.py`，而且驗收要實跑截圖＋`find_text`，不看安裝訊息。\n\n**disk-cleanup**（1 條）— 他說「這些沒什麼用的對吧」是在收線，不是要我交一份要他那邊動手的審查（那輪就是做了 1,072 張拼圖要他圈選，被一句「那些照片都不重要」推翻）；改成講清楚肥肉在哪、整批搬進可還原垃圾桶再等他說刪。\n\n其餘今天打槍的地方（下架＝停 tunnel 不是維護頁、備忘錄「手寫」＝打字、voucher 要人抄五欄等於沒做、glm 全庫 review 燒錢的算法）在現有 skill 裡已經寫到了，不重複堆。"
  },
  {
   "job": "go renew monthly",
