@@ -1,5 +1,10 @@
 [
  {
+  "job": "cex 2h",
+  "ts": 1795226534,
+  "text": "健康檢查：20261121100024（範圍 web，77913 筆）\n  ✅ freshness  資料 0.0 小時前抓的\n  ✅ volume     筆數 77913（與上次 77913 差 0.00%）\n  ✅ schema     60 個欄位，與上次指紋一致\n  ✅ quality    77913 筆：主鍵無重複、標價與名稱完整\n  ✅ heartbeat  距上次抓取 1.5 小時（20261121083025 → 20261121100024）\n\n全部正常"
+ },
+ {
   "job": "SNKRDUNK 卡價",
   "ts": 1795222832,
   "text": "SNKRDUNK 變化\n📈 3rd Anniversary Set — ENGLISH\n   最低在售 ¥60,500 → ¥60,400\n📈 3rd Anniversary Set — CHINA\n   在售 57 → 58 件\n   最低在售 ¥40,500 → ¥40,400\n📈 Luffy SEC-RSP OP13-118\n   PSA10 ¥2,900,000 → ¥2,948,000\n📈 Luffy SEC-SP EB04-061\n   PSA10 ¥1,700,000 → ¥1,695,000"
@@ -63,11 +68,6 @@
   "job": "nightly reflection",
   "ts": 1795188731,
   "text": "三個 skill 各改一條，全部已回讀確認落地。\n\n**rin-portal-ui**（1 條，改錯非新增）— 原本寫著「靠 eReceipt 主旨配對推斷已用」，那正是今天把 4 張新票誤標、總額假跌到 RM648 的原因。改成只認訂單信的 `Voucher used CeX : <code>`，eReceipt 是開票收據不是使用紀錄。\n\n**hermes-runtime-ops**（1 條）— phone-harness 在 Linux 上安裝全程印成功，實際是上游把 macOS Vision 當硬依賴，第一次呼叫才崩；記下每次重裝／升級後要跑 `ph_fix_macos.py`，而且驗收要實跑截圖＋`find_text`，不看安裝訊息。\n\n**disk-cleanup**（1 條）— 他說「這些沒什麼用的對吧」是在收線，不是要我交一份要他那邊動手的審查（那輪就是做了 1,072 張拼圖要他圈選，被一句「那些照片都不重要」推翻）；改成講清楚肥肉在哪、整批搬進可還原垃圾桶再等他說刪。\n\n其餘今天打槍的地方（下架＝停 tunnel 不是維護頁、備忘錄「手寫」＝打字、voucher 要人抄五欄等於沒做、glm 全庫 review 燒錢的算法）在現有 skill 裡已經寫到了，不重複堆。"
- },
- {
-  "job": "cex 2h",
-  "ts": 1795183338,
-  "text": "健康檢查：20261120220025（範圍 web，77908 筆）\n  ✅ freshness  資料 0.0 小時前抓的\n  ✅ volume     筆數 77908（與上次 77898 差 0.01%）\n  ✅ schema     60 個欄位，與上次指紋一致\n  ✅ quality    77908 筆：主鍵無重複、標價與名稱完整\n  ✅ heartbeat  距上次抓取 2.0 小時（20261120200025 → 20261120220025）\n\n全部正常"
  },
  {
   "job": "今日新聞",
