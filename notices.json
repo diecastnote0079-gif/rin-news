@@ -1,8 +1,13 @@
 [
  {
+  "job": "今日新聞",
+  "ts": 1795349127,
+  "text": "📰 今天值得看的\n・輝達遭勒索組織 資料10天後洩漏 官方稱系統未入侵\n・特斯拉 FSD v15 畫面像 GTA、官方說安全 25 倍\n・腦機接口 玩《GTA 6》 開車射擊都辦得到\n・AI 文字偵測器 辨識偽裝文字 準確率逾九成\n・明日方舟：終末地 2.0+ 11/25 開啟\n・哈塞瓦 名車模型 + 人形 限定套組登場\n🔥 今天在討論\n泰劇/韓劇重灌多（Khemjira 季尾、USMILE×ORM、PIL 新集、Meenbabe EP3），K-pop 那邊 Hwasa、Taeyang、BTS 祝福也有；F1 熱搜則是 LasVegas GP 與各隊名單。\n已寫到 /home/rin/AI/news/digest.json\n\n（條列由 4Gamers／科技新報／電腦王阿達／Hobby Japan 來源、6 條皆為 11-22 發布；熱點用 getdaytrends 馬來西亞 X 熱搜解析，無列清單。若你要我補一條別的類別也行。）"
+ },
+ {
   "job": "cex 2h",
-  "ts": 1795341733,
-  "text": "健康檢查：20261122180025（範圍 web，78029 筆）\n  ✅ freshness  資料 0.0 小時前抓的\n  ✅ volume     筆數 78029（與上次 78016 差 0.02%）\n  ✅ schema     60 個欄位，與上次指紋一致\n  ✅ quality    78029 筆：主鍵無重複、標價與名稱完整\n  ✅ heartbeat  距上次抓取 2.0 小時（20261122160025 → 20261122180025）\n\n全部正常"
+  "ts": 1795348933,
+  "text": "健康檢查：20261122200025（範圍 web，78042 筆）\n  ✅ freshness  資料 0.0 小時前抓的\n  ✅ volume     筆數 78042（與上次 78029 差 0.02%）\n  ✅ schema     60 個欄位，與上次指紋一致\n  ✅ quality    78042 筆：主鍵無重複、標價與名稱完整\n  ✅ heartbeat  距上次抓取 2.0 小時（20261122180025 → 20261122200025）\n\n全部正常"
  },
  {
   "job": "SNKRDUNK 卡價",
@@ -73,11 +78,6 @@
   "job": "nightly reflection",
   "ts": 1795275317,
   "text": "改了 3 個 skill、共 3 條：**anima-image** 1 條（講「可本地跑」前先用 HF `blobs=true` 查檔案大小對 8.6GB，別先說能跑再改口）、**model-router** 1 條（工具型訂閱第一欄先查 API 額度，例：Google AI Pro $10/月 credit＋AI Studio 每日額度）、**local-inference** 1 條（他問「這張卡還能跑什麼」是指生圖／影片，別再提本地 LLM 省額度）。\n\n今天其餘的（排程被閘門擋、`tool_call` 漏 `name` 重試兩次）在既有規則或工具 schema 裡已經寫到，沒有重複堆。"
- },
- {
-  "job": "今日新聞",
-  "ts": 1795262686,
-  "text": "📰 今天值得看的\n・GTA6 首日 3,250 萬套 創娛樂產品新記錄\n・日本 SLG《自宅警備員》繁中版 12 月 開賣\n・《アズレン》《NIKKE》フィギュア 秋葉原展示\n・YTL Power 否認協助中國獲 Nvidia\n・黎曼猜想 兩份證明 同日出現：Claude 協作版\n・亞馬遞封 AI 購物，AWS 開放 AI 買軟體\n・川普威脅對海外 AI 資料中心課重稅\n\n🔥 今天在討論\n馬來西亞的 X 話題偏娛樂：韓國偶像連環開唱（Hwasa、BTS 歲慶、TAEYANG、BIGBANG）、韓劇《Forcebook LAG EP4》尾韻與《ZEEBUS》新作。國際面則有 Myanmar 局勢、Rohingya 難民、Ferrari 及 Kimi 賽車話題。\n\n已用 python 讀 items.json 做選擇，熱搜來 getdaytrends.com Malaysia 45 個話題解析（真實 <a class=\"string\"> 連結，非標題指定的 class）。結構化檔案寫好了：**/home/rin/AI/news/digest.json**（date 2026-11-21、updated 20:00+08、7 條 items 順序一致、link/ts 來源確認、無虛構）、discussion 為上段兩句。"
  },
  {
   "job": "go renew monthly",

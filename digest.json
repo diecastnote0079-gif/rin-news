@@ -1,14 +1,43 @@
 {
-  "date": "2026-11-21",
-  "updated": "2026-11-21T20:00:00+08:00",
+  "date": "2026-11-22",
+  "updated": "2026-11-22T20:00:00+08:00",
   "items": [
-    {"text": "GTA6 首日 3,250 萬套 創娛樂產品新記錄", "link": "https://www.4gamers.com.tw/news/detail/83440/grand-theft-auto-vi-tops-3-79-billion-in-day-one", "source": "4Gamers", "ts": 1795220991},
-    {"text": "日本 SLG《自宅警備員》繁中版 12 月 開賣", "link": "https://www.4gamers.com.tw/news/detail/83433/classic-slg-launch-on-072-project", "source": "4Gamers", "ts": 1795170649},
-    {"text": "《アズレン》《NIKKE》フィギュア 秋葉原展示", "link": "https://hobby.dengeki.com/news/3241198/", "source": "電撃Hobby", "ts": 1795248000},
-    {"text": "YTL Power 否認協助中國獲 Nvidia", "link": "https://soyacincau.com/2026/11/21/ytl-power-denies-helping-china-obtain-nvidia-cpu-johor-data-centre/", "source": "SoyaCincau", "ts": 1795225781},
-    {"text": "黎曼猜想 兩份證明 同日出現：Claude 協作版", "link": "https://cyberq.tw/2026/11/21/why-did-a-hasty-announcement-cause-such/", "source": "CyberQ", "ts": 1795223091},
-    {"text": "亞馬遞封 AI 購物，AWS 開放 AI 買軟體", "link": "https://www.inside.com.tw/article/42977-amazon-aws-marketplace-ai-agent-shopping-x402-payments", "source": "INSIDE", "ts": 1795248420},
-    {"text": "川普威脅對海外 AI 資料中心課重稅", "link": "https://www.inside.com.tw/article/42975-trump-threatens-tax-us-companies-overseas-ai-data-centers", "source": "INSIDE", "ts": 1795245060}
+    {
+      "text": "輝達遭勒索組織 資料10天後洩漏 官方稱系統未入侵",
+      "link": "https://infosecu.technews.tw/2026/11/22/nvidia-ransom-demand-by-the-gentlemen-leak-timer-under-10-days/",
+      "source": "科技新報",
+      "ts": 1795338016
+    },
+    {
+      "text": "特斯拉 FSD v15 畫面像 GTA、官方說安全 25 倍",
+      "link": "https://www.kocpc.com.tw/archives/704294",
+      "source": "電腦王阿達",
+      "ts": 1795330473
+    },
+    {
+      "text": "腦機接口 玩《GTA 6》 開車射擊都辦得到",
+      "link": "https://www.4gamers.com.tw/news/detail/83446/neuralink-can-play-gta6",
+      "source": "4Gamers",
+      "ts": 1795329700
+    },
+    {
+      "text": "AI 文字偵測器 辨識偽裝文字 準確率逾九成",
+      "link": "https://technews.tw/2026/11/22/helping-ai-text-detectors-keep-up-with-changing-conditions/",
+      "source": "科技新報",
+      "ts": 1795332652
+    },
+    {
+      "text": "明日方舟：終末地 2.0+ 11/25 開啟",
+      "link": "https://www.4gamers.com.tw/news/detail/83443/arknights-endfield-new-version-2-point-zero-release-in-25-november",
+      "source": "4Gamers",
+      "ts": 1795279185
+    },
+    {
+      "text": "哈塞瓦 名車模型 + 人形 限定套組登場",
+      "link": "https://hjweb.jp/article/2887302/",
+      "source": "Hobby Japan",
+      "ts": 1795338000
+    }
   ],
-  "discussion": "馬來西亞的 X 話題偏娛樂：韓國偶像連環開唱（Hwasa、BTS 歲慶、TAEYANG、BIGBANG）、韓劇《Forcebook LAG EP4》尾韻與《ZEEBUS》新作。國際面則有 Myanmar 局勢、Rohingya 難民、Ferrari 及 Kimi 賽車話題。"
+  "discussion": "泰劇/韓劇重灌多（Khemjira 季尾、USMILE×ORM、PIL 新集、Meenbabe EP3），K-pop 那邊 Hwasa、Taeyang、BTS 祝福也有；F1 熱搜則是 LasVegas GP 與各隊名單。"
 }
