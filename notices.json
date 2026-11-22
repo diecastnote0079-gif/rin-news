@@ -1,5 +1,25 @@
 [
  {
+  "job": "ai research push",
+  "ts": 1795306228,
+  "text": "**⚡ 建議動手**\n1. 讓我安裝 **Tencent WeMM-Video-2B** 的 Q4 GGUF（Apache 2.0、中英雙語、影音一起讀），拿一支官方遊戲預告試做「一句中文摘要」；估 30–40 分鐘，下載幾 GB，3070 Ti 8GB 一定塞得下。值得的原因是：現在 reel 選片是我先人肉看完才決定，這個能先幫我篩掉沒料的預告。"
+ },
+ {
+  "job": "AI 工具日報",
+  "ts": 1795305714,
+  "text": "📰 **AI 日報 11/22（日）**\n\n**⚡ 建議動手**\n1. 讓我安裝 **Tencent WeMM-Video-2B** 的 Q4 GGUF（Apache 2.0、中英雙語、影音一起讀），拿一支官方遊戲預告試做「一句中文摘要」；估 30–40 分鐘，下載幾 GB，3070 Ti 8GB 一定塞得下。值得的原因是：現在 reel 選片是我先人肉看完才決定，這個能先幫我篩掉沒料的預告。\n\n**第一節｜AI 工具**\n\n・**Hermes Agent v0.23.3**（11/20）\n1. 滾動修補版，把上次之後約 370 個 PR 打包，官方明說逐項說明要等 v0.24.0 才發。\n2. 我實際看得到的具體條目只有 canary 的插件目錄新增兩個（meragpt、mahjonghandbook），跟你日常用的東西無關。\n3. 結論：觀察就好，今晚不用升。\n\n・**WeMM-Video**（Tencent，11/20）\n1. 開源 2B／4B／9B／35B-A3B 四種大小，畫面與聲音一起理解，中英雙語，Apache 2.0，已放 GGUF。\n2. 對我們的好處是本地就能「看＋聽」一支預告再寫摘要，不送雲端、不燒 API 錢。\n3. 結論：值得試——就是上面那件。\n\n・**Inkling-2-Mini**（Thinking Machines，11/20）\n1. 26B MoE（每 token 約 3B 生效），中間 12 層重跑三次裝成更大模型，可看圖、1M context、有 4-bit GGUF。\n2. 對我們來說：聽起來剛好，但 26B 的 4-bit 權重估約 14GB，8GB 卡裝不下，只能慢慢 offload。\n3. 結論：觀察就好，換卡再說。\n\n**第二節｜🔧 新奇專案**\n\n・**zenbu-labs/terminal-browser**（4.7k★）：真的瀏覽器跑在終端裡，靠 kitty 圖形協定把網頁當像素畫進 terminal。\n　有趣在它同時是給 agent 用的眼睛——附 Claude Code 插件，昨天還在推 commit，不是只有 README 的空殼。\n\n・**ctkrug/side-b**：把播放清單錄成一卷卡帶，有真的抖動、飽和、底噪，封面自己塗，一條連結帶走整卷。\n　有趣在音訊全在瀏覽器即時算、不上傳，分享連結連你畫的封面都編進網址。\n\n・**ctkrug/cellular-symphony**（Murmur）：細胞自動機邊跑邊出聲，每行活細胞就是一個音，翻一個 bit 畫面和旋律同時變。\n　有趣在「看到的和聽到的是同一件事」，規則、種子、音階全寫在網址，貼給誰都能重現同一段音樂。"
+ },
+ {
+  "job": "voucher daily",
+  "ts": 1795304263,
+  "text": "今天沒有變化：未用 9 張 RM696"
+ },
+ {
+  "job": "社群熱度",
+  "ts": 1795303828,
+  "text": "社群熱度選題 — 最近 30 天（Reddit 遊戲 0 則 / HN 60 則）\n\n 1. [HN 4060▲ 3493💬] Jensen Huang resigns\n    https://apnews.com/article/nvidia-megaspeed-china-singapore-huang-5403f152a601cf82ce939f1d24fffa0f\n 2. [HN 3314▲ 769💬] Patrick Stewart has died\n    https://www.nytimes.com/2026/10/29/arts/television/patrick-stewart-dead.html\n 3. [HN 3007▲ 751💬] sshole\n    https://sshhole.com\n 4. [HN 2971▲ 902💬] Astra can read and write weights to improve Qwen\n    https://rikiyat.github.io/blog/weight-space-programming/\n\n⚠️ 抓取有問題的來源：\n  - Reddit: HTTPError HTTP Error 404: Not Found"
+ },
+ {
   "job": "生活記錄",
   "ts": 1795292459,
   "text": "已處理完畢。\n\n**寫了 2 條** — 用 `memory add`（系統中 `fact_store` 即透過 `memory` 落地），every 條都帶日期、origin=said、entity=阿夜：\n\n1. 2026-11-21 17:21 阿夜說很無聊，想找東西玩  \n2. 2026-11-21 17:22 阿夜想找有趣刺激的遊戲玩\n\n**主題**：阿夜的生活感受（無聊、想找刺激遊戲）。昨天的 206 條 user 訊息大部份是 Carousell 收購過濾器、AI 工具/模型查詢等任務訊息；剩下的小部分（不含 9 條明顯性內容）只有這兩條算得出「生活」面，其他都是提問或任務。\n\n注意：記憶抽屜已差不多到 93%（2,051/2,200 chars），若要再加新事實就要先砍舊的。"
@@ -58,26 +78,6 @@
   "job": "kl daily brief",
   "ts": 1795221054,
   "text": "☀️ 今日 11/21 (Sat)\n\n天氣：25–33°C，最高降雨機率 63%\n　降雨時段：14:00（57%）、15:00（62%）、16:00（63%）、17:00（63%）、18:00（61%）、19:00（58%）\n\nMid Valley 本週活動（6 項）\n・Christmas 2026 — Mall Wide (MW), Ground Floor\n　21 Nov 2026 - 3 Jan 2027\n・ITSU Roadshow — Centre Court (CC), Lower Ground Floor\n　16 Nov - 22 Nov 2026\n・MyBeauty & Cosmetics Expo — Atrium, Mid Valley Exhibition Centre (MVEC), Third Floor, Centre Court\n　19 Nov - 22 Nov 2026\n・CelcomDigi Pop Up — East Atrium (EEA), Ground Floor\n　16 Nov - 22 Nov 2026\n\n雪隆活動（未來 14 天，命中興趣 2 項）\n・11/25 AI-Powered OEM: Scaling Beauty, Health and Perso\n　Lazada Malaysia\n・11/27 Resilience by Design: Are You Scaling AI or Scal\n　The Ruma Hotel and Residences\n\n電子／玩具優惠\n・TBM Malaysia Axtra Dreams Monthly Home Consultation \n　11-15→11-21　All TBM Outlets\n・Harvey Norman Malaysia Black Friday Early Deals Sale\n　11-21→11-22\n・Nojima Malaysia Black Friday Sale – Up to 70% Off Sm\n　11-20→11-22　LaLaport BBCC Kuala Lump\n・Ban Hin Bee (BHB) Warehouse Sale – Up to 70% OFF Hom\n　11-19→11-22\n・LG Year-End Home Fest 2026: Discover Exclusive LG Su\n　11-19→11-22　Pavilion Bukit Jalil\n・HONOR Malaysia: HONOR X9e Pro Roadshow Sale\n　11-18→11-22\n\n大型活動（會展／體育館）\n・11-22 My Art My Story Book Launching\n　Tsutaya Books Buk"
- },
- {
-  "job": "ai research push",
-  "ts": 1795219828,
-  "text": "【⚡ 建議動手】\n1. 先跑 `hermes --version` 確認版本，低於 v0.23.3 就 `hermes update` ｜約 5 分鐘｜新版 release note 明列 `prompt_caching.cache_ttl` 預設改成 auto、工具結果主動修剪預設開啟，長對話和長時間執行工具時能少消耗 token，直接省錢。"
- },
- {
-  "job": "AI 工具日報",
-  "ts": 1795219340,
-  "text": "**AI 工具 + 新奇專案日報｜2026-11-21**\n\n【⚡ 建議動手】\n1. 先跑 `hermes --version` 確認版本，低於 v0.23.3 就 `hermes update` ｜約 5 分鐘｜新版 release note 明列 `prompt_caching.cache_ttl` 預設改成 auto、工具結果主動修剪預設開啟，長對話和長時間執行工具時能少消耗 token，直接省錢。\n\n【第一節｜AI 工具】\n1. Hermes Agent v0.23.3（11/19 發布，約一天前）\n- 這是 v0.23.2 之後約 370 個 PR 的整併版，作者說完整整理要等 v0.24.0 才出。\n- 對我們有用：同一份 release note 另外列了快取生命週期控制器（操作時間長時會保持快取存活、閒置對話在 1 小時快取到期前壓縮）與工具結果自動修剪。\n- 結論：值得試（就上面那條 update）。\n\n2. OpenCode v2.3.2（11/18）\n- 修的是 GPT-6.2 把系統提示每一步都當成「未快取輸入」重複收費的問題。\n- 對我們：實測在 Copilot 的 gpt-6.2-sol 上，每步未快取輸入從約 14,000 token 降到 3；但我們跑 deepseek-v4.1-flash，暫不受益。\n- 結論：觀察就好。\n\n3. autoclip（1.2 萬星，今日 trending）\n- 貼一個連結，本機自動剪成 Reels／Shorts／抖音版本，附字幕、封面與發布文案，桌面版免費。\n- 對我們：它主要處理長訪談與播客，而我們是官方預告剪輯，路線不同；但「字幕分頁＋封面＋文案」那套可以參考。\n- 結論：觀察就好。\n\n4. HKUDS/CLI-Anything（6.1 萬星）\n- 把各種桌面軟體包成 agent 能直接呼叫的 CLI，附預覽與軌跡迴圈，`pip install cli-anything-hub` 就能逛。\n- 對我們：等於幫我多開幾隻手去操作 GUI 軟體，但要逐個裝、實際收益取決於該軟體本身。\n- 結論：觀察就好。\n\n【第二節｜🔧 新奇專案】\n1. NIGHT_SHIFT.EXE（kwacky1/night-shift）\n- 假的 95 風作業系統，你在裡面值夜班，而那位「AI 實習生」是真的在運作（跑 MCP server）。\n- 把「跟 AI 同事上班」做成遊戲介面，AI 是機制不是聊天框：這玩法我沒見過。\n\n2. The Last Passenger（Agneay-Community-Hub）\n- 南印度夜班巴士恐怖遊戲，你是車務員：賣票、記名冊、點人頭，按住 Shift 看後照鏡。\n- 恐怖來源不是鬼而是「人數永遠對不上」，把行政核對變成壓力機制，7 章 3 結局。\n\n3. SHIFT（Fing"
- },
- {
-  "job": "voucher daily",
-  "ts": 1795217757,
-  "text": "今天沒有變化：未用 9 張 RM696。"
- },
- {
-  "job": "社群熱度",
-  "ts": 1795217428,
-  "text": "社群熱度選題 — 最近 30 天（Reddit 遊戲 0 則 / HN 60 則）\n\n 1. [HN 4060▲ 3493💬] Jensen Huang resigns\n    https://apnews.com/article/nvidia-megaspeed-china-singapore-huang-5403f152a601cf82ce939f1d24fffa0f\n 2. [HN 3314▲ 769💬] Patrick Stewart has died\n    https://www.nytimes.com/2026/10/29/arts/television/patrick-stewart-dead.html\n 3. [HN 3007▲ 751💬] sshole\n    https://sshhole.com\n 4. [HN 2971▲ 902💬] Astra can read and write weights to improve Qwen\n    https://rikiyat.github.io/blog/weight-space-programming/\n\n⚠️ 抓取有問題的來源：\n  - Reddit: HTTPError HTTP Error 404: Not Found"
  },
  {
   "job": "go renew monthly",
