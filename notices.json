@@ -1,5 +1,30 @@
 [
  {
+  "job": "cex 2h",
+  "ts": 1795312936,
+  "text": "健康檢查：20261122100025（範圍 web，77980 筆）\n  ✅ freshness  資料 0.0 小時前抓的\n  ✅ volume     筆數 77980（與上次 77980 差 0.00%）\n  ✅ schema     60 個欄位，與上次指紋一致\n  ✅ quality    77980 筆：主鍵無重複、標價與名稱完整\n  ✅ heartbeat  距上次抓取 1.5 小時（20261122083025 → 20261122100025）\n\n全部正常"
+ },
+ {
+  "job": "SNKRDUNK 卡價",
+  "ts": 1795309231,
+  "text": "SNKRDUNK 變化\n📈 3rd Anniversary Set — ENGLISH\n   在售 59 → 61 件\n   最低在售 ¥60,400 → ¥60,000\n📈 3rd Anniversary Set — CHINA\n   在售 58 → 60 件\n   最低在售 ¥40,400 → ¥40,398\n📈 Luffy SEC-RSP OP13-118\n   PSA10 ¥2,948,000 → ¥2,920,000\n📈 Luffy SEC-SP EB04-061\n   PSA10 ¥1,695,000 → ¥1,680,000"
+ },
+ {
+  "job": "CeX 早安",
+  "ts": 1795308535,
+  "text": "昨天（11/21，馬來西亞時間）CeX 的變化畢竟拿到，按你要的格式整理。分類標題不帶冒號、每件一行。\n\n🆕 新上架\n・Trails in the Sky 2nd Chapter（PS5）RM280\n・Legend of Heroes, The: Trails from Zero / Trails to Azure（Switch 2）RM270\n・Stellar Blade（Switch 2）RM180\n・Tales of Eternia Remastered（PS5）RM150\n・Overcooked（Xbox One）RM100\n・ASRock AMD Radeon RX 9050 Challenger 8GB GDDR6（顯卡）RM1100\n\n📉 降價\n・Sandmarc Telephoto 72mm Tetraprism Lens For iPhone（iPhone 配件）RM400 → RM350\n・Apple iPhone Air MagSafe Battery - White（iPhone 配件）RM350 → RM320\n・Rode Wireless Micro Twin Microphone Kit (Lightning) - White, A（iPhone 配件）RM350 → RM320\n・Clicks Keyboard Case for iPhone 15 Pro - MIAMI BEACH（iPhone 配件）RM350 → RM320\n・Anker Y1811 3-in-1 Cube with MagSafe Wireless Charger（iPhone 配件）RM350 → RM325\n・UGreen 35316 MagFlow Qi2 15W 2-in-1 Foldable MagSafe Charger（iPhone 配件）RM110 → RM85\n\n📦 回架\n・MXGP 2020（PS5）\n・Ghost Trick: Phantom Detective（Switch）\n・Legend of Heroes, The: Trails in the Sky 2nd Chapter（PS5）\n・Tennis World Tour（Switch）\n・Call of Duty: Vanguard（PS4）\n・Stellar Blade（Switch 2）\n\n🚫 賣光\n・PlayStation 5 Slim, 1TB, Ghost of Yotei Gold (No DLC), Boxed（PS5）\n・PlayStation 5 Digital Edition, 825GB, White, Boxed（PS5）\n・PlayStation Vita Slim Console, Dark Khaki Wifi, Discounted（PS"
+ },
+ {
+  "job": "cex 0830",
+  "ts": 1795307537,
+  "text": "健康檢查：20261122083025（範圍 web，77980 筆）\n  ✅ freshness  資料 0.0 小時前抓的\n  ✅ volume     筆數 77980（與上次 77979 差 0.00%）\n  ✅ schema     60 個欄位，與上次指紋一致\n  ✅ quality    77980 筆：主鍵無重複、標價與名稱完整\n  ✅ heartbeat  距上次抓取 10.5 小時（20261121220024 → 20261122083025）\n\n全部正常"
+ },
+ {
+  "job": "kl daily brief",
+  "ts": 1795307453,
+  "text": "☀️ 今日 11/22 (Sun)\n\n天氣：25–30°C，最高降雨機率 86%\n　降雨時段：09:00（56%）、10:00（64%）、11:00（71%）、12:00（78%）、13:00（83%）、14:00（86%）\n\nMid Valley 本週活動（6 項）\n・Christmas 2026 — Mall Wide (MW), Ground Floor\n　21 Nov 2026 - 3 Jan 2027\n・ITSU Roadshow — Centre Court (CC), Lower Ground Floor\n　16 Nov - 22 Nov 2026\n・MyBeauty & Cosmetics Expo — Atrium, Mid Valley Exhibition Centre (MVEC), Third Floor, Centre Court\n　19 Nov - 22 Nov 2026\n・CelcomDigi Pop Up — East Atrium (EEA), Ground Floor\n　16 Nov - 22 Nov 2026\n\n雪隆活動（未來 14 天，命中興趣 2 項）\n・11/25 AI-Powered OEM: Scaling Beauty, Health and Perso\n　Lazada Malaysia\n・11/27 Resilience by Design: Are You Scaling AI or Scal\n　The Ruma Hotel and Residences\n\n電子／玩具優惠\n・Harvey Norman Malaysia Black Friday Early Deals Sale\n　11-21→11-22\n・Nojima Malaysia Black Friday Sale – Up to 70% Off Sm\n　11-20→11-22　LaLaport BBCC Kuala Lump\n・Ban Hin Bee (BHB) Warehouse Sale – Up to 70% OFF Hom\n　11-19→11-22\n・LG Year-End Home Fest 2026: Discover Exclusive LG Su\n　11-19→11-22　Pavilion Bukit Jalil\n・TMT Malaysia Reward Sales Promotion – Up to 20% Cash\n　11-18→11-22\n・HONOR Malaysia: HONOR X9e Pro Roadshow Sale\n　11-18→11-22\n\n大型活動（會展／體育館）\n・11-22 My Art My Story Book Launching\n　Tsutaya Books Bukit Jalil\n・11-25 "
+ },
+ {
   "job": "ai research push",
   "ts": 1795306228,
   "text": "**⚡ 建議動手**\n1. 讓我安裝 **Tencent WeMM-Video-2B** 的 Q4 GGUF（Apache 2.0、中英雙語、影音一起讀），拿一支官方遊戲預告試做「一句中文摘要」；估 30–40 分鐘，下載幾 GB，3070 Ti 8GB 一定塞得下。值得的原因是：現在 reel 選片是我先人肉看完才決定，這個能先幫我篩掉沒料的預告。"
@@ -50,34 +75,9 @@
   "text": "改了 3 個 skill、共 3 條：**anima-image** 1 條（講「可本地跑」前先用 HF `blobs=true` 查檔案大小對 8.6GB，別先說能跑再改口）、**model-router** 1 條（工具型訂閱第一欄先查 API 額度，例：Google AI Pro $10/月 credit＋AI Studio 每日額度）、**local-inference** 1 條（他問「這張卡還能跑什麼」是指生圖／影片，別再提本地 LLM 省額度）。\n\n今天其餘的（排程被閘門擋、`tool_call` 漏 `name` 重試兩次）在既有規則或工具 schema 裡已經寫到，沒有重複堆。"
  },
  {
-  "job": "cex 2h",
-  "ts": 1795269737,
-  "text": "健康檢查：20261121220024（範圍 web，77979 筆）\n  ✅ freshness  資料 0.0 小時前抓的\n  ✅ volume     筆數 77979（與上次 77976 差 0.00%）\n  ✅ schema     60 個欄位，與上次指紋一致\n  ✅ quality    77979 筆：主鍵無重複、標價與名稱完整\n  ✅ heartbeat  距上次抓取 2.0 小時（20261121200025 → 20261121220024）\n\n全部正常"
- },
- {
   "job": "今日新聞",
   "ts": 1795262686,
   "text": "📰 今天值得看的\n・GTA6 首日 3,250 萬套 創娛樂產品新記錄\n・日本 SLG《自宅警備員》繁中版 12 月 開賣\n・《アズレン》《NIKKE》フィギュア 秋葉原展示\n・YTL Power 否認協助中國獲 Nvidia\n・黎曼猜想 兩份證明 同日出現：Claude 協作版\n・亞馬遞封 AI 購物，AWS 開放 AI 買軟體\n・川普威脅對海外 AI 資料中心課重稅\n\n🔥 今天在討論\n馬來西亞的 X 話題偏娛樂：韓國偶像連環開唱（Hwasa、BTS 歲慶、TAEYANG、BIGBANG）、韓劇《Forcebook LAG EP4》尾韻與《ZEEBUS》新作。國際面則有 Myanmar 局勢、Rohingya 難民、Ferrari 及 Kimi 賽車話題。\n\n已用 python 讀 items.json 做選擇，熱搜來 getdaytrends.com Malaysia 45 個話題解析（真實 <a class=\"string\"> 連結，非標題指定的 class）。結構化檔案寫好了：**/home/rin/AI/news/digest.json**（date 2026-11-21、updated 20:00+08、7 條 items 順序一致、link/ts 來源確認、無虛構）、discussion 為上段兩句。"
- },
- {
-  "job": "SNKRDUNK 卡價",
-  "ts": 1795222832,
-  "text": "SNKRDUNK 變化\n📈 3rd Anniversary Set — ENGLISH\n   最低在售 ¥60,500 → ¥60,400\n📈 3rd Anniversary Set — CHINA\n   在售 57 → 58 件\n   最低在售 ¥40,500 → ¥40,400\n📈 Luffy SEC-RSP OP13-118\n   PSA10 ¥2,900,000 → ¥2,948,000\n📈 Luffy SEC-SP EB04-061\n   PSA10 ¥1,700,000 → ¥1,695,000"
- },
- {
-  "job": "CeX 早安",
-  "ts": 1795222161,
-  "text": "🆕 新上架\n・Gigabyte GeForce RTX 4070 Super Aero OC 12GB GDDR6X（顯卡） RM2800\n・Anbernic RG Slide/T820/8GB Ram/128GB UFS2/4\"120Hz/Android/White/B(No Game)（掌機） RM750\n・Colorful iGame GeForce RTX 3060 Ti Ultra W OC LHR-V 8GB GDDR6（顯卡） RM1450\n・Ice Age: Scrat's Nutty Adventure（PS5/R2） RM110\n・Scooby-Doo! First Frights（DS/R2） RM30\n\n📉 降價\n・Megaman 11（Switch/R2） RM90 → RM70\n・Splatoon 2（Switch/R2） RM90 → RM70\n・Triangle Strategy（Switch/R2） RM90 → RM80\n・Splatoon 2（Switch/R3） RM90 → RM70\n・Ni No Kuni: Wrath of the White Witch（Switch/R2） RM90 → RM80\n・Conscript (No DLC)（Switch/R2） RM90 → RM80\n\n📦 回架\n・Astro Bot Rescue Mission (PSVR)（PS4/R3） 0 → 1\n・Asus Dual GeForce RTX 5050 8GB GDDR6（顯卡） 0 → 1\n・Asus GeForce RTX 3070 Dual V2 OC LHR Edition 8GB GDDR6（顯卡） 0 → 1\n・Dead or Alive Xtreme 2（Xbox 360/R3） 0 → 1\n・FIFA 14（PS4/R3） 0 → 1\n・Farmers vs Zombies (Farm For Your Life)（PS5/R3） 0 → 1\n\n🚫 賣光\n・Control Ultimate Edition（PS5/R3） 1 → 0\n・Absolum (No DLC)（Switch/R2） 1 → 0\n・Final Fantasy X HD Remastered（PS Vita/R3） 1 → 0\n・CoComelon: Play with JJ（Switch/R2） 1 → 0\n・ASUS GeForce RTX 4060 ROG Strix OC 8GB GDDR6X（顯卡） 1 → 0\n・Asus GeForce RTX 3070 Dual V2 OC LHR Edition 8GB GDDR6（顯卡） 1 → 0"
- },
- {
-  "job": "cex 0830",
-  "ts": 1795221138,
-  "text": "健康檢查：20261121083025（範圍 web，77913 筆）\n  ✅ freshness  資料 0.0 小時前抓的\n  ✅ volume     筆數 77913（與上次 77908 差 0.01%）\n  ✅ schema     60 個欄位，與上次指紋一致\n  ✅ quality    77913 筆：主鍵無重複、標價與名稱完整\n  ✅ heartbeat  距上次抓取 10.5 小時（20261120220025 → 20261121083025）\n\n全部正常"
- },
- {
-  "job": "kl daily brief",
-  "ts": 1795221054,
-  "text": "☀️ 今日 11/21 (Sat)\n\n天氣：25–33°C，最高降雨機率 63%\n　降雨時段：14:00（57%）、15:00（62%）、16:00（63%）、17:00（63%）、18:00（61%）、19:00（58%）\n\nMid Valley 本週活動（6 項）\n・Christmas 2026 — Mall Wide (MW), Ground Floor\n　21 Nov 2026 - 3 Jan 2027\n・ITSU Roadshow — Centre Court (CC), Lower Ground Floor\n　16 Nov - 22 Nov 2026\n・MyBeauty & Cosmetics Expo — Atrium, Mid Valley Exhibition Centre (MVEC), Third Floor, Centre Court\n　19 Nov - 22 Nov 2026\n・CelcomDigi Pop Up — East Atrium (EEA), Ground Floor\n　16 Nov - 22 Nov 2026\n\n雪隆活動（未來 14 天，命中興趣 2 項）\n・11/25 AI-Powered OEM: Scaling Beauty, Health and Perso\n　Lazada Malaysia\n・11/27 Resilience by Design: Are You Scaling AI or Scal\n　The Ruma Hotel and Residences\n\n電子／玩具優惠\n・TBM Malaysia Axtra Dreams Monthly Home Consultation \n　11-15→11-21　All TBM Outlets\n・Harvey Norman Malaysia Black Friday Early Deals Sale\n　11-21→11-22\n・Nojima Malaysia Black Friday Sale – Up to 70% Off Sm\n　11-20→11-22　LaLaport BBCC Kuala Lump\n・Ban Hin Bee (BHB) Warehouse Sale – Up to 70% OFF Hom\n　11-19→11-22\n・LG Year-End Home Fest 2026: Discover Exclusive LG Su\n　11-19→11-22　Pavilion Bukit Jalil\n・HONOR Malaysia: HONOR X9e Pro Roadshow Sale\n　11-18→11-22\n\n大型活動（會展／體育館）\n・11-22 My Art My Story Book Launching\n　Tsutaya Books Buk"
  },
  {
   "job": "go renew monthly",
