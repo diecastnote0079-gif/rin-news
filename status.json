@@ -1,19 +1,19 @@
 {
- "updated": 1795402825,
+ "updated": 1795410024,
  "quota": {
   "rolling": 100,
   "weekly": 100,
   "monthly": 90,
-  "reset_rolling": "3h 7m",
-  "reset_weekly": "6d 20h",
-  "reset_monthly": "24d 14h"
+  "reset_rolling": "1h 7m",
+  "reset_weekly": "6d 18h",
+  "reset_monthly": "24d 12h"
  },
  "host": {
-  "load": 0.02,
+  "load": 0.11,
   "mem_pct": 15,
   "disk_pct": 21,
-  "disk_free_gb": 339,
-  "uptime_h": 153
+  "disk_free_gb": 338,
+  "uptime_h": 155
  },
  "memory": {
   "memory": {
