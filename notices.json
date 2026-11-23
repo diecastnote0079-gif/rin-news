@@ -1,5 +1,20 @@
 [
  {
+  "job": "cex 2h",
+  "ts": 1795399337,
+  "text": "健康檢查：20261123100025（範圍 web，78045 筆）\n  ✅ freshness  資料 0.0 小時前抓的\n  ✅ volume     筆數 78045（與上次 78045 差 0.00%）\n  ✅ schema     60 個欄位，與上次指紋一致\n  ✅ quality    78045 筆：主鍵無重複、標價與名稱完整\n  ✅ heartbeat  距上次抓取 1.5 小時（20261123083025 → 20261123100025）\n\n全部正常"
+ },
+ {
+  "job": "記憶審計",
+  "ts": 1795395696,
+  "text": "記憶審計報告（只讀，未改任何檔）\n\n## 1. MEMORY.md & USER.md\n- **重複**：乾淨。MEMORY.md 12 節／USER.md 19 節，兩檔無重複條目，範疇分明（MEMORY.md 偏工具/機房，USER.md 偏人物/原則），互不掩蓋。\n- **矛盾**：乾淨。二者間無互斥敘述。主機描述（rin-box＝Beelink SER5 永不關機、desktop-akpf8q 休眠/離線）是一台機器的兩種狀態，非 Windows vs Linux 衝突。\n- **過期**：\n  - `MEMORY.md:「阿夜 2026-11-20 00:37 說…」` 為 intimacy 記錄，非規則引用，不應進「要改前先讀」流程，標註即可。\n  - `reference/ops/hermes-adaptation.md`、`post-reset-install.md`（「人格已搬到 Hermes」）、`handoff-sunk-20261013.md` 仍大量出現 **Letta**——屬歷史記錄，已有提示語穩住，但建議在標頭加一句「已遷移，同名舊規已失效」避免誤讀。\n- **D:\\AI 路徑**：`post-reset-install.md` 多處、`local-hygiene.md` 列 D:\\AI 與 C:\\Users\\GIll 路徑——全是 Windows 機器的歷史溯源，現在記憶實體在 `~/AI`，請視為過往記錄，不要當作有效路徑。\n- **舊 cron id**：`active-tasks.md` 指向 `f133d532 / cron 0 1 * * *` 已在 2026-10-10 刪除，只有歷史留痕，必要時標註「已移除」。\n\n## 2. reference/ops/ 舊路徑指標\n- `post-reset-install.md` ～ `local-hygiene.md` 反覆出現 `D:\\AI`、`C:\\Users\\GIll`——歷史機器殘留，不是當前索引路徑。\n- `active-tasks.md:26` `HERMES_HOME 搬家 C → D 槽（D:\\hermes）… ⏳ pending`——但當前 .hermes 實際在 `/home/rin/.hermes`（Linux C 槽根），該 pending 項目已過時，建議標註「釐清／歸零」。\n- `rin-now.md`、`active-tasks.md` 內 `runner=local`、`cron f133d532` 屬已結案細節，留痕即可。\n\n## 3. 記憶水位\n- `MEMORY.md` = 3,269 字節、`USER.md` = 3,276 字節，兩檔共 6,545 字節，彼此約 **49.9%／50.1%**，均不到 3.3KB，無溢位。\n- 檔"
+ },
+ {
+  "job": "SNKRDUNK 卡價",
+  "ts": 1795395631,
+  "text": "SNKRDUNK 變化\n📈 3rd Anniversary Set — ENGLISH\n   在售 61 → 59 件\n   最低在售 ¥60,000 → ¥59,999\n📈 3rd Anniversary Set — CHINA\n   在售 60 → 57 件\n📈 Luffy SEC-RSP OP13-118\n   PSA10 ¥2,920,000 → ¥2,900,000\n📈 Luffy SEC-SP EB04-061\n   PSA10 ¥1,680,000 → ¥1,635,000"
+ },
+ {
   "job": "CeX 早安",
   "ts": 1795395181,
   "text": "昨天 CeX 的動靜：\n\n🆕 新上架\n・ATI Radeon Cypress HD 5870 2GB（顯卡）RM100\n・NVIDIA GeForce GT 720 2GB（顯卡）RM65\n・Retroid Pocket Flip 2（掌機）RM850\n・Netac NV5000-t 1TB NVMe M.2 SSD（固態）RM500\n・Asus FX507V i7-13620H/RTX 4050 16\" 筆電（筆電）RM3400\n・Xiaomi 14 12+256（手機）RM1400\n\n📉 降價\n・HP X27 27\" FHD IPS LED 遊戲螢幕（螢幕）RM380 → RM290\n\n📦 回架\n・Formula Legends（Switch）\n・EA Sports FC 27（Switch）\n・Control Resonant（PS5）\n・Double Dragon Revive（PS5）\n・PS3 超級光碟機 500GB 藍（主機）\n・Sapphire AMD Radeon RX 7700 XT PULSE 12GB GDDR6（顯卡）\n\n🚫 賣光\n・PS5 數位版 825GB 中黑 盒裝（PS5）\n・PS5 825GB 中黑 盒裝（PS5）\n・F1 22（PS5）\n・EA Sports FC 27（Switch）\n・Call Of Duty Modern Warfare Remastered（PS4）\n・NVIDIA GeForce GT 720 2GB（顯卡）"
@@ -65,19 +80,9 @@
   "text": "已寫入，四條：engineering-principles 1 條（接沒用過的工具先把文件與原始碼讀完再出樣本）；ming-tts 1 條（`model already present` 只證明目錄在，驗下載要比對總大小與檔數）；anima-image 2 條（「換真人模型」要把三支同線候選一次列齊；報模型清單每條要寫它做什麼、對你的哪件事有用）。\n\n昨天已被寫進 skill 的（繁簡假 CER、glob 重複計算、「開始跑了」要先送指令、內衣先走 Anima、連兩批「勉強」就換軸）沒有重複寫。"
  },
  {
-  "job": "cex 2h",
-  "ts": 1795356141,
-  "text": "健康檢查：20261122220025（範圍 web，78044 筆）\n  ✅ freshness  資料 0.0 小時前抓的\n  ✅ volume     筆數 78044（與上次 78042 差 0.00%）\n  ✅ schema     60 個欄位，與上次指紋一致\n  ✅ quality    78044 筆：主鍵無重複、標價與名稱完整\n  ✅ heartbeat  距上次抓取 2.0 小時（20261122200025 → 20261122220025）\n\n全部正常"
- },
- {
   "job": "今日新聞",
   "ts": 1795349127,
   "text": "📰 今天值得看的\n・輝達遭勒索組織 資料10天後洩漏 官方稱系統未入侵\n・特斯拉 FSD v15 畫面像 GTA、官方說安全 25 倍\n・腦機接口 玩《GTA 6》 開車射擊都辦得到\n・AI 文字偵測器 辨識偽裝文字 準確率逾九成\n・明日方舟：終末地 2.0+ 11/25 開啟\n・哈塞瓦 名車模型 + 人形 限定套組登場\n🔥 今天在討論\n泰劇/韓劇重灌多（Khemjira 季尾、USMILE×ORM、PIL 新集、Meenbabe EP3），K-pop 那邊 Hwasa、Taeyang、BTS 祝福也有；F1 熱搜則是 LasVegas GP 與各隊名單。\n已寫到 /home/rin/AI/news/digest.json\n\n（條列由 4Gamers／科技新報／電腦王阿達／Hobby Japan 來源、6 條皆為 11-22 發布；熱點用 getdaytrends 馬來西亞 X 熱搜解析，無列清單。若你要我補一條別的類別也行。）"
- },
- {
-  "job": "SNKRDUNK 卡價",
-  "ts": 1795309231,
-  "text": "SNKRDUNK 變化\n📈 3rd Anniversary Set — ENGLISH\n   在售 59 → 61 件\n   最低在售 ¥60,400 → ¥60,000\n📈 3rd Anniversary Set — CHINA\n   在售 58 → 60 件\n   最低在售 ¥40,400 → ¥40,398\n📈 Luffy SEC-RSP OP13-118\n   PSA10 ¥2,948,000 → ¥2,920,000\n📈 Luffy SEC-SP EB04-061\n   PSA10 ¥1,695,000 → ¥1,680,000"
  },
  {
   "job": "每週維修",
@@ -88,10 +93,5 @@
   "job": "go renew monthly",
   "ts": 1794888060,
   "text": "目前月結前的狀況給你了：\n\n📊 **OpenCode Go 餘額【hermes usage】**\n- 月度：**5% 剩餘**（95% 用掉），**13 小時 12 分鐘後重置**（2026-11-18 01:13 +08）\n- 週度：77% 剩餘（11/23 08:00 重置）\n- Rolling：100% 剩餘（11/17 17:00 重置）\n- 訂閱狀態：**未綁信用卡**，屬手動續訂\n\n⚠️ **重點**：就像你 Memo 裡的記錄，OpenCode Go 是**沒有綁信用卡**，必須靠阿夜手動續訂。月度只剩 5%，11 號晚上 01:13 那個門一關，往後就要等重置才能再開，派生子代（Luna/Claude）會直接吃同一個共享池，剩太少它們會連主模型 DeepSeek 都撐不住。\n\n所以今晚 11 號 23:59 前那個 13 小時的窗口很關鍵——**你要不是真的耗到快沒了，要不就是手動續訂**。看你自己決定，這次我就只是把數字報給你，還沒動任何訂閱相關的東西。"
- },
- {
-  "job": "記憶審計",
-  "ts": 1794790946,
-  "text": "記憶審計報告（未改動任何檔案，僅讀取）\n\n1. 記憶水位｜~/.hermes/memories/MEMORY.md：2193/2200 字 = **99.7%**（上限 2200，config `memory_char_limit`）— 幾乎寫滿，建議收尾後併入下一筆\n2. 記憶水位｜~/.hermes/memories/USER.md：1294/1375 字 = **94.1%**（上限 1375，`user_char_limit`）— 過齊，暫無垃圾\n3. 重複條目｜MEMORY.md：乾淨（逐條逐條比對，無同文複製）\n4. 重複條目｜USER.md：乾淨（無與 MEMORY.md 或自身重疊項）\n5. 矛盾／過期指引｜MEMORY.md：乾淨—「兩台主機：rin-box ＋ Windows desktop-akpf18q」只在一處，未出現「Windows＝主機 + Linux」的矛盾，也未見 Letta、D:\\AI、舊 cron id、Windows gateway 記載\n6. 矛盾／過期指引｜USER.md：乾淨—同上，無相關過期或矛盾指引\n7. ops 指引旧路徑｜reference/ops/MEMORY.md index：乾淨—只列 active-tasks／lhdn-tax-index／handoff／gate-framework／machine-migration／hermes-settings 六項，全為目前有效檔\n8. ops 歷史殘留｜post-reset-install.md 的 `D:\\AI` 不動、memory-provider.md 的 `D:\\AI\\_backup\\mnemo-enable.log`、active-tasks.md 的「舊的 longcat 是 Letta 時代設定」——均已標記為歷史記錄，不是活躍指引；建議下次整理時改名或移進 attic，免被誤作活路徑\n9. ops 能動指引｜無過期 Windows gateway 指引、無 Letta 路由、無舊 cron job id（cron-ops.md 已寫「舊的 Letta cron 已作廢」且列出現行 6 個 job）— 乾淨\n\n結論：**兩份記憶本體乾淨；ops/ index 也乾淨；唯 operations 資料夾中仍有幾份標為歷史的殘留（D:\\AI、Letta 年代），不影響現行路由，待決處理即可。**"
  }
 ]
