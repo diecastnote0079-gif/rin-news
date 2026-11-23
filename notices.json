@@ -1,5 +1,45 @@
 [
  {
+  "job": "CeX 早安",
+  "ts": 1795395181,
+  "text": "昨天 CeX 的動靜：\n\n🆕 新上架\n・ATI Radeon Cypress HD 5870 2GB（顯卡）RM100\n・NVIDIA GeForce GT 720 2GB（顯卡）RM65\n・Retroid Pocket Flip 2（掌機）RM850\n・Netac NV5000-t 1TB NVMe M.2 SSD（固態）RM500\n・Asus FX507V i7-13620H/RTX 4050 16\" 筆電（筆電）RM3400\n・Xiaomi 14 12+256（手機）RM1400\n\n📉 降價\n・HP X27 27\" FHD IPS LED 遊戲螢幕（螢幕）RM380 → RM290\n\n📦 回架\n・Formula Legends（Switch）\n・EA Sports FC 27（Switch）\n・Control Resonant（PS5）\n・Double Dragon Revive（PS5）\n・PS3 超級光碟機 500GB 藍（主機）\n・Sapphire AMD Radeon RX 7700 XT PULSE 12GB GDDR6（顯卡）\n\n🚫 賣光\n・PS5 數位版 825GB 中黑 盒裝（PS5）\n・PS5 825GB 中黑 盒裝（PS5）\n・F1 22（PS5）\n・EA Sports FC 27（Switch）\n・Call Of Duty Modern Warfare Remastered（PS4）\n・NVIDIA GeForce GT 720 2GB（顯卡）"
+ },
+ {
+  "job": "cex 0830",
+  "ts": 1795393938,
+  "text": "健康檢查：20261123083025（範圍 web，78045 筆）\n  ✅ freshness  資料 0.0 小時前抓的\n  ✅ volume     筆數 78045（與上次 78044 差 0.00%）\n  ✅ schema     60 個欄位，與上次指紋一致\n  ✅ quality    78045 筆：主鍵無重複、標價與名稱完整\n  ✅ heartbeat  距上次抓取 10.5 小時（20261122220025 → 20261123083025）\n\n全部正常"
+ },
+ {
+  "job": "kl daily brief",
+  "ts": 1795393852,
+  "text": "☀️ 今日 11/23 (Mon)\n\n天氣：25–29°C，最高降雨機率 96%\n　降雨時段：13:00（63%）、14:00（86%）、15:00（95%）、16:00（96%）、17:00（96%）、18:00（96%）\n\nMid Valley 本週活動（4 項）\n・LIVEXPO 2026 — Hall 1 & Hall 2, Mid Valley Exhibition Centre (MVEC), Third Floor, Centre Court\n　28 Nov - 29 Nov 2026\n・Christmas 2026 — Mall Wide (MW), Ground Floor\n　21 Nov 2026 - 3 Jan 2027\n・Laneige Holiday Pop-up — East Atrium (EEA), Ground Floor\n　23 Nov - 29 Nov 2026\n・Fitness Concept Roadshow — Centre Court (CC), Lower Ground Floor\n　23 Nov - 29 Nov 2026\n\n雪隆活動（未來 14 天，命中興趣 2 項）\n・11/25 AI-Powered OEM: Scaling Beauty, Health and Perso\n　Lazada Malaysia\n・11/27 Resilience by Design: Are You Scaling AI or Scal\n　The Ruma Hotel and Residences\n\n電子／玩具優惠\n・BEST DENKI Malaysia Black Friday Sale – Up to RM2,50\n　11-23→11-24　Participating Outlets\n・Harvey Norman Malaysia Adjustable Beds Sale – Enjoy \n　11-23→11-25　Stores & Online\n・COURTS & NOJIMA Biggest Year End Laptop Sale – Save \n　11-16→11-25　Participating Outlets Na\n・POCO X8s Malaysia: Up to RM500 Off Compact 6.35-inch\n　11-10→11-25\n・COURTS LG 75-Inch Nano 4K UHD Smart TV Sale – Save R\n　11-05→11-25　COURTS & Nojima\n・Toys”R”Us Malaysia T-KUN Meet & Greet Event – Meet T\n　11-14→11-28　1 Utama and KLCC\n\n大型活動（會展／體育館）\n・"
+ },
+ {
+  "job": "ai research push",
+  "ts": 1795392628,
+  "text": "**⚡ 建議動手**\n・把 diagram-design 這個 skill 裝進來：它提供 45 種編輯級圖表，輸出單檔 HTML+SVG（不是 Mermaid）。大約 30 分鐘就能裝好；之後卡價 watchlist、生意數字，我直接出圖，你不用再讀表格。"
+ },
+ {
+  "job": "AI 工具日報",
+  "ts": 1795392222,
+  "text": "**⚡ 建議動手**\n・把 diagram-design 的 skill 搬進來：它提供 45 種編輯級圖表，輸出單檔 HTML+SVG（不是 Mermaid）。大約 30 分鐘就能裝好；之後卡價 watchlist、生意數字我直接出圖，你不用再讀表格。\n\n**第一節｜AI 工具**\n\n**Inkling-2-Mini（11/22）** 26B MoE、實際只動 3.4B、能看圖，unsloth 已出 GGUF。\n對我們：Q8 版 22.9GB，Q4 也要十幾 GB，3070 Ti 8GB 吃不下。\n結論：觀察就好。\n\n**Claude Code v2.1.330（11/20）** 內建 easel，叫它畫圖表就直接畫（/config 可關）。\n對我們：我們不用 Claude Code，但「隨手要圖」這方向我用 HTML/SVG 就能做；它順手修了長對話壓縮後卡幾分鐘。\n結論：觀察就好。\n\n**OpenCode v2.3.2（11/18）** 修 GPT-6.2 系統提示沒被快取、每步重複計費，Copilot 上每步未快取輸入 14,000→3 token。\n對我們：我們走 deepseek-v4.1-flash，吃不到這個修正；但這種省法值得記住。\n結論：不用管。\n\nHermes 本體自 11/5 v0.23.0 後沒新版本，今天不用動。\n\n**🔧 新奇專案**\n**minimind** 兩小時從零訓出 64M 模型，67k stars，昨天還在修相容性。\n為什麼有趣：真的看着它從亂碼學到回話，一張消費級卡就夠。\n**Aurora2-400M-A20M-QAT** 用 0.5 bit／權重把 400M MoE 壓成 27.5MB。\n為什麼有趣：小到可以塞進任何東西裡跑，代價是智力指數 21.4→10.8，剛好看到「小到極致」還剩多少。\n**CLI-Anything** 把有原始碼的軟體包成 agent 用的 CLI，LibreOffice 真出 PDF、Blender 真渲染。\n為什麼有趣：讓 agent 直接開桌面軟體，不是包 API 殼；registry 已有 65 個。"
+ },
+ {
+  "job": "voucher daily",
+  "ts": 1795390601,
+  "text": "今天沒有變化：未用 9 張 RM696.0"
+ },
+ {
+  "job": "社群熱度",
+  "ts": 1795390229,
+  "text": "社群熱度選題 — 最近 30 天（Reddit 遊戲 0 則 / HN 60 則）\n\n 1. [HN 4060▲ 3493💬] Jensen Huang resigns\n    https://apnews.com/article/nvidia-megaspeed-china-singapore-huang-5403f152a601cf82ce939f1d24fffa0f\n 2. [HN 3314▲ 769💬] Patrick Stewart has died\n    https://www.nytimes.com/2026/10/29/arts/television/patrick-stewart-dead.html\n 3. [HN 3007▲ 751💬] sshole\n    https://sshhole.com\n 4. [HN 2971▲ 902💬] Astra can read and write weights to improve Qwen\n    https://rikiyat.github.io/blog/weight-space-programming/\n\n⚠️ 抓取有問題的來源：\n  - Reddit: HTTPError HTTP Error 404: Not Found"
+ },
+ {
+  "job": "kl mall refresh",
+  "ts": 1795388438,
+  "text": "🏬 商場目錄有變動\nMid Valley：清單 695 間，新增 0、補齊單位號 0\nPavilion：清單 400 間，新增 0、補齊單位號 0\ntotal 490\nvelocity 寫入 490 筆\ntrx 寫入 367 筆\n讀不到 /home/rin/.hermes/cache/scratch/klcc_stores.json [Errno 2] No such file or directory: '/home/rin/.hermes/cache/scratch/klcc_stores.json'\n已標記關閉／移除： [('midvalley', 3), ('pavilion', 2), ('trx', 12), ('velocity', 1)]\n在架： [('klcc', 213), ('midvalley', 555), ('pavilion', 400), ('trx', 367), ('velocity', 490)]"
+ },
+ {
   "job": "生活記錄",
   "ts": 1795378640,
   "text": "今晚沒有\n\n只讀到昨晚（11-22）04:00 以来 role=user 的訊息（286 條，含 cron 提示與各個繁雜的子任務 prompt），其中只剩下兩類「非任務」内容：\n\n1. **Carousell 收購者過濾/判斷助手** — 這些是明確的收貨任務，不是生活事實。\n2. **顯露性內容**——內衣、露乳頭、性趣、亞洲女郎、胸罩、PEACH JOHN 比對、真人模型、迫使、射精、口內、高音 etc.，全部是性暗示/性動作的情侶對話。\n\n「他去了哪裡」「遇到誰」「好笑的事」「想吃的想買的」「對生活的想法」這幾個生活面，在每一條訊息中都找不到可寫進持久記憶的非性事實。留在日誌裡的只有電話字串（01****）、URL、任務 prompt。之所以判斷不能寫是：整晚「生活面」只有這一段性暗示對話，跟你昨晚的鐵則一條：**有「不許記下」的跡象就整晚跳過，一條也不寫**。"
@@ -40,41 +80,6 @@
   "text": "SNKRDUNK 變化\n📈 3rd Anniversary Set — ENGLISH\n   在售 59 → 61 件\n   最低在售 ¥60,400 → ¥60,000\n📈 3rd Anniversary Set — CHINA\n   在售 58 → 60 件\n   最低在售 ¥40,400 → ¥40,398\n📈 Luffy SEC-RSP OP13-118\n   PSA10 ¥2,948,000 → ¥2,920,000\n📈 Luffy SEC-SP EB04-061\n   PSA10 ¥1,695,000 → ¥1,680,000"
  },
  {
-  "job": "CeX 早安",
-  "ts": 1795308535,
-  "text": "昨天（11/21，馬來西亞時間）CeX 的變化畢竟拿到，按你要的格式整理。分類標題不帶冒號、每件一行。\n\n🆕 新上架\n・Trails in the Sky 2nd Chapter（PS5）RM280\n・Legend of Heroes, The: Trails from Zero / Trails to Azure（Switch 2）RM270\n・Stellar Blade（Switch 2）RM180\n・Tales of Eternia Remastered（PS5）RM150\n・Overcooked（Xbox One）RM100\n・ASRock AMD Radeon RX 9050 Challenger 8GB GDDR6（顯卡）RM1100\n\n📉 降價\n・Sandmarc Telephoto 72mm Tetraprism Lens For iPhone（iPhone 配件）RM400 → RM350\n・Apple iPhone Air MagSafe Battery - White（iPhone 配件）RM350 → RM320\n・Rode Wireless Micro Twin Microphone Kit (Lightning) - White, A（iPhone 配件）RM350 → RM320\n・Clicks Keyboard Case for iPhone 15 Pro - MIAMI BEACH（iPhone 配件）RM350 → RM320\n・Anker Y1811 3-in-1 Cube with MagSafe Wireless Charger（iPhone 配件）RM350 → RM325\n・UGreen 35316 MagFlow Qi2 15W 2-in-1 Foldable MagSafe Charger（iPhone 配件）RM110 → RM85\n\n📦 回架\n・MXGP 2020（PS5）\n・Ghost Trick: Phantom Detective（Switch）\n・Legend of Heroes, The: Trails in the Sky 2nd Chapter（PS5）\n・Tennis World Tour（Switch）\n・Call of Duty: Vanguard（PS4）\n・Stellar Blade（Switch 2）\n\n🚫 賣光\n・PlayStation 5 Slim, 1TB, Ghost of Yotei Gold (No DLC), Boxed（PS5）\n・PlayStation 5 Digital Edition, 825GB, White, Boxed（PS5）\n・PlayStation Vita Slim Console, Dark Khaki Wifi, Discounted（PS"
- },
- {
-  "job": "cex 0830",
-  "ts": 1795307537,
-  "text": "健康檢查：20261122083025（範圍 web，77980 筆）\n  ✅ freshness  資料 0.0 小時前抓的\n  ✅ volume     筆數 77980（與上次 77979 差 0.00%）\n  ✅ schema     60 個欄位，與上次指紋一致\n  ✅ quality    77980 筆：主鍵無重複、標價與名稱完整\n  ✅ heartbeat  距上次抓取 10.5 小時（20261121220024 → 20261122083025）\n\n全部正常"
- },
- {
-  "job": "kl daily brief",
-  "ts": 1795307453,
-  "text": "☀️ 今日 11/22 (Sun)\n\n天氣：25–30°C，最高降雨機率 86%\n　降雨時段：09:00（56%）、10:00（64%）、11:00（71%）、12:00（78%）、13:00（83%）、14:00（86%）\n\nMid Valley 本週活動（6 項）\n・Christmas 2026 — Mall Wide (MW), Ground Floor\n　21 Nov 2026 - 3 Jan 2027\n・ITSU Roadshow — Centre Court (CC), Lower Ground Floor\n　16 Nov - 22 Nov 2026\n・MyBeauty & Cosmetics Expo — Atrium, Mid Valley Exhibition Centre (MVEC), Third Floor, Centre Court\n　19 Nov - 22 Nov 2026\n・CelcomDigi Pop Up — East Atrium (EEA), Ground Floor\n　16 Nov - 22 Nov 2026\n\n雪隆活動（未來 14 天，命中興趣 2 項）\n・11/25 AI-Powered OEM: Scaling Beauty, Health and Perso\n　Lazada Malaysia\n・11/27 Resilience by Design: Are You Scaling AI or Scal\n　The Ruma Hotel and Residences\n\n電子／玩具優惠\n・Harvey Norman Malaysia Black Friday Early Deals Sale\n　11-21→11-22\n・Nojima Malaysia Black Friday Sale – Up to 70% Off Sm\n　11-20→11-22　LaLaport BBCC Kuala Lump\n・Ban Hin Bee (BHB) Warehouse Sale – Up to 70% OFF Hom\n　11-19→11-22\n・LG Year-End Home Fest 2026: Discover Exclusive LG Su\n　11-19→11-22　Pavilion Bukit Jalil\n・TMT Malaysia Reward Sales Promotion – Up to 20% Cash\n　11-18→11-22\n・HONOR Malaysia: HONOR X9e Pro Roadshow Sale\n　11-18→11-22\n\n大型活動（會展／體育館）\n・11-22 My Art My Story Book Launching\n　Tsutaya Books Bukit Jalil\n・11-25 "
- },
- {
-  "job": "ai research push",
-  "ts": 1795306228,
-  "text": "**⚡ 建議動手**\n1. 讓我安裝 **Tencent WeMM-Video-2B** 的 Q4 GGUF（Apache 2.0、中英雙語、影音一起讀），拿一支官方遊戲預告試做「一句中文摘要」；估 30–40 分鐘，下載幾 GB，3070 Ti 8GB 一定塞得下。值得的原因是：現在 reel 選片是我先人肉看完才決定，這個能先幫我篩掉沒料的預告。"
- },
- {
-  "job": "AI 工具日報",
-  "ts": 1795305714,
-  "text": "📰 **AI 日報 11/22（日）**\n\n**⚡ 建議動手**\n1. 讓我安裝 **Tencent WeMM-Video-2B** 的 Q4 GGUF（Apache 2.0、中英雙語、影音一起讀），拿一支官方遊戲預告試做「一句中文摘要」；估 30–40 分鐘，下載幾 GB，3070 Ti 8GB 一定塞得下。值得的原因是：現在 reel 選片是我先人肉看完才決定，這個能先幫我篩掉沒料的預告。\n\n**第一節｜AI 工具**\n\n・**Hermes Agent v0.23.3**（11/20）\n1. 滾動修補版，把上次之後約 370 個 PR 打包，官方明說逐項說明要等 v0.24.0 才發。\n2. 我實際看得到的具體條目只有 canary 的插件目錄新增兩個（meragpt、mahjonghandbook），跟你日常用的東西無關。\n3. 結論：觀察就好，今晚不用升。\n\n・**WeMM-Video**（Tencent，11/20）\n1. 開源 2B／4B／9B／35B-A3B 四種大小，畫面與聲音一起理解，中英雙語，Apache 2.0，已放 GGUF。\n2. 對我們的好處是本地就能「看＋聽」一支預告再寫摘要，不送雲端、不燒 API 錢。\n3. 結論：值得試——就是上面那件。\n\n・**Inkling-2-Mini**（Thinking Machines，11/20）\n1. 26B MoE（每 token 約 3B 生效），中間 12 層重跑三次裝成更大模型，可看圖、1M context、有 4-bit GGUF。\n2. 對我們來說：聽起來剛好，但 26B 的 4-bit 權重估約 14GB，8GB 卡裝不下，只能慢慢 offload。\n3. 結論：觀察就好，換卡再說。\n\n**第二節｜🔧 新奇專案**\n\n・**zenbu-labs/terminal-browser**（4.7k★）：真的瀏覽器跑在終端裡，靠 kitty 圖形協定把網頁當像素畫進 terminal。\n　有趣在它同時是給 agent 用的眼睛——附 Claude Code 插件，昨天還在推 commit，不是只有 README 的空殼。\n\n・**ctkrug/side-b**：把播放清單錄成一卷卡帶，有真的抖動、飽和、底噪，封面自己塗，一條連結帶走整卷。\n　有趣在音訊全在瀏覽器即時算、不上傳，分享連結連你畫的封面都編進網址。\n\n・**ctkrug/cellular-symphony**（Murmur）：細胞自動機邊跑邊出聲，每行活細胞就是一個音，翻一個 bit 畫面和旋律同時變。\n　有趣在「看到的和聽到的是同一件事」，規則、種子、音階全寫在網址，貼給誰都能重現同一段音樂。"
- },
- {
-  "job": "voucher daily",
-  "ts": 1795304263,
-  "text": "今天沒有變化：未用 9 張 RM696"
- },
- {
-  "job": "社群熱度",
-  "ts": 1795303828,
-  "text": "社群熱度選題 — 最近 30 天（Reddit 遊戲 0 則 / HN 60 則）\n\n 1. [HN 4060▲ 3493💬] Jensen Huang resigns\n    https://apnews.com/article/nvidia-megaspeed-china-singapore-huang-5403f152a601cf82ce939f1d24fffa0f\n 2. [HN 3314▲ 769💬] Patrick Stewart has died\n    https://www.nytimes.com/2026/10/29/arts/television/patrick-stewart-dead.html\n 3. [HN 3007▲ 751💬] sshole\n    https://sshhole.com\n 4. [HN 2971▲ 902💬] Astra can read and write weights to improve Qwen\n    https://rikiyat.github.io/blog/weight-space-programming/\n\n⚠️ 抓取有問題的來源：\n  - Reddit: HTTPError HTTP Error 404: Not Found"
- },
- {
   "job": "每週維修",
   "ts": 1795291228,
   "text": "🔧 每週維修\n・🧹 清掉 77 MB（cache 107 項、cron 紀錄 0 份）\n・⬆️ Hermes 落後 12 天（2239 個 commit；未升級，等你點頭）\n・📦 系統有 24 個套件可升級"
@@ -88,10 +93,5 @@
   "job": "記憶審計",
   "ts": 1794790946,
   "text": "記憶審計報告（未改動任何檔案，僅讀取）\n\n1. 記憶水位｜~/.hermes/memories/MEMORY.md：2193/2200 字 = **99.7%**（上限 2200，config `memory_char_limit`）— 幾乎寫滿，建議收尾後併入下一筆\n2. 記憶水位｜~/.hermes/memories/USER.md：1294/1375 字 = **94.1%**（上限 1375，`user_char_limit`）— 過齊，暫無垃圾\n3. 重複條目｜MEMORY.md：乾淨（逐條逐條比對，無同文複製）\n4. 重複條目｜USER.md：乾淨（無與 MEMORY.md 或自身重疊項）\n5. 矛盾／過期指引｜MEMORY.md：乾淨—「兩台主機：rin-box ＋ Windows desktop-akpf18q」只在一處，未出現「Windows＝主機 + Linux」的矛盾，也未見 Letta、D:\\AI、舊 cron id、Windows gateway 記載\n6. 矛盾／過期指引｜USER.md：乾淨—同上，無相關過期或矛盾指引\n7. ops 指引旧路徑｜reference/ops/MEMORY.md index：乾淨—只列 active-tasks／lhdn-tax-index／handoff／gate-framework／machine-migration／hermes-settings 六項，全為目前有效檔\n8. ops 歷史殘留｜post-reset-install.md 的 `D:\\AI` 不動、memory-provider.md 的 `D:\\AI\\_backup\\mnemo-enable.log`、active-tasks.md 的「舊的 longcat 是 Letta 時代設定」——均已標記為歷史記錄，不是活躍指引；建議下次整理時改名或移進 attic，免被誤作活路徑\n9. ops 能動指引｜無過期 Windows gateway 指引、無 Letta 路由、無舊 cron job id（cron-ops.md 已寫「舊的 Letta cron 已作廢」且列出現行 6 個 job）— 乾淨\n\n結論：**兩份記憶本體乾淨；ops/ index 也乾淨；唯 operations 資料夾中仍有幾份標為歷史的殘留（D:\\AI、Letta 年代），不影響現行路由，待決處理即可。**"
- },
- {
-  "job": "kl mall refresh",
-  "ts": 1794783657,
-  "text": "🏬 商場目錄有變動\nMid Valley：清單 696 間，新增 1、補齊單位號 0\nPavilion：清單 400 間，新增 0、補齊單位號 0\ntotal 489\nvelocity 寫入 489 筆\ntrx 寫入 377 筆\n讀不到 /home/rin/.hermes/cache/scratch/klcc_stores.json [Errno 2] No such file or directory: '/home/rin/.hermes/cache/scratch/klcc_stores.json'\n已標記關閉／移除： [('midvalley', 2), ('pavilion', 2), ('trx', 2), ('velocity', 1)]\n在架： [('klcc', 213), ('midvalley', 556), ('pavilion', 400), ('trx', 377), ('velocity', 489)]"
  }
 ]
