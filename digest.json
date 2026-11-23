@@ -1,43 +1,49 @@
 {
-  "date": "2026-11-22",
-  "updated": "2026-11-22T20:00:00+08:00",
+  "date": "2026-11-23",
+  "updated": "2026-11-23T20:00:00+08:00",
   "items": [
     {
-      "text": "輝達遭勒索組織 資料10天後洩漏 官方稱系統未入侵",
-      "link": "https://infosecu.technews.tw/2026/11/22/nvidia-ransom-demand-by-the-gentlemen-leak-timer-under-10-days/",
-      "source": "科技新報",
-      "ts": 1795338016
-    },
-    {
-      "text": "特斯拉 FSD v15 畫面像 GTA、官方說安全 25 倍",
-      "link": "https://www.kocpc.com.tw/archives/704294",
-      "source": "電腦王阿達",
-      "ts": 1795330473
-    },
-    {
-      "text": "腦機接口 玩《GTA 6》 開車射擊都辦得到",
-      "link": "https://www.4gamers.com.tw/news/detail/83446/neuralink-can-play-gta6",
+      "text": "新楓之谷×經典版 楓潮派對落幕",
+      "link": "https://www.4gamers.com.tw/news/detail/83461/maple-story-event-in-2026-november",
       "source": "4Gamers",
-      "ts": 1795329700
+      "ts": 1795432262
     },
     {
-      "text": "AI 文字偵測器 辨識偽裝文字 準確率逾九成",
-      "link": "https://technews.tw/2026/11/22/helping-ai-text-detectors-keep-up-with-changing-conditions/",
-      "source": "科技新報",
-      "ts": 1795332652
-    },
-    {
-      "text": "明日方舟：終末地 2.0+ 11/25 開啟",
-      "link": "https://www.4gamers.com.tw/news/detail/83443/arknights-endfield-new-version-2-point-zero-release-in-25-november",
-      "source": "4Gamers",
-      "ts": 1795279185
-    },
-    {
-      "text": "哈塞瓦 名車模型 + 人形 限定套組登場",
-      "link": "https://hjweb.jp/article/2887302/",
+      "text": "復原畫風 木偶甦醒 白亜紀恐龍",
+      "link": "https://hjweb.jp/article/2873305/",
       "source": "Hobby Japan",
-      "ts": 1795338000
+      "ts": 1795431600
+    },
+    {
+      "text": "GTA6 首日 37.9 億美元 創紀錄",
+      "link": "https://technews.tw/2026/11/23/gta-6-generates-3790-million-in-first-day-sales/",
+      "source": "科技新報",
+      "ts": 1795422412
+    },
+    {
+      "text": "東京女武神 Switch 中文盒裝出",
+      "link": "https://gnn.gamer.com.tw/detail.php?sn=315447",
+      "source": "巴哈 GNN",
+      "ts": 1795430655
+    },
+    {
+      "text": "馬來西亞 iCaur 一年 5000 台",
+      "link": "https://soyacincau.com/2026/11/23/icaur-malaysia-5000-unit-milestone-official-community/",
+      "source": "SoyaCincau",
+      "ts": 1795424119
+    },
+    {
+      "text": "首款 AI 電動螺絲起子 掃一下識螺絲",
+      "link": "https://www.kocpc.com.tw/archives/704382",
+      "source": "電腦王阿達",
+      "ts": 1795423957
+    },
+    {
+      "text": "日本狂用 AI 與全世界審美大降",
+      "link": "https://www.ifanr.com/1691079?utm_source=rss&utm_medium=rss_campaign=",
+      "source": "愛范兒",
+      "ts": 1795427628
     }
   ],
-  "discussion": "泰劇/韓劇重灌多（Khemjira 季尾、USMILE×ORM、PIL 新集、Meenbabe EP3），K-pop 那邊 Hwasa、Taeyang、BTS 祝福也有；F1 熱搜則是 LasVegas GP 與各隊名單。"
+  "discussion": "馬來西亞 X 熱搜重點：泰劇《Fool in Love EP14》跟《Khem Jira》完結季刷出好幾個新企劃，粉絲聚會、美妝與流行文化話題佔了一大半；政治話也在：馬國緊急警報系統正式更名 MySiren，29 日再做全國測試；SPM 2026 考試季也在上熱搜。"
 }
