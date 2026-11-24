@@ -1,7 +1,31 @@
 {
- "updated": "2026-11-24T23:47:39+08:00",
- "count": 164,
+ "updated": "2026-11-25T01:51:47+08:00",
+ "count": 167,
  "items": [
+  {
+   "cat": "game",
+   "title": "《Demon Tides》2027/1/21 登 PS5、Switch 2",
+   "note": "《Demon Turf》團隊 Fabraz 的開放世界 3D 平台跳躍作，這次補上主機版，同日連 Switch 一起出。",
+   "source": "Gematsu",
+   "ts": 1795539882,
+   "added": "2026-11-25T01:51:47+08:00"
+  },
+  {
+   "cat": "game",
+   "title": "《Paper Shredder》2027/1/12 登 Xbox、Steam",
+   "note": "增量型放置遊戲，靠累積一路輾過去，年底前還有兩個月可以慢慢等。",
+   "source": "Gematsu",
+   "ts": 1795537702,
+   "added": "2026-11-25T01:51:47+08:00"
+  },
+  {
+   "cat": "game",
+   "title": "《Atomic Heart: The CUBE》首支預告曝光",
+   "note": "Mundfish 2025 年發表的多人 RPG，放出「Archive File #1」檔案式預告，仍未給發售日。",
+   "source": "Gematsu",
+   "ts": 1795537174,
+   "added": "2026-11-25T01:51:47+08:00"
+  },
   {
    "cat": "game",
    "title": "《女神異聞錄 4 Revival》介紹同學與「社群」系統",
@@ -41,6 +65,14 @@
    "source": "4Gamers",
    "ts": 1795527702,
    "added": "2026-11-24T22:45:44+08:00"
+  },
+  {
+   "cat": "game",
+   "title": "EVO Japan 2027 比賽項目公布 7 款",
+   "note": "4/29–5/1 東京 Big Sight；快打 6、鐵拳 8、GG Strive、餓狼 CotW 之外，MARVEL Tokon 首次入選、VF5 REVO 也在列。",
+   "source": "Gematsu",
+   "ts": 1795524349,
+   "added": "2026-11-25T01:51:47+08:00"
   },
   {
    "cat": "game",
@@ -1305,14 +1337,6 @@
    "source": "4Gamers",
    "ts": 1794940433,
    "added": "2026-11-18T03:25:09+08:00"
-  },
-  {
-   "cat": "game",
-   "title": "《極限競速：地平線6》玩家在遊戲中與已故摯友重逢",
-   "note": "朋友過世 4 個月，遊戲裡他留下的 Drivatar 還在跑，玩家重新開上路陪他並肩巡航，影片在社群傳開。",
-   "source": "4Gamers",
-   "ts": 1794930438,
-   "added": "2026-11-18T01:22:18+08:00"
   }
  ]
 }
