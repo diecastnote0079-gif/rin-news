@@ -1,5 +1,40 @@
 [
  {
+  "job": "SNKRDUNK 卡價",
+  "ts": 1795482031,
+  "text": "SNKRDUNK 變化\n📈 3rd Anniversary Set — ENGLISH\n   在售 59 → 61 件\n   最低在售 ¥59,999 → ¥59,899\n📈 3rd Anniversary Set — CHINA\n   在售 57 → 54 件\n   最低在售 ¥40,398 → ¥40,000\n📈 Luffy SEC-RSP OP13-118\n   PSA10 ¥2,900,000 → ¥2,865,000\n📈 Luffy SEC-SP EB04-061\n   PSA10 ¥1,635,000 → ¥1,600,000"
+ },
+ {
+  "job": "cex 0830",
+  "ts": 1795480338,
+  "text": "健康檢查：20261124083025（範圍 web，78144 筆）\n  ✅ freshness  資料 0.0 小時前抓的\n  ✅ volume     筆數 78144（與上次 78143 差 0.00%）\n  ✅ schema     60 個欄位，與上次指紋一致\n  ✅ quality    78144 筆：主鍵無重複、標價與名稱完整\n  ✅ heartbeat  距上次抓取 10.5 小時（20261123220025 → 20261124083025）\n\n全部正常"
+ },
+ {
+  "job": "kl daily brief",
+  "ts": 1795480253,
+  "text": "☀️ 今日 11/24 (Tue)\n\n天氣：25–30°C，最高降雨機率 100%\n　降雨時段：09:00（58%）、10:00（75%）、11:00（88%）、12:00（95%）、13:00（98%）、14:00（100%）\n\nMid Valley 本週活動（4 項）\n・LIVEXPO 2026 — Hall 1 & Hall 2, Mid Valley Exhibition Centre (MVEC), Third Floor, Centre Court\n　28 Nov - 29 Nov 2026\n・Christmas 2026 — Mall Wide (MW), Ground Floor\n　21 Nov 2026 - 3 Jan 2027\n・Laneige Holiday Pop-up — East Atrium (EEA), Ground Floor\n　23 Nov - 29 Nov 2026\n・Fitness Concept Roadshow — Centre Court (CC), Lower Ground Floor\n　23 Nov - 29 Nov 2026\n\n雪隆活動（未來 14 天，命中興趣 2 項）\n・11/25 AI-Powered OEM: Scaling Beauty, Health and Perso\n　Lazada Malaysia\n・11/27 Resilience by Design: Are You Scaling AI or Scal\n　The Ruma Hotel and Residences\n\n電子／玩具優惠\n・BEST DENKI Malaysia Black Friday Sale – Up to RM2,50\n　11-24　Participating Outlets\n・70mai Malaysia 11.25 Payday Sale – Save on A810 Lite\n　11-25\n・Harvey Norman Malaysia Adjustable Beds Sale – Enjoy \n　11-24→11-25　Stores & Online\n・COURTS & NOJIMA Biggest Year End Laptop Sale – Save \n　11-16→11-25　Participating Outlets Na\n・POCO X8s Malaysia: Up to RM500 Off Compact 6.35-inch\n　11-10→11-25\n・COURTS LG 75-Inch Nano 4K UHD Smart TV Sale – Save R\n　11-05→11-25　COURTS & Nojima\n\n大型活動（會展／體育館）\n・11-25 AI-Powered OEM: Scali"
+ },
+ {
+  "job": "ai research push",
+  "ts": 1795479026,
+  "text": "今天沒有要動的"
+ },
+ {
+  "job": "AI 工具日報",
+  "ts": 1795478548,
+  "text": "⚡ **建議動手**\n今天沒有要動的。最新一輪更新全是插件目錄與打包小事，沒有一件修到你正在用的東西。\n\n**第一節｜AI 工具**\n\n**Hermes Agent v0.23.3（canary，11/23）**\n1. 這一輪幾乎只做了一件事：把幾十個社群插件塞進目錄（stats 儀表板、beeper 平台、katara 記憶體 provider、UniFi 監控…），core 只動了發佈流程與桌面縮放、blockmap 之類。\n2. 對我們：目錄變厚，但你都在手機 Telegram，網頁型儀表板用不到；沒有 Telegram 或 cron 相關修正。\n3. 結論：觀察就好，不必為這版特別升級。\n\n**OpenCode v2.4.1（11/23）**\n1. 修 macOS 12 存不了助理訊息（SQLite 不支援新語法）、只在 config 設的 provider（如 Ollama）現在 /models 看得到模型、側問答有未讀點。\n2. 對我們：全是小修，沒碰你在用的 opencode-go 路由，升級不會壞事也不會撿到便宜。\n3. 結論：觀察就好，下次換版順手帶上。\n\n**Claude Code v2.1.331（11/23）**\n1. 修 MCP 工具呼叫遇到本地／WebSocket server 回畸形資料時卡最多 30 分鐘；`claude doctor` 新增 API 連通檢查。\n2. 對我們：你有接自架 MCP（alpaca／context7／deepwiki），那個卡死是真的會咬人——但那是 Claude Code 的客戶端，不是我這條線。\n3. 結論：值得試，如果你還會開 Claude Code 跑 MCP。\n\n**SenseNova-Loop-9B（11/17 發布，11/18 補 AWQ／GGUF）**\n1. 9B 多模態模型，靠「中間層權重重複跑」把算力堆到 14.6B 等效，512K context，官方給了 Q4_K_M。\n2. 對我們：3070 Ti 8GB 塞得下，可當離線看圖／長文摘要的備援，但中文文筆與 tool use 官方自己承認還弱。\n3. 結論：觀察就好，除非你要一條不花錢的離線線。\n\n**第二節｜🔧 新奇專案**\n\n**worker755（gulivan/worker755，MIT）**\n1. 瀏覽器遊戲，你的主管是真的 LLM，它相信你是它的 subagent，每道指令給你 90 秒，做不完它就收到「Subagent did nothing」。\n2. 有趣在角色對調：它會驗你的活、發事故報告、最後幫你寫績效考核，Dan 的家目錄每班都多一個能 rm 掉的東西；`npm run mock` 可離線跑腳本主管。\n\n**DirectorPrompt（AtmoOmen/DirectorPrompt，C#）**\n1. "
+ },
+ {
+  "job": "voucher daily",
+  "ts": 1795476963,
+  "text": "今天沒有變化：未用 9 張 RM696"
+ },
+ {
+  "job": "社群熱度",
+  "ts": 1795476630,
+  "text": "社群熱度選題 — 最近 30 天（Reddit 遊戲 0 則 / HN 60 則）\n\n 1. [HN 4060▲ 3494💬] Jensen Huang resigns\n    https://apnews.com/article/nvidia-megaspeed-china-singapore-huang-5403f152a601cf82ce939f1d24fffa0f\n 2. [HN 3314▲ 769💬] Patrick Stewart has died\n    https://www.nytimes.com/2026/10/29/arts/television/patrick-stewart-dead.html\n 3. [HN 3007▲ 751💬] sshole\n    https://sshhole.com\n 4. [HN 2971▲ 902💬] Astra can read and write weights to improve Qwen\n    https://rikiyat.github.io/blog/weight-space-programming/\n\n⚠️ 抓取有問題的來源：\n  - Reddit: HTTPError HTTP Error 404: Not Found"
+ },
+ {
   "job": "duckx3 maintenance",
   "ts": 1795464036,
   "text": "維護跑完，兩邊都成功：收件匣刪 0 筆（沒有超過 7 天又不是 new 的記錄），剩 36 筆；備份 pb_data-20261124-040028.tar.gz，117MB，data.db 和 906 個 storage 檔都在裡面（壓縮後 1362 個檔案節點），備份夾現有 13 份。無 FAILED。"
@@ -28,46 +63,6 @@
   "job": "記憶審計",
   "ts": 1795395696,
   "text": "記憶審計報告（只讀，未改任何檔）\n\n## 1. MEMORY.md & USER.md\n- **重複**：乾淨。MEMORY.md 12 節／USER.md 19 節，兩檔無重複條目，範疇分明（MEMORY.md 偏工具/機房，USER.md 偏人物/原則），互不掩蓋。\n- **矛盾**：乾淨。二者間無互斥敘述。主機描述（rin-box＝Beelink SER5 永不關機、desktop-akpf8q 休眠/離線）是一台機器的兩種狀態，非 Windows vs Linux 衝突。\n- **過期**：\n  - `MEMORY.md:「阿夜 2026-11-20 00:37 說…」` 為 intimacy 記錄，非規則引用，不應進「要改前先讀」流程，標註即可。\n  - `reference/ops/hermes-adaptation.md`、`post-reset-install.md`（「人格已搬到 Hermes」）、`handoff-sunk-20261013.md` 仍大量出現 **Letta**——屬歷史記錄，已有提示語穩住，但建議在標頭加一句「已遷移，同名舊規已失效」避免誤讀。\n- **D:\\AI 路徑**：`post-reset-install.md` 多處、`local-hygiene.md` 列 D:\\AI 與 C:\\Users\\GIll 路徑——全是 Windows 機器的歷史溯源，現在記憶實體在 `~/AI`，請視為過往記錄，不要當作有效路徑。\n- **舊 cron id**：`active-tasks.md` 指向 `f133d532 / cron 0 1 * * *` 已在 2026-10-10 刪除，只有歷史留痕，必要時標註「已移除」。\n\n## 2. reference/ops/ 舊路徑指標\n- `post-reset-install.md` ～ `local-hygiene.md` 反覆出現 `D:\\AI`、`C:\\Users\\GIll`——歷史機器殘留，不是當前索引路徑。\n- `active-tasks.md:26` `HERMES_HOME 搬家 C → D 槽（D:\\hermes）… ⏳ pending`——但當前 .hermes 實際在 `/home/rin/.hermes`（Linux C 槽根），該 pending 項目已過時，建議標註「釐清／歸零」。\n- `rin-now.md`、`active-tasks.md` 內 `runner=local`、`cron f133d532` 屬已結案細節，留痕即可。\n\n## 3. 記憶水位\n- `MEMORY.md` = 3,269 字節、`USER.md` = 3,276 字節，兩檔共 6,545 字節，彼此約 **49.9%／50.1%**，均不到 3.3KB，無溢位。\n- 檔"
- },
- {
-  "job": "SNKRDUNK 卡價",
-  "ts": 1795395631,
-  "text": "SNKRDUNK 變化\n📈 3rd Anniversary Set — ENGLISH\n   在售 61 → 59 件\n   最低在售 ¥60,000 → ¥59,999\n📈 3rd Anniversary Set — CHINA\n   在售 60 → 57 件\n📈 Luffy SEC-RSP OP13-118\n   PSA10 ¥2,920,000 → ¥2,900,000\n📈 Luffy SEC-SP EB04-061\n   PSA10 ¥1,680,000 → ¥1,635,000"
- },
- {
-  "job": "CeX 早安",
-  "ts": 1795395181,
-  "text": "昨天 CeX 的動靜：\n\n🆕 新上架\n・ATI Radeon Cypress HD 5870 2GB（顯卡）RM100\n・NVIDIA GeForce GT 720 2GB（顯卡）RM65\n・Retroid Pocket Flip 2（掌機）RM850\n・Netac NV5000-t 1TB NVMe M.2 SSD（固態）RM500\n・Asus FX507V i7-13620H/RTX 4050 16\" 筆電（筆電）RM3400\n・Xiaomi 14 12+256（手機）RM1400\n\n📉 降價\n・HP X27 27\" FHD IPS LED 遊戲螢幕（螢幕）RM380 → RM290\n\n📦 回架\n・Formula Legends（Switch）\n・EA Sports FC 27（Switch）\n・Control Resonant（PS5）\n・Double Dragon Revive（PS5）\n・PS3 超級光碟機 500GB 藍（主機）\n・Sapphire AMD Radeon RX 7700 XT PULSE 12GB GDDR6（顯卡）\n\n🚫 賣光\n・PS5 數位版 825GB 中黑 盒裝（PS5）\n・PS5 825GB 中黑 盒裝（PS5）\n・F1 22（PS5）\n・EA Sports FC 27（Switch）\n・Call Of Duty Modern Warfare Remastered（PS4）\n・NVIDIA GeForce GT 720 2GB（顯卡）"
- },
- {
-  "job": "cex 0830",
-  "ts": 1795393938,
-  "text": "健康檢查：20261123083025（範圍 web，78045 筆）\n  ✅ freshness  資料 0.0 小時前抓的\n  ✅ volume     筆數 78045（與上次 78044 差 0.00%）\n  ✅ schema     60 個欄位，與上次指紋一致\n  ✅ quality    78045 筆：主鍵無重複、標價與名稱完整\n  ✅ heartbeat  距上次抓取 10.5 小時（20261122220025 → 20261123083025）\n\n全部正常"
- },
- {
-  "job": "kl daily brief",
-  "ts": 1795393852,
-  "text": "☀️ 今日 11/23 (Mon)\n\n天氣：25–29°C，最高降雨機率 96%\n　降雨時段：13:00（63%）、14:00（86%）、15:00（95%）、16:00（96%）、17:00（96%）、18:00（96%）\n\nMid Valley 本週活動（4 項）\n・LIVEXPO 2026 — Hall 1 & Hall 2, Mid Valley Exhibition Centre (MVEC), Third Floor, Centre Court\n　28 Nov - 29 Nov 2026\n・Christmas 2026 — Mall Wide (MW), Ground Floor\n　21 Nov 2026 - 3 Jan 2027\n・Laneige Holiday Pop-up — East Atrium (EEA), Ground Floor\n　23 Nov - 29 Nov 2026\n・Fitness Concept Roadshow — Centre Court (CC), Lower Ground Floor\n　23 Nov - 29 Nov 2026\n\n雪隆活動（未來 14 天，命中興趣 2 項）\n・11/25 AI-Powered OEM: Scaling Beauty, Health and Perso\n　Lazada Malaysia\n・11/27 Resilience by Design: Are You Scaling AI or Scal\n　The Ruma Hotel and Residences\n\n電子／玩具優惠\n・BEST DENKI Malaysia Black Friday Sale – Up to RM2,50\n　11-23→11-24　Participating Outlets\n・Harvey Norman Malaysia Adjustable Beds Sale – Enjoy \n　11-23→11-25　Stores & Online\n・COURTS & NOJIMA Biggest Year End Laptop Sale – Save \n　11-16→11-25　Participating Outlets Na\n・POCO X8s Malaysia: Up to RM500 Off Compact 6.35-inch\n　11-10→11-25\n・COURTS LG 75-Inch Nano 4K UHD Smart TV Sale – Save R\n　11-05→11-25　COURTS & Nojima\n・Toys”R”Us Malaysia T-KUN Meet & Greet Event – Meet T\n　11-14→11-28　1 Utama and KLCC\n\n大型活動（會展／體育館）\n・"
- },
- {
-  "job": "ai research push",
-  "ts": 1795392628,
-  "text": "**⚡ 建議動手**\n・把 diagram-design 這個 skill 裝進來：它提供 45 種編輯級圖表，輸出單檔 HTML+SVG（不是 Mermaid）。大約 30 分鐘就能裝好；之後卡價 watchlist、生意數字，我直接出圖，你不用再讀表格。"
- },
- {
-  "job": "AI 工具日報",
-  "ts": 1795392222,
-  "text": "**⚡ 建議動手**\n・把 diagram-design 的 skill 搬進來：它提供 45 種編輯級圖表，輸出單檔 HTML+SVG（不是 Mermaid）。大約 30 分鐘就能裝好；之後卡價 watchlist、生意數字我直接出圖，你不用再讀表格。\n\n**第一節｜AI 工具**\n\n**Inkling-2-Mini（11/22）** 26B MoE、實際只動 3.4B、能看圖，unsloth 已出 GGUF。\n對我們：Q8 版 22.9GB，Q4 也要十幾 GB，3070 Ti 8GB 吃不下。\n結論：觀察就好。\n\n**Claude Code v2.1.330（11/20）** 內建 easel，叫它畫圖表就直接畫（/config 可關）。\n對我們：我們不用 Claude Code，但「隨手要圖」這方向我用 HTML/SVG 就能做；它順手修了長對話壓縮後卡幾分鐘。\n結論：觀察就好。\n\n**OpenCode v2.3.2（11/18）** 修 GPT-6.2 系統提示沒被快取、每步重複計費，Copilot 上每步未快取輸入 14,000→3 token。\n對我們：我們走 deepseek-v4.1-flash，吃不到這個修正；但這種省法值得記住。\n結論：不用管。\n\nHermes 本體自 11/5 v0.23.0 後沒新版本，今天不用動。\n\n**🔧 新奇專案**\n**minimind** 兩小時從零訓出 64M 模型，67k stars，昨天還在修相容性。\n為什麼有趣：真的看着它從亂碼學到回話，一張消費級卡就夠。\n**Aurora2-400M-A20M-QAT** 用 0.5 bit／權重把 400M MoE 壓成 27.5MB。\n為什麼有趣：小到可以塞進任何東西裡跑，代價是智力指數 21.4→10.8，剛好看到「小到極致」還剩多少。\n**CLI-Anything** 把有原始碼的軟體包成 agent 用的 CLI，LibreOffice 真出 PDF、Blender 真渲染。\n為什麼有趣：讓 agent 直接開桌面軟體，不是包 API 殼；registry 已有 65 個。"
- },
- {
-  "job": "voucher daily",
-  "ts": 1795390601,
-  "text": "今天沒有變化：未用 9 張 RM696.0"
- },
- {
-  "job": "社群熱度",
-  "ts": 1795390229,
-  "text": "社群熱度選題 — 最近 30 天（Reddit 遊戲 0 則 / HN 60 則）\n\n 1. [HN 4060▲ 3493💬] Jensen Huang resigns\n    https://apnews.com/article/nvidia-megaspeed-china-singapore-huang-5403f152a601cf82ce939f1d24fffa0f\n 2. [HN 3314▲ 769💬] Patrick Stewart has died\n    https://www.nytimes.com/2026/10/29/arts/television/patrick-stewart-dead.html\n 3. [HN 3007▲ 751💬] sshole\n    https://sshhole.com\n 4. [HN 2971▲ 902💬] Astra can read and write weights to improve Qwen\n    https://rikiyat.github.io/blog/weight-space-programming/\n\n⚠️ 抓取有問題的來源：\n  - Reddit: HTTPError HTTP Error 404: Not Found"
  },
  {
   "job": "kl mall refresh",
