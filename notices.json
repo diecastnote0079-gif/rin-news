@@ -1,5 +1,15 @@
 [
  {
+  "job": "duckx3 maintenance",
+  "ts": 1795550434,
+  "text": "兩邊都成功：清掉 0 筆（收件匣剩 36 筆），備份 `pb_data-20261125-040027.tar.gz`，116.4MB（122,045,367 bytes），data.db ✓、storage 906 個檔案 ✓，備份目錄維持 14 份。無 FAILED。"
+ },
+ {
+  "job": "doc reconcile",
+  "ts": 1795550123,
+  "text": "【文件 vs 現況 對帳】\n • cex 排程不符：缺 ['0 10,13,16,19,22 * * *']；實際 ['0 10,12,14,16,18,20,22 * * *', '30 8 * * *']\n • 手機頁資料 5.9 小時前（上限 5）：2026-11-24T14:01:53Z\n • 本機最後一輪 5.9 小時前（20261124220025）\n • 決策日誌最後一筆 #58 是 2026-11-06（19 天前）→ 期間的決定沒有落點"
+ },
+ {
   "job": "nightly reflection",
   "ts": 1795534545,
   "text": "改了 jp-game-localization，4 條（另修掉一條錯的事實）：\n\n- 交付「在遊戲裡的效果」只認遊戲截圖，翻譯稿不算\n- 提方案前先確認真機還是模擬器，真機沒有模擬器替代答案\n- Vita 貼圖 swizzle 一律抄現成實作，不自己推公式\n- CPK 回填照 repo 的原地覆蓋＋xdelta，不自造打包器／不跟 CriPakTools 耗\n- 順手更正：該 repo 裡沒有 `cpkmakec.exe`（原本寫成有）"
@@ -43,16 +53,6 @@
   "job": "社群熱度",
   "ts": 1795476630,
   "text": "社群熱度選題 — 最近 30 天（Reddit 遊戲 0 則 / HN 60 則）\n\n 1. [HN 4060▲ 3494💬] Jensen Huang resigns\n    https://apnews.com/article/nvidia-megaspeed-china-singapore-huang-5403f152a601cf82ce939f1d24fffa0f\n 2. [HN 3314▲ 769💬] Patrick Stewart has died\n    https://www.nytimes.com/2026/10/29/arts/television/patrick-stewart-dead.html\n 3. [HN 3007▲ 751💬] sshole\n    https://sshhole.com\n 4. [HN 2971▲ 902💬] Astra can read and write weights to improve Qwen\n    https://rikiyat.github.io/blog/weight-space-programming/\n\n⚠️ 抓取有問題的來源：\n  - Reddit: HTTPError HTTP Error 404: Not Found"
- },
- {
-  "job": "duckx3 maintenance",
-  "ts": 1795464036,
-  "text": "維護跑完，兩邊都成功：收件匣刪 0 筆（沒有超過 7 天又不是 new 的記錄），剩 36 筆；備份 pb_data-20261124-040028.tar.gz，117MB，data.db 和 906 個 storage 檔都在裡面（壓縮後 1362 個檔案節點），備份夾現有 13 份。無 FAILED。"
- },
- {
-  "job": "doc reconcile",
-  "ts": 1795463723,
-  "text": "【文件 vs 現況 對帳】\n • cex 排程不符：缺 ['0 10,13,16,19,22 * * *']；實際 ['0 10,12,14,16,18,20,22 * * *', '30 8 * * *']\n • 手機頁資料 5.9 小時前（上限 5）：2026-11-23T14:01:58Z\n • 本機最後一輪 5.9 小時前（20261123220025）\n • 決策日誌最後一筆 #58 是 2026-11-06（18 天前）→ 期間的決定沒有落點"
  },
  {
   "job": "記憶審計",
