@@ -1,7 +1,23 @@
 {
- "updated": "2026-11-25T01:51:47+08:00",
- "count": 167,
+ "updated": "2026-11-25T03:54:56+08:00",
+ "count": 168,
  "items": [
+  {
+   "cat": "game",
+   "title": "《Lords of the Fallen II》2027 年 4 月發售，確切日在 12 月公布",
+   "note": "墮落之王續作，PS5／Xbox Series／Switch 2／PC 同步，日期 12 月才給，等於還沒鎖死。",
+   "source": "Gematsu",
+   "ts": 1795546910,
+   "added": "2026-11-25T03:54:56+08:00"
+  },
+  {
+   "cat": "game",
+   "title": "《The Wolf Among Us Remastered》11/29 Switch 上架",
+   "note": "Telltale 狼人偵探重製版，這次只走 Switch eShop 數位版，四天後就上。",
+   "source": "Gematsu",
+   "ts": 1795543313,
+   "added": "2026-11-25T03:54:56+08:00"
+  },
   {
    "cat": "game",
    "title": "《Demon Tides》2027/1/21 登 PS5、Switch 2",
@@ -1329,14 +1345,6 @@
    "source": "4Gamers",
    "ts": 1794960000,
    "added": "2026-11-18T09:31:51+08:00"
-  },
-  {
-   "cat": "game",
-   "title": "TGA 2026 入圍名單出爐　GTA6 入圍 8 項最多",
-   "note": "GOTY 六搶一：GTA6、時之笛、007 初露鋒芒、影之刃零、惡靈古堡 安魂曲、控制 共振；控制與安魂曲各 6 項，12 月頒獎。",
-   "source": "4Gamers",
-   "ts": 1794940433,
-   "added": "2026-11-18T03:25:09+08:00"
   }
  ]
 }
