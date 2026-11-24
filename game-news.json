@@ -1,7 +1,23 @@
 {
- "updated": "2026-11-24T01:04:55+08:00",
- "count": 178,
+ "updated": "2026-11-24T10:15:11+08:00",
+ "count": 174,
  "items": [
+  {
+   "cat": "tech",
+   "title": "模擬市民之父新作 MyMems 把回憶變主題樂園",
+   "note": "Will Wright 沉寂 15 年後復出，新作用 AI 把玩家自己的人生記憶生成成可玩的主題樂園。",
+   "source": "科技新報",
+   "ts": 1795480239,
+   "added": "2026-11-24T10:15:11+08:00"
+  },
+  {
+   "cat": "tech",
+   "title": "摩爾線程「廬山」傳 64GB 顯存，是 RTX 5090 兩倍",
+   "note": "64GB 是媒體拿 16GB×4 推出來的，官方沒證實；12/29 MDC 2026 才揭曉，定位可能偏本地 AI 而非遊戲。",
+   "source": "電腦王阿達",
+   "ts": 1795461906,
+   "added": "2026-11-24T10:15:11+08:00"
+  },
   {
    "cat": "game",
    "title": "前 Rockstar 高層：GTA6 開場被叫「男友模擬器」不無道理",
@@ -1377,54 +1393,6 @@
    "source": "Gematsu",
    "ts": 1794879324,
    "added": "2026-11-17T11:00:26+08:00"
-  },
-  {
-   "cat": "game",
-   "title": "《High Roller Penny》2027/1/12 上 Steam",
-   "note": "彈珠台玩法 roguelike，地下賭場主題，PC 獨佔、純數位，沒有實體。",
-   "source": "Gematsu",
-   "ts": 1794871641,
-   "added": "2026-11-17T08:56:33+08:00"
-  },
-  {
-   "cat": "game",
-   "title": "《Mercenaries Grace》日本 11/25 先出 PS5",
-   "note": "戰略 RPG，Switch 版 12 月、PC 要等 2027 年初",
-   "source": "Gematsu",
-   "ts": 1794867574,
-   "added": "2026-11-17T06:52:18+08:00"
-  },
-  {
-   "cat": "game",
-   "title": "《Crazy Taxi: World Tour》「Welcome to India」預告曝光",
-   "note": "SEGA 釋出新預告與截圖，這一站把計程車開進印度街頭；上市日仍未公布。",
-   "source": "Gematsu",
-   "ts": 1794852736,
-   "added": "2026-11-17T02:47:09+08:00"
-  },
-  {
-   "cat": "game",
-   "title": "《Star Wars: Galactic Racer》2027 年初加「Free Play」",
-   "note": "官方宣布免費的 Free Play 模式支援單機分割畫面多人，2027 年初上線。",
-   "source": "Gematsu",
-   "ts": 1794848437,
-   "added": "2026-11-17T02:47:09+08:00"
-  },
-  {
-   "cat": "game",
-   "title": "《時之笛》重製版攻下日台韓三地榜首",
-   "note": "MediaCreate 11/2–11/8 週榜：這款經典重製在日本、台灣、韓國都排第一。",
-   "source": "巴哈 GNN",
-   "ts": 1794847715,
-   "added": "2026-11-17T02:47:09+08:00"
-  },
-  {
-   "cat": "game",
-   "title": "《GTA6》高層談實體遊戲光碟就像黑膠唱片",
-   "note": "Take-Two 執行長 Zelnick 說實體遊戲最後只會變成小眾收藏，還拿 GTA6 實體盒裡沒光碟當例子。",
-   "source": "udn 遊戲角落",
-   "ts": 1794811115,
-   "added": "2026-11-17T08:56:33+08:00"
   }
  ]
 }
