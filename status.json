@@ -1,19 +1,19 @@
 {
- "updated": 1795600830,
+ "updated": 1795608030,
  "quota": {
-  "rolling": 99,
-  "weekly": 75,
-  "monthly": 78,
-  "reset_rolling": "4h 6m",
-  "reset_weekly": "4d 13h",
-  "reset_monthly": "22d 7h"
+  "rolling": 98,
+  "weekly": 74,
+  "monthly": 77,
+  "reset_rolling": "2h 6m",
+  "reset_weekly": "4d 11h",
+  "reset_monthly": "22d 5h"
  },
  "host": {
-  "load": 0.66,
-  "mem_pct": 16,
+  "load": 0.0,
+  "mem_pct": 17,
   "disk_pct": 21,
   "disk_free_gb": 337,
-  "uptime_h": 208
+  "uptime_h": 210
  },
  "memory": {
   "memory": {
@@ -29,8 +29,9 @@
  },
  "cron": {
   "enabled": 41,
-  "failed": 1,
+  "failed": 2,
   "failed_names": [
+   "cex-2h",
    "product-pages-rebuild"
   ]
  },
@@ -38,7 +39,7 @@
   {
    "name": "reminder urban republic sale",
    "date": "11/25",
-   "days": 0
+   "days": -1
   },
   {
    "name": "MRT 月卡續期",
