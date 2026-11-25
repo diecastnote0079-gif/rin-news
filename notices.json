@@ -1,5 +1,40 @@
 [
  {
+  "job": "SNKRDUNK 卡價",
+  "ts": 1795568430,
+  "text": "SNKRDUNK 變化\n📈 3rd Anniversary Set — ENGLISH\n   在售 61 → 62 件\n   最低在售 ¥59,899 → ¥59,800\n📈 3rd Anniversary Set — CHINA\n   最低在售 ¥40,000 → ¥39,799\n📈 Luffy SEC-RSP OP13-118\n   PSA10 ¥2,865,000 → ¥2,787,000\n📈 Luffy SEC-SP EB04-061\n   A ¥1,370,000 → ¥1,290,000"
+ },
+ {
+  "job": "cex 0830",
+  "ts": 1795566732,
+  "text": "健康檢查：20261125083025（範圍 web，78205 筆）\n  ✅ freshness  資料 0.0 小時前抓的\n  ✅ volume     筆數 78205（與上次 78205 差 0.00%）\n  ✅ schema     60 個欄位，與上次指紋一致\n  ✅ quality    78205 筆：主鍵無重複、標價與名稱完整\n  ✅ heartbeat  距上次抓取 10.5 小時（20261124220025 → 20261125083025）\n\n全部正常"
+ },
+ {
+  "job": "kl daily brief",
+  "ts": 1795566654,
+  "text": "☀️ 今日 11/25 (Wed)\n\n天氣：25–30°C，最高降雨機率 98%\n　降雨時段：07:00（76%）、08:00（73%）、09:00（72%）、10:00（73%）、11:00（76%）、12:00（81%）\n\nMid Valley 本週活動（4 項）\n・Laneige Holiday Pop-up — East Atrium (EEA), Ground Floor\n　23 Nov - 29 Nov 2026\n・LIVEXPO 2026 — Hall 1 & Hall 2, Mid Valley Exhibition Centre (MVEC), Third Floor, Centre Court\n　28 Nov - 29 Nov 2026\n・Christmas 2026 — Mall Wide (MW), Ground Floor\n　21 Nov 2026 - 3 Jan 2027\n・Fitness Concept Roadshow — Centre Court (CC), Lower Ground Floor\n　23 Nov - 29 Nov 2026\n\n雪隆活動（未來 14 天，命中興趣 2 項）\n・11/25 AI-Powered OEM: Scaling Beauty, Health and Perso\n　Lazada Malaysia\n・11/27 Resilience by Design: Are You Scaling AI or Scal\n　The Ruma Hotel and Residences\n\n電子／玩具優惠\n・70mai Malaysia 11.25 Payday Sale – Save on A810 Lite\n　11-25\n・Harvey Norman Malaysia Adjustable Beds Sale – Enjoy \n　11-25　Stores & Online\n・COURTS & NOJIMA Biggest Year End Laptop Sale – Save \n　11-16→11-25　Participating Outlets Na\n・POCO X8s Malaysia: Up to RM500 Off Compact 6.35-inch\n　11-10→11-25\n・COURTS LG 75-Inch Nano 4K UHD Smart TV Sale – Save R\n　11-05→11-25　COURTS & Nojima\n・HP Malaysia HyperX OMEN Gaming Laptop Promotion – Fr\n　11-27\n\n大型活動（會展／體育館）\n・11-25 AI-Powered OEM: Scaling Beauty, Health and P\n　Lazad"
+ },
+ {
+  "job": "ai research push",
+  "ts": 1795565428,
+  "text": "⚡ 建議動手\n・`hermes update` → v0.23.4（5 分鐘）：這版把 dashboard 密碼改成不用 TTY、插件設定可以直接在終端改，剛好補上 rin-box 沒螢幕的缺口；但它一次包含 229 個 PR，更新完先確認 cron 有照跑。\n・用 CCORE-Web-Coder-4B 先生一款遊戲的商品頁（30 分鐘）：Q8 檔 4.48GB，你的 8GB 顯卡跑得動；成功就不必每次手動 patch `p/<id>.html`。"
+ },
+ {
+  "job": "AI 工具日報",
+  "ts": 1795564891,
+  "text": "☀️ 11/25 AI 日報\n\n⚡ 建議動手\n・`hermes update` → v0.23.4（5 分鐘）：這版把 dashboard 密碼改成不用 TTY、插件設定可以直接在終端改，剛好補上 rin-box 沒螢幕的缺口；但它一次包含 229 個 PR，更新完先確認 cron 有照跑。\n・用 CCORE-Web-Coder-4B 先生一款遊戲的商品頁（30 分鐘）：Q8 檔 4.48GB，你的 8GB 顯卡跑得動；成功就不必每次手動 patch `p/<id>.html`。\n\n第一節｜AI 工具\n**Hermes Agent v0.23.4**（11/24）\n1. 補丁版，把 v0.23.3 之後約 229 個 PR 集中到穩定版；新增 `hermes plugins config`、`hermes gateway migrate --backends`、無 TTY 設 dashboard 密碼，Gemini 4 系列（Hydrogen／Neon／Carbon）上 Nous Portal。\n2. 對我們有用：我們全部操作都在 CLI 和 cron 上跑，這兩項正好針對沒螢幕的情況，不用再開瀏覽器做事。\n3. 結論：值得試（今天就能升，升完看 cron 紀錄）。\n\n**OpenCode v2.4.1**（11/23）\n1. 修掉長 session 壓縮之後偶爾多扣的 cache 費；只寫在 config 的 provider（例如 Ollama）現在 `/models` 直接列得出來，不用先 `/connect`。\n2. 對我們有用：cache 多扣就是直接多燒錢，而你指定的「不燒 token」正好受影響；Ollama 那條則讓本機小模型接得比較順。\n3. 結論：觀察就好，下次開順手升。\n\n**Claude Code**（11/23 更新）\n1. `claude doctor` 多了 API 連通性檢查（直接報 HTTP 狀態或錯誤原因），插件 manifest 支援 optionalDependencies。\n2. 對我們有用度低：排程我們走 hermes cron，沒在用 Claude 的雲端任務；只有哪天要接 Claude 當備援，這個 doctor 才省事。\n3. 結論：不用管。\n\n**CCORE-Web-Coder-4B**（社群 4B 小模型，Qwen3.5-4B 底）\n1. 輸入一段需求，直接輸出單一 HTML（React 從 CDN 載），產網站、簡報、資訊圖；不用 build。\n2. 對我們有用：8GB 顯卡跑得動，小店商品頁、新聞台版面、報表頁都能先生個初稿再改；缺點是介面文字預設英文（剛好合英主中輔），而且是預覽訓練檢查點，複雜版面會壞。\n3. 結論：值得試，先一頁試水溫。\n\n第二節｜🔧 新奇專案\n・**worker755**：瀏覽"
+ },
+ {
+  "job": "voucher daily",
+  "ts": 1795563359,
+  "text": "今天沒有變化：未用 9 張 RM696.00"
+ },
+ {
+  "job": "社群熱度",
+  "ts": 1795563028,
+  "text": "社群熱度選題 — 最近 30 天（Reddit 遊戲 0 則 / HN 60 則）\n\n 1. [HN 4060▲ 3493💬] Jensen Huang resigns\n    https://apnews.com/article/nvidia-megaspeed-china-singapore-huang-5403f152a601cf82ce939f1d24fffa0f\n 2. [HN 3314▲ 769💬] Patrick Stewart has died\n    https://www.nytimes.com/2026/10/29/arts/television/patrick-stewart-dead.html\n 3. [HN 3007▲ 751💬] sshole\n    https://sshhole.com\n 4. [HN 2971▲ 902💬] Astra can read and write weights to improve Qwen\n    https://rikiyat.github.io/blog/weight-space-programming/\n\n⚠️ 抓取有問題的來源：\n  - Reddit: HTTPError HTTP Error 404: Not Found"
+ },
+ {
   "job": "duckx3 maintenance",
   "ts": 1795550434,
   "text": "兩邊都成功：清掉 0 筆（收件匣剩 36 筆），備份 `pb_data-20261125-040027.tar.gz`，116.4MB（122,045,367 bytes），data.db ✓、storage 906 個檔案 ✓，備份目錄維持 14 份。無 FAILED。"
@@ -18,41 +53,6 @@
   "job": "cex 2h",
   "ts": 1795528936,
   "text": "健康檢查：20261124220025（範圍 web，78205 筆）\n  ✅ freshness  資料 0.0 小時前抓的\n  ✅ volume     筆數 78205（與上次 78201 差 0.01%）\n  ✅ schema     60 個欄位，與上次指紋一致\n  ✅ quality    78205 筆：主鍵無重複、標價與名稱完整\n  ✅ heartbeat  距上次抓取 2.0 小時（20261124200026 → 20261124220025）\n\n全部正常"
- },
- {
-  "job": "SNKRDUNK 卡價",
-  "ts": 1795482031,
-  "text": "SNKRDUNK 變化\n📈 3rd Anniversary Set — ENGLISH\n   在售 59 → 61 件\n   最低在售 ¥59,999 → ¥59,899\n📈 3rd Anniversary Set — CHINA\n   在售 57 → 54 件\n   最低在售 ¥40,398 → ¥40,000\n📈 Luffy SEC-RSP OP13-118\n   PSA10 ¥2,900,000 → ¥2,865,000\n📈 Luffy SEC-SP EB04-061\n   PSA10 ¥1,635,000 → ¥1,600,000"
- },
- {
-  "job": "cex 0830",
-  "ts": 1795480338,
-  "text": "健康檢查：20261124083025（範圍 web，78144 筆）\n  ✅ freshness  資料 0.0 小時前抓的\n  ✅ volume     筆數 78144（與上次 78143 差 0.00%）\n  ✅ schema     60 個欄位，與上次指紋一致\n  ✅ quality    78144 筆：主鍵無重複、標價與名稱完整\n  ✅ heartbeat  距上次抓取 10.5 小時（20261123220025 → 20261124083025）\n\n全部正常"
- },
- {
-  "job": "kl daily brief",
-  "ts": 1795480253,
-  "text": "☀️ 今日 11/24 (Tue)\n\n天氣：25–30°C，最高降雨機率 100%\n　降雨時段：09:00（58%）、10:00（75%）、11:00（88%）、12:00（95%）、13:00（98%）、14:00（100%）\n\nMid Valley 本週活動（4 項）\n・LIVEXPO 2026 — Hall 1 & Hall 2, Mid Valley Exhibition Centre (MVEC), Third Floor, Centre Court\n　28 Nov - 29 Nov 2026\n・Christmas 2026 — Mall Wide (MW), Ground Floor\n　21 Nov 2026 - 3 Jan 2027\n・Laneige Holiday Pop-up — East Atrium (EEA), Ground Floor\n　23 Nov - 29 Nov 2026\n・Fitness Concept Roadshow — Centre Court (CC), Lower Ground Floor\n　23 Nov - 29 Nov 2026\n\n雪隆活動（未來 14 天，命中興趣 2 項）\n・11/25 AI-Powered OEM: Scaling Beauty, Health and Perso\n　Lazada Malaysia\n・11/27 Resilience by Design: Are You Scaling AI or Scal\n　The Ruma Hotel and Residences\n\n電子／玩具優惠\n・BEST DENKI Malaysia Black Friday Sale – Up to RM2,50\n　11-24　Participating Outlets\n・70mai Malaysia 11.25 Payday Sale – Save on A810 Lite\n　11-25\n・Harvey Norman Malaysia Adjustable Beds Sale – Enjoy \n　11-24→11-25　Stores & Online\n・COURTS & NOJIMA Biggest Year End Laptop Sale – Save \n　11-16→11-25　Participating Outlets Na\n・POCO X8s Malaysia: Up to RM500 Off Compact 6.35-inch\n　11-10→11-25\n・COURTS LG 75-Inch Nano 4K UHD Smart TV Sale – Save R\n　11-05→11-25　COURTS & Nojima\n\n大型活動（會展／體育館）\n・11-25 AI-Powered OEM: Scali"
- },
- {
-  "job": "ai research push",
-  "ts": 1795479026,
-  "text": "今天沒有要動的"
- },
- {
-  "job": "AI 工具日報",
-  "ts": 1795478548,
-  "text": "⚡ **建議動手**\n今天沒有要動的。最新一輪更新全是插件目錄與打包小事，沒有一件修到你正在用的東西。\n\n**第一節｜AI 工具**\n\n**Hermes Agent v0.23.3（canary，11/23）**\n1. 這一輪幾乎只做了一件事：把幾十個社群插件塞進目錄（stats 儀表板、beeper 平台、katara 記憶體 provider、UniFi 監控…），core 只動了發佈流程與桌面縮放、blockmap 之類。\n2. 對我們：目錄變厚，但你都在手機 Telegram，網頁型儀表板用不到；沒有 Telegram 或 cron 相關修正。\n3. 結論：觀察就好，不必為這版特別升級。\n\n**OpenCode v2.4.1（11/23）**\n1. 修 macOS 12 存不了助理訊息（SQLite 不支援新語法）、只在 config 設的 provider（如 Ollama）現在 /models 看得到模型、側問答有未讀點。\n2. 對我們：全是小修，沒碰你在用的 opencode-go 路由，升級不會壞事也不會撿到便宜。\n3. 結論：觀察就好，下次換版順手帶上。\n\n**Claude Code v2.1.331（11/23）**\n1. 修 MCP 工具呼叫遇到本地／WebSocket server 回畸形資料時卡最多 30 分鐘；`claude doctor` 新增 API 連通檢查。\n2. 對我們：你有接自架 MCP（alpaca／context7／deepwiki），那個卡死是真的會咬人——但那是 Claude Code 的客戶端，不是我這條線。\n3. 結論：值得試，如果你還會開 Claude Code 跑 MCP。\n\n**SenseNova-Loop-9B（11/17 發布，11/18 補 AWQ／GGUF）**\n1. 9B 多模態模型，靠「中間層權重重複跑」把算力堆到 14.6B 等效，512K context，官方給了 Q4_K_M。\n2. 對我們：3070 Ti 8GB 塞得下，可當離線看圖／長文摘要的備援，但中文文筆與 tool use 官方自己承認還弱。\n3. 結論：觀察就好，除非你要一條不花錢的離線線。\n\n**第二節｜🔧 新奇專案**\n\n**worker755（gulivan/worker755，MIT）**\n1. 瀏覽器遊戲，你的主管是真的 LLM，它相信你是它的 subagent，每道指令給你 90 秒，做不完它就收到「Subagent did nothing」。\n2. 有趣在角色對調：它會驗你的活、發事故報告、最後幫你寫績效考核，Dan 的家目錄每班都多一個能 rm 掉的東西；`npm run mock` 可離線跑腳本主管。\n\n**DirectorPrompt（AtmoOmen/DirectorPrompt，C#）**\n1. "
- },
- {
-  "job": "voucher daily",
-  "ts": 1795476963,
-  "text": "今天沒有變化：未用 9 張 RM696"
- },
- {
-  "job": "社群熱度",
-  "ts": 1795476630,
-  "text": "社群熱度選題 — 最近 30 天（Reddit 遊戲 0 則 / HN 60 則）\n\n 1. [HN 4060▲ 3494💬] Jensen Huang resigns\n    https://apnews.com/article/nvidia-megaspeed-china-singapore-huang-5403f152a601cf82ce939f1d24fffa0f\n 2. [HN 3314▲ 769💬] Patrick Stewart has died\n    https://www.nytimes.com/2026/10/29/arts/television/patrick-stewart-dead.html\n 3. [HN 3007▲ 751💬] sshole\n    https://sshhole.com\n 4. [HN 2971▲ 902💬] Astra can read and write weights to improve Qwen\n    https://rikiyat.github.io/blog/weight-space-programming/\n\n⚠️ 抓取有問題的來源：\n  - Reddit: HTTPError HTTP Error 404: Not Found"
  },
  {
   "job": "記憶審計",
