@@ -1,7 +1,39 @@
 {
- "updated": "2026-11-25T22:21:44+08:00",
- "count": 173,
+ "updated": "2026-11-26T00:24:56+08:00",
+ "count": 175,
  "items": [
+  {
+   "cat": "game",
+   "title": "《大戰略 SSB2》西方版正式推出",
+   "note": "系統軟體的大戰略新作，六角格回合制、300 多種現代兵器、58 張免費地圖，分標準／Ultimate EX／Power-Up 三版開賣。",
+   "source": "Gematsu",
+   "ts": 1795622122,
+   "added": "2026-11-26T00:24:56+08:00"
+  },
+  {
+   "cat": "game",
+   "title": "《Sentimental Graffiti Re》2027/3/25 日本發售",
+   "note": "1998 年 Saturn 戀愛模擬名作重製，PS5／Switch，¥9,878；另有 ¥29,700 限定版，內含 12 張角色 CD 與廣播劇。",
+   "source": "Gematsu",
+   "ts": 1795620599,
+   "added": "2026-11-26T00:24:56+08:00"
+  },
+  {
+   "cat": "game",
+   "title": "《Silksong》免費擴充「Sea of Sorrow」11/27 直播公開",
+   "note": "Team Cherry 明天（我們時間 11/27 晚 11 點）開 Cherry Time! 直播，會講擴充內容與「一堆令人興奮的公告」。",
+   "source": "Gematsu",
+   "ts": 1795619711,
+   "added": "2026-11-26T00:24:56+08:00"
+  },
+  {
+   "cat": "game",
+   "title": "《冥獄戰術》11/26 登陸 Switch",
+   "note": "巴西雙人工作室的 Roguelike 牌組構築＋即時自走棋，今天上 Switch。",
+   "source": "巴哈 GNN",
+   "ts": 1795618801,
+   "added": "2026-11-26T00:24:56+08:00"
+  },
   {
    "cat": "game",
    "title": "《Digimon Alysion》免費制卡牌手遊上線",
@@ -1356,27 +1388,11 @@
   },
   {
    "cat": "tech",
-   "title": "NVIDIA 驅動被爆每小時寫 30GB 進 SSD",
-   "note": "NVDisplay.Container.exe 反覆覆寫日誌檔，621.14 起回歸；實測 5 分鐘 515MB、有人量到 30GB/小時，官方未確認。",
-   "source": "Wccftech",
-   "ts": 1795017536,
-   "added": "2026-11-19T00:11:30+08:00"
-  },
-  {
-   "cat": "tech",
    "title": "GTA6 今晚解鎖，NVIDIA 卻沒有新驅動",
    "note": "Game Ready 停在 11/12 的 621.24，只加了三款遊戲，GTA6 上市前最後一版就是它。",
    "source": "TechPowerUp",
    "ts": 1795016744,
    "added": "2026-11-19T02:14:55+08:00"
-  },
-  {
-   "cat": "game",
-   "title": "2026 韓國遊戲大獎　《赤血沙漠》掃 8 獎",
-   "note": "《赤血沙漠》拿下總統獎，另掃技術、創作等 4 部門獎與優秀開發者獎共 8 項；《AION 2》拿 2 獎。",
-   "source": "巴哈 GNN",
-   "ts": 1795014783,
-   "added": "2026-11-19T00:11:30+08:00"
   },
   {
    "cat": "tech",
