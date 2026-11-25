@@ -1,5 +1,10 @@
 [
  {
+  "job": "cex 2h",
+  "ts": 1795572131,
+  "text": "健康檢查：20261125100025（範圍 web，78205 筆）\n  ✅ freshness  資料 0.0 小時前抓的\n  ✅ volume     筆數 78205（與上次 78205 差 0.00%）\n  ✅ schema     60 個欄位，與上次指紋一致\n  ✅ quality    78205 筆：主鍵無重複、標價與名稱完整\n  ✅ heartbeat  距上次抓取 1.5 小時（20261125083025 → 20261125100025）\n\n全部正常"
+ },
+ {
   "job": "SNKRDUNK 卡價",
   "ts": 1795568430,
   "text": "SNKRDUNK 變化\n📈 3rd Anniversary Set — ENGLISH\n   在售 61 → 62 件\n   最低在售 ¥59,899 → ¥59,800\n📈 3rd Anniversary Set — CHINA\n   最低在售 ¥40,000 → ¥39,799\n📈 Luffy SEC-RSP OP13-118\n   PSA10 ¥2,865,000 → ¥2,787,000\n📈 Luffy SEC-SP EB04-061\n   A ¥1,370,000 → ¥1,290,000"
@@ -48,11 +53,6 @@
   "job": "nightly reflection",
   "ts": 1795534545,
   "text": "改了 jp-game-localization，4 條（另修掉一條錯的事實）：\n\n- 交付「在遊戲裡的效果」只認遊戲截圖，翻譯稿不算\n- 提方案前先確認真機還是模擬器，真機沒有模擬器替代答案\n- Vita 貼圖 swizzle 一律抄現成實作，不自己推公式\n- CPK 回填照 repo 的原地覆蓋＋xdelta，不自造打包器／不跟 CriPakTools 耗\n- 順手更正：該 repo 裡沒有 `cpkmakec.exe`（原本寫成有）"
- },
- {
-  "job": "cex 2h",
-  "ts": 1795528936,
-  "text": "健康檢查：20261124220025（範圍 web，78205 筆）\n  ✅ freshness  資料 0.0 小時前抓的\n  ✅ volume     筆數 78205（與上次 78201 差 0.01%）\n  ✅ schema     60 個欄位，與上次指紋一致\n  ✅ quality    78205 筆：主鍵無重複、標價與名稱完整\n  ✅ heartbeat  距上次抓取 2.0 小時（20261124200026 → 20261124220025）\n\n全部正常"
  },
  {
   "job": "記憶審計",
