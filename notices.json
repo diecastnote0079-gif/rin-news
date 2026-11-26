@@ -1,5 +1,15 @@
 [
  {
+  "job": "voucher daily",
+  "ts": 1795649804,
+  "text": "今天沒有變化：未用 9 張 RM696"
+ },
+ {
+  "job": "社群熱度",
+  "ts": 1795649432,
+  "text": "社群熱度選題 — 最近 30 天（Reddit 遊戲 0 則 / HN 60 則）\n\n 1. [HN 4060▲ 3493💬] Jensen Huang resigns\n    https://apnews.com/article/nvidia-megaspeed-china-singapore-huang-5403f152a601cf82ce939f1d24fffa0f\n 2. [HN 3314▲ 769💬] Patrick Stewart has died\n    https://www.nytimes.com/2026/10/29/arts/television/patrick-stewart-dead.html\n 3. [HN 3007▲ 751💬] sshole\n    https://sshhole.com\n 4. [HN 2971▲ 902💬] Astra can read and write weights to improve Qwen\n    https://rikiyat.github.io/blog/weight-space-programming/\n\n⚠️ 抓取有問題的來源：\n  - Reddit: HTTPError HTTP Error 404: Not Found"
+ },
+ {
   "job": "duckx3 maintenance",
   "ts": 1795636839,
   "text": "清理與備份都成功，沒有 FAILED。\n\n- 收件匣移除 **0 筆**（沒有超過 7 天且非 new 的紀錄），目前收件匣 **36 筆**\n- 備份：`pb_data-20261126-040032.tar.gz`，**116.4MB**（122,042,500 bytes），內含 `data.db` 與 **906 個 storage 檔案**，備份共 14 份（已刪最舊的 20261111 那份）"
@@ -43,16 +53,6 @@
   "job": "AI 工具日報",
   "ts": 1795564891,
   "text": "☀️ 11/25 AI 日報\n\n⚡ 建議動手\n・`hermes update` → v0.23.4（5 分鐘）：這版把 dashboard 密碼改成不用 TTY、插件設定可以直接在終端改，剛好補上 rin-box 沒螢幕的缺口；但它一次包含 229 個 PR，更新完先確認 cron 有照跑。\n・用 CCORE-Web-Coder-4B 先生一款遊戲的商品頁（30 分鐘）：Q8 檔 4.48GB，你的 8GB 顯卡跑得動；成功就不必每次手動 patch `p/<id>.html`。\n\n第一節｜AI 工具\n**Hermes Agent v0.23.4**（11/24）\n1. 補丁版，把 v0.23.3 之後約 229 個 PR 集中到穩定版；新增 `hermes plugins config`、`hermes gateway migrate --backends`、無 TTY 設 dashboard 密碼，Gemini 4 系列（Hydrogen／Neon／Carbon）上 Nous Portal。\n2. 對我們有用：我們全部操作都在 CLI 和 cron 上跑，這兩項正好針對沒螢幕的情況，不用再開瀏覽器做事。\n3. 結論：值得試（今天就能升，升完看 cron 紀錄）。\n\n**OpenCode v2.4.1**（11/23）\n1. 修掉長 session 壓縮之後偶爾多扣的 cache 費；只寫在 config 的 provider（例如 Ollama）現在 `/models` 直接列得出來，不用先 `/connect`。\n2. 對我們有用：cache 多扣就是直接多燒錢，而你指定的「不燒 token」正好受影響；Ollama 那條則讓本機小模型接得比較順。\n3. 結論：觀察就好，下次開順手升。\n\n**Claude Code**（11/23 更新）\n1. `claude doctor` 多了 API 連通性檢查（直接報 HTTP 狀態或錯誤原因），插件 manifest 支援 optionalDependencies。\n2. 對我們有用度低：排程我們走 hermes cron，沒在用 Claude 的雲端任務；只有哪天要接 Claude 當備援，這個 doctor 才省事。\n3. 結論：不用管。\n\n**CCORE-Web-Coder-4B**（社群 4B 小模型，Qwen3.5-4B 底）\n1. 輸入一段需求，直接輸出單一 HTML（React 從 CDN 載），產網站、簡報、資訊圖；不用 build。\n2. 對我們有用：8GB 顯卡跑得動，小店商品頁、新聞台版面、報表頁都能先生個初稿再改；缺點是介面文字預設英文（剛好合英主中輔），而且是預覽訓練檢查點，複雜版面會壞。\n3. 結論：值得試，先一頁試水溫。\n\n第二節｜🔧 新奇專案\n・**worker755**：瀏覽"
- },
- {
-  "job": "voucher daily",
-  "ts": 1795563359,
-  "text": "今天沒有變化：未用 9 張 RM696.00"
- },
- {
-  "job": "社群熱度",
-  "ts": 1795563028,
-  "text": "社群熱度選題 — 最近 30 天（Reddit 遊戲 0 則 / HN 60 則）\n\n 1. [HN 4060▲ 3493💬] Jensen Huang resigns\n    https://apnews.com/article/nvidia-megaspeed-china-singapore-huang-5403f152a601cf82ce939f1d24fffa0f\n 2. [HN 3314▲ 769💬] Patrick Stewart has died\n    https://www.nytimes.com/2026/10/29/arts/television/patrick-stewart-dead.html\n 3. [HN 3007▲ 751💬] sshole\n    https://sshhole.com\n 4. [HN 2971▲ 902💬] Astra can read and write weights to improve Qwen\n    https://rikiyat.github.io/blog/weight-space-programming/\n\n⚠️ 抓取有問題的來源：\n  - Reddit: HTTPError HTTP Error 404: Not Found"
  },
  {
   "job": "記憶審計",
