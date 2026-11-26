@@ -1,5 +1,30 @@
 [
  {
+  "job": "SNKRDUNK 卡價",
+  "ts": 1795654836,
+  "text": "SNKRDUNK 變化\n📈 3rd Anniversary Set — ENGLISH\n   在售 62 → 58 件\n📈 Luffy SEC-RSP OP13-118\n   PSA10 ¥2,787,000 → ¥2,680,000\n📈 Luffy SEC-SP EB04-061\n   A ¥1,290,000 → ¥1,250,000\n   PSA10 ¥1,600,000 → ¥1,550,000"
+ },
+ {
+  "job": "cex 0830",
+  "ts": 1795653159,
+  "text": "健康檢查：20261126083030（範圍 web，78252 筆）\n  ✅ freshness  資料 0.0 小時前抓的\n  ✅ volume     筆數 78252（與上次 78252 差 0.00%）\n  ✅ schema     60 個欄位，與上次指紋一致\n  ✅ quality    78252 筆：主鍵無重複、標價與名稱完整\n  ✅ heartbeat  距上次抓取 10.5 小時（20261125220030 → 20261126083030）\n\n全部正常\n發布驗證：第 1 次重試後線上已追上（run=20261126083030）"
+ },
+ {
+  "job": "kl daily brief",
+  "ts": 1795653060,
+  "text": "☀️ 今日 11/26 (Thu)\n\n天氣：24–31°C，最高降雨機率 97%\n　降雨時段：07:00（70%）、08:00（61%）、09:00（55%）、10:00（50%）、11:00（51%）、12:00（62%）\n\nMid Valley 本週活動（4 項）\n・Laneige Holiday Pop-up — East Atrium (EEA), Ground Floor\n　23 Nov - 29 Nov 2026\n・LIVEXPO 2026 — Hall 1 & Hall 2, Mid Valley Exhibition Centre (MVEC), Third Floor, Centre Court\n　28 Nov - 29 Nov 2026\n・Christmas 2026 — Mall Wide (MW), Ground Floor\n　21 Nov 2026 - 3 Jan 2027\n・Fitness Concept Roadshow — Centre Court (CC), Lower Ground Floor\n　23 Nov - 29 Nov 2026\n\n雪隆活動（未來 14 天，命中興趣 3 項）\n・11/27 Resilience by Design: Are You Scaling AI or Scal\n　The Ruma Hotel and Residences\n・12/05 JoyKids Christmas Charity Bazaar 2026\n　The Club by M\n・12/10 Exotic Fairway Flora & Fauna Exhibition 2026\n　Sultan Abdul Aziz Shah Golf & Coun\n\n電子／玩具優惠\n・HP Malaysia HyperX OMEN Gaming Laptop Promotion – Fr\n　11-27\n・LEGO Black Friday Sale 2026 Malaysia – Discover Excl\n　11-27　LEGO.com\n・Switch Lazada Payday Sale – Save Up to RM1,780 on Ap\n　11-24→11-27\n・Toys”R”Us Malaysia T-KUN Meet & Greet Event – Meet T\n　11-14→11-28　1 Utama and KLCC\n・Viewnet Computer System SanDisk Cruzer Blade Buy 1 F\n　11-29　Plaza Low Yat Kuala Lump\n・Tefal Warehouse Sale\n　11-27→11-29\n\n大型活動（會展／體育館）\n・11-27 Resilience by "
+ },
+ {
+  "job": "ai research push",
+  "ts": 1795651833,
+  "text": "【⚡ 建議動手】\n① 用 minimind 在 3070 Ti 訓一個 64M 小模型，拿來做 CeX／Carousell 上架標題分類：約 2–4 小時、0 成本，訓完之後每筆判斷都不用再花 API token；8GB 顯示卡到底夠不夠用，我先量完再動手。"
+ },
+ {
+  "job": "AI 工具日報",
+  "ts": 1795651314,
+  "text": "【⚡ 建議動手】\n① 用 minimind 在 3070 Ti 訓一個 64M 小模型，拿來做 CeX／Carousell 上架標題分類：約 2–4 小時、0 成本，訓完之後每筆判斷都不用再花 API token；8GB 顯示卡到底夠不夠用，我先量完再動手。\n\n【第一節｜AI 工具】\n\n**Hermes Agent v0.23.4（canary，11/25）**\n一句話：這次更新只加了插件目錄的條目（linux-notify 桌面通知、gpu-monitor、phone-bud、memory-fit、bf16 供應商），核心程式沒有改動。\n判斷：對我們沒用——rin-box 沒有螢幕，裝桌面通知也沒有東西可以顯示；插件目錄本來就每天在增加。\n結論：不用管。\n\n**Inkling 2 Mini（Thinking Machines，11/20 釋出權重）**\n一句話：26B 級模型，但每個 token 只啟用 5B 左右的參數，靠迴圈重跑中間層來換取算力，約 20GB、Apache 2.0，Ollama v0.40.17 已經可以拉下來跑。\n判斷：3070 Ti 只有 8GB，連 4-bit 量化版（17.6GB）都放不下，只能退回 CPU 跑，慢到不能當日常工具用。\n結論：觀察就好。\n\n**Codex CLI 0.172.0（11/24 穩定版）**\n一句話：slash 指令可以按 Tab 補全、stdio MCP 伺服器改成第一次呼叫時才啟動、API 限額出錯時直接說出是哪一個額度。\n判斷：我們不走 Codex，這些改良我們拿不到。\n結論：不用管。\n\n**Claude Code 2.1.332**\n一句話：MCP 伺服器現在可以餵入 skills（beta，選單顯示成 server:skill），另外修好了 hook 無限輸出時終端凍結、記憶體爆量的問題。\n判斷：我們用 Hermes，但「hook 一直吐 log 會凍結」這類問題在任何 agent 上一樣會發生，記住這個症狀就夠了。\n結論：觀察就好。\n\n【第二節｜🔧 新奇專案】\n\n**llm.asm**\n一：有人用純 x86-64 組語（零 C、零 libc）寫完 Qwen3-0.6B 推論（執行檔 13KB）、可以直接開機的 23KB 裸機 OS，還有從零訓練 Mini-GPT 的版本。\n二：85ms 開機就能在沒有作業系統的機器上對話、100 tok/s，這種極端精簡的玩法比模型本身還有看頭。\n\n**minimind**\n一：3 塊錢、2 小時在單張 3090 上從零訓出 64M 小模型，Apache 2.0、七萬星。\n二：預訓練→SFT→DPO→RL 全鏈路都是純 PyTorch 手寫，拆開看「模型怎麼長出來」比讀論文直觀，也剛好可以拿來試上面那件事。\n\n**pw-loudness-eq**\n一：有人"
+ },
+ {
   "job": "voucher daily",
   "ts": 1795649804,
   "text": "今天沒有變化：未用 9 張 RM696"
@@ -28,31 +53,6 @@
   "job": "cex 2h",
   "ts": 1795615472,
   "text": "健康檢查：20261125220030（範圍 web，78252 筆）\n  ✅ freshness  資料 0.0 小時前抓的\n  ✅ volume     筆數 78252（與上次 78247 差 0.01%）\n  ✅ schema     60 個欄位，與上次指紋一致\n  ✅ quality    78252 筆：主鍵無重複、標價與名稱完整\n  ✅ heartbeat  距上次抓取 2.0 小時（20261125200031 → 20261125220030）\n\n全部正常\n發布驗證：第 1 次重試後線上已追上（run=20261125220030）"
- },
- {
-  "job": "SNKRDUNK 卡價",
-  "ts": 1795568430,
-  "text": "SNKRDUNK 變化\n📈 3rd Anniversary Set — ENGLISH\n   在售 61 → 62 件\n   最低在售 ¥59,899 → ¥59,800\n📈 3rd Anniversary Set — CHINA\n   最低在售 ¥40,000 → ¥39,799\n📈 Luffy SEC-RSP OP13-118\n   PSA10 ¥2,865,000 → ¥2,787,000\n📈 Luffy SEC-SP EB04-061\n   A ¥1,370,000 → ¥1,290,000"
- },
- {
-  "job": "cex 0830",
-  "ts": 1795566732,
-  "text": "健康檢查：20261125083025（範圍 web，78205 筆）\n  ✅ freshness  資料 0.0 小時前抓的\n  ✅ volume     筆數 78205（與上次 78205 差 0.00%）\n  ✅ schema     60 個欄位，與上次指紋一致\n  ✅ quality    78205 筆：主鍵無重複、標價與名稱完整\n  ✅ heartbeat  距上次抓取 10.5 小時（20261124220025 → 20261125083025）\n\n全部正常"
- },
- {
-  "job": "kl daily brief",
-  "ts": 1795566654,
-  "text": "☀️ 今日 11/25 (Wed)\n\n天氣：25–30°C，最高降雨機率 98%\n　降雨時段：07:00（76%）、08:00（73%）、09:00（72%）、10:00（73%）、11:00（76%）、12:00（81%）\n\nMid Valley 本週活動（4 項）\n・Laneige Holiday Pop-up — East Atrium (EEA), Ground Floor\n　23 Nov - 29 Nov 2026\n・LIVEXPO 2026 — Hall 1 & Hall 2, Mid Valley Exhibition Centre (MVEC), Third Floor, Centre Court\n　28 Nov - 29 Nov 2026\n・Christmas 2026 — Mall Wide (MW), Ground Floor\n　21 Nov 2026 - 3 Jan 2027\n・Fitness Concept Roadshow — Centre Court (CC), Lower Ground Floor\n　23 Nov - 29 Nov 2026\n\n雪隆活動（未來 14 天，命中興趣 2 項）\n・11/25 AI-Powered OEM: Scaling Beauty, Health and Perso\n　Lazada Malaysia\n・11/27 Resilience by Design: Are You Scaling AI or Scal\n　The Ruma Hotel and Residences\n\n電子／玩具優惠\n・70mai Malaysia 11.25 Payday Sale – Save on A810 Lite\n　11-25\n・Harvey Norman Malaysia Adjustable Beds Sale – Enjoy \n　11-25　Stores & Online\n・COURTS & NOJIMA Biggest Year End Laptop Sale – Save \n　11-16→11-25　Participating Outlets Na\n・POCO X8s Malaysia: Up to RM500 Off Compact 6.35-inch\n　11-10→11-25\n・COURTS LG 75-Inch Nano 4K UHD Smart TV Sale – Save R\n　11-05→11-25　COURTS & Nojima\n・HP Malaysia HyperX OMEN Gaming Laptop Promotion – Fr\n　11-27\n\n大型活動（會展／體育館）\n・11-25 AI-Powered OEM: Scaling Beauty, Health and P\n　Lazad"
- },
- {
-  "job": "ai research push",
-  "ts": 1795565428,
-  "text": "⚡ 建議動手\n・`hermes update` → v0.23.4（5 分鐘）：這版把 dashboard 密碼改成不用 TTY、插件設定可以直接在終端改，剛好補上 rin-box 沒螢幕的缺口；但它一次包含 229 個 PR，更新完先確認 cron 有照跑。\n・用 CCORE-Web-Coder-4B 先生一款遊戲的商品頁（30 分鐘）：Q8 檔 4.48GB，你的 8GB 顯卡跑得動；成功就不必每次手動 patch `p/<id>.html`。"
- },
- {
-  "job": "AI 工具日報",
-  "ts": 1795564891,
-  "text": "☀️ 11/25 AI 日報\n\n⚡ 建議動手\n・`hermes update` → v0.23.4（5 分鐘）：這版把 dashboard 密碼改成不用 TTY、插件設定可以直接在終端改，剛好補上 rin-box 沒螢幕的缺口；但它一次包含 229 個 PR，更新完先確認 cron 有照跑。\n・用 CCORE-Web-Coder-4B 先生一款遊戲的商品頁（30 分鐘）：Q8 檔 4.48GB，你的 8GB 顯卡跑得動；成功就不必每次手動 patch `p/<id>.html`。\n\n第一節｜AI 工具\n**Hermes Agent v0.23.4**（11/24）\n1. 補丁版，把 v0.23.3 之後約 229 個 PR 集中到穩定版；新增 `hermes plugins config`、`hermes gateway migrate --backends`、無 TTY 設 dashboard 密碼，Gemini 4 系列（Hydrogen／Neon／Carbon）上 Nous Portal。\n2. 對我們有用：我們全部操作都在 CLI 和 cron 上跑，這兩項正好針對沒螢幕的情況，不用再開瀏覽器做事。\n3. 結論：值得試（今天就能升，升完看 cron 紀錄）。\n\n**OpenCode v2.4.1**（11/23）\n1. 修掉長 session 壓縮之後偶爾多扣的 cache 費；只寫在 config 的 provider（例如 Ollama）現在 `/models` 直接列得出來，不用先 `/connect`。\n2. 對我們有用：cache 多扣就是直接多燒錢，而你指定的「不燒 token」正好受影響；Ollama 那條則讓本機小模型接得比較順。\n3. 結論：觀察就好，下次開順手升。\n\n**Claude Code**（11/23 更新）\n1. `claude doctor` 多了 API 連通性檢查（直接報 HTTP 狀態或錯誤原因），插件 manifest 支援 optionalDependencies。\n2. 對我們有用度低：排程我們走 hermes cron，沒在用 Claude 的雲端任務；只有哪天要接 Claude 當備援，這個 doctor 才省事。\n3. 結論：不用管。\n\n**CCORE-Web-Coder-4B**（社群 4B 小模型，Qwen3.5-4B 底）\n1. 輸入一段需求，直接輸出單一 HTML（React 從 CDN 載），產網站、簡報、資訊圖；不用 build。\n2. 對我們有用：8GB 顯卡跑得動，小店商品頁、新聞台版面、報表頁都能先生個初稿再改；缺點是介面文字預設英文（剛好合英主中輔），而且是預覽訓練檢查點，複雜版面會壞。\n3. 結論：值得試，先一頁試水溫。\n\n第二節｜🔧 新奇專案\n・**worker755**：瀏覽"
  },
  {
   "job": "記憶審計",
