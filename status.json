@@ -1,19 +1,19 @@
 {
- "updated": 1795680030,
+ "updated": 1795687230,
  "quota": {
-  "rolling": 98,
-  "weekly": 71,
-  "monthly": 76,
-  "reset_rolling": "4h 19m",
-  "reset_weekly": "3d 15h",
-  "reset_monthly": "21d 9h"
+  "rolling": 95,
+  "weekly": 69,
+  "monthly": 75,
+  "reset_rolling": "2h 19m",
+  "reset_weekly": "3d 13h",
+  "reset_monthly": "21d 7h"
  },
  "host": {
-  "load": 0.04,
+  "load": 0.61,
   "mem_pct": 20,
   "disk_pct": 22,
-  "disk_free_gb": 333,
-  "uptime_h": 230
+  "disk_free_gb": 332,
+  "uptime_h": 232
  },
  "memory": {
   "memory": {
@@ -22,13 +22,13 @@
    "limit": 2200
   },
   "user": {
-   "pct": 91,
-   "chars": 1252,
+   "pct": 95,
+   "chars": 1300,
    "limit": 1375
   }
  },
  "cron": {
-  "enabled": 40,
+  "enabled": 41,
   "failed": 1,
   "failed_names": [
    "product-pages-rebuild"
