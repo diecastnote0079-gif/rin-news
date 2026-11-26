@@ -1,7 +1,55 @@
 {
- "updated": "2026-11-26T22:56:41+08:00",
- "count": 174,
+ "updated": "2026-11-27T00:59:32+08:00",
+ "count": 180,
  "items": [
+  {
+   "cat": "game",
+   "title": "《Simple Football League Manager》Steam 對台灣旗幟開三個選項 開發者選了自斷中國市場",
+   "note": "德國單人開發者用 Godot 做的足球經理，Steam 審查後給 A 分中國版／B 換素材／C 封中國區三選一；他選 C，收到信時人正好在台灣爬山，Reddit 8 千推。",
+   "source": "4Gamers",
+   "ts": 1795709581,
+   "added": "2026-11-27T00:59:32+08:00"
+  },
+  {
+   "cat": "game",
+   "title": "EGS 本週限免《Bread & Fred》兩隻企鵝綁一條繩爬山",
+   "note": "11/27～12/4 領了永久保存，雙人合作平台跳躍，專門拿來互相害人。",
+   "source": "4Gamers",
+   "ts": 1795708912,
+   "added": "2026-11-27T00:59:32+08:00"
+  },
+  {
+   "cat": "game",
+   "title": "HARK THE GHOUL 2027 年 1 月 21 日全平台發售",
+   "note": "地城探索新作，PS5／Xbox Series／Switch 2／Switch／PC 同步，Steam 頁已開。",
+   "source": "Gematsu",
+   "ts": 1795708227,
+   "added": "2026-11-27T00:59:32+08:00"
+  },
+  {
+   "cat": "game",
+   "title": "二手店經營模擬《Thrifty Business》登上 Switch",
+   "note": "溫馨向二手商店經營，Switch 版今日上架；PC 版早就有了。",
+   "source": "Gematsu",
+   "ts": 1795705593,
+   "added": "2026-11-27T00:59:32+08:00"
+  },
+  {
+   "cat": "game",
+   "title": "恐怖模擬《Retail Hell》確定登陸 PS5／Xbox／Switch",
+   "note": "Feardemic 發行、LEAP Game Studios 開發，把零售店打工做成恐怖遊戲。",
+   "source": "Gematsu",
+   "ts": 1795704412,
+   "added": "2026-11-27T00:59:32+08:00"
+  },
+  {
+   "cat": "game",
+   "title": "GTA6 外洩版 PC 移植「Leonida」被抄家 連 3,007 個 fork 一起刪",
+   "note": "Take-Two 11/24 送 DMCA，GitHub 一次清掉主專案加 3,007 個衍生複製；帶頭開發者 15 歲，用 AI 幾天就跑到開機畫面，事後放話「Leonida 沒死」。",
+   "source": "4Gamers",
+   "ts": 1795704307,
+   "added": "2026-11-27T00:59:32+08:00"
+  },
   {
    "cat": "game",
    "title": "《Hack ’95》卡牌駭客冒險 PQube 發行",
