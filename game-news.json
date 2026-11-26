@@ -1,7 +1,15 @@
 {
- "updated": "2026-11-26T04:30:16+08:00",
- "count": 175,
+ "updated": "2026-11-26T08:36:08+08:00",
+ "count": 171,
  "items": [
+  {
+   "cat": "tech",
+   "title": "華碩 ROG Zephyrus Duo 2026 評測：兩塊 16 吋 OLED 塞進 2 公分機身",
+   "note": "雙螢幕同規格、鍵盤可拆成無線用，評測結論是目前最強薄型雙螢幕電競筆電",
+   "source": "4Gamers",
+   "ts": 1795644000,
+   "added": "2026-11-26T08:36:08+08:00"
+  },
   {
    "cat": "game",
    "title": "《Mello & Omega》放置採礦＋鍛造工房遊戲 2027 春上 Steam",
@@ -1361,46 +1369,6 @@
    "source": "4Gamers",
    "ts": 1795055586,
    "added": "2026-11-19T12:29:04+08:00"
-  },
-  {
-   "cat": "game",
-   "title": "《Burning Sword: Death Sun》開放搶先體驗",
-   "note": "武俠砍殺動作遊戲，Early Access 先行。",
-   "source": "Gematsu",
-   "ts": 1795042814,
-   "added": "2026-11-19T08:22:49+08:00"
-  },
-  {
-   "cat": "game",
-   "title": "反轉殭屍新作《The First Zombie》12/16 發售",
-   "note": "日本綜藝節目製作人藤井健太郎監製，玩法是把殭屍反過來。",
-   "source": "Gematsu",
-   "ts": 1795041123,
-   "added": "2026-11-19T08:22:49+08:00"
-  },
-  {
-   "cat": "game",
-   "title": "《俠盜獵車手6》M站百餘家媒體平均99分 追平時之笛紀錄",
-   "note": "11/18 晚評分解禁，一百多家媒體平均 99 分，是 1998 年《時之笛》之後第一款的成績。",
-   "source": "4Gamers",
-   "ts": 1795036080,
-   "added": "2026-11-19T06:20:14+08:00"
-  },
-  {
-   "cat": "game",
-   "title": "《Homura Hime》2027 年登上 PS5",
-   "note": "PLAYISM 發行的 3D 彈幕動作遊戲，Crimson Dusk 開發，先公布 PS5 版。",
-   "source": "Gematsu",
-   "ts": 1795032322,
-   "added": "2026-11-19T06:20:14+08:00"
-  },
-  {
-   "cat": "game",
-   "title": "《Coral Island》Switch 2 版 12 月 7 日發售",
-   "note": "Switch 2 版與 1.4 版更新同天上線，實體／數位同步。",
-   "source": "Gematsu",
-   "ts": 1795025482,
-   "added": "2026-11-19T06:20:14+08:00"
   }
  ]
 }
