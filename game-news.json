@@ -1,7 +1,31 @@
 {
- "updated": "2026-11-26T08:36:08+08:00",
- "count": 171,
+ "updated": "2026-11-26T10:39:27+08:00",
+ "count": 174,
  "items": [
+  {
+   "cat": "game",
+   "title": "《GTA6》砍掉《GTA5》就有的任務重玩功能",
+   "note": "玩家發現新作的關鍵橋段全是一次性體驗，官方說法是為了敘事沉浸，之後沒機會重刷評價。",
+   "source": "4Gamers",
+   "ts": 1795659113,
+   "added": "2026-11-26T10:39:27+08:00"
+  },
+  {
+   "cat": "tech",
+   "title": "Adobe Acrobat 擴充閒置 3 天寫 300GB 進 SSD",
+   "note": "網友追到一個 Adobe 的 Service Worker 在反覆重寫 1GB 快取，移除後閒置寫入掉了 81%。",
+   "source": "電腦王阿達",
+   "ts": 1795657970,
+   "added": "2026-11-26T10:39:27+08:00"
+  },
+  {
+   "cat": "game",
+   "title": "《Xenoblade Chronicles 3》Switch 2 版概覽預告",
+   "note": "三分鐘影片講 Switch 2 版改了什麼，發售日與售價都還沒公布。",
+   "source": "Gematsu",
+   "ts": 1795655310,
+   "added": "2026-11-26T10:39:27+08:00"
+  },
   {
    "cat": "tech",
    "title": "華碩 ROG Zephyrus Duo 2026 評測：兩塊 16 吋 OLED 塞進 2 公分機身",
