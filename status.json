@@ -1,19 +1,19 @@
 {
- "updated": 1795761029,
+ "updated": 1795768230,
  "quota": {
-  "rolling": 100,
-  "weekly": 67,
-  "monthly": 74,
-  "reset_rolling": "3h 15m",
-  "reset_weekly": "2d 17h",
-  "reset_monthly": "20d 10h"
+  "rolling": 98,
+  "weekly": 66,
+  "monthly": 73,
+  "reset_rolling": "1h 15m",
+  "reset_weekly": "2d 15h",
+  "reset_monthly": "20d 8h"
  },
  "host": {
-  "load": 0.16,
-  "mem_pct": 20,
+  "load": 0.01,
+  "mem_pct": 19,
   "disk_pct": 22,
   "disk_free_gb": 332,
-  "uptime_h": 252
+  "uptime_h": 254
  },
  "memory": {
   "memory": {
@@ -28,7 +28,7 @@
   }
  },
  "cron": {
-  "enabled": 41,
+  "enabled": 42,
   "failed": 1,
   "failed_names": [
    "product-pages-rebuild"
