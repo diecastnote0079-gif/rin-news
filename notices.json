@@ -1,13 +1,13 @@
 [
  {
   "job": "cex 2h",
-  "ts": 1795773743,
-  "text": "健康檢查：20261127180030（範圍 web，78330 筆）\n  ✅ freshness  資料 0.0 小時前抓的\n  ✅ volume     筆數 78330（與上次 78328 差 0.00%）\n  ✅ schema     60 個欄位，與上次指紋一致\n  ✅ quality    78330 筆：主鍵無重複、標價與名稱完整\n  ✅ heartbeat  距上次抓取 2.0 小時（20261127160030 → 20261127180030）\n\n全部正常"
+  "ts": 1795780945,
+  "text": "健康檢查：20261127200030（範圍 web，78344 筆）\n  ✅ freshness  資料 0.0 小時前抓的\n  ✅ volume     筆數 78344（與上次 78330 差 0.02%）\n  ✅ schema     60 個欄位，與上次指紋一致\n  ✅ quality    78344 筆：主鍵無重複、標價與名稱完整\n  ✅ heartbeat  距上次抓取 2.0 小時（20261127180030 → 20261127200030）\n\n全部正常"
  },
  {
   "job": "cex gaming digest",
-  "ts": 1795768528,
-  "text": "🎮 <b>CeX 遊戲新貨</b>（11-27 08:01 UTC）\n\n<b>NEW 2 件</b>\n・Heroes Over Europe（Xbox 360: R3 ENG）　RM40／回RM13\n・Need For Speed Rivals（Xbox 360: R3 CHI）　RM50／回RM25\n\n<b>RESTOCK 其餘 5 件</b>\n・FIFA 09（Xbox 360: R3 ENG）　售RM20／回RM5\n・Lego: Indiana Jones（Xbox 360: R2 ENG）　售RM70／回RM35\n・Medal Of Honor（Xbox 360: R3 ENG）　售RM40／回RM13\n・Medal Of Honor: Airborne（Xbox 360: R3 ENG）　售RM30／回RM9\n・Need For Speed Rivals（Xbox 360: R2 ENG）　售RM50／回RM25"
+  "ts": 1795775728,
+  "text": "🎮 <b>CeX 遊戲新貨</b>（11-27 10:01 UTC）\n\n<b>RESTOCK 其餘 4 件</b>\n・FIFA 16（Xbox One: R2 ENG）　售RM20／回RM5\n・Heroes Over Europe（Xbox 360: R3 ENG）　售RM40／回RM13\n・NBA Live 08（Wii: R2 ENG）　售RM40／回RM13\n・Tales of the Shire: A The Lord of the Rings Game（PS5: R2 ENG）　售RM150／回RM75"
  },
  {
   "job": "SNKRDUNK 卡價",
