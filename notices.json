@@ -1,8 +1,13 @@
 [
  {
   "job": "cex 2h",
-  "ts": 1795766562,
-  "text": "健康檢查：20261127160030（範圍 web，78328 筆）\n  ✅ freshness  資料 0.0 小時前抓的\n  ✅ volume     筆數 78328（與上次 78315 差 0.02%）\n  ✅ schema     60 個欄位，與上次指紋一致\n  ✅ quality    78328 筆：主鍵無重複、標價與名稱完整\n  ✅ heartbeat  距上次抓取 2.0 小時（20261127140030 → 20261127160030）\n\n全部正常\n發布驗證：第 1 次重試後線上已追上（run=20261127160030）"
+  "ts": 1795773743,
+  "text": "健康檢查：20261127180030（範圍 web，78330 筆）\n  ✅ freshness  資料 0.0 小時前抓的\n  ✅ volume     筆數 78330（與上次 78328 差 0.00%）\n  ✅ schema     60 個欄位，與上次指紋一致\n  ✅ quality    78330 筆：主鍵無重複、標價與名稱完整\n  ✅ heartbeat  距上次抓取 2.0 小時（20261127160030 → 20261127180030）\n\n全部正常"
+ },
+ {
+  "job": "cex gaming digest",
+  "ts": 1795768528,
+  "text": "🎮 <b>CeX 遊戲新貨</b>（11-27 08:01 UTC）\n\n<b>NEW 2 件</b>\n・Heroes Over Europe（Xbox 360: R3 ENG）　RM40／回RM13\n・Need For Speed Rivals（Xbox 360: R3 CHI）　RM50／回RM25\n\n<b>RESTOCK 其餘 5 件</b>\n・FIFA 09（Xbox 360: R3 ENG）　售RM20／回RM5\n・Lego: Indiana Jones（Xbox 360: R2 ENG）　售RM70／回RM35\n・Medal Of Honor（Xbox 360: R3 ENG）　售RM40／回RM13\n・Medal Of Honor: Airborne（Xbox 360: R3 ENG）　售RM30／回RM9\n・Need For Speed Rivals（Xbox 360: R2 ENG）　售RM50／回RM25"
  },
  {
   "job": "SNKRDUNK 卡價",
