@@ -1,5 +1,25 @@
 [
  {
+  "job": "cex 2h",
+  "ts": 1795744941,
+  "text": "健康檢查：20261127100030（範圍 web，78306 筆）\n  ✅ freshness  資料 0.0 小時前抓的\n  ✅ volume     筆數 78306（與上次 78306 差 0.00%）\n  ✅ schema     60 個欄位，與上次指紋一致\n  ✅ quality    78306 筆：主鍵無重複、標價與名稱完整\n  ✅ heartbeat  距上次抓取 1.5 小時（20261127083030 → 20261127100030）\n\n全部正常"
+ },
+ {
+  "job": "SNKRDUNK 卡價",
+  "ts": 1795741237,
+  "text": "SNKRDUNK 變化\n📈 3rd Anniversary Set — ENGLISH\n   在售 58 → 60 件\n   最低在售 ¥59,800 → ¥59,700\n📈 3rd Anniversary Set — CHINA\n   在售 54 → 57 件\n   最低在售 ¥39,799 → ¥39,698\n📈 Luffy SEC-RSP OP13-118\n   PSA10 ¥2,680,000 → ¥2,830,000\n📈 Luffy SEC-SP EB04-061\n   A ¥1,250,000 → ¥1,220,000\n   PSA10 ¥1,550,000 → ¥1,530,000"
+ },
+ {
+  "job": "cex 0830",
+  "ts": 1795739542,
+  "text": "健康檢查：20261127083030（範圍 web，78306 筆）\n  ✅ freshness  資料 0.0 小時前抓的\n  ✅ volume     筆數 78306（與上次 78306 差 0.00%）\n  ✅ schema     60 個欄位，與上次指紋一致\n  ✅ quality    78306 筆：主鍵無重複、標價與名稱完整\n  ✅ heartbeat  距上次抓取 10.5 小時（20261126220031 → 20261127083030）\n\n全部正常"
+ },
+ {
+  "job": "kl daily brief",
+  "ts": 1795739455,
+  "text": "☀️ 今日 11/27 (Fri)\n\n天氣：24–30°C，最高降雨機率 100%\n　降雨時段：07:00（59%）、08:00（55%）、09:00（59%）、10:00（67%）、11:00（76%）、12:00（85%）\n\nMid Valley 本週活動（4 項）\n・Laneige Holiday Pop-up — East Atrium (EEA), Ground Floor\n　23 Nov - 29 Nov 2026\n・LIVEXPO 2026 — Hall 1 & Hall 2, Mid Valley Exhibition Centre (MVEC), Third Floor, Centre Court\n　28 Nov - 29 Nov 2026\n・Christmas 2026 — Mall Wide (MW), Ground Floor\n　21 Nov 2026 - 3 Jan 2027\n・Fitness Concept Roadshow — Centre Court (CC), Lower Ground Floor\n　23 Nov - 29 Nov 2026\n\n雪隆活動（未來 14 天，命中興趣 3 項）\n・11/27 Resilience by Design: Are You Scaling AI or Scal\n　The Ruma Hotel and Residences\n・12/05 JoyKids Christmas Charity Bazaar 2026\n　The Club by M\n・12/10 Exotic Fairway Flora & Fauna Exhibition 2026\n　Sultan Abdul Aziz Shah Golf & Coun\n\n電子／玩具優惠\n・ALL IT Hypermarket Black Friday Sale – One-Day-Only \n　11-27\n・HP Malaysia HyperX OMEN Gaming Laptop Promotion – Fr\n　11-27\n・LEGO Black Friday Sale 2026 Malaysia – Discover Excl\n　11-27　LEGO.com\n・Switch Lazada Payday Sale – Save Up to RM1,780 on Ap\n　11-24→11-27\n・Toys”R”Us Malaysia T-KUN Meet & Greet Event – Meet T\n　11-14→11-28　1 Utama and KLCC\n・Viewnet Computer System SanDisk Cruzer Blade Buy 1 F\n　11-29　Plaza Low Yat Kuala Lump\n\n大型活動（會展"
+ },
+ {
   "job": "ai research push",
   "ts": 1795738233,
   "text": "**⚡ 建議動手**\n1. 今晚試 **AutoClip**（見第一節）：你丟一條長片連結給我，我在 rin-box 用 Docker 起服務，第一次大概一小時（要抓字幕模型），之後每次十幾分鐘出片 — 我們現在只會剪官方預告，長片完全沒工具。\n2. 跑 `hermes update` 到 **v0.23.4**（兩分鐘）：這版包含 229 個 PR、1,122 個 commit，是補丁匯總，內容包括 Desktop 審批卡與 `hermes plugins config`。"
@@ -33,26 +53,6 @@
   "job": "nightly reflection",
   "ts": 1795707198,
   "text": "改了 2 個 skill 各 1 條：`windows-remote-admin`（管理員權限的系統檔我自己經 SSH 改，不叫他開記事本）、`home-assistant-ops`（確認認證是 OAuth 前，不要叫他去加 secret）。\n\n其餘今天的打槍（清空 HA、把能自己做的推給他、第三輪才去搜官方 wiki、憑舊資料答「沒監測到」、限量手把先查成交價）在 skill 裡已經有對應規則，沒重寫。"
- },
- {
-  "job": "cex 2h",
-  "ts": 1795701746,
-  "text": "健康檢查：20261126220031（範圍 web，78306 筆）\n  ✅ freshness  資料 0.0 小時前抓的\n  ✅ volume     筆數 78306（與上次 78305 差 0.00%）\n  ✅ schema     60 個欄位，與上次指紋一致\n  ✅ quality    78306 筆：主鍵無重複、標價與名稱完整\n  ✅ heartbeat  距上次抓取 2.0 小時（20261126200031 → 20261126220031）\n\n全部正常"
- },
- {
-  "job": "SNKRDUNK 卡價",
-  "ts": 1795654836,
-  "text": "SNKRDUNK 變化\n📈 3rd Anniversary Set — ENGLISH\n   在售 62 → 58 件\n📈 Luffy SEC-RSP OP13-118\n   PSA10 ¥2,787,000 → ¥2,680,000\n📈 Luffy SEC-SP EB04-061\n   A ¥1,290,000 → ¥1,250,000\n   PSA10 ¥1,600,000 → ¥1,550,000"
- },
- {
-  "job": "cex 0830",
-  "ts": 1795653159,
-  "text": "健康檢查：20261126083030（範圍 web，78252 筆）\n  ✅ freshness  資料 0.0 小時前抓的\n  ✅ volume     筆數 78252（與上次 78252 差 0.00%）\n  ✅ schema     60 個欄位，與上次指紋一致\n  ✅ quality    78252 筆：主鍵無重複、標價與名稱完整\n  ✅ heartbeat  距上次抓取 10.5 小時（20261125220030 → 20261126083030）\n\n全部正常\n發布驗證：第 1 次重試後線上已追上（run=20261126083030）"
- },
- {
-  "job": "kl daily brief",
-  "ts": 1795653060,
-  "text": "☀️ 今日 11/26 (Thu)\n\n天氣：24–31°C，最高降雨機率 97%\n　降雨時段：07:00（70%）、08:00（61%）、09:00（55%）、10:00（50%）、11:00（51%）、12:00（62%）\n\nMid Valley 本週活動（4 項）\n・Laneige Holiday Pop-up — East Atrium (EEA), Ground Floor\n　23 Nov - 29 Nov 2026\n・LIVEXPO 2026 — Hall 1 & Hall 2, Mid Valley Exhibition Centre (MVEC), Third Floor, Centre Court\n　28 Nov - 29 Nov 2026\n・Christmas 2026 — Mall Wide (MW), Ground Floor\n　21 Nov 2026 - 3 Jan 2027\n・Fitness Concept Roadshow — Centre Court (CC), Lower Ground Floor\n　23 Nov - 29 Nov 2026\n\n雪隆活動（未來 14 天，命中興趣 3 項）\n・11/27 Resilience by Design: Are You Scaling AI or Scal\n　The Ruma Hotel and Residences\n・12/05 JoyKids Christmas Charity Bazaar 2026\n　The Club by M\n・12/10 Exotic Fairway Flora & Fauna Exhibition 2026\n　Sultan Abdul Aziz Shah Golf & Coun\n\n電子／玩具優惠\n・HP Malaysia HyperX OMEN Gaming Laptop Promotion – Fr\n　11-27\n・LEGO Black Friday Sale 2026 Malaysia – Discover Excl\n　11-27　LEGO.com\n・Switch Lazada Payday Sale – Save Up to RM1,780 on Ap\n　11-24→11-27\n・Toys”R”Us Malaysia T-KUN Meet & Greet Event – Meet T\n　11-14→11-28　1 Utama and KLCC\n・Viewnet Computer System SanDisk Cruzer Blade Buy 1 F\n　11-29　Plaza Low Yat Kuala Lump\n・Tefal Warehouse Sale\n　11-27→11-29\n\n大型活動（會展／體育館）\n・11-27 Resilience by "
  },
  {
   "job": "記憶審計",
