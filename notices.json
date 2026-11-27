@@ -1,5 +1,25 @@
 [
  {
+  "job": "ai research push",
+  "ts": 1795738233,
+  "text": "**⚡ 建議動手**\n1. 今晚試 **AutoClip**（見第一節）：你丟一條長片連結給我，我在 rin-box 用 Docker 起服務，第一次大概一小時（要抓字幕模型），之後每次十幾分鐘出片 — 我們現在只會剪官方預告，長片完全沒工具。\n2. 跑 `hermes update` 到 **v0.23.4**（兩分鐘）：這版包含 229 個 PR、1,122 個 commit，是補丁匯總，內容包括 Desktop 審批卡與 `hermes plugins config`。"
+ },
+ {
+  "job": "AI 工具日報",
+  "ts": 1795737746,
+  "text": "**AI 工具 ＋ 新奇專案日報 — 11/27（五）**\n\n**⚡ 建議動手**\n1. 今晚試 **AutoClip**（見第一節）：你丟一條長片連結給我，我在 rin-box 用 Docker 起服務，第一次大概一小時（要抓字幕模型），之後每次十幾分鐘出片 — 我們現在只會剪官方預告，長片完全沒工具。\n2. 跑 `hermes update` 到 **v0.23.4**（兩分鐘）：這版滾了 229 個 PR、1,122 個 commit，屬於補丁匯總，內容包括 Desktop 審批卡與 `hermes plugins config`。\n\n**第一節｜AI 工具**\n\n**AutoClip**（GitHub，MIT，16.9k★，今天 +770）\n1. 開源版 OpusClip：貼長片連結，本機剪出直式短版、字幕分頁、封面與發佈文案，直接對齊抖音／Shorts／Reels／B 站。\n2. 對我們補的是「長片→短片」這一段；剪輯與渲染在本機跑，字幕用 Whisper／FunASR，語言模型可換自己的，但預設走它的雲端模型按量收費。\n3. 值得試。\n\n**Hermes Agent v0.23.4**（11/24）\n1. v0.23.3 之後的補丁匯總，官方明說完整亮點要等 v0.24.0 才寫。\n2. 確定有寫進去的只有幾項：`hermes plugins config` 可從終端改插件設定、Desktop 的資料夾／網站審批卡、skill 索引描述長度可調（`skills.index_desc_limit`）。\n3. 值得試（更新兩分鐘）。\n\n**OpenCode v2.4.2**（11/26）\n1. 「永遠允許抓網頁」現在只放行那一個網站（以前是全站放行）；自動化跑失敗後仍照排程繼續。\n2. 對我們影響很小，我們只用 opencode-go 的模型、不跑它的 CLI。\n3. 觀察就好。\n\n**last30days**（agent skill，4.7.0）\n1. 同時搜 Reddit、X、YouTube 字幕、TikTok、HN、Polymarket，再用模型合成一份摘要，按讚數與賠率當排序依據。\n2. 這就是日報現在在做的事，但它的 Reddit 和 X 是我最弱的一塊；Reddit／HN／Polymarket／GitHub 免 key 就能跑，X 要另外接。\n3. 值得試。\n\n**第二節｜🔧 新奇專案**\n\n**SenseNova-RoboRSI-27B**\n1. 商湯開源的具身 agent 框架，27B 模型把動作寫成程式碼去控制機械臂，雙臂自己轉好 2×2 魔方。\n2. 不為這個任務專門訓練，靠「程式碼即策略」和失敗紀錄自我改進，實機夾取成功率 60%，很離譜。\n\n**AgentTeams**（agentscope-ai）\n1. 把多個 AI wor"
+ },
+ {
+  "job": "voucher daily",
+  "ts": 1795736292,
+  "text": "今天沒有變化：未用 9 張 RM696。"
+ },
+ {
+  "job": "社群熱度",
+  "ts": 1795735832,
+  "text": "社群熱度選題 — 最近 30 天（Reddit 遊戲 0 則 / HN 60 則）\n\n 1. [HN 4060▲ 3493💬] Jensen Huang resigns\n    https://apnews.com/article/nvidia-megaspeed-china-singapore-huang-5403f152a601cf82ce939f1d24fffa0f\n 2. [HN 3314▲ 769💬] Patrick Stewart has died\n    https://www.nytimes.com/2026/10/29/arts/television/patrick-stewart-dead.html\n 3. [HN 3007▲ 751💬] sshole\n    https://sshhole.com\n 4. [HN 2971▲ 902💬] Astra can read and write weights to improve Qwen\n    https://rikiyat.github.io/blog/weight-space-programming/\n\n⚠️ 抓取有問題的來源：\n  - Reddit: HTTPError HTTP Error 404: Not Found"
+ },
+ {
   "job": "duckx3 maintenance",
   "ts": 1795723241,
   "text": "維護已完成：刪除 0 筆記錄，收件匣剩 36 筆；備份 pb_data-20261127-040032.tar.gz（122,042,610 bytes / 116.4MB）已驗證存在，data.db 與 906 個 storage 檔案都在裡面，備份共 14 份。沒有 FAILED。"
@@ -33,26 +53,6 @@
   "job": "kl daily brief",
   "ts": 1795653060,
   "text": "☀️ 今日 11/26 (Thu)\n\n天氣：24–31°C，最高降雨機率 97%\n　降雨時段：07:00（70%）、08:00（61%）、09:00（55%）、10:00（50%）、11:00（51%）、12:00（62%）\n\nMid Valley 本週活動（4 項）\n・Laneige Holiday Pop-up — East Atrium (EEA), Ground Floor\n　23 Nov - 29 Nov 2026\n・LIVEXPO 2026 — Hall 1 & Hall 2, Mid Valley Exhibition Centre (MVEC), Third Floor, Centre Court\n　28 Nov - 29 Nov 2026\n・Christmas 2026 — Mall Wide (MW), Ground Floor\n　21 Nov 2026 - 3 Jan 2027\n・Fitness Concept Roadshow — Centre Court (CC), Lower Ground Floor\n　23 Nov - 29 Nov 2026\n\n雪隆活動（未來 14 天，命中興趣 3 項）\n・11/27 Resilience by Design: Are You Scaling AI or Scal\n　The Ruma Hotel and Residences\n・12/05 JoyKids Christmas Charity Bazaar 2026\n　The Club by M\n・12/10 Exotic Fairway Flora & Fauna Exhibition 2026\n　Sultan Abdul Aziz Shah Golf & Coun\n\n電子／玩具優惠\n・HP Malaysia HyperX OMEN Gaming Laptop Promotion – Fr\n　11-27\n・LEGO Black Friday Sale 2026 Malaysia – Discover Excl\n　11-27　LEGO.com\n・Switch Lazada Payday Sale – Save Up to RM1,780 on Ap\n　11-24→11-27\n・Toys”R”Us Malaysia T-KUN Meet & Greet Event – Meet T\n　11-14→11-28　1 Utama and KLCC\n・Viewnet Computer System SanDisk Cruzer Blade Buy 1 F\n　11-29　Plaza Low Yat Kuala Lump\n・Tefal Warehouse Sale\n　11-27→11-29\n\n大型活動（會展／體育館）\n・11-27 Resilience by "
- },
- {
-  "job": "ai research push",
-  "ts": 1795651833,
-  "text": "【⚡ 建議動手】\n① 用 minimind 在 3070 Ti 訓一個 64M 小模型，拿來做 CeX／Carousell 上架標題分類：約 2–4 小時、0 成本，訓完之後每筆判斷都不用再花 API token；8GB 顯示卡到底夠不夠用，我先量完再動手。"
- },
- {
-  "job": "AI 工具日報",
-  "ts": 1795651314,
-  "text": "【⚡ 建議動手】\n① 用 minimind 在 3070 Ti 訓一個 64M 小模型，拿來做 CeX／Carousell 上架標題分類：約 2–4 小時、0 成本，訓完之後每筆判斷都不用再花 API token；8GB 顯示卡到底夠不夠用，我先量完再動手。\n\n【第一節｜AI 工具】\n\n**Hermes Agent v0.23.4（canary，11/25）**\n一句話：這次更新只加了插件目錄的條目（linux-notify 桌面通知、gpu-monitor、phone-bud、memory-fit、bf16 供應商），核心程式沒有改動。\n判斷：對我們沒用——rin-box 沒有螢幕，裝桌面通知也沒有東西可以顯示；插件目錄本來就每天在增加。\n結論：不用管。\n\n**Inkling 2 Mini（Thinking Machines，11/20 釋出權重）**\n一句話：26B 級模型，但每個 token 只啟用 5B 左右的參數，靠迴圈重跑中間層來換取算力，約 20GB、Apache 2.0，Ollama v0.40.17 已經可以拉下來跑。\n判斷：3070 Ti 只有 8GB，連 4-bit 量化版（17.6GB）都放不下，只能退回 CPU 跑，慢到不能當日常工具用。\n結論：觀察就好。\n\n**Codex CLI 0.172.0（11/24 穩定版）**\n一句話：slash 指令可以按 Tab 補全、stdio MCP 伺服器改成第一次呼叫時才啟動、API 限額出錯時直接說出是哪一個額度。\n判斷：我們不走 Codex，這些改良我們拿不到。\n結論：不用管。\n\n**Claude Code 2.1.332**\n一句話：MCP 伺服器現在可以餵入 skills（beta，選單顯示成 server:skill），另外修好了 hook 無限輸出時終端凍結、記憶體爆量的問題。\n判斷：我們用 Hermes，但「hook 一直吐 log 會凍結」這類問題在任何 agent 上一樣會發生，記住這個症狀就夠了。\n結論：觀察就好。\n\n【第二節｜🔧 新奇專案】\n\n**llm.asm**\n一：有人用純 x86-64 組語（零 C、零 libc）寫完 Qwen3-0.6B 推論（執行檔 13KB）、可以直接開機的 23KB 裸機 OS，還有從零訓練 Mini-GPT 的版本。\n二：85ms 開機就能在沒有作業系統的機器上對話、100 tok/s，這種極端精簡的玩法比模型本身還有看頭。\n\n**minimind**\n一：3 塊錢、2 小時在單張 3090 上從零訓出 64M 小模型，Apache 2.0、七萬星。\n二：預訓練→SFT→DPO→RL 全鏈路都是純 PyTorch 手寫，拆開看「模型怎麼長出來」比讀論文直觀，也剛好可以拿來試上面那件事。\n\n**pw-loudness-eq**\n一：有人"
- },
- {
-  "job": "voucher daily",
-  "ts": 1795649804,
-  "text": "今天沒有變化：未用 9 張 RM696"
- },
- {
-  "job": "社群熱度",
-  "ts": 1795649432,
-  "text": "社群熱度選題 — 最近 30 天（Reddit 遊戲 0 則 / HN 60 則）\n\n 1. [HN 4060▲ 3493💬] Jensen Huang resigns\n    https://apnews.com/article/nvidia-megaspeed-china-singapore-huang-5403f152a601cf82ce939f1d24fffa0f\n 2. [HN 3314▲ 769💬] Patrick Stewart has died\n    https://www.nytimes.com/2026/10/29/arts/television/patrick-stewart-dead.html\n 3. [HN 3007▲ 751💬] sshole\n    https://sshhole.com\n 4. [HN 2971▲ 902💬] Astra can read and write weights to improve Qwen\n    https://rikiyat.github.io/blog/weight-space-programming/\n\n⚠️ 抓取有問題的來源：\n  - Reddit: HTTPError HTTP Error 404: Not Found"
  },
  {
   "job": "記憶審計",
