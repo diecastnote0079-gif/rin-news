@@ -1,5 +1,15 @@
 [
  {
+  "job": "duckx3 maintenance",
+  "ts": 1795809638,
+  "text": "清 0 筆，收件匣 36 筆；備份 pb_data-20261128-040031.tar.gz 116.4MB（data.db ✓、storage 906 檔），無 FAILED。"
+ },
+ {
+  "job": "doc reconcile",
+  "ts": 1795809328,
+  "text": "【文件 vs 現況 對帳】\n • cex 排程不符：缺 ['0 10,13,16,19,22 * * *']；實際 ['0 10,12,14,16,18,20,22 * * *', '30 8 * * *']\n • 手機頁資料 5.9 小時前（上限 5）：2026-11-27T14:02:03Z\n • 本機最後一輪 5.9 小時前（20261127220030）\n • 決策日誌最後一筆 #58 是 2026-11-06（22 天前）→ 期間的決定沒有落點"
+ },
+ {
   "job": "nightly reflection",
   "ts": 1795793644,
   "text": "改好 2 條，各進 1 個 skill：\n\n- **anima-image** 1 條：報「哪支模型最新」要分架構年份與版本——SDXL 是 2023 架構，NoobAI／WAI／Illustrious 只是它的新版本，最新架構是 Qwen-Image 2.1。\n- **home-assistant-ops** 1 條：QEMU/KVM＋USB 藍牙直通那條路他已回「那算了」，標成已收線，不再當提案端出去。\n\n其餘今天的打槍都在當場寫進去了，沒有重複記：voucher 數字（hunting-cex 主體＋cex-vouchers.md）、人妖鼓包與「太刻意」（anima-image）、只發遊戲不發 console（hunting-cex）、別下載 turbo（anima-image）、Nendoroid 走 ValueAlmanac（figure-prices）、PIR 日常無用只留異常（home-assistant-ops）。"
@@ -48,16 +58,6 @@
   "job": "社群熱度",
   "ts": 1795735832,
   "text": "社群熱度選題 — 最近 30 天（Reddit 遊戲 0 則 / HN 60 則）\n\n 1. [HN 4060▲ 3493💬] Jensen Huang resigns\n    https://apnews.com/article/nvidia-megaspeed-china-singapore-huang-5403f152a601cf82ce939f1d24fffa0f\n 2. [HN 3314▲ 769💬] Patrick Stewart has died\n    https://www.nytimes.com/2026/10/29/arts/television/patrick-stewart-dead.html\n 3. [HN 3007▲ 751💬] sshole\n    https://sshhole.com\n 4. [HN 2971▲ 902💬] Astra can read and write weights to improve Qwen\n    https://rikiyat.github.io/blog/weight-space-programming/\n\n⚠️ 抓取有問題的來源：\n  - Reddit: HTTPError HTTP Error 404: Not Found"
- },
- {
-  "job": "duckx3 maintenance",
-  "ts": 1795723241,
-  "text": "維護已完成：刪除 0 筆記錄，收件匣剩 36 筆；備份 pb_data-20261127-040032.tar.gz（122,042,610 bytes / 116.4MB）已驗證存在，data.db 與 906 個 storage 檔案都在裡面，備份共 14 份。沒有 FAILED。"
- },
- {
-  "job": "doc reconcile",
-  "ts": 1795722928,
-  "text": "【文件 vs 現況 對帳】\n • cex 排程不符：缺 ['0 10,13,16,19,22 * * *']；實際 ['0 10,12,14,16,18,20,22 * * *', '30 8 * * *']\n • 手機頁資料 5.9 小時前（上限 5）：2026-11-26T14:02:02Z\n • 本機最後一輪 5.9 小時前（20261126220031）\n • 決策日誌最後一筆 #58 是 2026-11-06（21 天前）→ 期間的決定沒有落點"
  },
  {
   "job": "記憶審計",
