@@ -1,5 +1,35 @@
 [
  {
+  "job": "cex 0830",
+  "ts": 1795825943,
+  "text": "健康檢查：20261128083030（範圍 web，78358 筆）\n  ✅ freshness  資料 0.0 小時前抓的\n  ✅ volume     筆數 78358（與上次 78358 差 0.00%）\n  ✅ schema     60 個欄位，與上次指紋一致\n  ✅ quality    78358 筆：主鍵無重複、標價與名稱完整\n  ✅ heartbeat  距上次抓取 10.5 小時（20261127220030 → 20261128083030）\n\n全部正常"
+ },
+ {
+  "job": "kl daily brief",
+  "ts": 1795825858,
+  "text": "☀️ 今日 11/28 (Sat)\n\n天氣：25–30°C，最高降雨機率 98%\n　降雨時段：07:00（61%）、08:00（53%）、13:00（61%）、14:00（82%）、15:00（92%）、16:00（96%）\n\nMid Valley 本週活動（4 項）\n・Laneige Holiday Pop-up — East Atrium (EEA), Ground Floor\n　23 Nov - 29 Nov 2026\n・LIVEXPO 2026 — Hall 1 & Hall 2, Mid Valley Exhibition Centre (MVEC), Third Floor, Centre Court\n　28 Nov - 29 Nov 2026\n・Christmas 2026 — Mall Wide (MW), Ground Floor\n　21 Nov 2026 - 3 Jan 2027\n・Fitness Concept Roadshow — Centre Court (CC), Lower Ground Floor\n　23 Nov - 29 Nov 2026\n\n雪隆活動（未來 14 天，命中興趣 2 項）\n・12/05 JoyKids Christmas Charity Bazaar 2026\n　The Club by M\n・12/10 Exotic Fairway Flora & Fauna Exhibition 2026\n　Sultan Abdul Aziz Shah Golf & Coun\n\n電子／玩具優惠\n・Toys”R”Us Malaysia T-KUN Meet & Greet Event – Meet T\n　11-14→11-28　1 Utama and KLCC\n・Viewnet Computer System SanDisk Cruzer Blade Buy 1 F\n　11-29　Plaza Low Yat Kuala Lump\n・ALL IT Hypermarket 23rd Anniversary Sale: Exclusive \n　11-27→11-29　Selected Outlets\n・ALL IT Hypermarket Yoobao Power Bank Buy 1 Free 1 Pr\n　11-27→11-29\n・Tefal Warehouse Sale\n　11-27→11-29\n・Urban Republic Clearance Fair 2026\n　11-26→11-29　SOGO KL – Up to 90% Off \n\n大型活動（會展／體育館）\n・11-28 头发越掉越多怎么办？\n　Nomi Headspa & Hair Salon - Bukit \n・12-05 JoyKids Christmas Ch"
+ },
+ {
+  "job": "ai research push",
+  "ts": 1795824631,
+  "text": "今天沒有要動的"
+ },
+ {
+  "job": "AI 工具日報",
+  "ts": 1795824145,
+  "text": "【AI 工具＋新奇專案】11/28（六）\n⚡ 建議動手：今天沒有要動的。\n【第一節｜AI 工具】\n1) Hermes Agent v0.23.4（11/23 穩定版）\n是什麼：把 v0.23.3 之後 229 個 PR 打包的補丁版，官方明講完整說明要等 v0.24.0 才發。\n對我們：條目裡只看得到 Gemini 4 Hydrogen／Neon／Carbon 上 Nous Portal、OpenRouter、Vertex，加 `hermes gateway migrate --backends` 和 `hermes plugins config`；沒看到 cron／Telegram 相關的，但 229 個 PR 大部分沒寫出來。\n結論：觀察就好，等 v0.24.0 一次升。\n2) OpenCode v2.3.2（11/18）\n是什麼：修好 GPT-6.2 系把 system prompt 每一步都當 uncached input 重複收錢的問題。\n對我們：官方數字是 Copilot 的 gpt-6.2-sol 每步 uncached 從約 14,000 token 降到 3；我們走 deepseek 直連，吃不到這條。\n結論：觀察就好，哪天真的走 GPT-6.2 才輪到它。\n3) Inkling 2 Mini（Thinking Machines，11/20 開源）\n是什麼：26.4B 總參數／3.4B 啟用的 looped MoE（算上層迴圈 5.4B），Apache 2.0、吃圖、1M context、SWE-bench 79.2%。\n對我們：4-bit 量化仍 16.6GB，3070 Ti 只有 8GB，本地跑不動；官方建議 32GB VRAM 起。\n結論：不用管，除非走它的 Tinker 付費 API。\n【第二節｜🔧 新奇專案】\n1) Tabernetes（github.com/jkroepke/tabernetes）\n是什麼：每個瀏覽器分頁就是一個 Kubernetes 節點，分頁裡跑的是編成 WebAssembly 的 Linux 核心。\n為什麼有趣：關掉分頁節點就消失、pod 自動搬去別人的手機分頁；開個網頁就把手機借出去當 node，還能真的 kubectl run nginx。\n2) Prospero（github.com/skeeto/prospero）\n是什麼：C++ 寫的單一執行檔 AI coding harness，ImGui 介面，可無頭跑、可 ssh 掛在別台機器、關窗後繼續跑。\n為什麼有趣：目標是「連 Windows XP 都跑得動 coding agent」——現在每個 harness 都在比肥，它反著做，221 星。\n3) bouncemarket（bouncemarket.minhanhday.com）\n是什麼：一群人對"
+ },
+ {
+  "job": "voucher daily",
+  "ts": 1795822570,
+  "text": "<｜DSML｜ calls>\n<｜DSML｜ invoke name=\"execute_code\">\n<｜DSML｜ parameter name=\"code\" string=\"true\">import sqlite3, os\np=os.path.expanduser(\"~/AI/cex-db/cex.sqlite\")\nc=sqlite3.connect(p)\ncur=c.cursor()\ncur.execute(\"select name from sqlite_master where type='table' and name like '%vouch%'\")\nprint(cur.fetchall())\n</｜DSML｜ parameter>\n</｜DSML｜ invoke>\n</｜DSML｜ calls>"
+ },
+ {
+  "job": "社群熱度",
+  "ts": 1795822234,
+  "text": "社群熱度選題 — 最近 30 天（Reddit 遊戲 0 則 / HN 60 則）\n\n 1. [HN 4060▲ 3493💬] Jensen Huang resigns\n    https://apnews.com/article/nvidia-megaspeed-china-singapore-huang-5403f152a601cf82ce939f1d24fffa0f\n 2. [HN 3314▲ 769💬] Patrick Stewart has died\n    https://www.nytimes.com/2026/10/29/arts/television/patrick-stewart-dead.html\n 3. [HN 3007▲ 751💬] sshole\n    https://sshhole.com\n 4. [HN 2971▲ 902💬] Astra can read and write weights to improve Qwen\n    https://rikiyat.github.io/blog/weight-space-programming/\n\n⚠️ 抓取有問題的來源：\n  - Reddit: HTTPError HTTP Error 404: Not Found"
+ },
+ {
   "job": "duckx3 maintenance",
   "ts": 1795809638,
   "text": "清 0 筆，收件匣 36 筆；備份 pb_data-20261128-040031.tar.gz 116.4MB（data.db ✓、storage 906 檔），無 FAILED。"
@@ -15,11 +45,6 @@
   "text": "改好 2 條，各進 1 個 skill：\n\n- **anima-image** 1 條：報「哪支模型最新」要分架構年份與版本——SDXL 是 2023 架構，NoobAI／WAI／Illustrious 只是它的新版本，最新架構是 Qwen-Image 2.1。\n- **home-assistant-ops** 1 條：QEMU/KVM＋USB 藍牙直通那條路他已回「那算了」，標成已收線，不再當提案端出去。\n\n其餘今天的打槍都在當場寫進去了，沒有重複記：voucher 數字（hunting-cex 主體＋cex-vouchers.md）、人妖鼓包與「太刻意」（anima-image）、只發遊戲不發 console（hunting-cex）、別下載 turbo（anima-image）、Nendoroid 走 ValueAlmanac（figure-prices）、PIR 日常無用只留異常（home-assistant-ops）。"
  },
  {
-  "job": "cex gaming digest",
-  "ts": 1795790129,
-  "text": "🎮 <b>CeX 遊戲新貨</b>（11-27 14:01 UTC）\n\n<b>NEW 1 件</b>\n・NBA Live 08（Xbox 360: R3 CHI）　RM40／回RM13\n\n<b>RESTOCK 其餘 2 件</b>\n・Disgaea 7: Vows of the Virtueless（PS5: R2 ENG）　售RM170／回RM85\n・MotorStorm（PS3: R3 ENG）　售RM70／回RM23"
- },
- {
   "job": "cex 2h",
   "ts": 1795788278,
   "text": "健康檢查：20261127220030（範圍 web，78358 筆）\n  ✅ freshness  資料 0.0 小時前抓的\n  ✅ volume     筆數 78358（與上次 78344 差 0.02%）\n  ✅ schema     60 個欄位，與上次指紋一致\n  ✅ quality    78358 筆：主鍵無重複、標價與名稱完整\n  ✅ heartbeat  距上次抓取 2.0 小時（20261127200030 → 20261127220030）\n\n全部正常"
@@ -28,36 +53,6 @@
   "job": "SNKRDUNK 卡價",
   "ts": 1795741237,
   "text": "SNKRDUNK 變化\n📈 3rd Anniversary Set — ENGLISH\n   在售 58 → 60 件\n   最低在售 ¥59,800 → ¥59,700\n📈 3rd Anniversary Set — CHINA\n   在售 54 → 57 件\n   最低在售 ¥39,799 → ¥39,698\n📈 Luffy SEC-RSP OP13-118\n   PSA10 ¥2,680,000 → ¥2,830,000\n📈 Luffy SEC-SP EB04-061\n   A ¥1,250,000 → ¥1,220,000\n   PSA10 ¥1,550,000 → ¥1,530,000"
- },
- {
-  "job": "cex 0830",
-  "ts": 1795739542,
-  "text": "健康檢查：20261127083030（範圍 web，78306 筆）\n  ✅ freshness  資料 0.0 小時前抓的\n  ✅ volume     筆數 78306（與上次 78306 差 0.00%）\n  ✅ schema     60 個欄位，與上次指紋一致\n  ✅ quality    78306 筆：主鍵無重複、標價與名稱完整\n  ✅ heartbeat  距上次抓取 10.5 小時（20261126220031 → 20261127083030）\n\n全部正常"
- },
- {
-  "job": "kl daily brief",
-  "ts": 1795739455,
-  "text": "☀️ 今日 11/27 (Fri)\n\n天氣：24–30°C，最高降雨機率 100%\n　降雨時段：07:00（59%）、08:00（55%）、09:00（59%）、10:00（67%）、11:00（76%）、12:00（85%）\n\nMid Valley 本週活動（4 項）\n・Laneige Holiday Pop-up — East Atrium (EEA), Ground Floor\n　23 Nov - 29 Nov 2026\n・LIVEXPO 2026 — Hall 1 & Hall 2, Mid Valley Exhibition Centre (MVEC), Third Floor, Centre Court\n　28 Nov - 29 Nov 2026\n・Christmas 2026 — Mall Wide (MW), Ground Floor\n　21 Nov 2026 - 3 Jan 2027\n・Fitness Concept Roadshow — Centre Court (CC), Lower Ground Floor\n　23 Nov - 29 Nov 2026\n\n雪隆活動（未來 14 天，命中興趣 3 項）\n・11/27 Resilience by Design: Are You Scaling AI or Scal\n　The Ruma Hotel and Residences\n・12/05 JoyKids Christmas Charity Bazaar 2026\n　The Club by M\n・12/10 Exotic Fairway Flora & Fauna Exhibition 2026\n　Sultan Abdul Aziz Shah Golf & Coun\n\n電子／玩具優惠\n・ALL IT Hypermarket Black Friday Sale – One-Day-Only \n　11-27\n・HP Malaysia HyperX OMEN Gaming Laptop Promotion – Fr\n　11-27\n・LEGO Black Friday Sale 2026 Malaysia – Discover Excl\n　11-27　LEGO.com\n・Switch Lazada Payday Sale – Save Up to RM1,780 on Ap\n　11-24→11-27\n・Toys”R”Us Malaysia T-KUN Meet & Greet Event – Meet T\n　11-14→11-28　1 Utama and KLCC\n・Viewnet Computer System SanDisk Cruzer Blade Buy 1 F\n　11-29　Plaza Low Yat Kuala Lump\n\n大型活動（會展"
- },
- {
-  "job": "ai research push",
-  "ts": 1795738233,
-  "text": "**⚡ 建議動手**\n1. 今晚試 **AutoClip**（見第一節）：你丟一條長片連結給我，我在 rin-box 用 Docker 起服務，第一次大概一小時（要抓字幕模型），之後每次十幾分鐘出片 — 我們現在只會剪官方預告，長片完全沒工具。\n2. 跑 `hermes update` 到 **v0.23.4**（兩分鐘）：這版包含 229 個 PR、1,122 個 commit，是補丁匯總，內容包括 Desktop 審批卡與 `hermes plugins config`。"
- },
- {
-  "job": "AI 工具日報",
-  "ts": 1795737746,
-  "text": "**AI 工具 ＋ 新奇專案日報 — 11/27（五）**\n\n**⚡ 建議動手**\n1. 今晚試 **AutoClip**（見第一節）：你丟一條長片連結給我，我在 rin-box 用 Docker 起服務，第一次大概一小時（要抓字幕模型），之後每次十幾分鐘出片 — 我們現在只會剪官方預告，長片完全沒工具。\n2. 跑 `hermes update` 到 **v0.23.4**（兩分鐘）：這版滾了 229 個 PR、1,122 個 commit，屬於補丁匯總，內容包括 Desktop 審批卡與 `hermes plugins config`。\n\n**第一節｜AI 工具**\n\n**AutoClip**（GitHub，MIT，16.9k★，今天 +770）\n1. 開源版 OpusClip：貼長片連結，本機剪出直式短版、字幕分頁、封面與發佈文案，直接對齊抖音／Shorts／Reels／B 站。\n2. 對我們補的是「長片→短片」這一段；剪輯與渲染在本機跑，字幕用 Whisper／FunASR，語言模型可換自己的，但預設走它的雲端模型按量收費。\n3. 值得試。\n\n**Hermes Agent v0.23.4**（11/24）\n1. v0.23.3 之後的補丁匯總，官方明說完整亮點要等 v0.24.0 才寫。\n2. 確定有寫進去的只有幾項：`hermes plugins config` 可從終端改插件設定、Desktop 的資料夾／網站審批卡、skill 索引描述長度可調（`skills.index_desc_limit`）。\n3. 值得試（更新兩分鐘）。\n\n**OpenCode v2.4.2**（11/26）\n1. 「永遠允許抓網頁」現在只放行那一個網站（以前是全站放行）；自動化跑失敗後仍照排程繼續。\n2. 對我們影響很小，我們只用 opencode-go 的模型、不跑它的 CLI。\n3. 觀察就好。\n\n**last30days**（agent skill，4.7.0）\n1. 同時搜 Reddit、X、YouTube 字幕、TikTok、HN、Polymarket，再用模型合成一份摘要，按讚數與賠率當排序依據。\n2. 這就是日報現在在做的事，但它的 Reddit 和 X 是我最弱的一塊；Reddit／HN／Polymarket／GitHub 免 key 就能跑，X 要另外接。\n3. 值得試。\n\n**第二節｜🔧 新奇專案**\n\n**SenseNova-RoboRSI-27B**\n1. 商湯開源的具身 agent 框架，27B 模型把動作寫成程式碼去控制機械臂，雙臂自己轉好 2×2 魔方。\n2. 不為這個任務專門訓練，靠「程式碼即策略」和失敗紀錄自我改進，實機夾取成功率 60%，很離譜。\n\n**AgentTeams**（agentscope-ai）\n1. 把多個 AI wor"
- },
- {
-  "job": "voucher daily",
-  "ts": 1795736292,
-  "text": "今天沒有變化：未用 9 張 RM696。"
- },
- {
-  "job": "社群熱度",
-  "ts": 1795735832,
-  "text": "社群熱度選題 — 最近 30 天（Reddit 遊戲 0 則 / HN 60 則）\n\n 1. [HN 4060▲ 3493💬] Jensen Huang resigns\n    https://apnews.com/article/nvidia-megaspeed-china-singapore-huang-5403f152a601cf82ce939f1d24fffa0f\n 2. [HN 3314▲ 769💬] Patrick Stewart has died\n    https://www.nytimes.com/2026/10/29/arts/television/patrick-stewart-dead.html\n 3. [HN 3007▲ 751💬] sshole\n    https://sshhole.com\n 4. [HN 2971▲ 902💬] Astra can read and write weights to improve Qwen\n    https://rikiyat.github.io/blog/weight-space-programming/\n\n⚠️ 抓取有問題的來源：\n  - Reddit: HTTPError HTTP Error 404: Not Found"
  },
  {
   "job": "記憶審計",
