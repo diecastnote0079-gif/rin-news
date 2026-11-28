@@ -1,5 +1,15 @@
 [
  {
+  "job": "cex 2h",
+  "ts": 1795831343,
+  "text": "健康檢查：20261128100030（範圍 web，78358 筆）\n  ✅ freshness  資料 0.0 小時前抓的\n  ✅ volume     筆數 78358（與上次 78358 差 0.00%）\n  ✅ schema     60 個欄位，與上次指紋一致\n  ✅ quality    78358 筆：主鍵無重複、標價與名稱完整\n  ✅ heartbeat  距上次抓取 1.5 小時（20261128083030 → 20261128100030）\n\n全部正常"
+ },
+ {
+  "job": "SNKRDUNK 卡價",
+  "ts": 1795827639,
+  "text": "SNKRDUNK 變化\n📈 3rd Anniversary Set — ENGLISH\n   在售 60 → 59 件\n   最低在售 ¥59,700 → ¥59,500\n📈 3rd Anniversary Set — CHINA\n   最低在售 ¥39,698 → ¥39,399\n📈 Luffy SEC-RSP OP13-118\n   PSA10 ¥2,830,000 → ¥2,890,000\n📈 Luffy SEC-SP EB04-061\n   A ¥1,220,000 → ¥1,080,000\n   PSA10 ¥1,530,000 → ¥1,490,000"
+ },
+ {
   "job": "cex 0830",
   "ts": 1795825943,
   "text": "健康檢查：20261128083030（範圍 web，78358 筆）\n  ✅ freshness  資料 0.0 小時前抓的\n  ✅ volume     筆數 78358（與上次 78358 差 0.00%）\n  ✅ schema     60 個欄位，與上次指紋一致\n  ✅ quality    78358 筆：主鍵無重複、標價與名稱完整\n  ✅ heartbeat  距上次抓取 10.5 小時（20261127220030 → 20261128083030）\n\n全部正常"
@@ -43,16 +53,6 @@
   "job": "nightly reflection",
   "ts": 1795793644,
   "text": "改好 2 條，各進 1 個 skill：\n\n- **anima-image** 1 條：報「哪支模型最新」要分架構年份與版本——SDXL 是 2023 架構，NoobAI／WAI／Illustrious 只是它的新版本，最新架構是 Qwen-Image 2.1。\n- **home-assistant-ops** 1 條：QEMU/KVM＋USB 藍牙直通那條路他已回「那算了」，標成已收線，不再當提案端出去。\n\n其餘今天的打槍都在當場寫進去了，沒有重複記：voucher 數字（hunting-cex 主體＋cex-vouchers.md）、人妖鼓包與「太刻意」（anima-image）、只發遊戲不發 console（hunting-cex）、別下載 turbo（anima-image）、Nendoroid 走 ValueAlmanac（figure-prices）、PIR 日常無用只留異常（home-assistant-ops）。"
- },
- {
-  "job": "cex 2h",
-  "ts": 1795788278,
-  "text": "健康檢查：20261127220030（範圍 web，78358 筆）\n  ✅ freshness  資料 0.0 小時前抓的\n  ✅ volume     筆數 78358（與上次 78344 差 0.02%）\n  ✅ schema     60 個欄位，與上次指紋一致\n  ✅ quality    78358 筆：主鍵無重複、標價與名稱完整\n  ✅ heartbeat  距上次抓取 2.0 小時（20261127200030 → 20261127220030）\n\n全部正常"
- },
- {
-  "job": "SNKRDUNK 卡價",
-  "ts": 1795741237,
-  "text": "SNKRDUNK 變化\n📈 3rd Anniversary Set — ENGLISH\n   在售 58 → 60 件\n   最低在售 ¥59,800 → ¥59,700\n📈 3rd Anniversary Set — CHINA\n   在售 54 → 57 件\n   最低在售 ¥39,799 → ¥39,698\n📈 Luffy SEC-RSP OP13-118\n   PSA10 ¥2,680,000 → ¥2,830,000\n📈 Luffy SEC-SP EB04-061\n   A ¥1,250,000 → ¥1,220,000\n   PSA10 ¥1,550,000 → ¥1,530,000"
  },
  {
   "job": "記憶審計",
