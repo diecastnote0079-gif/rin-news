@@ -1,8 +1,13 @@
 [
  {
+  "job": "cex gaming digest",
+  "ts": 1795862128,
+  "text": "🎮 <b>CeX 遊戲新貨</b>（11-28 10:01 UTC）\n\n<b>NEW 1 件</b>\n・Yomawari: Midnight Shadows（PS4: R3 CHI）　RM110／回RM55\n\n<b>RESTOCK 其餘 1 件</b>\n・Yakuza: Like a Dragon (No DLC)（PS5: R3 CHI）　售RM90／回RM45"
+ },
+ {
   "job": "cex 2h",
-  "ts": 1795852942,
-  "text": "健康檢查：20261128160030（範圍 web，78386 筆）\n  ✅ freshness  資料 0.0 小時前抓的\n  ✅ volume     筆數 78386（與上次 78376 差 0.01%）\n  ✅ schema     60 個欄位，與上次指紋一致\n  ✅ quality    78386 筆：主鍵無重複、標價與名稱完整\n  ✅ heartbeat  距上次抓取 2.0 小時（20261128140030 → 20261128160030）\n\n全部正常"
+  "ts": 1795860142,
+  "text": "健康檢查：20261128180031（範圍 web，78402 筆）\n  ✅ freshness  資料 0.0 小時前抓的\n  ✅ volume     筆數 78402（與上次 78386 差 0.02%）\n  ✅ schema     60 個欄位，與上次指紋一致\n  ✅ quality    78402 筆：主鍵無重複、標價與名稱完整\n  ✅ heartbeat  距上次抓取 2.0 小時（20261128160030 → 20261128180031）\n\n全部正常"
  },
  {
   "job": "SNKRDUNK 卡價",
